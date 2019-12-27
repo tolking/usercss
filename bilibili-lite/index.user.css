@@ -1,0 +1,1620 @@
+/* ==UserStyle==
+@name           bilibili-lite
+@namespace      tolking-usercss
+@version        1.0.0-alpha.1
+@description    一个简化的bilibili页面样式，自适应黑暗模式
+@author         tolking <qw13131wang@gmail.com> (https://ououe.com)
+@homepageURL		https://github.com/tolking/usercss/bilibili-lite
+@supportURL			https://github.com/tolking/usercss/issues
+@updateURL			https://raw.githubusercontent.com/tolking/usercss/master/bilibili-lite/index.user.css
+@license				MIT
+@preprocessor		stylus
+
+@var  select  defaultTheme  "选择默认主题" {
+	"跟随系统": "auto",
+	"亮色": "light",
+	"暗色": "dark"
+}
+@var  color  accentColor  "主色调"  #00a1d6
+==/UserStyle== */
+@-moz-document domain("bilibili.com") {
+	/* 全局样式变量 */
+	if defaultTheme==auto {
+		:root {
+			--c-title: #212121;
+			--c-text: #666;
+			--c-border: #ccc;
+			--c-background: #fff;
+			--c-hover: rgba(230, 230, 230, .3);
+
+			--c-accent: accentColor;
+			--c-white: #fff;
+			--c-bg-header: rgba(0, 0, 0, .3);
+			--c-scroll: #7c7d7f;
+		}
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--c-title: #e2e2e2;
+				--c-text: #bababa;
+				--c-border: #4e4e4e;
+				--c-background: #25272a;
+				--c-hover: rgba(20, 20, 20, .3);
+			}
+		}
+	}
+	else if defaultTheme==light {
+		:root {
+			--c-title: #212121;
+			--c-text: #666;
+			--c-border: #ccc;
+			--c-background: #fff;
+			--c-hover: rgba(230, 230, 230, .3);
+
+			--c-accent: accentColor;
+			--c-white: #fff;
+			--c-bg-header: rgba(0, 0, 0, .3);
+			--c-scroll: #7c7d7f;
+		}
+	}
+	else if defaultTheme==dark {
+		:root {
+			--c-title: #e2e2e2;
+			--c-text: #bababa;
+			--c-border: #4e4e4e;
+			--c-background: #25272a;
+			--c-hover: rgba(20, 20, 20, .3);
+
+			--c-accent: accentColor;
+			--c-white: #fff;
+			--c-bg-header: rgba(0, 0, 0, .3);
+			--c-scroll: #7c7d7f;
+		}
+	}
+
+	/* 全局样式 */
+	html {
+		background: var(--c-background);
+	}
+	body {
+		background: var(--c-background);
+		overflow-x: hidden;
+		color: var(--c-text);
+	}
+
+	a,
+	.international-header a,
+	.van-popover a,
+	.storey-title .no-link,
+	.manga-panel .manga-list-box .manga-card .manga-title,
+	.international-footer a,
+	.international-footer .link-box .link-item.link-c p,
+	.channel-menu-mini .box a,
+	.mini-type .nav-user-center .user-con .item .name,
+	.bili-header-m .nav-search .nav-search-keyword,
+	.international-header .nav-search .nav-search-keyword {
+		color: var(--c-title);
+	}
+
+	a:hover,
+	.manga-panel .manga-list-box .manga-card:hover .manga-title,
+	.international-footer a:hover,
+	.international-footer a:hover,
+	.international-footer .link-box .link-item.link-c a.weixin:hover p,
+	.international-header a:hover,
+	.van-popover a:hover,
+	.bili-header-m .nav-search .nav-search-btn:hover .nav-search-submit,
+	.international-header .nav-search .nav-search-btn:hover .nav-search-submit {
+		color: var(--c-accent);
+	}
+
+	.video-card-common .ex-up,
+	.storey-title .text-info a,
+	.storey-title .text-info,
+	.live-card .up .txt .desc,
+	.live-card .up .txt .tag,
+	.article-card .r-con .up,
+	.article-card .r-con .count,
+	.manga-panel .manga-list-box .manga-card .manga-tag,
+	.international-footer .partner,
+	.international-footer .partner a,
+	.channel-menu .box .count,
+	.channel-menu-mini .box .count {
+		color: var(--c-text);
+	}
+
+	/* 隐藏项目 */
+	.try-feedback,
+	.contact-help,
+	.mascot,
+	.nav-link .nav-link-ul .nav-link-item,
+	.nav-user-center .user-con .item:nth-child(2),
+	.elevator .list-box .item.back-old,
+	.van-popper-avatar .coins .info .login-award,
+	.page-tab,
+	.friendship-link,
+	.tab-line-itnl,
+	.gg-window,
+	.live-tabs,
+	.pgc-rank,
+	.rank-list,
+	.manga-rank,
+	.operate-card,
+	.guochuang .r-con,
+	.special-recommend,
+	.exchange-btn .more,
+	.manga-panel .app-download-link,
+	.storey-title .text-info,
+	.guide,
+	.float-nav .nav-menu .mini,
+	.float-nav .nav-menu a,
+	.v-wrap #live_recommand_report,
+	.bili-header-m .nav-menu .nav-con.nav-wrapper-left .nav-item,
+	.stardust-video .nav-menu .nav-con.nav-wrapper-left .nav-item,
+	.nav-wrapper-right .nav-con .nav-item:nth-child(2),
+	.nav-wrapper-right .nav-con .nav-item:nth-child(5),
+	.bili-header-m .profile-m .btns-profile .num-tip,
+	.v-wrap .activity-m {
+		display: none;
+	}
+
+	/* 顶部导航 */
+	.channel-menu-mini {
+		background-color: var(--c-background);
+	}
+	.channel-menu-mini .box a:hover {
+		background-color: var(--c-hover);
+	}
+	.channel-menu-mini .r-box {
+		border-color: var(--c-border);
+	}
+	.international-header .mini-type,
+	.van-popover .mini-type {
+		border-bottom: 1px solid var(--c-border);
+		background-color: var(--c-background);
+	}
+	.nav-link .nav-link-ul .nav-link-item:first-child {
+		display: block;
+	}
+	.nav-link .nav-link-ul .nav-link-item:first-child .link {
+		font-size: 0;
+	}
+	.nav-link .bili-icon_dingdao_zhuzhan {
+		font-size: 30px;
+	}
+	.mini-upload {
+		margin-left: 12px !important;
+		width: auto !important;
+		background: transparent !important;
+		color: var(--c-white) !important;
+	}
+
+	.international-header .mini-type .nav-search #nav_searchform,
+	.van-popover .mini-type .nav-search #nav_searchform {
+		border-color: var(--c-border);
+		background-color: var(--c-hover);
+	}
+	.bili-header-m .nav-search .nav-search-btn,
+	.international-header .nav-search .nav-search-btn {
+		background-color: transparent;
+	}
+
+	/* 弹窗 */
+	.van-popover {
+		border-color: var(--c-border);
+		background: var(--c-background);
+	}
+	.van-popper .popper__arrow {
+		border-width: 0;
+	}
+	.van-popper .popper__arrow::after {
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-bottom: 6px solid var(--c-background) !important;
+	}
+
+	/* 个人弹窗 */
+	.van-popper-avatar .coins,
+	.van-popper-avatar .counts,
+	.van-popper-avatar .links,
+	.van-popper-avatar .lang-change {
+		border-color: var(--c-border) !important;
+	}
+	.van-popper-avatar .level-info .grade,
+	.van-popper-avatar .count-item .item-value,
+	.van-popper-avatar .links .link-title,
+	.lang-change .lang-title,
+	.name-line {
+		color: var(--c-title) !important;
+	}
+	.van-popper-avatar .level-intro,
+	.lang-change .lang-intro {
+		background: var(--c-background) !important;
+		color: var(--c-text) !important;
+	}
+	.van-popper-avatar .level-intro__link {
+		color: var(--c-accent) !important;
+	}
+	.van-popper-avatar .links .link-item:hover,
+	.lang-change .lang-item:hover,
+	.lang-change .lang-intro-item:hover {
+		background: var(--c-hover) !important;
+	}
+	.lang-change .lang-intro-item.on {
+		color: var(--c-accent);
+	}
+	.van-popper-avatar .logout a:hover {
+		background: var(--c-hover) !important;
+		color: var(--c-title) !important;
+	}
+
+	/* 消息弹窗 */
+	.i-frame iframe,
+	.i-frame::before {
+		background-color: var(--c-background) !important;
+	}
+	.im-list-box {
+		background: var(--c-background);
+	}
+	.im-root a,
+	.im-root a:hover,
+	.im-root a:active,
+	.im-root a:link,
+	.im-root a:visited {
+		color: var(--c-title);
+	}
+	.im-list:hover {
+		background-color: var(--c-hover) !important;
+		color: var(--c-title) !important;
+	}
+
+	/* 动态弹窗 */
+	.out-container {
+		background-color: var(--c-background) !important;
+	}
+	.tab-bar {
+		border-color: var(--c-border) !important;
+		color: var(--c-text) !important;
+	}
+	.tab-item.active,
+	.van-popper-history .tab-item--active {
+		background-color: var(--c-accent) !important;
+		color: var(--c-white) !important;
+	}
+	.tip-box,
+	.split-line {
+		color: var(--c-text) !important;
+	}
+	.split-line::before {
+		border-color: var(--c-border) !important;
+	}
+	.split-line .history-tip {
+		background-color: var(--c-background) !important;
+	}
+	.content {
+		color: var(--c-title) !important;
+	}
+	.list-item:hover {
+		background-color: var(--c-hover) !important;
+	}
+	.more-btn,
+	.van-popper-history .view-all {
+		border: 1px solid var(--c-border);
+		background-color: var(--c-background) !important;
+		color: var(--c-text) !important;
+	}
+	.more-btn:hover,
+	.van-popper-history .view-all:hover {
+		background-color: var(--c-hover) !important;
+	}
+
+	/* 收藏弹窗 */
+	.van-popper-favorite .tabs-panel,
+	.van-popper-history .tab-header {
+		border-color: var(--c-border) !important;
+	}
+	.van-popper-favorite .tab-item--normal {
+		color: var(--c-title) !important;
+	}
+	.van-popper-favorite .tab-item--active {
+		background-color: var(--c-accent) !important;
+		color: var(--c-white) !important;
+	}
+	.van-popper-favorite .tab-item--normal:hover,
+	.video-card:hover {
+		background-color: var(--c-hover) !important;
+	}
+
+	.video-info .line-2 {
+		color: var(--c-title) !important;
+	}
+	.video-info .info {
+		color: var(--c-text) !important;
+	}
+	.van-popper-favorite .play-all {
+		border-color: var(--c-border) !important;
+		background-color: var(--c-hover) !important;
+		color: var(--c-title) !important;
+	}
+	.van-popper-favorite .play-all .bilifont {
+		color: var(--c-accent) !important;
+	}
+
+	/* 投稿弹窗 */
+	.van-popper-upload .upload-item:hover {
+		background-color: var(--c-hover) !important;
+		color: var(--c-title) !important;
+	}
+
+	/* 顶部导航--分区 */
+	.bili-header-m,
+	.bili-header-m .nav-menu .nav-mask,
+	.channel-menu,
+	.bili-header-m .nav-menu .up-load .up-nav li,
+	.bili-header-m .profile-m .member-bottom,
+	.dynamic-m .dyn_list_wrapper,
+	.dynamic-m .dyn_list_wrapper .dyn_list {
+		background-color: var(--c-background);
+	}
+	.bili-header-m .nav-menu .nav-con.nav-wrapper-left .nav-item:first-child,
+	.stardust-video .nav-menu .nav-con.nav-wrapper-left .nav-item:first-child {
+		display: block;
+	}
+	.bili-header-m .nav-menu .nav-con .nav-item.home .t {
+		font-size: 0;
+	}
+	.bili-header-m .nav-menu .nav-con .nav-item.home .header-icon-bilibili-tv {
+		font-size: 30px;
+	}
+	.bili-header-m .nav-menu .nav-con .nav-item:hover,
+	.stardust-video .nav-menu .nav-con .nav-item:hover,
+	.channel-menu .box a:hover,
+	.bili-header-m .nav-menu .up-load:hover .u-link {
+		background-color: var(--c-hover);
+	}
+	.bili-header-m .nav-menu,
+	.bili-header-m .nav-menu .nav-con .nav-item .t,
+	.bili-header-m .nav-search .nav-search-keyword,
+	.bili-header-m .nav-search .nav-search-keyword:focus,
+	.bili-header-m .bilibili-suggest .suggest-item,
+	.bili-header-m .bilibili-suggest .suggest-item a,
+	.bili-header-m .nav-menu .up-load .up-nav li a,
+	.bili-header-m .profile-m .header-u-info a,
+	.bili-header-m .profile-m .grade .desc-tips .lv-row strong,
+	.bili-header-m .profile-m .member-menu li a,
+	.dynamic-m a,
+	.bili-header-m .mini-wnd-nav .read-more,
+	.bili-header-m .mini-wnd-nav a {
+		color: var(--c-title);
+	}
+	.bili-header-m .nav-search .nav-search-submit,
+	.dynamic-m .dyn_menu li,
+	.dynamic-m .dyn_list_wrapper .dyn_list li .r .title span,
+	.dynamic-m .dyn_list_wrapper .dyn_list li .r .info a,
+	.dynamic-m .dyn_list_wrapper .dyn_list li.live .r .info,
+	.bili-header-m .mini-wnd-nav.history-wnd .state {
+		color: var(--c-text);
+	}
+	.bili-header-m .nav-menu .nav-mask {
+		box-shadow: none;
+		border-bottom: 1px solid var(--c-border);
+	}
+	.channel-menu .r-box {
+		border-color: var(--c-border);
+	}
+	.float-nav .nav-menu .backup,
+	.float-nav .nav-menu .item:hover {
+		border: 0;
+		background-color: var(--c-accent);
+		color: var(--c-white);
+	}
+	.bili-header-m .nav-menu .up-load {
+		margin: 0 7px 0 0;
+		padding: 0 7px;
+		width: auto;
+	}
+	.bili-header-m .nav-menu .up-load .u-link {
+		padding: 0 7px;
+		width: auto;
+		height: auto;
+		border-radius: 0;
+		background-color: transparent;
+		font-size: 12px;
+		color: var(--c-title);
+	}
+	.bili-header-m .nav-menu .up-load .up-nav {
+		border: 1px solid var(--c-border);
+		background-color: var(--c-background);
+	}
+	.bili-header-m .nav-menu .up-load .up-nav li:hover {
+		background-color: var(--c-hover);
+	}
+
+	/* 顶部搜索框 */
+	.bili-header-m .nav-search #nav_searchform,
+	.bili-header-m .bilibili-suggest,
+	.dynamic-m .wnd_bottom a,
+	.bili-header-m .mini-wnd-nav .read-more {
+		border-color: var(--c-border);
+		background-color: var(--c-background);
+	}
+	.bili-header-m .bilibili-suggest .b-line {
+		border-color: var(--c-border);
+	}
+	.bili-header-m .bilibili-suggest .b-line span {
+		background-color: var(--c-background);
+		color: var(--c-text);
+	}
+	.bili-header-m .bilibili-suggest .suggest-item:hover,
+	.bili-header-m .bilibili-suggest .suggest-item.focus,
+	.dynamic-m .wnd_bottom a:hover,
+	.dynamic-m .dyn_list_wrapper .dyn_list li.d-data:hover,
+	.bili-header-m .mini-wnd-nav .list li:hover,
+	.bili-header-m .mini-wnd-nav .read-more:hover {
+		background-color: var(--c-hover);
+	}
+
+	/* 顶部导航弹窗 */
+	.bili-header-m .profile-m,
+	.bili-header-m .mini-wnd-nav,
+	.bili-header-m .nav-menu .nav-con .nav-item .i-frame {
+		border: 1px solid var(--c-border);
+		background-color: var(--c-background);
+	}
+	.bili-header-m .profile-m .big-vip-red,
+	.dynamic-m .dyn_list_wrapper .dyn_list a:hover,
+	.dynamic-m .dyn_list_wrapper .dyn_list li .r .title span.live,
+	.bili-header-m .mini-wnd-nav .list li a:hover {
+		color: var(--c-accent) !important;
+	}
+	.bili-header-m .profile-m .header-uname .vip-type span {
+		background-color: var(--c-accent);
+		color: var(--c-white);
+	}
+	.bili-header-m .profile-m .grade .desc-tips {
+		background-color: var(--c-background);
+		color: var(--c-text);
+	}
+	.bili-header-m .profile-m .grade .desc-tips .help-link,
+	.bili-header-m .profile-m .member-bottom .logout,
+	.dynamic-m .dyn_menu li.on {
+		color: var(--c-accent);
+	}
+	.dynamic-m {
+		border: 0;
+		background-color: var(--c-background);
+	}
+	.dynamic-m .dyn_menu .line {
+		background-color: var(--c-accent);
+	}
+	.dynamic-m .dyn_list_wrapper .dyn_list li .r .title span.sp {
+		background-color: transparent;
+		color: var(--c-accent);
+	}
+	.dynamic-m .dyn_list_wrapper .dyn_list li.history,
+	.bili-header-m .mini-wnd-nav .list.history li.timeline,
+	.bili-header-m .profile-m .member-menu {
+		border-color: var(--c-border);
+	}
+	.dynamic-m .dyn_list_wrapper .dyn_list li .history-tag,
+	.bili-header-m .mini-wnd-nav .list.history li.timeline .date {
+		background-color: var(--c-background);
+		color: var(--c-text);
+	}
+
+	/* 评论 */
+	.bb-comment,
+	.comment-bilibili-fold,
+	.emoji-box .emoji-tabs {
+		background-color: var(--c-background);
+	}
+	.comment-m .b-head,
+	.bb-comment .comment-header .tabs-order li,
+	.comment-bilibili-fold .comment-header .tabs-order li,
+	.bb-comment .comment-list .list-item .user .name,
+	.comment-bilibili-fold .comment-list .list-item .user .name {
+		color: var(--c-title);
+	}
+	.bb-comment .reply-notice .notice-item a,
+	.comment-bilibili-fold .reply-notice .notice-item a,
+	.paging-box .current,
+	.paging-box .dian,
+	.paging-box .next,
+	.paging-box .prev,
+	.paging-box .tcd-number,
+	.emoji-box .emoji-title,
+	.emoji-box .emoji-text,
+	.bb-comment .comment-list .list-item .info,
+	.comment-bilibili-fold .comment-list .list-item .info,
+	.paging-box-big .page-jump {
+		color: var(--c-text);
+	}
+	.bb-comment .comment-header .tabs-order li.on,
+	.comment-bilibili-fold .comment-header .tabs-order li.on,
+	.paging-box .current {
+		color: var(--c-accent);
+	}
+	.bb-comment .comment-header,
+	.comment-bilibili-fold .comment-header,
+	.bb-comment .comment-list .list-item .con,
+	.comment-bilibili-fold .comment-list .list-item .con,
+	.bb-comment .comment-list .list-item:last-child .con,
+	.comment-bilibili-fold .comment-list .list-item:last-child .con,
+	.paging-box-big .page-jump input:focus {
+		border-color: var(--c-border);
+	}
+	.bb-comment .reply-notice .notice-item,
+	.comment-bilibili-fold .reply-notice .notice-item,
+	.bb-comment .comment-send .textarea-container textarea,
+	.comment-bilibili-fold .comment-send .textarea-container textarea,
+	.bb-comment .comment-send .textarea-container.focus textarea,
+	.bb-comment .comment-send .textarea-container:hover textarea,
+	.comment-bilibili-fold .comment-send .textarea-container.focus textarea,
+	.comment-bilibili-fold .comment-send .textarea-container:hover textarea,
+	.bb-comment .comment-send .comment-emoji,
+	.comment-bilibili-fold .comment-send .comment-emoji,
+	.emoji-box .emoji-notice,
+	.paging-box-big .current,
+	.paging-box-big .dian,
+	.paging-box-big .next,
+	.paging-box-big .prev,
+	.paging-box-big .tcd-number,
+	.paging-box-big .page-jump input {
+		border-color: var(--c-border);
+		background-color: var(--c-hover);
+		color: var(--c-text);
+	}
+	.bb-comment .comment-send .comment-submit,
+	.comment-bilibili-fold .comment-send .comment-submit,
+	.bb-comment .comment-send .comment-submit:hover,
+	.comment-bilibili-fold .comment-send .comment-submit:hover,
+	.paging-box-big .current,
+	.paging-box-big .current:hover,
+	.paging-box-big .dian:hover,
+	.paging-box-big .next:hover,
+	.paging-box-big .prev:hover,
+	.paging-box-big .tcd-number:hover {
+		border-color: var(--c-accent);
+		background-color: var(--c-accent);
+		color: var(--c-white);
+	}
+	.emoji-box {
+		border-color: var(--c-border);
+		box-shadow: none;
+		background-color: var(--c-background);
+		overflow: hidden;
+	}
+	.emoji-box .emoji-tabs .tab-link.on {
+		background-color: var(--c-hover);
+	}
+	.bb-comment .comment-list .list-item .info .operation .opera-list,
+	.comment-bilibili-fold .comment-list .list-item .info .operation .opera-list {
+		border: 1px solid var(--c-border);
+		background-color: var(--c-background);
+		color: var(--c-title);
+	}
+	.bb-comment .comment-list .list-item .info .operation .opera-list li:hover,
+	.comment-bilibili-fold .comment-list .list-item .info .operation .opera-list li:hover {
+		background-color: var(--c-hover);
+		color: var(--c-title);
+	}
+
+	/* 滚动条 */
+	::-webkit-scrollbar {
+		max-width: 6px;
+		max-height: 12px;
+	}
+	::-webkit-scrollbar-thumb {
+		border-radius: 6px;
+		background-color: var(--c-scroll);
+	}
+}
+
+@-moz-document url-prefix("https://www.bilibili.com/") {
+	/* 主页样式 */
+	/* 头部 */
+	.mini-header {
+		background: var(--c-bg-header);
+		backdrop-filter: blur(5px);
+	}
+
+	/* 搜索框 */
+	.international-home .bili-header-m .nav-search-box,
+	.international-home .international-header .nav-search-box {
+		position: absolute;
+		top: 100px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.international-home .bili-header-m .nav-search,
+	.international-home .international-header .nav-search {
+		margin: 0 auto;
+		width: 520px;
+		border-radius: 25px;
+		overflow: hidden;
+	}
+	.international-home .bili-header-m .nav-search #nav_searchform,
+	.international-home .international-header .nav-search #nav_searchform {
+		padding: 0 60px 0 20px;
+		border: 0;
+		background: rgba(0, 0, 0, .4);
+	}
+	.international-home .bili-header-m .nav-search .nav-search-keyword,
+	.international-home .international-header .nav-search .nav-search-keyword {
+		height: 50px;
+		font-size: 16px;
+		color: var(--c-white);
+	}
+	.international-home .bili-header-m .nav-search .nav-search-keyword::-webkit-input-placeholder,
+	.international-header .nav-search .nav-search-keyword::-webkit-input-placeholder {
+		color: #d2d2d2;
+	}
+	.international-home .bili-header-m .nav-search .nav-search-keyword::-moz-placeholder,
+	.international-header .nav-search .nav-search-keyword::-moz-placeholder {
+		color: #d2d2d2;
+	}
+	.international-home .bili-header-m .nav-search .nav-search-keyword:focus,
+	.international-header .nav-search .nav-search-keyword:focus {
+		color: var(--c-white);
+	}
+	.international-home .bili-header-m .nav-search .nav-search-submit,
+	.international-home .international-header .nav-search .nav-search-submit {
+		top: 0;
+		right: 20px;
+		font-size: 24px;
+		color: var(--c-white);
+		line-height: 50px;
+	}
+	.international-home .bili-header-m .nav-search .nav-search-btn,
+	.international-home .international-header .nav-search .nav-search-btn {
+		width: 60px;
+		height: 50px;
+		background: rgba(0, 0, 0, .6);
+	}
+	.international-home .bili-header-m .nav-search .nav-search-btn:hover,
+	.international-home .international-header .nav-search .nav-search-btn:hover {
+		color: var(--c-accent);
+	}
+	.bilibili-search-suggest,
+	.bilibili-search-history {
+		border-color: var(--c-border);
+		background: var(--c-background);
+	}
+	.bilibili-search-suggest .suggest-item.focus,
+	.bilibili-search-suggest .suggest-item:hover,
+	.bilibili-search-history .history-item.focus,
+	.bilibili-search-history .history-item:hover {
+		background-color: var(--c-hover);
+	}
+	.bilibili-search-suggest .suggest-item a,
+	.bilibili-search-history .history-item a,
+	.bilibili-search-suggest .suggest-item a:hover,
+	.bilibili-search-history .history-item a:hover {
+		color: var(--c-text);
+	}
+	.bilibili-search-suggest .suggest-item .suggest_high_light {
+		color: var(--c-accent);
+	}
+
+	/* 页眉图片 */
+	.bili-banner {
+		max-height: 220px;
+		background-color: var(--c-background) !important;
+	}
+	.bili-banner .taper-line {
+		background: none !important;
+	}
+	.bili-banner {
+		height: 14vw !important;
+	}
+
+	/* 页眉导航 */
+	.channel-menu-itnl {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		height: auto;
+	}
+	.channel-menu-itnl span {
+		flex: 1;
+	}
+	.van-popper-channel .sub-item {
+		max-height: none;
+	}
+	.channel-menu-itnl .item {
+		height: auto;
+	}
+	.channel-menu-itnl .item .name {
+		margin: 0 auto;
+		font-size: 16px;
+	}
+	.channel-menu-itnl .item .name em {
+		display: block;
+		margin: 2px auto 0;
+		background-color: var(--c-accent);
+	}
+	.channel-menu-itnl span:last-child .item .name {
+		margin-top: 2px;
+	}
+
+	/* 内容主体 */
+	.first-screen {
+		margin-top: 40px;
+	}
+	.space-between {
+		justify-content: center;
+	}
+	.card-list,
+	.extension,
+	manga-panel {
+		width: 100%;
+	}
+	.zone-list-box,
+	.manga-panel .manga-list-box {
+		justify-content: center;
+		width: 100% !important;
+		height: 460px !important;
+	}
+	#bili_anime .time-line .zone-list-box,
+	#bili_guochuang .time-line .zone-list-box {
+		max-height: 180px;
+	}
+	#bili_anime .card-list .zone-list-box,
+	#bili_guochuang .card-list .zone-list-box {
+		height: 465px !important;
+	}
+	#bili_live .zone-list-box {
+		height: 465px !important;
+	}
+	#bili_read .zone-list-box {
+		height: 238px !important;
+	}
+	#bili_manga .manga-panel .manga-list-box {
+		height: 843px !important;
+	}
+	#bili_report_spe_rec .zone-list-box {
+		height: auto !important;
+	}
+	@media screen and (max-width: 1654px) {
+		.b-footer-wrap .zone-list-box,
+		.b-wrap .zone-list-box,
+		.b-footer-wrap .extension,
+		.b-footer-wrap .manga-list-box,
+		.b-wrap .manga-list-box {
+			width: 100% !important;
+			height: 428px !important;
+		}
+		.b-footer-wrap .zone-list-box .live-card:nth-child(n+9),
+		.b-footer-wrap .zone-list-box .video-card-common:nth-child(n+9),
+		.b-wrap .zone-list-box .live-card:nth-child(n+9),
+		.b-wrap .zone-list-box .video-card-common:nth-child(n+9),
+		.b-footer-wrap .extension .video-card-common:nth-child(n+5),
+		.b-wrap .extension .video-card-common:nth-child(n+5) {
+			display: block;
+		}
+		.video-card-common .card-pic {
+			height: 116px !important;
+		}
+		.b-footer-wrap .manga-list-box .manga-card > img,
+		.b-wrap .manga-list-box .manga-card > img,
+		.b-wrap .extension {
+			width: 100% !important;
+			height: auto !important;
+		}
+		.b-footer-wrap .zone-list-box .article-card,
+		.b-wrap .zone-list-box .article-card {
+			width: 250px;
+		}
+		#bili_manga .manga-panel .manga-list-box {
+			height: 748px !important;
+		}
+		#bili_live .zone-list-box {
+			height: 455px !important;
+		}
+		#bili_anime .card-list .zone-list-box,
+		#bili_guochuang .card-list .zone-list-box {
+			max-height: 400px;
+		}
+		#bili_read .zone-list-box {
+			height: 228px !important;
+		}
+	}
+	@media screen and (max-width: 1438px) {
+		.b-footer-wrap .zone-list-box,
+		.b-wrap .zone-list-box,
+		.b-footer-wrap .extension,
+		.b-footer-wrap .manga-list-box,
+		.b-wrap .manga-list-box {
+			width: 100% !important;
+			height: 383px !important;
+		}
+		.b-footer-wrap .manga-list-box .manga-card:nth-child(n+9),
+		.b-wrap .manga-list-box .manga-card:nth-child(n+9) {
+			display: block;
+		}
+		.b-wrap .extension {
+			width: 100% !important;
+			height: auto !important;
+		}
+		.video-card-common .card-pic {
+			height: 100px !important;
+		}
+		#bili_live .zone-list-box {
+			height: 380px !important;
+		}
+		#bili_anime .card-list .zone-list-box,
+		#bili_guochuang .card-list .zone-list-box {
+			max-height: 350px;
+		}
+		#bili_manga .manga-panel .manga-list-box {
+			height: 648px !important;
+		}
+		#bili_read .zone-list-box .article-card:nth-child(n+7) {
+			display: none;
+		}
+	}
+	.gg-carousel {
+		margin-right: 10px;
+	}
+	.video-card-common,
+	.live-card,
+	.manga-panel .manga-list-box .manga-card {
+		flex: 18%;
+		margin: 1%;
+	}
+	.video-card-common .card-pic,
+	.live-card .pic {
+		height: 130px;
+	}
+	.video-card-common .up {
+		color: var(--c-text);
+	}
+	.exchange-btn .btn,
+	.time-line .tl-link {
+		margin-right: 20px;
+		width: auto;
+		border: 0;
+		font-size: 0;
+	}
+	.exchange-btn .btn:hover,
+	.time-line .tl-link,
+	.time-line .tl-link:hover {
+		background-color: transparent;
+	}
+	.exchange-btn .btn-change .bilifont,
+	.time-line .tl-link .bilifont {
+		font-size: 30px;
+		color: var(--c-accent);
+	}
+	.time-line-card .txt .update .published {
+		color: var(--c-text);
+	}
+	.live-card .up .txt {
+		margin-left: 20px;
+		flex: 1;
+	}
+	.time-line-card {
+		margin: 0 10px 24px;
+		width: 258px;
+	}
+	.time-line-card .txt {
+		width: 170px;
+	}
+	.s-rec {
+		height: auto;
+	}
+	.manga-panel .manga-list-box .manga-card > img {
+		width: 100%;
+		height: auto;
+	}
+	.time-line .zone-list-box .item {
+		margin: 0 10px 24px;
+	}
+	.article-card {
+		flex: 20%;
+		margin: 1%;
+	}
+
+	/* 侧边导航 */
+	.elevator .list-box {
+		border-color: var(--c-border);
+		background-color: var(--c-background);
+	}
+	.elevator .list-box .item {
+		background-color: var(--c-background);
+	}
+	.elevator .ear {
+		color: var(--c-border);
+	}
+	.elevator .list-box .item.sort,
+	.elevator .list-box .item.back-top {
+		border-color: var(--c-border);
+	}
+	.elevator .bg23 {
+		background-color: none;
+	}
+
+	/* 页脚 */
+	.international-footer {
+		border-top: 1px solid var(--c-border);
+		background-color: var(--c-background);
+	}
+	.international-footer .link-box .link-item {
+		border-color: var(--c-border);
+	}
+}
+
+@-moz-document url-prefix("https://www.bilibili.com/v/"),
+url-prefix("https://www.bilibili.com/anime/"),
+url-prefix("https://www.bilibili.com/guochuang/"),
+url-prefix("https://www.bilibili.com/cinema/") {
+	/* 分区主页样式 */
+	/* 导航 */
+	.sub-nav-m ul li.on a {
+		color: var(--c-accent);
+	}
+	.bili-header-m .nav-menu .nav-mask {
+		border: 0;
+		background: var(--c-bg-header);
+		backdrop-filter: blur(5px);
+	}
+	.bili-header-m .nav-menu .blur-bg {
+		background-image: none !important;
+	}
+	.bili-header-m .head-banner {
+		min-height: 155px;
+		height: 14vw;
+		max-height: 220px;
+		background-size: cover;
+		background-position: center 0;
+	}
+
+	/* 搜索 */
+	.bili-header-m .search {
+		position: absolute;
+		top: 100px;
+		left: 50%;
+		padding: 0;
+		width: 520px;
+		height: 50px;
+		border-radius: 25px;
+		overflow: hidden;
+		transform: translateX(-50%);
+		background-color: transparent;
+	}
+	.bili-header-m .search .searchform,
+	.bili-header-m .search .searchform:hover {
+		padding: 0 60px 0 20px;
+		height: 100%;
+		background-color: rgba(0, 0, 0, .4);
+	}
+	.bili-header-m .search button.search-submit {
+		width: 60px;
+		height: 100%;
+		background-color: rgba(0, 0, 0, .6);
+		background-position: -647px -712px;
+	}
+	.bili-header-m .search button.search-submit:hover {
+		background-position: -711px -711px;
+	}
+	.bili-header-m .search .search-keyword {
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		font-size: 16px;
+		color: var(--c-white);
+	}
+	.bili-header-m .search .search-keyword::-webkit-input-placeholder {
+		color: #d2d2d2;
+	}
+	.bili-header-m .search .search-keyword::-moz-placeholder {
+		color: #d2d2d2;
+	}
+
+	/* 主体 */
+	.bili-wrapper .r-con,
+	.bili-footer,
+	.bili-header-m .search .link-ranking,
+	.zone-module .zone-rank,
+	.video-floor-m .zone-title .headline .link-more,
+	.audio-comers-module .zone-title .headline .link-more,
+	.video-floor-m .zone-title .headline .tags,
+	.promote-m .headline .sub-name,
+	.bangumi-home-crumb .discovery-entry,
+	.block-area .follow-wrapper .follow-head .follow-more,
+	.new-stat-module .zone-title .headline .new-stat-more,
+	.block-area .block-right,
+	.index-entry-wrapper,
+	.block-area .timeline-toggle-block,
+	.block-area .timeline-title .headline .timeline-more,
+	.cinema-home-wrapper .new-stat-module .storey-box .spread-module:nth-child(n+16) {
+		display: none;
+	}
+	.spread-module .num,
+	.audio-list .song-list .song-li .content .text,
+	.game-groom-m .title,
+	.game-groom-m .num {
+		background-color: var(--c-background);
+	}
+	.primary-menu .nav-menu .channel.on:after,
+	.timeline-box .timeline-item.new p.num a {
+		background-color: var(--c-accent);
+	}
+	.sub-nav-m ul li a,
+	.video-floor-m .zone-title .headline .name,
+	.spread-module .t,
+	.primary-menu .nav-menu > li .nav-name,
+	.primary-menu .nav-menu .sub-nav li > a,
+	.primary-menu .nav-menu .side-nav .side-link span,
+	.audio-comers-module .zone-title .headline .name,
+	.audio-list .song-list .song-li .content .text a,
+	.game-groom-m a .title,
+	.block-area .timeline-title .headline .name,
+	.bangumi-home-crumb .fcname ul.n_num li a,
+	.block-area .block-left .block-header .block-title,
+	.new-stat-module .zone-title .headline .name,
+	.timeline-box .timeline-item .item-right a,
+	.video-item-biref .biref-info .biref-title {
+		color: var(--c-title);
+	}
+	.spread-module .num,
+	.audio-list .song-list .song-li .content .num,
+	.game-groom-m .num,
+	.timeline-box .timeline-item .item-right p.num {
+		color: var(--c-text);
+	}
+	.primary-menu .nav-menu .channel.on .nav-name,
+	.bangumi-home-crumb .fcname ul.n_num li.on a {
+		color: var(--c-accent);
+	}
+	.primary-menu.border-b {
+		border-color: var(--c-border);
+	}
+	.primary-menu .nav-menu > li .num-wrap span {
+		background-color: var(--c-accent);
+		color: var(--c-white);
+	}
+	.primary-menu .nav-menu .sub-nav {
+		border: 1px solid var(--c-border);
+		background-color: var(--c-background)
+	}
+	.primary-menu .nav-menu .sub-nav li:hover,
+	.video-floor-m .zone-title .headline .read-push:hover,
+	.audio-comers-module .zone-title .headline .read-push:hover,
+	.promote-m .headline .change-push:hover,
+	.new-stat-module .zone-title .headline .read-push:hover,
+	.random-change:hover {
+		background-color: var(--c-hover);
+	}
+	.bili-wrapper .l-con,
+	.block-area .block-left {
+		float: none;
+		width: auto;
+	}
+	.bili-tab .bili-tab-item.on {
+		border-color: var(--c-accent);
+		color: var(--c-accent);
+	}
+	.video-floor-m .zone-title .headline .read-push,
+	.audio-comers-module .zone-title .headline .read-push,
+	.promote-m .headline .change-push,
+	.new-stat-module .zone-title .headline .read-push,
+	.random-change {
+		border: 0;
+		background-color: transparent;
+		font-size: 0;
+	}
+	.go-top-m .go-top {
+		border-color: var(--c-accent);
+		background-color: var(--c-accent);
+		background-position: -714px -72px;
+	}
+	.energy-m .storey-box,
+	.video-floor-m .storey-box,
+	.audio-list .song-list,
+	.promote-m .storey-box,
+	.hot-recom-module .block-body,
+	.new-stat-module .storey-box,
+	.special-recom-module .block-body ul {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-line-pack: justify;
+		align-content: flex-start;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-ms-flex-pack: justify;
+		justify-content: center;
+		width: 100%;
+		height: auto !important;
+		max-height: 630px !important;
+	}
+	.energy-m .storey-box .spread-module,
+	.video-floor-m .storey-box .spread-module,
+	.audio-list .song-list .song-li,
+	.promote-m .storey-box .spread-module,
+	.video-item-biref,
+	.new-stat-module .storey-box .spread-module {
+		float: none;
+		flex: 18%;
+		margin: 1%;
+	}
+	.spread-module,
+	.spread-module .pic,
+	.audio-list .song-list .song-li,
+	.audio-list .song-list .song-li .mask,
+	.audio-list .song-list .song-li .song-shadow {
+		width: 100%;
+		height: auto;
+	}
+	.spread-module .pic {
+		max-height: 133px;
+	}
+	.game-groom-m {
+		border: 0;
+		background-color: var(--c-background);
+	}
+	.block-left {
+		height: auto !important;
+	}
+	.block-timeline .timeline-box {
+		height: 350px;
+		overflow: hidden scroll;
+	}
+	.timeline-box ul {
+		height: auto !important;
+	}
+	.block-area .timeline-wrapper.fix-width .timeline-box .timeline-item {
+		padding-right: 53px;
+	}
+
+	/* 番剧 */
+	/* 放映厅 */
+	/* 广告 */
+}
+
+@-moz-document url-prefix("https://www.bilibili.com/video/") {
+	/* 视频播放界面样式 */
+	.bili-header-m .nav-menu .up-load .u-link {
+		line-height: 50px;
+	}
+	.collection-m,
+	.coin-operated-m {
+		background-color: var(--c-background);
+	}
+	.video-info .video-title,
+	.bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-danmaku-input,
+	.collection-m .title,
+	.collection-m .content .group-list li,
+	.coin-operated-m .coin-title,
+	.tag-info-pane .tag-header .tag-title,
+	.tag-info-pane .tag-header .tag-title a,
+	.tag-report-popup h3 {
+		color: var(--c-title);
+	}
+	.video-info .video-data,
+	.bilibili-player-video-info,
+	.bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a,
+	.video-toolbar .ops > span,
+	.video-toolbar .ops .share .share-pos .box-a .share-down .share-btn,
+	.video-toolbar .ops .share .share-pos .share-address .t,
+	.collection-m .content .group-list li label .count,
+	.collection-m .content .group-list .add-group .add-btn,
+	.coin-operated-m .like-checkbox,
+	.coin-operated-m .coin-bottom .tips,
+	.video-toolbar .appeal-text,
+	.video-toolbar .more,
+	.video-desc .info,
+	.s_tag .tag-area > li > a,
+	.tag-del-popup p,
+	.up-info .u-info .name .message,
+	.up-info .u-info .desc,
+	.video-page-card .card-box .info .count {
+		color: var(--c-text);
+	}
+	.bilibili-player {
+		box-shadow: none;
+	}
+	.up-info .btn-panel .following-charge-btn,
+	.up-info .btn-panel .following-charge-btn:hover,
+	.bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-electric,
+	.bui-button.bui-button-blue,
+	.bui-button.bui-button-blue:hover,
+	.bui-button.bui-button-gray3:hover,
+	.video-toolbar .ops .share .share-pos .share-address ul li .btn,
+	.collection-m .bottom .btn,
+	.tag-info-pane .tag-footer .btn-left-box > a,
+	.tag-info-pane .tag-footer .btn-left-box > a:hover,
+	.tag-del-popup .btn-ok,
+	.tag-report-popup .btn-ok,
+	.recommend-list .rec-footer,
+	.video-info .video-title .activity {
+		border-color: var(--c-accent);
+		background-color: var(--c-accent);
+		color: var(--c-white);
+	}
+	.bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display > div.active .bp-svgicon,
+	.bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display > div.active:hover .bp-svgicon {
+		fill: var(--c-accent);
+	}
+	.bilibili-player-video-sendbar,
+	.tag-info-pane,
+	.tag-del-popup,
+	.tag-report-popup,
+	.player-auxiliary-area .player-auxiliary-filter .player-auxiliary-setting-menu-wrap {
+		border: 1px solid var(--c-border);
+		background-color: var(--c-background);
+	}
+	.bui-slider .bui-track .bui-bar-wrap .bui-bar {
+		background-color: var(--c-accent);
+	}
+	.bilibili-player-video-sendbar .bilibili-player-video-inputbar {
+		background-color: var(--c-background);
+	}
+	.bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-inputbar-wrap,
+	.collection-m .title,
+	.collection-m .content .group-list .add-group .add-btn,
+	.collection-m .bottom,
+	.video-toolbar,
+	.v-wrap .s_tag,
+	.tag-info-pane .btn-right-box {
+		border-color: var(--c-border);
+	}
+	.video-toolbar .ops > span.on,
+	.video-toolbar .ops > span.on i,
+	.video-toolbar .ops > span:hover,
+	.video-toolbar .ops > span:hover i,
+	.coin-operated-m .coin-title span,
+	.coin-operated-m .mc-box.on .c-num,
+	.tag-info-pane .tag-header .tag-title a:hover,
+	.tag-info-pane .btn-right-box .tag-praise,
+	.bili-header-m .bilibili-suggest .suggest-item .suggest_high_light {
+		color: var(--c-accent);
+	}
+	.is-vip,
+	.up-info .u-info .name .username.is-vip:hover,
+	.up-info .u-info .name .message:hover,
+	.up-info .u-info .name .message:hover i {
+		color: var(--c-accent) !important;
+	}
+	.video-toolbar .ops .share .share-pos,
+	.video-toolbar .ops .share .share-pos .share-address ul li input,
+	.more-ops-list,
+	.s_tag .ipt {
+		border-color: var(--c-border);
+		background-color: var(--c-background);
+		color: var(--c-text);
+	}
+	.coin-operated-m .mc-box {
+		border: 0;
+		background-color: var(--c-white);
+	}
+	.more-ops-list li:hover {
+		background-color: var(--c-hover);
+		color: var(--c-text);
+	}
+	.s_tag .tag-area > li,
+	.s_tag .btn-add {
+		border-color: var(--c-border);
+		background-color: var(--c-hover);
+	}
+	.s_tag .btn-add span {
+		background-color: var(--c-text);
+	}
+
+	/* 弹幕列表 */
+	.bui-collapse .bui-collapse-wrap {
+		border: 1px solid var(--c-border);
+		border-radius: 2px;
+		overflow: hidden;
+	}
+	.player-auxiliary-area,
+	.bui-collapse .bui-collapse-header,
+	.player-auxiliary-area .player-auxiliary-filter,
+	.player-auxiliary-area .player-auxiliary-filter .player-auxiliary-setting-menu-wrap .player-auxiliary-setting-menu-list,
+	.danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap,
+	.danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap .player-auxiliary-danmaku-load-status,
+	.danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-btn-footer {
+		background-color: var(--c-background);
+	}
+	.player-auxiliary-area .player-auxiliary-danmaku .player-auxiliary-danmaku-function {
+		background-color: var(--c-hover);
+	}
+	.player-auxiliary-area .player-auxiliary-filter-title,
+	.danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap .player-auxiliary-danmaku-list .danmaku-info-row span.danmaku-info-danmaku,
+	.danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap .player-auxiliary-danmaku-load-status.disabled {
+		color: var(--c-title);
+	}
+	.bui-collapse .bui-collapse-header .bui-collapse-arrow,
+	.player-auxiliary-area .player-auxiliary-filter-menu,
+	.player-auxiliary-area .player-auxiliary-filter .player-auxiliary-setting-menu-wrap .player-auxiliary-setting-menu-list,
+	.danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap .player-auxiliary-danmaku-list .danmaku-info-row {
+		color: var(--c-text);
+	}
+	.player-auxiliary-area .player-auxiliary-filter .player-auxiliary-setting-menu-wrap .player-auxiliary-setting-menu-list:hover {
+		background-color: var(--c-hover);
+		color: var(--c-text);
+	}
+	.player-auxiliary-area .player-auxiliary-danmaku .player-auxiliary-danmaku-function [class*=player-auxiliary-danmaku-btn-] {
+		background-color: var(--c-hover);
+		color: var(--c-title);
+	}
+	.bui-button.bui-button-gray2 {
+		border-top: 1px solid var(--c-border);
+		background-color: var(--c-background);
+		color: var(--c-text);
+	}
+	.danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap .player-auxiliary-danmaku-list .danmaku-info-row .danmaku-info-block-btn,
+	.danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap .player-auxiliary-danmaku-list .danmaku-info-row .danmaku-info-protect-btn,
+	.danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap .player-auxiliary-danmaku-list .danmaku-info-row .danmaku-info-report-btn,
+	.danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap .player-auxiliary-danmaku-list .danmaku-info-row .danmaku-info-block-btn:hover,
+	.danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap .player-auxiliary-danmaku-list .danmaku-info-row .danmaku-info-protect-btn:hover,
+	.danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap .player-auxiliary-danmaku-list .danmaku-info-row .danmaku-info-report-btn:hover {
+		background-color: var(--c-accent);
+		color: var(--c-white);
+	}
+}
+
+@-moz-document url-prefix("https://live.bilibili.com/") {
+	/* 直播主页样式 */
+	.text-info-ctnr.body-bg,
+	.highlight-area-item,
+	.news-ctnr,
+	.hab-ctnr,
+	.rank-ctnr,
+	.hover-panel-wrapper,
+	.hover-panel-wrapper .text-info-ctnr,
+	.rec-area-item,
+	.link-footer,
+	.live-sidebar-ctnr {
+		background-color: var(--c-background) !important;
+	}
+	.room-title,
+	.notice-item .notice-main .notice-title,
+	.coverNews-item-title,
+	.item-title,
+	.room-anchor {
+		color: var(--c-title) !important;
+	}
+	.section-title,
+	.link-footer a,
+	.more-link,
+	.area-title,
+	.title-text,
+	.yzly-title,
+	.coverNews-item-time,
+	.tab-item,
+	.more-ctnr,
+	.popularity-row,
+	.area-name,
+	.item-time {
+		color: var(--c-text) !important;
+	}
+	.notice-item .notice-btn {
+		background-color: var(--c-accent) !important;
+		color: var(--c-white) !important;
+	}
+	.hover-panel-wrapper,
+	.link-footer {
+		border-color: var(--c-border) !important;
+	}
+	.rec-area-item {
+		border: 0 !important;
+	}
+
+	/* 直播播放界面样式 */
+	.link-navbar-ctnr,
+	.link-navbar,
+	.rank-list-ctnr,
+	.live-room-app .app-content .app-body .player-and-aside-area .aside-area .rank-list-section,
+	.chat-history-panel,
+	.live-room-app .app-content .app-body .player-and-aside-area .aside-area .chat-control-panel,
+	.content-wrapper,
+	.feed-card .empty-content,
+	.live-player-ctnr.minimal {
+		background-color: var(--c-background) !important;
+	}
+	.live-room-app .app-content .app-body .player-and-aside-area .left-container .head-info-section,
+	.live-room-app .app-content .app-body .player-and-aside-area .left-container .gift-control-section,
+	.live-room-app .app-content .app-body .player-and-aside-area .aside-area {
+		border: 0;
+		background-color: var(--c-background);
+	}
+	.chat-input,
+	.link-navbar .nav-item,
+	.link-navbar .main-ctnr .nav-logo,
+	.shortcuts-ctnr,
+	.card .main-content .user-name a,
+	.video-container .text-area .title,
+	.size-bar-text,
+	.shortcuts-ctnr .shortcut-item {
+		color: var(--c-title) !important;
+	}
+	.tabs .tab-list .item,
+	.gift-item .label,
+	.chat-history-panel .chat-history-list .chat-item.danmaku-item,
+	.tab-candidate,
+	.room-introduction-scroll-wrapper,
+	.room-introduction-tags .room-introduction-tag {
+		color: var(--c-text) !important;
+	}
+	.tabs .tab-list .item.active,
+	.chat-history-panel .chat-history-list .chat-item.danmaku-item .user-name,
+	.tab-candidate.active[data-v-0deb4d76],
+	.tab-candidate:hover {
+		color: var(--c-accent) !important;
+	}
+	.room-introduction-tags {
+		border-color: var(--c-border) !important;
+	}
+	.link-navbar-ctnr {
+		box-shadow: none;
+	}
+	.link-navbar .main-ctnr .nav-items-ctnr,
+	.shortcuts-ctnr .shortcut-item:last-child,
+	.custom-link,
+	.live-room-app .app-content .app-body .section-block .right-container {
+		display: none !important;
+	}
+	.link-navbar .main-ctnr .nav-logo {
+		font-size: 0 !important;
+	}
+	.link-navbar .main-ctnr .nav-logo:before {
+		top: 11px !important;
+		width: 30px !important;
+		height: 30px !important;
+		background-size: 30px !important;
+	}
+	.search-bar-ctnr .search-bar,
+	.chat-input {
+		border: 1px solid var(--c-border) !important;
+		background-color: var(--c-background) !important;
+	}
+	.live-room-app .app-content .app-body .player-and-aside-area .aside-area .chat-control-panel {
+		border-top: 1px solid var(--c-border);
+	}
+	.content-wrapper {
+		border: 0 !important;
+	}
+	.live-room-app .app-content .app-body .section-block .left-container {
+		float: none;
+		width: auto;
+	}
+	.card,
+	.side-bar-cntr {
+		border: 0 !important;
+		background-color: var(--c-background) !important;
+	}
+	.card .more-panel,
+	.card-content .repost,
+	.card-content .not-support,
+	.card-content .deleted,
+	.video-container {
+		border-color: var(--c-border) !important;
+		background-color: var(--c-hover) !important;
+		color: var(--c-text) !important;
+	}
+	.card .more-panel:after {
+		background-color: var(--c-hover) !important;
+		border-top-color: var(--c-border) !important;
+		border-left-color: var(--c-border) !important;
+	}
+	.bl-button--primary {
+		background-color: var(--c-accent) !important;
+		color: var(--c-white) !important;
+	}
+	.bl-button--primary[data-v-8a4e6ac4]:disabled {
+		background-color: #e9eaec !important;
+		color: #b4b4b4 !important;
+	}
+	@media (prefers-color-scheme: dark) {
+		.live-player-ctnr.minimal {
+			box-shadow: 0 0 30px 1px rgba(84, 94, 101, 0.4);
+		}
+	}
+}
+
+@-moz-document url-prefix("https://message.bilibili.com/") {
+	/* 消息界面样式 */
+	.title,
+	.divided-line,
+	.space-right .space-right-top,
+	.source-img {
+		display: none !important;
+	}
+	.system-item .title {
+		display: inline-block !important;
+	}
+	.space-left,
+	.space-right,
+	.bp-popup-panel,
+	.is-black,
+	.is-limit,
+	.message-list,
+	.emotion-box,
+	.emotion-box::after,
+	.emoji-box,
+	.emoji-box::after {
+		background-color: var(--c-background) !important;
+	}
+	.list {
+		margin-top: 100px !important;
+	}
+	.title,
+	.line-1 .name-field,
+	.bp-popup-panel .title-ctnr .popup-title,
+	.list-title,
+	.list-item .name,
+	.action-menu .menu-list a,
+	.textarea,
+	.config {
+		color: var(--c-title) !important;
+	}
+	.item,
+	.line-1,
+	.line-2,
+	.time,
+	.action-button,
+	.text-box,
+	.content-text,
+	.bottom,
+	.list-item .last-word,
+	.indicator,
+	.emoji-box .emoji-item,
+	.tip {
+		color: var(--c-text) !important;
+	}
+	.item.active a,
+	.item.active::before,
+	.item:hover a,
+	.item:hover::before,
+	.line-1 .name-field a:hover,
+	.link,
+	.is-black,
+	.is-limit,
+	.msg-more,
+	.dynamic-link {
+		color: var(--c-accent) !important;
+	}
+	.card,
+	.action-menu .menu-list {
+		box-shadow: none !important;
+		background-color: var(--c-background) !important;
+	}
+	.reply-item:not(:last-child)::after,
+	.love-item:not(:last-child)::after,
+	.list,
+	.list-title,
+	.title {
+		border-color: var(--c-border) !important;
+	}
+	.text-box {
+		width: auto !important;
+		max-width: 300px;
+	}
+	.reply-textarea,
+	.message .message-content,
+	.new-message-tip .text,
+	.send-box {
+		border-color: var(--c-border) !important;
+		background-color: var(--c-hover) !important;
+		color: var(--c-text) !important;
+	}
+	.send-button,
+	.bl-button--primary,
+	.bl-button--ghost,
+	.send-btn {
+		border-color: var(--c-accent) !important;
+		background-color: var(--c-accent) !important;
+		color: var(--c-white) !important;
+	}
+	.system-item,
+	.list-item {
+		border-bottom: 1px solid var(--c-border);
+		border-radius: 0 !important;
+	}
+	.notify {
+		background-color: var(--c-accent) !important;
+	}
+	.active,
+	.new-message-tip::after {
+		background-color: var(--c-hover) !important;
+	}
+}
