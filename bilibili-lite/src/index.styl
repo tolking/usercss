@@ -1,0 +1,28 @@
+/*! ==UserStyle==
+@name           bilibili-lite
+@namespace      tolking-usercss
+@version        1.0.0-alpha.2
+@description    一个简化的bilibili页面样式，自适应黑暗模式
+@author         tolking <qw13131wang@gmail.com> (https://ououe.com)
+@homepageURL		https://github.com/tolking/usercss/bilibili-lite
+@supportURL			https://github.com/tolking/usercss/issues
+@updateURL			https://raw.githubusercontent.com/tolking/usercss/master/bilibili-lite/index.user.css
+@license				MIT
+@preprocessor		uso
+
+@advanced  dropdown  defaultTheme  "选择默认主题" {
+	auto "跟随系统" <<<EOT
+  /*! auto *\/:root{--c-title:#212121;--c-text:#666;--c-border:#dadada;--c-background:#fff;--c-hover:rgba(230, 230, 230, .3);--c-accent:/*[[accentColor]]*\/;--c-white:#fff;--c-bg-header:rgba(0, 0, 0, .3);--c-scroll:#7c7d7f}@media (prefers-color-scheme:dark){:root{--c-title:#e2e2e2;--c-text:#bababa;--c-border:#4e4e4e;--c-background:#25272a;--c-hover:rgba(20, 20, 20, .3)}} EOT;
+	light "亮色" <<<EOT
+  /*! light *\/:root{--c-title:#212121;--c-text:#666;--c-border:#dadada;--c-background:#fff;--c-hover:rgba(230, 230, 230, .3);--c-accent:/*[[accentColor]]*\/;--c-white:#fff;--c-bg-header:rgba(0, 0, 0, .3);--c-scroll:#7c7d7f} EOT;
+	dark "暗色" <<<EOT
+  /*! dark *\/:root{--c-title:#e2e2e2;--c-text:#bababa;--c-border:#4e4e4e;--c-background:#25272a;--c-hover:rgba(20, 20, 20, .3);--c-accent:/*[[accentColor]]*\/;--c-white:#fff;--c-bg-header:rgba(0, 0, 0, .3);--c-scroll:#7c7d7f} EOT;
+}
+@advanced  color  accentColor  "主色调"  #00a1d6
+==/UserStyle== */
+@import 'public'
+@import 'home'
+@import 'v'
+@import 'video'
+@import 'live'
+@import 'message'

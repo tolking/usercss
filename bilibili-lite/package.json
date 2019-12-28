@@ -1,0 +1,26 @@
+{
+  "name": "bilibili-lite",
+  "version": "1.0.0-alpha.2",
+  "description": "一个简化的bilibili页面样式，自适应黑暗模式",
+  "author": "tolking <qw13131wang@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/tolking/usercss/bilibili-lite",
+  "bugs": {
+    "url": "https://github.com/tolking/usercss/issues"
+  },
+  "homepage": "https://github.com/tolking/usercss/bilibili-lite",
+  "keywords": [
+    "bilibili",
+    "bilibili-lite",
+    "usercss",
+    "styles",
+    "dark"
+  ],
+  "scripts": {
+    "dev": "stylus -w ./src/index.styl -o index.user.css",
+    "build": "stylus ./src/index.styl -o index.user.css"
+  },
+  "dependencies": {
+    "stylus": "^0.54.7"
+  }
+}
