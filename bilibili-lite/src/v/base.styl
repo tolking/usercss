@@ -15,7 +15,21 @@
 .block-area .timeline-toggle-block
 .block-area .timeline-title .headline .timeline-more
 .cinema-home-wrapper .new-stat-module .storey-box .spread-module:nth-child(n+16)
-	display none
+.special-recom-list .video-item-biref:nth-child(n+6)
+.special-recom-module .block-body .huge-recom
+.block-area .block-left .block-header a.link-more
+.block-left .headline .hot-link
+.area-module .area-block .block-right
+.block-left.block-brand .headline a.link-more
+.block-left.block-brand .headline .tab-wrap
+.cinema-home-crumb .activity-entry
+.cinema-home-crumb .discovery-entry
+.block-left .headline a.link-more
+.card-video-list .video-item-biref:nth-child(n+6)
+.card-video-wrapper .card-video-content .huge-recom
+.video-list-recom .cinema-recom
+.video-list-video .video-item-biref:nth-child(n+6)
+	display none !important
 
 .spread-module .num
 .audio-list .song-list .song-li .content .text
@@ -30,8 +44,8 @@
 .sub-nav-m ul li a
 .video-floor-m .zone-title .headline .name
 .spread-module .t
-.primary-menu .nav-menu > li .nav-name
-.primary-menu .nav-menu .sub-nav li > a
+.primary-menu .nav-menu>li .nav-name
+.primary-menu .nav-menu .sub-nav li>a
 .primary-menu .nav-menu .side-nav .side-link span
 .audio-comers-module .zone-title .headline .name
 .audio-list .song-list .song-li .content .text a
@@ -42,26 +56,38 @@
 .new-stat-module .zone-title .headline .name
 .timeline-box .timeline-item .item-right a
 .video-item-biref .biref-info .biref-title
+.cinema-home-crumb ul li a
+.block-left .headline h4
+.coming-soon-wrapper .block-title
+.coming-soon-wrapper .card-wrapper .card-item .info-wrapper .desc
+.coming-soon-wrapper .card-wrapper .card-item .info-wrapper .title
+.block-left.block-brand .headline h4
 	color var(--c-title)
 
 .spread-module .num
 .audio-list .song-list .song-li .content .num
 .game-groom-m .num
 .timeline-box .timeline-item .item-right p.num
+.coming-soon-wrapper .card-wrapper .card-item .time-line-wrapper .date
+.coming-soon-wrapper .card-wrapper .card-item .time-line-wrapper .time
 	color var(--c-text)
 
 .primary-menu .nav-menu .channel.on .nav-name
 .bangumi-home-crumb .fcname ul.n_num li.on a
+.cinema-home-crumb ul li.on a
+.cinema-home-crumb ul li:hover a
 	color var(--c-accent)
 
 .primary-menu.border-b
+.cinema-home-crumb ul li
 	border-color var(--c-border)
 
-.primary-menu .nav-menu > li .num-wrap span
+.primary-menu .nav-menu>li .num-wrap span
 	background-color var(--c-accent)
 	color var(--c-white)
 
 .primary-menu .nav-menu .sub-nav
+.sub-nav-m .tips
 	border 1px solid var(--c-border)
 	background-color var(--c-background)
 
@@ -75,8 +101,9 @@
 
 .bili-wrapper .l-con
 .block-area .block-left
-	float none
-	width auto
+.area-block .block-left
+	float none !important
+	width auto !important
 
 .bili-tab .bili-tab-item.on
 	border-color var(--c-accent)
@@ -103,6 +130,10 @@
 .hot-recom-module .block-body
 .new-stat-module .storey-box
 .special-recom-module .block-body ul
+.area-module .video-list-video
+.area-module .video-list-movie
+.area-module .video-list-brand
+.block-area .card-video-list
 	display -ms-flexbox
 	display flex
 	-ms-flex-line-pack justify
@@ -121,6 +152,7 @@
 .promote-m .storey-box .spread-module
 .video-item-biref
 .new-stat-module .storey-box .spread-module
+.video-item-biref.cinema-large
 	float none
 	flex 18%
 	margin 1%
@@ -130,6 +162,11 @@
 .audio-list .song-list .song-li
 .audio-list .song-list .song-li .mask
 .audio-list .song-list .song-li .song-shadow
+.video-item-biref
+.video-item-biref a
+.video-item-biref .biref-img
+.video-item-biref.cinema-large
+.video-item-biref.cinema-large .biref-img
 	width 100%
 	height auto
 
@@ -141,6 +178,8 @@
 	background-color var(--c-background)
 
 .block-left
+.special-recom-module .block-body
+.block-area .card-video-content
 	height auto !important
 
 .block-timeline .timeline-box
@@ -153,4 +192,22 @@
 .block-area .timeline-wrapper.fix-width .timeline-box .timeline-item
 	padding-right 53px
 
-/* 放映厅 */
+.sub-nav-m .tips .t-arrow
+	width 0
+	height 0
+	border-bottom 5px solid var(--c-border)
+	border-left 6px solid transparent
+	border-right 6px solid transparent
+	background-image none
+
+.coming-soon-wrapper .card-wrapper .card-item .time-line-wrapper .line
+.coming-soon-wrapper .card-wrapper .card-item .time-line-wrapper .line .point-wrapper
+.coming-soon-wrapper .card-wrapper .card-item .time-line-wrapper .line .point-wrapper .point
+	background-color var(--c-border)
+
+.new-stat-module .storey-box
+	max-height 400px !important
+
+.card-video-wrapper .card-video-content .huge-recom+.card-video-list
+.video-list-recom .video-list-video
+	margin-left 0
