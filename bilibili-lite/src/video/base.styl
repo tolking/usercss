@@ -15,12 +15,16 @@
 .tag-info-pane .tag-header .tag-title a
 .tag-report-popup h3
 .recommend-list .rec-title
+.up-info .u-info .name .username
+.user-card-m .info .user .name
+.multi-page .head-con h3
+.multi-page .cur-list .list-box li a
 	color var(--c-title)
 
 .video-info .video-data
 .bilibili-player-video-info
 .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a
-.video-toolbar .ops > span
+.video-toolbar .ops>span
 .video-toolbar .ops .share .share-pos .box-a .share-down .share-btn
 .video-toolbar .ops .share .share-pos .share-address .t
 .collection-m .content .group-list li label .count
@@ -30,11 +34,16 @@
 .video-toolbar .appeal-text
 .video-toolbar .more
 .video-desc .info
-.s_tag .tag-area > li > a
+.s_tag .tag-area>li>a
 .tag-del-popup p
 .up-info .u-info .name .message
 .up-info .u-info .desc
 .video-page-card .card-box .info .count
+.user-card-m .info .social a
+.user-card-m .info .sign
+.multi-page .head-con .range-box i
+.multi-page .head-con .range-box .cur-page
+.video-desc .btn span
 	color var(--c-text)
 
 .bilibili-player
@@ -48,25 +57,28 @@
 .bui-button.bui-button-gray3:hover
 .video-toolbar .ops .share .share-pos .share-address ul li .btn
 .collection-m .bottom .btn
-.tag-info-pane .tag-footer .btn-left-box > a
-.tag-info-pane .tag-footer .btn-left-box > a:hover
+.tag-info-pane .tag-footer .btn-left-box>a
+.tag-info-pane .tag-footer .btn-left-box>a:hover
 .tag-del-popup .btn-ok
 .tag-report-popup .btn-ok
 .recommend-list .rec-footer
 .video-info .video-title .activity
+.multi-page .cur-list .module-box li.on
 	border-color var(--c-accent)
 	background-color var(--c-accent)
 	color var(--c-white)
 
-.bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display > div.active .bp-svgicon
-.bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display > div.active:hover .bp-svgicon
+.bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active .bp-svgicon
+.bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active:hover .bp-svgicon
 	fill var(--c-accent)
 
 .bilibili-player-video-sendbar
 .tag-info-pane
 .tag-del-popup
 .tag-report-popup
+.multi-page
 .player-auxiliary-area .player-auxiliary-filter .player-auxiliary-setting-menu-wrap
+.multi-page .cur-list .module-box li
 	border 1px solid var(--c-border)
 	background-color var(--c-background)
 
@@ -76,23 +88,30 @@
 .bilibili-player-video-sendbar .bilibili-player-video-inputbar
 	background-color var(--c-background)
 
+.multi-page .cur-list .list-box li.on
+.multi-page .cur-list .list-box li:hover
+	background-color var(--c-hover)
+
 .collection-m .title
 .collection-m .content .group-list .add-group .add-btn
 .collection-m .bottom
 .video-toolbar
 .v-wrap .s_tag
 .tag-info-pane .btn-right-box
+.user-card-m
 	border-color var(--c-border)
 
-.video-toolbar .ops > span.on
-.video-toolbar .ops > span.on i
-.video-toolbar .ops > span:hover
-.video-toolbar .ops > span:hover i
+.video-toolbar .ops>span.on
+.video-toolbar .ops>span.on i
+.video-toolbar .ops>span:hover
+.video-toolbar .ops>span:hover i
 .coin-operated-m .coin-title span
 .coin-operated-m .mc-box.on .c-num
 .tag-info-pane .tag-header .tag-title a:hover
 .tag-info-pane .btn-right-box .tag-praise
 .bili-header-m .bilibili-suggest .suggest-item .suggest_high_light
+.multi-page .cur-list .list-box li.on>a
+.video-desc .btn span:hover
 	color var(--c-accent)
 
 .is-vip
@@ -117,8 +136,9 @@
 	background-color var(--c-hover)
 	color var(--c-text)
 
-.s_tag .tag-area > li
+.s_tag .tag-area>li
 .s_tag .btn-add
+.multi-page .cur-list .module-box li:hover
 	border-color var(--c-border)
 	background-color var(--c-hover)
 
@@ -128,3 +148,28 @@
 .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-inputbar-wrap
 	border-color var(--c-border)
 	background-color var(--c-hover)
+
+.members-info
+	margin-bottom 20px
+	border 1px solid var(--c-border)
+
+.members-info__header
+	background-color var(--c-background) !important
+
+.members-info .up-card
+	padding 0 16px
+
+.members-info .up-card .btn
+	flex-shrink initial !important
+
+.members-info__header .title
+.members-info .up-card .info-name
+	color var(--c-title) !important
+
+.members-info__header .btn
+.members-info .up-card .info-title
+	color var(--c-text) !important
+
+.members-info .up-card .attention--not
+	background-color var(--c-accent) !important
+	color var(--c-white) !important
