@@ -1,12 +1,13 @@
 # bilibili-lite
 
-> **开发中...**
+> **开发中...**，现在仍然是测试版，未来界面可能会有较大变化
 
 ## 安装
 
-1. 确保你浏览器安装了 `Stylus` 或者 `xStyle`
+> 在安装前，确保你浏览器安装了 `Stylus` 或者 `xStyle`
 
-2. [点击此处开始安装](https://raw.githubusercontent.com/tolking/usercss/master/bilibili-lite/index.user.css)
+- [点击此处开始安装](https://raw.githubusercontent.com/tolking/usercss/master/bilibili-lite/index.user.css)
+- 如果你无法访问上面链接 [尝试国内镜像](https://gitee.com/tolking/usercss/raw/master/bilibili-lite/index.user.css) (提示：镜像是通过手动同步的，相对于上面链接会存在较长时间的滞后)
 
 ## 特色
 
@@ -18,7 +19,16 @@
 ### 进度
 
 - 主页
-- 大部分分区主界面
+- 分区界面
 - 播放界面
-- 消息
+- 注册登陆
+- 个人空间
 - 直播主页及播放
+- 消息
+- 专栏
+
+### 未来
+
+- 更多界面
+- 界面、样式优化
+- 增加合适的动画
