@@ -9,6 +9,8 @@
 .comment-bilibili-fold .comment-header .tabs-order li
 .bb-comment .comment-list .list-item .user .name
 .comment-bilibili-fold .comment-list .list-item .user .name
+.bb-comment .comment-list .list-item .con .vote-container .text-area .text-content
+.comment-bilibili-fold .comment-list .list-item .con .vote-container .text-area .text-content
 	color var(--c-title)
 
 .bb-comment .reply-notice .notice-item a
@@ -24,7 +26,10 @@
 .comment-bilibili-fold .comment-list .list-item .info
 .paging-box-big .page-jump
 .pager .jump-pager
-.bb-comment .no-more-reply, .comment-bilibili-fold .no-more-reply
+.bb-comment .no-more-reply
+.comment-bilibili-fold .no-more-reply
+.bb-comment .comment-list .list-item .con .vote-container .text-area .text-desc
+.comment-bilibili-fold .comment-list .list-item .con .vote-container .text-area .text-desc
 	color var(--c-text)
 
 .bb-comment .comment-header .tabs-order li.on
@@ -39,6 +44,8 @@
 .bb-comment .comment-list .list-item:last-child .con
 .comment-bilibili-fold .comment-list .list-item:last-child .con
 .paging-box-big .page-jump input:focus
+.bb-comment .comment-list .list-item .con .vote-container
+.comment-bilibili-fold .comment-list .list-item .con .vote-container
 	border-color var(--c-border)
 
 .bb-comment .reply-notice .notice-item
@@ -76,6 +83,8 @@
 .paging-box-big .tcd-number:hover
 .pager .pages .page-item.active button
 .pager .pages .page-item button:hover
+.bb-comment .comment-list .list-item .con .vote-container .text-area .vote-btn-box .vote-btn
+.comment-bilibili-fold .comment-list .list-item .con .vote-container .text-area .vote-btn-box .vote-btn
 	border-color var(--c-accent)
 	background-color var(--c-accent)
 	color var(--c-white)
@@ -87,6 +96,8 @@
 	overflow hidden
 
 .emoji-box .emoji-tabs .tab-link.on
+.bb-comment .comment-list .list-item .con .vote-container .image-area .share-img
+.comment-bilibili-fold .comment-list .list-item .con .vote-container .image-area .share-img
 	background-color var(--c-hover)
 
 .bb-comment .comment-list .list-item .info .operation .opera-list
@@ -99,3 +110,7 @@
 .comment-bilibili-fold .comment-list .list-item .info .operation .opera-list li:hover
 	background-color var(--c-hover)
 	color var(--c-title)
+
+.bb-comment .comment-list .list-item .con .vote-container:hover .text-area
+.comment-bilibili-fold .comment-list .list-item .con .vote-container:hover .text-area
+	box-shadow none
