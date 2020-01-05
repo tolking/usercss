@@ -8,16 +8,13 @@
 .page-content .right-side .more .top-bar
 .page-content .right-side .more .link .icon
 .page-content .right-side .more .help .icon
-  display none
+  display none !important
 
-.nav-tab-bar .tab-item
-.page-content .right-side .more .help .title
-.page-content .right-side .more .link .title
-.page-content .right-side .search-module .search-block .search-word-panel .history-item
-.page-content .right-side .search-module .search-block .search-word-panel .suggest-item
-.page-content .left-side .article-list .article-list-holder .article-item .item-holder .article-title-holder
-.categories-bar .tag-item
-  color var(--c-title)
+.page-content .right-side .more a:hover
+.page-content .right-side .search-module .search-block .search-word-panel .history-item:hover
+.page-content .right-side .search-module .search-block .search-word-panel .suggest-item:hover
+.page-content .left-side .article-list .article-list-holder .article-item:hover
+  background-color var(--c-hover)
 
 .page-content .right-side .more .help .info
 .page-content .right-side .more .link .info
@@ -25,19 +22,11 @@
 .page-content .left-side .article-list .article-list-holder .article-item .item-holder .article-info-bar
 .page-content .left-side .article-list .article-list-holder .article-item .item-holder .article-info-bar .up-content .nick-name
 .page-content .left-side .article-list .article-list-holder .article-item .item-holder .article-info-bar .category
-.page-content .left-side .article-list .article-list-holder .article-item .item-holder .article-info-bar .like
 .page-content .left-side .article-list .article-list-holder .article-item .item-holder .article-info-bar .reply
-.page-content .left-side .article-list .article-list-holder .article-item .item-holder .article-info-bar .view
-  color var(--c-text)
-
-.nav-tab-bar .tab-item.on
-.nav-tab-bar .tab-item.on a
-.nav-tab-bar .tab-item:hover
-.page-content .right-side .search-module .search-block .search-word-panel .suggest-item a .suggest_high_light
-.page-content .left-side .article-list .article-list-holder .article-item:hover .item-holder .article-title
-  color var(--c-accent)
+  color var(--c-text) !important
 
 .categories-bar
+.page-content .right-side .search-module .search-block .search-word-panel .panel-title .split-line
   border-color var(--c-border)
 
 .nav-tab-bar
@@ -97,9 +86,6 @@
   border 1px solid var(--c-border)
   border-radius 4px
 
-.page-content .right-side .more a:hover
-  background-color var(--c-hover)
-
 .page-content .right-side .more .help
 .page-content .right-side .more .link
   position initial
@@ -110,9 +96,6 @@
 .page-content .right-side .search-module .search-block .search-word-panel
   border-color var(--c-border)
   background-color var(--c-background)
-
-.page-content .right-side .search-module .search-block .search-word-panel .panel-title .split-line
-  border-color var(--c-border)
 
 .page-content .right-side .search-module .search-block .search-word-panel .panel-title p span
   background-color var(--c-background)
@@ -126,11 +109,8 @@
   margin-top 20px
 
 .page-content .left-side .article-list .article-list-holder .article-item
-  border-color var(--c-bordr)
+  border-color var(--c-border)
   background-color var(--c-background)
-
-.page-content .left-side .article-list .article-list-holder .article-item:hover
-  background-color var(--c-hover)
 
 .page-content .left-side .article-list .article-list-holder .article-item.item-tp-3 .item-holder .article-content
 .page-content .left-side .article-list .article-list-holder .article-item.item-tp-4 .item-holder .article-content
@@ -141,17 +121,10 @@
 .page-content .left-side .article-list .article-list-holder .article-item.item-tp-4 .item-holder .article-content .article-left-block
   flex 1
 
-.page-content .left-side .article-list .article-list-holder .article-item .item-holder .article-title-holder .list-mark
-  border-color var(--c-border)
-  color var(--c-text)
-
 .to-top
-.right-side-bar .to-top
-  width 45px
-  height 45px
-  border 0
-  background-color var(--c-accent)
-  background-position -63px 9px
+  width 45px !important
+  height 45px !important
+  background-position -63px 9px !important
 
 .categories-bar .tag-item.on
   border-color var(--c-accent)

@@ -1,8 +1,9 @@
 /* 消息界面样式 */
-.title
+.side-bar .title
 .divided-line
 .space-right .space-right-top
 .source-img
+.config .config-item:not(:first-child)::before
 	display none !important
 
 .system-item .title
@@ -23,41 +24,8 @@
 .list
 	margin-top 100px !important
 
-.title
-.line-1 .name-field
-.bp-popup-panel .title-ctnr .popup-title
-.list-title
-.list-item .name
-.action-menu .menu-list a
-.textarea
-.config
-	color var(--c-title) !important
-
-.item
-.line-1
-.line-2
-.time
-.action-button
-.text-box
-.content-text
-.bottom
 .list-item .last-word
-.indicator
-.emoji-box .emoji-item
-.tip
 	color var(--c-text) !important
-
-.item.active a
-.item.active::before
-.item:hover a
-.item:hover::before
-.line-1 .name-field a:hover
-.link
-.is-black
-.is-limit
-.msg-more
-.dynamic-link
-	color var(--c-accent) !important
 
 .card
 .action-menu .menu-list
@@ -93,7 +61,7 @@
 
 .system-item
 .list-item
-	border-bottom 1px solid var(--c-border)
+	border-bottom 1px solid var(--c-border) !important
 	border-radius 0 !important
 
 .notify
@@ -101,4 +69,18 @@
 
 .active
 .new-message-tip::after
+.emoji-box .emoji-item:hover
+.emotion-item:hover .img
 	background-color var(--c-hover) !important
+
+.config
+	box-shadow none !important
+	background-color transparent !important
+
+.action-button
+	background-color transparent !important
+	color var(--c-text) !important
+
+.input-box .textarea
+	border 0 !important
+	background-color transparent !important

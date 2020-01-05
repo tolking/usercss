@@ -8,6 +8,12 @@
 .channel-menu-mini .r-box
 	border-color var(--c-border)
 
+.primary-menu .nav-menu>li .nav-name
+.mini-type .nav-user-center .user-con .item .name
+.video-info .line-1
+.video-info .line-2
+	color var(--c-title) !important
+
 .international-header .mini-type
 .van-popover .mini-type
 	border-bottom 1px solid var(--c-border)
@@ -28,28 +34,9 @@
 	background-color transparent !important
 	color var(--c-title) !important
 
-.international-header .mini-type .nav-search #nav_searchform
-.bili-header-m .nav-search #nav_searchform
-.van-popover .mini-type .nav-search #nav_searchform
-	border-color var(--c-border)
-	background-color var(--c-hover)
-
 .bili-header-m .nav-search .nav-search-btn
 .international-header .nav-search .nav-search-btn
-	background-color transparent
-
-/* 弹窗 */
-.van-popover
-	border-color var(--c-border)
-	background-color var(--c-background)
-
-.van-popper .popper__arrow
-	border-width 0
-
-.van-popper .popper__arrow::after
-	border-left 6px solid transparent
-	border-right 6px solid transparent
-	border-bottom 6px solid var(--c-background) !important
+	background-color transparent !important
 
 /* 个人弹窗 */
 .van-popper-avatar .coins
@@ -59,34 +46,23 @@
 .van-popper-avatar .coins .contact .contact-tips
 	border-color var(--c-border) !important
 
-.van-popper-avatar .level-info .grade
-.van-popper-avatar .count-item .item-value
 .van-popper-avatar .links .link-title
 .lang-change .lang-title
-.name-line
+.lang-change .lang-intro-item
 	color var(--c-title) !important
-
-.van-popper-avatar .coins .contact .email-icon
-.van-popper-history .tab-item
-	color var(--c-text) !important
 
 .van-popper-avatar .level-intro
 .lang-change .lang-intro
 	background-color var(--c-background) !important
 	color var(--c-text) !important
 
-.van-popper-avatar .level-intro__link
-.van-popper-avatar .coins .contact .email-icon--bind
-.van-popper-avatar .coins .contact .phone-icon--bind
+.lang-change .lang-intro-item.on
 	color var(--c-accent) !important
 
 .van-popper-avatar .links .link-item:hover
 .lang-change .lang-item:hover
 .lang-change .lang-intro-item:hover
 	background-color var(--c-hover) !important
-
-.lang-change .lang-intro-item.on
-	color var(--c-accent)
 
 .van-popper-avatar .logout a:hover
 .van-popper-avatar .coins .contact .contact-tips
@@ -100,13 +76,6 @@
 
 .im-list-box
 	background-color var(--c-background)
-
-.im-root a
-.im-root a:hover
-.im-root a:active
-.im-root a:link
-.im-root a:visited
-	color var(--c-title)
 
 .im-list:hover
 	background-color var(--c-hover) !important
@@ -125,39 +94,35 @@
 	background-color var(--c-accent) !important
 	color var(--c-white) !important
 
-.tip-box
-.split-line
-	color var(--c-text) !important
-
 .split-line::before
 	border-color var(--c-border) !important
 
 .split-line .history-tip
 	background-color var(--c-background) !important
 
-.content
+.out-container .container .video-tab .list-item .center-box .name-line .user-name
 	color var(--c-title) !important
 
 .list-item:hover
 	background-color var(--c-hover) !important
-
-.more-btn
-.van-popper-history .view-all
-	border 1px solid var(--c-border)
-	background-color var(--c-background) !important
-	color var(--c-text) !important
 
 .more-btn:hover
 .van-popper-history .view-all:hover
 	background-color var(--c-hover) !important
 
 /* 收藏弹窗 */
+.video-info .line-2
+	color var(--c-title) !important
+
+.video-info .line-2:hover
+	color var(--c-accent) !important
+
+.duration-tag
+	color var(--c-white) !important
+
 .van-popper-favorite .tabs-panel
 .van-popper-history .tab-header
 	border-color var(--c-border) !important
-
-.van-popper-favorite .tab-item--normal
-	color var(--c-title) !important
 
 .van-popper-favorite .tab-item--active
 	background-color var(--c-accent) !important
@@ -167,20 +132,6 @@
 .video-card:hover
 	background-color var(--c-hover) !important
 
-.video-info .line-2
-	color var(--c-title) !important
-
-.video-info .info
-	color var(--c-text) !important
-
-.van-popper-favorite .play-all
-	border-color var(--c-border) !important
-	background-color var(--c-hover) !important
-	color var(--c-title) !important
-
-.van-popper-favorite .play-all .bilifont
-	color var(--c-accent) !important
-
 /* 投稿弹窗 */
 .van-popper-upload .upload-item:hover
 	background-color var(--c-hover) !important
@@ -189,14 +140,6 @@
 /* 登陆弹窗 */
 .van-popper-login .vp-container
 	border-color var(--c-border) !important
-
-.van-popper-login .btn-box .btn.reg-btn
-.van-popper-login .btn-box .btn.reg-btn:hover
-.van-popper-login .btn-box .btn
-.van-popper-login .btn-box .btn:hover
-	border-color var(--c-accent) !important
-	background-color var(--c-accent) !important
-	color var(--c-white) !important
 
 .van-popper-login .lang-change
 	border 0
@@ -210,6 +153,10 @@
 .dynamic-m .dyn_list_wrapper
 .dynamic-m .dyn_list_wrapper .dyn_list
 	background-color var(--c-background)
+
+.bili-header-m .profile-m .btns-profile .num
+	background-color transparent !important
+	color var(--c-text) !important
 
 .bili-header-m .nav-menu .nav-con.nav-wrapper-left .nav-item:first-child
 .stardust-video .nav-menu .nav-con.nav-wrapper-left .nav-item:first-child
@@ -227,28 +174,8 @@
 .bili-header-m .nav-menu .up-load:hover .u-link
 	background-color var(--c-hover)
 
-.bili-header-m .nav-menu
 .bili-header-m .nav-menu .nav-con .nav-item .t
-.bili-header-m .nav-search .nav-search-keyword
-.bili-header-m .nav-search .nav-search-keyword:focus
-.bili-header-m .bilibili-suggest .suggest-item
-.bili-header-m .bilibili-suggest .suggest-item a
-.bili-header-m .nav-menu .up-load .up-nav li a
-.bili-header-m .profile-m .header-u-info a
-.bili-header-m .profile-m .grade .desc-tips .lv-row strong
-.bili-header-m .profile-m .member-menu li a
-.dynamic-m a
-.bili-header-m .mini-wnd-nav .read-more
-.bili-header-m .mini-wnd-nav a
 	color var(--c-title)
-
-.bili-header-m .nav-search .nav-search-submit
-.dynamic-m .dyn_menu li
-.dynamic-m .dyn_list_wrapper .dyn_list li .r .title span
-.dynamic-m .dyn_list_wrapper .dyn_list li .r .info a
-.dynamic-m .dyn_list_wrapper .dyn_list li.live .r .info
-.bili-header-m .mini-wnd-nav.history-wnd .state
-	color var(--c-text)
 
 .bili-header-m .nav-menu .nav-mask
 	box-shadow none
@@ -279,11 +206,17 @@
 	background-color var(--c-hover)
 
 /* 顶部搜索框 */
+.search-submit
+.nav-search-submit
+	background-color transparent !important
+	color var(--c-text) !important
+
 .bili-header-m .bilibili-suggest
 .dynamic-m .wnd_bottom a
-.bili-header-m .mini-wnd-nav .read-more
-	border-color var(--c-border)
-	background-color var(--c-background)
+.bilibili-search-suggest
+.bilibili-search-history
+	border-color var(--c-border) !important
+	background-color var(--c-background) !important
 
 .bili-header-m .bilibili-suggest .b-line
 	border-color var(--c-border)
@@ -297,8 +230,15 @@
 .dynamic-m .wnd_bottom a:hover
 .dynamic-m .dyn_list_wrapper .dyn_list li.d-data:hover
 .bili-header-m .mini-wnd-nav .list li:hover
-.bili-header-m .mini-wnd-nav .read-more:hover
-	background-color var(--c-hover)
+.bilibili-search-suggest .suggest-item.focus
+.bilibili-search-suggest .suggest-item:hover
+.bilibili-search-history .history-item.focus
+.bilibili-search-history .history-item:hover
+	background-color var(--c-hover) !important
+
+.bilibili-search-suggest .suggest-item .suggest_high_light
+	background-color transparent !important
+	color var(--c-accent) !important
 
 /* 顶部导航弹窗 */
 .bili-header-m .profile-m
@@ -307,12 +247,6 @@
 	border 1px solid var(--c-border)
 	background-color var(--c-background)
 
-.bili-header-m .profile-m .big-vip-red
-.dynamic-m .dyn_list_wrapper .dyn_list a:hover
-.dynamic-m .dyn_list_wrapper .dyn_list li .r .title span.live
-.bili-header-m .mini-wnd-nav .list li a:hover
-	color var(--c-accent) !important
-
 .bili-header-m .profile-m .header-uname .vip-type span
 	background-color var(--c-accent)
 	color var(--c-white)
@@ -320,11 +254,6 @@
 .bili-header-m .profile-m .grade .desc-tips
 	background-color var(--c-background)
 	color var(--c-text)
-
-.bili-header-m .profile-m .grade .desc-tips .help-link
-.bili-header-m .profile-m .member-bottom .logout
-.dynamic-m .dyn_menu li.on
-	color var(--c-accent)
 
 .dynamic-m
 	border 0

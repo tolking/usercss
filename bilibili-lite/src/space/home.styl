@@ -26,52 +26,55 @@
 #page-index .col-2 .section.elec .elec-trigger-icon
 #page-dynamic .col-2
 #page-fav .fav-main .filter-item.search
+.be-tab-cursor:after
   display none
 
-.be-dropdown-item
-.be-dropdown-item:hover
 #pin-wrapper .pin-layer-header .pin-layer-header-text
-#pin-wrapper .pin-layer-order-tip
 #pin-wrapper .pin-layer-vlist .small-item .title
-.section-title
-.modal-wrapper .modal-title
-.large-item .title
-#page-index .album .content .album-wrapper .album-item .album-title
-#page-index .channel.guest .channel-item .channel-title .channel-name
-  color var(--c-title)
+  color var(--c-title) !important
 
 .n .n-data .n-data-k
 .n .n-data .n-data-v
-.list-create .text
-#pin-wrapper .pin-layer-search-result
-.small-item .meta
-#pin-wrapper .pin-layer-video-empty
-#page-index .channel .empty-state p
-.be-input-word-counter
-.private-hint
-.large-item .desc
-#page-index .fav-item .state
-.i-pin-meta
-.i-pin-desc
-.meta-col s
-.meta-col
-  color var(--c-text)
+  color var(--c-text) !important
 
-.n .n-btn.active
-.be-tab-item.is-active
-#pin-wrapper .pin-layer-video-empty a
-  color var(--c-accent)
+.be-tab-item.is-active span
+  color var(--c-accent) !important
 
 .h #h-name
 .h #h-sign
 .h .h-sign
-  color var(--c-white)
+.h .h-v-btn
+.h .h-f-btn
+.h .h-v-btn .h-version-state
+.small-item .length
+.btn.btn-large .btn-content
+  color var(--c-white) !important
+
+.n .n-tab-links .icon-ic_home
+  color: #00c091 !important
+
+.n .n-tab-links .icon-ic_following
+  color: #fb7299 !important
+
+.n .n-tab-links .icon-ic_video
+  color: #02b5da !important
+
+.n .n-tab-links .icon-ic_channel
+  color: #23c9ed !important
+
+.n .n-tab-links .icon-ic_collect
+  color: #f3a034 !important
+
+.n .n-tab-links .icon-ic_sub
+  color: #ff5d47 !important
+
+.n .n-tab-links .icon-ic_setting
+  color: #23c9ed !important
 
 #pin-wrapper #pin-layer
 .modal-wrapper
   background-color var(--c-background)
 
-.be-dropdown-item:hover
 #pin-wrapper .pin-layer-vlist .small-item:hover
   background-color var(--c-hover)
 
@@ -85,7 +88,6 @@
 .be-input_inner:focus
 .be-textarea_inner:focus
 .be-textarea_inner:hover
-#pin-wrapper #pin-layer-search:focus
 input[type=text]:focus
 #page-index .channel .channel-item
 .article-content
@@ -116,7 +118,6 @@ input[type=text]:focus
 .h #h-sign:hover
 .h #h-sign:focus
 .list-create
-#pin-wrapper #pin-layer-search
 #pin-wrapper .pin-layer-vlist .small-item .added-icon
 .section .count
 .be-input_inner
@@ -126,10 +127,6 @@ input[type=text]:focus
   border-color var(--c-border)
   background-color var(--c-hover)
   color var(--c-title)
-
-.be-dropdown-menu
-  border-color var(--c-border)
-  background-color var(--c-background)
 
 .n .n-inner
   border 1px solid var(--c-border)
@@ -197,11 +194,6 @@ input[type=text]:focus
 #page-index .fav-covers img
   width 100%
   height auto
-
-.btn-container .btn
-  border-color var(--c-border) !important
-  background-color var(--c-accent) !important
-  color var(--c-white) !important
 
 .mini-item
   width 20%
@@ -342,3 +334,6 @@ input[type=text]:focus
   display inline-block
   background-color var(--c-background) !important
   line-height 23px
+
+.to-top
+  background-color transparent !important
