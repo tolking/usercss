@@ -24,11 +24,37 @@ button
 .btn-sub
 .btn-close
 .btn-report
+.search-button
+.coin-wrap .coin-sure
+.bili-dialog-bomb .appeal-box .submit .confirm
+  position relative
   border-color var(--c-accent) !important
   background-color var(--c-accent) !important
   color var(--c-white) !important
+  overflow hidden
+  vertical-align top
+
   span
     color var(--c-white) !important
+
+  &::after
+    content ''
+    display block
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    background-image linear-gradient(70deg, transparent 20%, rgba(255, 255, 255, 0.3), transparent 80%)
+    transform translateX(-100%)
+    transition transform 0.5s ease-in-out !important
+
+  &:hover
+    span
+      color var(--c-white) !important
+
+    &::after
+      transform translateX(100%)
 
 .default
 .more-btn
@@ -50,11 +76,20 @@ button
 .be-pager .be-pager-next
 .be-pager .be-pager-prev
 .more-btn-cntr
-	border 1px solid var(--c-border) !important
-	background-color var(--c-background) !important
-	color var(--c-title) !important
+.main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item
+#pgc-navigate-wrap .ep-box .ep-sub .ep-item
+.rightside-article-list-btn
+.bili-dialog-bomb .appeal-box .submit .cancel
+  border 1px solid var(--c-border) !important
+  background-color var(--c-background) !important
+  color var(--c-title) !important
+  transition all 0.5s ease-in-out
+
+  &:hover
+    border-color var(--c-accent) !important
+    background-color var(--c-hover) !important
 
 .paging-box-big .dian
 .paging-box-big .dian:hover
   border-color transparent !important
-  background-color: transparent !important
+  background-color transparent !important

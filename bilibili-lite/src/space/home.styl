@@ -51,25 +51,25 @@
   color var(--c-white) !important
 
 .n .n-tab-links .icon-ic_home
-  color: #00c091 !important
+  color #00c091 !important
 
 .n .n-tab-links .icon-ic_following
-  color: #fb7299 !important
+  color #fb7299 !important
 
 .n .n-tab-links .icon-ic_video
-  color: #02b5da !important
+  color #02b5da !important
 
 .n .n-tab-links .icon-ic_channel
-  color: #23c9ed !important
+  color #23c9ed !important
 
 .n .n-tab-links .icon-ic_collect
-  color: #f3a034 !important
+  color #f3a034 !important
 
 .n .n-tab-links .icon-ic_sub
-  color: #ff5d47 !important
+  color #ff5d47 !important
 
 .n .n-tab-links .icon-ic_setting
-  color: #23c9ed !important
+  color #23c9ed !important
 
 #pin-wrapper #pin-layer
 .modal-wrapper
@@ -244,6 +244,7 @@ input[type=text]:focus
   border-radius 50%
   overflow hidden
   background-color var(--c-background)
+  transition all 0.5s ease-in-out
 
 #page-index .col-2 .section .user-auth.no-auth .no-auth-title .goto-auth:hover
 #page-index .col-2 .section .user-auth .auth-icon:hover
@@ -251,6 +252,7 @@ input[type=text]:focus
 #page-index .col-2 .section.elec .elec-trigger:hover
 #page-index .col-2 .section.i-live .i-live-off-guest a:hover
 #page-index .col-2 .section.i-live .i-live-link:hover
+  border-color var(--c-accnet)
   background-color var(--c-hover)
 
 #page-index .col-2 .section
@@ -282,6 +284,9 @@ input[type=text]:focus
 .i-live .i-live-off
 .i-live .i-live-off-guest a
   margin 0
+
+#page-index .col-2 .section .user-auth.no-auth .no-auth-title .goto-auth
+  font-size 0
 
 #page-index .col-2 .section .user-auth.no-auth .no-auth-title
   display block
@@ -336,4 +341,8 @@ input[type=text]:focus
   line-height 23px
 
 .to-top
+  position fixed
   background-color transparent !important
+
+  &::after
+    content none

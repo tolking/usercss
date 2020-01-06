@@ -34,12 +34,14 @@
 .bilibili-player-video-wrap span
 .bilibili-player-video-wrap span:hover
 .player-tooltips div
-	color: var(--c-white) !important
+	color var(--c-white) !important
 
 .video-info .video-title .tit
 .collection-m .title
 .coin-operated-m .coin-title
 .video-desc .btn span
+.ep-section-module .section-title
+.recommend-list .rec-title
 	color var(--c-title) !important
 
 .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a span
@@ -49,6 +51,7 @@ ul.rate-star li i
 .video-toolbar .ops>span i
 .video-desc .info
 .video-toolbar .appeal-text
+.player-auxiliary-area .player-auxiliary-filter .player-auxiliary-setting-menu-wrap .player-auxiliary-setting-menu-list
 	color var(--c-text) !important
 
 .coin-operated-m .coin-title span
@@ -106,11 +109,11 @@ ul.rate-star li i.icon-star-full
 	background-color var(--c-white)
 
 .members-info
-	margin-bottom: 20px;
+	margin-bottom 20px
 	border 1px solid var(--c-border)
 
 .members-info .up-card
-	padding: 0 10px
+	padding 0 10px
 
 .main-container .media-info .media-right .media-tool-bar .btn-rating
 	border 0
@@ -138,5 +141,8 @@ ul.rate-star li i.icon-star-full
 
 .video-desc .btn
 .members-info__header .btn
-	background-color: transparent !important
+	background-color transparent !important
 	color var(--c-title) !important
+
+	&::after
+		content none
