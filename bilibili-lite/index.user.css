@@ -166,7 +166,7 @@
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
-    overflow: hidden;
+    overflow: hidden !important;
     vertical-align: top;
   }
   button span,
@@ -983,7 +983,7 @@
   .manga-panel .manga-list-box {
     justify-content: center;
     width: 100% !important;
-    height: 460px !important;
+    height: 480px !important;
   }
   #bili_anime .time-line .zone-list-box,
   #bili_guochuang .time-line .zone-list-box {
@@ -1012,7 +1012,7 @@
     .b-footer-wrap .manga-list-box,
     .b-wrap .manga-list-box {
       width: 100% !important;
-      height: 428px !important;
+      height: 440px !important;
     }
     .b-footer-wrap .zone-list-box .live-card:nth-child(n+9),
     .b-footer-wrap .zone-list-box .video-card-common:nth-child(n+9),
@@ -1023,7 +1023,7 @@
       display: block;
     }
     .video-card-common .card-pic {
-      height: 116px !important;
+      height: 124px !important;
     }
     .b-footer-wrap .manga-list-box .manga-card > img,
     .b-wrap .manga-list-box .manga-card > img,
@@ -1056,7 +1056,7 @@
     .b-footer-wrap .manga-list-box,
     .b-wrap .manga-list-box {
       width: 100% !important;
-      height: 383px !important;
+      height: 395px !important;
     }
     .b-footer-wrap .manga-list-box .manga-card:nth-child(n+9),
     .b-wrap .manga-list-box .manga-card:nth-child(n+9) {
@@ -1067,7 +1067,7 @@
       height: auto !important;
     }
     .video-card-common .card-pic {
-      height: 100px !important;
+      height: 105px !important;
     }
     #bili_live .zone-list-box {
       height: 380px !important;
@@ -1094,7 +1094,7 @@
   }
   .video-card-common .card-pic,
   .live-card .pic {
-    height: 130px;
+    height: 140px;
   }
   .exchange-btn .btn,
   .time-line .tl-link {
@@ -2760,5 +2760,89 @@
   .bili-dialog-bomb .appeal-box .submit {
     border-color: var(--c-border);
     background-color: var(--c-background);
+  }
+}
+@-moz-document url-prefix("https://manga.bilibili.com/") {
+  .nav-list,
+  .manga-footer,
+  .manga-navbar-manga-logo span.dp-i-block {
+    display: none !important;
+  }
+  .manga-navbar {
+    background-color: var(--c-background) !important;
+  }
+  .manga-navbar {
+    box-shadow: none !important;
+    background-color: var(--c-bg-header) !important;
+    backdrop-filter: blur(5px) !important;
+  }
+  .app-layout {
+    padding-top: 0 !important;
+  }
+  .search-bar {
+    padding: 0 8px !important;
+  }
+  .search-bar .search-bar-bg {
+    background-color: var(--c-hover) !important;
+  }
+  .search-bar .search-input {
+    background-color: transparent !important;
+  }
+  .search-bar .placeholder-list {
+    height: 32px !important;
+  }
+  .search-bar .placeholder-list .placeholder-item {
+    line-height: 32px !important;
+  }
+  .search-bar .confirm-btn {
+    padding: 8px !important;
+  }
+  .multi-line-text::before,
+  .multi-line-text::after {
+    display: none !important;
+  }
+  .vertical-block-card {
+    background-color: var(--c-background) !important;
+  }
+  .section-title,
+  .item-title,
+  .manga-title {
+    color: var(--c-title) !important;
+  }
+  .manga-card-vertical .text-info-section .supporting-text,
+  .schedule-item .text-section .status-text,
+  .meta-info p {
+    color: var(--c-text) !important;
+  }
+  .section-navigator {
+    border-color: var(--c-border) !important;
+  }
+  .section-navigator .section-item {
+    transition: all 0.5s ease-in-out !important;
+  }
+  .section-navigator .section-item.current,
+  .section-navigator .section-item:hover {
+    background-color: var(--c-accent) !important;
+    color: var(--c-white) !important;
+  }
+  .manga-navbar-history-list .action-button,
+  .manga-navbar-favourite-manga .action-button,
+  .search-bar .confirm-btn,
+  .section-navigator .section-item,
+  .back-to-top-button,
+  .schedule-list .list-header .date-selector .date-item,
+  .tab-item,
+  .newbie-awarder .close-button {
+    background-color: transparent !important;
+  }
+  .manga-navbar-history-list .action-button::after,
+  .manga-navbar-favourite-manga .action-button::after,
+  .search-bar .confirm-btn::after,
+  .section-navigator .section-item::after,
+  .back-to-top-button::after,
+  .schedule-list .list-header .date-selector .date-item::after,
+  .tab-item::after,
+  .newbie-awarder .close-button::after {
+    content: none;
   }
 }
