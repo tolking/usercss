@@ -132,7 +132,9 @@
   .main-container .entry-old,
   .main-container .nav-tools .tool-item.mini,
   .main-container .nav-tools a,
-  .main-container .pay-bar .vip .img-icon {
+  .main-container .pay-bar .vip .img-icon,
+  .bb-comment .reply-notice,
+  .comment-bilibili-fold .reply-notice {
     display: none;
   }
   button,
@@ -553,7 +555,7 @@
   .out-container .container .video-tab .list-item .center-box .name-line .user-name {
     color: var(--c-title) !important;
   }
-  .list-item:hover {
+  .out-container .container .video-tab .list-item:hover {
     background-color: var(--c-hover) !important;
   }
   .more-btn:hover,
@@ -2765,10 +2767,15 @@
 @-moz-document url-prefix("https://manga.bilibili.com/") {
   .nav-list,
   .manga-footer,
-  .manga-navbar-manga-logo span.dp-i-block {
+  .manga-navbar-manga-logo span.dp-i-block,
+  .user-info-panel a .tooltip {
     display: none !important;
   }
-  .manga-navbar {
+  .manga-navbar,
+  .search-bar .search-suggestion,
+  .user-panel .drop-list,
+  .manga-navbar-history-list .drop-list,
+  .manga-navbar-favourite-manga .drop-list {
     background-color: var(--c-background) !important;
   }
   .manga-navbar {
@@ -2797,21 +2804,33 @@
   .search-bar .confirm-btn {
     padding: 8px !important;
   }
+  .search-bar .search-suggestion {
+    margin-top: 8px;
+    transition: all 0.5s ease-in-out !important;
+  }
+  .search-bar .search-suggestion .suggestion-item.selected,
+  .search-bar .search-suggestion .suggestion-item:hover {
+    background-color: var(--c-hover) !important;
+    color: var(--c-text) !important;
+  }
   .multi-line-text::before,
   .multi-line-text::after {
     display: none !important;
   }
-  .vertical-block-card {
+  .vertical-block-card,
+  .newbie-awarder .award-dialog .award-dialog-container {
     background-color: var(--c-background) !important;
   }
   .section-title,
   .item-title,
-  .manga-title {
+  .manga-title,
+  .standby-panel .content-container .panel-title {
     color: var(--c-title) !important;
   }
   .manga-card-vertical .text-info-section .supporting-text,
   .schedule-item .text-section .status-text,
-  .meta-info p {
+  .meta-info p,
+  .standby-panel .content-container .support-text {
     color: var(--c-text) !important;
   }
   .section-navigator {
@@ -2843,6 +2862,52 @@
   .schedule-list .list-header .date-selector .date-item::after,
   .tab-item::after,
   .newbie-awarder .close-button::after {
-    content: none;
+    content: none !important;
+  }
+  .recommendation-section .manga-list {
+    width: 100% !important;
+  }
+  .read-nav .episode {
+    color: var(--c-title) !important;
+  }
+  .action-bar-container .app-button,
+  .hover-toast .app-button,
+  .floating-button {
+    background-color: transparent !important;
+  }
+  .action-bar-container .app-button::after,
+  .hover-toast .app-button::after,
+  .floating-button::after {
+    content: none !important;
+  }
+  .info-layer .floating-button {
+    border: 1px solid var(--c-border) !important;
+    background-color: var(--c-hover) !important;
+  }
+}
+@-moz-document url-prefix("https://manga.bilibili.com/detail/") {
+  .list-item .short-title {
+    color: var(--c-title) !important;
+  }
+  .episode-list-component .episode-list .list-header .header-item.selected {
+    color: var(--c-accent) !important;
+  }
+  .episode-list-component .episode-list .list-header .header-item {
+    background-color: transparent !important;
+  }
+  .episode-list-component .episode-list .list-header .header-item::after {
+    content: none !important;
+  }
+  .app-layout .size-ruler.p-relative {
+    box-shadow: none !important;
+    background-color: var(--c-background) !important;
+  }
+  .manga-navbar {
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+  }
+  .manga-navbar .manga-navbar {
+    border-bottom: 1px solid var(--c-border);
+    background-color: var(--c-background) !important;
   }
 }

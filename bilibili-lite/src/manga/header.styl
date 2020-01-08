@@ -2,9 +2,14 @@
 .nav-list
 .manga-footer
 .manga-navbar-manga-logo span.dp-i-block
+.user-info-panel a .tooltip
   display none !important
 
 .manga-navbar
+.search-bar .search-suggestion
+.user-panel .drop-list
+.manga-navbar-history-list .drop-list
+.manga-navbar-favourite-manga .drop-list
   background-color var(--c-background) !important
 
 .manga-navbar
@@ -16,10 +21,10 @@
   padding-top 0 !important
 
 .search-bar
-  padding: 0 8px !important
+  padding 0 8px !important
 
 .search-bar .search-bar-bg
-  background-color: var(--c-hover) !important
+  background-color var(--c-hover) !important
 
 .search-bar .search-input
   background-color transparent !important
@@ -28,7 +33,19 @@
   height 32px !important
 
 .search-bar .placeholder-list .placeholder-item
-  line-height: 32px !important
+  line-height 32px !important
 
 .search-bar .confirm-btn
-  padding: 8px !important
+  padding 8px !important
+
+.search-bar .search-suggestion
+  margin-top 8px
+  transition all 0.5s ease-in-out !important
+
+.search-bar .search-suggestion .suggestion-item.selected
+.search-bar .search-suggestion .suggestion-item:hover
+  background-color var(--c-hover) !important
+  color var(--c-text) !important
+
+// .manga-navbar.hide-mode
+//   transform translateY(0) !important
