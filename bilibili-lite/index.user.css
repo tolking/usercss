@@ -325,6 +325,32 @@
     color: var(--c-title) !important;
     transition: all 0.5s ease-in-out;
   }
+  .default::after,
+  .more-btn::after,
+  .van-popper-history .view-all::after,
+  .van-popper-favorite .play-all::after,
+  .bili-header-m .mini-wnd-nav .read-more::after,
+  .paging-box-big .tcd-number::after,
+  .paging-box-big .next::after,
+  .paging-box-big .prev::after,
+  .pager .pages .page-item button::after,
+  .following::after,
+  .bui-button.bui-button-gray2::after,
+  .danmaku-wrap .player-auxiliary-danmaku-list .danmaku-info-row .player-tooltips-trigger::after,
+  .recommend-list .rec-footer::after,
+  .expand-more::after,
+  .main-container .media-info .media-right .media-tool-bar .btn-follow.active::after,
+  .bangumi-pagelistbox .p::after,
+  .be-pager .be-pager-item::after,
+  .be-pager .be-pager-next::after,
+  .be-pager .be-pager-prev::after,
+  .more-btn-cntr::after,
+  .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item::after,
+  #pgc-navigate-wrap .ep-box .ep-sub .ep-item::after,
+  .rightside-article-list-btn::after,
+  .bili-dialog-bomb .appeal-box .submit .cancel::after {
+    content: none !important;
+  }
   .default:hover,
   .more-btn:hover,
   .van-popper-history .view-all:hover,
@@ -555,7 +581,7 @@
   .out-container .container .video-tab .list-item .center-box .name-line .user-name {
     color: var(--c-title) !important;
   }
-  .out-container .container .video-tab .list-item:hover {
+  .out-container .container .list-item:hover {
     background-color: var(--c-hover) !important;
   }
   .more-btn:hover,
@@ -1488,6 +1514,9 @@
   }
 }
 @-moz-document url-prefix("https://www.bilibili.com/video/"), url-prefix("https://www.bilibili.com/bangumi/play/") {
+  .video-page-special-card {
+    display: none;
+  }
   .bili-header-m .nav-menu .up-load .u-link {
     line-height: 50px;
   }
@@ -1546,7 +1575,9 @@
   .coin-operated-m .coin-title span,
   .coin-operated-m .mc-box.on .c-num,
   .main-container .review-module .review-list .review-item .review-header .review-star li i.icon-star-full,
-  ul.rate-star li i.icon-star-full {
+  ul.rate-star li i.icon-star-full,
+  .video-info .video-data .argue i,
+  .video-info .video-data .copyright i {
     color: var(--c-accent) !important;
   }
   .bilibili-player {
@@ -1629,13 +1660,17 @@
     color: var(--c-text) !important;
   }
   .video-desc .btn,
-  .members-info__header .btn {
+  .members-info__header .btn,
+  .bilibili-player-iconfont,
+  .bilibili-player-video-btn {
     background-color: transparent !important;
     color: var(--c-title) !important;
   }
   .video-desc .btn::after,
-  .members-info__header .btn::after {
-    content: none;
+  .members-info__header .btn::after,
+  .bilibili-player-iconfont::after,
+  .bilibili-player-video-btn::after {
+    content: none !important;
   }
   .player-auxiliary-area .player-auxiliary-filter-title {
     color: var(--c-title) !important;
@@ -1740,6 +1775,9 @@
   .form-login .input-box .sns .btn {
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
+  }
+  .form-login .input-box .sns .btn::after {
+    content: none !important;
   }
 }
 @-moz-document url-prefix("https://space.bilibili.com/") {
@@ -2195,10 +2233,13 @@
   .calendar-checkin {
     background-color: var(--c-background) !important;
   }
-  .user-panel-ctnr .user-panel .content-ctnr .logout-btn:hover {
+  .user-panel-ctnr .user-panel .content-ctnr .logout-btn:hover,
+  .link-panel-ctnr .load-more:hover,
+  .calendar-checkin .checkin-btn:hover {
     background-color: var(--c-hover) !important;
   }
-  .search-bar-ctnr .search-bar .search-btn,
+  .link-navbar-ctnr,
+  .search-bar-ctnr .search-bar input,
   .calendar-checkin .title,
   .calendar-checkin .calendar-wrapper,
   .calendar-checkin .checkin-rewards {
@@ -2213,16 +2254,12 @@
   .info-item-ctnr {
     border-color: var(--c-border) !important;
   }
-  .load-more {
-    margin: 25px auto !important;
-    padding: 0 40px !important;
-  }
-  .link-panel-ctnr .load-more .load-more-btn {
-    height: 30px !important;
-  }
-  .user-panel-ctnr .user-panel .content-ctnr .logout-btn {
+  .user-panel-ctnr .user-panel .content-ctnr .logout-btn,
+  .link-panel-ctnr .load-more,
+  .calendar-checkin .checkin-btn {
     border-top: 1px solid var(--c-border);
     background-color: var(--c-background) !important;
+    transition: all 0.5s ease-in-out !important;
   }
   .calendar-checkin .calendar-wrapper .calendar .date-ctnr .day-item {
     color: #bdbdbd !important;
@@ -2230,9 +2267,20 @@
   .calendar-checkin .calendar-wrapper .calendar .date-ctnr .day-item.checked {
     color: var(--c-white) !important;
   }
+  .link-navbar {
+    box-shadow: none !important;
+    background-color: var(--c-bg-header) !important;
+    backdrop-filter: blur(5px) !important;
+  }
+  .search-bar-ctnr .search-bar {
+    border: 0 !important;
+    background-color: var(--c-hover) !important;
+  }
   .footer-ctnr,
   .pendant-ctnr.left-top,
-  .side-bar-popup-cntr:after {
+  .side-bar-popup-cntr:after,
+  .area-detail-ctnr .flip-view,
+  .area-banner {
     display: none !important;
   }
   .text-info-ctnr.body-bg,
@@ -2275,11 +2323,17 @@
   .ysly-room-ctnr .item .info span {
     color: var(--c-white) !important;
   }
-  .player-ctnr button {
+  .player-ctnr button,
+  .search-bar-ctnr .search-bar .search-btn,
+  .link-panel-ctnr .load-more .load-more-btn,
+  .attention-live .switch-btn {
     background-color: transparent !important;
   }
-  .player-ctnr button::after {
-    content: none;
+  .player-ctnr button::after,
+  .search-bar-ctnr .search-bar .search-btn::after,
+  .link-panel-ctnr .load-more .load-more-btn::after,
+  .attention-live .switch-btn::after {
+    content: none !important;
   }
   .notice-item .notice-btn {
     background-color: var(--c-accent) !important;
@@ -2297,8 +2351,11 @@
     box-shadow: none !important;
     background-color: var(--c-background) !important;
   }
+  .yzly-content-ctnr .p-absolute,
+  .hover-panel-wrapper .text-info-ctnr .follow-btn.p-absolute {
+    position: absolute;
+  }
   .link-footer-vm,
-  .link-navbar-ctnr,
   .rank-list-ctnr,
   .live-room-app .app-content .app-body .player-and-aside-area .aside-area .rank-list-section,
   .chat-history-panel,
@@ -2328,7 +2385,8 @@
   .link-navbar .main-ctnr .nav-items-ctnr,
   .shortcuts-ctnr .shortcut-item:last-child,
   .custom-link,
-  .live-room-app .app-content .app-body .section-block .right-container {
+  .live-room-app .app-content .app-body .section-block .right-container,
+  .left-container .flip-view {
     display: none !important;
   }
   .link-navbar .main-ctnr .nav-logo {
@@ -2778,6 +2836,13 @@
   .manga-navbar-favourite-manga .drop-list {
     background-color: var(--c-background) !important;
   }
+  .search-bar .search-bar-bg,
+  .drop-list .more-btn-container:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .search-bar .search-input {
+    background-color: transparent !important;
+  }
   .manga-navbar {
     box-shadow: none !important;
     background-color: var(--c-bg-header) !important;
@@ -2788,12 +2853,6 @@
   }
   .search-bar {
     padding: 0 8px !important;
-  }
-  .search-bar .search-bar-bg {
-    background-color: var(--c-hover) !important;
-  }
-  .search-bar .search-input {
-    background-color: transparent !important;
   }
   .search-bar .placeholder-list {
     height: 32px !important;
@@ -2812,6 +2871,13 @@
   .search-bar .search-suggestion .suggestion-item:hover {
     background-color: var(--c-hover) !important;
     color: var(--c-text) !important;
+  }
+  .user-panel .drop-list .logout-btn-container,
+  .user-panel-ctnr .user-panel .content-ctnr .logout-btn,
+  .drop-list .more-btn-container {
+    border-top: 1px solid var(--c-border);
+    background-color: var(--c-background) !important;
+    transition: all 0.5s ease-in-out !important;
   }
   .multi-line-text::before,
   .multi-line-text::after {
@@ -2851,7 +2917,9 @@
   .back-to-top-button,
   .schedule-list .list-header .date-selector .date-item,
   .tab-item,
-  .newbie-awarder .close-button {
+  .newbie-awarder .close-button,
+  .user-panel .drop-list .logout-btn-container .logout-button,
+  .drop-list .more-btn-container .more-button {
     background-color: transparent !important;
   }
   .manga-navbar-history-list .action-button::after,
@@ -2861,7 +2929,9 @@
   .back-to-top-button::after,
   .schedule-list .list-header .date-selector .date-item::after,
   .tab-item::after,
-  .newbie-awarder .close-button::after {
+  .newbie-awarder .close-button::after,
+  .user-panel .drop-list .logout-btn-container .logout-button::after,
+  .drop-list .more-btn-container .more-button::after {
     content: none !important;
   }
   .recommendation-section .manga-list {
