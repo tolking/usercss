@@ -6,45 +6,60 @@ body
 	background-color var(--c-background)
 	background-image none
 	overflow-x hidden
-	color var(--c-text)
 
 a
-.international-header a
-.van-popover a
-.storey-title .no-link
-.manga-panel .manga-list-box .manga-card .manga-title
-.international-footer a
-.international-footer .link-box .link-item.link-c p
-.channel-menu-mini .box a
-.mini-type .nav-user-center .user-con .item .name
-.bili-header-m .nav-search .nav-search-keyword
-.international-header .nav-search .nav-search-keyword
-	color var(--c-title)
+a div
+a p
+a span
+h1
+h2
+h3
+h4
+h5
+h6
+input
+textarea
+.nickname
+.title
+.link-title
+	color var(--c-title) !important
+
+body
+p
+span
+li
+label
+.count
+	color var(--c-text) !important
+
+div:not(.bilibili-danmaku)
+	color var(--c-text)
 
 a:hover
-.manga-panel .manga-list-box .manga-card:hover .manga-title
-.international-footer a:hover
-.international-footer a:hover
-.international-footer .link-box .link-item.link-c a.weixin:hover p
-.international-header a:hover
-.van-popover a:hover
-.bili-header-m .nav-search .nav-search-btn:hover .nav-search-submit
-.international-header .nav-search .nav-search-btn:hover .nav-search-submit
-	color var(--c-accent)
+a div:hover
+a p:hover
+a span:hover
+.is-vip
+.is-vip:hover
+.nickname--red
+.vip-red-name
+.bili-header-m .profile-m .big-vip-red
+.review-author.is-vip
+.username.is-vip
+	color var(--c-accent) !important
 
-.video-card-common .ex-up
-.storey-title .text-info a
-.storey-title .text-info
-.live-card .up .txt .desc
-.live-card .up .txt .tag
-.article-card .r-con .up
-.article-card .r-con .count
-.manga-panel .manga-list-box .manga-card .manga-tag
-.international-footer .partner
-.international-footer .partner a
-.channel-menu .box .count
-.channel-menu-mini .box .count
-	color var(--c-text)
+/* 输入框提示文本颜色 */
+::-webkit-input-placeholder
+	color #d2d2d2
+
+:-moz-placeholder
+	color #d2d2d2
+
+::-moz-placeholder
+	color #d2d2d2
+
+:-ms-input-placeholder
+	color #d2d2d2
 
 /* 滚动条 */
 ::-webkit-scrollbar

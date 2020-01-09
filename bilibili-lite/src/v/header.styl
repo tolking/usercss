@@ -1,6 +1,7 @@
 /* 导航 */
-.sub-nav-m ul li.on a
-	color var(--c-accent)
+.bili-header-m .nav-menu .nav-con .nav-item .t
+.bili-header-m .nav-menu .up-load .u-link
+	color: var(--c-white) !important
 
 .bili-header-m .nav-menu .nav-mask
 	border 0
@@ -25,8 +26,6 @@
 	padding 0
 	width 520px
 	height 50px
-	border-radius 25px
-	overflow hidden
 	transform translateX(-50%)
 	background-color transparent
 
@@ -34,12 +33,15 @@
 .bili-header-m .search .searchform:hover
 	padding 0 60px 0 20px
 	height 100%
+	border-radius 25px
 	background-color rgba(0, 0, 0, 0.4)
+	overflow hidden
 
 .bili-header-m .search button.search-submit
 	width 60px
 	height 100%
-	background-color rgba(0, 0, 0, 0.6)
+	border-radius: 0 25px 25px 0
+	background-color rgba(0, 0, 0, 0.6) !important
 	background-position -647px -712px
 
 .bili-header-m .search button.search-submit:hover
@@ -51,9 +53,3 @@
 	height 100%
 	font-size 16px
 	color var(--c-white)
-
-.bili-header-m .search .search-keyword::-webkit-input-placeholder
-	color #d2d2d2
-
-.bili-header-m .search .search-keyword::-moz-placeholder
-	color #d2d2d2

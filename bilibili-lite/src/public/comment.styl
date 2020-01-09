@@ -1,36 +1,19 @@
 /* 评论 */
 .bb-comment
+.comment-area
 .comment-bilibili-fold
 .emoji-box .emoji-tabs
 	background-color var(--c-background)
 
-.comment-m .b-head
-.bb-comment .comment-header .tabs-order li
-.comment-bilibili-fold .comment-header .tabs-order li
-.bb-comment .comment-list .list-item .user .name
-.comment-bilibili-fold .comment-list .list-item .user .name
-	color var(--c-title)
-
-.bb-comment .reply-notice .notice-item a
-.comment-bilibili-fold .reply-notice .notice-item a
 .paging-box .current
-.paging-box .dian
-.paging-box .next
-.paging-box .prev
-.paging-box .tcd-number
-.emoji-box .emoji-title
-.emoji-box .emoji-text
-.bb-comment .comment-list .list-item .info
-.comment-bilibili-fold .comment-list .list-item .info
-.paging-box-big .page-jump
-.pager .jump-pager
-.bb-comment .no-more-reply, .comment-bilibili-fold .no-more-reply
-	color var(--c-text)
+	color var(--c-title) !important
 
-.bb-comment .comment-header .tabs-order li.on
+.bb-comment .comment-header .tabs-order li
+	color var(--c-text) !important
+
 .comment-bilibili-fold .comment-header .tabs-order li.on
 .paging-box .current
-	color var(--c-accent)
+	color var(--c-accent) !important
 
 .bb-comment .comment-header
 .comment-bilibili-fold .comment-header
@@ -39,46 +22,21 @@
 .bb-comment .comment-list .list-item:last-child .con
 .comment-bilibili-fold .comment-list .list-item:last-child .con
 .paging-box-big .page-jump input:focus
-	border-color var(--c-border)
-
-.bb-comment .reply-notice .notice-item
-.comment-bilibili-fold .reply-notice .notice-item
-.bb-comment .comment-send .textarea-container textarea
-.comment-bilibili-fold .comment-send .textarea-container textarea
-.bb-comment .comment-send .textarea-container.focus textarea
-.bb-comment .comment-send .textarea-container:hover textarea
-.comment-bilibili-fold .comment-send .textarea-container.focus textarea
-.comment-bilibili-fold .comment-send .textarea-container:hover textarea
+.bb-comment .comment-list .list-item .con .vote-container
+.comment-bilibili-fold .comment-list .list-item .con .vote-container
+.comment-area .comm-main .comm-tabs
 .bb-comment .comment-send .comment-emoji
 .comment-bilibili-fold .comment-send .comment-emoji
-.emoji-box .emoji-notice
-.paging-box-big .current
-.paging-box-big .dian
-.paging-box-big .next
-.paging-box-big .prev
-.paging-box-big .tcd-number
-.paging-box-big .page-jump input
-.pager .pages .page-item button
-.pager .jump-pager input[type=text]
-	border-color var(--c-border)
-	background-color var(--c-hover)
-	color var(--c-text)
+.textarea-container .comm-tool .comm-emoji
+.dynamic-list-item-wrap
+.comment-area .comm-more
+	border-color var(--c-border) !important
 
-.bb-comment .comment-send .comment-submit
-.comment-bilibili-fold .comment-send .comment-submit
-.bb-comment .comment-send .comment-submit:hover
-.comment-bilibili-fold .comment-send .comment-submit:hover
-.paging-box-big .current
-.paging-box-big .current:hover
-.paging-box-big .dian:hover
-.paging-box-big .next:hover
-.paging-box-big .prev:hover
-.paging-box-big .tcd-number:hover
-.pager .pages .page-item.active button
-.pager .pages .page-item button:hover
-	border-color var(--c-accent)
-	background-color var(--c-accent)
-	color var(--c-white)
+.bb-comment .comment-header .tabs-order li.on
+.comment-bilibili-fold .comment-header .tabs-order li.on
+.comment-area .comm-main .comm-tabs >ul >li.active
+	border-color var(--c-accent) !important
+	color var(--c-accent) !important
 
 .emoji-box
 	border-color var(--c-border)
@@ -87,6 +45,9 @@
 	overflow hidden
 
 .emoji-box .emoji-tabs .tab-link.on
+.emoji-box .emoji-tabs .tab-link:hover
+.bb-comment .comment-list .list-item .con .vote-container .image-area .share-img
+.comment-bilibili-fold .comment-list .list-item .con .vote-container .image-area .share-img
 	background-color var(--c-hover)
 
 .bb-comment .comment-list .list-item .info .operation .opera-list
@@ -99,3 +60,24 @@
 .comment-bilibili-fold .comment-list .list-item .info .operation .opera-list li:hover
 	background-color var(--c-hover)
 	color var(--c-title)
+
+.bb-comment .comment-list .list-item .con .vote-container:hover .text-area
+.comment-bilibili-fold .comment-list .list-item .con .vote-container:hover .text-area
+	box-shadow none
+
+.bb-comment .comment-list .list-item .info .btn-hover:hover
+.comment-bilibili-fold .comment-list .list-item .info .btn-hover:hover
+.dynamic-list-item-wrap .info .btn
+	background-color transparent !important
+	color var(--c-accent) !important
+
+	&::after
+		content none
+
+.bb-comment .comment-header .tabs-order li.on:after
+.comment-bilibili-fold .comment-header .tabs-order li.on:after
+	background-image none
+
+.dynamic-list-item-wrap .item-user a.user-name
+.textarea-container .comm-tool .comm-emoji
+	background-color transparent !important
