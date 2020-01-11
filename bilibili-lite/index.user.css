@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.0.0-alpha.5
+@version        1.0.0-alpha.6
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/bilibili-lite
@@ -70,6 +70,19 @@
   .review-author.is-vip,
   .username.is-vip {
     color: var(--c-accent) !important;
+  }
+  table tr {
+    border-color: var(--c-border) !important;
+    background-color: transparent !important;
+  }
+  table tbody tr:nth-child(odd) td {
+    background-color: var(--c-hover) !important;
+  }
+  table tr th,
+  table tr td {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-background) !important;
+    color: var(--c-text) !important;
   }
   ::-webkit-input-placeholder {
     color: #d2d2d2;
@@ -163,7 +176,23 @@
   .btn-report,
   .search-button,
   .coin-wrap .coin-sure,
-  .bili-dialog-bomb .appeal-box .submit .confirm {
+  .bili-dialog-bomb .appeal-box .submit .confirm,
+  .security_content .h-safe-btn,
+  .security_content .big-member-btn,
+  .security_content .big-continuity-card-btn,
+  .security_content .close-btn,
+  .security_content .pay-left-btn-alone,
+  .security_content .points-btn,
+  .security_content .go-movie,
+  .security_content .user-my-btn .el-button--primary,
+  .security_content .tool-change-face,
+  .security_content .invitation-btn,
+  .security_content .mp-mine-takedown,
+  .d-outer .d-state-highlight,
+  .d-outer .medal-uninstall-js,
+  .module-box .btn-dufault,
+  .upLoad .btn-mk2.primary,
+  .upLoad .upButton {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -197,7 +226,23 @@
   .btn-report span,
   .search-button span,
   .coin-wrap .coin-sure span,
-  .bili-dialog-bomb .appeal-box .submit .confirm span {
+  .bili-dialog-bomb .appeal-box .submit .confirm span,
+  .security_content .h-safe-btn span,
+  .security_content .big-member-btn span,
+  .security_content .big-continuity-card-btn span,
+  .security_content .close-btn span,
+  .security_content .pay-left-btn-alone span,
+  .security_content .points-btn span,
+  .security_content .go-movie span,
+  .security_content .user-my-btn .el-button--primary span,
+  .security_content .tool-change-face span,
+  .security_content .invitation-btn span,
+  .security_content .mp-mine-takedown span,
+  .d-outer .d-state-highlight span,
+  .d-outer .medal-uninstall-js span,
+  .module-box .btn-dufault span,
+  .upLoad .btn-mk2.primary span,
+  .upLoad .upButton span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -226,7 +271,23 @@
   .btn-report::after,
   .search-button::after,
   .coin-wrap .coin-sure::after,
-  .bili-dialog-bomb .appeal-box .submit .confirm::after {
+  .bili-dialog-bomb .appeal-box .submit .confirm::after,
+  .security_content .h-safe-btn::after,
+  .security_content .big-member-btn::after,
+  .security_content .big-continuity-card-btn::after,
+  .security_content .close-btn::after,
+  .security_content .pay-left-btn-alone::after,
+  .security_content .points-btn::after,
+  .security_content .go-movie::after,
+  .security_content .user-my-btn .el-button--primary::after,
+  .security_content .tool-change-face::after,
+  .security_content .invitation-btn::after,
+  .security_content .mp-mine-takedown::after,
+  .d-outer .d-state-highlight::after,
+  .d-outer .medal-uninstall-js::after,
+  .module-box .btn-dufault::after,
+  .upLoad .btn-mk2.primary::after,
+  .upLoad .upButton::after {
     content: '';
     display: block;
     position: absolute;
@@ -236,7 +297,7 @@
     right: 0;
     background-image: linear-gradient(70deg, transparent 20%, rgba(255,255,255,0.3), transparent 80%);
     transform: translateX(-100%);
-    transition: transform 0.5s ease-in-out !important;
+    transition: transform 0.3s ease-in-out !important;
   }
   button:hover span,
   .btn:hover span,
@@ -264,7 +325,23 @@
   .btn-report:hover span,
   .search-button:hover span,
   .coin-wrap .coin-sure:hover span,
-  .bili-dialog-bomb .appeal-box .submit .confirm:hover span {
+  .bili-dialog-bomb .appeal-box .submit .confirm:hover span,
+  .security_content .h-safe-btn:hover span,
+  .security_content .big-member-btn:hover span,
+  .security_content .big-continuity-card-btn:hover span,
+  .security_content .close-btn:hover span,
+  .security_content .pay-left-btn-alone:hover span,
+  .security_content .points-btn:hover span,
+  .security_content .go-movie:hover span,
+  .security_content .user-my-btn .el-button--primary:hover span,
+  .security_content .tool-change-face:hover span,
+  .security_content .invitation-btn:hover span,
+  .security_content .mp-mine-takedown:hover span,
+  .d-outer .d-state-highlight:hover span,
+  .d-outer .medal-uninstall-js:hover span,
+  .module-box .btn-dufault:hover span,
+  .upLoad .btn-mk2.primary:hover span,
+  .upLoad .upButton:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -293,7 +370,23 @@
   .btn-report:hover::after,
   .search-button:hover::after,
   .coin-wrap .coin-sure:hover::after,
-  .bili-dialog-bomb .appeal-box .submit .confirm:hover::after {
+  .bili-dialog-bomb .appeal-box .submit .confirm:hover::after,
+  .security_content .h-safe-btn:hover::after,
+  .security_content .big-member-btn:hover::after,
+  .security_content .big-continuity-card-btn:hover::after,
+  .security_content .close-btn:hover::after,
+  .security_content .pay-left-btn-alone:hover::after,
+  .security_content .points-btn:hover::after,
+  .security_content .go-movie:hover::after,
+  .security_content .user-my-btn .el-button--primary:hover::after,
+  .security_content .tool-change-face:hover::after,
+  .security_content .invitation-btn:hover::after,
+  .security_content .mp-mine-takedown:hover::after,
+  .d-outer .d-state-highlight:hover::after,
+  .d-outer .medal-uninstall-js:hover::after,
+  .module-box .btn-dufault:hover::after,
+  .upLoad .btn-mk2.primary:hover::after,
+  .upLoad .upButton:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -319,11 +412,27 @@
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item,
   .rightside-article-list-btn,
-  .bili-dialog-bomb .appeal-box .submit .cancel {
+  .bili-dialog-bomb .appeal-box .submit .cancel,
+  .security_content .home-to-space,
+  .security_content .home-to-update,
+  .security_content .h-mp-space,
+  .security_content .go-secuirty,
+  .security_content .h-safe-nobtn,
+  .security_content .big-gift-btn-home,
+  .security_content .right-more-btn,
+  .security_content .tool-uninstall-pendant,
+  .security_content .black-btn,
+  .security_content .get-coin-more,
+  .security_content .m-help,
+  .security_content .face-g-list#my-g-list .face-g-block .my-mp-block .mp-info .btn-white,
+  .d-outer .d-button,
+  .module-box .btn-primary,
+  .module-box .btn-disabled,
+  .upLoad .upload-btn {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   .default::after,
   .more-btn::after,
@@ -348,7 +457,23 @@
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item::after,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item::after,
   .rightside-article-list-btn::after,
-  .bili-dialog-bomb .appeal-box .submit .cancel::after {
+  .bili-dialog-bomb .appeal-box .submit .cancel::after,
+  .security_content .home-to-space::after,
+  .security_content .home-to-update::after,
+  .security_content .h-mp-space::after,
+  .security_content .go-secuirty::after,
+  .security_content .h-safe-nobtn::after,
+  .security_content .big-gift-btn-home::after,
+  .security_content .right-more-btn::after,
+  .security_content .tool-uninstall-pendant::after,
+  .security_content .black-btn::after,
+  .security_content .get-coin-more::after,
+  .security_content .m-help::after,
+  .security_content .face-g-list#my-g-list .face-g-block .my-mp-block .mp-info .btn-white::after,
+  .d-outer .d-button::after,
+  .module-box .btn-primary::after,
+  .module-box .btn-disabled::after,
+  .upLoad .upload-btn::after {
     content: none !important;
   }
   .default:hover,
@@ -374,7 +499,23 @@
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item:hover,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item:hover,
   .rightside-article-list-btn:hover,
-  .bili-dialog-bomb .appeal-box .submit .cancel:hover {
+  .bili-dialog-bomb .appeal-box .submit .cancel:hover,
+  .security_content .home-to-space:hover,
+  .security_content .home-to-update:hover,
+  .security_content .h-mp-space:hover,
+  .security_content .go-secuirty:hover,
+  .security_content .h-safe-nobtn:hover,
+  .security_content .big-gift-btn-home:hover,
+  .security_content .right-more-btn:hover,
+  .security_content .tool-uninstall-pendant:hover,
+  .security_content .black-btn:hover,
+  .security_content .get-coin-more:hover,
+  .security_content .m-help:hover,
+  .security_content .face-g-list#my-g-list .face-g-block .my-mp-block .mp-info .btn-white:hover,
+  .d-outer .d-button:hover,
+  .module-box .btn-primary:hover,
+  .module-box .btn-disabled:hover,
+  .upLoad .upload-btn:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
   }
@@ -405,8 +546,15 @@
   .video-item.list .type,
   .bangumi-item .left-img .bangumi-tag,
   .bb-comment .stick,
-  .comment-bilibili-fold .stick {
-    border: 0;
+  .comment-bilibili-fold .stick,
+  .up-info .u-info .name .live-status,
+  .h .h-fans-icon .h-fans-text,
+  .home-user-spec,
+  .big-label,
+  .member-list-exclusive-icon,
+  .security_content .pendant-nav li div.active,
+  .security_content .face-g-tab li.current {
+    border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
   }
@@ -416,7 +564,8 @@
   .tag-area .btn-add,
   .timeline-box .timeline-item .item-right p.num a,
   .timeline-box .timeline-item .item-right p.num span,
-  .page-content .left-side .article-list .article-list-holder .article-item .item-holder .article-title-holder .list-mark {
+  .page-content .left-side .article-list .article-list-holder .article-item .item-holder .article-title-holder .list-mark,
+  .home-userstatus {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -454,7 +603,8 @@
   .player-auxiliary-area .player-auxiliary-filter .player-auxiliary-setting-menu-wrap,
   .hover-panel-wrap,
   .suggest-wrap,
-  #article-list-index {
+  #article-list-index,
+  .big-more-item-list {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -1577,7 +1727,8 @@
   .main-container .review-module .review-list .review-item .review-header .review-star li i.icon-star-full,
   ul.rate-star li i.icon-star-full,
   .video-info .video-data .argue i,
-  .video-info .video-data .copyright i {
+  .video-info .video-data .copyright i,
+  .up-info .u-info .name .username.is-vip:hover {
     color: var(--c-accent) !important;
   }
   .bilibili-player {
@@ -1897,6 +2048,11 @@
     background-color: var(--c-accent);
     color: var(--c-white);
   }
+  .h .h-fans-icon .fans-hover-tip,
+  .h .h-fans-icon .fans-hover-tip:after {
+    border-color: var(--c-border);
+    background-color: var(--c-background);
+  }
   .h #h-sign:hover,
   .h #h-sign:focus,
   .list-create,
@@ -2025,7 +2181,7 @@
     border-radius: 50%;
     overflow: hidden;
     background-color: var(--c-background);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   #page-index .col-2 .section .user-auth.no-auth .no-auth-title .goto-auth:hover,
   #page-index .col-2 .section .user-auth .auth-icon:hover,
@@ -2226,6 +2382,307 @@
     width: 340px !important;
   }
 }
+@-moz-document url-prefix("https://account.bilibili.com/") {
+  .top-header,
+  .security-title,
+  #securityOutLink,
+  .bili-footer,
+  .home-level-mask-icon,
+  .security-left .security-icon,
+  .security-right-title,
+  .big-name-record-hover-icon,
+  .pendant-mail-margin h3,
+  .pendant-mail-margin .vip-description,
+  .face-nav>.active:after,
+  .top_bg {
+    display: none !important;
+  }
+  .continuity-content,
+  .common-dialog-content,
+  .pay-dialog-content,
+  .line-circle,
+  .coin-inner {
+    background-color: var(--c-background) !important;
+  }
+  .security-left .security-list.on,
+  .security-ul .security-list:hover,
+  .big-more-item-item:hover .big-more-item-txt,
+  .points-pendant-item:hover,
+  .pendant-list li:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .home-top-level-upgo,
+  .coin-text-p .coin-i {
+    background-color: var(--c-accent) !important;
+  }
+  .re-exp-getexp,
+  .black-time em {
+    background-color: transparent !important;
+  }
+  .home-top-msg-name,
+  .home-level-tips,
+  .home-dialy-task-title,
+  .h-reward-info,
+  .security-nav-name,
+  .security-nav-name span,
+  .big-user-name,
+  .continuity-header,
+  .tabs-nav-item span,
+  .points-exchange-title,
+  .points-how-title,
+  .points-pendant-title p,
+  .points-info p,
+  .points-record-title,
+  .black-name,
+  .coin-nav-item,
+  .coin-index-right-title,
+  .coin-record .coin-title,
+  .record-nav-item,
+  .invitation-info-title,
+  .pendant-nav li div {
+    color: var(--c-title) !important;
+  }
+  .now-num,
+  .max-num,
+  .black-time,
+  .coin-rest-info-inco {
+    color: var(--c-text) !important;
+  }
+  .home-top-msg-name-color,
+  .big-user-pick-name,
+  .active .tabs-normal-txt,
+  .tabs-nav .active span,
+  .points-header-box .points-num,
+  .points-num,
+  .el-pager li.active,
+  .face-nav>.active a,
+  .coin-num,
+  .my-moral i {
+    color: var(--c-accent) !important;
+  }
+  .index-info,
+  .h-line,
+  .home-daily-task-warp,
+  .home-mp,
+  .big-name-warp,
+  .big-privilege-warp,
+  .big-watch-wrapper,
+  .continuity-header,
+  .tabs-normal-txt,
+  .big-continuity-card-item,
+  .big-game-gift-warp,
+  .big-pendant-warp,
+  .tabs-nav,
+  .points-faq-line,
+  .line-circle,
+  .points-pendant-warp,
+  .points-how-warp,
+  .points-record-warp,
+  .user-setting-warp .padding-dom,
+  .tool-container,
+  .face-nav,
+  .black-list,
+  .coin-nav,
+  .table-wrapper,
+  .record-nav,
+  .main-content-title,
+  .integrity-table-wrapper,
+  .record-exp-title,
+  .record-exp-table-wrapper,
+  .invitation-top-warp,
+  .invtable {
+    border-color: var(--c-border) !important;
+  }
+  .active .tabs-normal-txt,
+  .tabs-nav .active {
+    border-color: var(--c-accent) !important;
+  }
+  .h-list-item,
+  .h-list-icon,
+  .big-more-tool-btn {
+    border: 0 !important;
+  }
+  .security-nav-name {
+    margin: 0 !important;
+  }
+  .security_content,
+  .security-right {
+    border: 0;
+    box-shadow: none;
+    background-color: var(--c-background);
+  }
+  .home-top-level-mask-warp,
+  .big-name-record-hover,
+  .el-picker-panel {
+    border-color: var(--c-border) !important;
+    box-shadow: none !important;
+    background-color: var(--c-background) !important;
+  }
+  .home-top-level-head {
+    background-color: var(--c-accent) !important;
+    background-image: none !important;
+    color: var(--c-white) !important;
+  }
+  .security-ul {
+    margin-top: 100px;
+    border: 0 !important;
+    background-color: var(--c-background);
+  }
+  .h-list-item:hover {
+    box-shadow: none !important;
+    background-color: var(--c-hover) !important;
+  }
+  .security-list {
+    text-align: center;
+    transition: background-color 0.3s ease-in-out !important;
+  }
+  .big-more-item-item {
+    background-color: var(--c-background) !important;
+    transition: background-color 0.3s ease-in-out !important;
+  }
+  .big-member-btn,
+  .go-movie,
+  .tool-change-face,
+  .invitation-btn {
+    position: absolute !important;
+  }
+  .tabs-nav .active {
+    background-image: none !important;
+  }
+  .points-header-warp {
+    height: auto;
+    background-image: none;
+  }
+  .points-box {
+    border: 0;
+    box-shadow: none;
+  }
+  .points-pendant-item,
+  .pendant-list li {
+    border: 0 !important;
+    transition: background-color 0.3s ease-in-out !important;
+  }
+  .el-pager li {
+    border: 0 !important;
+    background-color: var(--c-background) !important;
+  }
+  .el-input__icon {
+    line-height: 30px;
+  }
+  .coin-nav .on,
+  .record-nav .on {
+    border-color: var(--c-accent) !important;
+    background-image: none !important;
+    color: var(--c-accent) !important;
+  }
+}
+@-moz-document url-prefix("https://account.bilibili.com/site/") {
+  .top_bg,
+  .security-list .first-level,
+  .sr-t,
+  .f-list-hover,
+  .security-list li a i {
+    display: none !important;
+  }
+  .d-outer,
+  .identification-warning,
+  .infoinputBox select {
+    background-color: var(--c-background);
+  }
+  .face-g-list .mp-block .right ul li .strip {
+    background-color: var(--c-border);
+  }
+  .security-list .child-list li a:hover {
+    background-color: var(--c-hover);
+  }
+  .face-g-list .mp-block .right ul li.reach .strip {
+    background-color: var(--c-accent);
+  }
+  .face-g-list .face-g-block .face-g-block-title span,
+  .security-list li a span,
+  .d-title,
+  .u-info .u-name,
+  .identification-atp {
+    color: var(--c-title) !important;
+  }
+  .current .tab-btn-link,
+  .current .tab-btn-link:hover {
+    color: var(--c-white) !important;
+  }
+  .tabs-mk2,
+  .face-g-list .face-g-block,
+  .face-g-list .mp-block .right ul li.base .round,
+  .d-title,
+  .identification-notice,
+  .infoinputBox select {
+    border-color: var(--c-border);
+  }
+  .face-g-list .mp-block .left .mp-img,
+  .security-list .child-list,
+  .security-list .first-level,
+  .face-g-list#my-g-list .face-g-block .my-mp-block,
+  .face-g-list#my-g-list .face-g-block .my-mp-block .mp-info,
+  .wear-list li,
+  .hold-list,
+  .hold-list-width.details-list-t,
+  .upbuttonBox {
+    border: 0;
+  }
+  .security-list li a span {
+    margin: 0;
+  }
+  .security-right {
+    padding: 0;
+  }
+  #mp-mine-header,
+  #mp-mine-header.active {
+    background-image: none !important;
+  }
+  .d-outer {
+    box-shadow: none;
+  }
+  .mp-mine-takedown {
+    position: absolute !important;
+  }
+  .security-list .child-list {
+    margin-top: 100px;
+  }
+  .module-box .btn-right {
+    vertical-align: middle !important;
+  }
+  .security-list .child-list li a {
+    text-align: center;
+    transition: background-color 0.3s ease-in-out !important;
+  }
+  .bg-blue {
+    background-color: var(--c-hover) !important;
+    color: var(--c-title) !important;
+  }
+  .tab-mk2.active {
+    background-image: none !important;
+    color: var(--c-accent) !important;
+  }
+  .face-g-list .mp-block .left .tips,
+  .face-g-list .mp-block .right ul li .mp-tips {
+    border-color: var(--c-border) !important;
+    box-shadow: none !important;
+    background-color: var(--c-background) !important;
+    color: var(--c-text) !important;
+  }
+  .face-g-list#my-g-list .face-g-block .my-mp-block {
+    transition: background-color 0.3s ease-in-out !important;
+  }
+  .face-g-list#my-g-list .face-g-block .my-mp-block .mp-info .is-activated::before {
+    content: '已装备';
+  }
+  .face-g-list#my-g-list .face-g-block .my-mp-block:hover {
+    box-shadow: none;
+    background-color: var(--c-hover);
+  }
+  table.d-border tbody tr:nth-child(odd) td {
+    background-color: var(--c-background) !important;
+  }
+}
 @-moz-document url-prefix("https://live.bilibili.com/") {
   .user-title-sending-cntr .panel,
   .user-panel-ctnr .user-panel,
@@ -2259,7 +2716,7 @@
   .calendar-checkin .checkin-btn {
     border-top: 1px solid var(--c-border);
     background-color: var(--c-background) !important;
-    transition: all 0.5s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
   }
   .calendar-checkin .calendar-wrapper .calendar .date-ctnr .day-item {
     color: #bdbdbd !important;
@@ -2510,7 +2967,9 @@
   .divided-line,
   .space-right .space-right-top,
   .source-img,
-  .config .config-item:not(:first-child)::before {
+  .config .config-item:not(:first-child)::before,
+  .list li::before,
+  .setting a .setting-icon {
     display: none !important;
   }
   .system-item .title {
@@ -2528,8 +2987,14 @@
   .emoji-box::after {
     background-color: var(--c-background) !important;
   }
-  .list {
+  .side-bar .item:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .side-bar .list {
     margin-top: 100px !important;
+  }
+  .side-bar .item a:hover {
+    color: var(--c-title) !important;
   }
   .list-item .last-word {
     color: var(--c-text) !important;
@@ -2597,6 +3062,13 @@
   }
   .love-card .header::after {
     background-color: var(--c-border) !important;
+  }
+  .side-bar .item {
+    text-align: center;
+    transition: background-color 0.3s ease-in-out !important;
+  }
+  .side-bar .item a {
+    padding: 0 !important;
   }
 }
 @-moz-document url-prefix("https://www.bilibili.com/read/") {
@@ -2865,7 +3337,7 @@
   }
   .search-bar .search-suggestion {
     margin-top: 8px;
-    transition: all 0.5s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
   }
   .search-bar .search-suggestion .suggestion-item.selected,
   .search-bar .search-suggestion .suggestion-item:hover {
@@ -2877,7 +3349,7 @@
   .drop-list .more-btn-container {
     border-top: 1px solid var(--c-border);
     background-color: var(--c-background) !important;
-    transition: all 0.5s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
   }
   .multi-line-text::before,
   .multi-line-text::after {
@@ -2903,7 +3375,7 @@
     border-color: var(--c-border) !important;
   }
   .section-navigator .section-item {
-    transition: all 0.5s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
   }
   .section-navigator .section-item.current,
   .section-navigator .section-item:hover {

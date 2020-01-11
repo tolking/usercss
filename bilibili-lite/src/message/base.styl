@@ -4,6 +4,8 @@
 .space-right .space-right-top
 .source-img
 .config .config-item:not(:first-child)::before
+.list li::before
+.setting a .setting-icon
 	display none !important
 
 .system-item .title
@@ -21,8 +23,14 @@
 .emoji-box::after
 	background-color var(--c-background) !important
 
-.list
+.side-bar .item:hover
+	background-color var(--c-hover) !important
+
+.side-bar .list
 	margin-top 100px !important
+
+.side-bar .item a:hover
+	color var(--c-title) !important
 
 .list-item .last-word
 	color var(--c-text) !important
@@ -90,3 +98,10 @@
 
 .love-card .header::after
 	background-color var(--c-border) !important
+
+.side-bar .item
+	text-align center
+	transition background-color 0.3s ease-in-out !important
+
+.side-bar .item a
+	padding 0 !important
