@@ -159,8 +159,8 @@
   .paging-box-big .current,
   .pager .pages .page-item.active button,
   .bui-button-blue,
+  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-electric,
   .bi-btn,
-  .tag-info-pane .tag-footer .btn-left-box>a,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item.cursor,
   .main-container .media-info .media-right .media-tool-bar .btn-follow,
   .textarea-container .comm-tool .comm-submit,
@@ -192,7 +192,10 @@
   .d-outer .medal-uninstall-js,
   .module-box .btn-dufault,
   .upLoad .btn-mk2.primary,
-  .upLoad .upButton {
+  .upLoad .upButton,
+  .select-btn,
+  .btn-box .like,
+  .gift-package {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -209,8 +212,8 @@
   .paging-box-big .current span,
   .pager .pages .page-item.active button span,
   .bui-button-blue span,
+  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-electric span,
   .bi-btn span,
-  .tag-info-pane .tag-footer .btn-left-box>a span,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item.cursor span,
   .main-container .media-info .media-right .media-tool-bar .btn-follow span,
   .textarea-container .comm-tool .comm-submit span,
@@ -242,7 +245,10 @@
   .d-outer .medal-uninstall-js span,
   .module-box .btn-dufault span,
   .upLoad .btn-mk2.primary span,
-  .upLoad .upButton span {
+  .upLoad .upButton span,
+  .select-btn span,
+  .btn-box .like span,
+  .gift-package span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -254,8 +260,8 @@
   .paging-box-big .current::after,
   .pager .pages .page-item.active button::after,
   .bui-button-blue::after,
+  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-electric::after,
   .bi-btn::after,
-  .tag-info-pane .tag-footer .btn-left-box>a::after,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item.cursor::after,
   .main-container .media-info .media-right .media-tool-bar .btn-follow::after,
   .textarea-container .comm-tool .comm-submit::after,
@@ -287,7 +293,10 @@
   .d-outer .medal-uninstall-js::after,
   .module-box .btn-dufault::after,
   .upLoad .btn-mk2.primary::after,
-  .upLoad .upButton::after {
+  .upLoad .upButton::after,
+  .select-btn::after,
+  .btn-box .like::after,
+  .gift-package::after {
     content: '';
     display: block;
     position: absolute;
@@ -299,6 +308,54 @@
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out !important;
   }
+  button:hover,
+  .btn:hover,
+  .default-btn:hover,
+  .go-top:hover,
+  .to-top:hover,
+  .backup:hover,
+  .paging-box-big .current:hover,
+  .pager .pages .page-item.active button:hover,
+  .bui-button-blue:hover,
+  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-electric:hover,
+  .bi-btn:hover,
+  .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item.cursor:hover,
+  .main-container .media-info .media-right .media-tool-bar .btn-follow:hover,
+  .textarea-container .comm-tool .comm-submit:hover,
+  .be-pager-item-active:hover,
+  #page-channel-index .channel-option.no-channel .create-channel:hover,
+  .favInfo-box .favInfo-details .fav-options .fav-play:hover,
+  .bangumi-pagelistbox .p.active:hover,
+  .be-pager .be-pager-item.be-pager-item-active:hover,
+  .notice-item .notice-btn:hover,
+  .follow-btn:hover,
+  .btn-sub:hover,
+  .btn-close:hover,
+  .btn-report:hover,
+  .search-button:hover,
+  .coin-wrap .coin-sure:hover,
+  .bili-dialog-bomb .appeal-box .submit .confirm:hover,
+  .security_content .h-safe-btn:hover,
+  .security_content .big-member-btn:hover,
+  .security_content .big-continuity-card-btn:hover,
+  .security_content .close-btn:hover,
+  .security_content .pay-left-btn-alone:hover,
+  .security_content .points-btn:hover,
+  .security_content .go-movie:hover,
+  .security_content .user-my-btn .el-button--primary:hover,
+  .security_content .tool-change-face:hover,
+  .security_content .invitation-btn:hover,
+  .security_content .mp-mine-takedown:hover,
+  .d-outer .d-state-highlight:hover,
+  .d-outer .medal-uninstall-js:hover,
+  .module-box .btn-dufault:hover,
+  .upLoad .btn-mk2.primary:hover,
+  .upLoad .upButton:hover,
+  .select-btn:hover,
+  .btn-box .like:hover,
+  .gift-package:hover {
+    color: var(--c-white) !important;
+  }
   button:hover span,
   .btn:hover span,
   .default-btn:hover span,
@@ -308,8 +365,8 @@
   .paging-box-big .current:hover span,
   .pager .pages .page-item.active button:hover span,
   .bui-button-blue:hover span,
+  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-electric:hover span,
   .bi-btn:hover span,
-  .tag-info-pane .tag-footer .btn-left-box>a:hover span,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item.cursor:hover span,
   .main-container .media-info .media-right .media-tool-bar .btn-follow:hover span,
   .textarea-container .comm-tool .comm-submit:hover span,
@@ -341,7 +398,10 @@
   .d-outer .medal-uninstall-js:hover span,
   .module-box .btn-dufault:hover span,
   .upLoad .btn-mk2.primary:hover span,
-  .upLoad .upButton:hover span {
+  .upLoad .upButton:hover span,
+  .select-btn:hover span,
+  .btn-box .like:hover span,
+  .gift-package:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -353,8 +413,8 @@
   .paging-box-big .current:hover::after,
   .pager .pages .page-item.active button:hover::after,
   .bui-button-blue:hover::after,
+  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-electric:hover::after,
   .bi-btn:hover::after,
-  .tag-info-pane .tag-footer .btn-left-box>a:hover::after,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item.cursor:hover::after,
   .main-container .media-info .media-right .media-tool-bar .btn-follow:hover::after,
   .textarea-container .comm-tool .comm-submit:hover::after,
@@ -386,7 +446,10 @@
   .d-outer .medal-uninstall-js:hover::after,
   .module-box .btn-dufault:hover::after,
   .upLoad .btn-mk2.primary:hover::after,
-  .upLoad .upButton:hover::after {
+  .upLoad .upButton:hover::after,
+  .select-btn:hover::after,
+  .btn-box .like:hover::after,
+  .gift-package:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -428,7 +491,12 @@
   .d-outer .d-button,
   .module-box .btn-primary,
   .module-box .btn-disabled,
-  .upLoad .upload-btn {
+  .upLoad .upload-btn,
+  .container .nav-container .list-link p a,
+  .btn-box .liked,
+  .btn-box .message,
+  .tag-info-pane .tag-footer .btn-left-box>a,
+  .gift-panel-switch {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -473,7 +541,12 @@
   .d-outer .d-button::after,
   .module-box .btn-primary::after,
   .module-box .btn-disabled::after,
-  .upLoad .upload-btn::after {
+  .upLoad .upload-btn::after,
+  .container .nav-container .list-link p a::after,
+  .btn-box .liked::after,
+  .btn-box .message::after,
+  .tag-info-pane .tag-footer .btn-left-box>a::after,
+  .gift-panel-switch::after {
     content: none !important;
   }
   .default:hover,
@@ -515,7 +588,12 @@
   .d-outer .d-button:hover,
   .module-box .btn-primary:hover,
   .module-box .btn-disabled:hover,
-  .upLoad .upload-btn:hover {
+  .upLoad .upload-btn:hover,
+  .container .nav-container .list-link p a:hover,
+  .btn-box .liked:hover,
+  .btn-box .message:hover,
+  .tag-info-pane .tag-footer .btn-left-box>a:hover,
+  .gift-panel-switch:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
   }
@@ -553,7 +631,10 @@
   .big-label,
   .member-list-exclusive-icon,
   .security_content .pendant-nav li div.active,
-  .security_content .face-g-tab li.current {
+  .security_content .face-g-tab li.current,
+  .hour-rank,
+  .attention-btn-ctnr .left-part,
+  .gift-item .corner-mark {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
@@ -565,7 +646,10 @@
   .timeline-box .timeline-item .item-right p.num a,
   .timeline-box .timeline-item .item-right p.num span,
   .page-content .left-side .article-list .article-list-holder .article-item .item-holder .article-title-holder .list-mark,
-  .home-userstatus {
+  .home-userstatus,
+  .live-status-label,
+  .up-level-icon,
+  .user-level-icon {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -604,7 +688,11 @@
   .hover-panel-wrap,
   .suggest-wrap,
   #article-list-index,
-  .big-more-item-list {
+  .big-more-item-list,
+  .common-popup-wrap,
+  .awarding-panel,
+  .link-popup-panel,
+  .chat-history-panel .chat-history-list .chat-item.danmaku-item .hover-panel {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -902,21 +990,35 @@
     background-color: var(--c-background);
     color: var(--c-text);
   }
+  .bb-comment .nameplate .nameplate-card .nameplate-arrow,
+  .comment-bilibili-fold .nameplate .nameplate-card .nameplate-arrow {
+    display: none;
+  }
   .bb-comment,
   .comment-area,
   .comment-bilibili-fold,
-  .emoji-box .emoji-tabs {
+  .emoji-box .emoji-tabs,
+  .bb-comment .comment-list .list-item .reply-box .view-more .btn-more:hover,
+  .comment-bilibili-fold .comment-list .list-item .reply-box .view-more .btn-more:hover {
     background-color: var(--c-background);
   }
-  .paging-box .current {
+  .paging-box .current,
+  .bb-comment .nameplate .nameplate-card .nameplate-text .n-name,
+  .comment-bilibili-fold .nameplate .nameplate-card .nameplate-text .n-name {
     color: var(--c-title) !important;
   }
-  .bb-comment .comment-header .tabs-order li {
+  .bb-comment .comment-header .tabs-order li,
+  .bb-comment .comment-list .list-item .reply-box .view-more,
+  .comment-bilibili-fold .comment-list .list-item .reply-box .view-more {
     color: var(--c-text) !important;
   }
   .comment-bilibili-fold .comment-header .tabs-order li.on,
   .paging-box .current {
     color: var(--c-accent) !important;
+  }
+  .bb-comment .stick.true-love .medal-level,
+  .comment-bilibili-fold .stick.true-love .medal-level {
+    color: var(--c-white) !important;
   }
   .bb-comment .comment-header,
   .comment-bilibili-fold .comment-header,
@@ -935,11 +1037,22 @@
   .comment-area .comm-more {
     border-color: var(--c-border) !important;
   }
+  .bb-comment .nameplate .nameplate-card .nameplate-text,
+  .comment-bilibili-fold .nameplate .nameplate-card .nameplate-text {
+    border: 0;
+  }
   .bb-comment .comment-header .tabs-order li.on,
   .comment-bilibili-fold .comment-header .tabs-order li.on,
   .comment-area .comm-main .comm-tabs >ul >li.active {
     border-color: var(--c-accent) !important;
     color: var(--c-accent) !important;
+  }
+  .bb-comment .nameplate .nameplate-card,
+  .comment-bilibili-fold .nameplate .nameplate-card,
+  .user-card {
+    border-color: var(--c-border);
+    box-shadow: none;
+    background-color: var(--c-background);
   }
   .emoji-box {
     border-color: var(--c-border);
@@ -987,13 +1100,8 @@
   .textarea-container .comm-tool .comm-emoji {
     background-color: transparent !important;
   }
-  .feed-card .card {
-    border: 0 !important;
-    background-color: var(--c-background);
-  }
-  .feed-card .card .main-content,
-  .feed-card .card .card-content {
-    width: auto;
+  .feed-card .content .bottom img {
+    display: none !important;
   }
   .video-container .text-area .title {
     color: var(--c-title) !important;
@@ -1004,7 +1112,22 @@
   .dynamic-link-hover-bg {
     color: var(--c-accent) !important;
   }
+  .article-container:hover .text-area {
+    box-shadow: none !important;
+  }
+  .feed-card .card .main-content,
+  .feed-card .card .card-content {
+    width: auto;
+  }
+  .feed-card .content .bottom {
+    height: auto !important;
+  }
+  .feed-card .card {
+    border: 0 !important;
+    background-color: var(--c-background);
+  }
   .video-container,
+  .article-container,
   .card .more-panel,
   .card-content .repost,
   .card-content .not-support,
@@ -1031,6 +1154,16 @@
   .card .more-panel:after {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
+  }
+  .blp-ui-button {
+    background-color: transparent !important;
+    color: var(--c-text) !important;
+  }
+  .blp-ui-button span {
+    color: var(--c-text) !important;
+  }
+  .blp-ui-button::after {
+    content: none !important;
   }
 }
 @-moz-document url-prefix("https://www.bilibili.com/") {
@@ -1881,10 +2014,11 @@
   .el-input-group__prepend,
   .form-login .input-box .item input,
   .form-login .input-box .item input.error,
-  .autocomplete {
-    border-color: var(--c-border);
-    background-color: var(--c-hover);
-    color: var(--c-title);
+  .autocomplete,
+  .select-group .select-title {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-hover) !important;
+    color: var(--c-title) !important;
   }
   .el-select-dropdown {
     border-color: var(--c-border);
@@ -1929,6 +2063,43 @@
   }
   .form-login .input-box .sns .btn::after {
     content: none !important;
+  }
+  body:after {
+    display: none !important;
+  }
+  .steps-icon {
+    background-color: var(--c-background) !important;
+  }
+  .steps-list .steps-line {
+    background-color: var(--c-border) !important;
+  }
+  .select-list>li .select-info p {
+    color: var(--c-title) !important;
+  }
+  .safe-logo .safe-score,
+  .safe-logo .safe-score-tips {
+    color: var(--c-white) !important;
+  }
+  .steps-icon,
+  .steps-line {
+    border-color: var(--c-border) !important;
+  }
+  .steps-list>.active .steps-icon {
+    border-color: var(--c-accent) !important;
+  }
+  .nav-list li,
+  .select-main,
+  .select-list>li {
+    border: 0 !important;
+  }
+  .select-main {
+    box-shadow: none !important;
+  }
+  .mini-type .nav-user-center .user-con .item .name {
+    font-size: 14px;
+  }
+  .container .nav-container .list-link p a {
+    padding: 5px 10px;
   }
 }
 @-moz-document url-prefix("https://space.bilibili.com/") {
@@ -2774,19 +2945,17 @@
     color: var(--c-accent) !important;
   }
   .cover-ctnr .area-name,
-  .player-ctnr a,
-  .player-ctnr span,
   .aside-item .aside-item-tips,
   .ysly-room-ctnr .item .info span {
     color: var(--c-white) !important;
   }
-  .player-ctnr button,
+  .bilibili-live-player button,
   .search-bar-ctnr .search-bar .search-btn,
   .link-panel-ctnr .load-more .load-more-btn,
   .attention-live .switch-btn {
     background-color: transparent !important;
   }
-  .player-ctnr button::after,
+  .bilibili-live-player button::after,
   .search-bar-ctnr .search-bar .search-btn::after,
   .link-panel-ctnr .load-more .load-more-btn::after,
   .attention-live .switch-btn::after {
@@ -2812,42 +2981,99 @@
   .hover-panel-wrapper .text-info-ctnr .follow-btn.p-absolute {
     position: absolute;
   }
+  .link-navbar .main-ctnr .nav-items-ctnr,
+  .shortcuts-ctnr .shortcut-item:last-child,
+  .custom-link,
+  .live-room-app .app-content .app-body .section-block .right-container,
+  .left-container .flip-view,
+  .link-footer-ctnr,
+  .count-choice .send-btn-animation,
+  .chat-history-panel .chat-history-list .chat-item.danmaku-item .title-label {
+    display: none !important;
+  }
   .link-footer-vm,
   .rank-list-ctnr,
   .live-room-app .app-content .app-body .player-and-aside-area .aside-area .rank-list-section,
   .chat-history-panel,
   .live-room-app .app-content .app-body .player-and-aside-area .aside-area .chat-control-panel,
   .content-wrapper,
-  .live-player-ctnr.minimal {
+  .live-player-ctnr.minimal,
+  .gift-sender-panel,
+  .gift-control-panel .right-part .gift-presets .gift-panel-box,
+  .guard-store-box .cntr,
+  .tab-box .item.active::after,
+  .tab-box .item.active::before,
+  .guard-desc-box,
+  .chat-history-panel .chat-history-list .chat-item.welcome-msg .username.vip {
     background-color: var(--c-background) !important;
   }
-  .attention-btn-ctnr .right-part {
+  .attention-btn-ctnr .right-part,
+  .guard-store-box .tab-box,
+  .fans-medal-item .level {
     background-color: var(--c-hover) !important;
   }
-  .right-action-ctnr {
-    background-color: transparent !important;
+  .title-length-limit,
+  .attention-btn-ctnr .right-part,
+  .gift-info-title,
+  .tab-box .item .item-cntr,
+  .fans-medal-item .level {
+    color: var(--c-title) !important;
   }
-  .live-room-app .app-content .app-body .player-and-aside-area .left-container .head-info-section,
-  .live-room-app .app-content .app-body .player-and-aside-area .left-container .gift-control-section,
-  .live-room-app .app-content .app-body .player-and-aside-area .aside-area {
-    border: 0;
-    background-color: var(--c-background);
+  .gift-info-desc,
+  .gift-info-expScore {
+    color: var(--c-text) !important;
   }
-  .room-introduction-tags {
+  .hour-rank .hour-rank-content,
+  .attention-btn-ctnr .left-part .follow-text,
+  .fans-medal-item .label {
+    color: var(--c-white) !important;
+  }
+  .gift-info .btn-rule,
+  .striking,
+  .item.club-rank-1 .club-name,
+  .chat-history-panel .chat-history-list .chat-item.welcome-msg .username.vip {
+    color: var(--c-accent) !important;
+  }
+  .room-introduction-tags,
+  .attention-btn-ctnr .right-part,
+  .rank-list-ctnr,
+  .tabs .tab-list .item {
     border-color: var(--c-border) !important;
+  }
+  .content-wrapper {
+    border: 0 !important;
+  }
+  .common-popup-wrap.arrow-top::before,
+  .common-popup-wrap.arrow-top::after {
+    border-color: transparent transparent var(--c-background) !important;
+  }
+  .common-popup-wrap.arrow-bottom::after,
+  .common-popup-wrap.arrow-bottom::before,
+  .gift-sender-panel.arrow-bottom::before,
+  .chat-history-panel .chat-history-list .chat-item.danmaku-item .hover-panel::before {
+    border-color: var(--c-background) transparent transparent !important;
   }
   .link-navbar-ctnr {
     box-shadow: none;
   }
-  .link-navbar .main-ctnr .nav-items-ctnr,
-  .shortcuts-ctnr .shortcut-item:last-child,
-  .custom-link,
-  .live-room-app .app-content .app-body .section-block .right-container,
-  .left-container .flip-view {
-    display: none !important;
-  }
   .link-navbar .main-ctnr .nav-logo {
     font-size: 0 !important;
+  }
+  .live-room-app .app-content .app-body .section-block {
+    margin-bottom: 100px;
+  }
+  .right-action-ctnr,
+  .live-skin-highlight-text {
+    background-color: transparent !important;
+    color: var(--c-text) !important;
+  }
+  .right-action-ctnr span,
+  .live-skin-highlight-text span {
+    color: var(--c-text) !important;
+  }
+  .right-action-ctnr::after,
+  .live-skin-highlight-text::after {
+    content: none !important;
   }
   .link-navbar .main-ctnr .nav-logo:before {
     top: 11px !important;
@@ -2862,22 +3088,41 @@
   .live-room-app .app-content .app-body .player-and-aside-area .aside-area .chat-control-panel {
     border-top: 1px solid var(--c-border);
   }
-  .content-wrapper {
-    border: 0 !important;
-  }
   .live-room-app .app-content .app-body .section-block .left-container {
     float: none;
     width: auto;
   }
-  .side-bar-cntr {
+  .live-room-app .app-content .app-body .player-and-aside-area .left-container .head-info-section,
+  .live-room-app .app-content .app-body .player-and-aside-area .left-container .gift-control-section,
+  .live-room-app .app-content .app-body .player-and-aside-area .aside-area,
+  .side-bar-cntr,
+  .count-choice,
+  .buy-info-box {
     border: 0 !important;
     background-color: var(--c-background) !important;
   }
   .video-container,
-  .live-container {
+  .live-container,
+  .count-down,
+  .count-choice .count-input,
+  .chat-history-panel .chat-history-list .chat-item.system-msg {
     border-color: var(--c-border) !important;
     background-color: var(--c-hover) !important;
     color: var(--c-text) !important;
+  }
+  .choice-item {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-background) !important;
+    color: var(--c-text) !important;
+    transition: background-color 0.3s ease-in-out !important;
+  }
+  .choice-item:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .choice-item.active {
+    border-color: var(--c-accent) !important;
+    background-color: var(--c-background) !important;
+    color: var(--c-accent) !important;
   }
   .bl-button--primary {
     background-color: var(--c-accent) !important;

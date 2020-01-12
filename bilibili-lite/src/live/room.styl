@@ -1,4 +1,14 @@
 /* 直播播放界面样式 */
+.link-navbar .main-ctnr .nav-items-ctnr
+.shortcuts-ctnr .shortcut-item:last-child
+.custom-link
+.live-room-app .app-content .app-body .section-block .right-container
+.left-container .flip-view
+.link-footer-ctnr
+.count-choice .send-btn-animation
+.chat-history-panel .chat-history-list .chat-item.danmaku-item .title-label
+	display none !important
+
 .link-footer-vm
 .rank-list-ctnr
 .live-room-app .app-content .app-body .player-and-aside-area .aside-area .rank-list-section
@@ -6,35 +16,80 @@
 .live-room-app .app-content .app-body .player-and-aside-area .aside-area .chat-control-panel
 .content-wrapper
 .live-player-ctnr.minimal
+.gift-sender-panel
+.gift-control-panel .right-part .gift-presets .gift-panel-box
+.guard-store-box .cntr
+.tab-box .item.active::after
+.tab-box .item.active::before
+.guard-desc-box
+.chat-history-panel .chat-history-list .chat-item.welcome-msg .username.vip
 	background-color var(--c-background) !important
 
 .attention-btn-ctnr .right-part
+.guard-store-box .tab-box
+.fans-medal-item .level
 	background-color var(--c-hover) !important
 
-.right-action-ctnr
-	background-color transparent !important
+.title-length-limit
+.attention-btn-ctnr .right-part
+.gift-info-title
+.tab-box .item .item-cntr
+.fans-medal-item .level
+	color var(--c-title) !important
 
-.live-room-app .app-content .app-body .player-and-aside-area .left-container .head-info-section
-.live-room-app .app-content .app-body .player-and-aside-area .left-container .gift-control-section
-.live-room-app .app-content .app-body .player-and-aside-area .aside-area
-	border 0
-	background-color var(--c-background)
+.gift-info-desc
+.gift-info-expScore
+	color var(--c-text) !important
+
+.hour-rank .hour-rank-content
+.attention-btn-ctnr .left-part .follow-text
+.fans-medal-item .label
+	color var(--c-white) !important
+
+.gift-info .btn-rule
+.striking
+.item.club-rank-1 .club-name
+.chat-history-panel .chat-history-list .chat-item.welcome-msg .username.vip
+	color var(--c-accent) !important
 
 .room-introduction-tags
+.attention-btn-ctnr .right-part
+.rank-list-ctnr
+.tabs .tab-list .item
 	border-color var(--c-border) !important
+
+.content-wrapper
+	border 0 !important
+
+.common-popup-wrap.arrow-top::before
+.common-popup-wrap.arrow-top::after
+	border-color transparent transparent var(--c-background) !important
+
+.common-popup-wrap.arrow-bottom::after
+.common-popup-wrap.arrow-bottom::before
+.gift-sender-panel.arrow-bottom::before
+.chat-history-panel .chat-history-list .chat-item.danmaku-item .hover-panel::before
+	border-color var(--c-background) transparent transparent !important
 
 .link-navbar-ctnr
 	box-shadow none
 
-.link-navbar .main-ctnr .nav-items-ctnr
-.shortcuts-ctnr .shortcut-item:last-child
-.custom-link
-.live-room-app .app-content .app-body .section-block .right-container
-.left-container .flip-view
-	display none !important
-
 .link-navbar .main-ctnr .nav-logo
 	font-size 0 !important
+
+.live-room-app .app-content .app-body .section-block
+	margin-bottom 100px
+
+.right-action-ctnr
+.live-skin-highlight-text
+	background-color transparent !important
+	color var(--c-text) !important
+
+	span
+		color var(--c-text) !important
+
+	&::after
+		content none !important
 
 .link-navbar .main-ctnr .nav-logo:before
 	top 11px !important
@@ -49,22 +104,41 @@
 .live-room-app .app-content .app-body .player-and-aside-area .aside-area .chat-control-panel
 	border-top 1px solid var(--c-border)
 
-.content-wrapper
-	border 0 !important
-
 .live-room-app .app-content .app-body .section-block .left-container
 	float none
 	width auto
 
+.live-room-app .app-content .app-body .player-and-aside-area .left-container .head-info-section
+.live-room-app .app-content .app-body .player-and-aside-area .left-container .gift-control-section
+.live-room-app .app-content .app-body .player-and-aside-area .aside-area
 .side-bar-cntr
+.count-choice
+.buy-info-box
 	border 0 !important
 	background-color var(--c-background) !important
 
 .video-container
 .live-container
+.count-down
+.count-choice .count-input
+.chat-history-panel .chat-history-list .chat-item.system-msg
 	border-color var(--c-border) !important
 	background-color var(--c-hover) !important
 	color var(--c-text) !important
+
+.choice-item
+	border-color var(--c-border) !important
+	background-color var(--c-background) !important
+	color var(--c-text) !important
+	transition background-color 0.3s ease-in-out !important
+
+.choice-item:hover
+	background-color var(--c-hover) !important
+
+.choice-item.active
+	border-color var(--c-accent) !important
+	background-color var(--c-background) !important
+	color var(--c-accent) !important
 
 .bl-button--primary
 	background-color var(--c-accent) !important
