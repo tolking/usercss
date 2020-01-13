@@ -46,6 +46,7 @@ button
 .select-btn
 .btn-box .like
 .gift-package
+.multi-page .cur-list .module-box li.on
   position relative
   border-color var(--c-accent) !important
   background-color var(--c-accent) !important
@@ -122,10 +123,15 @@ button
 .btn-box .message
 .tag-info-pane .tag-footer .btn-left-box>a
 .gift-panel-switch
+.multi-page .cur-list .module-box li
+.recharge-store-box ul.select-list .item
   border 1px solid var(--c-border) !important
   background-color var(--c-background) !important
   color var(--c-title) !important
   transition all 0.3s ease-in-out
+
+  span
+    color var(--c-text) !important
 
   &::after
     content none !important
@@ -133,6 +139,9 @@ button
   &:hover
     border-color var(--c-accent) !important
     background-color var(--c-hover) !important
+
+    span
+      color var(--c-text) !important
 
 .paging-box-big .dian
 .paging-box-big .dian:hover

@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.0.0-alpha.6
+@version        1.0.0
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/bilibili-lite
@@ -12,13 +12,23 @@
 
 @advanced  dropdown  defaultTheme  "选择默认主题" {
 	auto "跟随系统" <<<EOT
-  /*! auto *\/:root{--c-title:#212121;--c-text:#666;--c-border:#dadada;--c-background:#fff;--c-hover:rgba(230, 230, 230, .3);--c-accent:/*[[accentColor]]*\/;--c-white:#fff;--c-bg-header:rgba(0, 0, 0, .3);--c-scroll:#7c7d7f}@media (prefers-color-scheme:dark){:root{--c-title:#e2e2e2;--c-text:#bababa;--c-border:#4e4e4e;--c-background:#25272a;--c-hover:rgba(20, 20, 20, .3)}} EOT;
+  /*! auto *\/:root{--c-title:/*[[titleColor]]*\/;--c-text:/*[[textColor]]*\/;--c-border:/*[[borderColor]]*\/;--c-background:/*[[backgroundColor]]*\/;--c-hover:/*[[hoverColor]]*\/;--c-accent:/*[[accentColor]]*\/;--c-white:#fff;--c-bg-header:rgba(0, 0, 0, .3);--c-scroll:#7c7d7f}@media(prefers-color-scheme:dark){:root{--c-title:/*[[titleDarkColor]]*\/;--c-text:/*[[textDarkColor]]*\/;--c-border:/*[[borderDarkColor]]*\/;--c-background:/*[[backgroundDarkColor]]*\/;--c-hover:/*[[hoverDarkColor]]*\/}} EOT;
 	light "亮色" <<<EOT
-  /*! light *\/:root{--c-title:#212121;--c-text:#666;--c-border:#dadada;--c-background:#fff;--c-hover:rgba(230, 230, 230, .3);--c-accent:/*[[accentColor]]*\/;--c-white:#fff;--c-bg-header:rgba(0, 0, 0, .3);--c-scroll:#7c7d7f} EOT;
+  /*! light *\/:root{--c-title:/*[[titleColor]]*\/;--c-text:/*[[textColor]]*\/;--c-border:/*[[borderColor]]*\/;--c-background:/*[[backgroundColor]]*\/;--c-hover:/*[[hoverColor]]*\/;--c-accent:/*[[accentColor]]*\/;--c-white:#fff;--c-bg-header:rgba(0, 0, 0, .3);--c-scroll:#7c7d7f} EOT;
 	dark "暗色" <<<EOT
-  /*! dark *\/:root{--c-title:#e2e2e2;--c-text:#bababa;--c-border:#4e4e4e;--c-background:#25272a;--c-hover:rgba(20, 20, 20, .3);--c-accent:/*[[accentColor]]*\/;--c-white:#fff;--c-bg-header:rgba(0, 0, 0, .3);--c-scroll:#7c7d7f} EOT;
+  /*! dark *\/:root{--c-title:/*[[titleDarkColor]]*\/;--c-text:/*[[textDarkColor]]*\/;--c-border:/*[[borderDarkColor]]*\/;--c-background:/*[[backgroundDarkColor]]*\/;--c-hover:/*[[hoverDarkColor]]*\/;--c-accent:/*[[accentColor]]*\/;--c-white:#fff;--c-bg-header:rgba(0, 0, 0, .3);--c-scroll:#7c7d7f} EOT;
 }
 @advanced  color  accentColor  "主色调"  #00a1d6
+@advanced  color  titleColor  "亮-主要文本"  #212121
+@advanced  color  textColor  "亮-次要文本"  #666
+@advanced  color  borderColor  "亮-边框"  #ccc
+@advanced  color  backgroundColor  "亮-背景"  #fff
+@advanced  color  hoverColor  "亮-次要背景"  rgba(230,230,230,.3)
+@advanced  color  titleDarkColor  "暗-主要文本"  #e2e2e2
+@advanced  color  textDarkColor  "暗-次要文本"  #bababa
+@advanced  color  borderDarkColor  "暗-边框"  #4e4e4e
+@advanced  color  backgroundDarkColor  "暗-背景"  #25272a
+@advanced  color  hoverDarkColor  "暗-次要背景"  rgba(20,20,20,.3)
 ==/UserStyle== */
 @import 'public'
 @import 'home'
