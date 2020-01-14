@@ -81,6 +81,9 @@
   .username.is-vip {
     color: var(--c-accent) !important;
   }
+  hr {
+    border-color: var(--c-border) !important;
+  }
   table tr {
     border-color: var(--c-border) !important;
     background-color: transparent !important;
@@ -849,7 +852,8 @@
   .link-popup-panel,
   .chat-history-panel .chat-history-list .chat-item.danmaku-item .hover-panel,
   .tool-bar .share-more,
-  .tool-bar .mobile-more {
+  .tool-bar .mobile-more,
+  .user-level-detail {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -870,6 +874,10 @@
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-bottom: 6px solid var(--c-background) !important;
+  }
+  .bili-header-m .profile-m .grade .desc-tips .arrow-left,
+  .dynamic-m .dyn_menu .line:before {
+    display: none !important;
   }
   .channel-menu-mini {
     background-color: var(--c-background);
@@ -916,11 +924,28 @@
   .mini-header input::after {
     content: none;
   }
-  .van-popper-avatar .level-bar {
+  .van-popper-avatar .level-bar,
+  .bili-header-m .profile-m .grade .bar {
     background-color: var(--c-border) !important;
   }
-  .van-popper-avatar .level-bar .level-progress {
+  .van-popper-avatar .links .link-item:hover,
+  .lang-change .lang-item:hover,
+  .lang-change .lang-intro-item:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .van-popper-avatar .level-bar .level-progress,
+  .bili-header-m .profile-m .grade .bar .lt,
+  .bili-header-m .profile-m .grade .bar .rate {
     background-color: var(--c-accent) !important;
+  }
+  .van-popper-avatar .links .link-title,
+  .lang-change .lang-title,
+  .lang-change .lang-intro-item {
+    color: var(--c-title) !important;
+  }
+  .lang-change .lang-intro-item.on,
+  .bili-header-m .profile-m .grade .desc-tips .lv-row strong {
+    color: var(--c-accent) !important;
   }
   .van-popper-avatar .coins,
   .van-popper-avatar .counts,
@@ -929,27 +954,18 @@
   .van-popper-avatar .coins .contact .contact-tips {
     border-color: var(--c-border) !important;
   }
-  .van-popper-avatar .links .link-title,
-  .lang-change .lang-title,
-  .lang-change .lang-intro-item {
-    color: var(--c-title) !important;
-  }
   .van-popper-avatar .level-intro,
   .lang-change .lang-intro {
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
   }
-  .lang-change .lang-intro-item.on {
-    color: var(--c-accent) !important;
-  }
-  .van-popper-avatar .links .link-item:hover,
-  .lang-change .lang-item:hover,
-  .lang-change .lang-intro-item:hover {
-    background-color: var(--c-hover) !important;
-  }
   .van-popper-avatar .logout a:hover,
   .van-popper-avatar .coins .contact .contact-tips {
     background-color: var(--c-hover) !important;
+    color: var(--c-title) !important;
+  }
+  .dynamic-m .dyn_list_wrapper .dyn_list li .r .title .uname {
+    background-color: transparent !important;
     color: var(--c-title) !important;
   }
   .i-frame iframe,
@@ -994,7 +1010,8 @@
   .video-info .line-2 {
     color: var(--c-title) !important;
   }
-  .video-info .line-2:hover {
+  .video-info .line-2:hover,
+  .van-popper-favorite .video-panel .play-all .bilifont {
     color: var(--c-accent) !important;
   }
   .duration-tag {
@@ -1005,7 +1022,7 @@
     border-color: var(--c-border) !important;
   }
   .van-popper-favorite .tab-item--active {
-    background-color: var(--c-accent) !important;
+    background-color: var(--c-hover) !important;
     color: var(--c-white) !important;
   }
   .van-popper-favorite .tab-item--normal:hover,
@@ -1081,6 +1098,10 @@
   }
   .bili-header-m .nav-menu .up-load .up-nav li:hover {
     background-color: var(--c-hover);
+  }
+  .bili-header-m .nav-search .nav-search-keyword,
+  .bili-header-m .profile-m .grade .bar .num {
+    background-color: transparent !important;
   }
   .search-submit,
   .nav-search-submit {
@@ -1977,7 +1998,8 @@
   .short-review-masker .short-review-content,
   .main-container .pay-bar .vip .btn-pay,
   .bilibili-player-video-sendbar .bilibili-player-video-inputbar,
-  .members-info__header {
+  .members-info__header,
+  .bilibili-player .bilibili-player-area .bilibili-player-video-panel {
     background-color: var(--c-background) !important;
   }
   .multi-page .cur-list .list-box li.on,
@@ -1991,10 +2013,15 @@
   .bilibili-player .bilibili-player-area .bilibili-player-video-wrap .bilibili-player-volumeHint {
     background-color: var(--c-hover) !important;
   }
-  .main-container .media-info .media-right .pub-wrapper .up-info-wrapper .split-line {
+  .main-container .media-info .media-right .pub-wrapper .up-info-wrapper .split-line,
+  .bui-switch .bui-body {
     background-color: var(--c-border) !important;
   }
-  .bui-slider .bui-track .bui-bar-wrap .bui-bar {
+  .bui-slider .bui-track .bui-bar-wrap .bui-bar,
+  .bui-slider .bui-track .bui-thumb .bui-thumb-dot,
+  .bui-radio.bui-dark .bui-radio-button .bui-radio-input:checked+.bui-radio-label,
+  .bui-switch .bui-checkbox:checked+.bui-body,
+  .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row .row-selection .selection-span.active[data-type='fontsize'] {
     background-color: var(--c-accent) !important;
   }
   .bilibili-player-video-wrap a,
@@ -2055,8 +2082,19 @@
   .bilibili-player {
     box-shadow: none;
   }
+  .bp-svgicon svg {
+    fill: var(--c-text);
+  }
+  .bui-switch .bui-dot span svg {
+    fill: var(--c-border);
+  }
   .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active .bp-svgicon,
-  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active:hover .bp-svgicon {
+  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active:hover .bp-svgicon,
+  .bui-switch .bui-checkbox:checked+.bui-body .bui-dot span svg,
+  .bilibili-player-video-danmaku-setting:hover>span svg,
+  .bilibili-player-block-filter-image:hover .bp-svgicon svg,
+  .bilibili-player-iconfont:hover .bp-svgicon svg,
+  .selection-icon:hover .bp-svgicon svg {
     fill: var(--c-accent);
   }
   .bilibili-player-video-sendbar,
@@ -3189,7 +3227,13 @@
   .link-footer-ctnr,
   .count-choice .send-btn-animation,
   .chat-history-panel .chat-history-list .chat-item.danmaku-item .title-label,
-  .bottom-actions .left-action {
+  .bottom-actions .left-action,
+  .user-level-detail:after,
+  .user-level-detail:before,
+  .chat-history-panel .chat-history-list .chat-item.danmaku-item.guard-level-1::before,
+  .chat-history-panel .chat-history-list .chat-item.danmaku-item.guard-level-2::before,
+  .chat-history-panel .chat-history-list .chat-item.danmaku-item.guard-level-1::after,
+  .chat-history-panel .chat-history-list .chat-item.danmaku-item.guard-level-2::after {
     display: none !important;
   }
   .link-footer-vm,
@@ -3222,16 +3266,23 @@
   .sub-tab-box .item.active {
     background-color: var(--c-hover) !important;
   }
+  .room-bg::after {
+    background-image: linear-gradient(0deg, var(--c-background), transparent 20%) !important;
+  }
   .title-length-limit,
   .attention-btn-ctnr .right-part,
   .gift-info-title,
   .tab-box .item .item-cntr,
   .fans-medal-item .level,
-  .recharge-store-box dl.recharge-form dt {
+  .recharge-store-box dl.recharge-form dt,
+  .chaos-pk-rank .rank .rank-name {
     color: var(--c-title) !important;
   }
   .gift-info-desc,
-  .gift-info-expScore {
+  .gift-info-expScore,
+  .icon-label,
+  .chaos-pk-rank .rank .season-name,
+  .chaos-pk-rank .rank .time {
     color: var(--c-text) !important;
   }
   .hour-rank .hour-rank-content,
@@ -3242,7 +3293,9 @@
   .gift-info .btn-rule,
   .striking,
   .item.club-rank-1 .club-name,
-  .chat-history-panel .chat-history-list .chat-item.welcome-msg .username.vip {
+  .chat-history-panel .chat-history-list .chat-item.welcome-msg .username.vip,
+  .room-introduction-tags .room-introduction-tag:hover .icon-label,
+  .chaos-pk-rank .link-to-history {
     color: var(--c-accent) !important;
   }
   .room-introduction-tags,
@@ -3274,6 +3327,10 @@
   .link-navbar .main-ctnr .nav-logo {
     font-size: 0 !important;
   }
+  .chat-history-panel .chat-history-list .chat-item.danmaku-item.guard-level-1,
+  .chat-history-panel .chat-history-list .chat-item.danmaku-item.guard-level-2 {
+    margin: 0;
+  }
   .live-room-app .app-content .app-body .section-block {
     margin-bottom: 100px;
   }
@@ -3296,12 +3353,9 @@
     height: 30px !important;
     background-size: 30px !important;
   }
-  .chat-input {
-    border: 1px solid var(--c-border) !important;
-    background-color: var(--c-background) !important;
-  }
   .live-room-app .app-content .app-body .player-and-aside-area .aside-area .chat-control-panel {
     border-top: 1px solid var(--c-border);
+    box-sizing: border-box;
   }
   .live-room-app .app-content .app-body .section-block .left-container {
     float: none;
@@ -3313,7 +3367,7 @@
   .side-bar-cntr,
   .count-choice,
   .buy-info-box {
-    border: 0 !important;
+    border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
   }
   .video-container,
@@ -3547,7 +3601,8 @@
   .page-content .right-side .more a:hover,
   .page-content .right-side .search-module .search-block .search-word-panel .history-item:hover,
   .page-content .right-side .search-module .search-block .search-word-panel .suggest-item:hover,
-  .page-content .left-side .article-list .article-list-holder .article-item:hover {
+  .page-content .left-side .article-list .article-list-holder .article-item:hover,
+  .nav-tab-bar .tab-item.on {
     background-color: var(--c-hover);
   }
   .page-content .right-side .more .help .info,
@@ -3564,13 +3619,14 @@
     border-color: var(--c-border);
   }
   .nav-tab-bar {
-    top: 100px;
+    top: 145px;
   }
   .nav-tab-bar .tab-item {
     margin-top: 0;
     margin-right: 0;
     margin-left: -130px;
     height: 40px;
+    text-align: center;
     line-height: 40px;
   }
   .page-content {
@@ -3605,8 +3661,7 @@
     margin: 0;
     width: 100%;
     height: 100%;
-    background-color: transparent;
-    color: var(--c-title);
+    background-color: transparent !important;
   }
   .page-content .right-side .more {
     display: -ms-flexbox;
@@ -3677,6 +3732,9 @@
   .bili-dialog-bomb .appeal-box {
     background-color: var(--c-background);
   }
+  #article-list-index .index-holder .article-item .point {
+    background-color: var(--c-border);
+  }
   .up-info-holder .fixed-box .up-info-block .up-info-right-block .up-name,
   #article-list-index .article-list-title,
   .article-list-holder-block .article-list-plane .button#article-list-btn .label,
@@ -3688,10 +3746,14 @@
   .title-container .info span,
   .article-list-holder-block .article-list-name,
   .article-list-holder-block .article-list-plane .button.off .label,
-  .bili-dialog-bomb .appeal-box .wrap .container .textarea .memo {
+  .bili-dialog-bomb .appeal-box .wrap .container .textarea .memo,
+  .article-action .ops i {
     color: var(--c-text) !important;
   }
-  .coin-wrap .coin-title i {
+  .coin-wrap .coin-title i,
+  .up-info-holder .fixed-box .up-info-block .up-info-right-block .up-name.b-vip-red,
+  .article-action .ops span:hover>i,
+  .article-action .ops .share-container a:hover i {
     color: var(--c-accent) !important;
   }
   .article-action,
@@ -3699,7 +3761,8 @@
   .up-info-holder .fixed-box .rightside-article-list-btn .label,
   .article-list-holder-block .article-list-plane .button#article-list-btn .label,
   .article-list-holder-block .article-list-plane .button#article-list-btn .title,
-  .bili-dialog-bomb .appeal-box .wrap .container .options .option .checkbox {
+  .bili-dialog-bomb .appeal-box .wrap .container .options .option .checkbox,
+  .slim-border:after {
     border-color: var(--c-border);
   }
   .page-container {
@@ -3731,6 +3794,7 @@
     box-shadow: none;
   }
   #article-list-index {
+    border-left: 1px solid var(--c-border);
     box-shadow: none;
   }
   .article-holder .card {
