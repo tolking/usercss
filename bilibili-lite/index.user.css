@@ -209,7 +209,12 @@
   .select-btn,
   .btn-box .like,
   .gift-package,
-  .multi-page .cur-list .module-box li.on {
+  .multi-page .cur-list .module-box li.on,
+  .rollback-btn,
+  .change-img-btn,
+  .pagelist .flip-left .active,
+  .active-main .back-top,
+  .topic-main .back-top {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -263,7 +268,12 @@
   .select-btn span,
   .btn-box .like span,
   .gift-package span,
-  .multi-page .cur-list .module-box li.on span {
+  .multi-page .cur-list .module-box li.on span,
+  .rollback-btn span,
+  .change-img-btn span,
+  .pagelist .flip-left .active span,
+  .active-main .back-top span,
+  .topic-main .back-top span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -312,7 +322,12 @@
   .select-btn::after,
   .btn-box .like::after,
   .gift-package::after,
-  .multi-page .cur-list .module-box li.on::after {
+  .multi-page .cur-list .module-box li.on::after,
+  .rollback-btn::after,
+  .change-img-btn::after,
+  .pagelist .flip-left .active::after,
+  .active-main .back-top::after,
+  .topic-main .back-top::after {
     content: '';
     display: block;
     position: absolute;
@@ -370,7 +385,12 @@
   .select-btn:hover,
   .btn-box .like:hover,
   .gift-package:hover,
-  .multi-page .cur-list .module-box li.on:hover {
+  .multi-page .cur-list .module-box li.on:hover,
+  .rollback-btn:hover,
+  .change-img-btn:hover,
+  .pagelist .flip-left .active:hover,
+  .active-main .back-top:hover,
+  .topic-main .back-top:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -419,7 +439,12 @@
   .select-btn:hover span,
   .btn-box .like:hover span,
   .gift-package:hover span,
-  .multi-page .cur-list .module-box li.on:hover span {
+  .multi-page .cur-list .module-box li.on:hover span,
+  .rollback-btn:hover span,
+  .change-img-btn:hover span,
+  .pagelist .flip-left .active:hover span,
+  .active-main .back-top:hover span,
+  .topic-main .back-top:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -468,7 +493,12 @@
   .select-btn:hover::after,
   .btn-box .like:hover::after,
   .gift-package:hover::after,
-  .multi-page .cur-list .module-box li.on:hover::after {
+  .multi-page .cur-list .module-box li.on:hover::after,
+  .rollback-btn:hover::after,
+  .change-img-btn:hover::after,
+  .pagelist .flip-left .active:hover::after,
+  .active-main .back-top:hover::after,
+  .topic-main .back-top:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -517,7 +547,9 @@
   .tag-info-pane .tag-footer .btn-left-box>a,
   .gift-panel-switch,
   .multi-page .cur-list .module-box li,
-  .recharge-store-box ul.select-list .item {
+  .recharge-store-box ul.select-list .item,
+  .pagelist .flip-left span,
+  .web-notice .more {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -569,7 +601,9 @@
   .tag-info-pane .tag-footer .btn-left-box>a span,
   .gift-panel-switch span,
   .multi-page .cur-list .module-box li span,
-  .recharge-store-box ul.select-list .item span {
+  .recharge-store-box ul.select-list .item span,
+  .pagelist .flip-left span span,
+  .web-notice .more span {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -618,7 +652,9 @@
   .tag-info-pane .tag-footer .btn-left-box>a::after,
   .gift-panel-switch::after,
   .multi-page .cur-list .module-box li::after,
-  .recharge-store-box ul.select-list .item::after {
+  .recharge-store-box ul.select-list .item::after,
+  .pagelist .flip-left span::after,
+  .web-notice .more::after {
     content: none !important;
   }
   .default:hover,
@@ -667,7 +703,9 @@
   .tag-info-pane .tag-footer .btn-left-box>a:hover,
   .gift-panel-switch:hover,
   .multi-page .cur-list .module-box li:hover,
-  .recharge-store-box ul.select-list .item:hover {
+  .recharge-store-box ul.select-list .item:hover,
+  .pagelist .flip-left span:hover,
+  .web-notice .more:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
   }
@@ -717,11 +755,14 @@
   .tag-info-pane .tag-footer .btn-left-box>a:hover span,
   .gift-panel-switch:hover span,
   .multi-page .cur-list .module-box li:hover span,
-  .recharge-store-box ul.select-list .item:hover span {
+  .recharge-store-box ul.select-list .item:hover span,
+  .pagelist .flip-left span:hover span,
+  .web-notice .more:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
-  .paging-box-big .dian:hover {
+  .paging-box-big .dian:hover,
+  .pagelist .flip-left .ellipsis {
     border-color: transparent !important;
     background-color: transparent !important;
   }
@@ -853,7 +894,8 @@
   .chat-history-panel .chat-history-list .chat-item.danmaku-item .hover-panel,
   .tool-bar .share-more,
   .tool-bar .mobile-more,
-  .user-level-detail {
+  .user-level-detail,
+  .select-option {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -864,7 +906,8 @@
   }
   .more-ops-list li:hover,
   .be-dropdown-item:hover,
-  .player-auxiliary-area .player-auxiliary-filter .player-auxiliary-setting-menu-wrap .player-auxiliary-setting-menu-list:hover {
+  .player-auxiliary-area .player-auxiliary-filter .player-auxiliary-setting-menu-wrap .player-auxiliary-setting-menu-list:hover,
+  .select-wrap .select-option p:hover {
     background-color: var(--c-hover) !important;
   }
   .van-popper .popper__arrow {
@@ -915,12 +958,10 @@
     color: var(--c-title) !important;
   }
   .bili-header-m .nav-search .nav-search-btn,
-  .international-header .nav-search .nav-search-btn,
   .mini-header input {
     background-color: transparent !important;
   }
   .bili-header-m .nav-search .nav-search-btn::after,
-  .international-header .nav-search .nav-search-btn::after,
   .mini-header input::after {
     content: none;
   }
@@ -944,7 +985,8 @@
     color: var(--c-title) !important;
   }
   .lang-change .lang-intro-item.on,
-  .bili-header-m .profile-m .grade .desc-tips .lv-row strong {
+  .bili-header-m .profile-m .grade .desc-tips .lv-row strong,
+  .out-container .tab-bar .tab-item:hover {
     color: var(--c-accent) !important;
   }
   .van-popper-avatar .coins,
@@ -1353,6 +1395,12 @@
   .blp-ui-button::after {
     content: none !important;
   }
+  .error-split {
+    display: none;
+  }
+  .error-container {
+    background-color: var(--c-background);
+  }
 }
 @-moz-document url-prefix("https://www.bilibili.com/") {
   .mini-header {
@@ -1448,6 +1496,9 @@
   }
   .channel-menu-itnl span:last-child .item .name {
     margin-top: 2px;
+  }
+  .van-popper-channel .popper__arrow {
+    display: none !important;
   }
   .video-card-common .ex-up,
   .video-card-common .up,
@@ -1667,7 +1718,7 @@
     border-color: var(--c-border);
   }
 }
-@-moz-document url-prefix("https://www.bilibili.com/v/"), url-prefix("https://www.bilibili.com/anime/"), url-prefix("https://www.bilibili.com/guochuang/"), url-prefix("https://www.bilibili.com/cinema/"), url-prefix("https://www.bilibili.com/documentary/"), url-prefix("https://www.bilibili.com/movie/"), url-prefix("https://www.bilibili.com/tv/") {
+@-moz-document url-prefix("https://www.bilibili.com/v/"), url-prefix("https://www.bilibili.com/anime/"), url-prefix("https://www.bilibili.com/guochuang/"), url-prefix("https://www.bilibili.com/cinema/"), url-prefix("https://www.bilibili.com/documentary/"), url-prefix("https://www.bilibili.com/movie/"), url-prefix("https://www.bilibili.com/tv/"), url-prefix("https://www.bilibili.com/blackboard/") {
   .bili-header-m .nav-menu .nav-con .nav-item .t,
   .bili-header-m .nav-menu .up-load .u-link {
     color: var(--c-white) !important;
@@ -1982,6 +2033,55 @@
   .tag-list {
     overflow: hidden scroll;
     max-height: 68px;
+  }
+  .active-title .b-active-i,
+  .topic-title .b-topic-i {
+    display: none !important;
+  }
+  .box-body,
+  #webShare .bili-share-pc,
+  .bili-share-pc .weixin-hover .qr-before {
+    background-color: var(--c-background) !important;
+  }
+  .active-title .b-active-t,
+  .pagelist .flip-left .ellipsis {
+    color: var(--c-title) !important;
+  }
+  .act-list ul li .event_status,
+  .act-list ul li .act-info {
+    color: var(--c-text) !important;
+  }
+  .nav-tab .on {
+    color: var(--c-accent) !important;
+  }
+  .active-title,
+  .nav-tab,
+  .bili-share-pc {
+    border-color: var(--c-border) !important;
+  }
+  .act-list ul li {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-background) !important;
+  }
+  .back-top {
+    background-position: -713px -72px !important;
+  }
+  .active-main,
+  .topic-main {
+    margin-bottom: 60px !important;
+  }
+  .back-top {
+    position: fixed !important;
+  }
+  .active-main .back-top {
+    right: 150px;
+  }
+  button {
+    background-color: transparent !important;
+    color: var(--c-title) !important;
+  }
+  button::after {
+    content: none !important;
   }
 }
 @-moz-document url-prefix("https://www.bilibili.com/video/"), url-prefix("https://www.bilibili.com/bangumi/play/") {
@@ -3976,5 +4076,77 @@
   .manga-navbar .manga-navbar {
     border-bottom: 1px solid var(--c-border);
     background-color: var(--c-background) !important;
+  }
+}
+@-moz-document url-prefix("https://www.bilibili.com/blackroom/") {
+  .what-ban,
+  .comment-wrap .header .title-h2 .head-icon,
+  .fjw-point header h2 .head-icon {
+    display: none !important;
+  }
+  .select-wrap .select-txt,
+  .crumbs em,
+  .fjw-point {
+    background-color: var(--c-background) !important;
+  }
+  .notice-list::before,
+  .fjw-point .point-wrap .user-point .line,
+  .ban-detail .content-box .link-box .box-left .box-line {
+    background-color: var(--c-border) !important;
+  }
+  .banner-bg-b {
+    background-image: none !important;
+  }
+  .publicity .header,
+  .my-info .about .ban-user-info .name,
+  .ban-detail .content-box .punish-title {
+    color: var(--c-title) !important;
+  }
+  .notice-list .time {
+    color: var(--c-text) !important;
+  }
+  .ban-detail .content-box .punish-title .moral strong {
+    color: var(--c-accent) !important;
+  }
+  .pub-list .info dl,
+  .ban-detail .content-box .bk-text-con,
+  .ban-detail .content-box .link-box,
+  .fjw-point header {
+    border-color: var(--c-border) !important;
+  }
+  .ban-detail .content-box .info-wrap,
+  .fjw-point {
+    border: 1px solid var(--c-border);
+  }
+  .ban-detail .content-box {
+    margin-bottom: 60px !important;
+  }
+  .ban-detail .content-box .info-wrap,
+  .comment-wrap {
+    box-shadow: none !important;
+    background-color: var(--c-background) !important;
+  }
+  .ban-modal,
+  .ban-modal-h5 {
+    border: 1px solid var(--c-border);
+    background-color: var(--c-background);
+  }
+  .fjw-entry .blackroom,
+  .fjw-entry .blackroom-rule {
+    transform: rotate(0) !important;
+  }
+  .fjw-entry .entrance {
+    top: 107px;
+    bottom: auto;
+    left: 30px;
+    right: auto;
+    width: 127px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+  }
+  .fjw-entry .entrance::before {
+    content: '加入风纪委员会';
+    display: block;
   }
 }
