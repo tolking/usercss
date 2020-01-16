@@ -895,7 +895,8 @@
   .tool-bar .share-more,
   .tool-bar .mobile-more,
   .user-level-detail,
-  .select-option {
+  .select-option,
+  .popup-bg-cntr .popup-cntr {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -958,10 +959,12 @@
     color: var(--c-title) !important;
   }
   .bili-header-m .nav-search .nav-search-btn,
+  .international-header .nav-search .nav-search-btn,
   .mini-header input {
     background-color: transparent !important;
   }
   .bili-header-m .nav-search .nav-search-btn::after,
+  .international-header .nav-search .nav-search-btn::after,
   .mini-header input::after {
     content: none;
   }
@@ -988,6 +991,9 @@
   .bili-header-m .profile-m .grade .desc-tips .lv-row strong,
   .out-container .tab-bar .tab-item:hover {
     color: var(--c-accent) !important;
+  }
+  .out-container .tab-bar .active:hover {
+    color: var(--c-white) !important;
   }
   .van-popper-avatar .coins,
   .van-popper-avatar .counts,
@@ -1264,7 +1270,9 @@
   .comment-bilibili-fold .comment-send .comment-emoji,
   .textarea-container .comm-tool .comm-emoji,
   .dynamic-list-item-wrap,
-  .comment-area .comm-more {
+  .comment-area .comm-more,
+  .bb-comment .stick.true-love .medal-level,
+  .comment-bilibili-fold .stick.true-love .medal-level {
     border-color: var(--c-border) !important;
   }
   .bb-comment .nameplate .nameplate-card .nameplate-text,
@@ -1459,7 +1467,7 @@
     width: 60px;
     height: 50px;
     border-radius: 0 25px 25px 0;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.6) !important;
   }
   .bili-banner {
     max-height: 220px;
@@ -2156,7 +2164,8 @@
   .main-container .tool-bar .coin-info i,
   .main-container .tool-bar .share-info i,
   .main-container .tool-bar .mobile-info i,
-  .up-info .u-info .name .message i {
+  .up-info .u-info .name .message i,
+  .multi-page .head-con .range-box i {
     color: var(--c-text) !important;
   }
   .coin-operated-m .coin-title span,
@@ -2176,7 +2185,8 @@
   .video-toolbar .ops>span.on>i,
   .video-toolbar .ops>span:hover>i,
   .video-toolbar .ops .share .share-pos .box-a .share-down .share-btn:hover i,
-  .up-info .u-info .name .message:hover i {
+  .up-info .u-info .name .message:hover i,
+  .multi-page .head-con .range-box i:hover {
     color: var(--c-accent) !important;
   }
   .bilibili-player {
@@ -3506,6 +3516,45 @@
       box-shadow: 0 0 30px 1px rgba(84,94,101,0.4);
     }
 }
+  .bili-footer {
+    display: none !important;
+  }
+  .box-body,
+  #webShare .bili-share-pc,
+  .bili-share-pc .weixin-hover .qr-before {
+    background-color: var(--c-background) !important;
+  }
+  .popup-bg-cntr .popup-cntr .left-part,
+  .bingo-list {
+    background-color: var(--c-hover) !important;
+  }
+  .bili-share-pc .title,
+  .popup-bg-cntr .popup-cntr .right-part .activity-name,
+  .not-bingo,
+  .not-join {
+    color: var(--c-title) !important;
+  }
+  #webShare .bili-share-pc {
+    border-color: var(--c-border);
+  }
+  .popup-bg-cntr .popup-cntr .left-part .round-item.active {
+    background-color: var(--c-background) !important;
+    background-image: none !important;
+  }
+  .countdown-bar-cntr {
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+  .box-body {
+    margin-bottom: 30px;
+  }
+  button {
+    background-color: transparent !important;
+    color: var(--c-title) !important;
+  }
+  button::after {
+    content: none !important;
+  }
 }
 @-moz-document url-prefix("https://search.bilibili.com/") {
   .fixed-top {
