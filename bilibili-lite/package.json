@@ -1,6 +1,6 @@
 {
   "name": "bilibili-lite",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0",
   "description": "一个简化的bilibili页面样式，自适应黑暗模式",
   "author": "tolking <qw13131wang@gmail.com>",
   "license": "MIT",

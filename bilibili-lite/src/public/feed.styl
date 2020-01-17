@@ -1,11 +1,6 @@
 /* 动态 */
-.feed-card .card
-  border 0 !important
-  background-color var(--c-background)
-
-.feed-card .card .main-content
-.feed-card .card .card-content
-  width auto
+.feed-card .content .bottom img
+  display none !important
 
 .video-container .text-area .title
   color var(--c-title) !important
@@ -16,7 +11,22 @@
 .dynamic-link-hover-bg
   color var(--c-accent) !important
 
+.article-container:hover .text-area
+  box-shadow none !important
+
+.feed-card .card .main-content
+.feed-card .card .card-content
+  width auto
+
+.feed-card .content .bottom
+  height auto !important
+
+.feed-card .card
+  border 0 !important
+  background-color var(--c-background)
+
 .video-container
+.article-container
 .card .more-panel
 .card-content .repost
 .card-content .not-support
@@ -43,3 +53,13 @@
 .card .more-panel:after
   border-color var(--c-border) !important
   background-color var(--c-background) !important
+
+.blp-ui-button
+  background-color transparent !important
+  color var(--c-text) !important
+
+  span
+    color var(--c-text) !important
+
+  &::after
+    content none !important

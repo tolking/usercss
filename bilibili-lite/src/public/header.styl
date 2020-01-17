@@ -1,4 +1,8 @@
 /* 顶部导航 */
+.bili-header-m .profile-m .grade .desc-tips .arrow-left
+.dynamic-m .dyn_menu .line:before
+	display: none !important
+
 .channel-menu-mini
 	background-color var(--c-background)
 
@@ -36,12 +40,40 @@
 
 .bili-header-m .nav-search .nav-search-btn
 .international-header .nav-search .nav-search-btn
+.mini-header input
 	background-color transparent !important
 
 	&::after
 		content none
 
 /* 个人弹窗 */
+.van-popper-avatar .level-bar
+.bili-header-m .profile-m .grade .bar
+	background-color var(--c-border) !important
+
+.van-popper-avatar .links .link-item:hover
+.lang-change .lang-item:hover
+.lang-change .lang-intro-item:hover
+	background-color var(--c-hover) !important
+
+.van-popper-avatar .level-bar .level-progress
+.bili-header-m .profile-m .grade .bar .lt
+.bili-header-m .profile-m .grade .bar .rate
+	background-color var(--c-accent) !important
+
+.van-popper-avatar .links .link-title
+.lang-change .lang-title
+.lang-change .lang-intro-item
+	color var(--c-title) !important
+
+.lang-change .lang-intro-item.on
+.bili-header-m .profile-m .grade .desc-tips .lv-row strong
+.out-container .tab-bar .tab-item:hover
+	color var(--c-accent) !important
+
+.out-container .tab-bar .active:hover
+	color: var(--c-white) !important
+
 .van-popper-avatar .coins
 .van-popper-avatar .counts
 .van-popper-avatar .links
@@ -49,27 +81,18 @@
 .van-popper-avatar .coins .contact .contact-tips
 	border-color var(--c-border) !important
 
-.van-popper-avatar .links .link-title
-.lang-change .lang-title
-.lang-change .lang-intro-item
-	color var(--c-title) !important
-
 .van-popper-avatar .level-intro
 .lang-change .lang-intro
 	background-color var(--c-background) !important
 	color var(--c-text) !important
 
-.lang-change .lang-intro-item.on
-	color var(--c-accent) !important
-
-.van-popper-avatar .links .link-item:hover
-.lang-change .lang-item:hover
-.lang-change .lang-intro-item:hover
-	background-color var(--c-hover) !important
-
 .van-popper-avatar .logout a:hover
 .van-popper-avatar .coins .contact .contact-tips
 	background-color var(--c-hover) !important
+	color var(--c-title) !important
+
+.dynamic-m .dyn_list_wrapper .dyn_list li .r .title .uname
+	background-color transparent !important
 	color var(--c-title) !important
 
 /* 消息弹窗 */
@@ -118,6 +141,7 @@
 	color var(--c-title) !important
 
 .video-info .line-2:hover
+.van-popper-favorite .video-panel .play-all .bilifont
 	color var(--c-accent) !important
 
 .duration-tag
@@ -128,7 +152,7 @@
 	border-color var(--c-border) !important
 
 .van-popper-favorite .tab-item--active
-	background-color var(--c-accent) !important
+	background-color var(--c-hover) !important
 	color var(--c-white) !important
 
 .van-popper-favorite .tab-item--normal:hover
@@ -209,13 +233,17 @@
 	background-color var(--c-hover)
 
 /* 顶部搜索框 */
+.bili-header-m .nav-search .nav-search-keyword
+.bili-header-m .profile-m .grade .bar .num
+	background-color transparent !important
+
 .search-submit
 .nav-search-submit
 	background-color transparent !important
 	color var(--c-text) !important
 
 	&::after
-		content: none
+		content none
 
 .bili-header-m .bilibili-suggest
 .dynamic-m .wnd_bottom a

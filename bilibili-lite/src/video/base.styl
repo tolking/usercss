@@ -13,6 +13,7 @@
 .main-container .pay-bar .vip .btn-pay
 .bilibili-player-video-sendbar .bilibili-player-video-inputbar
 .members-info__header
+.bilibili-player .bilibili-player-area .bilibili-player-video-panel
 	background-color var(--c-background) !important
 
 .multi-page .cur-list .list-box li.on
@@ -23,13 +24,19 @@
 .ep-list-wrapper .ep-item.cursor
 .section-ep-wrapper .ep-item.cursor
 .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint
-	background-color var(--c-hover)
+.bilibili-player .bilibili-player-area .bilibili-player-video-wrap .bilibili-player-volumeHint
+	background-color var(--c-hover) !important
 
 .main-container .media-info .media-right .pub-wrapper .up-info-wrapper .split-line
-	background-color var(--c-border)
+.bui-switch .bui-body
+	background-color var(--c-border) !important
 
 .bui-slider .bui-track .bui-bar-wrap .bui-bar
-	background-color var(--c-accent)
+.bui-slider .bui-track .bui-thumb .bui-thumb-dot
+.bui-radio.bui-dark .bui-radio-button .bui-radio-input:checked+.bui-radio-label
+.bui-switch .bui-checkbox:checked+.bui-body
+.bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row .row-selection .selection-span.active[data-type='fontsize']
+	background-color var(--c-accent) !important
 
 .bilibili-player-video-wrap a
 .bilibili-player-video-wrap div
@@ -45,16 +52,26 @@
 .video-desc .btn span
 .ep-section-module .section-title
 .recommend-list .rec-title
+.up-info .btn-panel .following span
+.main-container .season-list .series-title
 	color var(--c-title) !important
 
 .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a span
 .main-container .review-module .review-list .review-item .review-content
 .main-container .review-module .review-list .review-item .pub-time
-ul.rate-star li i
-.video-toolbar .ops>span i
 .video-desc .info
 .video-toolbar .appeal-text
 .player-auxiliary-area .player-auxiliary-filter .player-auxiliary-setting-menu-wrap .player-auxiliary-setting-menu-list
+.player-auxiliary-area .player-auxiliary-danmaku .player-auxiliary-danmaku-function div
+.up-info .u-info .desc
+.mobile-more .video-title
+ul.rate-star li i
+.video-toolbar .ops>span i
+.main-container .tool-bar .coin-info i
+.main-container .tool-bar .share-info i
+.main-container .tool-bar .mobile-info i
+.up-info .u-info .name .message i
+.multi-page .head-con .range-box i
 	color var(--c-text) !important
 
 .coin-operated-m .coin-title span
@@ -63,13 +80,37 @@ ul.rate-star li i
 ul.rate-star li i.icon-star-full
 .video-info .video-data .argue i
 .video-info .video-data .copyright i
+.up-info .u-info .name .username.is-vip:hover
+.ep-list-wrapper .ep-item i
+.section-ep-wrapper .ep-item i
+.main-container .tool-bar .coin-info.active i
+.main-container .tool-bar .coin-info:hover i
+.main-container .tool-bar .share-info:hover>i
+.main-container .tool-bar .mobile-info:hover i
+.share-more .share-btn:hover i
+.video-toolbar .ops>span.on>i
+.video-toolbar .ops>span:hover>i
+.video-toolbar .ops .share .share-pos .box-a .share-down .share-btn:hover i
+.up-info .u-info .name .message:hover i
+.multi-page .head-con .range-box i:hover
 	color var(--c-accent) !important
 
 .bilibili-player
 	box-shadow none
 
+.bp-svgicon svg
+	fill var(--c-text)
+
+.bui-switch .bui-dot span svg
+	fill var(--c-border)
+
 .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active .bp-svgicon
 .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active:hover .bp-svgicon
+.bui-switch .bui-checkbox:checked+.bui-body .bui-dot span svg
+.bilibili-player-video-danmaku-setting:hover>span svg
+.bilibili-player-block-filter-image:hover .bp-svgicon svg
+.bilibili-player-iconfont:hover .bp-svgicon svg
+.selection-icon:hover .bp-svgicon svg
 	fill var(--c-accent)
 
 .bilibili-player-video-sendbar
@@ -77,12 +118,11 @@ ul.rate-star li i.icon-star-full
 .tag-del-popup
 .tag-report-popup
 .multi-page
-.multi-page .cur-list .module-box li
 .main-container .media-info .media-right .media-tool-bar .bangumi-options .opt-list
 .main-container .ep-list-wrapper
 .ep-section-module
-	border 1px solid var(--c-border)
-	background-color var(--c-background)
+	border 1px solid var(--c-border) !important
+	background-color var(--c-background) !important
 
 .collection-m .title
 .collection-m .content .group-list .add-group .add-btn
@@ -97,7 +137,7 @@ ul.rate-star li i.icon-star-full
 .open-dialog-masker .open-dialog-content .__dialog-header
 .video-toolbar .ops .share .share-pos .box-b
 .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-inputbar-wrap
-	border-color var(--c-border)
+	border-color var(--c-border) !important
 
 .video-toolbar .ops .share .share-pos
 .video-toolbar .ops .share .share-pos .share-address ul li input
@@ -105,9 +145,9 @@ ul.rate-star li i.icon-star-full
 .s_tag .ipt
 .main-container .media-info .media-right .media-desc i
 .main-container .pay-bar .vip .btn-pay.active
-	border-color var(--c-border)
+	border-color var(--c-border) !important
 	background-color var(--c-background) !important
-	color var(--c-text)
+	color var(--c-text) !important
 
 .coin-operated-m .mc-box
 	border 0
@@ -153,3 +193,13 @@ ul.rate-star li i.icon-star-full
 
 	&::after
 		content none !important
+
+.main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item.cursor
+	overflow visible !important
+
+ul.rate-star li i
+.video-toolbar .ops>span i
+.main-container .tool-bar .coin-info i
+.main-container .tool-bar .share-info i
+.main-container .tool-bar .mobile-info i
+	transition all 0.3s ease-in-out
