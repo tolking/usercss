@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.0.0
+@version        1.0.1
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/bilibili-lite
@@ -214,7 +214,8 @@
   .change-img-btn,
   .pagelist .flip-left .active,
   .active-main .back-top,
-  .topic-main .back-top {
+  .topic-main .back-top,
+  .bilibili-player-feedback-submit {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -273,7 +274,8 @@
   .change-img-btn span,
   .pagelist .flip-left .active span,
   .active-main .back-top span,
-  .topic-main .back-top span {
+  .topic-main .back-top span,
+  .bilibili-player-feedback-submit span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -327,7 +329,8 @@
   .change-img-btn::after,
   .pagelist .flip-left .active::after,
   .active-main .back-top::after,
-  .topic-main .back-top::after {
+  .topic-main .back-top::after,
+  .bilibili-player-feedback-submit::after {
     content: '';
     display: block;
     position: absolute;
@@ -390,7 +393,8 @@
   .change-img-btn:hover,
   .pagelist .flip-left .active:hover,
   .active-main .back-top:hover,
-  .topic-main .back-top:hover {
+  .topic-main .back-top:hover,
+  .bilibili-player-feedback-submit:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -444,7 +448,8 @@
   .change-img-btn:hover span,
   .pagelist .flip-left .active:hover span,
   .active-main .back-top:hover span,
-  .topic-main .back-top:hover span {
+  .topic-main .back-top:hover span,
+  .bilibili-player-feedback-submit:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -498,7 +503,8 @@
   .change-img-btn:hover::after,
   .pagelist .flip-left .active:hover::after,
   .active-main .back-top:hover::after,
-  .topic-main .back-top:hover::after {
+  .topic-main .back-top:hover::after,
+  .bilibili-player-feedback-submit:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -549,7 +555,8 @@
   .multi-page .cur-list .module-box li,
   .recharge-store-box ul.select-list .item,
   .pagelist .flip-left span,
-  .web-notice .more {
+  .web-notice .more,
+  .bilibili-player-feedback-submit.disable {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -603,7 +610,8 @@
   .multi-page .cur-list .module-box li span,
   .recharge-store-box ul.select-list .item span,
   .pagelist .flip-left span span,
-  .web-notice .more span {
+  .web-notice .more span,
+  .bilibili-player-feedback-submit.disable span {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -654,7 +662,8 @@
   .multi-page .cur-list .module-box li::after,
   .recharge-store-box ul.select-list .item::after,
   .pagelist .flip-left span::after,
-  .web-notice .more::after {
+  .web-notice .more::after,
+  .bilibili-player-feedback-submit.disable::after {
     content: none !important;
   }
   .default:hover,
@@ -705,7 +714,8 @@
   .multi-page .cur-list .module-box li:hover,
   .recharge-store-box ul.select-list .item:hover,
   .pagelist .flip-left span:hover,
-  .web-notice .more:hover {
+  .web-notice .more:hover,
+  .bilibili-player-feedback-submit.disable:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
   }
@@ -757,7 +767,8 @@
   .multi-page .cur-list .module-box li:hover span,
   .recharge-store-box ul.select-list .item:hover span,
   .pagelist .flip-left span:hover span,
-  .web-notice .more:hover span {
+  .web-notice .more:hover span,
+  .bilibili-player-feedback-submit.disable:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -1347,7 +1358,8 @@
   .video-container .text-area .view-danmaku span {
     color: var(--c-text) !important;
   }
-  .dynamic-link-hover-bg {
+  .dynamic-link-hover-bg,
+  .shop-desc .desc-box .price-desc {
     color: var(--c-accent) !important;
   }
   .article-container:hover .text-area {
@@ -1360,7 +1372,8 @@
   .feed-card .content .bottom {
     height: auto !important;
   }
-  .feed-card .card {
+  .feed-card .card,
+  .dynamic-link-hover-bg:hover {
     border: 0 !important;
     background-color: var(--c-background);
   }
@@ -1370,7 +1383,8 @@
   .card-content .repost,
   .card-content .not-support,
   .card-content .deleted,
-  .bg-white {
+  .bg-white,
+  .shop-panel .shop-list {
     border-color: var(--c-border) !important;
     background-color: var(--c-hover) !important;
   }
@@ -2122,7 +2136,8 @@
     background-color: var(--c-hover) !important;
   }
   .main-container .media-info .media-right .pub-wrapper .up-info-wrapper .split-line,
-  .bui-switch .bui-body {
+  .bui-switch .bui-body,
+  .bui-slider .bui-track.bui-track-video-progress .bui-bar-wrap .bui-bar-buffer {
     background-color: var(--c-border) !important;
   }
   .bui-slider .bui-track .bui-bar-wrap .bui-bar,
@@ -2147,7 +2162,8 @@
   .ep-section-module .section-title,
   .recommend-list .rec-title,
   .up-info .btn-panel .following span,
-  .main-container .season-list .series-title {
+  .main-container .season-list .series-title,
+  .bilibili-player-feedback-title .bilibili-player-feedback-title-content {
     color: var(--c-title) !important;
   }
   .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a span,
@@ -2189,14 +2205,21 @@
   .multi-page .head-con .range-box i:hover {
     color: var(--c-accent) !important;
   }
+  .bilibili-player-feedback,
+  .bilibili-player-feedback-title {
+    border-color: var(--c-border);
+  }
   .bilibili-player {
     box-shadow: none;
   }
-  .bp-svgicon svg {
+  .bilibili-player-video-danmaku-root .bp-svgicon svg {
     fill: var(--c-text);
   }
   .bui-switch .bui-dot span svg {
     fill: var(--c-border);
+  }
+  .bilibili-player-video-control .bp-svgicon svg {
+    fill: var(--c-white);
   }
   .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active .bp-svgicon,
   .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active:hover .bp-svgicon,
@@ -2204,8 +2227,11 @@
   .bilibili-player-video-danmaku-setting:hover>span svg,
   .bilibili-player-block-filter-image:hover .bp-svgicon svg,
   .bilibili-player-iconfont:hover .bp-svgicon svg,
-  .selection-icon:hover .bp-svgicon svg {
-    fill: var(--c-accent);
+  .selection-icon:hover .bp-svgicon svg,
+  .bilibili-player-video-danmaku-setting:hover .bp-svgicon svg,
+  .bilibili-player-video-danmaku-switch:hover .bp-svgicon svg,
+  .bilibili-player-video-btn-fullscreen:hover .bp-svgicon svg .st0 {
+    fill: var(--c-accent) !important;
   }
   .bilibili-player-video-sendbar,
   .tag-info-pane,
@@ -2280,15 +2306,15 @@
   }
   .video-desc .btn,
   .members-info__header .btn,
-  .bilibili-player-iconfont,
-  .bilibili-player-video-btn {
+  .bilibili-player-video-btn,
+  .bilibili-player button {
     background-color: transparent !important;
     color: var(--c-title) !important;
   }
   .video-desc .btn::after,
   .members-info__header .btn::after,
-  .bilibili-player-iconfont::after,
-  .bilibili-player-video-btn::after {
+  .bilibili-player-video-btn::after,
+  .bilibili-player button::after {
     content: none !important;
   }
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item.cursor {
@@ -2475,7 +2501,8 @@
   #page-index .col-2 .section.elec .elec-trigger-icon,
   #page-dynamic .col-2,
   #page-fav .fav-main .filter-item.search,
-  .be-tab-cursor:after {
+  .be-tab-cursor:after,
+  #page-index .col-2 .section .auth-detail {
     display: none;
   }
   #pin-wrapper .pin-layer-header .pin-layer-header-text,
@@ -2692,6 +2719,7 @@
   #page-index .col-2 .section.elec .elec-trigger,
   #page-index .col-2 .section.i-live .i-live-off-guest a,
   #page-index .col-2 .section.i-live .i-live-link {
+    position: relative;
     width: 60px;
     height: 60px;
     border: 1px solid var(--c-border);
@@ -3338,6 +3366,7 @@
   .count-choice .send-btn-animation,
   .chat-history-panel .chat-history-list .chat-item.danmaku-item .title-label,
   .bottom-actions .left-action,
+  .dialog-ctnr .arrow,
   .user-level-detail:after,
   .user-level-detail:before,
   .chat-history-panel .chat-history-list .chat-item.danmaku-item.guard-level-1::before,
