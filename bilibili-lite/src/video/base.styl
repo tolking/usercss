@@ -25,10 +25,12 @@
 .section-ep-wrapper .ep-item.cursor
 .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint
 .bilibili-player .bilibili-player-area .bilibili-player-video-wrap .bilibili-player-volumeHint
+#bofqi.mini-player .drag-bar
 	background-color var(--c-hover) !important
 
 .main-container .media-info .media-right .pub-wrapper .up-info-wrapper .split-line
 .bui-switch .bui-body
+.bui-slider .bui-track.bui-track-video-progress .bui-bar-wrap .bui-bar-buffer
 	background-color var(--c-border) !important
 
 .bui-slider .bui-track .bui-bar-wrap .bui-bar
@@ -54,6 +56,7 @@
 .recommend-list .rec-title
 .up-info .btn-panel .following span
 .main-container .season-list .series-title
+.bilibili-player-feedback-title .bilibili-player-feedback-title-content
 	color var(--c-title) !important
 
 .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a span
@@ -95,14 +98,25 @@ ul.rate-star li i.icon-star-full
 .multi-page .head-con .range-box i:hover
 	color var(--c-accent) !important
 
+.bilibili-player-feedback
+.bilibili-player-feedback-title
+	border-color var(--c-border)
+
+#bofqi.mini-player .drag-bar
+#bofqi.mini-player:before
+	box-shadow: 0 0 5px var(--c-border)
+
 .bilibili-player
 	box-shadow none
 
-.bp-svgicon svg
+.bilibili-player-video-danmaku-root .bp-svgicon svg
 	fill var(--c-text)
 
 .bui-switch .bui-dot span svg
 	fill var(--c-border)
+
+.bilibili-player-video-control .bp-svgicon svg
+	fill var(--c-white)
 
 .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active .bp-svgicon
 .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active:hover .bp-svgicon
@@ -111,7 +125,10 @@ ul.rate-star li i.icon-star-full
 .bilibili-player-block-filter-image:hover .bp-svgicon svg
 .bilibili-player-iconfont:hover .bp-svgicon svg
 .selection-icon:hover .bp-svgicon svg
-	fill var(--c-accent)
+.bilibili-player-video-danmaku-setting:hover .bp-svgicon svg
+.bilibili-player-video-danmaku-switch:hover .bp-svgicon svg
+.bilibili-player-video-btn-fullscreen:hover .bp-svgicon svg .st0
+	fill var(--c-accent) !important
 
 .bilibili-player-video-sendbar
 .tag-info-pane
@@ -186,8 +203,8 @@ ul.rate-star li i.icon-star-full
 
 .video-desc .btn
 .members-info__header .btn
-.bilibili-player-iconfont
 .bilibili-player-video-btn
+.bilibili-player button
 	background-color transparent !important
 	color var(--c-title) !important
 
