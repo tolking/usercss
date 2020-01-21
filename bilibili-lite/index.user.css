@@ -2132,7 +2132,8 @@
   .ep-list-wrapper .ep-item.cursor,
   .section-ep-wrapper .ep-item.cursor,
   .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint,
-  .bilibili-player .bilibili-player-area .bilibili-player-video-wrap .bilibili-player-volumeHint {
+  .bilibili-player .bilibili-player-area .bilibili-player-video-wrap .bilibili-player-volumeHint,
+  #bofqi.mini-player .drag-bar {
     background-color: var(--c-hover) !important;
   }
   .main-container .media-info .media-right .pub-wrapper .up-info-wrapper .split-line,
@@ -2208,6 +2209,10 @@
   .bilibili-player-feedback,
   .bilibili-player-feedback-title {
     border-color: var(--c-border);
+  }
+  #bofqi.mini-player .drag-bar,
+  #bofqi.mini-player:before {
+    box-shadow: 0 0 5px var(--c-border);
   }
   .bilibili-player {
     box-shadow: none;
