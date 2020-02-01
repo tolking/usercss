@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.0.1
+@version        1.0.2
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/bilibili-lite
@@ -1352,7 +1352,13 @@
   .feed-card .content .bottom img {
     display: none !important;
   }
-  .video-container .text-area .title {
+  .feed-tag .publish-panel-container,
+  .feed-tag .publish-panel,
+  .feed-tag .card {
+    background-color: var(--c-background) !important;
+  }
+  .video-container .text-area .title,
+  .feed-tag .separater-line {
     color: var(--c-title) !important;
   }
   .video-container .text-area .view-danmaku span {
@@ -1399,7 +1405,8 @@
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
   }
-  .card .more-panel .child-button:hover {
+  .card .more-panel .child-button:hover,
+  .feed-title {
     background-color: var(--c-hover) !important;
     color: var(--c-title) !important;
   }
@@ -2133,7 +2140,8 @@
   .section-ep-wrapper .ep-item.cursor,
   .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint,
   .bilibili-player .bilibili-player-area .bilibili-player-video-wrap .bilibili-player-volumeHint,
-  #bofqi.mini-player .drag-bar {
+  #bofqi.mini-player .drag-bar,
+  .video-page-card .card-box .pic-box {
     background-color: var(--c-hover) !important;
   }
   .main-container .media-info .media-right .pub-wrapper .up-info-wrapper .split-line,
