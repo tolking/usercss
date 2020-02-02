@@ -1529,6 +1529,9 @@
   .van-popper-channel .popper__arrow {
     display: none !important;
   }
+  .van-popover .sub-item a:hover {
+    background-color: var(--c-hover);
+  }
   .video-card-common .ex-up,
   .video-card-common .up,
   .article-card .r-con .up,
@@ -1737,7 +1740,8 @@
     border-color: var(--c-border);
   }
   .elevator .bg23 {
-    background-color: none;
+    backdrop-filter: blur(5px);
+    background-color: var(--c-hover);
   }
   .international-footer {
     border-top: 1px solid var(--c-border);
@@ -4125,17 +4129,23 @@
   .recommendation-section .manga-list {
     width: 100% !important;
   }
-  .read-nav .episode {
+  .episode-comment {
+    background-color: var(--c-background) !important;
+  }
+  .read-nav .episode,
+  .episode-comment .header-section div {
     color: var(--c-title) !important;
   }
   .action-bar-container .app-button,
   .hover-toast .app-button,
-  .floating-button {
+  .floating-button,
+  .episode-comment .header-section .close-button {
     background-color: transparent !important;
   }
   .action-bar-container .app-button::after,
   .hover-toast .app-button::after,
-  .floating-button::after {
+  .floating-button::after,
+  .episode-comment .header-section .close-button::after {
     content: none !important;
   }
   .info-layer .floating-button {
