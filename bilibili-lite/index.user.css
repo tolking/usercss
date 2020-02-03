@@ -83,6 +83,7 @@
   }
   hr {
     border-color: var(--c-border) !important;
+    background-color: var(--c-border) !important;
   }
   table tr {
     border-color: var(--c-border) !important;
@@ -215,7 +216,11 @@
   .pagelist .flip-left .active,
   .active-main .back-top,
   .topic-main .back-top,
-  .bilibili-player-feedback-submit {
+  .bilibili-player-feedback-submit,
+  .sidebar-canvas,
+  .cntr .check-all,
+  .album-popup-ensure,
+  .info-line .attend {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -275,7 +280,11 @@
   .pagelist .flip-left .active span,
   .active-main .back-top span,
   .topic-main .back-top span,
-  .bilibili-player-feedback-submit span {
+  .bilibili-player-feedback-submit span,
+  .sidebar-canvas span,
+  .cntr .check-all span,
+  .album-popup-ensure span,
+  .info-line .attend span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -330,7 +339,11 @@
   .pagelist .flip-left .active::after,
   .active-main .back-top::after,
   .topic-main .back-top::after,
-  .bilibili-player-feedback-submit::after {
+  .bilibili-player-feedback-submit::after,
+  .sidebar-canvas::after,
+  .cntr .check-all::after,
+  .album-popup-ensure::after,
+  .info-line .attend::after {
     content: '';
     display: block;
     position: absolute;
@@ -394,7 +407,11 @@
   .pagelist .flip-left .active:hover,
   .active-main .back-top:hover,
   .topic-main .back-top:hover,
-  .bilibili-player-feedback-submit:hover {
+  .bilibili-player-feedback-submit:hover,
+  .sidebar-canvas:hover,
+  .cntr .check-all:hover,
+  .album-popup-ensure:hover,
+  .info-line .attend:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -449,7 +466,11 @@
   .pagelist .flip-left .active:hover span,
   .active-main .back-top:hover span,
   .topic-main .back-top:hover span,
-  .bilibili-player-feedback-submit:hover span {
+  .bilibili-player-feedback-submit:hover span,
+  .sidebar-canvas:hover span,
+  .cntr .check-all:hover span,
+  .album-popup-ensure:hover span,
+  .info-line .attend:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -504,7 +525,11 @@
   .pagelist .flip-left .active:hover::after,
   .active-main .back-top:hover::after,
   .topic-main .back-top:hover::after,
-  .bilibili-player-feedback-submit:hover::after {
+  .bilibili-player-feedback-submit:hover::after,
+  .sidebar-canvas:hover::after,
+  .cntr .check-all:hover::after,
+  .album-popup-ensure:hover::after,
+  .info-line .attend:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -556,7 +581,9 @@
   .recharge-store-box ul.select-list .item,
   .pagelist .flip-left span,
   .web-notice .more,
-  .bilibili-player-feedback-submit.disable {
+  .bilibili-player-feedback-submit.disable,
+  .album-popup-cancel,
+  .author-info .favourite-btn-ctnr .communicate-btn {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -611,7 +638,9 @@
   .recharge-store-box ul.select-list .item span,
   .pagelist .flip-left span span,
   .web-notice .more span,
-  .bilibili-player-feedback-submit.disable span {
+  .bilibili-player-feedback-submit.disable span,
+  .album-popup-cancel span,
+  .author-info .favourite-btn-ctnr .communicate-btn span {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -663,7 +692,9 @@
   .recharge-store-box ul.select-list .item::after,
   .pagelist .flip-left span::after,
   .web-notice .more::after,
-  .bilibili-player-feedback-submit.disable::after {
+  .bilibili-player-feedback-submit.disable::after,
+  .album-popup-cancel::after,
+  .author-info .favourite-btn-ctnr .communicate-btn::after {
     content: none !important;
   }
   .default:hover,
@@ -715,7 +746,9 @@
   .recharge-store-box ul.select-list .item:hover,
   .pagelist .flip-left span:hover,
   .web-notice .more:hover,
-  .bilibili-player-feedback-submit.disable:hover {
+  .bilibili-player-feedback-submit.disable:hover,
+  .album-popup-cancel:hover,
+  .author-info .favourite-btn-ctnr .communicate-btn:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
   }
@@ -768,7 +801,9 @@
   .recharge-store-box ul.select-list .item:hover span,
   .pagelist .flip-left span:hover span,
   .web-notice .more:hover span,
-  .bilibili-player-feedback-submit.disable:hover span {
+  .bilibili-player-feedback-submit.disable:hover span,
+  .album-popup-cancel:hover span,
+  .author-info .favourite-btn-ctnr .communicate-btn:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -852,6 +887,7 @@
   .gg-icon,
   .tag-list li.tag-item,
   .tag-area .tag,
+  .link-tag,
   .tag-area .btn-add,
   .timeline-box .timeline-item .item-right p.num a,
   .timeline-box .timeline-item .item-right p.num span,
@@ -865,7 +901,8 @@
     color: var(--c-text) !important;
   }
   .tag-list li.tag-item:hover,
-  .tag-area .tag:hover {
+  .tag-area .tag:hover,
+  .link-tag:hover {
     background-color: var(--c-hover) !important;
   }
   .primary-menu .nav-menu .channel.on:after,
@@ -881,7 +918,8 @@
     color: var(--c-accent) !important;
   }
   .tag-list li.tag-item:hover,
-  .tag-area .tag:hover {
+  .tag-area .tag:hover,
+  .link-tag:hover {
     border-color: var(--c-accent) !important;
   }
   input,
@@ -2075,6 +2113,9 @@
   #webShare .bili-share-pc,
   .bili-share-pc .weixin-hover .qr-before {
     background-color: var(--c-background) !important;
+  }
+  .activity-playlist .activity-playlist-item {
+    background-color: transparent !important;
   }
   .active-title .b-active-t,
   .pagelist .flip-left .ellipsis {
@@ -4249,5 +4290,217 @@
   .fjw-entry .entrance::before {
     content: '加入风纪委员会';
     display: block;
+  }
+}
+@-moz-document url-prefix("https://h.bilibili.com/") {
+  .link-navbar .nav-item,
+  .shortcuts-ctnr .shortcuts-ctnr-ul .shortcut-item:last-child {
+    display: none !important;
+  }
+  .link-navbar,
+  .publish-panel,
+  .user-panel-ctnr .user-panel,
+  .load-error-panel,
+  .link-progress-tv,
+  .news-notice-panel {
+    background-color: var(--c-background) !important;
+  }
+  .search-bar-ctnr .search-bar,
+  .publish-panel .publish-list .publish-item:hover,
+  .user-panel-ctnr .user-panel .content-ctnr .exit-btn:hover,
+  .news-notice-panel .news-notice .news-list .news-item:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .news-notice-panel .news-notice .news-list .news-item .type {
+    background-color: var(--c-accent) !important;
+  }
+  .link-navbar .nav-item:hover .nav-link .label,
+  .search-bar-ctnr .search-bar input,
+  .news-notice-panel .news-notice .news-list .news-item {
+    background-color: transparent !important;
+  }
+  .shortcuts-ctnr .shortcuts-ctnr-ul .shortcut-item .label-wrapper .label .text,
+  .news-notice-panel .news-notice .more .icon-font {
+    color: var(--c-title) !important;
+  }
+  .shortcuts-ctnr {
+    margin: 0 !important;
+  }
+  .search-bar-ctnr .search-bar .search-btn {
+    vertical-align: initial;
+  }
+  .link-navbar .nav-item:first-child {
+    display: block !important;
+  }
+  .link-navbar .nav-item:first-child::before {
+    top: 13px !important;
+    left: 13px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .link-navbar.black {
+    background-color: var(--c-bg-header) !important;
+    backdrop-filter: blur(5px);
+  }
+  .link-navbar .nav-item .nav-link .label {
+    margin: 0 !important;
+    font-size: 0 !important;
+  }
+  .user-panel-ctnr .user-panel .content-ctnr .exit-btn,
+  .news-notice-panel .news-notice .more {
+    border-top: 1px solid var(--c-border);
+    background-color: transparent !important;
+  }
+  .publish-btn {
+    height: auto !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    font-size: 14px !important;
+    color: var(--c-title) !important;
+  }
+  .publish-btn:hover:after {
+    height: 100% !important;
+    background-color: var(--c-hover) !important;
+  }
+  .link-footer {
+    display: none !important;
+  }
+  .app-ctnr,
+  .drawer-card,
+  .canvas-card,
+  .loading-tv,
+  .empty-hint,
+  .detail {
+    background-color: var(--c-background) !important;
+  }
+  .category {
+    background-color: var(--c-hover) !important;
+  }
+  ul.navigation li:after {
+    background-color: var(--c-accent) !important;
+  }
+  ul.navigation li span {
+    color: var(--c-title) !important;
+  }
+  ul.navigation li.activated span,
+  .category li a.activated {
+    color: var(--c-accent) !important;
+  }
+  .category {
+    box-shadow: none !important;
+  }
+  .canvas-card dd .icon-contain .support {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-background) !important;
+  }
+  .canvas-card dd .icon-contain .support::after {
+    border-top: 5px solid var(--c-background) !important;
+  }
+  .link-navbar.white {
+    border-bottom: 1px solid var(--c-border);
+  }
+  .cntr .check-all-ctn,
+  .content li:nth-child(n+41):after {
+    background-image: linear-gradient(180deg, transparent, var(--c-background)) !important;
+  }
+  .search-bar-ctnr .search-bar .search-btn,
+  .banner .btn-wrapper .btn,
+  button.more {
+    background-color: transparent !important;
+  }
+  .search-bar-ctnr .search-bar .search-btn::after,
+  .banner .btn-wrapper .btn::after,
+  button.more::after {
+    content: none !important;
+  }
+  .banner .btn-wrapper .btn {
+    border-color: var(--c-hover) !important;
+    background-color: var(--c-bg-header) !important;
+    backdrop-filter: blur(5px);
+  }
+  .sidebar-canvas {
+    position: fixed !important;
+  }
+  .cntr .check-all {
+    box-shadow: none !important;
+    background-image: none !important;
+  }
+  .cntr .check-all:hover {
+    opacity: 1 !important;
+  }
+  #canvas-detail-comment-ctnr,
+  .album-popup,
+  .drawer-pop {
+    background-color: var(--c-background) !important;
+  }
+  .live-status.offline,
+  .works-ctnr .header-ctnr .works-count {
+    background-color: var(--c-hover) !important;
+  }
+  .author-info .supporting-info .divider {
+    background-color: var(--c-border) !important;
+  }
+  button.more span,
+  button.more .icon-font,
+  .dashboard li .text {
+    color: var(--c-text) !important;
+  }
+  .dashboard li.like,
+  button.more {
+    border-color: var(--c-border) !important;
+  }
+  .album-popup .album-pop-bottom ul li.normal {
+    vertical-align: middle !important;
+  }
+  .drawer-pop:after {
+    border-top: 14px solid var(--c-background) !important;
+  }
+  .draw-list[data-v-6caf7b4c] {
+    border: 0 !important;
+    background-color: var(--c-background) !important;
+  }
+  .article-content-ctnr,
+  .comment-ctnr {
+    border: 0 !important;
+    background-color: var(--c-background) !important;
+  }
+  .author-info,
+  .dashboard,
+  .works-ctnr {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-background) !important;
+  }
+  .ssr-content .main-ctnr {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .main-ctnr .main-section {
+    order: 2 !important;
+    margin: auto !important;
+  }
+  .aside-section {
+    order: 1 !important;
+    position: inherit !important;
+    margin: auto !important;
+    width: 864px !important;
+  }
+  .aside-section .aside-ctnr.attach-aside {
+    position: inherit !important;
+    display: flex !important;
+    flex-flow: column wrap !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    max-height: 350px !important;
+  }
+  .aside-section .aside-ctnr.attach-aside .works-ctnr {
+    margin-top: 72px !important;
+    width: auto !important;
+  }
+  .aside-section .aside-ctnr.attach-aside .works-ctnr .slot-ctnr {
+    display: flex;
+  }
+  .aside-section .aside-ctnr.attach-aside .works-ctnr .slot-ctnr a .item-canvas {
+    margin-right: 17px;
   }
 }
