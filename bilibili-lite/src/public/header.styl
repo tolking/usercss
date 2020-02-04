@@ -1,7 +1,7 @@
 /* 顶部导航 */
 .bili-header-m .profile-m .grade .desc-tips .arrow-left
 .dynamic-m .dyn_menu .line:before
-	display: none !important
+	display none !important
 
 .channel-menu-mini
 	background-color var(--c-background)
@@ -46,7 +46,24 @@
 	&::after
 		content none
 
-/* 个人弹窗 */
+/* 弹窗边框 */
+.van-popper-avatar
+.van-popper-favorite
+.van-popper-history
+.van-popper-upload
+.mini-header .nav-user-center .nav-item iframe
+.bili-header-m .profile-m
+.bili-header-m .mini-wnd-nav
+.bili-header-m .nav-menu .nav-con .nav-item .i-frame
+.user-panel-ctnr .user-panel
+.news-notice-panel
+.publish-panel
+	border 1px solid var(--c-border) !important
+	border-top-width 0 !important
+
+.mini-header .nav-user-center .item:nth-child(3) .nav-item .i-frame
+	height 206px
+
 .van-popper-avatar .level-bar
 .bili-header-m .profile-m .grade .bar
 	background-color var(--c-border) !important
@@ -72,7 +89,7 @@
 	color var(--c-accent) !important
 
 .out-container .tab-bar .active:hover
-	color: var(--c-white) !important
+	color var(--c-white) !important
 
 .van-popper-avatar .coins
 .van-popper-avatar .counts
@@ -109,6 +126,7 @@
 
 /* 动态弹窗 */
 .out-container
+	box-shadow none !important
 	background-color var(--c-background) !important
 
 .tab-bar
@@ -273,13 +291,6 @@
 .bilibili-search-suggest .suggest-item .suggest_high_light
 	background-color transparent !important
 	color var(--c-accent) !important
-
-/* 顶部导航弹窗 */
-.bili-header-m .profile-m
-.bili-header-m .mini-wnd-nav
-.bili-header-m .nav-menu .nav-con .nav-item .i-frame
-	border 1px solid var(--c-border)
-	background-color var(--c-background)
 
 .bili-header-m .profile-m .header-uname .vip-type span
 	background-color var(--c-accent)

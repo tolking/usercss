@@ -220,7 +220,9 @@
   .sidebar-canvas,
   .cntr .check-all,
   .album-popup-ensure,
-  .info-line .attend {
+  .info-line .attend,
+  .link-panigation .panigation.selected,
+  .submit-btn {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -284,7 +286,9 @@
   .sidebar-canvas span,
   .cntr .check-all span,
   .album-popup-ensure span,
-  .info-line .attend span {
+  .info-line .attend span,
+  .link-panigation .panigation.selected span,
+  .submit-btn span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -343,7 +347,9 @@
   .sidebar-canvas::after,
   .cntr .check-all::after,
   .album-popup-ensure::after,
-  .info-line .attend::after {
+  .info-line .attend::after,
+  .link-panigation .panigation.selected::after,
+  .submit-btn::after {
     content: '';
     display: block;
     position: absolute;
@@ -411,7 +417,9 @@
   .sidebar-canvas:hover,
   .cntr .check-all:hover,
   .album-popup-ensure:hover,
-  .info-line .attend:hover {
+  .info-line .attend:hover,
+  .link-panigation .panigation.selected:hover,
+  .submit-btn:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -470,7 +478,9 @@
   .sidebar-canvas:hover span,
   .cntr .check-all:hover span,
   .album-popup-ensure:hover span,
-  .info-line .attend:hover span {
+  .info-line .attend:hover span,
+  .link-panigation .panigation.selected:hover span,
+  .submit-btn:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -529,7 +539,9 @@
   .sidebar-canvas:hover::after,
   .cntr .check-all:hover::after,
   .album-popup-ensure:hover::after,
-  .info-line .attend:hover::after {
+  .info-line .attend:hover::after,
+  .link-panigation .panigation.selected:hover::after,
+  .submit-btn:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -583,7 +595,9 @@
   .web-notice .more,
   .bilibili-player-feedback-submit.disable,
   .album-popup-cancel,
-  .author-info .favourite-btn-ctnr .communicate-btn {
+  .author-info .favourite-btn-ctnr .communicate-btn,
+  .link-panigation .panigation,
+  .submit-btn.disabled {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -640,7 +654,9 @@
   .web-notice .more span,
   .bilibili-player-feedback-submit.disable span,
   .album-popup-cancel span,
-  .author-info .favourite-btn-ctnr .communicate-btn span {
+  .author-info .favourite-btn-ctnr .communicate-btn span,
+  .link-panigation .panigation span,
+  .submit-btn.disabled span {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -694,7 +710,9 @@
   .web-notice .more::after,
   .bilibili-player-feedback-submit.disable::after,
   .album-popup-cancel::after,
-  .author-info .favourite-btn-ctnr .communicate-btn::after {
+  .author-info .favourite-btn-ctnr .communicate-btn::after,
+  .link-panigation .panigation::after,
+  .submit-btn.disabled::after {
     content: none !important;
   }
   .default:hover,
@@ -748,7 +766,9 @@
   .web-notice .more:hover,
   .bilibili-player-feedback-submit.disable:hover,
   .album-popup-cancel:hover,
-  .author-info .favourite-btn-ctnr .communicate-btn:hover {
+  .author-info .favourite-btn-ctnr .communicate-btn:hover,
+  .link-panigation .panigation:hover,
+  .submit-btn.disabled:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
   }
@@ -803,7 +823,9 @@
   .web-notice .more:hover span,
   .bilibili-player-feedback-submit.disable:hover span,
   .album-popup-cancel:hover span,
-  .author-info .favourite-btn-ctnr .communicate-btn:hover span {
+  .author-info .favourite-btn-ctnr .communicate-btn:hover span,
+  .link-panigation .panigation:hover span,
+  .submit-btn.disabled:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -885,6 +907,7 @@
     color: var(--c-white) !important;
   }
   .gg-icon,
+  .tag,
   .tag-list li.tag-item,
   .tag-area .tag,
   .link-tag,
@@ -900,6 +923,7 @@
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
   }
+  .tag:hover,
   .tag-list li.tag-item:hover,
   .tag-area .tag:hover,
   .link-tag:hover {
@@ -917,6 +941,7 @@
   .tag-list li.tag-item.on:hover .tag-a {
     color: var(--c-accent) !important;
   }
+  .tag:hover,
   .tag-list li.tag-item:hover,
   .tag-area .tag:hover,
   .link-tag:hover {
@@ -945,7 +970,12 @@
   .tool-bar .mobile-more,
   .user-level-detail,
   .select-option,
-  .popup-bg-cntr .popup-cntr {
+  .popup-bg-cntr .popup-cntr,
+  .bili-header-m .profile-m,
+  .bili-header-m .mini-wnd-nav,
+  .bili-header-m .nav-menu .nav-con .nav-item .i-frame,
+  .popup-bind-tip,
+  .set-copyright .copyright-select-box {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -1017,6 +1047,23 @@
   .mini-header input::after {
     content: none;
   }
+  .van-popper-avatar,
+  .van-popper-favorite,
+  .van-popper-history,
+  .van-popper-upload,
+  .mini-header .nav-user-center .nav-item iframe,
+  .bili-header-m .profile-m,
+  .bili-header-m .mini-wnd-nav,
+  .bili-header-m .nav-menu .nav-con .nav-item .i-frame,
+  .user-panel-ctnr .user-panel,
+  .news-notice-panel,
+  .publish-panel {
+    border: 1px solid var(--c-border) !important;
+    border-top-width: 0 !important;
+  }
+  .mini-header .nav-user-center .item:nth-child(3) .nav-item .i-frame {
+    height: 206px;
+  }
   .van-popper-avatar .level-bar,
   .bili-header-m .profile-m .grade .bar {
     background-color: var(--c-border) !important;
@@ -1077,6 +1124,7 @@
     color: var(--c-title) !important;
   }
   .out-container {
+    box-shadow: none !important;
     background-color: var(--c-background) !important;
   }
   .tab-bar {
@@ -1237,12 +1285,6 @@
   .bilibili-search-suggest .suggest-item .suggest_high_light {
     background-color: transparent !important;
     color: var(--c-accent) !important;
-  }
-  .bili-header-m .profile-m,
-  .bili-header-m .mini-wnd-nav,
-  .bili-header-m .nav-menu .nav-con .nav-item .i-frame {
-    border: 1px solid var(--c-border);
-    background-color: var(--c-background);
   }
   .bili-header-m .profile-m .header-uname .vip-type span {
     background-color: var(--c-accent);
@@ -4369,12 +4411,15 @@
   .app-ctnr,
   .drawer-card,
   .canvas-card,
+  .activity-card,
   .loading-tv,
   .empty-hint,
-  .detail {
+  .detail,
+  .page-error {
     background-color: var(--c-background) !important;
   }
-  .category {
+  .category,
+  .canvas-card dt .img-contain {
     background-color: var(--c-hover) !important;
   }
   ul.navigation li:after {
@@ -4384,10 +4429,14 @@
     color: var(--c-title) !important;
   }
   ul.navigation li.activated span,
-  .category li a.activated {
+  .category li a.activated,
+  .cntr .sort-cntr .href-all:hover i,
+  .arrow-left:hover .icon-font,
+  .arrow-right:hover .icon-font {
     color: var(--c-accent) !important;
   }
-  .category {
+  .category,
+  .activity-card {
     box-shadow: none !important;
   }
   .canvas-card dd .icon-contain .support {
@@ -4421,6 +4470,13 @@
   }
   .sidebar-canvas {
     position: fixed !important;
+  }
+  .link-panigation .panigation {
+    padding: 0 10px !important;
+    min-width: 15px !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    vertical-align: top;
   }
   .cntr .check-all {
     box-shadow: none !important;
@@ -4502,5 +4558,73 @@
   }
   .aside-section .aside-ctnr.attach-aside .works-ctnr .slot-ctnr a .item-canvas {
     margin-right: 17px;
+  }
+  .category-wrapper .upload-content,
+  .set-copyright .copyright-icon .icon-none-copyright {
+    background-color: var(--c-background) !important;
+  }
+  .upload-image,
+  .checkbox .radio-btn,
+  .marquee,
+  .agree-rule .checkbox {
+    background-color: var(--c-hover) !important;
+  }
+  .checkbox.checked .radio-btn {
+    background-color: var(--c-border) !important;
+  }
+  .add-tag .default:hover {
+    background-color: transparent !important;
+  }
+  .category-wrapper .dot,
+  .checkbox.checked .radio-btn::before,
+  .add-tag .default .btn-show,
+  .tag .delete,
+  .popup-bind-tip .title,
+  .agree-rule .checkbox.checked {
+    background-color: var(--c-accent) !important;
+  }
+  .category-wrapper .tweet-title {
+    color: var(--c-title) !important;
+  }
+  .tag .delete,
+  .popup-bind-tip .close {
+    color: var(--c-white) !important;
+  }
+  .add-tag .default:hover .placeholder {
+    color: var(--c-accent) !important;
+  }
+  .upload-image,
+  .upload-image .upload-btn,
+  .checkbox .radio-btn,
+  .agree-rule .checkbox,
+  .marquee {
+    border-color: var(--c-border) !important;
+  }
+  .checkbox.checked .radio-btn,
+  .add-tag .default {
+    border: 0 !important;
+  }
+  .add-tag .tag-list .tag {
+    border: 1px solid var(--c-border);
+  }
+  .submit-btn.pointer {
+    border: 1px solid var(--c-accent);
+  }
+  .submit-btn {
+    box-shadow: none !important;
+  }
+  .add-tag .default .btn-show,
+  .submit-btn {
+    background-image: none !important;
+  }
+  .category-wrapper .upload-content .title {
+    font-size: 16px !important;
+  }
+  .category-wrapper hr {
+    border-bottom: 1 !important;
+  }
+  .set-copyright .copyright-select-box::before {
+    border-color: var(--c-border) transparent transparent var(--c-border) !important;
+    background-color: var(--c-background) !important;
   }
 }
