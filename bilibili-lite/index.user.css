@@ -546,6 +546,10 @@
   }
   .default,
   .more-btn,
+  .prev,
+  .next,
+  .btn-pre,
+  .btn-next,
   .van-popper-history .view-all,
   .van-popper-favorite .play-all,
   .bili-header-m .mini-wnd-nav .read-more,
@@ -561,8 +565,6 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active,
   .bangumi-pagelistbox .p,
   .be-pager .be-pager-item,
-  .be-pager .be-pager-next,
-  .be-pager .be-pager-prev,
   .more-btn-cntr,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item,
@@ -605,6 +607,10 @@
   }
   .default span,
   .more-btn span,
+  .prev span,
+  .next span,
+  .btn-pre span,
+  .btn-next span,
   .van-popper-history .view-all span,
   .van-popper-favorite .play-all span,
   .bili-header-m .mini-wnd-nav .read-more span,
@@ -620,8 +626,6 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active span,
   .bangumi-pagelistbox .p span,
   .be-pager .be-pager-item span,
-  .be-pager .be-pager-next span,
-  .be-pager .be-pager-prev span,
   .more-btn-cntr span,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item span,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item span,
@@ -661,6 +665,10 @@
   }
   .default::after,
   .more-btn::after,
+  .prev::after,
+  .next::after,
+  .btn-pre::after,
+  .btn-next::after,
   .van-popper-history .view-all::after,
   .van-popper-favorite .play-all::after,
   .bili-header-m .mini-wnd-nav .read-more::after,
@@ -676,8 +684,6 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active::after,
   .bangumi-pagelistbox .p::after,
   .be-pager .be-pager-item::after,
-  .be-pager .be-pager-next::after,
-  .be-pager .be-pager-prev::after,
   .more-btn-cntr::after,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item::after,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item::after,
@@ -717,6 +723,10 @@
   }
   .default:hover,
   .more-btn:hover,
+  .prev:hover,
+  .next:hover,
+  .btn-pre:hover,
+  .btn-next:hover,
   .van-popper-history .view-all:hover,
   .van-popper-favorite .play-all:hover,
   .bili-header-m .mini-wnd-nav .read-more:hover,
@@ -732,8 +742,6 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active:hover,
   .bangumi-pagelistbox .p:hover,
   .be-pager .be-pager-item:hover,
-  .be-pager .be-pager-next:hover,
-  .be-pager .be-pager-prev:hover,
   .more-btn-cntr:hover,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item:hover,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item:hover,
@@ -774,6 +782,10 @@
   }
   .default:hover span,
   .more-btn:hover span,
+  .prev:hover span,
+  .next:hover span,
+  .btn-pre:hover span,
+  .btn-next:hover span,
   .van-popper-history .view-all:hover span,
   .van-popper-favorite .play-all:hover span,
   .bili-header-m .mini-wnd-nav .read-more:hover span,
@@ -789,8 +801,6 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active:hover span,
   .bangumi-pagelistbox .p:hover span,
   .be-pager .be-pager-item:hover span,
-  .be-pager .be-pager-next:hover span,
-  .be-pager .be-pager-prev:hover span,
   .more-btn-cntr:hover span,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item:hover span,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item:hover span,
@@ -830,11 +840,13 @@
   }
   .paging-box-big .dian,
   .paging-box-big .dian:hover,
-  .pagelist .flip-left .ellipsis {
+  .pagelist .flip-left .ellipsis,
+  .paging-box .next,
+  .paging-box .prev {
     border-color: transparent !important;
     background-color: transparent !important;
   }
-  .vip,
+  .vp-container .vip,
   span.big-vip-red,
   em:not(.icon),
   .m-header .num,
@@ -871,7 +883,7 @@
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
   }
-  .vip:hover,
+  .vp-container .vip:hover,
   span.big-vip-red:hover,
   em:not(.icon):hover,
   .m-header .num:hover,
@@ -1060,6 +1072,9 @@
   .publish-panel {
     border: 1px solid var(--c-border) !important;
     border-top-width: 0 !important;
+  }
+  .lang-change .lang-intro {
+    border: 1px solid var(--c-border) !important;
   }
   .mini-header .nav-user-center .item:nth-child(3) .nav-item .i-frame {
     height: 206px;
@@ -2298,7 +2313,8 @@
   .video-toolbar .ops>span:hover>i,
   .video-toolbar .ops .share .share-pos .box-a .share-down .share-btn:hover i,
   .up-info .u-info .name .message:hover i,
-  .multi-page .head-con .range-box i:hover {
+  .multi-page .head-con .range-box i:hover,
+  .up-info>a .up-name.vip {
     color: var(--c-accent) !important;
   }
   .bilibili-player-feedback,
@@ -4194,7 +4210,8 @@
   .tab-item,
   .newbie-awarder .close-button,
   .user-panel .drop-list .logout-btn-container .logout-button,
-  .drop-list .more-btn-container .more-button {
+  .drop-list .more-btn-container .more-button,
+  .index-banner .control-button .app-button {
     background-color: transparent !important;
   }
   .manga-navbar-history-list .action-button::after,
@@ -4206,7 +4223,8 @@
   .tab-item::after,
   .newbie-awarder .close-button::after,
   .user-panel .drop-list .logout-btn-container .logout-button::after,
-  .drop-list .more-btn-container .more-button::after {
+  .drop-list .more-btn-container .more-button::after,
+  .index-banner .control-button .app-button::after {
     content: none !important;
   }
   .recommendation-section .manga-list {
