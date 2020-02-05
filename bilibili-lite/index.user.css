@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.0.1
+@version        1.0.2
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/bilibili-lite
@@ -83,6 +83,7 @@
   }
   hr {
     border-color: var(--c-border) !important;
+    background-color: var(--c-border) !important;
   }
   table tr {
     border-color: var(--c-border) !important;
@@ -96,6 +97,24 @@
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
+  }
+  .selector {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-background) !important;
+  }
+  .selector .current,
+  .selector .triangle .icon-font {
+    color: var(--c-title) !important;
+  }
+  .selector .data-list {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-background) !important;
+  }
+  .selector .data-list li {
+    transition: background-color 0.3s ease-in-out !important;
+  }
+  .selector .data-list li:hover {
+    background-color: var(--c-hover) !important;
   }
   ::-webkit-input-placeholder {
     color: #d2d2d2;
@@ -215,7 +234,14 @@
   .pagelist .flip-left .active,
   .active-main .back-top,
   .topic-main .back-top,
-  .bilibili-player-feedback-submit {
+  .bilibili-player-feedback-submit,
+  .sidebar-canvas,
+  .cntr .check-all,
+  .album-popup-ensure,
+  .info-line .attend,
+  .link-panigation .panigation.selected,
+  .submit-btn,
+  .btn-go-write {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -275,7 +301,14 @@
   .pagelist .flip-left .active span,
   .active-main .back-top span,
   .topic-main .back-top span,
-  .bilibili-player-feedback-submit span {
+  .bilibili-player-feedback-submit span,
+  .sidebar-canvas span,
+  .cntr .check-all span,
+  .album-popup-ensure span,
+  .info-line .attend span,
+  .link-panigation .panigation.selected span,
+  .submit-btn span,
+  .btn-go-write span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -330,7 +363,14 @@
   .pagelist .flip-left .active::after,
   .active-main .back-top::after,
   .topic-main .back-top::after,
-  .bilibili-player-feedback-submit::after {
+  .bilibili-player-feedback-submit::after,
+  .sidebar-canvas::after,
+  .cntr .check-all::after,
+  .album-popup-ensure::after,
+  .info-line .attend::after,
+  .link-panigation .panigation.selected::after,
+  .submit-btn::after,
+  .btn-go-write::after {
     content: '';
     display: block;
     position: absolute;
@@ -394,7 +434,14 @@
   .pagelist .flip-left .active:hover,
   .active-main .back-top:hover,
   .topic-main .back-top:hover,
-  .bilibili-player-feedback-submit:hover {
+  .bilibili-player-feedback-submit:hover,
+  .sidebar-canvas:hover,
+  .cntr .check-all:hover,
+  .album-popup-ensure:hover,
+  .info-line .attend:hover,
+  .link-panigation .panigation.selected:hover,
+  .submit-btn:hover,
+  .btn-go-write:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -449,7 +496,14 @@
   .pagelist .flip-left .active:hover span,
   .active-main .back-top:hover span,
   .topic-main .back-top:hover span,
-  .bilibili-player-feedback-submit:hover span {
+  .bilibili-player-feedback-submit:hover span,
+  .sidebar-canvas:hover span,
+  .cntr .check-all:hover span,
+  .album-popup-ensure:hover span,
+  .info-line .attend:hover span,
+  .link-panigation .panigation.selected:hover span,
+  .submit-btn:hover span,
+  .btn-go-write:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -504,11 +558,22 @@
   .pagelist .flip-left .active:hover::after,
   .active-main .back-top:hover::after,
   .topic-main .back-top:hover::after,
-  .bilibili-player-feedback-submit:hover::after {
+  .bilibili-player-feedback-submit:hover::after,
+  .sidebar-canvas:hover::after,
+  .cntr .check-all:hover::after,
+  .album-popup-ensure:hover::after,
+  .info-line .attend:hover::after,
+  .link-panigation .panigation.selected:hover::after,
+  .submit-btn:hover::after,
+  .btn-go-write:hover::after {
     transform: translateX(100%);
   }
   .default,
   .more-btn,
+  .prev,
+  .next,
+  .btn-pre,
+  .btn-next,
   .van-popper-history .view-all,
   .van-popper-favorite .play-all,
   .bili-header-m .mini-wnd-nav .read-more,
@@ -524,8 +589,6 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active,
   .bangumi-pagelistbox .p,
   .be-pager .be-pager-item,
-  .be-pager .be-pager-next,
-  .be-pager .be-pager-prev,
   .more-btn-cntr,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item,
@@ -556,7 +619,11 @@
   .recharge-store-box ul.select-list .item,
   .pagelist .flip-left span,
   .web-notice .more,
-  .bilibili-player-feedback-submit.disable {
+  .bilibili-player-feedback-submit.disable,
+  .album-popup-cancel,
+  .author-info .favourite-btn-ctnr .communicate-btn,
+  .link-panigation .panigation,
+  .submit-btn.disabled {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -564,6 +631,10 @@
   }
   .default span,
   .more-btn span,
+  .prev span,
+  .next span,
+  .btn-pre span,
+  .btn-next span,
   .van-popper-history .view-all span,
   .van-popper-favorite .play-all span,
   .bili-header-m .mini-wnd-nav .read-more span,
@@ -579,8 +650,6 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active span,
   .bangumi-pagelistbox .p span,
   .be-pager .be-pager-item span,
-  .be-pager .be-pager-next span,
-  .be-pager .be-pager-prev span,
   .more-btn-cntr span,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item span,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item span,
@@ -611,11 +680,19 @@
   .recharge-store-box ul.select-list .item span,
   .pagelist .flip-left span span,
   .web-notice .more span,
-  .bilibili-player-feedback-submit.disable span {
+  .bilibili-player-feedback-submit.disable span,
+  .album-popup-cancel span,
+  .author-info .favourite-btn-ctnr .communicate-btn span,
+  .link-panigation .panigation span,
+  .submit-btn.disabled span {
     color: var(--c-text) !important;
   }
   .default::after,
   .more-btn::after,
+  .prev::after,
+  .next::after,
+  .btn-pre::after,
+  .btn-next::after,
   .van-popper-history .view-all::after,
   .van-popper-favorite .play-all::after,
   .bili-header-m .mini-wnd-nav .read-more::after,
@@ -631,8 +708,6 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active::after,
   .bangumi-pagelistbox .p::after,
   .be-pager .be-pager-item::after,
-  .be-pager .be-pager-next::after,
-  .be-pager .be-pager-prev::after,
   .more-btn-cntr::after,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item::after,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item::after,
@@ -663,11 +738,19 @@
   .recharge-store-box ul.select-list .item::after,
   .pagelist .flip-left span::after,
   .web-notice .more::after,
-  .bilibili-player-feedback-submit.disable::after {
+  .bilibili-player-feedback-submit.disable::after,
+  .album-popup-cancel::after,
+  .author-info .favourite-btn-ctnr .communicate-btn::after,
+  .link-panigation .panigation::after,
+  .submit-btn.disabled::after {
     content: none !important;
   }
   .default:hover,
   .more-btn:hover,
+  .prev:hover,
+  .next:hover,
+  .btn-pre:hover,
+  .btn-next:hover,
   .van-popper-history .view-all:hover,
   .van-popper-favorite .play-all:hover,
   .bili-header-m .mini-wnd-nav .read-more:hover,
@@ -683,8 +766,6 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active:hover,
   .bangumi-pagelistbox .p:hover,
   .be-pager .be-pager-item:hover,
-  .be-pager .be-pager-next:hover,
-  .be-pager .be-pager-prev:hover,
   .more-btn-cntr:hover,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item:hover,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item:hover,
@@ -715,12 +796,20 @@
   .recharge-store-box ul.select-list .item:hover,
   .pagelist .flip-left span:hover,
   .web-notice .more:hover,
-  .bilibili-player-feedback-submit.disable:hover {
+  .bilibili-player-feedback-submit.disable:hover,
+  .album-popup-cancel:hover,
+  .author-info .favourite-btn-ctnr .communicate-btn:hover,
+  .link-panigation .panigation:hover,
+  .submit-btn.disabled:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
   }
   .default:hover span,
   .more-btn:hover span,
+  .prev:hover span,
+  .next:hover span,
+  .btn-pre:hover span,
+  .btn-next:hover span,
   .van-popper-history .view-all:hover span,
   .van-popper-favorite .play-all:hover span,
   .bili-header-m .mini-wnd-nav .read-more:hover span,
@@ -736,8 +825,6 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active:hover span,
   .bangumi-pagelistbox .p:hover span,
   .be-pager .be-pager-item:hover span,
-  .be-pager .be-pager-next:hover span,
-  .be-pager .be-pager-prev:hover span,
   .more-btn-cntr:hover span,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item:hover span,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item:hover span,
@@ -768,16 +855,22 @@
   .recharge-store-box ul.select-list .item:hover span,
   .pagelist .flip-left span:hover span,
   .web-notice .more:hover span,
-  .bilibili-player-feedback-submit.disable:hover span {
+  .bilibili-player-feedback-submit.disable:hover span,
+  .album-popup-cancel:hover span,
+  .author-info .favourite-btn-ctnr .communicate-btn:hover span,
+  .link-panigation .panigation:hover span,
+  .submit-btn.disabled:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
   .paging-box-big .dian:hover,
-  .pagelist .flip-left .ellipsis {
+  .pagelist .flip-left .ellipsis,
+  .paging-box .next,
+  .paging-box .prev {
     border-color: transparent !important;
     background-color: transparent !important;
   }
-  .vip,
+  .vp-container .vip,
   span.big-vip-red,
   em:not(.icon),
   .m-header .num,
@@ -809,12 +902,13 @@
   .security_content .face-g-tab li.current,
   .hour-rank,
   .attention-btn-ctnr .left-part,
-  .gift-item .corner-mark {
+  .gift-item .corner-mark,
+  .container .name-info .live {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
   }
-  .vip:hover,
+  .vp-container .vip:hover,
   span.big-vip-red:hover,
   em:not(.icon):hover,
   .m-header .num:hover,
@@ -846,12 +940,15 @@
   .security_content .face-g-tab li.current:hover,
   .hour-rank:hover,
   .attention-btn-ctnr .left-part:hover,
-  .gift-item .corner-mark:hover {
+  .gift-item .corner-mark:hover,
+  .container .name-info .live:hover {
     color: var(--c-white) !important;
   }
   .gg-icon,
+  .tag,
   .tag-list li.tag-item,
   .tag-area .tag,
+  .link-tag,
   .tag-area .btn-add,
   .timeline-box .timeline-item .item-right p.num a,
   .timeline-box .timeline-item .item-right p.num span,
@@ -864,8 +961,10 @@
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
   }
+  .tag:hover,
   .tag-list li.tag-item:hover,
-  .tag-area .tag:hover {
+  .tag-area .tag:hover,
+  .link-tag:hover {
     background-color: var(--c-hover) !important;
   }
   .primary-menu .nav-menu .channel.on:after,
@@ -880,8 +979,10 @@
   .tag-list li.tag-item.on:hover .tag-a {
     color: var(--c-accent) !important;
   }
+  .tag:hover,
   .tag-list li.tag-item:hover,
-  .tag-area .tag:hover {
+  .tag-area .tag:hover,
+  .link-tag:hover {
     border-color: var(--c-accent) !important;
   }
   input,
@@ -907,7 +1008,12 @@
   .tool-bar .mobile-more,
   .user-level-detail,
   .select-option,
-  .popup-bg-cntr .popup-cntr {
+  .popup-bg-cntr .popup-cntr,
+  .bili-header-m .profile-m,
+  .bili-header-m .mini-wnd-nav,
+  .bili-header-m .nav-menu .nav-con .nav-item .i-frame,
+  .popup-bind-tip,
+  .set-copyright .copyright-select-box {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -979,6 +1085,25 @@
   .mini-header input::after {
     content: none;
   }
+  .van-popper-avatar,
+  .van-popper-favorite,
+  .van-popper-history,
+  .van-popper-upload,
+  .mini-header .nav-user-center .nav-item iframe,
+  .bili-header-m .profile-m,
+  .bili-header-m .mini-wnd-nav,
+  .bili-header-m .nav-menu .nav-con .nav-item .i-frame,
+  .news-notice-panel,
+  .publish-panel {
+    border: 1px solid var(--c-border) !important;
+    border-top-width: 0 !important;
+  }
+  .lang-change .lang-intro {
+    border: 1px solid var(--c-border) !important;
+  }
+  .mini-header .nav-user-center .item:nth-child(3) .nav-item .i-frame {
+    height: 206px;
+  }
   .van-popper-avatar .level-bar,
   .bili-header-m .profile-m .grade .bar {
     background-color: var(--c-border) !important;
@@ -1039,6 +1164,7 @@
     color: var(--c-title) !important;
   }
   .out-container {
+    box-shadow: none !important;
     background-color: var(--c-background) !important;
   }
   .tab-bar {
@@ -1200,12 +1326,6 @@
     background-color: transparent !important;
     color: var(--c-accent) !important;
   }
-  .bili-header-m .profile-m,
-  .bili-header-m .mini-wnd-nav,
-  .bili-header-m .nav-menu .nav-con .nav-item .i-frame {
-    border: 1px solid var(--c-border);
-    background-color: var(--c-background);
-  }
   .bili-header-m .profile-m .header-uname .vip-type span {
     background-color: var(--c-accent);
     color: var(--c-white);
@@ -1239,6 +1359,8 @@
   .comment-bilibili-fold .nameplate .nameplate-card .nameplate-arrow {
     display: none;
   }
+  #comment,
+  .page-comment,
   .bb-comment,
   .comment-area,
   .comment-bilibili-fold,
@@ -1352,7 +1474,13 @@
   .feed-card .content .bottom img {
     display: none !important;
   }
-  .video-container .text-area .title {
+  .feed-tag .publish-panel-container,
+  .feed-tag .publish-panel,
+  .feed-tag .card {
+    background-color: var(--c-background) !important;
+  }
+  .video-container .text-area .title,
+  .feed-tag .separater-line {
     color: var(--c-title) !important;
   }
   .video-container .text-area .view-danmaku span {
@@ -1399,7 +1527,8 @@
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
   }
-  .card .more-panel .child-button:hover {
+  .card .more-panel .child-button:hover,
+  .feed-title {
     background-color: var(--c-hover) !important;
     color: var(--c-title) !important;
   }
@@ -1521,6 +1650,9 @@
   }
   .van-popper-channel .popper__arrow {
     display: none !important;
+  }
+  .van-popover .sub-item a:hover {
+    background-color: var(--c-hover);
   }
   .video-card-common .ex-up,
   .video-card-common .up,
@@ -1730,7 +1862,8 @@
     border-color: var(--c-border);
   }
   .elevator .bg23 {
-    background-color: none;
+    backdrop-filter: blur(5px);
+    background-color: var(--c-hover);
   }
   .international-footer {
     border-top: 1px solid var(--c-border);
@@ -2065,6 +2198,9 @@
   .bili-share-pc .weixin-hover .qr-before {
     background-color: var(--c-background) !important;
   }
+  .activity-playlist .activity-playlist-item {
+    background-color: transparent !important;
+  }
   .active-title .b-active-t,
   .pagelist .flip-left .ellipsis {
     color: var(--c-title) !important;
@@ -2121,7 +2257,8 @@
   .main-container .pay-bar .vip .btn-pay,
   .bilibili-player-video-sendbar .bilibili-player-video-inputbar,
   .members-info__header,
-  .bilibili-player .bilibili-player-area .bilibili-player-video-panel {
+  .bilibili-player .bilibili-player-area .bilibili-player-video-panel,
+  .v-wrap .danmaku-wrap {
     background-color: var(--c-background) !important;
   }
   .multi-page .cur-list .list-box li.on,
@@ -2133,7 +2270,8 @@
   .section-ep-wrapper .ep-item.cursor,
   .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint,
   .bilibili-player .bilibili-player-area .bilibili-player-video-wrap .bilibili-player-volumeHint,
-  #bofqi.mini-player .drag-bar {
+  #bofqi.mini-player .drag-bar,
+  .video-page-card .card-box .pic-box {
     background-color: var(--c-hover) !important;
   }
   .main-container .media-info .media-right .pub-wrapper .up-info-wrapper .split-line,
@@ -2203,7 +2341,8 @@
   .video-toolbar .ops>span:hover>i,
   .video-toolbar .ops .share .share-pos .box-a .share-down .share-btn:hover i,
   .up-info .u-info .name .message:hover i,
-  .multi-page .head-con .range-box i:hover {
+  .multi-page .head-con .range-box i:hover,
+  .up-info>a .up-name.vip {
     color: var(--c-accent) !important;
   }
   .bilibili-player-feedback,
@@ -2581,6 +2720,7 @@
     border-color: var(--c-accent);
   }
   .h .h-gradient {
+    bottom: -1px;
     height: 100px;
     background-image: none;
     background-color: var(--c-bg-header);
@@ -2783,12 +2923,12 @@
     display: block;
     margin: 18px auto;
   }
-  #page-index .col-2 .section .user-auth .auth-icon.personal-auth,
+  #page-index .col-2 .section .user-auth .auth-icon,
   .i-live .i-live-flag {
     background-image: none;
   }
   #page-index .col-2 .section .user-auth.no-auth .no-auth-title .goto-auth::before,
-  #page-index .col-2 .section .user-auth .auth-icon.personal-auth::before,
+  #page-index .col-2 .section .user-auth .auth-icon::before,
   #page-index .col-2 .section.elec .elec-trigger::before,
   #page-index .col-2 .section.i-m .i-m-r1 .i-m-title::before,
   #page-index .col-2 .section.i-live .i-live-off-guest a::before,
@@ -2804,7 +2944,10 @@
     content: '去认证';
   }
   #page-index .col-2 .section .user-auth .auth-icon.personal-auth::before {
-    content: '已认证';
+    content: '个人';
+  }
+  #page-index .col-2 .section .user-auth .auth-icon.organization-auth::before {
+    content: '机构';
   }
   #page-index .col-2 .section.elec .elec-trigger::before {
     content: '充电' !important;
@@ -3305,6 +3448,9 @@
   .gift-item.buy.hover {
     background-color: var(--c-hover) !important;
   }
+  .bilibili-live-player[data-player-type='player-home'] .bilibili-live-player-enter-tips:hover {
+    background-color: var(--c-accent) !important;
+  }
   .notice-item .notice-main .notice-title,
   .coverNews-item-title,
   .area-name {
@@ -3327,6 +3473,9 @@
   .aside-item .aside-item-tips,
   .ysly-room-ctnr .item .info span {
     color: var(--c-white) !important;
+  }
+  .bilibili-live-player[data-player-type='player-home'] .bilibili-live-player-enter-tips {
+    border-color: var(--c-accent) !important;
   }
   .bilibili-live-player button,
   .live-player-ctnr button,
@@ -3361,6 +3510,93 @@
   .yzly-content-ctnr .p-absolute,
   .hover-panel-wrapper .text-info-ctnr .follow-btn.p-absolute {
     position: absolute;
+  }
+  .banner,
+  .link-footer,
+  .child-nav .nav-remind,
+  .wrap .state-null>.txt>p:before,
+  .wrapper .content .state-null>.txt>p:before {
+    display: none !important;
+  }
+  .content,
+  .child-nav,
+  .top3 li div.content-detail,
+  .rank-detail .top50,
+  .rank-detail .my-info,
+  .progress-tv {
+    background-color: var(--c-background) !important;
+  }
+  .rank-detail dd .score {
+    background-color: transparent !important;
+  }
+  .top3 .content-detail>p>span,
+  .rank-detail dd .score span,
+  .rank-detail dd .score span:hover {
+    color: var(--c-text) !important;
+  }
+  .rank-detail dt .rank-number {
+    color: var(--c-white) !important;
+  }
+  .list-filter-bar .item-text.active span,
+  .list-filter-bar .item-text:hover span {
+    color: var(--c-accent) !important;
+  }
+  .wrap .state-null>.txt,
+  .wrap .state-null>.txt::before,
+  .wrap .state-null>.txt::after,
+  .wrapper .content .state-null>.txt,
+  .wrapper .content .state-null>.txt::before,
+  .wrapper .content .state-null>.txt::after {
+    border-color: var(--c-border) !important;
+  }
+  .wrapper .content .state-null>.txt {
+    display: inline-block;
+  }
+  .main-container>h1.title>span {
+    border-radius: 10px;
+    background-color: var(--c-accent) !important;
+    color: var(--c-white) !important;
+  }
+  .main-container>h1.title>span::before {
+    display: none !important;
+  }
+  .content-panel>h1.title>span {
+    border: 0 !important;
+    font-size: 0 !important;
+  }
+  .content-panel>h1.title>span .icon-font {
+    font-size: 20px;
+    color: var(--c-accent);
+  }
+  .list-filter-bar .sort-box .item.active,
+  .list-filter-bar .sort-box .item:hover,
+  .list-filter-bar .pic-type-box .item.active,
+  .list-filter-bar .pic-type-box .item:hover,
+  .list-filter-bar .item-text.active,
+  .list-filter-bar .item-text.expand,
+  .list-filter-bar .item-text:hover {
+    border-color: var(--c-accent) !important;
+    background-color: var(--c-background) !important;
+    color: var(--c-accent) !important;
+  }
+  .container {
+    top: 60px !important;
+  }
+  .rank-detail .top50-container {
+    height: auto;
+  }
+  .rank-detail .scroll-container {
+    height: 580px;
+  }
+  .child-nav {
+    width: 200px !important;
+  }
+  .child-nav li {
+    transition: background-color 0.3s ease-in-out !important;
+  }
+  .child-nav li:hover,
+  .child-nav li.active {
+    background-color: var(--c-hover) !important;
   }
   .link-navbar .main-ctnr .nav-items-ctnr,
   .shortcuts-ctnr .shortcut-item:last-child,
@@ -4099,7 +4335,8 @@
   .tab-item,
   .newbie-awarder .close-button,
   .user-panel .drop-list .logout-btn-container .logout-button,
-  .drop-list .more-btn-container .more-button {
+  .drop-list .more-btn-container .more-button,
+  .index-banner .control-button .app-button {
     background-color: transparent !important;
   }
   .manga-navbar-history-list .action-button::after,
@@ -4111,23 +4348,30 @@
   .tab-item::after,
   .newbie-awarder .close-button::after,
   .user-panel .drop-list .logout-btn-container .logout-button::after,
-  .drop-list .more-btn-container .more-button::after {
+  .drop-list .more-btn-container .more-button::after,
+  .index-banner .control-button .app-button::after {
     content: none !important;
   }
   .recommendation-section .manga-list {
     width: 100% !important;
   }
-  .read-nav .episode {
+  .episode-comment {
+    background-color: var(--c-background) !important;
+  }
+  .read-nav .episode,
+  .episode-comment .header-section div {
     color: var(--c-title) !important;
   }
   .action-bar-container .app-button,
   .hover-toast .app-button,
-  .floating-button {
+  .floating-button,
+  .episode-comment .header-section .close-button {
     background-color: transparent !important;
   }
   .action-bar-container .app-button::after,
   .hover-toast .app-button::after,
-  .floating-button::after {
+  .floating-button::after,
+  .episode-comment .header-section .close-button::after {
     content: none !important;
   }
   .info-layer .floating-button {
@@ -4231,5 +4475,299 @@
   .fjw-entry .entrance::before {
     content: '加入风纪委员会';
     display: block;
+  }
+}
+@-moz-document url-prefix("https://h.bilibili.com/") {
+  .link-navbar .nav-item,
+  .shortcuts-ctnr .shortcuts-ctnr-ul .shortcut-item:last-child {
+    display: none !important;
+  }
+  .link-navbar,
+  .publish-panel,
+  .user-panel-ctnr .user-panel,
+  .load-error-panel,
+  .link-progress-tv,
+  .news-notice-panel {
+    background-color: var(--c-background) !important;
+  }
+  .search-bar-ctnr .search-bar,
+  .publish-panel .publish-list .publish-item:hover,
+  .user-panel-ctnr .user-panel .content-ctnr .exit-btn:hover,
+  .news-notice-panel .news-notice .news-list .news-item:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .news-notice-panel .news-notice .news-list .news-item .type {
+    background-color: var(--c-accent) !important;
+  }
+  .link-navbar .nav-item:hover .nav-link .label,
+  .search-bar-ctnr .search-bar input,
+  .news-notice-panel .news-notice .news-list .news-item {
+    background-color: transparent !important;
+  }
+  .shortcuts-ctnr .shortcuts-ctnr-ul .shortcut-item .label-wrapper .label .text,
+  .news-notice-panel .news-notice .more .icon-font {
+    color: var(--c-title) !important;
+  }
+  .shortcuts-ctnr {
+    margin: 0 !important;
+  }
+  .search-bar-ctnr .search-bar .search-btn {
+    vertical-align: initial;
+  }
+  .link-navbar .nav-item:first-child {
+    display: block !important;
+  }
+  .link-navbar .nav-item:first-child::before {
+    top: 13px !important;
+    left: 13px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .link-navbar.black {
+    background-color: var(--c-bg-header) !important;
+    backdrop-filter: blur(5px);
+  }
+  .link-navbar .nav-item .nav-link .label {
+    margin: 0 !important;
+    font-size: 0 !important;
+  }
+  .user-panel-ctnr .user-panel .content-ctnr .exit-btn,
+  .news-notice-panel .news-notice .more {
+    border-top: 1px solid var(--c-border);
+    background-color: transparent !important;
+  }
+  .publish-btn {
+    height: auto !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    font-size: 14px !important;
+    color: var(--c-title) !important;
+  }
+  .publish-btn:hover:after {
+    height: 100% !important;
+    background-color: var(--c-hover) !important;
+  }
+  .link-footer {
+    display: none !important;
+  }
+  .app-ctnr,
+  .drawer-card,
+  .canvas-card,
+  .activity-card,
+  .loading-tv,
+  .empty-hint,
+  .detail,
+  .page-error {
+    background-color: var(--c-background) !important;
+  }
+  .category,
+  .canvas-card dt .img-contain {
+    background-color: var(--c-hover) !important;
+  }
+  ul.navigation li:after {
+    background-color: var(--c-accent) !important;
+  }
+  ul.navigation li span {
+    color: var(--c-title) !important;
+  }
+  ul.navigation li.activated span,
+  .category li a.activated,
+  .cntr .sort-cntr .href-all:hover i,
+  .arrow-left:hover .icon-font,
+  .arrow-right:hover .icon-font {
+    color: var(--c-accent) !important;
+  }
+  .category,
+  .activity-card {
+    box-shadow: none !important;
+  }
+  .canvas-card dd .icon-contain .support {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-background) !important;
+  }
+  .canvas-card dd .icon-contain .support::after {
+    border-top: 5px solid var(--c-background) !important;
+  }
+  .link-navbar.white {
+    border-bottom: 1px solid var(--c-border);
+  }
+  .cntr .check-all-ctn,
+  .content li:nth-child(n+41):after {
+    background-image: linear-gradient(180deg, transparent, var(--c-background)) !important;
+  }
+  .search-bar-ctnr .search-bar .search-btn,
+  .banner .btn-wrapper .btn,
+  button.more {
+    background-color: transparent !important;
+  }
+  .search-bar-ctnr .search-bar .search-btn::after,
+  .banner .btn-wrapper .btn::after,
+  button.more::after {
+    content: none !important;
+  }
+  .banner .btn-wrapper .btn {
+    border-color: var(--c-hover) !important;
+    background-color: var(--c-bg-header) !important;
+    backdrop-filter: blur(5px);
+  }
+  .sidebar-canvas {
+    position: fixed !important;
+  }
+  .link-panigation .panigation {
+    padding: 0 10px !important;
+    min-width: 15px !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    vertical-align: top;
+  }
+  .cntr .check-all {
+    box-shadow: none !important;
+    background-image: none !important;
+  }
+  .cntr .check-all:hover {
+    opacity: 1 !important;
+  }
+  #canvas-detail-comment-ctnr,
+  .album-popup,
+  .drawer-pop {
+    background-color: var(--c-background) !important;
+  }
+  .live-status.offline,
+  .works-ctnr .header-ctnr .works-count {
+    background-color: var(--c-hover) !important;
+  }
+  .author-info .supporting-info .divider {
+    background-color: var(--c-border) !important;
+  }
+  button.more span,
+  button.more .icon-font,
+  .dashboard li .text {
+    color: var(--c-text) !important;
+  }
+  .dashboard li.like,
+  button.more {
+    border-color: var(--c-border) !important;
+  }
+  .album-popup .album-pop-bottom ul li.normal {
+    vertical-align: middle !important;
+  }
+  .drawer-pop:after {
+    border-top: 14px solid var(--c-background) !important;
+  }
+  .draw-list[data-v-6caf7b4c] {
+    border: 0 !important;
+    background-color: var(--c-background) !important;
+  }
+  .article-content-ctnr,
+  .comment-ctnr {
+    border: 0 !important;
+    background-color: var(--c-background) !important;
+  }
+  .author-info,
+  .dashboard,
+  .works-ctnr {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-background) !important;
+  }
+  .ssr-content .main-ctnr {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .main-ctnr .main-section {
+    order: 2 !important;
+    margin: auto !important;
+  }
+  .aside-section {
+    order: 1 !important;
+    position: inherit !important;
+    margin: auto !important;
+    width: 864px !important;
+  }
+  .aside-section .aside-ctnr.attach-aside {
+    position: inherit !important;
+    display: flex !important;
+    flex-flow: column wrap !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    max-height: 350px !important;
+  }
+  .aside-section .aside-ctnr.attach-aside .works-ctnr {
+    margin-top: 72px !important;
+    width: auto !important;
+  }
+  .aside-section .aside-ctnr.attach-aside .works-ctnr .slot-ctnr {
+    display: flex;
+  }
+  .aside-section .aside-ctnr.attach-aside .works-ctnr .slot-ctnr a .item-canvas {
+    margin-right: 17px;
+  }
+  .category-wrapper .upload-content,
+  .set-copyright .copyright-icon .icon-none-copyright {
+    background-color: var(--c-background) !important;
+  }
+  .upload-image,
+  .checkbox .radio-btn,
+  .marquee,
+  .agree-rule .checkbox {
+    background-color: var(--c-hover) !important;
+  }
+  .checkbox.checked .radio-btn {
+    background-color: var(--c-border) !important;
+  }
+  .add-tag .default:hover {
+    background-color: transparent !important;
+  }
+  .category-wrapper .dot,
+  .checkbox.checked .radio-btn::before,
+  .add-tag .default .btn-show,
+  .tag .delete,
+  .popup-bind-tip .title,
+  .agree-rule .checkbox.checked {
+    background-color: var(--c-accent) !important;
+  }
+  .category-wrapper .tweet-title {
+    color: var(--c-title) !important;
+  }
+  .tag .delete,
+  .popup-bind-tip .close {
+    color: var(--c-white) !important;
+  }
+  .add-tag .default:hover .placeholder {
+    color: var(--c-accent) !important;
+  }
+  .upload-image,
+  .upload-image .upload-btn,
+  .checkbox .radio-btn,
+  .agree-rule .checkbox,
+  .marquee {
+    border-color: var(--c-border) !important;
+  }
+  .checkbox.checked .radio-btn,
+  .add-tag .default {
+    border: 0 !important;
+  }
+  .add-tag .tag-list .tag {
+    border: 1px solid var(--c-border);
+  }
+  .submit-btn.pointer {
+    border: 1px solid var(--c-accent);
+  }
+  .submit-btn {
+    box-shadow: none !important;
+  }
+  .add-tag .default .btn-show,
+  .submit-btn {
+    background-image: none !important;
+  }
+  .category-wrapper .upload-content .title {
+    font-size: 16px !important;
+  }
+  .category-wrapper hr {
+    border-bottom: 1 !important;
+  }
+  .set-copyright .copyright-select-box::before {
+    border-color: var(--c-border) transparent transparent var(--c-border) !important;
+    background-color: var(--c-background) !important;
   }
 }
