@@ -101,6 +101,7 @@ input[type=text]:focus
   border-color var(--c-accent)
 
 .h .h-gradient
+  bottom -1px
   height 100px
   background-image none
   background-color var(--c-bg-header)
@@ -304,12 +305,12 @@ input[type=text]:focus
   display block
   margin 18px auto
 
-#page-index .col-2 .section .user-auth .auth-icon.personal-auth
+#page-index .col-2 .section .user-auth .auth-icon
 .i-live .i-live-flag
   background-image none
 
 #page-index .col-2 .section .user-auth.no-auth .no-auth-title .goto-auth::before
-#page-index .col-2 .section .user-auth .auth-icon.personal-auth::before
+#page-index .col-2 .section .user-auth .auth-icon::before
 #page-index .col-2 .section.elec .elec-trigger::before
 #page-index .col-2 .section.i-m .i-m-r1 .i-m-title::before
 #page-index .col-2 .section.i-live .i-live-off-guest a::before
@@ -325,7 +326,10 @@ input[type=text]:focus
   content '去认证'
 
 #page-index .col-2 .section .user-auth .auth-icon.personal-auth::before
-  content '已认证'
+  content '个人'
+
+#page-index .col-2 .section .user-auth .auth-icon.organization-auth::before
+  content '机构'
 
 #page-index .col-2 .section.elec .elec-trigger::before
   content '充电' !important

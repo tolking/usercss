@@ -65,6 +65,25 @@ table tr td
 	background-color var(--c-background) !important
 	color var(--c-text) !important
 
+/* 选择框 */
+.selector
+	border-color var(--c-border) !important
+	background-color var(--c-background) !important
+
+	.current
+	.triangle .icon-font
+		color var(--c-title) !important
+
+	.data-list
+		border-color var(--c-border) !important
+		background-color var(--c-background) !important
+
+		li
+			transition background-color 0.3s ease-in-out !important
+
+			&:hover
+				background-color var(--c-hover) !important
+
 ::-webkit-input-placeholder
 	color #d2d2d2
 

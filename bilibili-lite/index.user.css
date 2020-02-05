@@ -98,6 +98,24 @@
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
   }
+  .selector {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-background) !important;
+  }
+  .selector .current,
+  .selector .triangle .icon-font {
+    color: var(--c-title) !important;
+  }
+  .selector .data-list {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-background) !important;
+  }
+  .selector .data-list li {
+    transition: background-color 0.3s ease-in-out !important;
+  }
+  .selector .data-list li:hover {
+    background-color: var(--c-hover) !important;
+  }
   ::-webkit-input-placeholder {
     color: #d2d2d2;
   }
@@ -222,7 +240,8 @@
   .album-popup-ensure,
   .info-line .attend,
   .link-panigation .panigation.selected,
-  .submit-btn {
+  .submit-btn,
+  .btn-go-write {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -288,7 +307,8 @@
   .album-popup-ensure span,
   .info-line .attend span,
   .link-panigation .panigation.selected span,
-  .submit-btn span {
+  .submit-btn span,
+  .btn-go-write span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -349,7 +369,8 @@
   .album-popup-ensure::after,
   .info-line .attend::after,
   .link-panigation .panigation.selected::after,
-  .submit-btn::after {
+  .submit-btn::after,
+  .btn-go-write::after {
     content: '';
     display: block;
     position: absolute;
@@ -419,7 +440,8 @@
   .album-popup-ensure:hover,
   .info-line .attend:hover,
   .link-panigation .panigation.selected:hover,
-  .submit-btn:hover {
+  .submit-btn:hover,
+  .btn-go-write:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -480,7 +502,8 @@
   .album-popup-ensure:hover span,
   .info-line .attend:hover span,
   .link-panigation .panigation.selected:hover span,
-  .submit-btn:hover span {
+  .submit-btn:hover span,
+  .btn-go-write:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -541,7 +564,8 @@
   .album-popup-ensure:hover::after,
   .info-line .attend:hover::after,
   .link-panigation .panigation.selected:hover::after,
-  .submit-btn:hover::after {
+  .submit-btn:hover::after,
+  .btn-go-write:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -878,7 +902,8 @@
   .security_content .face-g-tab li.current,
   .hour-rank,
   .attention-btn-ctnr .left-part,
-  .gift-item .corner-mark {
+  .gift-item .corner-mark,
+  .container .name-info .live {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
@@ -915,7 +940,8 @@
   .security_content .face-g-tab li.current:hover,
   .hour-rank:hover,
   .attention-btn-ctnr .left-part:hover,
-  .gift-item .corner-mark:hover {
+  .gift-item .corner-mark:hover,
+  .container .name-info .live:hover {
     color: var(--c-white) !important;
   }
   .gg-icon,
@@ -1067,7 +1093,6 @@
   .bili-header-m .profile-m,
   .bili-header-m .mini-wnd-nav,
   .bili-header-m .nav-menu .nav-con .nav-item .i-frame,
-  .user-panel-ctnr .user-panel,
   .news-notice-panel,
   .publish-panel {
     border: 1px solid var(--c-border) !important;
@@ -1334,6 +1359,8 @@
   .comment-bilibili-fold .nameplate .nameplate-card .nameplate-arrow {
     display: none;
   }
+  #comment,
+  .page-comment,
   .bb-comment,
   .comment-area,
   .comment-bilibili-fold,
@@ -2230,7 +2257,8 @@
   .main-container .pay-bar .vip .btn-pay,
   .bilibili-player-video-sendbar .bilibili-player-video-inputbar,
   .members-info__header,
-  .bilibili-player .bilibili-player-area .bilibili-player-video-panel {
+  .bilibili-player .bilibili-player-area .bilibili-player-video-panel,
+  .v-wrap .danmaku-wrap {
     background-color: var(--c-background) !important;
   }
   .multi-page .cur-list .list-box li.on,
@@ -2692,6 +2720,7 @@
     border-color: var(--c-accent);
   }
   .h .h-gradient {
+    bottom: -1px;
     height: 100px;
     background-image: none;
     background-color: var(--c-bg-header);
@@ -2894,12 +2923,12 @@
     display: block;
     margin: 18px auto;
   }
-  #page-index .col-2 .section .user-auth .auth-icon.personal-auth,
+  #page-index .col-2 .section .user-auth .auth-icon,
   .i-live .i-live-flag {
     background-image: none;
   }
   #page-index .col-2 .section .user-auth.no-auth .no-auth-title .goto-auth::before,
-  #page-index .col-2 .section .user-auth .auth-icon.personal-auth::before,
+  #page-index .col-2 .section .user-auth .auth-icon::before,
   #page-index .col-2 .section.elec .elec-trigger::before,
   #page-index .col-2 .section.i-m .i-m-r1 .i-m-title::before,
   #page-index .col-2 .section.i-live .i-live-off-guest a::before,
@@ -2915,7 +2944,10 @@
     content: '去认证';
   }
   #page-index .col-2 .section .user-auth .auth-icon.personal-auth::before {
-    content: '已认证';
+    content: '个人';
+  }
+  #page-index .col-2 .section .user-auth .auth-icon.organization-auth::before {
+    content: '机构';
   }
   #page-index .col-2 .section.elec .elec-trigger::before {
     content: '充电' !important;
@@ -3416,6 +3448,9 @@
   .gift-item.buy.hover {
     background-color: var(--c-hover) !important;
   }
+  .bilibili-live-player[data-player-type='player-home'] .bilibili-live-player-enter-tips:hover {
+    background-color: var(--c-accent) !important;
+  }
   .notice-item .notice-main .notice-title,
   .coverNews-item-title,
   .area-name {
@@ -3438,6 +3473,9 @@
   .aside-item .aside-item-tips,
   .ysly-room-ctnr .item .info span {
     color: var(--c-white) !important;
+  }
+  .bilibili-live-player[data-player-type='player-home'] .bilibili-live-player-enter-tips {
+    border-color: var(--c-accent) !important;
   }
   .bilibili-live-player button,
   .live-player-ctnr button,
@@ -3472,6 +3510,93 @@
   .yzly-content-ctnr .p-absolute,
   .hover-panel-wrapper .text-info-ctnr .follow-btn.p-absolute {
     position: absolute;
+  }
+  .banner,
+  .link-footer,
+  .child-nav .nav-remind,
+  .wrap .state-null>.txt>p:before,
+  .wrapper .content .state-null>.txt>p:before {
+    display: none !important;
+  }
+  .content,
+  .child-nav,
+  .top3 li div.content-detail,
+  .rank-detail .top50,
+  .rank-detail .my-info,
+  .progress-tv {
+    background-color: var(--c-background) !important;
+  }
+  .rank-detail dd .score {
+    background-color: transparent !important;
+  }
+  .top3 .content-detail>p>span,
+  .rank-detail dd .score span,
+  .rank-detail dd .score span:hover {
+    color: var(--c-text) !important;
+  }
+  .rank-detail dt .rank-number {
+    color: var(--c-white) !important;
+  }
+  .list-filter-bar .item-text.active span,
+  .list-filter-bar .item-text:hover span {
+    color: var(--c-accent) !important;
+  }
+  .wrap .state-null>.txt,
+  .wrap .state-null>.txt::before,
+  .wrap .state-null>.txt::after,
+  .wrapper .content .state-null>.txt,
+  .wrapper .content .state-null>.txt::before,
+  .wrapper .content .state-null>.txt::after {
+    border-color: var(--c-border) !important;
+  }
+  .wrapper .content .state-null>.txt {
+    display: inline-block;
+  }
+  .main-container>h1.title>span {
+    border-radius: 10px;
+    background-color: var(--c-accent) !important;
+    color: var(--c-white) !important;
+  }
+  .main-container>h1.title>span::before {
+    display: none !important;
+  }
+  .content-panel>h1.title>span {
+    border: 0 !important;
+    font-size: 0 !important;
+  }
+  .content-panel>h1.title>span .icon-font {
+    font-size: 20px;
+    color: var(--c-accent);
+  }
+  .list-filter-bar .sort-box .item.active,
+  .list-filter-bar .sort-box .item:hover,
+  .list-filter-bar .pic-type-box .item.active,
+  .list-filter-bar .pic-type-box .item:hover,
+  .list-filter-bar .item-text.active,
+  .list-filter-bar .item-text.expand,
+  .list-filter-bar .item-text:hover {
+    border-color: var(--c-accent) !important;
+    background-color: var(--c-background) !important;
+    color: var(--c-accent) !important;
+  }
+  .container {
+    top: 60px !important;
+  }
+  .rank-detail .top50-container {
+    height: auto;
+  }
+  .rank-detail .scroll-container {
+    height: 580px;
+  }
+  .child-nav {
+    width: 200px !important;
+  }
+  .child-nav li {
+    transition: background-color 0.3s ease-in-out !important;
+  }
+  .child-nav li:hover,
+  .child-nav li.active {
+    background-color: var(--c-hover) !important;
   }
   .link-navbar .main-ctnr .nav-items-ctnr,
   .shortcuts-ctnr .shortcut-item:last-child,
