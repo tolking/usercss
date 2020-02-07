@@ -4,7 +4,7 @@
 @version        1.0.2
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
-@homepageURL		https://github.com/tolking/usercss/bilibili-lite
+@homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
 @supportURL			https://github.com/tolking/usercss/issues
 @updateURL			https://raw.githubusercontent.com/tolking/usercss/master/bilibili-lite/index.user.css
 @license				MIT
@@ -1442,6 +1442,7 @@
     display: none;
   }
   #comment,
+  .comment,
   .page-comment,
   .bb-comment,
   .comment-bg,
@@ -1450,7 +1451,7 @@
   .emoji-box .emoji-tabs,
   .bb-comment .comment-list .list-item .reply-box .view-more .btn-more:hover,
   .comment-bilibili-fold .comment-list .list-item .reply-box .view-more .btn-more:hover {
-    background-color: var(--c-background);
+    background-color: var(--c-background) !important;
   }
   .paging-box .current,
   .bb-comment .nameplate .nameplate-card .nameplate-text .n-name,
@@ -2871,8 +2872,8 @@
   .section .more {
     background-image: none;
   }
-  .content {
-    width: 100% !important;
+  #page-index .video.full-rows .content {
+    max-height: none;
   }
   #page-index .video .content,
   #page-index .coin .content,
@@ -3575,6 +3576,7 @@
   }
   .bilibili-live-player button,
   .live-player-ctnr button,
+  .awarding-panel button,
   .search-bar-ctnr .search-bar .search-btn,
   .link-panel-ctnr .load-more .load-more-btn,
   .attention-live .switch-btn {
@@ -3582,6 +3584,7 @@
   }
   .bilibili-live-player button::after,
   .live-player-ctnr button::after,
+  .awarding-panel button::after,
   .search-bar-ctnr .search-bar .search-btn::after,
   .link-panel-ctnr .load-more .load-more-btn::after,
   .attention-live .switch-btn::after {
@@ -3614,13 +3617,16 @@
   .wrapper .content .state-null>.txt>p:before {
     display: none !important;
   }
-  .content,
+  #app-ctnr .content,
   .child-nav,
   .top3 li div.content-detail,
   .rank-detail .top50,
   .rank-detail .my-info,
   .progress-tv {
     background-color: var(--c-background) !important;
+  }
+  .rank-detail .top50 li:nth-child(2n) {
+    background-color: var(--c-hover) !important;
   }
   .rank-detail dd .score {
     background-color: transparent !important;
@@ -3647,6 +3653,9 @@
   }
   .wrapper .content .state-null>.txt {
     display: inline-block;
+  }
+  .main-ctnr .content-ctn .header {
+    padding-top: 80px;
   }
   .main-container>h1.title>span {
     border-radius: 10px;
@@ -3878,7 +3887,7 @@
     }
 }
 }
-@-moz-document url-prefix("https://live.bilibili.com/activity/") {
+@-moz-document url-prefix("https://live.bilibili.com/"), url-prefix("https://live.bilibili.com/activity/"), url-prefix("https://live.bilibili.com/p/") {
   .bili-footer {
     display: none !important;
   }
@@ -3890,6 +3899,9 @@
   .popup-bg-cntr .popup-cntr .left-part,
   .bingo-list {
     background-color: var(--c-hover) !important;
+  }
+  body {
+    background-color: transparent !important;
   }
   .bili-share-pc .title,
   .popup-bg-cntr .popup-cntr .right-part .activity-name,
@@ -3910,6 +3922,13 @@
   }
   .box-body {
     margin-bottom: 30px;
+  }
+  .page-bg-wrap {
+    margin-top: 0 !important;
+  }
+  .link-navbar {
+    position: absolute;
+    width: 100%;
   }
   button {
     background-color: transparent !important;
