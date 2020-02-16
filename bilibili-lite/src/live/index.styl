@@ -1,8 +1,16 @@
-@-moz-document url-prefix("https://live.bilibili.com/") {
+@-moz-document url-prefix("https://live.bilibili.com/"),
+url-prefix("https://link.bilibili.com/") {
 	/* 直播样式 */
 	@import 'header'
 	@import 'home'
 	@import 'list'
 	@import 'room'
+}
+@-moz-document url-prefix("https://live.bilibili.com/"),
+url-prefix("https://live.bilibili.com/activity/"),
+url-prefix("https://live.bilibili.com/p/") {
 	@import 'active'
+}
+@-moz-document url-prefix("https://link.bilibili.com/") {
+	@import 'link'
 }

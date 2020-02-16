@@ -52,38 +52,30 @@ hr
 	border-color var(--c-border) !important
 	background-color var(--c-border) !important
 
-table tr
-	border-color var(--c-border) !important
+/* 表格 */
+table
 	background-color transparent !important
 
-table tbody tr:nth-child(odd) td
-	background-color var(--c-hover) !important
-
-table tr th
-table tr td
-	border-color var(--c-border) !important
-	background-color var(--c-background) !important
-	color var(--c-text) !important
-
-/* 选择框 */
-.selector
-	border-color var(--c-border) !important
-	background-color var(--c-background) !important
-
-	.current
-	.triangle .icon-font
-		color var(--c-title) !important
-
-	.data-list
+	thead
+	tbody
+	thead tr
 		border-color var(--c-border) !important
-		background-color var(--c-background) !important
+		background-color transparent !important
 
-		li
-			transition background-color 0.3s ease-in-out !important
+	tbody tr
+		border-color var(--c-border) !important
+		background-color transparent !important
 
-			&:hover
-				background-color var(--c-hover) !important
+		&:nth-child(odd) td
+			background-color var(--c-hover) !important
 
+		th
+		td
+			border-color var(--c-border) !important
+			background-color var(--c-background) !important
+			color var(--c-text) !important
+
+/* 输入框提示文本 */
 ::-webkit-input-placeholder
 	color #d2d2d2
 

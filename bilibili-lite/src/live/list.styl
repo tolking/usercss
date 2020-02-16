@@ -6,13 +6,16 @@
 .wrapper .content .state-null>.txt>p:before
   display none !important
 
-.content
+#app-ctnr .content
 .child-nav
 .top3 li div.content-detail
 .rank-detail .top50
 .rank-detail .my-info
 .progress-tv
   background-color var(--c-background) !important
+
+.rank-detail .top50 li:nth-child(2n)
+  background-color var(--c-hover) !important
 
 .rank-detail dd .score
   background-color transparent !important
@@ -39,6 +42,9 @@
 
 .wrapper .content .state-null>.txt
   display inline-block
+
+.main-ctnr .content-ctn .header
+  padding-top 80px
 
 .main-container>h1.title>span
   border-radius 10px

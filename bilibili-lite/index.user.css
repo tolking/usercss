@@ -1,10 +1,10 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.0.2
+@version        1.0.3
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
-@homepageURL		https://github.com/tolking/usercss/bilibili-lite
+@homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
 @supportURL			https://github.com/tolking/usercss/issues
 @updateURL			https://raw.githubusercontent.com/tolking/usercss/master/bilibili-lite/index.user.css
 @license				MIT
@@ -85,36 +85,27 @@
     border-color: var(--c-border) !important;
     background-color: var(--c-border) !important;
   }
-  table tr {
+  table {
+    background-color: transparent !important;
+  }
+  table thead,
+  table tbody,
+  table thead tr {
+    border-color: var(--c-border) !important;
+    background-color: transparent !important;
+  }
+  table tbody tr {
     border-color: var(--c-border) !important;
     background-color: transparent !important;
   }
   table tbody tr:nth-child(odd) td {
     background-color: var(--c-hover) !important;
   }
-  table tr th,
-  table tr td {
+  table tbody tr th,
+  table tbody tr td {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
-  }
-  .selector {
-    border-color: var(--c-border) !important;
-    background-color: var(--c-background) !important;
-  }
-  .selector .current,
-  .selector .triangle .icon-font {
-    color: var(--c-title) !important;
-  }
-  .selector .data-list {
-    border-color: var(--c-border) !important;
-    background-color: var(--c-background) !important;
-  }
-  .selector .data-list li {
-    transition: background-color 0.3s ease-in-out !important;
-  }
-  .selector .data-list li:hover {
-    background-color: var(--c-hover) !important;
   }
   ::-webkit-input-placeholder {
     color: #d2d2d2;
@@ -182,9 +173,207 @@
   .comment-bilibili-fold .reply-notice {
     display: none;
   }
+  .selector {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-background) !important;
+  }
+  .selector .current,
+  .selector .triangle .icon-font {
+    color: var(--c-title) !important;
+  }
+  .selector .data-list {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-background) !important;
+  }
+  .selector .data-list li {
+    transition: background-color 0.3s ease-in-out !important;
+  }
+  .selector .data-list li:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .area-selector,
+  .area-panel,
+  .ui-dropdown .ul-dropdown-list,
+  .dropdown .dropdown-btn,
+  .dropdown .dropdown-menu,
+  .ui-radio .ui-radio-icon,
+  .ui-checkbox .ui-checkbox-icon,
+  .ui-select .ui-select-show-box,
+  .ui-select .ul-select-list,
+  .date-picker-date,
+  .date-picker-timer,
+  .list-header .filter-wrp .category-wrp,
+  .list-header .filter-wrp .order-wrp,
+  .ui-dropdown .ui-dropdown-text,
+  .date-input {
+    border: 1px solid var(--c-border) !important;
+    background-color: var(--c-background) !important;
+  }
+  .ui-dropdown .ul-dropdown-list .dropdown-item:hover,
+  .head .dropdown-menu li.ellipsis:hover,
+  .ui-select .ul-select-list .select-item:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .ui-select .ul-select-list .select-item.active,
+  .ui-select .ul-select-list .select-item:hover,
+  .date-panel .day.active {
+    color: var(--c-accent) !important;
+  }
+  .head .dropdown-menu .article-list {
+    border-color: var(--c-border) !important;
+  }
+  .ui-radio.active .ui-radio-icon,
+  .ui-checkbox input[type=checkbox]:checked+.ui-checkbox-icon,
+  .date-panel .day.active {
+    border-color: var(--c-accent) !important;
+  }
+  .ui-radio input[type=radio]:checked+.ui-radio-icon:after,
+  .ui-checkbox input[type=checkbox]:checked+.ui-checkbox-icon {
+    background-color: var(--c-accent) !important;
+  }
+  .check-box {
+    border-color: var(--c-border) !important;
+  }
+  .check-box.checked {
+    border-color: var(--c-accent) !important;
+    background-color: var(--c-accent) !important;
+  }
+  .check-box.checked::after {
+    color: var(--c-white) !important;
+  }
+  .bili-switcher,
+  .bl-switch,
+  .check-radio-v2-2-container {
+    border: 1px solid var(--c-border) !important;
+    background-color: var(--c-background) !important;
+    transition: all 0.3s ease-in-out;
+  }
+  .bili-switcher::after,
+  .bl-switch::after,
+  .check-radio-v2-2-container::after {
+    background-color: var(--c-white) !important;
+  }
+  .bili-switcher.bl-switch-checked,
+  .bl-switch.bl-switch-checked,
+  .check-radio-v2-2-container.bl-switch-checked,
+  .bili-switcher.checked,
+  .bl-switch.checked,
+  .check-radio-v2-2-container.checked,
+  .bili-switcher.check-radio-v2-2-container-active,
+  .bl-switch.check-radio-v2-2-container-active,
+  .check-radio-v2-2-container.check-radio-v2-2-container-active {
+    border-color: var(--c-accent) !important;
+    background-color: var(--c-accent) !important;
+  }
+  .pika-single,
+  .date-picker-v2-container,
+  .time-picker-v2-container,
+  .s-panel,
+  .date-panel {
+    border: 1px solid var(--c-border) !important;
+    background-color: var(--c-background) !important;
+  }
+  .pika-single .pika-label,
+  .date-picker-v2-container .pika-label,
+  .time-picker-v2-container .pika-label,
+  .s-panel .pika-label,
+  .date-panel .pika-label {
+    background-color: var(--c-hover) !important;
+  }
+  .pika-single .pika-table thead,
+  .date-picker-v2-container .pika-table thead,
+  .time-picker-v2-container .pika-table thead,
+  .s-panel .pika-table thead,
+  .date-panel .pika-table thead,
+  .pika-single .pika-table tbody,
+  .date-picker-v2-container .pika-table tbody,
+  .time-picker-v2-container .pika-table tbody,
+  .s-panel .pika-table tbody,
+  .date-panel .pika-table tbody {
+    border-color: var(--c-background) !important;
+  }
+  .pika-single button,
+  .date-picker-v2-container button,
+  .time-picker-v2-container button,
+  .s-panel button,
+  .date-panel button {
+    background-color: transparent !important;
+    color: var(--c-title) !important;
+  }
+  .pika-single button::after,
+  .date-picker-v2-container button::after,
+  .time-picker-v2-container button::after,
+  .s-panel button::after,
+  .date-panel button::after {
+    content: none !important;
+  }
+  .pika-single .is-selected button,
+  .date-picker-v2-container .is-selected button,
+  .time-picker-v2-container .is-selected button,
+  .s-panel .is-selected button,
+  .date-panel .is-selected button {
+    background-color: var(--c-accent) !important;
+    color: var(--c-white) !important;
+  }
+  .ui-calendar .main-wrap {
+    border: 1px solid var(--c-border) !important;
+    background-color: var(--c-background) !important;
+  }
+  .ui-calendar .main-wrap .shortmenus {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-hover) !important;
+  }
+  .ui-calendar .main-wrap .flatpickr-calendar {
+    background-color: var(--c-background) !important;
+  }
+  .ui-calendar .main-wrap .flatpickr-calendar .flatpickr-months .flatpickr-next-month svg,
+  .ui-calendar .main-wrap .flatpickr-calendar .flatpickr-months .flatpickr-prev-month svg {
+    fill: var(--c-title) !important;
+  }
+  .ui-calendar .main-wrap .flatpickr-calendar span.flatpickr-weekday {
+    color: var(--c-title) !important;
+  }
+  .ui-calendar .main-wrap .flatpickr-calendar .startRange {
+    border-color: var(--c-accent) !important;
+    background-color: var(--c-accent) !important;
+    color: var(--c-white) !important;
+  }
+  .ui-calendar .main-wrap .flatpickr-calendar .inRange {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-hover) !important;
+  }
+  .time-picker-v2-container .time-picker-body-wrp .time-picker-panel-select-wrp .time-picker-panel-select-item:hover,
+  .s-item.active,
+  .s-item:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .date-picker-v2-container div {
+    color: var(--c-title) !important;
+  }
+  .date-picker-v2-container i,
+  select {
+    color: var(--c-text) !important;
+  }
+  .s-item.active,
+  .s-item:hover {
+    color: var(--c-title) !important;
+  }
+  .time-picker-v2-container .time-picker-head-wrp,
+  .time-picker-v2-container .time-picker-body-wrp .time-picker-panel-select-wrp,
+  .date-panel .ym {
+    border-color: var(--c-border) !important;
+  }
+  .radio-icon,
+  .bp-selector::before {
+    border-color: var(--c-border) !important;
+  }
+  .radio-icon.checked::before {
+    background-color: var(--c-accent) !important;
+  }
   button,
   .btn,
   .default-btn,
+  .bili-btn,
   .go-top,
   .to-top,
   .backup,
@@ -241,7 +430,20 @@
   .info-line .attend,
   .link-panigation .panigation.selected,
   .submit-btn,
-  .btn-go-write {
+  .btn-go-write,
+  .pagination-container .pagination.active,
+  #nav_upload_btn,
+  .back-top-box .totop-container.utils-box,
+  .upload-v2-step1-container #homeDrop .upload-btn,
+  .video-editor-ol-wrp .video-editor-ol-btn,
+  .cc-btn,
+  .music-upload-wrapper .upload-music-bar-wrapper,
+  .create-compilations-btn,
+  .compila-condition .compila-right .compila-add,
+  .compila-not-find .compila-not-find-ime,
+  .contri-not-find .contri-not-find-ime,
+  .list-playbtn,
+  .send-button {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -252,6 +454,7 @@
   button span,
   .btn span,
   .default-btn span,
+  .bili-btn span,
   .go-top span,
   .to-top span,
   .backup span,
@@ -308,12 +511,26 @@
   .info-line .attend span,
   .link-panigation .panigation.selected span,
   .submit-btn span,
-  .btn-go-write span {
+  .btn-go-write span,
+  .pagination-container .pagination.active span,
+  #nav_upload_btn span,
+  .back-top-box .totop-container.utils-box span,
+  .upload-v2-step1-container #homeDrop .upload-btn span,
+  .video-editor-ol-wrp .video-editor-ol-btn span,
+  .cc-btn span,
+  .music-upload-wrapper .upload-music-bar-wrapper span,
+  .create-compilations-btn span,
+  .compila-condition .compila-right .compila-add span,
+  .compila-not-find .compila-not-find-ime span,
+  .contri-not-find .contri-not-find-ime span,
+  .list-playbtn span,
+  .send-button span {
     color: var(--c-white) !important;
   }
   button::after,
   .btn::after,
   .default-btn::after,
+  .bili-btn::after,
   .go-top::after,
   .to-top::after,
   .backup::after,
@@ -370,7 +587,20 @@
   .info-line .attend::after,
   .link-panigation .panigation.selected::after,
   .submit-btn::after,
-  .btn-go-write::after {
+  .btn-go-write::after,
+  .pagination-container .pagination.active::after,
+  #nav_upload_btn::after,
+  .back-top-box .totop-container.utils-box::after,
+  .upload-v2-step1-container #homeDrop .upload-btn::after,
+  .video-editor-ol-wrp .video-editor-ol-btn::after,
+  .cc-btn::after,
+  .music-upload-wrapper .upload-music-bar-wrapper::after,
+  .create-compilations-btn::after,
+  .compila-condition .compila-right .compila-add::after,
+  .compila-not-find .compila-not-find-ime::after,
+  .contri-not-find .contri-not-find-ime::after,
+  .list-playbtn::after,
+  .send-button::after {
     content: '';
     display: block;
     position: absolute;
@@ -385,6 +615,7 @@
   button:hover,
   .btn:hover,
   .default-btn:hover,
+  .bili-btn:hover,
   .go-top:hover,
   .to-top:hover,
   .backup:hover,
@@ -441,12 +672,26 @@
   .info-line .attend:hover,
   .link-panigation .panigation.selected:hover,
   .submit-btn:hover,
-  .btn-go-write:hover {
+  .btn-go-write:hover,
+  .pagination-container .pagination.active:hover,
+  #nav_upload_btn:hover,
+  .back-top-box .totop-container.utils-box:hover,
+  .upload-v2-step1-container #homeDrop .upload-btn:hover,
+  .video-editor-ol-wrp .video-editor-ol-btn:hover,
+  .cc-btn:hover,
+  .music-upload-wrapper .upload-music-bar-wrapper:hover,
+  .create-compilations-btn:hover,
+  .compila-condition .compila-right .compila-add:hover,
+  .compila-not-find .compila-not-find-ime:hover,
+  .contri-not-find .contri-not-find-ime:hover,
+  .list-playbtn:hover,
+  .send-button:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
   .btn:hover span,
   .default-btn:hover span,
+  .bili-btn:hover span,
   .go-top:hover span,
   .to-top:hover span,
   .backup:hover span,
@@ -503,12 +748,26 @@
   .info-line .attend:hover span,
   .link-panigation .panigation.selected:hover span,
   .submit-btn:hover span,
-  .btn-go-write:hover span {
+  .btn-go-write:hover span,
+  .pagination-container .pagination.active:hover span,
+  #nav_upload_btn:hover span,
+  .back-top-box .totop-container.utils-box:hover span,
+  .upload-v2-step1-container #homeDrop .upload-btn:hover span,
+  .video-editor-ol-wrp .video-editor-ol-btn:hover span,
+  .cc-btn:hover span,
+  .music-upload-wrapper .upload-music-bar-wrapper:hover span,
+  .create-compilations-btn:hover span,
+  .compila-condition .compila-right .compila-add:hover span,
+  .compila-not-find .compila-not-find-ime:hover span,
+  .contri-not-find .contri-not-find-ime:hover span,
+  .list-playbtn:hover span,
+  .send-button:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
   .btn:hover::after,
   .default-btn:hover::after,
+  .bili-btn:hover::after,
   .go-top:hover::after,
   .to-top:hover::after,
   .backup:hover::after,
@@ -565,11 +824,25 @@
   .info-line .attend:hover::after,
   .link-panigation .panigation.selected:hover::after,
   .submit-btn:hover::after,
-  .btn-go-write:hover::after {
+  .btn-go-write:hover::after,
+  .pagination-container .pagination.active:hover::after,
+  #nav_upload_btn:hover::after,
+  .back-top-box .totop-container.utils-box:hover::after,
+  .upload-v2-step1-container #homeDrop .upload-btn:hover::after,
+  .video-editor-ol-wrp .video-editor-ol-btn:hover::after,
+  .cc-btn:hover::after,
+  .music-upload-wrapper .upload-music-bar-wrapper:hover::after,
+  .create-compilations-btn:hover::after,
+  .compila-condition .compila-right .compila-add:hover::after,
+  .compila-not-find .compila-not-find-ime:hover::after,
+  .contri-not-find .contri-not-find-ime:hover::after,
+  .list-playbtn:hover::after,
+  .send-button:hover::after {
     transform: translateX(100%);
   }
   .default,
   .more-btn,
+  .forward,
   .prev,
   .next,
   .btn-pre,
@@ -623,7 +896,13 @@
   .album-popup-cancel,
   .author-info .favourite-btn-ctnr .communicate-btn,
   .link-panigation .panigation,
-  .submit-btn.disabled {
+  .submit-btn.disabled,
+  .pagination-container .pagination,
+  .source-rank-stretch-button,
+  .classify .classify-list .list-item .class-block,
+  .btn-group .ui-btn.white,
+  .publish-launcher .publish-btn.disabled,
+  .button-bar .bp-button {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -631,6 +910,7 @@
   }
   .default span,
   .more-btn span,
+  .forward span,
   .prev span,
   .next span,
   .btn-pre span,
@@ -684,11 +964,18 @@
   .album-popup-cancel span,
   .author-info .favourite-btn-ctnr .communicate-btn span,
   .link-panigation .panigation span,
-  .submit-btn.disabled span {
+  .submit-btn.disabled span,
+  .pagination-container .pagination span,
+  .source-rank-stretch-button span,
+  .classify .classify-list .list-item .class-block span,
+  .btn-group .ui-btn.white span,
+  .publish-launcher .publish-btn.disabled span,
+  .button-bar .bp-button span {
     color: var(--c-text) !important;
   }
   .default::after,
   .more-btn::after,
+  .forward::after,
   .prev::after,
   .next::after,
   .btn-pre::after,
@@ -742,11 +1029,18 @@
   .album-popup-cancel::after,
   .author-info .favourite-btn-ctnr .communicate-btn::after,
   .link-panigation .panigation::after,
-  .submit-btn.disabled::after {
+  .submit-btn.disabled::after,
+  .pagination-container .pagination::after,
+  .source-rank-stretch-button::after,
+  .classify .classify-list .list-item .class-block::after,
+  .btn-group .ui-btn.white::after,
+  .publish-launcher .publish-btn.disabled::after,
+  .button-bar .bp-button::after {
     content: none !important;
   }
   .default:hover,
   .more-btn:hover,
+  .forward:hover,
   .prev:hover,
   .next:hover,
   .btn-pre:hover,
@@ -800,12 +1094,19 @@
   .album-popup-cancel:hover,
   .author-info .favourite-btn-ctnr .communicate-btn:hover,
   .link-panigation .panigation:hover,
-  .submit-btn.disabled:hover {
+  .submit-btn.disabled:hover,
+  .pagination-container .pagination:hover,
+  .source-rank-stretch-button:hover,
+  .classify .classify-list .list-item .class-block:hover,
+  .btn-group .ui-btn.white:hover,
+  .publish-launcher .publish-btn.disabled:hover,
+  .button-bar .bp-button:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
   }
   .default:hover span,
   .more-btn:hover span,
+  .forward:hover span,
   .prev:hover span,
   .next:hover span,
   .btn-pre:hover span,
@@ -859,7 +1160,13 @@
   .album-popup-cancel:hover span,
   .author-info .favourite-btn-ctnr .communicate-btn:hover span,
   .link-panigation .panigation:hover span,
-  .submit-btn.disabled:hover span {
+  .submit-btn.disabled:hover span,
+  .pagination-container .pagination:hover span,
+  .source-rank-stretch-button:hover span,
+  .classify .classify-list .list-item .class-block:hover span,
+  .btn-group .ui-btn.white:hover span,
+  .publish-launcher .publish-btn.disabled:hover span,
+  .button-bar .bp-button:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -903,7 +1210,25 @@
   .hour-rank,
   .attention-btn-ctnr .left-part,
   .gift-item .corner-mark,
-  .container .name-info .live {
+  .container .name-info .live,
+  .count-num,
+  .user-info>.uid,
+  .user-info>.tag-flag,
+  .page-title .count,
+  .history-card .up-info .room-status>span.on-live,
+  .achievement-card-centent>.header>.state-normal.-success,
+  #app-news #list .item .title-wrap .activity,
+  .tab-selector-wrap .tag-wrap .tag span.selected,
+  .nav-upload-container .nav-upload-item .red_point,
+  .tips-item_wrap .tips-item_left .label,
+  .calendarEntry_box .calendarEntry_content .luck_wrap .luck_title,
+  .carousel-module .panel .title .tag-label.doing,
+  .comment-list-item .ci-title .relation-label,
+  .announce li>div span,
+  .video-jam-state,
+  .red_point,
+  .video-editor-ol-wrp .video-editor-ol-new,
+  .qa-area-ol-new {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
@@ -941,7 +1266,25 @@
   .hour-rank:hover,
   .attention-btn-ctnr .left-part:hover,
   .gift-item .corner-mark:hover,
-  .container .name-info .live:hover {
+  .container .name-info .live:hover,
+  .count-num:hover,
+  .user-info>.uid:hover,
+  .user-info>.tag-flag:hover,
+  .page-title .count:hover,
+  .history-card .up-info .room-status>span.on-live:hover,
+  .achievement-card-centent>.header>.state-normal.-success:hover,
+  #app-news #list .item .title-wrap .activity:hover,
+  .tab-selector-wrap .tag-wrap .tag span.selected:hover,
+  .nav-upload-container .nav-upload-item .red_point:hover,
+  .tips-item_wrap .tips-item_left .label:hover,
+  .calendarEntry_box .calendarEntry_content .luck_wrap .luck_title:hover,
+  .carousel-module .panel .title .tag-label.doing:hover,
+  .comment-list-item .ci-title .relation-label:hover,
+  .announce li>div span:hover,
+  .video-jam-state:hover,
+  .red_point:hover,
+  .video-editor-ol-wrp .video-editor-ol-new:hover,
+  .qa-area-ol-new:hover {
     color: var(--c-white) !important;
   }
   .gg-icon,
@@ -956,7 +1299,11 @@
   .home-userstatus,
   .live-status-label,
   .up-level-icon,
-  .user-level-icon {
+  .user-level-icon,
+  .history-card .up-info .room-status>span,
+  .achievement-card-centent>.header>.state-normal,
+  .tab-selector-wrap .tag-wrap .tag span,
+  .category {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -964,7 +1311,8 @@
   .tag:hover,
   .tag-list li.tag-item:hover,
   .tag-area .tag:hover,
-  .link-tag:hover {
+  .link-tag:hover,
+  .category:hover {
     background-color: var(--c-hover) !important;
   }
   .primary-menu .nav-menu .channel.on:after,
@@ -982,7 +1330,9 @@
   .tag:hover,
   .tag-list li.tag-item:hover,
   .tag-area .tag:hover,
-  .link-tag:hover {
+  .link-tag:hover,
+  .tab-selector-wrap .tag-wrap .tag span:hover,
+  .category:hover {
     border-color: var(--c-accent) !important;
   }
   input,
@@ -1013,7 +1363,28 @@
   .bili-header-m .mini-wnd-nav,
   .bili-header-m .nav-menu .nav-con .nav-item .i-frame,
   .popup-bind-tip,
-  .set-copyright .copyright-select-box {
+  .set-copyright .copyright-select-box,
+  .el-popover,
+  .new-calendar-wrap,
+  .dropdown__content,
+  .select-box,
+  .bui-tooltip .bui-tooltip-bubble .bui-tooltip-content .bui-tooltip-inner,
+  .bui-tooltip .bui-tooltip-bubble .bui-tooltip-content:before,
+  .bui-tooltip .bui-tooltip-arrow:before,
+  .option-menu,
+  .upload-v2-step1-container #homeDrop .video-jam .video-jam-comment,
+  .upload-v2-container .upload-agreement .reg-1 .reg-2-tip,
+  .editor-box .editor-toolbar .child-list,
+  .classify .sub-list,
+  .modal-wrap,
+  .load-marks,
+  .contri-condition .contri-sort .contri-sort-type,
+  .advice-dialog-wrapper,
+  .tag-modal,
+  .share-board .share-btn,
+  .static-popup,
+  .hash-popup.bg-white,
+  .create-vote {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -1025,7 +1396,16 @@
   .more-ops-list li:hover,
   .be-dropdown-item:hover,
   .player-auxiliary-area .player-auxiliary-filter .player-auxiliary-setting-menu-wrap .player-auxiliary-setting-menu-list:hover,
-  .select-wrap .select-option p:hover {
+  .select-wrap .select-option p:hover,
+  .dropdown__content .dropdown__active,
+  .dropdown__content .dropdown__item:hover,
+  .dropdown .dropdown-menu .selected,
+  .option-menu .menu-item:hover,
+  .classify .sub-list .sub-item.active,
+  .classify .sub-list .sub-item:hover,
+  .contri-condition .contri-sort .contri-sort-type li:hover,
+  .hash-popup .topic-container .item.is-selected,
+  .hash-popup .topic-container .item:hover {
     background-color: var(--c-hover) !important;
   }
   .van-popper .popper__arrow {
@@ -1360,14 +1740,16 @@
     display: none;
   }
   #comment,
+  .comment,
   .page-comment,
   .bb-comment,
+  .comment-bg,
   .comment-area,
   .comment-bilibili-fold,
   .emoji-box .emoji-tabs,
   .bb-comment .comment-list .list-item .reply-box .view-more .btn-more:hover,
   .comment-bilibili-fold .comment-list .list-item .reply-box .view-more .btn-more:hover {
-    background-color: var(--c-background);
+    background-color: var(--c-background) !important;
   }
   .paging-box .current,
   .bb-comment .nameplate .nameplate-card .nameplate-text .n-name,
@@ -1405,7 +1787,8 @@
   .dynamic-list-item-wrap,
   .comment-area .comm-more,
   .bb-comment .stick.true-love .medal-level,
-  .comment-bilibili-fold .stick.true-love .medal-level {
+  .comment-bilibili-fold .stick.true-love .medal-level,
+  .list-comment {
     border-color: var(--c-border) !important;
   }
   .bb-comment .nameplate .nameplate-card .nameplate-text,
@@ -1471,7 +1854,8 @@
   .textarea-container .comm-tool .comm-emoji {
     background-color: transparent !important;
   }
-  .feed-card .content .bottom img {
+  .feed-card .content .bottom img,
+  .card-decorator {
     display: none !important;
   }
   .feed-tag .publish-panel-container,
@@ -2189,6 +2573,8 @@
     overflow: hidden scroll;
     max-height: 68px;
   }
+}
+@-moz-document url-prefix("https://www.bilibili.com/blackboard/") {
   .active-title .b-active-i,
   .topic-title .b-topic-i {
     display: none !important;
@@ -2786,8 +3172,8 @@
   .section .more {
     background-image: none;
   }
-  .content {
-    width: 100% !important;
+  #page-index .video.full-rows .content {
+    max-height: none;
   }
   #page-index .video .content,
   #page-index .coin .content,
@@ -3087,7 +3473,8 @@
   .pendant-mail-margin h3,
   .pendant-mail-margin .vip-description,
   .face-nav>.active:after,
-  .top_bg {
+  .top_bg,
+  .official-header {
     display: none !important;
   }
   .continuity-content,
@@ -3101,7 +3488,8 @@
   .security-ul .security-list:hover,
   .big-more-item-item:hover .big-more-item-txt,
   .points-pendant-item:hover,
-  .pendant-list li:hover {
+  .pendant-list li:hover,
+  .identmagBot {
     background-color: var(--c-hover) !important;
   }
   .home-top-level-upgo,
@@ -3109,7 +3497,11 @@
     background-color: var(--c-accent) !important;
   }
   .re-exp-getexp,
-  .black-time em {
+  .black-time em,
+  .per-left-line,
+  .per-right-line,
+  .organ-left-line,
+  .organ-right-line {
     background-color: transparent !important;
   }
   .home-top-msg-name,
@@ -3132,7 +3524,8 @@
   .coin-record .coin-title,
   .record-nav-item,
   .invitation-info-title,
-  .pendant-nav li div {
+  .pendant-nav li div,
+  .official-title {
     color: var(--c-title) !important;
   }
   .now-num,
@@ -3140,6 +3533,10 @@
   .black-time,
   .coin-rest-info-inco {
     color: var(--c-text) !important;
+  }
+  .official-home-warapper .card-name,
+  .official-home-warapper .card-info {
+    color: var(--c-white) !important;
   }
   .home-top-msg-name-color,
   .big-user-pick-name,
@@ -3183,7 +3580,9 @@
   .record-exp-title,
   .record-exp-table-wrapper,
   .invitation-top-warp,
-  .invtable {
+  .invtable,
+  .identmag,
+  .identmagTop {
     border-color: var(--c-border) !important;
   }
   .active .tabs-normal-txt,
@@ -3348,6 +3747,7 @@
     transition: background-color 0.3s ease-in-out !important;
   }
   .bg-blue {
+    border-radius: 4px;
     background-color: var(--c-hover) !important;
     color: var(--c-title) !important;
   }
@@ -3376,7 +3776,7 @@
     background-color: var(--c-background) !important;
   }
 }
-@-moz-document url-prefix("https://live.bilibili.com/") {
+@-moz-document url-prefix("https://live.bilibili.com/"), url-prefix("https://link.bilibili.com/") {
   .user-title-sending-cntr .panel,
   .user-panel-ctnr .user-panel,
   .link-panel-ctnr,
@@ -3392,7 +3792,8 @@
   .search-bar-ctnr .search-bar input,
   .calendar-checkin .title,
   .calendar-checkin .calendar-wrapper,
-  .calendar-checkin .checkin-rewards {
+  .calendar-checkin .checkin-rewards,
+  .shortcuts-ctnr .shortcut-item {
     background-color: transparent !important;
   }
   .divider {
@@ -3425,6 +3826,12 @@
   .search-bar-ctnr .search-bar {
     border: 0 !important;
     background-color: var(--c-hover) !important;
+  }
+  .link-navbar .main-ctnr .nav-logo:before {
+    top: 11px !important;
+    width: 30px !important;
+    height: 30px !important;
+    background-size: 30px !important;
   }
   .footer-ctnr,
   .pendant-ctnr.left-top,
@@ -3479,6 +3886,7 @@
   }
   .bilibili-live-player button,
   .live-player-ctnr button,
+  .awarding-panel button,
   .search-bar-ctnr .search-bar .search-btn,
   .link-panel-ctnr .load-more .load-more-btn,
   .attention-live .switch-btn {
@@ -3486,6 +3894,7 @@
   }
   .bilibili-live-player button::after,
   .live-player-ctnr button::after,
+  .awarding-panel button::after,
   .search-bar-ctnr .search-bar .search-btn::after,
   .link-panel-ctnr .load-more .load-more-btn::after,
   .attention-live .switch-btn::after {
@@ -3518,13 +3927,16 @@
   .wrapper .content .state-null>.txt>p:before {
     display: none !important;
   }
-  .content,
+  #app-ctnr .content,
   .child-nav,
   .top3 li div.content-detail,
   .rank-detail .top50,
   .rank-detail .my-info,
   .progress-tv {
     background-color: var(--c-background) !important;
+  }
+  .rank-detail .top50 li:nth-child(2n) {
+    background-color: var(--c-hover) !important;
   }
   .rank-detail dd .score {
     background-color: transparent !important;
@@ -3551,6 +3963,9 @@
   }
   .wrapper .content .state-null>.txt {
     display: inline-block;
+  }
+  .main-ctnr .content-ctn .header {
+    padding-top: 80px;
   }
   .main-container>h1.title>span {
     border-radius: 10px;
@@ -3681,7 +4096,8 @@
   .room-introduction-tags,
   .attention-btn-ctnr .right-part,
   .rank-list-ctnr,
-  .tabs .tab-list .item {
+  .tabs .tab-list .item,
+  .edit-button {
     border-color: var(--c-border) !important;
   }
   .recharge-store-box ul.select-list .item.active {
@@ -3726,12 +4142,6 @@
   .right-action-ctnr::after,
   .live-skin-highlight-text::after {
     content: none !important;
-  }
-  .link-navbar .main-ctnr .nav-logo:before {
-    top: 11px !important;
-    width: 30px !important;
-    height: 30px !important;
-    background-size: 30px !important;
   }
   .live-room-app .app-content .app-body .player-and-aside-area .aside-area .chat-control-panel {
     border-top: 1px solid var(--c-border);
@@ -3786,6 +4196,8 @@
       box-shadow: 0 0 30px 1px rgba(84,94,101,0.4);
     }
 }
+}
+@-moz-document url-prefix("https://live.bilibili.com/"), url-prefix("https://live.bilibili.com/activity/"), url-prefix("https://live.bilibili.com/p/") {
   .bili-footer {
     display: none !important;
   }
@@ -3797,6 +4209,9 @@
   .popup-bg-cntr .popup-cntr .left-part,
   .bingo-list {
     background-color: var(--c-hover) !important;
+  }
+  body {
+    background-color: transparent !important;
   }
   .bili-share-pc .title,
   .popup-bg-cntr .popup-cntr .right-part .activity-name,
@@ -3818,12 +4233,214 @@
   .box-body {
     margin-bottom: 30px;
   }
+  .page-bg-wrap {
+    margin-top: 0 !important;
+  }
+  .link-navbar {
+    position: absolute;
+    width: 100%;
+  }
   button {
     background-color: transparent !important;
     color: var(--c-title) !important;
   }
   button::after {
     content: none !important;
+  }
+}
+@-moz-document url-prefix("https://link.bilibili.com/") {
+  header figure,
+  .nav-item .svg-icon,
+  .ad {
+    display: none !important;
+  }
+  #app-news #list,
+  .news-detail-content,
+  .tab-selector-wrap,
+  .app-body .section-block,
+  .no-data,
+  .user-hd,
+  .favourite-card,
+  .history-card,
+  .section-filter,
+  .title-library-wrap .title-item,
+  .achievement-user,
+  .loading-error-ctnr,
+  .daily-task .task-item,
+  .achievement-card,
+  .invite,
+  .income-info .item,
+  .mce-panel,
+  .mce-btn,
+  .live-haruna .tab-body .item,
+  .sailors-ctnr {
+    background-color: var(--c-background) !important;
+  }
+  .progress-bar-ctnr .bar-body,
+  div.mce-edit-area,
+  .mce-btn:hover,
+  .mce-btn:focus,
+  .mce-menu-item:hover,
+  .mce-menu-item.mce-selected,
+  .mce-menu-item:focus,
+  .range.active {
+    background-color: var(--c-hover) !important;
+  }
+  .item .title-wrap .notice,
+  .item .title-wrap .regulation,
+  .progress-bar-ctnr .bar-body .progress-bar,
+  .tabnav-tip {
+    background-color: var(--c-accent) !important;
+  }
+  .page-title .v-middle,
+  .user-info>.user-name,
+  .history-card .room-info .room-title,
+  .title-name,
+  .daily-task .task-item .task-status,
+  .achievement-card-centent>.header,
+  .mce-ico {
+    color: var(--c-title) !important;
+  }
+  .no-data-msg {
+    color: var(--c-text) !important;
+  }
+  .tabnav-tip {
+    color: var(--c-white) !important;
+  }
+  .icon-edit,
+  .income-info .item .value,
+  .income-info .item .value span,
+  .tab-selector-wrap .tab-wrap .tab span.active {
+    color: var(--c-accent) !important;
+  }
+  .news-detail-content .sepatator,
+  .favourite-card,
+  .favourite-card .anchor-info,
+  .favourite-card .other-info-ctnr .anchor-live:before,
+  .title-library-wrap .title-item,
+  .daily-task .task-item,
+  .achievement-card,
+  .income-info .item,
+  .mce-panel,
+  .mce-btn,
+  .mce-tinymce .mce-btn button,
+  .mce-window-head,
+  .live-haruna .tab-body .item,
+  .latest,
+  .areas .area {
+    border-color: var(--c-border) !important;
+  }
+  .mce-caret {
+    border-top-color: var(--c-title);
+  }
+  .mce-menu-item.mce-selected .mce-caret,
+  .mce-menu-item:focus .mce-caret,
+  .mce-menu-item:hover .mce-caret {
+    border-left-color: var(--c-border) !important;
+  }
+  .tab-selector-wrap .tab-wrap,
+  .app-body .section-block,
+  .user,
+  .section-nav,
+  .section-filter,
+  .achievement-user,
+  .user-ctnr .top,
+  .mce-btn-group,
+  .my-room.room-info .room-info-ctnr .top,
+  .sailors-ctnr {
+    border: 0 !important;
+  }
+  .tab-selector-wrap .tag-wrap .tag span {
+    border: 1px solid var(--c-border);
+  }
+  .side-bar .nav-item-ctnr.expanded .sub-pages-item-ctnr {
+    height: auto !important;
+  }
+  .rhythm-storm .dp-i-block button,
+  .fans-medal .inline button {
+    vertical-align: middle;
+  }
+  .link-navbar {
+    border-bottom: 1px solid var(--c-border);
+    background-color: var(--c-background) !important;
+  }
+  .side-bar {
+    width: 160px;
+    border: 0;
+    background-color: transparent;
+  }
+  .side-bar .nav-item-ctnr.expanded .nav-item {
+    border: 0 !important;
+    color: var(--c-title) !important;
+    text-align: left !important;
+  }
+  .side-bar .nav-item-ctnr.expanded .nav-item .link-ctnr span {
+    color: var(--c-title) !important;
+  }
+  .side-bar .nav-item-ctnr.expanded .sub-pages-item-ctnr {
+    border: 0 !important;
+  }
+  .side-bar .nav-item-ctnr.expanded .sub-pages-item-ctnr .sub-pages-item {
+    padding: 0 !important;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .side-bar .nav-item-ctnr.expanded .sub-pages-item-ctnr .sub-pages-item:hover,
+  .side-bar .nav-item-ctnr.expanded .sub-pages-item-ctnr .sub-pages-item.active {
+    background-color: var(--c-hover) !important;
+  }
+  .tabnav {
+    display: flex;
+    justify-content: center;
+    border: 0;
+    background-color: var(--c-background);
+  }
+  .tabnav .tabnav-item {
+    margin: 0;
+  }
+  .tabnav .tabnav-item:hover .tabnav-content,
+  .tabnav .tabnav-item.current .tabnav-content {
+    border-color: var(--c-accent);
+    color: var(--c-accent);
+  }
+  .bl-search {
+    border: 1px solid var(--c-border);
+    background-color: var(--c-background) !important;
+  }
+  .bl-search.focused {
+    border-color: var(--c-accent) !important;
+  }
+  .bl-search.focused:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .bl-search input {
+    background-color: transparent !important;
+  }
+  .tab-selector-wrap .tab-wrap ul {
+    display: flex;
+    justify-content: center;
+  }
+  .user-box .btn,
+  .mce-tinymce .mce-btn button,
+  .mce-container button {
+    background-color: transparent !important;
+    color: var(--c-text) !important;
+  }
+  .user-box .btn span,
+  .mce-tinymce .mce-btn button span,
+  .mce-container button span {
+    color: var(--c-text) !important;
+  }
+  .user-box .btn::after,
+  .mce-tinymce .mce-btn button::after,
+  .mce-container button::after {
+    content: none !important;
+  }
+  .user-box .btn:hover,
+  .mce-tinymce .mce-btn button:hover,
+  .mce-container button:hover {
+    color: var(--c-accent) !important;
   }
 }
 @-moz-document url-prefix("https://search.bilibili.com/") {
@@ -4769,5 +5386,567 @@
   .set-copyright .copyright-select-box::before {
     border-color: var(--c-border) transparent transparent var(--c-border) !important;
     background-color: var(--c-background) !important;
+  }
+}
+@-moz-document url-prefix("https://member.bilibili.com/"), url-prefix("https://cm.bilibili.com/") {
+  .header span.el-popover__reference,
+  .header-popover-avatar .logout .line {
+    display: none !important;
+  }
+  .header-popover-avatar .link:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .header .left-block .logo,
+  .link-top-container .link-top-item.active span {
+    color: var(--c-accent) !important;
+  }
+  .version-switch-section .bottom-border {
+    border-color: var(--c-border) !important;
+  }
+  .el-popper .popper__arrow:after {
+    border-bottom-color: var(--c-background) !important;
+  }
+  .header .right-block .avatar {
+    margin: 0 !important;
+  }
+  .cc-header .header {
+    border-bottom: 1px solid var(--c-border);
+    background-color: var(--c-background) !important;
+    box-shadow: none !important;
+  }
+  .header .left-block .main-site {
+    font-size: 0 !important;
+  }
+  .header .left-block .main-site .bcc-iconfont {
+    font-size: 24px;
+  }
+  .link-top-container,
+  .version-switch-section,
+  .practice-wrap .tab-container {
+    border-bottom-color: var(--c-border) !important;
+    background-color: var(--c-background) !important;
+  }
+  .slider-bar .nav-cut-off-line,
+  .border-line {
+    display: none !important;
+  }
+  .cc-nav-wrp,
+  .nav-upload-container {
+    background-color: var(--c-background) !important;
+  }
+  .nav-upload-container .nav-upload-item:hover,
+  .bcc-nav-slider-sub-menu__wrap .bcc-nav-slider-sub-menu.is-active,
+  .slider-bar .bar-item .bcc-nav-slider-item__wrap:hover,
+  .slider-bar .bar-item .bcc-nav-slider-sub-menu:hover,
+  .slider-bar .bcc-nav-slider-item__wrap.is-active {
+    background-color: var(--c-hover) !important;
+  }
+  .cc-nav .simplebar-scrollbar {
+    background-color: var(--c-scroll) !important;
+  }
+  .slider-bar .menu-title,
+  .slider-bar .menu-title span,
+  .slider-bar .bar-item i,
+  .left-nav-item i,
+  .advice-btn,
+  .advice-title,
+  .advice-item-title {
+    color: var(--c-title) !important;
+  }
+  .advice-info {
+    color: var(--c-text) !important;
+  }
+  .back-top-box .item-desc i {
+    color: var(--c-white) !important;
+  }
+  .bcc-nav-slider-sub-menu.is-active .menu-title,
+  .router_wrap.active .menu-title span,
+  .slider-bar .bar-item .bcc-nav-slider-item__wrap .router-item.active,
+  .slider-bar .bar-item .bcc-nav-slider-item__wrap .router-item.active i,
+  .slider-bar .bar-item .bcc-nav-slider-item__wrap .router_wrap.active,
+  .slider-bar .bar-item .bcc-nav-slider-item__wrap .router_wrap.active i,
+  .slider-bar .bar-item .bcc-nav-slider-sub-menu .router-item.active,
+  .slider-bar .bar-item .bcc-nav-slider-sub-menu .router-item.active i,
+  .slider-bar .bar-item .bcc-nav-slider-sub-menu .router_wrap.active,
+  .slider-bar .bar-item .bcc-nav-slider-sub-menu .router_wrap.active i,
+  .left-nav-list.active .left-nav-item i,
+  .left-nav-list.active .left-nav-item span {
+    color: var(--c-accent) !important;
+  }
+  .cc-nav-wrp {
+    border-color: var(--c-border) !important;
+  }
+  .nav-upload-container {
+    border: 1px solid var(--c-border);
+  }
+  .nav-upload-container {
+    box-shadow: none !important;
+  }
+  .bcc-nav-slider-item__wrap,
+  .bcc-nav-slider-sub-menu {
+    transition: background-color 0.3s ease-in-out !important;
+  }
+  .side-utils .feedback-container,
+  .bili-tab.current:after,
+  .dc-radio-button.is-active::after,
+  .cc-zimu-wrp .zimu-header em,
+  .footer-content .social-menu {
+    display: none !important;
+  }
+  .cc-body,
+  .lab-wrap,
+  .setting,
+  .share-wrap,
+  .data-card,
+  .interact-wrap,
+  .academy-wrap,
+  .article-card,
+  .medal,
+  .danmu-container,
+  .new-calendar-wrap .calendar-body .date-desc_wrap,
+  .new-calendar-wrap .calendar-body .date-desc_wrap .item-desc_card,
+  .select-box .option-footer,
+  .dc-section1-body,
+  .comment-manage-wrap .content,
+  .comment-manage-wrap .content .action-bar,
+  #charge-wrapper .main-charge .elec-con .compute-wrap,
+  .toolbox,
+  .rule,
+  .create-protect-wrp,
+  .protect-apply-entry-wrp .protect-entry .error-tips,
+  .upload-v2-container .upload-agreement .reg-1 .reg-2-tip::after,
+  #edit-page,
+  .edit-article-wrap #edit-article-box,
+  #text-contribute .fixed-header,
+  .editor-box .editor-toolbar {
+    background-color: var(--c-background) !important;
+  }
+  .message-notice_wrap .tips-item_wrap,
+  .new-calendar-wrap .calendar-body .date-wrap .wrap-content .select-icon,
+  .notice_wrap,
+  .section-item,
+  .cc-article-wrp .article-card .meta-view .option,
+  .select-box .select-item:hover,
+  .select-box .option-footer:hover,
+  .helper .icon,
+  .pie-empty-wrapper,
+  .comment-list-item .ci-parent-reply,
+  #charge-wrapper .main-charge .elec-con,
+  #charge-wrapper .main-charge .shell-con,
+  .upload-v2-step1-container #homeDrop,
+  .video-editor-ol-wrp,
+  .editor-box,
+  .editor-box .editor-toolbar li.preview,
+  .cover-upload-box,
+  .ui-input-textarea,
+  .qa-area-ol-wrp {
+    background-color: var(--c-hover) !important;
+  }
+  .dc-progress-bar,
+  #charge-wrapper .main-charge .elec-con .progress .progress-bar .bar,
+  #charge-wrapper .main-charge .elec-con .progress .progress-bar .bar:after,
+  .apply-page-title:after,
+  .lab-item .lab-item-content .divide-line {
+    background-color: var(--c-border) !important;
+  }
+  .carousel-module .panel .title .tag,
+  .comment-list-item .ci-action a:hover,
+  .recent-danmu-wrp .danmu-filter .left .delete .option-wrp .act-btn,
+  .lab-item .lab-item-content,
+  .setting .follow-setting .follow-wrp .follow-modal,
+  .setting .public-setting .follow-wrp .follow-modal,
+  .setting .watermark-setting .watermark-wrp .watermark-modal,
+  .ui-input-textarea textarea,
+  .float-toolbar .toolbar-list,
+  .float-toolbar .back-top,
+  .edui-default .edui-editor {
+    background-color: transparent !important;
+  }
+  .tabs .tabs__header .tabs__header-item.is-active:after,
+  .dc-progress-bar_inner,
+  #charge-wrapper .main-charge .elec-con .progress .progress-bar .bar:before,
+  #charge-wrapper .main-charge .elec-con .progress .progress-bar .active-bar,
+  .rookie_content .rookie_division li .div_name span .hot_tip {
+    background-color: var(--c-accent) !important;
+  }
+  .calendarEntry_box .calendarEntry_content .today,
+  .calendar-box .calendar-date-header .date-cell,
+  .new-calendar-wrap .calendar-body .date-desc_wrap .item-desc_card .item-desc_body .item-desc__content,
+  .new-calendar-wrap .calendar-body .date-wrap .wrap-content .select-text,
+  .notice_wrap .notice_title .notice-txt,
+  .data-card .tab .data-tab,
+  .interact-wrap .header .tabs .tabs__header .tabs__header-item.is-active span,
+  .comment-item .right-block .like-reply div,
+  .academy-wrap .header .academy-tag,
+  .dc-section-item1_title_custom span,
+  #dc-section_summary .source-rank-list-item .rank,
+  .reg-main-title,
+  .reg-main-title .hightlight,
+  .apply-page-title>p,
+  .lab-item .lab-item-content .content-detail p,
+  .setting .setting-title,
+  .setting .section-title {
+    color: var(--c-title) !important;
+  }
+  .notice_wrap .notice_body .hot-item .item-right,
+  .section-item .data-name,
+  .comment-item .right-block .reply-content,
+  .list-item .view,
+  .cc-article-wrp .article-card .meta-footer .view-stat,
+  .comment-list-item .ci-parent-reply .cipr-content,
+  .reg-main-text,
+  .reg-tip,
+  .protect-apply-entry-wrp .content-tips,
+  .protect-item-tips,
+  .protect-apply-entry-wrp .protect-appeal,
+  .lab-item .lab-item-content .content-detail .detail-desc,
+  .lab-item .lab-item-content .content-detail .feedback {
+    color: var(--c-text) !important;
+  }
+  .link-top-container .link-top-item.active .red_point {
+    color: var(--c-white) !important;
+  }
+  .calendarEntry_box .greetings .greet-num,
+  .new-calendar-wrap .calendar-body .date-wrap .wrap-content .today,
+  .data-card .tab .data-tab.current,
+  .section-item .text-content span,
+  .academy-wrap .content .tabs .tabs__header .tabs__header-item.is-active span,
+  .bili-tab.current,
+  .bili-tab.current span,
+  .select-box .option-footer:hover,
+  .select-box .option-footer:hover span,
+  .dc-radio-button.is-active span,
+  .dc-radio-button:hover span,
+  .info-item-active-num,
+  .info-item-charge-num,
+  .info-item-medal-num,
+  .info-item-total-num,
+  #charge-wrapper .main-charge .elec-con .num,
+  #charge-wrapper .main-charge .shell-con .num,
+  #charge-wrapper .main-charge .elec-con .progress .pro-date.red,
+  .setting .section-edit:hover span,
+  .video-editor-ol-wrp .icon-xic_video_huaban,
+  .editor-box .editor-toolbar .child-list li:hover,
+  i.icon-shape:after {
+    color: var(--c-accent) !important;
+  }
+  .bili-share-pc,
+  .calendarEntry_box .greetings,
+  .new-calendar-wrap .calendar-header,
+  .new-calendar-wrap .calendar-box,
+  .new-calendar-wrap .calendar-body .date-desc_wrap .item-desc_card .item-desc_body .item-desc__content,
+  .comment-item .right-block .origin,
+  .academy-wrap .content .tabs .tabs__header,
+  .cc-article-wrp .article-header .search-wrp,
+  .article-card,
+  .cc-article-wrp .article-card .meta-title .typename,
+  .select-box .row,
+  #dc-section_summary .source-rank-list-item,
+  .helper .icon,
+  .rank-active-target,
+  .rank-fans-medal,
+  .rank-vedio-target,
+  .rank-vedio-view,
+  .medal header,
+  .medal-list .part .content,
+  .comment-manage-wrap .content .action-bar .action-btn span,
+  .comment-list-item,
+  .recent-danmu-wrp .danmu-filter .left .delete,
+  .recent-danmu-wrp .danmu-filter .left .danmu-type,
+  .recent-danmu-wrp .danmu-filter .left .protect,
+  .recent-danmu-wrp .danmu-filter .left .refresh,
+  .recent-danmu-wrp .danmu-filter .left .plain,
+  .rookie_wrap .rookie_division li,
+  .announce li,
+  .protect-item,
+  .protect-apply-entry-wrp .protect-entry .error-tips,
+  .lab-item,
+  .setting .clearfix,
+  .original-editor-wrap,
+  .editor-box .editor-toolbar li.cut-off,
+  .color-board .color-group,
+  .editor-box .editor-toolbar .child-list li[class*=cut-off],
+  .cards-block .cards-list .card-item .card-case,
+  .ui-input-textarea,
+  .modal-wrap .header,
+  .read-list-component .creat-read-list-box .add-btn,
+  .footer-content {
+    border-color: var(--c-border) !important;
+  }
+  .recent-danmu-wrp .danmu-filter .left .option-menu .option-arrow-border {
+    border-bottom-color: var(--c-background) !important;
+  }
+  .recent-danmu-wrp .danmu-filter .left .option-menu .option-arrow,
+  .upload-v2-container .upload-agreement .reg-1 .reg-2-tip::after {
+    border-bottom-color: var(--c-border) !important;
+  }
+  .section-item .diff-wrp .diff-text:before {
+    border-bottom-color: var(--c-accent) !important;
+  }
+  .upload-v2-container .upload-agreement .reg-1 .reg-2-tip::after {
+    border-right-color: var(--c-border) !important;
+  }
+  .recent-danmu-wrp .danmu-filter .left .option-menu,
+  .editor-box,
+  .editor-box .editor-toolbar .child-list,
+  .classify .sub-list {
+    border: 1px solid var(--c-border) !important;
+  }
+  .toolbox,
+  .editor-box #editor-box {
+    border-top: 1px solid var(--c-border) !important;
+  }
+  .danmu-container,
+  .comment-list-item .ci-parent-reply,
+  .pager .pages .page-item.prev,
+  .pager .pages .page-item.next,
+  .comment-manage-wrap .no-content,
+  .magnetic .content,
+  #charge-wrapper .main-charge .elec-con,
+  #charge-wrapper .main-charge .shell-con {
+    border: 0 !important;
+  }
+  .danmu-container,
+  .editor-box .editor-toolbar .child-list,
+  .cc-btn {
+    box-shadow: none !important;
+  }
+  .ui-dropdown .default {
+    text-align: center;
+  }
+  .pager .jump-pager {
+    vertical-align: -webkit-baseline-middle;
+  }
+  .editor-box .editor-toolbar,
+  .editor-box #editor-box .edui-editor,
+  .edui-default .edui-editor-iframeholder {
+    width: 100% !important;
+  }
+  .contet-wrap {
+    width: 940px;
+  }
+  .ui-serch .run-serch {
+    background-color: transparent !important;
+  }
+  .ui-serch .run-serch::after {
+    content: none !important;
+  }
+  .carousel-wrap .panel .pic li {
+    background-color: var(--c-hover) !important;
+  }
+  .list-header .filter-wrp .article-type .line,
+  .list-header .filter-wrp .filter-level .line,
+  .list-header .filter-wrp .video-type .line {
+    background-color: var(--c-border) !important;
+  }
+  .academy-left-name {
+    color: var(--c-title) !important;
+  }
+  .tabs-nav .tab-item.full span {
+    color: var(--c-white) !important;
+  }
+  .academy-right-link:hover,
+  .list-header .filter-wrp .article-type .bili-btn.current,
+  .list-header .filter-wrp .filter-level .bili-btn.current,
+  .list-header .filter-wrp .video-type .bili-btn.current {
+    color: var(--c-accent) !important;
+  }
+  .list-header .filter-wrp .article-type,
+  .list-header .filter-wrp .filter-level,
+  .list-header .filter-wrp .video-type,
+  .btn-section .btn-item,
+  .tabs .customize-tab {
+    border-color: var(--c-border) !important;
+  }
+  .tag-modal,
+  .steps .step-operate .dropdown .dropdown__content {
+    border: 1px solid var(--c-border);
+  }
+  .pager .jump-pager {
+    vertical-align: middle;
+  }
+  .tabs-nav .tab-item.border-bottom {
+    background-color: transparent !important;
+    color: var(--c-accent) !important;
+    border-color: var(--c-accent) !important;
+  }
+  .tabs-nav .tab-item.full {
+    background-color: var(--c-accent) !important;
+    color: var(--c-white) !important;
+  }
+  .tabs-nav .tab-item.full span {
+    color: var(--c-white) !important;
+  }
+  .bili-btn {
+    background-color: transparent !important;
+  }
+  .bili-btn::after {
+    content: none !important;
+  }
+}
+@-moz-document url-prefix("https://www.bilibili.com/audio/") {
+  .contri-condition .contri-select.active::after {
+    display: none !important;
+  }
+  #app,
+  .ticket-container,
+  .list-info .list-li.even {
+    background-color: var(--c-background) !important;
+  }
+  .list-info .list-li.odd,
+  .song-change {
+    background-color: var(--c-hover) !important;
+  }
+  .music-upload-wrapper .upload-music-bar-wrapper .pload-music-bar-btn .pload-music-bar-btn-text,
+  .compila-condition .compila-type,
+  .list-title,
+  .list-theme,
+  .song-change {
+    color: var(--c-title) !important;
+  }
+  .music-upload-wrapper .upload-music-bar-wrapper .pload-music-bar-btn .pload-music-bar-btn-tips,
+  .compila-not-find .compila-not-find-tips,
+  .contri-condition .contri-select,
+  .contri-condition .contri-sort,
+  .list-share .font24,
+  .list-info .list-li .song-title .iconfont {
+    color: var(--c-text) !important;
+  }
+  .contri-condition .contri-select.active,
+  .list-info .list-li .song-title .song-float:hover {
+    color: var(--c-accent) !important;
+  }
+  .share-board .share-btn .share-type.list-border {
+    border-color: var(--c-border) !important;
+  }
+  .contri-condition .contri-select.active {
+    border-color: var(--c-accent) !important;
+  }
+  .list-info {
+    border: 0 !important;
+  }
+  .contri-condition .contri-sort .contri-sort-type,
+  .share-board .share-btn {
+    border: 1px solid var(--c-border) !important;
+  }
+  .pager .pages .page-item button {
+    padding: 0 10px;
+  }
+}
+@-moz-document url-prefix("https://t.bilibili.com/") {
+  .tag-panel,
+  .home-page .home-container .home-content .right-panel,
+  .user-panel .content .user-pic,
+  .userinfo-wrapper {
+    display: none !important;
+  }
+  .tab-bar,
+  .center-panel .section-block,
+  .publish-panel,
+  .user-panel,
+  .bp-popup-panel,
+  .emoji,
+  .pagination,
+  .schedule-bar {
+    background-color: var(--c-background) !important;
+  }
+  .core-style,
+  .new-notice-bar,
+  .emoji:hover,
+  .emoji-cover.selected,
+  .emoji-cover:hover,
+  .bp-input .content-box {
+    background-color: var(--c-hover) !important;
+  }
+  .bp-input .content-box input,
+  .bp-input .indicator {
+    background-color: transparent !important;
+  }
+  #app {
+    background: none !important;
+  }
+  .bp-popup-panel .title-ctnr .popup-title,
+  .title-content {
+    color: var(--c-title) !important;
+  }
+  .core-style {
+    color: var(--c-text) !important;
+  }
+  .sticky-bar .bar-content .title,
+  .sticky-bar .bar-content .f-right .message a {
+    color: var(--c-white) !important;
+  }
+  .tab-bar .tab .tab-text.selected,
+  .tab-bar .tab .tab-text:hover {
+    color: var(--c-accent) !important;
+  }
+  .upload-image .upload-btn,
+  .bp-input .content-box::before,
+  .button-bar::before {
+    border-color: var(--c-border) !important;
+  }
+  .home-page .home-container .home-content .center-panel .section-block,
+  .nav-item.message .i-frame,
+  .bp-popup-panel {
+    border: 1px solid var(--c-border) !important;
+  }
+  .pagination {
+    border-top: 1px solid var(--c-border) !important;
+  }
+  .core-style,
+  .publish-panel {
+    border: 0 !important;
+  }
+  .sticky-bar .bar-content .send-button {
+    box-shadow: none !important;
+  }
+  .home-page .home-container .home-content .center-panel {
+    width: 900px !important;
+  }
+  .user-panel,
+  .user-panel .content {
+    height: auto !important;
+  }
+  .backdrop {
+    height: 100vh;
+  }
+  .user-panel .content .user-head {
+    left: 71px !important;
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .user-panel .content .user-name {
+    display: block !important;
+    margin: 0 !important;
+    padding-top: 170px !important;
+    font-size: 20px !important;
+    text-align: center !important;
+  }
+  .toolbar .box-toggle,
+  .bp-add-button {
+    background-color: transparent !important;
+    color: var(--c-text) !important;
+  }
+  .toolbar .box-toggle::after,
+  .bp-add-button::after {
+    content: none !important;
+  }
+  .toolbar .box-toggle:hover,
+  .bp-add-button:hover {
+    color: var(--c-accent) !important;
+  }
+  .static-popup.bp-arrow:before {
+    border-top: 1px solid var(--c-border);
+    border-left: 1px solid var(--c-border);
+    width: 8px !important;
+    height: 8px !important;
+    background-color: var(--c-background) !important;
+    background-image: none !important;
+    transform: rotate(45deg);
+  }
+  .sticky-bar {
+    background-color: var(--c-bg-header) !important;
+    backdrop-filter: blur(5px);
+    box-shadow: none !important;
   }
 }
