@@ -22,15 +22,40 @@
 .ui-dropdown .ul-dropdown-list
 .dropdown .dropdown-btn
 .dropdown .dropdown-menu
+.ui-radio .ui-radio-icon
+.ui-checkbox .ui-checkbox-icon
+.ui-select .ui-select-show-box
+.ui-select .ul-select-list
+.date-picker-date
+.date-picker-timer
+.list-header .filter-wrp .category-wrp
+.list-header .filter-wrp .order-wrp
+.ui-dropdown .ui-dropdown-text
+.date-input
   border 1px solid var(--c-border) !important
   background-color var(--c-background) !important
 
 .ui-dropdown .ul-dropdown-list .dropdown-item:hover
 .head .dropdown-menu li.ellipsis:hover
+.ui-select .ul-select-list .select-item:hover
   background-color var(--c-hover) !important
+
+.ui-select .ul-select-list .select-item.active
+.ui-select .ul-select-list .select-item:hover
+.date-panel .day.active
+  color var(--c-accent) !important
 
 .head .dropdown-menu .article-list
   border-color var(--c-border) !important
+
+.ui-radio.active .ui-radio-icon
+.ui-checkbox input[type=checkbox]:checked+.ui-checkbox-icon
+.date-panel .day.active
+  border-color var(--c-accent) !important
+
+.ui-radio input[type=radio]:checked+.ui-radio-icon:after
+.ui-checkbox input[type=checkbox]:checked+.ui-checkbox-icon
+  background-color var(--c-accent) !important
 
 .check-box
   border-color var(--c-border) !important
@@ -45,6 +70,7 @@
 /* switch 开关 */
 .bili-switcher
 .bl-switch
+.check-radio-v2-2-container
   border 1px solid var(--c-border) !important
   background-color var(--c-background) !important
   transition all 0.3s ease-in-out
@@ -54,11 +80,16 @@
 
   &.bl-switch-checked
   &.checked
+  &.check-radio-v2-2-container-active
     border-color var(--c-accent) !important
     background-color var(--c-accent) !important
 
 /* 日历选择器 */
 .pika-single
+.date-picker-v2-container
+.time-picker-v2-container
+.s-panel
+.date-panel
   border 1px solid var(--c-border) !important
   background-color var(--c-background) !important
 
@@ -107,3 +138,31 @@
     .inRange
       border-color var(--c-border) !important
       background-color var(--c-hover) !important
+
+.time-picker-v2-container .time-picker-body-wrp .time-picker-panel-select-wrp .time-picker-panel-select-item:hover
+.s-item.active
+.s-item:hover
+  background-color var(--c-hover) !important
+
+.date-picker-v2-container div
+  color var(--c-title) !important
+
+.date-picker-v2-container i
+select
+  color var(--c-text) !important
+
+.s-item.active
+.s-item:hover
+  color: var(--c-title) !important
+
+.time-picker-v2-container .time-picker-head-wrp
+.time-picker-v2-container .time-picker-body-wrp .time-picker-panel-select-wrp
+.date-panel .ym
+  border-color var(--c-border) !important
+
+.radio-icon
+.bp-selector::before
+  border-color: var(--c-border) !important
+
+.radio-icon.checked::before
+  background-color: var(--c-accent) !important
