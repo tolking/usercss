@@ -2,7 +2,8 @@
 .tag-panel
 .home-page .home-container .home-content .right-panel
 .user-panel .content .user-pic
-.userinfo-wrapper
+#app .page-container .right-container
+.tab-wrap .tab-item.active:after
   display none !important
 
 .tab-bar
@@ -13,6 +14,8 @@
 .emoji
 .pagination
 .schedule-bar
+.feed-topic .publish-panel-container
+.video-topic .video-list
   background-color var(--c-background) !important
 
 .core-style
@@ -25,6 +28,7 @@
 
 .bp-input .content-box input
 .bp-input .indicator
+.tab-wrap .tab-item.active
   background-color transparent !important
 
 #app
@@ -32,6 +36,7 @@
 
 .bp-popup-panel .title-ctnr .popup-title
 .title-content
+.top-header .tag-title-content .tag-title
   color var(--c-title) !important
 
 .core-style
@@ -43,6 +48,8 @@
 
 .tab-bar .tab .tab-text.selected
 .tab-bar .tab .tab-text:hover
+.tab-wrap .tab-item.active
+.tab-wrap .tab-item:hover
   color var(--c-accent) !important
 
 .upload-image .upload-btn
@@ -50,9 +57,13 @@
 .button-bar::before
   border-color var(--c-border) !important
 
+.tab-wrap .tab-item.active
+  border-color var(--c-accent) !important
+
 .home-page .home-container .home-content .center-panel .section-block
 .nav-item.message .i-frame
 .bp-popup-panel
+.feed-topic .publish-panel-container
   border 1px solid var(--c-border) !important
 
 .pagination
@@ -60,13 +71,20 @@
 
 .core-style
 .publish-panel
+.page-list-box .pagination
   border 0 !important
 
 .sticky-bar .bar-content .send-button
   box-shadow none !important
 
+.home-page .home-container .home-content .center-panel .section-block
+  margin-top 40px
+
 .home-page .home-container .home-content .center-panel
   width 900px !important
+
+#app .page-container .center-container
+  width 920px !important
 
 .user-panel
 .user-panel .content
@@ -74,6 +92,9 @@
 
 .backdrop
   height 100vh
+
+.top-header .focus-btn
+  position absolute !important
 
 .user-panel .content .user-head
   left 71px !important

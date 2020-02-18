@@ -1,12 +1,12 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.0.3
+@version        1.1.0
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
 @supportURL			https://github.com/tolking/usercss/issues
-@updateURL			https://raw.githubusercontent.com/tolking/usercss/master/bilibili-lite/index.user.css
+@updateURL			https://tolking.github.io/usercss/bilibili-lite/index.user.css
 @license				MIT
 @preprocessor		uso
 
@@ -379,6 +379,7 @@
   .backup,
   .paging-box-big .current,
   .pager .pages .page-item.active button,
+  .page-wrap .page-list-box .page-item.active,
   .bui-button-blue,
   .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-electric,
   .bi-btn,
@@ -443,7 +444,10 @@
   .compila-not-find .compila-not-find-ime,
   .contri-not-find .contri-not-find-ime,
   .list-playbtn,
-  .send-button {
+  .send-button,
+  .card .focus-btn .unfocus,
+  .card .focus-btn .focus,
+  .top-header .focus-btn {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -460,6 +464,7 @@
   .backup span,
   .paging-box-big .current span,
   .pager .pages .page-item.active button span,
+  .page-wrap .page-list-box .page-item.active span,
   .bui-button-blue span,
   .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-electric span,
   .bi-btn span,
@@ -524,7 +529,10 @@
   .compila-not-find .compila-not-find-ime span,
   .contri-not-find .contri-not-find-ime span,
   .list-playbtn span,
-  .send-button span {
+  .send-button span,
+  .card .focus-btn .unfocus span,
+  .card .focus-btn .focus span,
+  .top-header .focus-btn span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -536,6 +544,7 @@
   .backup::after,
   .paging-box-big .current::after,
   .pager .pages .page-item.active button::after,
+  .page-wrap .page-list-box .page-item.active::after,
   .bui-button-blue::after,
   .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-electric::after,
   .bi-btn::after,
@@ -600,7 +609,10 @@
   .compila-not-find .compila-not-find-ime::after,
   .contri-not-find .contri-not-find-ime::after,
   .list-playbtn::after,
-  .send-button::after {
+  .send-button::after,
+  .card .focus-btn .unfocus::after,
+  .card .focus-btn .focus::after,
+  .top-header .focus-btn::after {
     content: '';
     display: block;
     position: absolute;
@@ -621,6 +633,7 @@
   .backup:hover,
   .paging-box-big .current:hover,
   .pager .pages .page-item.active button:hover,
+  .page-wrap .page-list-box .page-item.active:hover,
   .bui-button-blue:hover,
   .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-electric:hover,
   .bi-btn:hover,
@@ -685,7 +698,10 @@
   .compila-not-find .compila-not-find-ime:hover,
   .contri-not-find .contri-not-find-ime:hover,
   .list-playbtn:hover,
-  .send-button:hover {
+  .send-button:hover,
+  .card .focus-btn .unfocus:hover,
+  .card .focus-btn .focus:hover,
+  .top-header .focus-btn:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -697,6 +713,7 @@
   .backup:hover span,
   .paging-box-big .current:hover span,
   .pager .pages .page-item.active button:hover span,
+  .page-wrap .page-list-box .page-item.active:hover span,
   .bui-button-blue:hover span,
   .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-electric:hover span,
   .bi-btn:hover span,
@@ -761,7 +778,10 @@
   .compila-not-find .compila-not-find-ime:hover span,
   .contri-not-find .contri-not-find-ime:hover span,
   .list-playbtn:hover span,
-  .send-button:hover span {
+  .send-button:hover span,
+  .card .focus-btn .unfocus:hover span,
+  .card .focus-btn .focus:hover span,
+  .top-header .focus-btn:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -773,6 +793,7 @@
   .backup:hover::after,
   .paging-box-big .current:hover::after,
   .pager .pages .page-item.active button:hover::after,
+  .page-wrap .page-list-box .page-item.active:hover::after,
   .bui-button-blue:hover::after,
   .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-electric:hover::after,
   .bi-btn:hover::after,
@@ -837,7 +858,10 @@
   .compila-not-find .compila-not-find-ime:hover::after,
   .contri-not-find .contri-not-find-ime:hover::after,
   .list-playbtn:hover::after,
-  .send-button:hover::after {
+  .send-button:hover::after,
+  .card .focus-btn .unfocus:hover::after,
+  .card .focus-btn .focus:hover::after,
+  .top-header .focus-btn:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -854,6 +878,7 @@
   .paging-box-big .next,
   .paging-box-big .prev,
   .pager .pages .page-item button,
+  .page-wrap .page-list-box .page-item,
   .following,
   .bui-button.bui-button-gray2,
   .danmaku-wrap .player-auxiliary-danmaku-list .danmaku-info-row .player-tooltips-trigger,
@@ -922,6 +947,7 @@
   .paging-box-big .next span,
   .paging-box-big .prev span,
   .pager .pages .page-item button span,
+  .page-wrap .page-list-box .page-item span,
   .following span,
   .bui-button.bui-button-gray2 span,
   .danmaku-wrap .player-auxiliary-danmaku-list .danmaku-info-row .player-tooltips-trigger span,
@@ -987,6 +1013,7 @@
   .paging-box-big .next::after,
   .paging-box-big .prev::after,
   .pager .pages .page-item button::after,
+  .page-wrap .page-list-box .page-item::after,
   .following::after,
   .bui-button.bui-button-gray2::after,
   .danmaku-wrap .player-auxiliary-danmaku-list .danmaku-info-row .player-tooltips-trigger::after,
@@ -1052,6 +1079,7 @@
   .paging-box-big .next:hover,
   .paging-box-big .prev:hover,
   .pager .pages .page-item button:hover,
+  .page-wrap .page-list-box .page-item:hover,
   .following:hover,
   .bui-button.bui-button-gray2:hover,
   .danmaku-wrap .player-auxiliary-danmaku-list .danmaku-info-row .player-tooltips-trigger:hover,
@@ -1118,6 +1146,7 @@
   .paging-box-big .next:hover span,
   .paging-box-big .prev:hover span,
   .pager .pages .page-item button:hover span,
+  .page-wrap .page-list-box .page-item:hover span,
   .following:hover span,
   .bui-button.bui-button-gray2:hover span,
   .danmaku-wrap .player-auxiliary-danmaku-list .danmaku-info-row .player-tooltips-trigger:hover span,
@@ -1420,7 +1449,9 @@
   .dynamic-m .dyn_menu .line:before {
     display: none !important;
   }
-  .channel-menu-mini {
+  .channel-menu-mini,
+  .international-header .mini-type,
+  .van-popover .mini-type {
     background-color: var(--c-background);
   }
   .channel-menu-mini .box a:hover {
@@ -1736,7 +1767,9 @@
     color: var(--c-text);
   }
   .bb-comment .nameplate .nameplate-card .nameplate-arrow,
-  .comment-bilibili-fold .nameplate .nameplate-card .nameplate-arrow {
+  .comment-bilibili-fold .nameplate .nameplate-card .nameplate-arrow,
+  .bb-comment .nameplate,
+  .comment-bilibili-fold .nameplate {
     display: none;
   }
   #comment,
@@ -1863,28 +1896,41 @@
   .feed-tag .card {
     background-color: var(--c-background) !important;
   }
+  .imagesbox .boost-control {
+    background-color: var(--c-hover) !important;
+  }
   .video-container .text-area .title,
   .feed-tag .separater-line {
     color: var(--c-title) !important;
   }
-  .video-container .text-area .view-danmaku span {
+  .video-container .text-area .view-danmaku span,
+  .imagesbox .boost-control li i {
     color: var(--c-text) !important;
   }
+  .card .focus-btn .unfocus .unfocus-text,
+  .card .focus-btn .focus .focus-text {
+    color: var(--c-white) !important;
+  }
   .dynamic-link-hover-bg,
-  .shop-desc .desc-box .price-desc {
+  .shop-desc .desc-box .price-desc,
+  .userinfo-wrapper .info .user .vip,
+  .imagesbox .boost-control li:hover span,
+  .imagesbox .boost-control li:hover i {
     color: var(--c-accent) !important;
   }
   .article-container:hover .text-area {
     box-shadow: none !important;
   }
   .feed-card .card .main-content,
-  .feed-card .card .card-content {
-    width: auto;
+  .feed-card .card .card-content,
+  .card .main-content {
+    width: auto !important;
   }
   .feed-card .content .bottom {
     height: auto !important;
   }
   .feed-card .card,
+  .feed .card,
   .dynamic-link-hover-bg:hover {
     border: 0 !important;
     background-color: var(--c-background);
@@ -1920,14 +1966,26 @@
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
   }
-  .blp-ui-button {
+  .userinfo-wrapper,
+  .userinfo-content {
+    border-color: var(--c-border) !important;
+    box-shadow: none !important;
+    background-color: var(--c-background) !important;
+  }
+  .userinfo-wrapper .btn-box a {
+    vertical-align: top;
+  }
+  .blp-ui-button,
+  .photo-imager-container .control-buttons .close-button {
     background-color: transparent !important;
     color: var(--c-text) !important;
   }
-  .blp-ui-button span {
+  .blp-ui-button span,
+  .photo-imager-container .control-buttons .close-button span {
     color: var(--c-text) !important;
   }
-  .blp-ui-button::after {
+  .blp-ui-button::after,
+  .photo-imager-container .control-buttons .close-button::after {
     content: none !important;
   }
   .error-split {
@@ -4537,7 +4595,8 @@
   .emoji-box::after {
     background-color: var(--c-background) !important;
   }
-  .side-bar .item:hover {
+  .side-bar .item:hover,
+  .list-item:hover {
     background-color: var(--c-hover) !important;
   }
   .side-bar .list {
@@ -5837,7 +5896,8 @@
   .tag-panel,
   .home-page .home-container .home-content .right-panel,
   .user-panel .content .user-pic,
-  .userinfo-wrapper {
+  #app .page-container .right-container,
+  .tab-wrap .tab-item.active:after {
     display: none !important;
   }
   .tab-bar,
@@ -5847,7 +5907,9 @@
   .bp-popup-panel,
   .emoji,
   .pagination,
-  .schedule-bar {
+  .schedule-bar,
+  .feed-topic .publish-panel-container,
+  .video-topic .video-list {
     background-color: var(--c-background) !important;
   }
   .core-style,
@@ -5859,14 +5921,16 @@
     background-color: var(--c-hover) !important;
   }
   .bp-input .content-box input,
-  .bp-input .indicator {
+  .bp-input .indicator,
+  .tab-wrap .tab-item.active {
     background-color: transparent !important;
   }
   #app {
     background: none !important;
   }
   .bp-popup-panel .title-ctnr .popup-title,
-  .title-content {
+  .title-content,
+  .top-header .tag-title-content .tag-title {
     color: var(--c-title) !important;
   }
   .core-style {
@@ -5877,7 +5941,9 @@
     color: var(--c-white) !important;
   }
   .tab-bar .tab .tab-text.selected,
-  .tab-bar .tab .tab-text:hover {
+  .tab-bar .tab .tab-text:hover,
+  .tab-wrap .tab-item.active,
+  .tab-wrap .tab-item:hover {
     color: var(--c-accent) !important;
   }
   .upload-image .upload-btn,
@@ -5885,23 +5951,34 @@
   .button-bar::before {
     border-color: var(--c-border) !important;
   }
+  .tab-wrap .tab-item.active {
+    border-color: var(--c-accent) !important;
+  }
   .home-page .home-container .home-content .center-panel .section-block,
   .nav-item.message .i-frame,
-  .bp-popup-panel {
+  .bp-popup-panel,
+  .feed-topic .publish-panel-container {
     border: 1px solid var(--c-border) !important;
   }
   .pagination {
     border-top: 1px solid var(--c-border) !important;
   }
   .core-style,
-  .publish-panel {
+  .publish-panel,
+  .page-list-box .pagination {
     border: 0 !important;
   }
   .sticky-bar .bar-content .send-button {
     box-shadow: none !important;
   }
+  .home-page .home-container .home-content .center-panel .section-block {
+    margin-top: 40px;
+  }
   .home-page .home-container .home-content .center-panel {
     width: 900px !important;
+  }
+  #app .page-container .center-container {
+    width: 920px !important;
   }
   .user-panel,
   .user-panel .content {
@@ -5909,6 +5986,9 @@
   }
   .backdrop {
     height: 100vh;
+  }
+  .top-header .focus-btn {
+    position: absolute !important;
   }
   .user-panel .content .user-head {
     left: 71px !important;
