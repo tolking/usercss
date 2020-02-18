@@ -1,3 +1,3 @@
-基于 `Stylus` `xStyle` 的样式
+基于 `Stylus` `xStyle` 的样式目录
 
-进入相关文件夹查看详细
+- [bilibili-lite](bilibili-lite/README.md) 一个简化的bilibili页面样式，自适应黑暗模式
