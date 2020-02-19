@@ -1,0 +1,23 @@
+{
+  "name": "usercss",
+  "version": "1.0.0",
+  "description": "基于Stylus, xStyle的样式",
+  "author": "tolking <qw13131wang@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/tolking/usercss",
+  "bugs": {
+    "url": "https://github.com/tolking/usercss/issues"
+  },
+  "homepage": "https://github.com/tolking/usercss",
+  "keywords": [
+    "usercss",
+    "styles",
+    "css",
+    "bilibili"
+  ],
+  "scripts": {
+    "build": "npm run build:bl",
+    "dev:bl": "stylus -w ./bilibili-lite/src/index.styl -o ./bilibili-lite/index.user.css",
+    "build:bl": "stylus ./bilibili-lite/src/index.styl -o ./bilibili-lite/index.user.css"
+  }
+}
