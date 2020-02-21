@@ -175,7 +175,8 @@ textarea
 .dropdown__content .dropdown__item:hover
 .dropdown .dropdown-menu .selected
 .option-menu .menu-item:hover
-.classify .sub-list .sub-item.active, .classify .sub-list .sub-item:hover
+.classify .sub-list .sub-item.active
+.classify .sub-list .sub-item:hover
 .contri-condition .contri-sort .contri-sort-type li:hover
 .hash-popup .topic-container .item.is-selected
 .hash-popup .topic-container .item:hover
@@ -184,7 +185,14 @@ textarea
 .van-popper .popper__arrow
   border-width 0
 
+/* 弹窗箭头 */
 .van-popper .popper__arrow::after
   border-left 6px solid transparent
   border-right 6px solid transparent
   border-bottom 6px solid var(--c-background) !important
+
+.el-popper[x-placement^=bottom] .popper__arrow
+  border-bottom-color var(--c-border) !important
+
+.el-popper[x-placement^=bottom] .popper__arrow:after
+  border-bottom-color var(--c-background) !important

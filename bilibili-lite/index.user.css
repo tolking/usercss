@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.1.0
+@version        1.1.1
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -85,28 +85,6 @@
     border-color: var(--c-border) !important;
     background-color: var(--c-border) !important;
   }
-  table {
-    background-color: transparent !important;
-  }
-  table thead,
-  table tbody,
-  table thead tr {
-    border-color: var(--c-border) !important;
-    background-color: transparent !important;
-  }
-  table tbody tr {
-    border-color: var(--c-border) !important;
-    background-color: transparent !important;
-  }
-  table tbody tr:nth-child(odd) td {
-    background-color: var(--c-hover) !important;
-  }
-  table tbody tr th,
-  table tbody tr td {
-    border-color: var(--c-border) !important;
-    background-color: var(--c-background) !important;
-    color: var(--c-text) !important;
-  }
   ::-webkit-input-placeholder {
     color: #d2d2d2;
   }
@@ -172,6 +150,26 @@
   .bb-comment .reply-notice,
   .comment-bilibili-fold .reply-notice {
     display: none;
+  }
+  table {
+    background-color: var(--c-background) !important;
+  }
+  table thead tr,
+  table tbody tr {
+    border-color: var(--c-border) !important;
+    background-color: transparent !important;
+  }
+  table thead tr:nth-child(odd) td,
+  table tbody tr:nth-child(odd) td {
+    background-color: var(--c-hover) !important;
+  }
+  table thead tr th,
+  table tbody tr th,
+  table thead tr td,
+  table tbody tr td {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-background) !important;
+    color: var(--c-text) !important;
   }
   .selector {
     border-color: var(--c-border) !important;
@@ -367,10 +365,40 @@
   .bp-selector::before {
     border-color: var(--c-border) !important;
   }
+  .el-date-table td.disabled div,
+  .el-year-table td.disabled .cell,
+  .el-month-table td.disabled .cell {
+    background-color: transparent !important;
+  }
   .radio-icon.checked::before {
     background-color: var(--c-accent) !important;
   }
+  .el-picker-panel,
+  .el-picker-panel__footer,
+  .el-select-dropdown {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-background) !important;
+    color: var(--c-text) !important;
+  }
+  .el-select-dropdown__item.hover,
+  .el-select-dropdown__item:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .el-date-table td.current:not(.disabled) span {
+    background-color: var(--c-accent) !important;
+    color: var(--c-white) !important;
+  }
+  .el-picker-panel .el-date-picker__header button,
+  .el-picker-panel .el-button--text {
+    border: 0 !important;
+    background-color: transparent !important;
+  }
+  .el-picker-panel .el-date-picker__header button::after,
+  .el-picker-panel .el-button--text::after {
+    content: none !important;
+  }
   button,
+  .button,
   .btn,
   .default-btn,
   .bili-btn,
@@ -447,7 +475,9 @@
   .send-button,
   .card .focus-btn .unfocus,
   .card .focus-btn .focus,
-  .top-header .focus-btn {
+  .top-header .focus-btn,
+  .coin-dialog-mask .coin-operated .coin-bottom .coin-btn,
+  .el-pagination.is-background .el-pager li.active {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -456,6 +486,7 @@
     vertical-align: top;
   }
   button span,
+  .button span,
   .btn span,
   .default-btn span,
   .bili-btn span,
@@ -532,10 +563,13 @@
   .send-button span,
   .card .focus-btn .unfocus span,
   .card .focus-btn .focus span,
-  .top-header .focus-btn span {
+  .top-header .focus-btn span,
+  .coin-dialog-mask .coin-operated .coin-bottom .coin-btn span,
+  .el-pagination.is-background .el-pager li.active span {
     color: var(--c-white) !important;
   }
   button::after,
+  .button::after,
   .btn::after,
   .default-btn::after,
   .bili-btn::after,
@@ -612,7 +646,9 @@
   .send-button::after,
   .card .focus-btn .unfocus::after,
   .card .focus-btn .focus::after,
-  .top-header .focus-btn::after {
+  .top-header .focus-btn::after,
+  .coin-dialog-mask .coin-operated .coin-bottom .coin-btn::after,
+  .el-pagination.is-background .el-pager li.active::after {
     content: '';
     display: block;
     position: absolute;
@@ -625,6 +661,7 @@
     transition: transform 0.3s ease-in-out !important;
   }
   button:hover,
+  .button:hover,
   .btn:hover,
   .default-btn:hover,
   .bili-btn:hover,
@@ -701,10 +738,13 @@
   .send-button:hover,
   .card .focus-btn .unfocus:hover,
   .card .focus-btn .focus:hover,
-  .top-header .focus-btn:hover {
+  .top-header .focus-btn:hover,
+  .coin-dialog-mask .coin-operated .coin-bottom .coin-btn:hover,
+  .el-pagination.is-background .el-pager li.active:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
+  .button:hover span,
   .btn:hover span,
   .default-btn:hover span,
   .bili-btn:hover span,
@@ -781,10 +821,13 @@
   .send-button:hover span,
   .card .focus-btn .unfocus:hover span,
   .card .focus-btn .focus:hover span,
-  .top-header .focus-btn:hover span {
+  .top-header .focus-btn:hover span,
+  .coin-dialog-mask .coin-operated .coin-bottom .coin-btn:hover span,
+  .el-pagination.is-background .el-pager li.active:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
+  .button:hover::after,
   .btn:hover::after,
   .default-btn:hover::after,
   .bili-btn:hover::after,
@@ -861,7 +904,9 @@
   .send-button:hover::after,
   .card .focus-btn .unfocus:hover::after,
   .card .focus-btn .focus:hover::after,
-  .top-header .focus-btn:hover::after {
+  .top-header .focus-btn:hover::after,
+  .coin-dialog-mask .coin-operated .coin-bottom .coin-btn:hover::after,
+  .el-pagination.is-background .el-pager li.active:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -927,7 +972,9 @@
   .classify .classify-list .list-item .class-block,
   .btn-group .ui-btn.white,
   .publish-launcher .publish-btn.disabled,
-  .button-bar .bp-button {
+  .button-bar .bp-button,
+  .el-pagination.is-background .el-pager li,
+  .warning-btn {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -996,7 +1043,9 @@
   .classify .classify-list .list-item .class-block span,
   .btn-group .ui-btn.white span,
   .publish-launcher .publish-btn.disabled span,
-  .button-bar .bp-button span {
+  .button-bar .bp-button span,
+  .el-pagination.is-background .el-pager li span,
+  .warning-btn span {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -1062,7 +1111,9 @@
   .classify .classify-list .list-item .class-block::after,
   .btn-group .ui-btn.white::after,
   .publish-launcher .publish-btn.disabled::after,
-  .button-bar .bp-button::after {
+  .button-bar .bp-button::after,
+  .el-pagination.is-background .el-pager li::after,
+  .warning-btn::after {
     content: none !important;
   }
   .default:hover,
@@ -1128,7 +1179,9 @@
   .classify .classify-list .list-item .class-block:hover,
   .btn-group .ui-btn.white:hover,
   .publish-launcher .publish-btn.disabled:hover,
-  .button-bar .bp-button:hover {
+  .button-bar .bp-button:hover,
+  .el-pagination.is-background .el-pager li:hover,
+  .warning-btn:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
   }
@@ -1195,7 +1248,9 @@
   .classify .classify-list .list-item .class-block:hover span,
   .btn-group .ui-btn.white:hover span,
   .publish-launcher .publish-btn.disabled:hover span,
-  .button-bar .bp-button:hover span {
+  .button-bar .bp-button:hover span,
+  .el-pagination.is-background .el-pager li:hover span,
+  .warning-btn:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -1444,6 +1499,12 @@
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-bottom: 6px solid var(--c-background) !important;
+  }
+  .el-popper[x-placement^=bottom] .popper__arrow {
+    border-bottom-color: var(--c-border) !important;
+  }
+  .el-popper[x-placement^=bottom] .popper__arrow:after {
+    border-bottom-color: var(--c-background) !important;
   }
   .bili-header-m .profile-m .grade .desc-tips .arrow-left,
   .dynamic-m .dyn_menu .line:before {
@@ -2414,12 +2475,15 @@
     background-color: var(--c-accent);
   }
   .video-item-biref .biref-info .biref-title,
-  .energy-m .headline .name {
+  .energy-m .headline .name,
+  .coming-soon-wrapper .block-title {
     color: var(--c-title) !important;
   }
   .bangumi-home-crumb .fcname ul.n_num li a,
   .spread-module .num span,
-  .sub-nav-m ul li a {
+  .sub-nav-m ul li a,
+  .coming-soon-wrapper .card-wrapper .card-item .time-line-wrapper .date,
+  .coming-soon-wrapper .card-wrapper .card-item .time-line-wrapper .time {
     color: var(--c-text) !important;
   }
   .bangumi-home-crumb .fcname ul.n_num li.on a {
@@ -2633,16 +2697,30 @@
   }
 }
 @-moz-document url-prefix("https://www.bilibili.com/blackboard/") {
+  .banner,
   .active-title .b-active-i,
   .topic-title .b-topic-i {
     display: none !important;
   }
   .box-body,
   #webShare .bili-share-pc,
-  .bili-share-pc .weixin-hover .qr-before {
+  .bili-share-pc .weixin-hover .qr-before,
+  .help-list,
+  .help-box {
     background-color: var(--c-background) !important;
   }
-  .activity-playlist .activity-playlist-item {
+  .help-content img,
+  .collapse-item--active,
+  .collapse-item:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+  .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: var(--c-scroll) !important;
+  }
+  .activity-playlist .activity-playlist-item,
+  .help-body p,
+  .mCSB_scrollTools .mCSB_draggerRail {
     background-color: transparent !important;
   }
   .active-title .b-active-t,
@@ -2653,13 +2731,18 @@
   .act-list ul li .act-info {
     color: var(--c-text) !important;
   }
-  .nav-tab .on {
+  .nav-tab .on,
+  .collapse-item--active .collapse-title {
     color: var(--c-accent) !important;
   }
   .active-title,
   .nav-tab,
   .bili-share-pc {
     border-color: var(--c-border) !important;
+  }
+  .help-list,
+  .help-box {
+    border: 0 !important;
   }
   .act-list ul li {
     border-color: var(--c-border) !important;
@@ -2677,6 +2760,14 @@
   }
   .active-main .back-top {
     right: 150px;
+  }
+  .collapse-item {
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .collapse-item a {
+    text-align: center;
+    transition: color 0.3s ease-in-out;
   }
   button {
     background-color: transparent !important;
@@ -2702,7 +2793,8 @@
   .bilibili-player-video-sendbar .bilibili-player-video-inputbar,
   .members-info__header,
   .bilibili-player .bilibili-player-area .bilibili-player-video-panel,
-  .v-wrap .danmaku-wrap {
+  .v-wrap .danmaku-wrap,
+  .coin-dialog-mask .coin-operated {
     background-color: var(--c-background) !important;
   }
   .multi-page .cur-list .list-box li.on,
@@ -2746,7 +2838,8 @@
   .recommend-list .rec-title,
   .up-info .btn-panel .following span,
   .main-container .season-list .series-title,
-  .bilibili-player-feedback-title .bilibili-player-feedback-title-content {
+  .bilibili-player-feedback-title .bilibili-player-feedback-title-content,
+  .main-container .season-list .ss-list-wrapper .ss-item .ss-info .ss-title {
     color: var(--c-title) !important;
   }
   .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a span,
@@ -2764,7 +2857,8 @@
   .main-container .tool-bar .share-info i,
   .main-container .tool-bar .mobile-info i,
   .up-info .u-info .name .message i,
-  .multi-page .head-con .range-box i {
+  .multi-page .head-con .range-box i,
+  .coin-dialog-mask .coin-operated .coin-title {
     color: var(--c-text) !important;
   }
   .coin-operated-m .coin-title span,
@@ -2786,12 +2880,13 @@
   .video-toolbar .ops .share .share-pos .box-a .share-down .share-btn:hover i,
   .up-info .u-info .name .message:hover i,
   .multi-page .head-con .range-box i:hover,
-  .up-info>a .up-name.vip {
+  .up-info>a .up-name.vip,
+  .coin-dialog-mask .coin-operated .coin-title span {
     color: var(--c-accent) !important;
   }
   .bilibili-player-feedback,
   .bilibili-player-feedback-title {
-    border-color: var(--c-border);
+    border-color: var(--c-border) !important;
   }
   #bofqi.mini-player .drag-bar,
   #bofqi.mini-player:before {
@@ -2857,7 +2952,8 @@
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
   }
-  .coin-operated-m .mc-box {
+  .coin-operated-m .mc-box,
+  .coin-dialog-mask .coin-operated .mc .mc-box {
     border: 0;
     background-color: var(--c-white);
   }
@@ -4609,6 +4705,9 @@
   .right-box .text-box {
     color: var(--c-text) !important;
   }
+  .list .item.active a {
+    color: var(--c-accent) !important;
+  }
   .card,
   .action-menu .menu-list {
     box-shadow: none !important;
@@ -4674,6 +4773,7 @@
     background-color: var(--c-border) !important;
   }
   .side-bar .item {
+    border-radius: 10px;
     text-align: center;
     transition: background-color 0.3s ease-in-out !important;
   }
@@ -6028,5 +6128,152 @@
     background-color: var(--c-bg-header) !important;
     backdrop-filter: blur(5px);
     box-shadow: none !important;
+  }
+}
+@-moz-document url-prefix("https://pay.bilibili.com/") {
+  .top-bp,
+  .bili-footer,
+  .bp-user-box-bottom,
+  #bp_menu_box .bp_box_top,
+  .b-info .dividing-line,
+  .b-info .line,
+  .b-info .balance-top:after,
+  .bb-icon-des {
+    display: none !important;
+  }
+  .des-content,
+  .el-table,
+  .el-table__expanded-cell {
+    background-color: var(--c-background) !important;
+  }
+  .el-table--border:after,
+  .el-table--group:after,
+  .el-table:before {
+    background-color: var(--c-border) !important;
+  }
+  .loading {
+    background-color: transparent !important;
+  }
+  .bp-user-box .bp-user-box-bb,
+  .bp-user-box .bp-user-box-bk,
+  .b-info .info-tip,
+  .num-tip,
+  .instructions,
+  .spend-recode .title-group .recode-title,
+  .spend-recode .part-common .part-title,
+  .el-table .el-table__header-wrapper .el-table__header .cell,
+  .b-info .balance-top .balance-row .balance-title,
+  .b-info .balance-top .balance-row .balance-right .shell-channel .shell-item .channel-name {
+    color: var(--c-title) !important;
+  }
+  .el-table .el-table__row .cell {
+    color: var(--c-text) !important;
+  }
+  .bp-user-box i,
+  .b-info .balance-price,
+  .b-info .balance-footer .balance-part .part-balance-price,
+  .qrpay-group .qrpay-content .price span,
+  .qrpay-group .qrpay-content .price p,
+  .spend-recode .title-group .selected-title,
+  .b-info .balance-footer .part-balance-name .part-balance-price {
+    color: var(--c-accent) !important;
+  }
+  .b-info .warning-group {
+    border-color: var(--c-border) !important;
+  }
+  .bp-user-box-bb,
+  .bp-user-box-top {
+    border: 0;
+  }
+  .bp-center-box {
+    margin-top: 60px;
+  }
+  .b-info,
+  .b-info .balance-footer,
+  .trade-list,
+  .spend-recode,
+  .bind-info {
+    margin-top: 30px;
+  }
+  .b-info .bb-icon-yellow {
+    margin-right: 30px;
+  }
+  .bp-user-box-top {
+    padding: 0;
+  }
+  .spend-recode .title-group .selected-title {
+    background-image: none !important;
+  }
+  #bp_user_box,
+  .bb-intro-top,
+  .b-info,
+  .trade-list,
+  .spend-recode,
+  .shell-intro-top,
+  .bind-info {
+    border: 0;
+    background-color: var(--c-background) !important;
+  }
+  .bb_box,
+  .bp_box {
+    margin: 0;
+    height: auto;
+    border: 0;
+    background-color: var(--c-background) !important;
+  }
+  .bp-user-box-top span {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+  }
+  .bp-user-box-top p {
+    margin-top: 20px;
+    width: auto;
+    font-size: 16px;
+    color: var(--c-title) !important;
+    text-align: center;
+  }
+  .bp-user-box-top .bp-user-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    float: none;
+  }
+  .bp-user-box-top .bp-user-box .bp-user-box-bb,
+  .bp-user-box-top .bp-user-box .bp-user-box-bk {
+    float: none;
+    width: auto;
+  }
+  .bp_box_bot a {
+    padding: 0;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  .bp_box_bot a:hover,
+  .bp_box_bot a.bp_box_bot_click {
+    border: 0;
+    background-color: var(--c-hover) !important;
+    color: var(--c-accent) !important;
+  }
+  .trade-wrapper,
+  .b-info .balance-top .balance-row .balance-right .shell-channel .shell-item {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-background) !important;
+  }
+  .trade-wrapper.shell-item-active,
+  .b-info .balance-top .balance-row .balance-right .shell-channel .shell-item.shell-item-active,
+  .trade-wrapper.is-selected,
+  .b-info .balance-top .balance-row .balance-right .shell-channel .shell-item.is-selected {
+    border-color: var(--c-accent) !important;
+    background-color: var(--c-hover) !important;
+  }
+  .trade-wrapper.shell-item-active span,
+  .b-info .balance-top .balance-row .balance-right .shell-channel .shell-item.shell-item-active span,
+  .trade-wrapper.is-selected span,
+  .b-info .balance-top .balance-row .balance-right .shell-channel .shell-item.is-selected span {
+    color: var(--c-accent) !important;
   }
 }

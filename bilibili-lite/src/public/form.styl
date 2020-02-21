@@ -1,3 +1,22 @@
+/* 表格 */
+table
+  background-color var(--c-background) !important
+
+  thead
+  tbody
+    tr
+      border-color var(--c-border) !important
+      background-color transparent !important
+
+      &:nth-child(odd) td
+        background-color var(--c-hover) !important
+
+      th
+      td
+        border-color var(--c-border) !important
+        background-color var(--c-background) !important
+        color var(--c-text) !important
+
 /* 选择框 */
 .selector
   border-color var(--c-border) !important
@@ -153,7 +172,7 @@ select
 
 .s-item.active
 .s-item:hover
-  color: var(--c-title) !important
+  color var(--c-title) !important
 
 .time-picker-v2-container .time-picker-head-wrp
 .time-picker-v2-container .time-picker-body-wrp .time-picker-panel-select-wrp
@@ -162,7 +181,35 @@ select
 
 .radio-icon
 .bp-selector::before
-  border-color: var(--c-border) !important
+  border-color var(--c-border) !important
+
+.el-date-table td.disabled div
+.el-year-table td.disabled .cell
+.el-month-table td.disabled .cell
+  background-color transparent !important
 
 .radio-icon.checked::before
-  background-color: var(--c-accent) !important
+  background-color var(--c-accent) !important
+
+.el-picker-panel
+.el-picker-panel__footer
+.el-select-dropdown
+  border-color var(--c-border) !important
+  background-color var(--c-background) !important
+  color var(--c-text) !important
+
+.el-select-dropdown__item.hover
+.el-select-dropdown__item:hover
+  background-color var(--c-hover) !important
+
+.el-date-table td.current:not(.disabled) span
+  background-color var(--c-accent) !important
+  color var(--c-white) !important
+
+.el-picker-panel .el-date-picker__header button
+.el-picker-panel .el-button--text
+  border 0 !important
+  background-color transparent !important
+
+  &::after
+    content none !important
