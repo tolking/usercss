@@ -168,6 +168,7 @@
   table thead tr td,
   table tbody tr td {
     border-color: var(--c-border) !important;
+    box-shadow: none !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
   }
@@ -203,13 +204,18 @@
   .list-header .filter-wrp .category-wrp,
   .list-header .filter-wrp .order-wrp,
   .ui-dropdown .ui-dropdown-text,
-  .date-input {
+  .date-input,
+  .datepicker-popup,
+  .calendar-year,
+  .bili-dropdown,
+  .bili-dropdown .dropdown-list {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
   }
   .ui-dropdown .ul-dropdown-list .dropdown-item:hover,
   .head .dropdown-menu li.ellipsis:hover,
-  .ui-select .ul-select-list .select-item:hover {
+  .ui-select .ul-select-list .select-item:hover,
+  .bili-dropdown .dropdown-list .dropdown-item:hover {
     background-color: var(--c-hover) !important;
   }
   .ui-select .ul-select-list .select-item.active,
@@ -477,7 +483,11 @@
   .card .focus-btn .focus,
   .top-header .focus-btn,
   .coin-dialog-mask .coin-operated .coin-bottom .coin-btn,
-  .el-pagination.is-background .el-pager li.active {
+  .el-pagination.is-background .el-pager li.active,
+  .select-type .type-group li.on,
+  .music-pagination .current,
+  .primary-btn,
+  .schedule-list .match-operate.live {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -565,7 +575,11 @@
   .card .focus-btn .focus span,
   .top-header .focus-btn span,
   .coin-dialog-mask .coin-operated .coin-bottom .coin-btn span,
-  .el-pagination.is-background .el-pager li.active span {
+  .el-pagination.is-background .el-pager li.active span,
+  .select-type .type-group li.on span,
+  .music-pagination .current span,
+  .primary-btn span,
+  .schedule-list .match-operate.live span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -648,7 +662,11 @@
   .card .focus-btn .focus::after,
   .top-header .focus-btn::after,
   .coin-dialog-mask .coin-operated .coin-bottom .coin-btn::after,
-  .el-pagination.is-background .el-pager li.active::after {
+  .el-pagination.is-background .el-pager li.active::after,
+  .select-type .type-group li.on::after,
+  .music-pagination .current::after,
+  .primary-btn::after,
+  .schedule-list .match-operate.live::after {
     content: '';
     display: block;
     position: absolute;
@@ -740,7 +758,11 @@
   .card .focus-btn .focus:hover,
   .top-header .focus-btn:hover,
   .coin-dialog-mask .coin-operated .coin-bottom .coin-btn:hover,
-  .el-pagination.is-background .el-pager li.active:hover {
+  .el-pagination.is-background .el-pager li.active:hover,
+  .select-type .type-group li.on:hover,
+  .music-pagination .current:hover,
+  .primary-btn:hover,
+  .schedule-list .match-operate.live:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -823,7 +845,11 @@
   .card .focus-btn .focus:hover span,
   .top-header .focus-btn:hover span,
   .coin-dialog-mask .coin-operated .coin-bottom .coin-btn:hover span,
-  .el-pagination.is-background .el-pager li.active:hover span {
+  .el-pagination.is-background .el-pager li.active:hover span,
+  .select-type .type-group li.on:hover span,
+  .music-pagination .current:hover span,
+  .primary-btn:hover span,
+  .schedule-list .match-operate.live:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -906,7 +932,11 @@
   .card .focus-btn .focus:hover::after,
   .top-header .focus-btn:hover::after,
   .coin-dialog-mask .coin-operated .coin-bottom .coin-btn:hover::after,
-  .el-pagination.is-background .el-pager li.active:hover::after {
+  .el-pagination.is-background .el-pager li.active:hover::after,
+  .select-type .type-group li.on:hover::after,
+  .music-pagination .current:hover::after,
+  .primary-btn:hover::after,
+  .schedule-list .match-operate.live:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -974,7 +1004,13 @@
   .publish-launcher .publish-btn.disabled,
   .button-bar .bp-button,
   .el-pagination.is-background .el-pager li,
-  .warning-btn {
+  .warning-btn,
+  .select-type .type-group li,
+  .music-pagination .tcd-number,
+  .page-btn,
+  .score-contain .allmatch,
+  .schedule-time .time,
+  .calendar-header .day-select {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -1045,7 +1081,13 @@
   .publish-launcher .publish-btn.disabled span,
   .button-bar .bp-button span,
   .el-pagination.is-background .el-pager li span,
-  .warning-btn span {
+  .warning-btn span,
+  .select-type .type-group li span,
+  .music-pagination .tcd-number span,
+  .page-btn span,
+  .score-contain .allmatch span,
+  .schedule-time .time span,
+  .calendar-header .day-select span {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -1113,7 +1155,13 @@
   .publish-launcher .publish-btn.disabled::after,
   .button-bar .bp-button::after,
   .el-pagination.is-background .el-pager li::after,
-  .warning-btn::after {
+  .warning-btn::after,
+  .select-type .type-group li::after,
+  .music-pagination .tcd-number::after,
+  .page-btn::after,
+  .score-contain .allmatch::after,
+  .schedule-time .time::after,
+  .calendar-header .day-select::after {
     content: none !important;
   }
   .default:hover,
@@ -1181,7 +1229,13 @@
   .publish-launcher .publish-btn.disabled:hover,
   .button-bar .bp-button:hover,
   .el-pagination.is-background .el-pager li:hover,
-  .warning-btn:hover {
+  .warning-btn:hover,
+  .select-type .type-group li:hover,
+  .music-pagination .tcd-number:hover,
+  .page-btn:hover,
+  .score-contain .allmatch:hover,
+  .schedule-time .time:hover,
+  .calendar-header .day-select:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
   }
@@ -1250,14 +1304,21 @@
   .publish-launcher .publish-btn.disabled:hover span,
   .button-bar .bp-button:hover span,
   .el-pagination.is-background .el-pager li:hover span,
-  .warning-btn:hover span {
+  .warning-btn:hover span,
+  .select-type .type-group li:hover span,
+  .music-pagination .tcd-number:hover span,
+  .page-btn:hover span,
+  .score-contain .allmatch:hover span,
+  .schedule-time .time:hover span,
+  .calendar-header .day-select:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
   .paging-box-big .dian:hover,
   .pagelist .flip-left .ellipsis,
   .paging-box .next,
-  .paging-box .prev {
+  .paging-box .prev,
+  .music-pagination .dian {
     border-color: transparent !important;
     background-color: transparent !important;
   }
@@ -1468,7 +1529,8 @@
   .share-board .share-btn,
   .static-popup,
   .hash-popup.bg-white,
-  .create-vote {
+  .create-vote,
+  .modal-wrapper {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -2694,6 +2756,199 @@
   .tag-list {
     overflow: hidden scroll;
     max-height: 68px;
+  }
+}
+@-moz-document url-prefix("https://www.bilibili.com/v/musicplus") {
+  .international-footer,
+  .home-ad {
+    display: none !important;
+  }
+  .main-menu .search-bar {
+    background-color: var(--c-hover) !important;
+  }
+  .main-menu .search-bar input {
+    background-color: transparent !important;
+  }
+  .storey-title .l-con {
+    color: var(--c-title) !important;
+  }
+  .main-menu .tabs a.active,
+  .main-menu .tabs a:hover {
+    color: var(--c-accent) !important;
+  }
+  .main-menu .search-bar,
+  .article-card {
+    border-color: var(--c-border) !important;
+  }
+  .home-slide .trigger img.on {
+    border-color: var(--c-accent) !important;
+  }
+  .main-menu .tabs,
+  .main-menu .tabs a.active {
+    border: 0 !important;
+  }
+  .main-menu .search-bar button {
+    position: initial;
+  }
+  .home-video .video-list .video-card-common,
+  .video-card-common {
+    margin-left: 8px !important;
+    margin-right: 0 !important;
+  }
+  .main-menu .search-bar button,
+  .select-type .toggle {
+    border: 0 !important;
+    background-color: transparent !important;
+  }
+  .main-menu .search-bar button::after,
+  .select-type .toggle::after {
+    content: none !important;
+  }
+}
+@-moz-document url-prefix("https://www.bilibili.com/v/game/") {
+  .bottom-filling:after,
+  .card-score .split-line,
+  .score-contain .allmatch .more-match,
+  .schedule-list .match-line {
+    display: none !important;
+  }
+  .schedule-filter .filter-top {
+    background-color: var(--c-background) !important;
+  }
+  .game-banner .banner-title .title-content .game-search,
+  .schedule-filter .filter-content .content-all div,
+  .schedule-contain .time-all,
+  .schedule-time .time-contain,
+  .schedule-contain .contain-top .hasDatepicker,
+  .team-box .team-item.selected-0,
+  .team-box .team-item.selected-1,
+  .team-box .team-item.selected-2,
+  .team-box .team-item.selected-normal,
+  .team-box .team-detail .team-player-img .controlbar,
+  .matchlist-contain .more-match {
+    background-color: var(--c-hover) !important;
+  }
+  .schedule-list .match-status.over {
+    background-color: var(--c-border) !important;
+  }
+  .schedule-filter .bscroll-vertical-scrollbar .bscroll-indicator {
+    background-color: var(--c-scroll) !important;
+  }
+  .game-banner .banner-title .title-content .game-search input,
+  .schedule-filter .bscroll-vertical-scrollbar,
+  .filter-wrap .toggle-open-select,
+  .game-menu .more,
+  .switch-item,
+  .team-box .team-item .team-name {
+    background-color: transparent !important;
+  }
+  .schedule-filter .filter-content .content-all div.active,
+  .schedule-list .match-status,
+  .schedule-contain .time-all.active,
+  .library-contain .search-sort .sort-list li.active,
+  .game-menu ul li.active {
+    background-color: var(--c-accent) !important;
+  }
+  .game-content .match-box .main-title,
+  .schedule-filter .filter-top .top-sx,
+  .schedule-filter .filter-content .content-all div,
+  .switch-item,
+  .game-content .match-box .sub-title {
+    color: var(--c-title) !important;
+  }
+  .card-score .desc,
+  .filter-wrap .toggle-open-select,
+  .game-menu .more,
+  .matchlist-contain .more-match {
+    color: var(--c-text) !important;
+  }
+  .game-banner .banner-title .title-content .game-search span,
+  .schedule-filter .filter-content .content-all div.active,
+  .schedule-contain .time-all.active span,
+  .library-contain .search-sort .sort-list li.active,
+  .game-menu ul li.active {
+    color: var(--c-white) !important;
+  }
+  .game-banner .banner-title .title-content ul li.active a,
+  .game-banner .banner-title .title-content ul li a:hover,
+  .switch-item.active,
+  .switch-item:hover {
+    color: var(--c-accent) !important;
+  }
+  .card-score .score-wrap,
+  .schedule-filter .filter-content .content-all div,
+  .schedule-list .list-item,
+  .schedule-contain .time-all,
+  .schedule-time .time-contain,
+  .schedule-contain .contain-top .hasDatepicker,
+  .schedule-time .time-contain li .contain-item,
+  .headline .getmore,
+  .team-box .team-detail .team-player-img .controlbar,
+  .playrank-box .single-rank .single-rank-box,
+  .game-content .team-container .itembox {
+    border-color: var(--c-border) !important;
+  }
+  .schedule-contain .time-all.active {
+    border-color: var(--c-accent) !important;
+  }
+  .game-banner .banner-title .title-content ul li.active a,
+  .schedule-filter .filter-contain,
+  .schedule-filter .filter-top,
+  .filter-wrap .toggle-open-select,
+  .team-box .infobox,
+  .team-box .team-item {
+    border: 0 !important;
+  }
+  .game-banner .banner-title {
+    bottom: -1px;
+  }
+  .team-box .team-item .team-name {
+    background-image: none !important;
+  }
+  .game-banner .banner-title {
+    background-color: var(--c-bg-header);
+    backdrop-filter: blur(5px);
+  }
+  .bili-game-local .pager .pages .prev,
+  .bili-game-local .pager .pages .next {
+    border: 0 !important;
+    background-color: transparent !important;
+  }
+  .bili-game-local .pager .pages .prev::after,
+  .bili-game-local .pager .pages .next::after {
+    content: none !important;
+  }
+}
+@-moz-document url-prefix("https://www.bilibili.com/v/cheese/") {
+  .wrap,
+  .tickets .nav {
+    background-color: var(--c-background) !important;
+  }
+  .wrap .left .tabbar .router-link-active,
+  .wrap .left .tabbar .tab_item:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .tickets .nav .navtab {
+    color: var(--c-title) !important;
+  }
+  .paid .invalid .invalid_word,
+  .exchange .rule .rule_desc {
+    color: var(--c-text) !important;
+  }
+  .wrap .left .tabbar .router-link-active,
+  .tickets .nav .navtab_active,
+  .tickets .nav .navtab:hover {
+    color: var(--c-accent) !important;
+  }
+  .wrap,
+  .wrap .right {
+    border: 0 !important;
+  }
+  .wrap .left .tabbar .tab_item {
+    border-radius: 10px;
+  }
+  .wrap .left .tabbar {
+    margin-top: 100px;
   }
 }
 @-moz-document url-prefix("https://www.bilibili.com/blackboard/") {
@@ -4797,7 +5052,8 @@
   .page-content .right-side .search-module .search-block .search-word-panel .history-item:hover,
   .page-content .right-side .search-module .search-block .search-word-panel .suggest-item:hover,
   .page-content .left-side .article-list .article-list-holder .article-item:hover,
-  .nav-tab-bar .tab-item.on {
+  .nav-tab-bar .tab-item.on,
+  .nav-tab-bar .tab-item:hover {
     background-color: var(--c-hover);
   }
   .page-content .right-side .more .help .info,
@@ -4808,6 +5064,9 @@
   .page-content .left-side .article-list .article-list-holder .article-item .item-holder .article-info-bar .category,
   .page-content .left-side .article-list .article-list-holder .article-item .item-holder .article-info-bar .reply {
     color: var(--c-text) !important;
+  }
+  .nav-tab-bar .tab-item.on span {
+    color: var(--c-accent) !important;
   }
   .categories-bar,
   .page-content .right-side .search-module .search-block .search-word-panel .panel-title .split-line {
@@ -4821,6 +5080,7 @@
     margin-right: 0;
     margin-left: -130px;
     height: 40px;
+    border-radius: 10px;
     text-align: center;
     line-height: 40px;
   }
@@ -5012,6 +5272,12 @@
   .bili-dialog-bomb .appeal-box .submit {
     border-color: var(--c-border);
     background-color: var(--c-background);
+  }
+  .article-list-holder-block .article-list-plane .button {
+    background-color: transparent !important;
+  }
+  .article-list-holder-block .article-list-plane .button::after {
+    content: none !important;
   }
 }
 @-moz-document url-prefix("https://manga.bilibili.com/") {
