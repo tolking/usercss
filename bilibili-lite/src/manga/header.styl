@@ -1,8 +1,8 @@
 /* 导航 */
-.nav-list
 .manga-footer
-.manga-navbar-manga-logo span.dp-i-block
+.manga-logo
 .user-info-panel a .tooltip
+.nav-list a:last-child
   display none !important
 
 .manga-navbar
@@ -54,3 +54,40 @@
   border-top 1px solid var(--c-border)
   background-color var(--c-background) !important
   transition all 0.3s ease-in-out !important
+
+.nav-list
+  width 36px
+
+.nav-list a
+  display inline-block
+  opacity 0
+  transform translateY(-40px)
+  transition all 0.3s ease-in-out
+
+  &:first-child
+    opacity 1
+    transform translateY(0)
+
+    .item-icon
+      width: 30px !important
+      height 30px !important
+
+    .item-label
+      font-size: 0
+
+  for n in 2 3 4
+    &:nth-child({n})
+      transition-delay 0.05s * (n - 1)
+
+.nav-list:hover
+  width auto
+
+.nav-list:hover a
+  opacity 1
+  transform translateY(0)
+
+.nav-list .nav-item
+  background-color transparent !important
+
+  &::after
+    content none !important

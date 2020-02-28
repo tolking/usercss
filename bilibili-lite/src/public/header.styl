@@ -1,6 +1,15 @@
 /* 顶部导航 */
 .bili-header-m .profile-m .grade .desc-tips .arrow-left
 .dynamic-m .dyn_menu .line:before
+.nav-link .nav-link-ul .nav-link-item:last-child
+.bili-header-m .nav-menu .nav-wrapper-left .nav-item:last-child
+.popover-game
+.popover-live
+.popover-manga
+.bili-header-m .nav-menu .nav-wrapper-left .nav-item .i-frame
+.nav-user-center .user-con .item:nth-child(2)
+.nav-wrapper-right .nav-con .nav-item:nth-child(2)
+.nav-wrapper-right .nav-con .nav-item:nth-child(5)
 	display none !important
 
 .channel-menu-mini
@@ -25,8 +34,39 @@
 	border-bottom 1px solid var(--c-border)
 	background-color var(--c-background)
 
-.nav-link .nav-link-ul .nav-link-item:first-child
-	display block
+/* 左侧 */
+.nav-link
+	width 400px
+
+.nav-wrapper-left
+	width 300px
+
+.nav-link .nav-link-ul
+.nav-wrapper-left .nav-con-ul
+	width 36px
+
+.nav-link .nav-link-ul .nav-link-item
+.nav-wrapper-left .nav-con-ul .nav-item
+	opacity 0
+	transform translateY(-40px)
+	transition all 0.3s ease-in-out
+
+	&:first-child
+		opacity 1
+		transform translateY(0)
+
+	for n in 2 3 4 5 6 7
+		&:nth-child({n})
+			transition-delay 0.05s * (n - 1)
+
+.nav-link .nav-link-ul:hover
+.nav-wrapper-left .nav-con-ul:hover
+	width auto
+
+.nav-link .nav-link-ul:hover .nav-link-item
+.nav-wrapper-left .nav-con-ul:hover .nav-item
+	opacity 1
+	transform translateY(0)
 
 .nav-link .nav-link-ul .nav-link-item:first-child .link
 	font-size 0
@@ -198,7 +238,6 @@
 .bili-header-m .nav-menu .nav-mask
 .channel-menu
 .bili-header-m .nav-menu .up-load .up-nav li
-.bili-header-m .profile-m .member-bottom
 .dynamic-m .dyn_list_wrapper
 .dynamic-m .dyn_list_wrapper .dyn_list
 	background-color var(--c-background)
@@ -206,10 +245,6 @@
 .bili-header-m .profile-m .btns-profile .num
 	background-color transparent !important
 	color var(--c-text) !important
-
-.bili-header-m .nav-menu .nav-con.nav-wrapper-left .nav-item:first-child
-.stardust-video .nav-menu .nav-con.nav-wrapper-left .nav-item:first-child
-	display block
 
 .bili-header-m .nav-menu .nav-con .nav-item.home .t
 	font-size 0
@@ -219,8 +254,11 @@
 
 .bili-header-m .nav-menu .nav-con .nav-item:hover
 .stardust-video .nav-menu .nav-con .nav-item:hover
-.channel-menu .box a:hover
 .bili-header-m .nav-menu .up-load:hover .u-link
+	background-color transparent !important
+
+.channel-menu .box a:hover
+.bili-header-m .nav-menu .up-load .up-nav li:hover
 	background-color var(--c-hover)
 
 .bili-header-m .nav-menu .nav-con .nav-item .t
@@ -251,8 +289,19 @@
 	border 1px solid var(--c-border)
 	background-color var(--c-background)
 
-.bili-header-m .nav-menu .up-load .up-nav li:hover
-	background-color var(--c-hover)
+.bili-header-m .profile-m .member-menu
+	padding-bottom 52px
+
+.bili-header-m .profile-m .member-bottom
+	height 42px !important
+	border-top 1px solid var(--c-border)
+	background-color var(--c-hover) !important
+	text-align center !important
+	line-height 42px !important
+
+	a
+		float none !important
+		display block
 
 /* 顶部搜索框 */
 .bili-header-m .nav-search .nav-search-keyword
