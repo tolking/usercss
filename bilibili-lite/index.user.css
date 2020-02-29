@@ -76,6 +76,7 @@
   .is-vip:hover,
   .nickname--red,
   .vip-red-name,
+  .name.vip-red-name,
   .bili-header-m .profile-m .big-vip-red,
   .review-author.is-vip,
   .username.is-vip {
@@ -113,11 +114,6 @@
   .page-tab,
   .friendship-link,
   .tab-line-itnl,
-  .gg-window,
-  .live-tabs,
-  .pgc-rank,
-  .rank-list,
-  .manga-rank,
   .operate-card,
   .guochuang .r-con,
   .special-recommend,
@@ -484,7 +480,8 @@
   .submit-comment,
   .product-buy,
   .promo-btn,
-  .confirm-paybtn.active {
+  .confirm-paybtn.active,
+  .searchBtn {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -582,7 +579,8 @@
   .submit-comment span,
   .product-buy span,
   .promo-btn span,
-  .confirm-paybtn.active span {
+  .confirm-paybtn.active span,
+  .searchBtn span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -675,7 +673,8 @@
   .submit-comment::after,
   .product-buy::after,
   .promo-btn::after,
-  .confirm-paybtn.active::after {
+  .confirm-paybtn.active::after,
+  .searchBtn::after {
     content: '';
     display: block;
     position: absolute;
@@ -777,7 +776,8 @@
   .submit-comment:hover,
   .product-buy:hover,
   .promo-btn:hover,
-  .confirm-paybtn.active:hover {
+  .confirm-paybtn.active:hover,
+  .searchBtn:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -870,7 +870,8 @@
   .submit-comment:hover span,
   .product-buy:hover span,
   .promo-btn:hover span,
-  .confirm-paybtn.active:hover span {
+  .confirm-paybtn.active:hover span,
+  .searchBtn:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -963,7 +964,8 @@
   .submit-comment:hover::after,
   .product-buy:hover::after,
   .promo-btn:hover::after,
-  .confirm-paybtn.active:hover::after {
+  .confirm-paybtn.active:hover::after,
+  .searchBtn:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -1665,11 +1667,9 @@
     border-bottom: 1px solid var(--c-border);
     background-color: var(--c-background);
   }
-  .nav-link {
-    width: 400px;
-  }
+  .nav-link,
   .nav-wrapper-left {
-    width: 300px;
+    width: 350px;
   }
   .nav-link .nav-link-ul,
   .nav-wrapper-left .nav-con-ul {
@@ -1750,7 +1750,9 @@
   .bili-header-m .mini-wnd-nav,
   .bili-header-m .nav-menu .nav-con .nav-item .i-frame,
   .news-notice-panel,
-  .publish-panel {
+  .publish-panel,
+  .popover-channe,
+  .user-panel-ctnr .user-panel {
     border: 1px solid var(--c-border) !important;
     border-top-width: 0 !important;
   }
@@ -1807,6 +1809,13 @@
   .dynamic-m .dyn_list_wrapper .dyn_list li .r .title .uname {
     background-color: transparent !important;
     color: var(--c-title) !important;
+  }
+  .lang-change .lang-intro {
+    width: 180px;
+  }
+  .van-popper-avatar .level-intro {
+    left: -241px !important;
+    border: 1px solid var(--c-border);
   }
   .i-frame iframe,
   .i-frame::before {
@@ -2365,6 +2374,11 @@
   .channel-menu-itnl span:last-child .item .name {
     margin-top: 2px;
   }
+  .gg-window,
+  .live-tabs,
+  .pgc-rank,
+  .rank-list,
+  .manga-rank,
   .van-popper-channel .popper__arrow {
     display: none !important;
   }
@@ -5196,15 +5210,28 @@
   .fixed-top .search-block .input-wrap input {
     width: 281px;
   }
-  .international-footer {
+  .international-footer,
+  .home-tips,
+  .home-wrap .home-suggest .title .title-icon {
     display: none;
   }
   .page-wrap .pager,
   .search-wrap .search-block .input-wrap,
-  .error-wrap {
+  .error-wrap,
+  .home-wrap .home-input .type,
+  .home-wrap .home-input .list,
+  .suggest-wrap .title span {
     background-color: var(--c-background);
   }
-  #navigator .v-switcher-header-anchor {
+  .home-wrap .home-input .list li:hover,
+  .home-wrap .home-suggest .hotlist .num,
+  .home-wrap .home-input .type.selected,
+  .home-wrap .home-input .type:hover,
+  .suggest-wrap .horizontal .hz-text:hover {
+    background-color: var(--c-hover);
+  }
+  #navigator .v-switcher-header-anchor,
+  .home-wrap .home-suggest .hot-search .item .num.special {
     background-color: var(--c-accent);
   }
   #navigator .v-switcher-header-item a {
@@ -5216,11 +5243,13 @@
     color: var(--c-text) !important;
   }
   #navigator .v-switcher-header-item .router-link-active,
-  .bangumi-item .right-info .score .score-num {
+  .bangumi-item .right-info .score .score-num,
+  .home-wrap .home-suggest .title .delete-history:hover {
     color: var(--c-accent) !important;
   }
   .filter-wrap .filter-item.active a,
-  .video-item .so-imgTag_rb {
+  .video-item .so-imgTag_rb,
+  .home-wrap .home-suggest .hot-search .item .num.special {
     color: var(--c-white) !important;
   }
   .filter-wrap,
@@ -5232,15 +5261,39 @@
   .photo-item,
   .error-wrap,
   .article-item,
-  .bangumi-item {
+  .bangumi-item,
+  .home-wrap .home-input .type,
+  .home-wrap .home-input .list,
+  .home-wrap .home-suggest .hotlist .item,
+  .home-wrap .home-suggest .history .list .item,
+  .home-wrap .home-input .type.selected,
+  .home-wrap .home-input .type:hover,
+  .home-wrap .home-input .content,
+  .suggest-wrap .horizontal .hz-text,
+  .suggest-wrap .title {
     border-color: var(--c-border);
   }
+  .suggest-wrap .horizontal .hz-text:hover {
+    border-color: var(--c-accent);
+  }
   .bangumi-item .right-info .headline .bangumi-label,
-  .video-item.list .type {
+  .video-item.list .type,
+  .home-wrap .home-suggest .hot-search,
+  .home-wrap .home-suggest .history {
     border: 0;
   }
   .search-wrap .search-block .input-wrap input {
     border: 1px solid var(--c-border);
+  }
+  .home-wrap .home-suggest .title {
+    margin: 0;
+  }
+  .home-wrap .home-suggest,
+  .home-wrap .home-input .type.selected,
+  .home-wrap .home-input .type:hover,
+  .home-wrap .home-logo,
+  .home-wrap .home-suggest .history.no-bg {
+    background-image: none;
   }
   em.keyword {
     background-color: transparent !important;
@@ -5249,6 +5302,17 @@
   .live-user-item {
     border: 1px solid var(--c-border);
     box-shadow: none;
+  }
+  .home-wrap .home-input .type .default,
+  .pager .pages .page-item.last,
+  .pager .pages .page-item.next {
+    border: 0 !important;
+    background-color: transparent !important;
+  }
+  .home-wrap .home-input .type .default::after,
+  .pager .pages .page-item.last::after,
+  .pager .pages .page-item.next::after {
+    content: none !important;
   }
 }
 @-moz-document url-prefix("https://message.bilibili.com/") {
@@ -5721,14 +5785,20 @@
   .section-title,
   .item-title,
   .manga-title,
-  .standby-panel .content-container .panel-title {
+  .standby-panel .content-container .panel-title,
+  .style-section .tag-block .block-title {
     color: var(--c-title) !important;
   }
   .manga-card-vertical .text-info-section .supporting-text,
   .schedule-item .text-section .status-text,
   .meta-info p,
-  .standby-panel .content-container .support-text {
+  .standby-panel .content-container .support-text,
+  .style-section .tag-block .tag-containers .style-tag {
     color: var(--c-text) !important;
+  }
+  .style-section .tag-block .tag-containers .style-tag.selected,
+  .style-section .tag-block .tag-containers .style-tag:hover {
+    color: var(--c-accent) !important;
   }
   .section-navigator {
     border-color: var(--c-border) !important;
@@ -5752,6 +5822,7 @@
   .user-panel .drop-list .logout-btn-container .logout-button,
   .drop-list .more-btn-container .more-button,
   .index-banner .control-button .app-button {
+    border: 0;
     background-color: transparent !important;
   }
   .manga-navbar-history-list .action-button::after,
@@ -5793,17 +5864,63 @@
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-hover) !important;
   }
+  .arrow {
+    display: none !important;
+  }
+  .sidebar-item {
+    text-align: center;
+  }
+  .sidebar-container {
+    width: 100px !important;
+  }
+  .rank-item-wrapper {
+    background-image: none !important;
+  }
+  .app-layout .main-container {
+    margin-top: 70px !important;
+  }
+  .sidebar-ctnr {
+    margin-top: 100px !important;
+    border: 0 !important;
+  }
+  .sidebar-item.activated,
+  .sidebar-item:hover {
+    border-radius: 10px;
+    background-color: var(--c-hover) !important;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .sidebar-item.activated span,
+  .sidebar-item:hover span {
+    color: var(--c-accent) !important;
+    transition: color 0.3s ease-in-out;
+  }
 }
 @-moz-document url-prefix("https://manga.bilibili.com/detail/") {
+  .title-tooltip {
+    display: none !important;
+  }
+  .list-data .list-item.last-read,
+  .list-data .list-item:hover {
+    background-color: var(--c-hover) !important;
+  }
   .list-item .short-title {
     color: var(--c-title) !important;
   }
+  .list-data .list-item.last-read div,
+  .list-data .list-item:hover div,
   .episode-list-component .episode-list .list-header .header-item.selected {
     color: var(--c-accent) !important;
   }
+  .list-data .list-item.last-read,
+  .list-data .list-item:hover {
+    border-color: var(--c-accent) !important;
+  }
+  .list-item,
   .episode-list-component .episode-list .list-header .header-item {
+    border-color: var(--c-border) !important;
     background-color: transparent !important;
   }
+  .list-item::after,
   .episode-list-component .episode-list .list-header .header-item::after {
     content: none !important;
   }
@@ -5893,7 +6010,6 @@
   }
 }
 @-moz-document url-prefix("https://h.bilibili.com/") {
-  .link-navbar .nav-item,
   .shortcuts-ctnr .shortcuts-ctnr-ul .shortcut-item:last-child {
     display: none !important;
   }
@@ -5929,22 +6045,68 @@
   .search-bar-ctnr .search-bar .search-btn {
     vertical-align: initial;
   }
-  .link-navbar .nav-item:first-child {
-    display: block !important;
+  .link-navbar .nav-item .nav-link {
+    width: auto !important;
   }
-  .link-navbar .nav-item:first-child::before {
+  .left-part .left-part-cell {
+    width: 500px;
+  }
+  .left-part .left-part-cell .nav-items-ctnr {
+    width: 36px;
+    white-space: nowrap;
+  }
+  .left-part .left-part-cell .nav-items-ctnr .nav-item {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: all 0.3s ease-in-out;
+  }
+  .left-part .left-part-cell .nav-items-ctnr .nav-item:first-child {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .left-part .left-part-cell .nav-items-ctnr .nav-item:first-child::before {
     top: 13px !important;
     left: 13px !important;
     width: 30px !important;
     height: 30px !important;
   }
+  .left-part .left-part-cell .nav-items-ctnr .nav-item:first-child .label {
+    font-size: 0 !important;
+  }
+  .left-part .left-part-cell .nav-items-ctnr .nav-item:nth-child(2) {
+    transition-delay: 0.05s;
+  }
+  .left-part .left-part-cell .nav-items-ctnr .nav-item:nth-child(3) {
+    transition-delay: 0.1s;
+  }
+  .left-part .left-part-cell .nav-items-ctnr .nav-item:nth-child(4) {
+    transition-delay: 0.15s;
+  }
+  .left-part .left-part-cell .nav-items-ctnr .nav-item:nth-child(5) {
+    transition-delay: 0.2s;
+  }
+  .left-part .left-part-cell .nav-items-ctnr .nav-item:nth-child(6) {
+    transition-delay: 0.25s;
+  }
+  .left-part .left-part-cell .nav-items-ctnr:hover {
+    width: auto;
+  }
+  .left-part .left-part-cell .nav-items-ctnr:hover .nav-item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .panel {
+    border: 1px solid var(--c-border);
+    border-top-width: 0;
+    background-color: var(--c-background) !important;
+    box-shadow: none;
+  }
+  .panel ul li:hover {
+    background-color: var(--c-hover) !important;
+  }
   .link-navbar.black {
     background-color: var(--c-bg-header) !important;
     backdrop-filter: blur(5px);
-  }
-  .link-navbar .nav-item .nav-link .label {
-    margin: 0 !important;
-    font-size: 0 !important;
   }
   .user-panel-ctnr .user-panel .content-ctnr .exit-btn,
   .news-notice-panel .news-notice .more {
@@ -6185,8 +6347,59 @@
     border-color: var(--c-border) transparent transparent var(--c-border) !important;
     background-color: var(--c-background) !important;
   }
+  .nav-bar .nav-wrapper .slide-block {
+    display: none !important;
+  }
+  #app,
+  .nav-bar .sub-nav,
+  .rank-list-container .rank-list-wrapper,
+  .rank-item-first {
+    background-color: var(--c-background) !important;
+  }
+  .nav-bar .nav-wrapper .main-tab.active,
+  .nav-bar .sub-nav .sub-tab.active {
+    color: var(--c-accent) !important;
+  }
+  .nav-bar .sub-nav:after {
+    border-color: transparent transparent var(--c-background) !important;
+  }
+  .nav-bar {
+    border: 0 !important;
+  }
+  .rank-list-container .rank-list-wrapper {
+    box-shadow: none !important;
+  }
+  .rank-list .canvas-card:after {
+    background-image: none !important;
+  }
+  .rank-list-container .more {
+    position: initial !important;
+    margin: 20px auto 0;
+    width: 60% !important;
+    height: 40px !important;
+    border: 1px solid var(--c-border);
+    border-radius: 10px !important;
+    background-color: var(--chover) !important;
+    line-height: 40px !important;
+    transition: border-color 0.3s ease-in-out !important;
+  }
+  .rank-list-container .more:hover {
+    border-color: var(--c-accent) !important;
+  }
+  .rank-list-container .more:hover span,
+  .rank-list-container .more:hover i {
+    color: var(--c-accent) !important;
+  }
+  .rank-list-container .more span,
+  .rank-list-container .more i {
+    transition: color 0.3s ease-in-out !important;
+  }
+  .rank-list-container .more i {
+    color: var(--c-text) !important;
+  }
 }
 @-moz-document url-prefix("https://member.bilibili.com/"), url-prefix("https://cm.bilibili.com/") {
+  .header .left-block .logo.bcc-icon-logo,
   .header span.el-popover__reference,
   .header-popover-avatar .logout .line {
     display: none !important;
@@ -6213,6 +6426,7 @@
     box-shadow: none !important;
   }
   .header .left-block .main-site {
+    margin-left: 0 !important;
     font-size: 0 !important;
   }
   .header .left-block .main-site .bcc-iconfont {
@@ -6921,6 +7135,7 @@
 }
 @-moz-document url-prefix("https://show.bilibili.com/") {
   .footer,
+  .nav-header-wrapper .nav-header .nav-header-logo,
   .toolbar-wrapper .service-wrapper,
   .nav-header-wrapper .nav-header .nav-header-mainsite,
   .nav-header-wrapper .nav-header .order-icon,
@@ -7023,6 +7238,7 @@
     border: 1px solid var(--c-border);
   }
   .selector-wrapper,
+  .nav-header-wrapper,
   .header {
     border-bottom: 1px solid var(--c-border);
   }
@@ -7045,7 +7261,8 @@
   .tabs-wrapper,
   .confirmorder-container,
   .confirmorder-container .confirm-bottom .confirm-paybtn.active,
-  .ticket-tips-wrapper .rec-item:hover {
+  .ticket-tips-wrapper .rec-item:hover,
+  .nav-header-wrapper {
     box-shadow: none !important;
   }
   .buyticket .product-buy,
@@ -7066,7 +7283,7 @@
     float: right;
   }
   .nav-header-wrapper .nav-header .nav-header-tv-icon {
-    margin-left: 20px !important;
+    margin-left: 0 !important;
     width: 30px !important;
     height: 30px !important;
   }
