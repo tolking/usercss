@@ -15,6 +15,7 @@
 .members-info__header
 .bilibili-player .bilibili-player-area .bilibili-player-video-panel
 .v-wrap .danmaku-wrap
+.coin-dialog-mask .coin-operated
 	background-color var(--c-background) !important
 
 .multi-page .cur-list .list-box li.on
@@ -59,6 +60,7 @@
 .up-info .btn-panel .following span
 .main-container .season-list .series-title
 .bilibili-player-feedback-title .bilibili-player-feedback-title-content
+.main-container .season-list .ss-list-wrapper .ss-item .ss-info .ss-title
 	color var(--c-title) !important
 
 .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a span
@@ -71,18 +73,22 @@
 .up-info .u-info .desc
 .mobile-more .video-title
 ul.rate-star li i
+ul.star-wrapper li i
 .video-toolbar .ops>span i
 .main-container .tool-bar .coin-info i
 .main-container .tool-bar .share-info i
 .main-container .tool-bar .mobile-info i
 .up-info .u-info .name .message i
 .multi-page .head-con .range-box i
+.coin-dialog-mask .coin-operated .coin-title
+.main-container .media-info .media-right .media-count
 	color var(--c-text) !important
 
 .coin-operated-m .coin-title span
 .coin-operated-m .mc-box.on .c-num
 .main-container .review-module .review-list .review-item .review-header .review-star li i.icon-star-full
 ul.rate-star li i.icon-star-full
+ul.star-wrapper li i.icon-star-full
 .video-info .video-data .argue i
 .video-info .video-data .copyright i
 .up-info .u-info .name .username.is-vip:hover
@@ -99,15 +105,16 @@ ul.rate-star li i.icon-star-full
 .up-info .u-info .name .message:hover i
 .multi-page .head-con .range-box i:hover
 .up-info>a .up-name.vip
+.coin-dialog-mask .coin-operated .coin-title span
 	color var(--c-accent) !important
 
 .bilibili-player-feedback
 .bilibili-player-feedback-title
-	border-color var(--c-border)
+	border-color var(--c-border) !important
 
 #bofqi.mini-player .drag-bar
 #bofqi.mini-player:before
-	box-shadow: 0 0 5px var(--c-border)
+	box-shadow 0 0 5px var(--c-border)
 
 .bilibili-player
 	box-shadow none
@@ -170,6 +177,7 @@ ul.rate-star li i.icon-star-full
 	color var(--c-text) !important
 
 .coin-operated-m .mc-box
+.coin-dialog-mask .coin-operated .mc .mc-box
 	border 0
 	background-color var(--c-white)
 

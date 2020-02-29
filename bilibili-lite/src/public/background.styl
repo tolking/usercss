@@ -4,7 +4,8 @@ span.big-vip-red
 em:not(.icon)
 .m-header .num
 .bili-header-m .num
-.badge
+.badge.pink
+.badge.is-vip
 .ss-badge
 .primary-menu .nav-menu>li .num-wrap span
 .elevator .list-box .item.on
@@ -51,6 +52,9 @@ em:not(.icon)
 .red_point
 .video-editor-ol-wrp .video-editor-ol-new
 .qa-area-ol-new
+.review-list-wrp li .review-title .review-spoiler
+.misl-ep-item .mark-icon.badge-pink
+.project-list .project-list-item .promo-item
   border 0 !important
   background-color var(--c-accent) !important
   color var(--c-white) !important
@@ -159,6 +163,9 @@ textarea
 .static-popup
 .hash-popup.bg-white
 .create-vote
+.modal-wrapper
+.share-module .share-list .weixin-share-modal
+.selector-wrapper .more-type-wrapper
   border-color var(--c-border) !important
   background-color var(--c-background) !important
   color var(--c-text) !important
@@ -175,7 +182,8 @@ textarea
 .dropdown__content .dropdown__item:hover
 .dropdown .dropdown-menu .selected
 .option-menu .menu-item:hover
-.classify .sub-list .sub-item.active, .classify .sub-list .sub-item:hover
+.classify .sub-list .sub-item.active
+.classify .sub-list .sub-item:hover
 .contri-condition .contri-sort .contri-sort-type li:hover
 .hash-popup .topic-container .item.is-selected
 .hash-popup .topic-container .item:hover
@@ -184,7 +192,14 @@ textarea
 .van-popper .popper__arrow
   border-width 0
 
+/* 弹窗箭头 */
 .van-popper .popper__arrow::after
   border-left 6px solid transparent
   border-right 6px solid transparent
   border-bottom 6px solid var(--c-background) !important
+
+.el-popper[x-placement^=bottom] .popper__arrow
+  border-bottom-color var(--c-border) !important
+
+.el-popper[x-placement^=bottom] .popper__arrow:after
+  border-bottom-color var(--c-background) !important

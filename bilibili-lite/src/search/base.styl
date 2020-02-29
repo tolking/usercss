@@ -1,13 +1,26 @@
 /* 搜索界面 */
 .international-footer
+.home-tips
+.home-wrap .home-suggest .title .title-icon
   display none
 
 .page-wrap .pager
 .search-wrap .search-block .input-wrap
 .error-wrap
+.home-wrap .home-input .type
+.home-wrap .home-input .list
+.suggest-wrap .title span
   background-color var(--c-background)
 
+.home-wrap .home-input .list li:hover
+.home-wrap .home-suggest .hotlist .num
+.home-wrap .home-input .type.selected
+.home-wrap .home-input .type:hover
+.suggest-wrap .horizontal .hz-text:hover
+  background-color: var(--c-hover)
+
 #navigator .v-switcher-header-anchor
+.home-wrap .home-suggest .hot-search .item .num.special
   background-color var(--c-accent)
 
 #navigator .v-switcher-header-item a
@@ -20,10 +33,12 @@
 
 #navigator .v-switcher-header-item .router-link-active
 .bangumi-item .right-info .score .score-num
+.home-wrap .home-suggest .title .delete-history:hover
   color var(--c-accent) !important
 
 .filter-wrap .filter-item.active a
 .video-item .so-imgTag_rb
+.home-wrap .home-suggest .hot-search .item .num.special
   color var(--c-white) !important
 
 .filter-wrap
@@ -36,14 +51,38 @@
 .error-wrap
 .article-item
 .bangumi-item
+.home-wrap .home-input .type
+.home-wrap .home-input .list
+.home-wrap .home-suggest .hotlist .item
+.home-wrap .home-suggest .history .list .item
+.home-wrap .home-input .type.selected
+.home-wrap .home-input .type:hover
+.home-wrap .home-input .content
+.suggest-wrap .horizontal .hz-text
+.suggest-wrap .title
   border-color var(--c-border)
+
+.suggest-wrap .horizontal .hz-text:hover
+  border-color: var(--c-accent)
 
 .bangumi-item .right-info .headline .bangumi-label
 .video-item.list .type
+.home-wrap .home-suggest .hot-search
+.home-wrap .home-suggest .history
   border 0
 
 .search-wrap .search-block .input-wrap input
   border 1px solid var(--c-border)
+
+.home-wrap .home-suggest .title
+  margin: 0
+
+.home-wrap .home-suggest
+.home-wrap .home-input .type.selected
+.home-wrap .home-input .type:hover
+.home-wrap .home-logo
+.home-wrap .home-suggest .history.no-bg
+  background-image: none
 
 em.keyword
   background-color transparent !important
@@ -52,3 +91,13 @@ em.keyword
 .live-user-item
   border 1px solid var(--c-border)
   box-shadow none
+
+/* 清除重复按钮样式 */
+.home-wrap .home-input .type .default
+.pager .pages .page-item.last
+.pager .pages .page-item.next
+  border: 0 !important
+  background-color transparent !important
+
+  &::after
+    content none !important

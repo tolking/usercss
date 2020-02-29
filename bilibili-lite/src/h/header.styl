@@ -1,5 +1,4 @@
 /* 导航 */
-.link-navbar .nav-item
 .shortcuts-ctnr .shortcuts-ctnr-ul .shortcut-item:last-child
   display none !important
 
@@ -35,22 +34,57 @@
 .search-bar-ctnr .search-bar .search-btn
   vertical-align initial
 
-.link-navbar .nav-item:first-child
-  display block !important
+.link-navbar .nav-item .nav-link
+  width auto !important
 
-  &::before
-    top 13px !important
-    left 13px !important
-    width 30px !important
-    height 30px !important
+.left-part .left-part-cell
+  width 500px
+
+.left-part .left-part-cell .nav-items-ctnr
+  width 36px
+  white-space nowrap
+
+.left-part .left-part-cell .nav-items-ctnr .nav-item
+  opacity 0
+  transform translateY(-40px)
+  transition all 0.3s ease-in-out
+
+  &:first-child
+    opacity 1
+    transform translateY(0)
+
+    &::before
+      top 13px !important
+      left 13px !important
+      width 30px !important
+      height 30px !important
+
+    .label
+      font-size 0 !important
+
+  for n in 2 3 4 5 6
+    &:nth-child({n})
+      transition-delay 0.05s * (n - 1)
+
+.left-part .left-part-cell .nav-items-ctnr:hover
+  width auto
+
+  .nav-item
+    opacity 1
+    transform translateY(0)
+
+.panel
+  border 1px solid var(--c-border)
+  border-top-width 0
+  background-color var(--c-background) !important
+  box-shadow none
+
+  ul li:hover
+    background-color var(--c-hover) !important
 
 .link-navbar.black
   background-color var(--c-bg-header) !important
   backdrop-filter blur(5px)
-
-.link-navbar .nav-item .nav-link .label
-  margin 0 !important
-  font-size 0 !important
 
 .user-panel-ctnr .user-panel .content-ctnr .exit-btn
 .news-notice-panel .news-notice .more

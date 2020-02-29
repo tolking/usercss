@@ -1,6 +1,9 @@
 @-moz-document url-prefix("https://www.bilibili.com/video/"),
-url-prefix("https://www.bilibili.com/bangumi/play/") {
+url-prefix("https://www.bilibili.com/bangumi/") {
 	/* 视频播放界面样式 */
 	@import 'base'
 	@import 'danmaku'
+}
+@-moz-document url-prefix("https://www.bilibili.com/bangumi/media/") {
+	@import 'media'
 }

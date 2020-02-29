@@ -1,0 +1,50 @@
+/* 排行榜 */
+.nav-bar .nav-wrapper .slide-block
+  display none !important
+
+#app
+.nav-bar .sub-nav
+.rank-list-container .rank-list-wrapper
+.rank-item-first
+  background-color var(--c-background) !important
+
+.nav-bar .nav-wrapper .main-tab.active
+.nav-bar .sub-nav .sub-tab.active
+  color var(--c-accent) !important
+
+.nav-bar .sub-nav:after
+  border-color transparent transparent var(--c-background) !important
+
+.nav-bar
+  border 0 !important
+
+.rank-list-container .rank-list-wrapper
+  box-shadow none !important
+
+.rank-list .canvas-card:after
+  background-image none !important
+
+.rank-list-container .more
+  position initial !important
+  margin 20px auto 0
+  width 60% !important
+  height 40px !important
+  border 1px solid var(--c-border)
+  border-radius 10px !important
+  background-color var(--chover) !important
+  line-height 40px !important
+  transition border-color 0.3s ease-in-out !important
+
+  &:hover
+    border-color var(--c-accent) !important
+
+    span
+    i
+      color var(--c-accent) !important
+
+  span
+  i
+    transition color 0.3s ease-in-out !important
+
+  i
+    color var(--c-text) !important

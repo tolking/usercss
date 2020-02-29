@@ -3,11 +3,13 @@
 .user-panel-ctnr .user-panel
 .link-panel-ctnr
 .calendar-checkin
+.area-list-panel
   background-color var(--c-background) !important
 
 .user-panel-ctnr .user-panel .content-ctnr .logout-btn:hover
 .link-panel-ctnr .load-more:hover
 .calendar-checkin .checkin-btn:hover
+.area-list-panel .list-item:hover
   background-color var(--c-hover) !important
 
 .link-navbar-ctnr
@@ -16,6 +18,7 @@
 .calendar-checkin .calendar-wrapper
 .calendar-checkin .checkin-rewards
 .shortcuts-ctnr .shortcut-item
+.link-navbar .nav-item
   background-color transparent !important
 
 .divider
@@ -26,6 +29,9 @@
 
 .info-item-ctnr
   border-color var(--c-border) !important
+
+.link-navbar .panel-shadow
+  box-shadow none
 
 .user-panel-ctnr .user-panel .content-ctnr .logout-btn
 .link-panel-ctnr .load-more
@@ -54,3 +60,28 @@
   width 30px !important
   height 30px !important
   background-size 30px !important
+
+.link-navbar .left-part>.dp-table-cell
+  width 36px
+  white-space nowrap
+
+.link-navbar .left-part>.dp-table-cell .nav-items-ctnr a
+  display inline-block
+  opacity 0
+  transform translateY(-40px)
+  transition all 0.3s ease-in-out
+
+  &:first-child
+    opacity 1
+    transform translateY(0)
+
+  for n in 3 4 5 6 7 8 9 10 11
+    &:nth-child({n})
+      transition-delay 0.05s * (n - 2)
+
+.link-navbar .left-part>.dp-table-cell:hover
+  width auto
+
+.link-navbar .left-part>.dp-table-cell:hover .nav-items-ctnr a
+  opacity 1
+  transform translateY(0)

@@ -1,18 +1,33 @@
-/* 详情 */
+/* 漫画详情页 */
+.title-tooltip
+  display none !important
+
+.list-data .list-item.last-read
+.list-data .list-item:hover
+  background-color var(--c-hover) !important
+
 .list-item .short-title
-  color: var(--c-title) !important
+  color var(--c-title) !important
 
+.list-data .list-item.last-read div
+.list-data .list-item:hover div
 .episode-list-component .episode-list .list-header .header-item.selected
-  color: var(--c-accent) !important
+  color var(--c-accent) !important
 
+.list-data .list-item.last-read
+.list-data .list-item:hover
+  border-color var(--c-accent) !important
+
+.list-item
 .episode-list-component .episode-list .list-header .header-item
+  border-color var(--c-border) !important
   background-color transparent !important
 
   &::after
     content none !important
 
 .app-layout .size-ruler.p-relative
-  box-shadow: none !important
+  box-shadow none !important
   background-color var(--c-background) !important
 
 .manga-navbar
@@ -21,4 +36,4 @@
 
 .manga-navbar .manga-navbar
   border-bottom 1px solid var(--c-border)
-  background-color: var(--c-background) !important
+  background-color var(--c-background) !important
