@@ -302,9 +302,13 @@
 .bili-header-m .profile-m .member-bottom
 	height 42px !important
 	border-top 1px solid var(--c-border)
-	background-color var(--c-hover) !important
+	background-color var(--c-background) !important
 	text-align center !important
 	line-height 42px !important
+	transition background-color 0.3s ease-in-out !important
+
+	&:hover
+		background-color var(--c-hover) !important
 
 	a
 		float none !important

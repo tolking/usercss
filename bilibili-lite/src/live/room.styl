@@ -94,14 +94,21 @@
 	border 0 !important
 
 .common-popup-wrap.arrow-top::before
+	border-color transparent transparent var(--c-border) !important
+
 .common-popup-wrap.arrow-top::after
 	border-color transparent transparent var(--c-background) !important
 
-.common-popup-wrap.arrow-bottom::after
 .common-popup-wrap.arrow-bottom::before
 .gift-sender-panel.arrow-bottom::before
 .chat-history-panel .chat-history-list .chat-item.danmaku-item .hover-panel::before
+	border-color var(--c-border) transparent transparent !important
+
+.common-popup-wrap.arrow-bottom::after
 	border-color var(--c-background) transparent transparent !important
+
+.common-popup-wrap.arrow-bottom::after
+	left 50%
 
 .link-navbar-ctnr
 	box-shadow none
@@ -115,6 +122,15 @@
 
 .live-room-app .app-content .app-body .section-block
 	margin-bottom 100px
+
+.user-panel-ctnr .user-panel .content-ctnr .ctrl-btn:nth-child(2n)
+	padding-left 40px !important
+
+.captcha-widget .submit-btn
+	border-radius 4px
+
+.captcha-widget .submit-btn button
+	width 100% !important
 
 .right-action-ctnr
 .live-skin-highlight-text

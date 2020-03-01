@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.1.1
+@version        1.1.2
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -481,7 +481,8 @@
   .product-buy,
   .promo-btn,
   .confirm-paybtn.active,
-  .searchBtn {
+  .searchBtn,
+  .sure {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -580,7 +581,8 @@
   .product-buy span,
   .promo-btn span,
   .confirm-paybtn.active span,
-  .searchBtn span {
+  .searchBtn span,
+  .sure span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -674,7 +676,8 @@
   .product-buy::after,
   .promo-btn::after,
   .confirm-paybtn.active::after,
-  .searchBtn::after {
+  .searchBtn::after,
+  .sure::after {
     content: '';
     display: block;
     position: absolute;
@@ -777,7 +780,8 @@
   .product-buy:hover,
   .promo-btn:hover,
   .confirm-paybtn.active:hover,
-  .searchBtn:hover {
+  .searchBtn:hover,
+  .sure:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -871,7 +875,8 @@
   .product-buy:hover span,
   .promo-btn:hover span,
   .confirm-paybtn.active:hover span,
-  .searchBtn:hover span {
+  .searchBtn:hover span,
+  .sure:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -965,7 +970,8 @@
   .product-buy:hover::after,
   .promo-btn:hover::after,
   .confirm-paybtn.active:hover::after,
-  .searchBtn:hover::after {
+  .searchBtn:hover::after,
+  .sure:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -1044,7 +1050,8 @@
   .pagelistbox .p,
   .submit-comment.no-login,
   .confirm-paybtn,
-  .err-jump-btn {
+  .err-jump-btn,
+  .cancel {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -1126,7 +1133,8 @@
   .pagelistbox .p span,
   .submit-comment.no-login span,
   .confirm-paybtn span,
-  .err-jump-btn span {
+  .err-jump-btn span,
+  .cancel span {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -1205,7 +1213,8 @@
   .pagelistbox .p::after,
   .submit-comment.no-login::after,
   .confirm-paybtn::after,
-  .err-jump-btn::after {
+  .err-jump-btn::after,
+  .cancel::after {
     content: none !important;
   }
   .default:hover,
@@ -1284,7 +1293,8 @@
   .pagelistbox .p:hover,
   .submit-comment.no-login:hover,
   .confirm-paybtn:hover,
-  .err-jump-btn:hover {
+  .err-jump-btn:hover,
+  .cancel:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
   }
@@ -1364,7 +1374,8 @@
   .pagelistbox .p:hover span,
   .submit-comment.no-login:hover span,
   .confirm-paybtn:hover span,
-  .err-jump-btn:hover span {
+  .err-jump-btn:hover span,
+  .cancel:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -1431,7 +1442,9 @@
   .qa-area-ol-new,
   .review-list-wrp li .review-title .review-spoiler,
   .misl-ep-item .mark-icon.badge-pink,
-  .project-list .project-list-item .promo-item {
+  .project-list .project-list-item .promo-item,
+  .type-label,
+  .history-list .cover-contain .label {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
@@ -1491,7 +1504,9 @@
   .qa-area-ol-new:hover,
   .review-list-wrp li .review-title .review-spoiler:hover,
   .misl-ep-item .mark-icon.badge-pink:hover,
-  .project-list .project-list-item .promo-item:hover {
+  .project-list .project-list-item .promo-item:hover,
+  .type-label:hover,
+  .history-list .cover-contain .label:hover {
     color: var(--c-white) !important;
   }
   .gg-icon,
@@ -1594,7 +1609,8 @@
   .create-vote,
   .modal-wrapper,
   .share-module .share-list .weixin-share-modal,
-  .selector-wrapper .more-type-wrapper {
+  .selector-wrapper .more-type-wrapper,
+  .history-dlg {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -1950,9 +1966,13 @@
   .bili-header-m .profile-m .member-bottom {
     height: 42px !important;
     border-top: 1px solid var(--c-border);
-    background-color: var(--c-hover) !important;
+    background-color: var(--c-background) !important;
     text-align: center !important;
     line-height: 42px !important;
+    transition: background-color 0.3s ease-in-out !important;
+  }
+  .bili-header-m .profile-m .member-bottom:hover {
+    background-color: var(--c-hover) !important;
   }
   .bili-header-m .profile-m .member-bottom a {
     float: none !important;
@@ -2226,7 +2246,8 @@
   .card-content .not-support,
   .card-content .deleted,
   .bg-white,
-  .shop-panel .shop-list {
+  .shop-panel .shop-list,
+  .bangumi-container {
     border-color: var(--c-border) !important;
     background-color: var(--c-hover) !important;
   }
@@ -4476,6 +4497,109 @@
     background-color: var(--c-background) !important;
   }
 }
+@-moz-document url-prefix("https://www.bilibili.com/account/history") {
+  .bili-footer {
+    display: none !important;
+  }
+  .history-list .cover-contain .progress-c {
+    background-color: var(--c-hover) !important;
+  }
+  .history-list .r-info {
+    background-color: transparent !important;
+  }
+  .history-list .cover-contain .progress {
+    background-color: var(--c-accent) !important;
+  }
+  .history-wrap .b-head .b-head-t {
+    color: var(--c-title) !important;
+  }
+  .nav-user-center .user-con .item .name {
+    color: var(--c-white) !important;
+  }
+  .history-list .l-info,
+  .history-list .r-info .r-txt {
+    border-color: var(--c-border) !important;
+  }
+  .history-list .l-info .lastplay-time .history-red-round {
+    border-left-color: var(--c-border) !important;
+  }
+  .history-list .cover-contain .progress-c,
+  .history-list .cover-contain .progress {
+    height: 2px;
+  }
+  .go-top-m .go-top {
+    background-position: -714px -72px !important;
+  }
+  .history-wrap .time-label {
+    border-color: var(--c-border);
+    color: var(--c-text) !important;
+    transition: all 0.3s ease-in-out !important;
+  }
+  .history-wrap .time-label::before {
+    border-left-color: var(--c-background);
+  }
+  .history-wrap .time-label::after {
+    border-left-color: var(--c-border);
+    transition: all 0.3s ease-in-out !important;
+  }
+  .history-wrap .time-label:hover {
+    border-color: var(--c-accent) !important;
+    color: var(--c-accent) !important;
+  }
+  .history-wrap .time-label:hover::after {
+    border-left-color: var(--c-accent);
+  }
+  .history-wrap .time-label.active {
+    border-color: var(--c-accent) !important;
+    background-color: var(--c-accent) !important;
+    color: var(--c-white) !important;
+  }
+  .history-wrap .time-label.active::before,
+  .history-wrap .time-label.active::after {
+    border-left-color: var(--c-accent);
+  }
+  .bili-header-m .nav-search-box,
+  .international-header .nav-search-box {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .bili-header-m .nav-search,
+  .international-header .nav-search {
+    margin: 0 auto;
+    width: 520px;
+  }
+  .bili-header-m .nav-search #nav_searchform,
+  .international-header .nav-search #nav_searchform {
+    padding: 0 60px 0 20px;
+    border: 0;
+    border-radius: 25px;
+    background-color: rgba(0,0,0,0.4) !important;
+    overflow: hidden;
+  }
+  .bili-header-m .nav-search .nav-search-keyword,
+  .international-header .nav-search .nav-search-keyword {
+    height: 50px;
+    font-size: 16px;
+    color: var(--c-white);
+  }
+  .bili-header-m .nav-search .nav-search-submit,
+  .international-header .nav-search .nav-search-submit {
+    top: 0;
+    right: 20px;
+    font-size: 24px;
+    color: var(--c-white) !important;
+    line-height: 50px;
+  }
+  .bili-header-m .nav-search .nav-search-btn,
+  .international-header .nav-search .nav-search-btn {
+    width: 60px;
+    height: 50px;
+    border-radius: 0 25px 25px 0;
+    background-color: rgba(0,0,0,0.6) !important;
+  }
+}
 @-moz-document url-prefix("https://live.bilibili.com/"), url-prefix("https://link.bilibili.com/") {
   .user-title-sending-cntr .panel,
   .user-panel-ctnr .user-panel,
@@ -4540,8 +4664,12 @@
     background-size: 30px !important;
   }
   .link-navbar .left-part>.dp-table-cell {
+    display: block;
     width: 36px;
     white-space: nowrap;
+  }
+  .link-navbar .left-part>.dp-table-cell .nav-items-ctnr {
+    transform: translateY(-100%);
   }
   .link-navbar .left-part>.dp-table-cell .nav-items-ctnr a {
     display: inline-block;
@@ -4583,6 +4711,9 @@
   .link-navbar .left-part>.dp-table-cell:hover {
     width: auto;
   }
+  .link-navbar .left-part>.dp-table-cell:hover .nav-items-ctnr {
+    transform: translateY(0);
+  }
   .link-navbar .left-part>.dp-table-cell:hover .nav-items-ctnr a {
     opacity: 1;
     transform: translateY(0);
@@ -4609,7 +4740,9 @@
   .gift-item.buy.hover {
     background-color: var(--c-hover) !important;
   }
-  .bilibili-live-player[data-player-type='player-home'] .bilibili-live-player-enter-tips:hover {
+  .bilibili-live-player[data-player-type='player-home'] .bilibili-live-player-enter-tips:hover,
+  .blp-red-tip:after,
+  .living-icon-col {
     background-color: var(--c-accent) !important;
   }
   .notice-item .notice-main .notice-title,
@@ -4635,12 +4768,18 @@
   .ysly-room-ctnr .item .info span {
     color: var(--c-white) !important;
   }
-  .bilibili-live-player[data-player-type='player-home'] .bilibili-live-player-enter-tips {
+  .bilibili-live-player[data-player-type='player-home'] .bilibili-live-player-enter-tips,
+  .item-border {
     border-color: var(--c-accent) !important;
+  }
+  .aside-item:after {
+    border-right-color: var(--c-accent) !important;
+  }
+  .highlight-area-item {
+    box-shadow: none !important;
   }
   .bilibili-live-player button,
   .live-player-ctnr button,
-  .awarding-panel button,
   .search-bar-ctnr .search-bar .search-btn,
   .link-panel-ctnr .load-more .load-more-btn,
   .attention-live .switch-btn {
@@ -4648,7 +4787,6 @@
   }
   .bilibili-live-player button::after,
   .live-player-ctnr button::after,
-  .awarding-panel button::after,
   .search-bar-ctnr .search-bar .search-btn::after,
   .link-panel-ctnr .load-more .load-more-btn::after,
   .attention-live .switch-btn::after {
@@ -4860,15 +4998,22 @@
   .user-protocol {
     border: 0 !important;
   }
-  .common-popup-wrap.arrow-top::before,
+  .common-popup-wrap.arrow-top::before {
+    border-color: transparent transparent var(--c-border) !important;
+  }
   .common-popup-wrap.arrow-top::after {
     border-color: transparent transparent var(--c-background) !important;
   }
-  .common-popup-wrap.arrow-bottom::after,
   .common-popup-wrap.arrow-bottom::before,
   .gift-sender-panel.arrow-bottom::before,
   .chat-history-panel .chat-history-list .chat-item.danmaku-item .hover-panel::before {
+    border-color: var(--c-border) transparent transparent !important;
+  }
+  .common-popup-wrap.arrow-bottom::after {
     border-color: var(--c-background) transparent transparent !important;
+  }
+  .common-popup-wrap.arrow-bottom::after {
+    left: 50%;
   }
   .link-navbar-ctnr {
     box-shadow: none;
@@ -4882,6 +5027,15 @@
   }
   .live-room-app .app-content .app-body .section-block {
     margin-bottom: 100px;
+  }
+  .user-panel-ctnr .user-panel .content-ctnr .ctrl-btn:nth-child(2n) {
+    padding-left: 40px !important;
+  }
+  .captcha-widget .submit-btn {
+    border-radius: 4px;
+  }
+  .captcha-widget .submit-btn button {
+    width: 100% !important;
   }
   .right-action-ctnr,
   .live-skin-highlight-text {
@@ -6873,7 +7027,8 @@
   .emoji:hover,
   .emoji-cover.selected,
   .emoji-cover:hover,
-  .bp-input .content-box {
+  .bp-input .content-box,
+  .imagesbox .boost-img {
     background-color: var(--c-hover) !important;
   }
   .bp-input .content-box input,
@@ -6907,7 +7062,8 @@
   .button-bar::before {
     border-color: var(--c-border) !important;
   }
-  .tab-wrap .tab-item.active {
+  .tab-wrap .tab-item.active,
+  .imagesbox .boost-slider-wrap .boost-slider-border {
     border-color: var(--c-accent) !important;
   }
   .home-page .home-container .home-content .center-panel .section-block,
@@ -6959,16 +7115,23 @@
     text-align: center !important;
   }
   .toolbar .box-toggle,
-  .bp-add-button {
+  .bp-add-button,
+  .imagesbox .boost-img .prev,
+  .imagesbox .boost-img .next {
+    border: 0 !important;
     background-color: transparent !important;
     color: var(--c-text) !important;
   }
   .toolbar .box-toggle::after,
-  .bp-add-button::after {
+  .bp-add-button::after,
+  .imagesbox .boost-img .prev::after,
+  .imagesbox .boost-img .next::after {
     content: none !important;
   }
   .toolbar .box-toggle:hover,
-  .bp-add-button:hover {
+  .bp-add-button:hover,
+  .imagesbox .boost-img .prev:hover,
+  .imagesbox .boost-img .next:hover {
     color: var(--c-accent) !important;
   }
   .static-popup.bp-arrow:before {
