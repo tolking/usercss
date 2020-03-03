@@ -482,7 +482,7 @@
   .promo-btn,
   .confirm-paybtn.active,
   .searchBtn,
-  .sure {
+  .hsbtn .sure {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -582,7 +582,7 @@
   .promo-btn span,
   .confirm-paybtn.active span,
   .searchBtn span,
-  .sure span {
+  .hsbtn .sure span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -677,7 +677,7 @@
   .promo-btn::after,
   .confirm-paybtn.active::after,
   .searchBtn::after,
-  .sure::after {
+  .hsbtn .sure::after {
     content: '';
     display: block;
     position: absolute;
@@ -781,7 +781,7 @@
   .promo-btn:hover,
   .confirm-paybtn.active:hover,
   .searchBtn:hover,
-  .sure:hover {
+  .hsbtn .sure:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -876,7 +876,7 @@
   .promo-btn:hover span,
   .confirm-paybtn.active:hover span,
   .searchBtn:hover span,
-  .sure:hover span {
+  .hsbtn .sure:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -971,7 +971,7 @@
   .promo-btn:hover::after,
   .confirm-paybtn.active:hover::after,
   .searchBtn:hover::after,
-  .sure:hover::after {
+  .hsbtn .sure:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -1051,7 +1051,7 @@
   .submit-comment.no-login,
   .confirm-paybtn,
   .err-jump-btn,
-  .cancel {
+  .hsbtn .cancel {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -1134,7 +1134,7 @@
   .submit-comment.no-login span,
   .confirm-paybtn span,
   .err-jump-btn span,
-  .cancel span {
+  .hsbtn .cancel span {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -1214,7 +1214,7 @@
   .submit-comment.no-login::after,
   .confirm-paybtn::after,
   .err-jump-btn::after,
-  .cancel::after {
+  .hsbtn .cancel::after {
     content: none !important;
   }
   .default:hover,
@@ -1294,7 +1294,7 @@
   .submit-comment.no-login:hover,
   .confirm-paybtn:hover,
   .err-jump-btn:hover,
-  .cancel:hover {
+  .hsbtn .cancel:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
   }
@@ -1375,7 +1375,7 @@
   .submit-comment.no-login:hover span,
   .confirm-paybtn:hover span,
   .err-jump-btn:hover span,
-  .cancel:hover span {
+  .hsbtn .cancel:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -2124,7 +2124,8 @@
   .comment-area .comm-more,
   .bb-comment .stick.true-love .medal-level,
   .comment-bilibili-fold .stick.true-love .medal-level,
-  .list-comment {
+  .list-comment,
+  .panel-area .bb-comment .bottom-page.center {
     border-color: var(--c-border) !important;
   }
   .comment .comment-selecotr,
@@ -2247,7 +2248,8 @@
   .card-content .deleted,
   .bg-white,
   .shop-panel .shop-list,
-  .bangumi-container {
+  .bangumi-container,
+  .live-container {
     border-color: var(--c-border) !important;
     background-color: var(--c-hover) !important;
   }
@@ -2305,7 +2307,7 @@
     background-color: var(--c-bg-header);
     backdrop-filter: blur(5px);
   }
-  .nav-link-item .link,
+  .international-home .nav-link-item .link,
   .mini-header .nav-user-center .nav-item a,
   .mini-header input,
   .international-home .mini-header .mini-upload,
@@ -2315,7 +2317,7 @@
   .mini-header .nav-user-center .nav-item a:hover,
   .international-home .bili-header-m .nav-search .nav-search-btn:hover,
   .international-home .international-header .nav-search .nav-search-btn:hover,
-  .nav-link .nav-link-ul .nav-link-item .link:hover {
+  .international-home .nav-link .nav-link-ul .nav-link-item .link:hover {
     color: var(--c-accent) !important;
   }
   .international-home .bili-header-m .nav-search-box,
@@ -3256,6 +3258,9 @@
   .bui-switch .bui-body,
   .bui-slider .bui-track.bui-track-video-progress .bui-bar-wrap .bui-bar-buffer {
     background-color: var(--c-border) !important;
+  }
+  .bilibili-player em {
+    background-color: transparent !important;
   }
   .bui-slider .bui-track .bui-bar-wrap .bui-bar,
   .bui-slider .bui-track .bui-thumb .bui-thumb-dot,
@@ -4513,6 +4518,8 @@
   .history-wrap .b-head .b-head-t {
     color: var(--c-title) !important;
   }
+  .nav-link-item .link,
+  .mini-upload,
   .nav-user-center .user-con .item .name {
     color: var(--c-white) !important;
   }
@@ -4626,7 +4633,10 @@
   .divider {
     background-color: var(--c-border) !important;
   }
-  .shortcuts-ctnr .shortcut-item .list-item span {
+  .nav-ctnr .link-navbar .shortcuts-ctnr .shortcut-item .list-item span,
+  .live-room-app .link-navbar .shortcuts-ctnr .shortcut-item .list-item span,
+  .nav-ctnr .link-navbar .nav-item span,
+  .live-room-app .link-navbar .nav-item span {
     color: var(--c-white) !important;
   }
   .info-item-ctnr {
@@ -4649,9 +4659,21 @@
     color: var(--c-white) !important;
   }
   .link-navbar {
+    border-bottom: 1px solid var(--c-border);
+    background-color: var(--c-background) !important;
+    box-shadow: none !important;
+  }
+  .nav-ctnr .link-navbar,
+  .live-room-app .link-navbar {
     box-shadow: none !important;
     background-color: var(--c-bg-header) !important;
     backdrop-filter: blur(5px) !important;
+  }
+  .area-list-panel,
+  .link-panel-ctnr,
+  .calendar-checkin {
+    border: 1px solid var(--c-border);
+    border-top-width: 0;
   }
   .search-bar-ctnr .search-bar {
     border: 0 !important;
@@ -4784,6 +4806,7 @@
   .link-panel-ctnr .load-more .load-more-btn,
   .attention-live .switch-btn {
     background-color: transparent !important;
+    color: var(--c-text) !important;
   }
   .bilibili-live-player button::after,
   .live-player-ctnr button::after,
@@ -4835,7 +4858,9 @@
   }
   .top3 .content-detail>p>span,
   .rank-detail dd .score span,
-  .rank-detail dd .score span:hover {
+  .rank-detail dd .score span:hover,
+  .tag span,
+  .tag:hover span {
     color: var(--c-text) !important;
   }
   .rank-detail dt .rank-number {
@@ -4855,6 +4880,9 @@
   }
   .wrapper .content .state-null>.txt {
     display: inline-block;
+  }
+  .main-content .main-container {
+    padding-top: 60px;
   }
   .main-ctnr .content-ctn .header {
     padding-top: 80px;
@@ -5211,7 +5239,8 @@
   .no-data-msg {
     color: var(--c-text) !important;
   }
-  .tabnav-tip {
+  .tabnav-tip,
+  .page-title .count {
     color: var(--c-white) !important;
   }
   .icon-edit,
@@ -5266,10 +5295,6 @@
   .rhythm-storm .dp-i-block button,
   .fans-medal .inline button {
     vertical-align: middle;
-  }
-  .link-navbar {
-    border-bottom: 1px solid var(--c-border);
-    background-color: var(--c-background) !important;
   }
   .side-bar {
     width: 160px;
@@ -5849,6 +5874,10 @@
   .search-bar .search-input {
     background-color: transparent !important;
   }
+  nav.manga-navbar.p-fixed.p-zero a button,
+  nav.manga-navbar.p-fixed.p-zero a button span {
+    color: var(--c-white) !important;
+  }
   .manga-navbar {
     box-shadow: none !important;
     background-color: var(--c-bg-header) !important;
@@ -5924,11 +5953,15 @@
   .nav-list .nav-item {
     background-color: transparent !important;
   }
+  .nav-list .nav-item span {
+    color: var(--c-title) !important;
+  }
   .nav-list .nav-item::after {
     content: none !important;
   }
   .multi-line-text::before,
-  .multi-line-text::after {
+  .multi-line-text::after,
+  .rank-list {
     display: none !important;
   }
   .vertical-block-card,
@@ -5965,6 +5998,10 @@
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
   }
+  .newbie-awarder .floating-button .widget-close-button img {
+    border-radius: 50%;
+    background-color: var(--c-border);
+  }
   .manga-navbar-history-list .action-button,
   .manga-navbar-favourite-manga .action-button,
   .search-bar .confirm-btn,
@@ -5975,9 +6012,12 @@
   .newbie-awarder .close-button,
   .user-panel .drop-list .logout-btn-container .logout-button,
   .drop-list .more-btn-container .more-button,
-  .index-banner .control-button .app-button {
+  .index-banner .control-button,
+  .index-banner .control-button .app-button,
+  .newbie-awarder .floating-button .widget-close-button {
     border: 0;
     background-color: transparent !important;
+    color: var(--c-title) !important;
   }
   .manga-navbar-history-list .action-button::after,
   .manga-navbar-favourite-manga .action-button::after,
@@ -5989,7 +6029,9 @@
   .newbie-awarder .close-button::after,
   .user-panel .drop-list .logout-btn-container .logout-button::after,
   .drop-list .more-btn-container .more-button::after,
-  .index-banner .control-button .app-button::after {
+  .index-banner .control-button::after,
+  .index-banner .control-button .app-button::after,
+  .newbie-awarder .floating-button .widget-close-button::after {
     content: none !important;
   }
   .recommendation-section .manga-list {
@@ -6707,7 +6749,8 @@
   .ui-input-textarea,
   .qa-area-ol-wrp,
   #edit-page .edit-notice,
-  .cover-upload-box .no-img:hover {
+  .cover-upload-box .no-img:hover,
+  .tips-calendar_wrap {
     background-color: var(--c-hover) !important;
   }
   .dc-progress-bar,
@@ -6768,7 +6811,8 @@
   .protect-item-tips,
   .protect-apply-entry-wrp .protect-appeal,
   .lab-item .lab-item-content .content-detail .detail-desc,
-  .lab-item .lab-item-content .content-detail .feedback {
+  .lab-item .lab-item-content .content-detail .feedback,
+  .mobile-award-panel .content-container .install-text {
     color: var(--c-text) !important;
   }
   .link-top-container .link-top-item.active .red_point {
@@ -6839,7 +6883,9 @@
   .modal-wrap .header,
   .read-list-component .creat-read-list-box .add-btn,
   .footer-content,
-  #edit-page .edit-notice {
+  #edit-page .edit-notice,
+  .line-divid,
+  .tips-calendar_wrap {
     border-color: var(--c-border) !important;
   }
   .recent-danmu-wrp .danmu-filter .left .option-menu .option-arrow-border {
@@ -7028,7 +7074,8 @@
   .emoji-cover.selected,
   .emoji-cover:hover,
   .bp-input .content-box,
-  .imagesbox .boost-img {
+  .imagesbox .boost-img,
+  .img-content {
     background-color: var(--c-hover) !important;
   }
   .bp-input .content-box input,
