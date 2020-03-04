@@ -1444,7 +1444,8 @@
   .misl-ep-item .mark-icon.badge-pink,
   .project-list .project-list-item .promo-item,
   .type-label,
-  .history-list .cover-contain .label {
+  .history-list .cover-contain .label,
+  .my-link-btn .hint-count {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
@@ -1506,7 +1507,8 @@
   .misl-ep-item .mark-icon.badge-pink:hover,
   .project-list .project-list-item .promo-item:hover,
   .type-label:hover,
-  .history-list .cover-contain .label:hover {
+  .history-list .cover-contain .label:hover,
+  .my-link-btn .hint-count:hover {
     color: var(--c-white) !important;
   }
   .gg-icon,
@@ -1658,7 +1660,8 @@
   .bili-header-m .nav-menu .nav-wrapper-left .nav-item .i-frame,
   .nav-user-center .user-con .item:nth-child(2),
   .nav-wrapper-right .nav-con .nav-item:nth-child(2),
-  .nav-wrapper-right .nav-con .nav-item:nth-child(5) {
+  .nav-wrapper-right .nav-con .nav-item:nth-child(5),
+  .van-popper-avatar .coins .contact .contact-tips::after {
     display: none !important;
   }
   .channel-menu-mini,
@@ -1677,6 +1680,9 @@
   .video-info .line-1,
   .video-info .line-2 {
     color: var(--c-title) !important;
+  }
+  .mini-type .nav-user-center .user-con .item .name:hover {
+    color: var(--c-accent) !important;
   }
   .international-header .mini-type,
   .van-popover .mini-type {
@@ -1768,9 +1774,12 @@
   .news-notice-panel,
   .publish-panel,
   .popover-channe,
-  .user-panel-ctnr .user-panel {
+  .user-panel-ctnr .user-panel .lens-ctnr {
     border: 1px solid var(--c-border) !important;
     border-top-width: 0 !important;
+  }
+  .user-panel-ctnr .user-panel .lens-ctnr {
+    border-radius: 0 0 10px 10px;
   }
   .lang-change .lang-intro {
     border: 1px solid var(--c-border) !important;
@@ -1784,7 +1793,8 @@
   }
   .van-popper-avatar .links .link-item:hover,
   .lang-change .lang-item:hover,
-  .lang-change .lang-intro-item:hover {
+  .lang-change .lang-intro-item:hover,
+  .van-popper-avatar .logout a:hover {
     background-color: var(--c-hover) !important;
   }
   .van-popper-avatar .level-bar .level-progress,
@@ -1792,14 +1802,15 @@
   .bili-header-m .profile-m .grade .bar .rate {
     background-color: var(--c-accent) !important;
   }
-  .van-popper-avatar .links .link-title,
-  .lang-change .lang-title,
-  .lang-change .lang-intro-item {
+  .lang-change .lang-item .lang-title {
     color: var(--c-title) !important;
   }
+  .lang-change .lang-item:hover .lang-title,
   .lang-change .lang-intro-item.on,
+  .lang-change .lang-intro-item:hover,
   .bili-header-m .profile-m .grade .desc-tips .lv-row strong,
-  .out-container .tab-bar .tab-item:hover {
+  .out-container .tab-bar .tab-item:hover,
+  .van-popper-avatar .logout a:hover {
     color: var(--c-accent) !important;
   }
   .out-container .tab-bar .active:hover {
@@ -1808,8 +1819,7 @@
   .van-popper-avatar .coins,
   .van-popper-avatar .counts,
   .van-popper-avatar .links,
-  .van-popper-avatar .lang-change,
-  .van-popper-avatar .coins .contact .contact-tips {
+  .van-popper-avatar .lang-change {
     border-color: var(--c-border) !important;
   }
   .van-popper-avatar .level-intro,
@@ -1817,9 +1827,9 @@
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
   }
-  .van-popper-avatar .logout a:hover,
   .van-popper-avatar .coins .contact .contact-tips {
-    background-color: var(--c-hover) !important;
+    border-color: var(--c-border) !important;
+    background-color: var(--c-background) !important;
     color: var(--c-title) !important;
   }
   .dynamic-m .dyn_list_wrapper .dyn_list li .r .title .uname {
@@ -1842,7 +1852,7 @@
   }
   .im-list:hover {
     background-color: var(--c-hover) !important;
-    color: var(--c-title) !important;
+    color: var(--c-accent) !important;
   }
   .out-container {
     box-shadow: none !important;
@@ -1877,7 +1887,9 @@
     color: var(--c-title) !important;
   }
   .video-info .line-2:hover,
-  .van-popper-favorite .video-panel .play-all .bilifont {
+  .van-popper-favorite .video-panel .play-all .bilifont,
+  .van-popper-favorite .tab-item--normal:hover span,
+  .van-popper-favorite .tab-item--active span {
     color: var(--c-accent) !important;
   }
   .duration-tag {
@@ -1889,7 +1901,6 @@
   }
   .van-popper-favorite .tab-item--active {
     background-color: var(--c-hover) !important;
-    color: var(--c-white) !important;
   }
   .van-popper-favorite .tab-item--normal:hover,
   .video-card:hover {
@@ -2317,7 +2328,9 @@
   .mini-header .nav-user-center .nav-item a:hover,
   .international-home .bili-header-m .nav-search .nav-search-btn:hover,
   .international-home .international-header .nav-search .nav-search-btn:hover,
-  .international-home .nav-link .nav-link-ul .nav-link-item .link:hover {
+  .international-home .nav-link .nav-link-ul .nav-link-item .link:hover,
+  .international-home .mini-header .mini-upload:hover,
+  .international-home .mini-header .nav-user-center .user-con .item .name:hover {
     color: var(--c-accent) !important;
   }
   .international-home .bili-header-m .nav-search-box,
@@ -2364,6 +2377,10 @@
   .bili-banner {
     max-height: 220px;
     background-color: var(--c-background) !important;
+  }
+  .bili-banner .head-title {
+    background-color: var(--c-hover) !important;
+    color: var(--c-white) !important;
   }
   .bili-banner .taper-line {
     background-color: none !important;
@@ -2627,12 +2644,19 @@
     border-color: var(--c-border);
   }
 }
-@-moz-document url-prefix("https://www.bilibili.com/v/"), url-prefix("https://www.bilibili.com/anime/"), url-prefix("https://www.bilibili.com/guochuang/"), url-prefix("https://www.bilibili.com/cinema/"), url-prefix("https://www.bilibili.com/documentary/"), url-prefix("https://www.bilibili.com/movie/"), url-prefix("https://www.bilibili.com/tv/"), url-prefix("https://www.bilibili.com/blackboard/") {
-  .bili-header-m .nav-menu .nav-con .nav-item .t,
-  .bili-header-m .nav-menu .up-load .u-link {
+@-moz-document url-prefix("https://www.bilibili.com/v/"), url-prefix("https://www.bilibili.com/anime/"), url-prefix("https://www.bilibili.com/guochuang/"), url-prefix("https://www.bilibili.com/cinema/"), url-prefix("https://www.bilibili.com/documentary/"), url-prefix("https://www.bilibili.com/movie/"), url-prefix("https://www.bilibili.com/tv/"), url-prefix("https://www.bilibili.com/blackboard/"), url-prefix("https://www.bilibili.com/list/") {
+  .bili-header-m .search .search-keyword {
+    background-color: transparent !important;
+  }
+  .bili-header-m .nav-menu .blur-bg+.nav-mask+.nav-wrapper .nav-con .nav-item .t,
+  .bili-header-m .nav-menu .blur-bg+.nav-mask+.nav-wrapper .up-load .u-link {
     color: var(--c-white) !important;
   }
-  .bili-header-m .nav-menu .nav-mask {
+  .bili-header-m .nav-menu .blur-bg+.nav-mask+.nav-wrapper .nav-con .nav-item .t:hover,
+  .bili-header-m .nav-menu .blur-bg+.nav-mask+.nav-wrapper .up-load .u-link:hover {
+    color: var(--c-accent) !important;
+  }
+  .bili-header-m .nav-menu .blur-bg+.nav-mask {
     border: 0;
     background-color: var(--c-bg-header);
     backdrop-filter: blur(5px);
@@ -2884,18 +2908,41 @@
   .tag-list-wrp .title .icon,
   .video-floor-m .dynamic-title .title .icon,
   .tag-list-wrp .title .small,
-  .tag-more {
+  .tag-more,
+  .zr_recomd .b-head .b-head-i,
+  .footer .footer-wrp {
     display: none;
+  }
+  .zr_recomd ul li,
+  .zr_recomd .zr_user .uin .r_info em {
+    background-color: transparent !important;
+  }
+  .b-head .b-head-t {
+    color: var(--c-title) !important;
+  }
+  .zr_recomd .zr_tvideo .q,
+  .zr_recomd .zr_user .uin .r_info em,
+  .widescreen .container-body div:last-child {
+    color: var(--c-text) !important;
+  }
+  .tag-list li.tag-item.on {
+    color: var(--c-white) !important;
   }
   .video-list .vl-hd,
   .video-list .vl-hd .s-line,
   .mod-1 .r,
   .mod-2 li,
-  .mod-2 li .l-item {
+  .mod-2 li .l-item,
+  .primary-menu,
+  .zr_recomd ul li,
+  .zr_recomd .b-head {
     border-color: var(--c-border);
   }
-  .tag-list li.tag-item.on {
-    color: var(--c-white) !important;
+  .widescreen .container-body div:last-child h2 {
+    border: 0 !important;
+  }
+  .zr_recomd .zr_user .uin .r_info em {
+    line-height: initial;
   }
   .video-floor-m .dynamic-title .read-push {
     border: 0;
@@ -4523,6 +4570,11 @@
   .nav-user-center .user-con .item .name {
     color: var(--c-white) !important;
   }
+  .nav-link-item .link:hover,
+  .mini-upload:hover,
+  .nav-user-center .user-con .item .name:hover {
+    color: var(--c-accent) !important;
+  }
   .history-list .l-info,
   .history-list .r-info .r-txt {
     border-color: var(--c-border) !important;
@@ -4633,11 +4685,20 @@
   .divider {
     background-color: var(--c-border) !important;
   }
+  .shortcuts-ctnr .shortcut-item .list-item span {
+    color: var(--c-title) !important;
+  }
   .nav-ctnr .link-navbar .shortcuts-ctnr .shortcut-item .list-item span,
   .live-room-app .link-navbar .shortcuts-ctnr .shortcut-item .list-item span,
   .nav-ctnr .link-navbar .nav-item span,
   .live-room-app .link-navbar .nav-item span {
     color: var(--c-white) !important;
+  }
+  .nav-ctnr .link-navbar .nav-item:hover span,
+  .shortcuts-ctnr .shortcut-item:hover .list-item span,
+  .nav-ctnr .link-navbar .shortcuts-ctnr .shortcut-item:hover .list-item span,
+  .live-room-app .link-navbar .shortcuts-ctnr .shortcut-item:hover .list-item span {
+    color: var(--c-accent) !important;
   }
   .info-item-ctnr {
     border-color: var(--c-border) !important;
@@ -4659,9 +4720,11 @@
     color: var(--c-white) !important;
   }
   .link-navbar {
-    border-bottom: 1px solid var(--c-border);
     background-color: var(--c-background) !important;
     box-shadow: none !important;
+  }
+  .head-content .link-navbar {
+    border-bottom: 1px solid var(--c-border) !important;
   }
   .nav-ctnr .link-navbar,
   .live-room-app .link-navbar {
@@ -4670,10 +4733,12 @@
     backdrop-filter: blur(5px) !important;
   }
   .area-list-panel,
-  .link-panel-ctnr,
-  .calendar-checkin {
+  .link-panel-ctnr .panel-main-ctnr,
+  .calendar-checkin .content-ctnr {
     border: 1px solid var(--c-border);
     border-top-width: 0;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
   }
   .search-bar-ctnr .search-bar {
     border: 0 !important;
@@ -5868,8 +5933,12 @@
     background-color: var(--c-background) !important;
   }
   .search-bar .search-bar-bg,
-  .drop-list .more-btn-container:hover {
+  .drop-list .more-btn-container:hover,
+  .user-panel .drop-list .logout-btn-container .logout-button:hover {
     background-color: var(--c-hover) !important;
+  }
+  nav.manga-navbar .right-part .drop-list .size-ruler a button {
+    color: var(--c-title) !important;
   }
   .search-bar .search-input {
     background-color: transparent !important;
@@ -5877,6 +5946,19 @@
   nav.manga-navbar.p-fixed.p-zero a button,
   nav.manga-navbar.p-fixed.p-zero a button span {
     color: var(--c-white) !important;
+  }
+  .nav-list a:hover .nav-item span,
+  .manga-navbar-history-list:hover .action-button,
+  .manga-navbar-favourite-manga:hover .action-button,
+  nav.manga-navbar.p-fixed.p-zero a:hover button,
+  nav.manga-navbar.p-fixed.p-zero a:hover button span {
+    color: var(--c-accent) !important;
+  }
+  .right-part .drop-list .size-ruler {
+    border: 1px solid var(--c-border);
+    border-top-width: 0;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
   }
   .manga-navbar {
     box-shadow: none !important;
@@ -6234,6 +6316,18 @@
   .shortcuts-ctnr .shortcuts-ctnr-ul .shortcut-item .label-wrapper .label .text,
   .news-notice-panel .news-notice .more .icon-font {
     color: var(--c-title) !important;
+  }
+  .link-navbar.black .nav-item .label,
+  .link-navbar.black .my-link-btn .label,
+  .link-navbar.black .shortcuts-ctnr .shortcuts-ctnr-ul .shortcut-item .label-wrapper .label .text,
+  .link-navbar.black .publish-btn {
+    color: var(--c-white) !important;
+  }
+  .link-navbar.black .nav-item:hover .label,
+  .link-navbar.black .my-link-btn:hover .label,
+  .link-navbar.black .shortcuts-ctnr .shortcuts-ctnr-ul .shortcut-item:hover .label-wrapper .label .text,
+  .link-navbar.black .publish-btn:hover {
+    color: var(--c-accent) !important;
   }
   .shortcuts-ctnr {
     margin: 0 !important;

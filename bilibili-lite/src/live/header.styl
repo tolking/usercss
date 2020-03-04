@@ -24,11 +24,20 @@
 .divider
   background-color var(--c-border) !important
 
+.shortcuts-ctnr .shortcut-item .list-item span
+  color var(--c-title) !important
+
 .nav-ctnr .link-navbar .shortcuts-ctnr .shortcut-item .list-item span
 .live-room-app .link-navbar .shortcuts-ctnr .shortcut-item .list-item span
 .nav-ctnr .link-navbar .nav-item span
 .live-room-app .link-navbar .nav-item span
   color var(--c-white) !important
+
+.nav-ctnr .link-navbar .nav-item:hover span
+.shortcuts-ctnr .shortcut-item:hover .list-item span
+.nav-ctnr .link-navbar .shortcuts-ctnr .shortcut-item:hover .list-item span
+.live-room-app .link-navbar .shortcuts-ctnr .shortcut-item:hover .list-item span
+  color var(--c-accent) !important
 
 .info-item-ctnr
   border-color var(--c-border) !important
@@ -50,9 +59,11 @@
   color var(--c-white) !important
 
 .link-navbar
-  border-bottom 1px solid var(--c-border)
   background-color var(--c-background) !important
   box-shadow none !important
+
+.head-content .link-navbar
+  border-bottom 1px solid var(--c-border) !important
 
 .nav-ctnr .link-navbar
 .live-room-app .link-navbar
@@ -61,10 +72,12 @@
   backdrop-filter blur(5px) !important
 
 .area-list-panel
-.link-panel-ctnr
-.calendar-checkin
+.link-panel-ctnr .panel-main-ctnr
+.calendar-checkin .content-ctnr
   border 1px solid var(--c-border)
   border-top-width 0
+  border-radius 0 0 10px 10px
+  overflow hidden
 
 .search-bar-ctnr .search-bar
   border 0 !important
