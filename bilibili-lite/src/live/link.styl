@@ -2,6 +2,7 @@
 header figure
 .nav-item .svg-icon
 .ad
+.sub-pages-item-ctnr .sub-pages-item .badge
   display none !important
 
 #app-news #list
@@ -130,13 +131,19 @@ div.mce-edit-area
 
       .sub-pages-item
         padding 0 !important
-        border-radius 4px
+        border-radius 10px
         text-align center
         transition background-color 0.3s ease-in-out
+
+        span
+          transition color 0.3s ease-in-out
 
         &:hover
         &.active
           background-color var(--c-hover) !important
+
+          span
+            color var(--c-accent) !important
 
 .tabnav
   display flex

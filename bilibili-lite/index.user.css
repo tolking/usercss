@@ -482,7 +482,8 @@
   .promo-btn,
   .confirm-paybtn.active,
   .searchBtn,
-  .hsbtn .sure {
+  .hsbtn .sure,
+  .coupon-btn {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -582,7 +583,8 @@
   .promo-btn span,
   .confirm-paybtn.active span,
   .searchBtn span,
-  .hsbtn .sure span {
+  .hsbtn .sure span,
+  .coupon-btn span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -677,7 +679,8 @@
   .promo-btn::after,
   .confirm-paybtn.active::after,
   .searchBtn::after,
-  .hsbtn .sure::after {
+  .hsbtn .sure::after,
+  .coupon-btn::after {
     content: '';
     display: block;
     position: absolute;
@@ -781,7 +784,8 @@
   .promo-btn:hover,
   .confirm-paybtn.active:hover,
   .searchBtn:hover,
-  .hsbtn .sure:hover {
+  .hsbtn .sure:hover,
+  .coupon-btn:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -876,7 +880,8 @@
   .promo-btn:hover span,
   .confirm-paybtn.active:hover span,
   .searchBtn:hover span,
-  .hsbtn .sure:hover span {
+  .hsbtn .sure:hover span,
+  .coupon-btn:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -971,7 +976,8 @@
   .promo-btn:hover::after,
   .confirm-paybtn.active:hover::after,
   .searchBtn:hover::after,
-  .hsbtn .sure:hover::after {
+  .hsbtn .sure:hover::after,
+  .coupon-btn:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -1051,7 +1057,9 @@
   .submit-comment.no-login,
   .confirm-paybtn,
   .err-jump-btn,
-  .hsbtn .cancel {
+  .hsbtn .cancel,
+  .coupon-btn-disable,
+  .bl-button--primary:disabled {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -1134,7 +1142,9 @@
   .submit-comment.no-login span,
   .confirm-paybtn span,
   .err-jump-btn span,
-  .hsbtn .cancel span {
+  .hsbtn .cancel span,
+  .coupon-btn-disable span,
+  .bl-button--primary:disabled span {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -1214,7 +1224,9 @@
   .submit-comment.no-login::after,
   .confirm-paybtn::after,
   .err-jump-btn::after,
-  .hsbtn .cancel::after {
+  .hsbtn .cancel::after,
+  .coupon-btn-disable::after,
+  .bl-button--primary:disabled::after {
     content: none !important;
   }
   .default:hover,
@@ -1294,9 +1306,12 @@
   .submit-comment.no-login:hover,
   .confirm-paybtn:hover,
   .err-jump-btn:hover,
-  .hsbtn .cancel:hover {
+  .hsbtn .cancel:hover,
+  .coupon-btn-disable:hover,
+  .bl-button--primary:disabled:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
+    color: var(--c-text) !important;
   }
   .default:hover span,
   .more-btn:hover span,
@@ -1375,7 +1390,9 @@
   .submit-comment.no-login:hover span,
   .confirm-paybtn:hover span,
   .err-jump-btn:hover span,
-  .hsbtn .cancel:hover span {
+  .hsbtn .cancel:hover span,
+  .coupon-btn-disable:hover span,
+  .bl-button--primary:disabled:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -1394,6 +1411,7 @@
   .bili-header-m .num,
   .badge.pink,
   .badge.is-vip,
+  .badge.type_0,
   .ss-badge,
   .primary-menu .nav-menu>li .num-wrap span,
   .elevator .list-box .item.on,
@@ -1445,7 +1463,8 @@
   .project-list .project-list-item .promo-item,
   .type-label,
   .history-list .cover-contain .label,
-  .my-link-btn .hint-count {
+  .my-link-btn .hint-count,
+  .gift-item-wrap .expiration {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
@@ -1457,6 +1476,7 @@
   .bili-header-m .num:hover,
   .badge.pink:hover,
   .badge.is-vip:hover,
+  .badge.type_0:hover,
   .ss-badge:hover,
   .primary-menu .nav-menu>li .num-wrap span:hover,
   .elevator .list-box .item.on:hover,
@@ -1508,7 +1528,8 @@
   .project-list .project-list-item .promo-item:hover,
   .type-label:hover,
   .history-list .cover-contain .label:hover,
-  .my-link-btn .hint-count:hover {
+  .my-link-btn .hint-count:hover,
+  .gift-item-wrap .expiration:hover {
     color: var(--c-white) !important;
   }
   .gg-icon,
@@ -1882,6 +1903,14 @@
   .more-btn:hover,
   .van-popper-history .view-all:hover {
     background-color: var(--c-hover) !important;
+  }
+  .dynamic-iframe {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  .dynamic-m {
+    width: 100% !important;
+    box-shadow: none !important;
   }
   .video-info .line-2 {
     color: var(--c-title) !important;
@@ -4149,6 +4178,9 @@
   #page-follows .follow-main .follow-action-bottom .follow-action-fixtop {
     background-color: var(--c-hover);
   }
+  #page-channel-index .no-channel-container em {
+    background-color: transparent !important;
+  }
   .breadcrumb .item.cur,
   #page-fav .fav-sidenav .nav-title .text,
   #page-fav .fav-sidenav .favlist-title,
@@ -4320,7 +4352,11 @@
   .el-pager li.active,
   .face-nav>.active a,
   .coin-num,
-  .my-moral i {
+  .my-moral i,
+  li.security-list.on span,
+  li.security-list:hover span,
+  .security-list .child-list li a.bg-blue span,
+  .security-list .child-list li a:hover span {
     color: var(--c-accent) !important;
   }
   .index-info,
@@ -4398,6 +4434,7 @@
     background-color: var(--c-hover) !important;
   }
   .security-list {
+    border-radius: 10px;
     text-align: center;
     transition: background-color 0.3s ease-in-out !important;
   }
@@ -4408,7 +4445,8 @@
   .big-member-btn,
   .go-movie,
   .tool-change-face,
-  .invitation-btn {
+  .invitation-btn,
+  .coupon-content-con .coupon-btn {
     position: absolute !important;
   }
   .tabs-nav .active {
@@ -4723,7 +4761,8 @@
     background-color: var(--c-background) !important;
     box-shadow: none !important;
   }
-  .head-content .link-navbar {
+  .head-content .link-navbar,
+  .app-ctnr .link-navbar {
     border-bottom: 1px solid var(--c-border) !important;
   }
   .nav-ctnr .link-navbar,
@@ -5130,17 +5169,36 @@
   .captcha-widget .submit-btn button {
     width: 100% !important;
   }
+  .count-choice .send-button {
+    vertical-align: middle;
+  }
   .right-action-ctnr,
-  .live-skin-highlight-text {
+  .live-skin-highlight-text,
+  .awarding-panel .close-btn,
+  .awarding-panel .info-section .slide-btn,
+  .captcha-widget .refresh-captcha {
     background-color: transparent !important;
     color: var(--c-text) !important;
   }
+  .right-action-ctnr:hover,
+  .live-skin-highlight-text:hover,
+  .awarding-panel .close-btn:hover,
+  .awarding-panel .info-section .slide-btn:hover,
+  .captcha-widget .refresh-captcha:hover {
+    color: var(--c-text) !important;
+  }
   .right-action-ctnr span,
-  .live-skin-highlight-text span {
+  .live-skin-highlight-text span,
+  .awarding-panel .close-btn span,
+  .awarding-panel .info-section .slide-btn span,
+  .captcha-widget .refresh-captcha span {
     color: var(--c-text) !important;
   }
   .right-action-ctnr::after,
-  .live-skin-highlight-text::after {
+  .live-skin-highlight-text::after,
+  .awarding-panel .close-btn::after,
+  .awarding-panel .info-section .slide-btn::after,
+  .captcha-widget .refresh-captcha::after {
     content: none !important;
   }
   .live-room-app .app-content .app-body .player-and-aside-area .aside-area .chat-control-panel {
@@ -5183,21 +5241,13 @@
     background-color: var(--c-background) !important;
     color: var(--c-accent) !important;
   }
-  .bl-button--primary {
-    background-color: var(--c-accent) !important;
-    color: var(--c-white) !important;
-  }
-  .bl-button--primary:disabled {
-    background-color: #e9eaec !important;
-    color: #b4b4b4 !important;
-  }
 @media (prefers-color-scheme: dark) {
     .live-player-ctnr.minimal {
       box-shadow: 0 0 30px 1px rgba(84,94,101,0.4);
     }
 }
 }
-@-moz-document url-prefix("https://live.bilibili.com/"), url-prefix("https://live.bilibili.com/activity/"), url-prefix("https://live.bilibili.com/p/") {
+@-moz-document url-prefix("https://live.bilibili.com/activity/"), url-prefix("https://live.bilibili.com/p/") {
   .bili-footer {
     display: none !important;
   }
@@ -5251,7 +5301,8 @@
 @-moz-document url-prefix("https://link.bilibili.com/") {
   header figure,
   .nav-item .svg-icon,
-  .ad {
+  .ad,
+  .sub-pages-item-ctnr .sub-pages-item .badge {
     display: none !important;
   }
   #app-news #list,
@@ -5379,13 +5430,20 @@
   }
   .side-bar .nav-item-ctnr.expanded .sub-pages-item-ctnr .sub-pages-item {
     padding: 0 !important;
-    border-radius: 4px;
+    border-radius: 10px;
     text-align: center;
     transition: background-color 0.3s ease-in-out;
+  }
+  .side-bar .nav-item-ctnr.expanded .sub-pages-item-ctnr .sub-pages-item span {
+    transition: color 0.3s ease-in-out;
   }
   .side-bar .nav-item-ctnr.expanded .sub-pages-item-ctnr .sub-pages-item:hover,
   .side-bar .nav-item-ctnr.expanded .sub-pages-item-ctnr .sub-pages-item.active {
     background-color: var(--c-hover) !important;
+  }
+  .side-bar .nav-item-ctnr.expanded .sub-pages-item-ctnr .sub-pages-item:hover span,
+  .side-bar .nav-item-ctnr.expanded .sub-pages-item-ctnr .sub-pages-item.active span {
+    color: var(--c-accent) !important;
   }
   .tabnav {
     display: flex;
@@ -7649,6 +7707,8 @@
   }
   .nav-header-wrapper .nav-header .user-panel .login-out {
     border-top: 1px solid var(--c-border);
+  }
+  .nav-header-wrapper .nav-header .user-panel .login-out:hover {
     background-color: var(--c-hover) !important;
   }
   .nav-header-wrapper .nav-header .user-panel .login-out a {
