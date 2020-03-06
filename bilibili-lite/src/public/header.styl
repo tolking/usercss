@@ -10,6 +10,7 @@
 .nav-user-center .user-con .item:nth-child(2)
 .nav-wrapper-right .nav-con .nav-item:nth-child(2)
 .nav-wrapper-right .nav-con .nav-item:nth-child(5)
+.van-popper-avatar .coins .contact .contact-tips::after
 	display none !important
 
 .channel-menu-mini
@@ -28,6 +29,9 @@
 .video-info .line-1
 .video-info .line-2
 	color var(--c-title) !important
+
+.mini-type .nav-user-center .user-con .item .name:hover
+	color var(--c-accent) !important
 
 .international-header .mini-type
 .van-popover .mini-type
@@ -98,9 +102,12 @@
 .news-notice-panel
 .publish-panel
 .popover-channe
-.user-panel-ctnr .user-panel
+.user-panel-ctnr .user-panel .lens-ctnr
 	border 1px solid var(--c-border) !important
 	border-top-width 0 !important
+
+.user-panel-ctnr .user-panel .lens-ctnr
+	border-radius 0 0 10px 10px
 
 .lang-change .lang-intro
 	border 1px solid var(--c-border) !important
@@ -115,6 +122,7 @@
 .van-popper-avatar .links .link-item:hover
 .lang-change .lang-item:hover
 .lang-change .lang-intro-item:hover
+.van-popper-avatar .logout a:hover
 	background-color var(--c-hover) !important
 
 .van-popper-avatar .level-bar .level-progress
@@ -122,14 +130,15 @@
 .bili-header-m .profile-m .grade .bar .rate
 	background-color var(--c-accent) !important
 
-.van-popper-avatar .links .link-title
-.lang-change .lang-title
-.lang-change .lang-intro-item
+.lang-change .lang-item .lang-title
 	color var(--c-title) !important
 
+.lang-change .lang-item:hover .lang-title
 .lang-change .lang-intro-item.on
+.lang-change .lang-intro-item:hover
 .bili-header-m .profile-m .grade .desc-tips .lv-row strong
 .out-container .tab-bar .tab-item:hover
+.van-popper-avatar .logout a:hover
 	color var(--c-accent) !important
 
 .out-container .tab-bar .active:hover
@@ -139,7 +148,6 @@
 .van-popper-avatar .counts
 .van-popper-avatar .links
 .van-popper-avatar .lang-change
-.van-popper-avatar .coins .contact .contact-tips
 	border-color var(--c-border) !important
 
 .van-popper-avatar .level-intro
@@ -147,9 +155,9 @@
 	background-color var(--c-background) !important
 	color var(--c-text) !important
 
-.van-popper-avatar .logout a:hover
 .van-popper-avatar .coins .contact .contact-tips
-	background-color var(--c-hover) !important
+	border-color var(--c-border) !important
+	background-color var(--c-background) !important
 	color var(--c-title) !important
 
 .dynamic-m .dyn_list_wrapper .dyn_list li .r .title .uname
@@ -173,7 +181,7 @@
 
 .im-list:hover
 	background-color var(--c-hover) !important
-	color var(--c-title) !important
+	color var(--c-accent) !important
 
 /* 动态弹窗 */
 .out-container
@@ -205,12 +213,22 @@
 .van-popper-history .view-all:hover
 	background-color var(--c-hover) !important
 
+.dynamic-iframe
+	padding 0 !important
+	width 100% !important
+
+.dynamic-m
+	width 100% !important
+	box-shadow none !important
+
 /* 收藏弹窗 */
 .video-info .line-2
 	color var(--c-title) !important
 
 .video-info .line-2:hover
 .van-popper-favorite .video-panel .play-all .bilifont
+.van-popper-favorite .tab-item--normal:hover span
+.van-popper-favorite .tab-item--active span
 	color var(--c-accent) !important
 
 .duration-tag
@@ -222,7 +240,6 @@
 
 .van-popper-favorite .tab-item--active
 	background-color var(--c-hover) !important
-	color var(--c-white) !important
 
 .van-popper-favorite .tab-item--normal:hover
 .video-card:hover
@@ -302,9 +319,13 @@
 .bili-header-m .profile-m .member-bottom
 	height 42px !important
 	border-top 1px solid var(--c-border)
-	background-color var(--c-hover) !important
+	background-color var(--c-background) !important
 	text-align center !important
 	line-height 42px !important
+	transition background-color 0.3s ease-in-out !important
+
+	&:hover
+		background-color var(--c-hover) !important
 
 	a
 		float none !important
