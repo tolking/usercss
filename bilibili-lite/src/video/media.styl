@@ -46,6 +46,7 @@
 .review-feed-item .feed-right .likes
 .section-item .section-text .section-title
 .media-info-card .mic-expand
+.misl-ep-item .misl-ep-text .misl-ep-title
   color var(--c-text) !important
 
 .media-info-r span
@@ -76,6 +77,7 @@
 .sort-type-wrp ul
 .review-list-wrp li
 .review-feed-item
+.media-tab-module-wrp .media-tab-module-content .sl-ep-nav .mode-select
   border-color var(--c-border) !important
 
 .media-info-wrp .media-info-content .media-info-inner .media-info-r .media-info-title .media-tag
@@ -96,6 +98,34 @@
 
 .btn-pay-wrapper.is-vip a
   text-indent 0
+
+.season-slider-wrapper .slider-wrapper .season-slider-list
+.season-slider-wrapper .slider-wrapper .season-slider-list li
+.season-slider-wrapper .slider-wrapper .season-slider-list li a
+.season-slider-wrapper .slider-wrapper .season-slider-list li div
+  height 50px
+  line-height 50px
+
+.season-slider-wrapper .slider-wrapper .season-slider-list li
+  margin 0
+  padding 0 10px
+  border-color var(--c-border) !important
+  background-color transparent
+
+  &::before
+  &::after
+    content none
+
+  &:first-child
+    border-left 1px solid var(--c-border)
+
+  &.cur
+  &:hover
+    background-color var(--c-hover)
+
+    a
+    div
+      color var(--c-accent) !important
 
 .bangumi-media .bangumi-media-header .rate-wrapper .btn-go-write
   background-color transparent !important
