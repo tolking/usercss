@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.1.2
+@version        1.1.3
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -30,7 +30,7 @@
 @advanced  color  backgroundDarkColor  "暗-背景"  #25272a
 @advanced  color  hoverDarkColor  "暗-次要背景"  rgba(20,20,20,.3)
 ==/UserStyle== */
-@-moz-document domain("bilibili.com") {
+@-moz-document domain("bilibili.com"), domain("biligame.com") {
   /*[[defaultTheme]]*/
   html {
     background-color: var(--c-background);
@@ -483,7 +483,8 @@
   .confirm-paybtn.active,
   .searchBtn,
   .hsbtn .sure,
-  .coupon-btn {
+  .coupon-btn,
+  .charge-btn-style {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -584,7 +585,8 @@
   .confirm-paybtn.active span,
   .searchBtn span,
   .hsbtn .sure span,
-  .coupon-btn span {
+  .coupon-btn span,
+  .charge-btn-style span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -680,7 +682,8 @@
   .confirm-paybtn.active::after,
   .searchBtn::after,
   .hsbtn .sure::after,
-  .coupon-btn::after {
+  .coupon-btn::after,
+  .charge-btn-style::after {
     content: '';
     display: block;
     position: absolute;
@@ -785,7 +788,8 @@
   .confirm-paybtn.active:hover,
   .searchBtn:hover,
   .hsbtn .sure:hover,
-  .coupon-btn:hover {
+  .coupon-btn:hover,
+  .charge-btn-style:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -881,7 +885,8 @@
   .confirm-paybtn.active:hover span,
   .searchBtn:hover span,
   .hsbtn .sure:hover span,
-  .coupon-btn:hover span {
+  .coupon-btn:hover span,
+  .charge-btn-style:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -977,7 +982,8 @@
   .confirm-paybtn.active:hover::after,
   .searchBtn:hover::after,
   .hsbtn .sure:hover::after,
-  .coupon-btn:hover::after {
+  .coupon-btn:hover::after,
+  .charge-btn-style:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -1059,7 +1065,8 @@
   .err-jump-btn,
   .hsbtn .cancel,
   .coupon-btn-disable,
-  .bl-button--primary:disabled {
+  .bl-button--primary:disabled,
+  .game-list-all {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -1144,7 +1151,8 @@
   .err-jump-btn span,
   .hsbtn .cancel span,
   .coupon-btn-disable span,
-  .bl-button--primary:disabled span {
+  .bl-button--primary:disabled span,
+  .game-list-all span {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -1226,7 +1234,8 @@
   .err-jump-btn::after,
   .hsbtn .cancel::after,
   .coupon-btn-disable::after,
-  .bl-button--primary:disabled::after {
+  .bl-button--primary:disabled::after,
+  .game-list-all::after {
     content: none !important;
   }
   .default:hover,
@@ -1308,7 +1317,8 @@
   .err-jump-btn:hover,
   .hsbtn .cancel:hover,
   .coupon-btn-disable:hover,
-  .bl-button--primary:disabled:hover {
+  .bl-button--primary:disabled:hover,
+  .game-list-all:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
     color: var(--c-text) !important;
@@ -1392,7 +1402,8 @@
   .err-jump-btn:hover span,
   .hsbtn .cancel:hover span,
   .coupon-btn-disable:hover span,
-  .bl-button--primary:disabled:hover span {
+  .bl-button--primary:disabled:hover span,
+  .game-list-all:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -1464,7 +1475,9 @@
   .type-label,
   .history-list .cover-contain .label,
   .my-link-btn .hint-count,
-  .gift-item-wrap .expiration {
+  .gift-item-wrap .expiration,
+  .hot-label,
+  .mic-wrapper.media-info-card .mic-content .mic-pic label {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
@@ -1529,7 +1542,9 @@
   .type-label:hover,
   .history-list .cover-contain .label:hover,
   .my-link-btn .hint-count:hover,
-  .gift-item-wrap .expiration:hover {
+  .gift-item-wrap .expiration:hover,
+  .hot-label:hover,
+  .mic-wrapper.media-info-card .mic-content .mic-pic label:hover {
     color: var(--c-white) !important;
   }
   .gg-icon,
@@ -1633,7 +1648,8 @@
   .modal-wrapper,
   .share-module .share-list .weixin-share-modal,
   .selector-wrapper .more-type-wrapper,
-  .history-dlg {
+  .history-dlg,
+  .bangumi-options .opt-list {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -1654,7 +1670,9 @@
   .classify .sub-list .sub-item:hover,
   .contri-condition .contri-sort .contri-sort-type li:hover,
   .hash-popup .topic-container .item.is-selected,
-  .hash-popup .topic-container .item:hover {
+  .hash-popup .topic-container .item:hover,
+  .bangumi-options .opt-list li:hover,
+  .bangumi-options .opt-list li.disabled {
     background-color: var(--c-hover) !important;
   }
   .van-popper .popper__arrow {
@@ -1820,7 +1838,8 @@
   }
   .van-popper-avatar .level-bar .level-progress,
   .bili-header-m .profile-m .grade .bar .lt,
-  .bili-header-m .profile-m .grade .bar .rate {
+  .bili-header-m .profile-m .grade .bar .rate,
+  .bp-red-point {
     background-color: var(--c-accent) !important;
   }
   .lang-change .lang-item .lang-title {
@@ -2451,8 +2470,12 @@
   .van-popper-channel .popper__arrow {
     display: none !important;
   }
-  .van-popover .sub-item a:hover {
+  .van-popover .sub-item a:hover,
+  .gg-carousel .more {
     background-color: var(--c-hover);
+  }
+  .gg-carousel .gg-icon {
+    background-color: transparent !important;
   }
   .video-card-common .ex-up,
   .video-card-common .up,
@@ -2469,7 +2492,8 @@
   .live-card .count,
   .home-slide .item .title,
   .video-card-reco .info-box .info .up,
-  .video-card-reco .info-box .info .play {
+  .video-card-reco .info-box .info .play,
+  .gg-carousel .more {
     color: var(--c-white) !important;
   }
   .first-screen {
@@ -2771,27 +2795,45 @@
   .spread-module .num,
   .audio-list .song-list .song-li .content .text,
   .game-groom-m .title,
-  .game-groom-m .num {
-    background-color: var(--c-background);
+  .game-groom-m .num,
+  .charge-container {
+    background-color: var(--c-background) !important;
+  }
+  .primary-menu .nav-menu .sub-nav li:hover,
+  .video-floor-m .zone-title .headline .read-push:hover,
+  .audio-comers-module .zone-title .headline .read-push:hover,
+  .promote-m .headline .change-push:hover,
+  .new-stat-module .zone-title .headline .read-push:hover,
+  .random-change:hover,
+  .charge-header .user-link,
+  .battery-item .battery-bg {
+    background-color: var(--c-hover) !important;
+  }
+  .split-line {
+    background-color: var(--c-border) !important;
   }
   .primary-menu .nav-menu .channel.on:after,
   .timeline-box .timeline-item.new p.num a {
-    background-color: var(--c-accent);
+    background-color: var(--c-accent) !important;
   }
   .video-item-biref .biref-info .biref-title,
   .energy-m .headline .name,
-  .coming-soon-wrapper .block-title {
+  .coming-soon-wrapper .block-title,
+  .battery-pay-info {
     color: var(--c-title) !important;
   }
   .bangumi-home-crumb .fcname ul.n_num li a,
   .spread-module .num span,
   .sub-nav-m ul li a,
   .coming-soon-wrapper .card-wrapper .card-item .time-line-wrapper .date,
-  .coming-soon-wrapper .card-wrapper .card-item .time-line-wrapper .time {
+  .coming-soon-wrapper .card-wrapper .card-item .time-line-wrapper .time,
+  .charge-info {
     color: var(--c-text) !important;
   }
-  .bangumi-home-crumb .fcname ul.n_num li.on a {
-    color: var(--c-accent);
+  .bangumi-home-crumb .fcname ul.n_num li.on a,
+  .battery-item.active .battery-text,
+  .battery-pay-info span {
+    color: var(--c-accent) !important;
   }
   .sub-nav-m ul li.on a {
     color: var(--c-accent) !important;
@@ -2803,25 +2845,25 @@
     color: var(--c-white) !important;
   }
   .primary-menu.border-b,
-  .cinema-home-crumb ul li {
-    border-color: var(--c-border);
+  .cinema-home-crumb ul li,
+  .charge-header .user-link,
+  .battery-item .battery-bg {
+    border-color: var(--c-border) !important;
+  }
+  .battery-item.active .battery-bg {
+    border-color: var(--c-accent) !important;
+  }
+  .charge-header-bg {
+    background-image: none !important;
   }
   .primary-menu .nav-menu>li .num-wrap span {
-    background-color: var(--c-accent);
-    color: var(--c-white);
+    background-color: var(--c-accent) !important;
+    color: var(--c-white) !important;
   }
   .primary-menu .nav-menu .sub-nav,
   .sub-nav-m .tips {
     border: 1px solid var(--c-border);
-    background-color: var(--c-background);
-  }
-  .primary-menu .nav-menu .sub-nav li:hover,
-  .video-floor-m .zone-title .headline .read-push:hover,
-  .audio-comers-module .zone-title .headline .read-push:hover,
-  .promote-m .headline .change-push:hover,
-  .new-stat-module .zone-title .headline .read-push:hover,
-  .random-change:hover {
-    background-color: var(--c-hover);
+    background-color: var(--c-background) !important;
   }
   .bili-wrapper .l-con,
   .block-area .block-left,
@@ -2897,7 +2939,7 @@
   }
   .game-groom-m {
     border: 0;
-    background-color: var(--c-background);
+    background-color: var(--c-background) !important;
   }
   .block-left,
   .special-recom-module .block-body,
@@ -3131,7 +3173,8 @@
   .schedule-filter .filter-content .content-all div.active,
   .schedule-contain .time-all.active span,
   .library-contain .search-sort .sort-list li.active,
-  .game-menu ul li.active {
+  .game-menu ul li.active,
+  .game-banner .banner-title .title-content ul li a {
     color: var(--c-white) !important;
   }
   .game-banner .banner-title .title-content ul li.active a,
@@ -3310,7 +3353,7 @@
   .main-container .media-info .media-right .media-tool-bar .btn-rating:hover,
   .short-review-masker .short-review-content,
   .main-container .pay-bar .vip .btn-pay,
-  .bilibili-player-video-sendbar .bilibili-player-video-inputbar,
+  .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar,
   .members-info__header,
   .bilibili-player .bilibili-player-area .bilibili-player-video-panel,
   .v-wrap .danmaku-wrap,
@@ -3324,7 +3367,7 @@
   .section-ep-wrapper .ep-item:hover,
   .ep-list-wrapper .ep-item.cursor,
   .section-ep-wrapper .ep-item.cursor,
-  .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint,
+  .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint,
   .bilibili-player .bilibili-player-area .bilibili-player-video-wrap .bilibili-player-volumeHint,
   #bofqi.mini-player .drag-bar,
   .video-page-card .card-box .pic-box {
@@ -3335,7 +3378,8 @@
   .bui-slider .bui-track.bui-track-video-progress .bui-bar-wrap .bui-bar-buffer {
     background-color: var(--c-border) !important;
   }
-  .bilibili-player em {
+  .bilibili-player em,
+  .bilibili-player.mode-webfullscreen .bilibili-player-video-control-wrap .bilibili-player-video-control-bottom-center .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-danmaku-input {
     background-color: transparent !important;
   }
   .bui-slider .bui-track .bui-bar-wrap .bui-bar,
@@ -3350,7 +3394,10 @@
   .bilibili-player-video-wrap li,
   .bilibili-player-video-wrap span,
   .bilibili-player-video-wrap span:hover,
-  .player-tooltips div {
+  .player-tooltips div,
+  .bilibili-player-context-menu-container.black ul>li a,
+  .bilibili-player-context-menu-container.black ul>li a span,
+  .bilibili-player-video-control-bottom-center .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-danmaku-input {
     color: var(--c-white) !important;
   }
   .video-info .video-title .tit,
@@ -3365,7 +3412,7 @@
   .main-container .season-list .ss-list-wrapper .ss-item .ss-info .ss-title {
     color: var(--c-title) !important;
   }
-  .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a span,
+  .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a span,
   .main-container .review-module .review-list .review-item .review-content,
   .main-container .review-module .review-list .review-item .pub-time,
   .video-desc .info,
@@ -3442,7 +3489,7 @@
   .bilibili-player-video-btn-fullscreen:hover .bp-svgicon svg .st0 {
     fill: var(--c-accent) !important;
   }
-  .bilibili-player-video-sendbar,
+  .bilibili-player-video-bottom-area .bilibili-player-video-sendbar,
   .tag-info-pane,
   .tag-del-popup,
   .tag-report-popup,
@@ -3465,7 +3512,7 @@
   .main-container .plp-l .comment-wrapper,
   .open-dialog-masker .open-dialog-content .__dialog-header,
   .video-toolbar .ops .share .share-pos .box-b,
-  .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-inputbar-wrap {
+  .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-inputbar-wrap {
     border-color: var(--c-border) !important;
   }
   .video-toolbar .ops .share .share-pos,
@@ -3609,7 +3656,8 @@
   .review-feed-item .feed-left .review-about,
   .review-feed-item .feed-right .likes,
   .section-item .section-text .section-title,
-  .media-info-card .mic-expand {
+  .media-info-card .mic-expand,
+  .misl-ep-item .misl-ep-text .misl-ep-title {
     color: var(--c-text) !important;
   }
   .media-info-r span,
@@ -3639,7 +3687,8 @@
   .bangumi-media .bangumi-media-header .btn-more-review,
   .sort-type-wrp ul,
   .review-list-wrp li,
-  .review-feed-item {
+  .review-feed-item,
+  .media-tab-module-wrp .media-tab-module-content .sl-ep-nav .mode-select {
     border-color: var(--c-border) !important;
   }
   .media-info-wrp .media-info-content .media-info-inner .media-info-r .media-info-title .media-tag {
@@ -3660,6 +3709,36 @@
   }
   .btn-pay-wrapper.is-vip a {
     text-indent: 0;
+  }
+  .season-slider-wrapper .slider-wrapper .season-slider-list,
+  .season-slider-wrapper .slider-wrapper .season-slider-list li,
+  .season-slider-wrapper .slider-wrapper .season-slider-list li a,
+  .season-slider-wrapper .slider-wrapper .season-slider-list li div {
+    height: 50px;
+    line-height: 50px;
+  }
+  .season-slider-wrapper .slider-wrapper .season-slider-list li {
+    margin: 0;
+    padding: 0 10px;
+    border-color: var(--c-border) !important;
+    background-color: transparent;
+  }
+  .season-slider-wrapper .slider-wrapper .season-slider-list li::before,
+  .season-slider-wrapper .slider-wrapper .season-slider-list li::after {
+    content: none;
+  }
+  .season-slider-wrapper .slider-wrapper .season-slider-list li:first-child {
+    border-left: 1px solid var(--c-border);
+  }
+  .season-slider-wrapper .slider-wrapper .season-slider-list li.cur,
+  .season-slider-wrapper .slider-wrapper .season-slider-list li:hover {
+    background-color: var(--c-hover);
+  }
+  .season-slider-wrapper .slider-wrapper .season-slider-list li.cur a,
+  .season-slider-wrapper .slider-wrapper .season-slider-list li:hover a,
+  .season-slider-wrapper .slider-wrapper .season-slider-list li.cur div,
+  .season-slider-wrapper .slider-wrapper .season-slider-list li:hover div {
+    color: var(--c-accent) !important;
   }
   .bangumi-media .bangumi-media-header .rate-wrapper .btn-go-write {
     background-color: transparent !important;
@@ -4697,7 +4776,7 @@
     background-color: rgba(0,0,0,0.6) !important;
   }
 }
-@-moz-document url-prefix("https://live.bilibili.com/"), url-prefix("https://link.bilibili.com/") {
+@-moz-document url-prefix("https://live.bilibili.com/"), url-prefix("https://link.bilibili.com/"), url-prefix("https://www.bilibili.com/blackboard/live/") {
   .user-title-sending-cntr .panel,
   .user-panel-ctnr .user-panel,
   .link-panel-ctnr,
@@ -4771,7 +4850,7 @@
     background-color: var(--c-bg-header) !important;
     backdrop-filter: blur(5px) !important;
   }
-  .area-list-panel,
+  .area-list-panel .main-ctnr,
   .link-panel-ctnr .panel-main-ctnr,
   .calendar-checkin .content-ctnr {
     border: 1px solid var(--c-border);
@@ -5247,7 +5326,7 @@
     }
 }
 }
-@-moz-document url-prefix("https://live.bilibili.com/activity/"), url-prefix("https://live.bilibili.com/p/") {
+@-moz-document url-prefix("https://live.bilibili.com/activity/"), url-prefix("https://live.bilibili.com/p/"), url-prefix("https://www.bilibili.com/blackboard/live/") {
   .bili-footer {
     display: none !important;
   }
@@ -5290,11 +5369,13 @@
     position: absolute;
     width: 100%;
   }
-  button {
+  button,
+  .btn {
     background-color: transparent !important;
     color: var(--c-title) !important;
   }
-  button::after {
+  button::after,
+  .btn::after {
     content: none !important;
   }
 }
@@ -7732,5 +7813,118 @@
   }
   .header .right li.user-wrapper .avatar:hover .detail {
     height: 161px !important;
+  }
+}
+@-moz-document domain("biligame.com"), url-prefix("https://game.bilibili.com/") {
+  footer,
+  .footer-public,
+  .bui-sns-info,
+  .g-title .btn .ic-gift {
+    display: none;
+  }
+  #page .game,
+  .banner,
+  .listing-ul li,
+  .pagination a.backhome,
+  .pagination select,
+  .bili-comment-container,
+  .pop-nav {
+    background-color: var(--c-background) !important;
+  }
+  .nav-notice li,
+  .nav-notice li.hover,
+  .nav-notice li:hover,
+  .game-more,
+  a.listing-btn:hover,
+  .listing-sort a:hover,
+  .pagination a.backhome:hover,
+  .gift-recommend .gift-box {
+    background-color: var(--c-hover) !important;
+  }
+  .gift-recommend .gift-box .info .price-box .price-old:before {
+    background-color: var(--c-border) !important;
+  }
+  #page .game .game-box h4,
+  .gift-recommend .gift-box .info .price-box em,
+  .gift-all .gift-box .info .price-box em {
+    background-color: transparent !important;
+  }
+  .listing-sort a.active,
+  .gift-recommend .g-title h4:before,
+  .gift-all .gift-box:hover {
+    background-color: var(--c-accent) !important;
+  }
+  .listing-sort a.active {
+    color: var(--c-white) !important;
+  }
+  #page .game .game-box dl dt {
+    color: var(--c-accent) !important;
+  }
+  .nav-notice li,
+  .banner-p a,
+  .breadcrumb-item,
+  a.listing-btn,
+  .listing-sort a,
+  .pagination a.backhome,
+  .pagination select,
+  .gift-all .gift-box {
+    border-color: var(--c-border);
+  }
+  .nav-notice li.hover,
+  .nav-notice li:hover,
+  .banner-p h3,
+  #page .game .game-box h4 span,
+  a.listing-btn:hover,
+  .listing-sort a.active,
+  .listing-sort a:hover,
+  .pagination a.backhome:hover {
+    border-color: var(--c-accent);
+  }
+  .banner,
+  #page .game .game-box,
+  #page .game .game-box-1,
+  #page .game .game-box-3,
+  .game-box-others,
+  .breadcrumb h2,
+  .listing-ul li {
+    border: 0;
+  }
+  .listing-ul li,
+  .pop-nav {
+    box-shadow: none;
+  }
+  .banner .slides-pagination {
+    bottom: -1px;
+    background-image: none;
+    background-color: var(--c-bg-header);
+    backdrop-filter: blur(5px);
+  }
+  .banner .slides-pagination li {
+    border-radius: 50%;
+    background-color: var(--c-scroll);
+    background-image: none;
+  }
+  .banner .slides-pagination li.selected {
+    background-color: var(--c-accent);
+  }
+  .nav-notice .clearfix {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .nav-notice .clearfix li {
+    float: none;
+    flex: 1;
+    width: auto;
+  }
+  button,
+  .btn {
+    background-color: transparent !important;
+    color: var(--c-title) !important;
+  }
+  button::after,
+  .btn::after {
+    content: none !important;
   }
 }
