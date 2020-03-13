@@ -483,7 +483,8 @@
   .confirm-paybtn.active,
   .searchBtn,
   .hsbtn .sure,
-  .coupon-btn {
+  .coupon-btn,
+  .charge-btn-style {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -584,7 +585,8 @@
   .confirm-paybtn.active span,
   .searchBtn span,
   .hsbtn .sure span,
-  .coupon-btn span {
+  .coupon-btn span,
+  .charge-btn-style span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -680,7 +682,8 @@
   .confirm-paybtn.active::after,
   .searchBtn::after,
   .hsbtn .sure::after,
-  .coupon-btn::after {
+  .coupon-btn::after,
+  .charge-btn-style::after {
     content: '';
     display: block;
     position: absolute;
@@ -785,7 +788,8 @@
   .confirm-paybtn.active:hover,
   .searchBtn:hover,
   .hsbtn .sure:hover,
-  .coupon-btn:hover {
+  .coupon-btn:hover,
+  .charge-btn-style:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -881,7 +885,8 @@
   .confirm-paybtn.active:hover span,
   .searchBtn:hover span,
   .hsbtn .sure:hover span,
-  .coupon-btn:hover span {
+  .coupon-btn:hover span,
+  .charge-btn-style:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -977,7 +982,8 @@
   .confirm-paybtn.active:hover::after,
   .searchBtn:hover::after,
   .hsbtn .sure:hover::after,
-  .coupon-btn:hover::after {
+  .coupon-btn:hover::after,
+  .charge-btn-style:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -2789,27 +2795,45 @@
   .spread-module .num,
   .audio-list .song-list .song-li .content .text,
   .game-groom-m .title,
-  .game-groom-m .num {
-    background-color: var(--c-background);
+  .game-groom-m .num,
+  .charge-container {
+    background-color: var(--c-background) !important;
+  }
+  .primary-menu .nav-menu .sub-nav li:hover,
+  .video-floor-m .zone-title .headline .read-push:hover,
+  .audio-comers-module .zone-title .headline .read-push:hover,
+  .promote-m .headline .change-push:hover,
+  .new-stat-module .zone-title .headline .read-push:hover,
+  .random-change:hover,
+  .charge-header .user-link,
+  .battery-item .battery-bg {
+    background-color: var(--c-hover) !important;
+  }
+  .split-line {
+    background-color: var(--c-border) !important;
   }
   .primary-menu .nav-menu .channel.on:after,
   .timeline-box .timeline-item.new p.num a {
-    background-color: var(--c-accent);
+    background-color: var(--c-accent) !important;
   }
   .video-item-biref .biref-info .biref-title,
   .energy-m .headline .name,
-  .coming-soon-wrapper .block-title {
+  .coming-soon-wrapper .block-title,
+  .battery-pay-info {
     color: var(--c-title) !important;
   }
   .bangumi-home-crumb .fcname ul.n_num li a,
   .spread-module .num span,
   .sub-nav-m ul li a,
   .coming-soon-wrapper .card-wrapper .card-item .time-line-wrapper .date,
-  .coming-soon-wrapper .card-wrapper .card-item .time-line-wrapper .time {
+  .coming-soon-wrapper .card-wrapper .card-item .time-line-wrapper .time,
+  .charge-info {
     color: var(--c-text) !important;
   }
-  .bangumi-home-crumb .fcname ul.n_num li.on a {
-    color: var(--c-accent);
+  .bangumi-home-crumb .fcname ul.n_num li.on a,
+  .battery-item.active .battery-text,
+  .battery-pay-info span {
+    color: var(--c-accent) !important;
   }
   .sub-nav-m ul li.on a {
     color: var(--c-accent) !important;
@@ -2821,25 +2845,25 @@
     color: var(--c-white) !important;
   }
   .primary-menu.border-b,
-  .cinema-home-crumb ul li {
-    border-color: var(--c-border);
+  .cinema-home-crumb ul li,
+  .charge-header .user-link,
+  .battery-item .battery-bg {
+    border-color: var(--c-border) !important;
+  }
+  .battery-item.active .battery-bg {
+    border-color: var(--c-accent) !important;
+  }
+  .charge-header-bg {
+    background-image: none !important;
   }
   .primary-menu .nav-menu>li .num-wrap span {
-    background-color: var(--c-accent);
-    color: var(--c-white);
+    background-color: var(--c-accent) !important;
+    color: var(--c-white) !important;
   }
   .primary-menu .nav-menu .sub-nav,
   .sub-nav-m .tips {
     border: 1px solid var(--c-border);
-    background-color: var(--c-background);
-  }
-  .primary-menu .nav-menu .sub-nav li:hover,
-  .video-floor-m .zone-title .headline .read-push:hover,
-  .audio-comers-module .zone-title .headline .read-push:hover,
-  .promote-m .headline .change-push:hover,
-  .new-stat-module .zone-title .headline .read-push:hover,
-  .random-change:hover {
-    background-color: var(--c-hover);
+    background-color: var(--c-background) !important;
   }
   .bili-wrapper .l-con,
   .block-area .block-left,
@@ -2915,7 +2939,7 @@
   }
   .game-groom-m {
     border: 0;
-    background-color: var(--c-background);
+    background-color: var(--c-background) !important;
   }
   .block-left,
   .special-recom-module .block-body,
@@ -3329,7 +3353,7 @@
   .main-container .media-info .media-right .media-tool-bar .btn-rating:hover,
   .short-review-masker .short-review-content,
   .main-container .pay-bar .vip .btn-pay,
-  .bilibili-player-video-sendbar .bilibili-player-video-inputbar,
+  .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar,
   .members-info__header,
   .bilibili-player .bilibili-player-area .bilibili-player-video-panel,
   .v-wrap .danmaku-wrap,
@@ -3343,7 +3367,7 @@
   .section-ep-wrapper .ep-item:hover,
   .ep-list-wrapper .ep-item.cursor,
   .section-ep-wrapper .ep-item.cursor,
-  .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint,
+  .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint,
   .bilibili-player .bilibili-player-area .bilibili-player-video-wrap .bilibili-player-volumeHint,
   #bofqi.mini-player .drag-bar,
   .video-page-card .card-box .pic-box {
@@ -3354,7 +3378,8 @@
   .bui-slider .bui-track.bui-track-video-progress .bui-bar-wrap .bui-bar-buffer {
     background-color: var(--c-border) !important;
   }
-  .bilibili-player em {
+  .bilibili-player em,
+  .bilibili-player.mode-webfullscreen .bilibili-player-video-control-wrap .bilibili-player-video-control-bottom-center .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-danmaku-input {
     background-color: transparent !important;
   }
   .bui-slider .bui-track .bui-bar-wrap .bui-bar,
@@ -3369,7 +3394,10 @@
   .bilibili-player-video-wrap li,
   .bilibili-player-video-wrap span,
   .bilibili-player-video-wrap span:hover,
-  .player-tooltips div {
+  .player-tooltips div,
+  .bilibili-player-context-menu-container.black ul>li a,
+  .bilibili-player-context-menu-container.black ul>li a span,
+  .bilibili-player-video-control-bottom-center .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-danmaku-input {
     color: var(--c-white) !important;
   }
   .video-info .video-title .tit,
@@ -3384,7 +3412,7 @@
   .main-container .season-list .ss-list-wrapper .ss-item .ss-info .ss-title {
     color: var(--c-title) !important;
   }
-  .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a span,
+  .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a span,
   .main-container .review-module .review-list .review-item .review-content,
   .main-container .review-module .review-list .review-item .pub-time,
   .video-desc .info,
@@ -3461,7 +3489,7 @@
   .bilibili-player-video-btn-fullscreen:hover .bp-svgicon svg .st0 {
     fill: var(--c-accent) !important;
   }
-  .bilibili-player-video-sendbar,
+  .bilibili-player-video-bottom-area .bilibili-player-video-sendbar,
   .tag-info-pane,
   .tag-del-popup,
   .tag-report-popup,
@@ -3484,7 +3512,7 @@
   .main-container .plp-l .comment-wrapper,
   .open-dialog-masker .open-dialog-content .__dialog-header,
   .video-toolbar .ops .share .share-pos .box-b,
-  .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-inputbar-wrap {
+  .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-inputbar-wrap {
     border-color: var(--c-border) !important;
   }
   .video-toolbar .ops .share .share-pos,
