@@ -149,7 +149,9 @@
   .s-item.active,
   .s-item:hover,
   .el-select-dropdown__item.hover,
-  .el-select-dropdown__item:hover {
+  .el-select-dropdown__item:hover,
+  .dropbox-component,
+  .dropbox-component .data-list>li:hover {
     background-color: var(--c-hover) !important;
   }
   .el-date-table td.disabled div,
@@ -165,7 +167,8 @@
   .date-picker-v2-container div,
   .s-item.active,
   .s-item:hover,
-  .player-auxiliary-danmaku-date-picker-container .player-auxiliary-danmaku-date-picker-body .player-auxiliary-danmaku-date-picker-week .day-span {
+  .player-auxiliary-danmaku-date-picker-container .player-auxiliary-danmaku-date-picker-body .player-auxiliary-danmaku-date-picker-week .day-span,
+  .dropbox-component .current {
     color: var(--c-title) !important;
   }
   .date-picker-v2-container i,
@@ -176,7 +179,8 @@
   .ui-select .ul-select-list .select-item:hover,
   .date-panel .day.active,
   .player-auxiliary-danmaku-date-picker-container .player-auxiliary-danmaku-date-picker-body .day-span.day-enable.active,
-  .player-auxiliary-danmaku-date-picker-container .player-auxiliary-danmaku-date-picker-body .day-span.day-enable:hover {
+  .player-auxiliary-danmaku-date-picker-container .player-auxiliary-danmaku-date-picker-body .day-span.day-enable:hover,
+  .dropbox-component .data-list>li:hover {
     color: var(--c-accent) !important;
   }
   .time-picker-v2-container .time-picker-head-wrp,
@@ -186,7 +190,8 @@
   .bp-selector::before,
   .player-auxiliary-danmaku-date-picker-container .player-auxiliary-danmaku-date-picker-header,
   .head .dropdown-menu .article-list,
-  .num-content .ticket-count {
+  .num-content .ticket-count,
+  .dropbox-component {
     border-color: var(--c-border) !important;
   }
   .ui-radio.active .ui-radio-icon,
@@ -216,7 +221,8 @@
   .calendar-year,
   .bili-dropdown,
   .bili-dropdown .dropdown-list,
-  .player-auxiliary-danmaku-date-picker-container {
+  .player-auxiliary-danmaku-date-picker-container,
+  .dropbox-component .data-list {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
   }
@@ -488,7 +494,8 @@
   .article-chart-wrp .tools .btn-group .ui-btn,
   .file-list-v2-container .file-add-btn,
   .submit-button-group-v2-container .submit-btn-group-add,
-  .share-modal .copy-btn {
+  .share-modal .copy-btn,
+  .coupon-label .container-right .to-use {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -594,7 +601,8 @@
   .article-chart-wrp .tools .btn-group .ui-btn span,
   .file-list-v2-container .file-add-btn span,
   .submit-button-group-v2-container .submit-btn-group-add span,
-  .share-modal .copy-btn span {
+  .share-modal .copy-btn span,
+  .coupon-label .container-right .to-use span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -695,7 +703,8 @@
   .article-chart-wrp .tools .btn-group .ui-btn::after,
   .file-list-v2-container .file-add-btn::after,
   .submit-button-group-v2-container .submit-btn-group-add::after,
-  .share-modal .copy-btn::after {
+  .share-modal .copy-btn::after,
+  .coupon-label .container-right .to-use::after {
     content: '';
     display: block;
     position: absolute;
@@ -805,7 +814,8 @@
   .article-chart-wrp .tools .btn-group .ui-btn:hover,
   .file-list-v2-container .file-add-btn:hover,
   .submit-button-group-v2-container .submit-btn-group-add:hover,
-  .share-modal .copy-btn:hover {
+  .share-modal .copy-btn:hover,
+  .coupon-label .container-right .to-use:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -906,7 +916,8 @@
   .article-chart-wrp .tools .btn-group .ui-btn:hover span,
   .file-list-v2-container .file-add-btn:hover span,
   .submit-button-group-v2-container .submit-btn-group-add:hover span,
-  .share-modal .copy-btn:hover span {
+  .share-modal .copy-btn:hover span,
+  .coupon-label .container-right .to-use:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -1007,7 +1018,8 @@
   .article-chart-wrp .tools .btn-group .ui-btn:hover::after,
   .file-list-v2-container .file-add-btn:hover::after,
   .submit-button-group-v2-container .submit-btn-group-add:hover::after,
-  .share-modal .copy-btn:hover::after {
+  .share-modal .copy-btn:hover::after,
+  .coupon-label .container-right .to-use:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -1444,6 +1456,7 @@
   em:not(.icon),
   .m-header .num,
   .bili-header-m .num,
+  .nav-item .num,
   .badge.pink,
   .badge.is-vip,
   .badge.type_0,
@@ -1511,6 +1524,7 @@
   em:not(.icon):hover,
   .m-header .num:hover,
   .bili-header-m .num:hover,
+  .nav-item .num:hover,
   .badge.pink:hover,
   .badge.is-vip:hover,
   .badge.type_0:hover,
@@ -1674,7 +1688,11 @@
   .selector-wrapper .more-type-wrapper,
   .history-dlg,
   .bangumi-options .opt-list,
-  .ui-popup .popup-wrap {
+  .ui-popup .popup-wrap,
+  .user-info-component .unuseable .user-help .unuseable-hinter,
+  .auto-purchase .page-sub-title .question-icon .hover-tab,
+  .question-icon .hover-tab,
+  .purchase-panel-component .purchase-panel {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -6089,7 +6107,7 @@
   .nav-list a:last-child {
     display: none !important;
   }
-  .manga-navbar,
+  .manga-navbar .manga-navbar,
   .search-bar .search-suggestion,
   .user-panel .drop-list,
   .manga-navbar-history-list .drop-list,
@@ -6118,13 +6136,16 @@
   nav.manga-navbar.p-fixed.p-zero a:hover button span {
     color: var(--c-accent) !important;
   }
+  .manga-navbar .manga-navbar {
+    border-bottom: 1px solid var(--c-border);
+  }
   .right-part .drop-list .size-ruler {
     border: 1px solid var(--c-border);
     border-top-width: 0;
     border-radius: 0 0 10px 10px;
     overflow: hidden;
   }
-  .manga-navbar {
+  nav.manga-navbar {
     box-shadow: none !important;
     background-color: var(--c-bg-header) !important;
     backdrop-filter: blur(5px) !important;
@@ -6283,61 +6304,6 @@
   .recommendation-section .manga-list {
     width: 100% !important;
   }
-  .episode-comment {
-    background-color: var(--c-background) !important;
-  }
-  .read-nav .episode,
-  .episode-comment .header-section div {
-    color: var(--c-title) !important;
-  }
-  .action-bar-container .app-button,
-  .hover-toast .app-button,
-  .floating-button,
-  .episode-comment .header-section .close-button {
-    background-color: transparent !important;
-  }
-  .action-bar-container .app-button::after,
-  .hover-toast .app-button::after,
-  .floating-button::after,
-  .episode-comment .header-section .close-button::after {
-    content: none !important;
-  }
-  .info-layer .floating-button {
-    border: 1px solid var(--c-border) !important;
-    background-color: var(--c-hover) !important;
-  }
-  .arrow {
-    display: none !important;
-  }
-  .sidebar-item {
-    text-align: center;
-  }
-  .sidebar-container {
-    width: 100px !important;
-  }
-  .rank-item-wrapper {
-    background-image: none !important;
-  }
-  .app-layout .main-container {
-    margin-top: 70px !important;
-  }
-  .sidebar-ctnr {
-    margin-top: 100px !important;
-    border: 0 !important;
-  }
-  .sidebar-item.activated,
-  .sidebar-item:hover {
-    border-radius: 10px;
-    background-color: var(--c-hover) !important;
-    transition: background-color 0.3s ease-in-out;
-  }
-  .sidebar-item.activated span,
-  .sidebar-item:hover span {
-    color: var(--c-accent) !important;
-    transition: color 0.3s ease-in-out;
-  }
-}
-@-moz-document url-prefix("https://manga.bilibili.com/detail/") {
   .title-tooltip {
     display: none !important;
   }
@@ -6370,13 +6336,195 @@
     box-shadow: none !important;
     background-color: var(--c-background) !important;
   }
-  .manga-navbar {
-    background-color: transparent !important;
-    backdrop-filter: none !important;
+  .purchase-panel-component .purchase-panel .action-buttons .tooltip {
+    display: none !important;
   }
-  .manga-navbar .manga-navbar {
-    border-bottom: 1px solid var(--c-border);
+  .episode-comment,
+  .theme-dark .manga-reader .more-btn-container {
     background-color: var(--c-background) !important;
+  }
+  .manga-reader .info-hud,
+  .manga-reader .info-layer .floating-button {
+    background-color: var(--c-bg-header) !important;
+  }
+  .read-nav .episode,
+  .episode-comment .header-section div,
+  .theme-dark .right-part .drop-list .size-ruler .data-list div,
+  .purchase-panel-component .purchase-panel .panel-title {
+    color: var(--c-title) !important;
+  }
+  .manga-reader .read-nav a,
+  .manga-reader .read-nav span,
+  .manga-reader .manga-navbar-history-list .action-button,
+  .manga-reader .manga-navbar-favourite-manga .action-button,
+  .manga-reader .info-hud div,
+  .manga-reader .info-hud span {
+    color: var(--c-white) !important;
+  }
+  .action-bar-container .app-button,
+  .hover-toast .app-button,
+  .floating-button,
+  .episode-comment .header-section .close-button {
+    background-color: transparent !important;
+    color: var(--c-title) !important;
+  }
+  .action-bar-container .app-button::after,
+  .hover-toast .app-button::after,
+  .floating-button::after,
+  .episode-comment .header-section .close-button::after {
+    content: none !important;
+  }
+  .arrow {
+    display: none !important;
+  }
+  .sidebar-item {
+    text-align: center;
+  }
+  .sidebar-container {
+    width: 100px !important;
+  }
+  .rank-item-wrapper {
+    background-image: none !important;
+  }
+  .app-layout .main-container {
+    margin-top: 70px !important;
+  }
+  .sidebar-ctnr {
+    margin-top: 100px !important;
+    border: 0 !important;
+  }
+  .sidebar-item.activated,
+  .sidebar-item:hover {
+    border-radius: 10px;
+    background-color: var(--c-hover) !important;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .sidebar-item.activated span,
+  .sidebar-item:hover span {
+    color: var(--c-accent) !important;
+    transition: color 0.3s ease-in-out;
+  }
+  .sidebar .nav-item-indicator,
+  .sidebar .nav-item .nav-item-icon,
+  .sidebar .nav-line {
+    display: none !important;
+  }
+  .app-layout .page-content,
+  .sidebar,
+  .recharge-panel-container .recharge-panel,
+  .recharge-panel-container .recharge-panel .charge-title .tab-name.is-active {
+    background-color: var(--c-background) !important;
+  }
+  .sidebar .nav-item.router-link-active,
+  .sidebar .nav-item:hover,
+  .user-info-component .user-avatar,
+  .coupon-label.whole-coupon,
+  .recharge-panel-container .recharge-panel .charge-title,
+  .recharge-option-container .recharge-hinter,
+  .recharge-option-container .recharge-config-list .is-not-first-charge,
+  .recharge-option-container .recharge-config-list .recharge-list-container .list-item .first-award-hinter,
+  .recharge-option-container .recharge-config-list .recharge-list-container .list-item.selected,
+  .recharge-option-container .recharge-config-list .recharge-list-container .list-item:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .user-info-component .user-info .uid {
+    background-color: transparent !important;
+  }
+  .recharge-option-container .recharge-config-list .is-not-first-charge:hover,
+  .recharge-option-container .recharge-config-list .recharge-list-container .list-item .first-charge-icon {
+    background-color: var(--c-accent) !important;
+  }
+  .coupon-label .container-left .coupon-type,
+  .purchase-history .list-item .text-info .display-text,
+  .purchase-history .list-item .coin-info .recharge-count {
+    color: var(--c-title) !important;
+  }
+  .auto-purchase .page-sub-title,
+  .auto-purchase .page-sub-title .question-icon .hover-tab .tab-text,
+  .recharge-option-container .first-charge-hinter,
+  .recharge-option-container .recharge-config-list .recharge-list-container .list-item .first-award-hinter,
+  .purchase-history .list-item .text-info .recharge-date {
+    color: var(--c-text) !important;
+  }
+  .recharge-option-container .recharge-config-list .recharge-list-container .list-item .first-charge-icon .charge-text {
+    color: var(--c-white) !important;
+  }
+  .sidebar .nav-item.router-link-active .nav-item-label,
+  .user-info-component .coin-info .coin-remain-count,
+  .pivot-component .pivot-headers .pivot-header-item.selected,
+  .pivot-component .pivot-headers .pivot-header-item:active,
+  .coupon-label .container-right .total-amount,
+  .my-favourite-page .page-header .page-pivot .pivot-button.enabled,
+  .my-favourite-page .page-header .page-pivot .pivot-button:hover,
+  .recharge-option-container .panel-hinter .reset-number,
+  .recharge-option-container .recharge-summary .recharge-amount,
+  .recharge-option-container .recharge-config-list .recharge-list-container .list-item .recharge-info .recharge-amount {
+    color: var(--c-accent) !important;
+  }
+  .user-info-component .user-avatar,
+  .pivot-component .pivot-headers {
+    border-color: var(--c-border) !important;
+  }
+  .recharge-option-container .recharge-config-list .recharge-list-container .list-item.selected,
+  .recharge-option-container .recharge-config-list .recharge-list-container .list-item:hover {
+    border-color: var(--c-accent) !important;
+  }
+  .user-info-component .unuseable .user-help .unuseable-hinter:before,
+  .question-icon .hover-tab:before {
+    border-bottom-color: var(--c-border) !important;
+  }
+  .user-info-component .unuseable .user-help .unuseable-hinter,
+  .auto-purchase .page-sub-title .question-icon .hover-tab,
+  .question-icon .hover-tab {
+    border: 1px solid var(--c-border);
+  }
+  .shadow-is-the-light {
+    box-shadow: none !important;
+  }
+  .app-layout .page-content {
+    padding-top: 40px;
+  }
+  .sidebar .nav-item .nav-item-label {
+    min-width: auto !important;
+  }
+  .user-info-component .coin-info .b-coin,
+  .user-info-component .unuseable .text-content {
+    opacity: 1;
+  }
+  .coupon-label.whole-coupon {
+    background-image: none !important;
+  }
+  .app-layout .page-content .app-sidebar {
+    padding: 60px 0 0 35px;
+    width: 180px !important;
+  }
+  .sidebar .nav-item {
+    height: 50px !important;
+    line-height: 50px !important;
+  }
+  .sidebar .nav-item {
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out !important;
+  }
+  .my-favourite-page .page-header .page-pivot .pivot-button,
+  .list-editor-toolbar .edit-button,
+  .recharge-panel-container .close-button,
+  .recharge-option-container .recharge-config-list .is-not-first-charge .p-relative {
+    border: 0 !important;
+    background-color: transparent !important;
+    color: var(--c-title) !important;
+  }
+  .my-favourite-page .page-header .page-pivot .pivot-button::after,
+  .list-editor-toolbar .edit-button::after,
+  .recharge-panel-container .close-button::after,
+  .recharge-option-container .recharge-config-list .is-not-first-charge .p-relative::after {
+    content: none !important;
+  }
+  .my-favourite-page .page-header .page-pivot .pivot-button span,
+  .list-editor-toolbar .edit-button span,
+  .recharge-panel-container .close-button span,
+  .recharge-option-container .recharge-config-list .is-not-first-charge .p-relative span {
+    color: var(--c-title) !important;
   }
 }
 @-moz-document url-prefix("https://www.bilibili.com/blackroom/") {
@@ -7025,7 +7173,8 @@
   .content-tag-v2-container .content-tag-v2-other-tag-error-wrp,
   .article-danmu-wrp .danmu-box .danmu-table .danmu-item:nth-child(odd),
   .article-danmu-wrp .danmu-box .danmu-table .danmu-item:hover,
-  .article-danmu-wrp .danmu-box .danmu-table .danmu-item .item-act .option-wrp .act-btn {
+  .article-danmu-wrp .danmu-box .danmu-table .danmu-item .item-act .option-wrp .act-btn,
+  .recent-danmu-wrp .danmu-table .danmu-item .item-act .option-wrp .act-btn {
     background-color: var(--c-hover) !important;
   }
   .dc-progress-bar,
@@ -7203,7 +7352,8 @@
   .article-danmu-wrp .danmu-filter .left .refresh,
   .article-danmu-wrp .danmu-filter .left .danmu-type .plain,
   .article-danmu-wrp .danmu-filter .left .protect .plain,
-  .article-danmu-wrp .danmu-filter .left .refresh .plain {
+  .article-danmu-wrp .danmu-filter .left .refresh .plain,
+  .recent-danmu-wrp .danmu-table .danmu-item .item-act .option-wrp .act-btn {
     border-color: var(--c-border) !important;
   }
   .cc-article-wrp .del-wrp .modal-wrap .geetest_holder.geetest_wind .geetest_radar_btn,
