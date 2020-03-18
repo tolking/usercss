@@ -13,22 +13,22 @@
 @advanced  dropdown  defaultTheme  "选择默认主题" {
 	auto "跟随系统" <<<EOT
   /*! auto *\/:root{--c-title:/*[[titleColor]]*\/;--c-text:/*[[textColor]]*\/;--c-border:/*[[borderColor]]*\/;--c-background:/*[[backgroundColor]]*\/;--c-hover:/*[[hoverColor]]*\/;--c-accent:/*[[accentColor]]*\/;--c-white:#fff;--c-bg-header:rgba(0, 0, 0, .3);--c-scroll:#7c7d7f}@media(prefers-color-scheme:dark){:root{--c-title:/*[[titleDarkColor]]*\/;--c-text:/*[[textDarkColor]]*\/;--c-border:/*[[borderDarkColor]]*\/;--c-background:/*[[backgroundDarkColor]]*\/;--c-hover:/*[[hoverDarkColor]]*\/}} EOT;
-	light "亮色" <<<EOT
+	light "浅色" <<<EOT
   /*! light *\/:root{--c-title:/*[[titleColor]]*\/;--c-text:/*[[textColor]]*\/;--c-border:/*[[borderColor]]*\/;--c-background:/*[[backgroundColor]]*\/;--c-hover:/*[[hoverColor]]*\/;--c-accent:/*[[accentColor]]*\/;--c-white:#fff;--c-bg-header:rgba(0, 0, 0, .3);--c-scroll:#7c7d7f} EOT;
-	dark "暗色" <<<EOT
+	dark "深色" <<<EOT
   /*! dark *\/:root{--c-title:/*[[titleDarkColor]]*\/;--c-text:/*[[textDarkColor]]*\/;--c-border:/*[[borderDarkColor]]*\/;--c-background:/*[[backgroundDarkColor]]*\/;--c-hover:/*[[hoverDarkColor]]*\/;--c-accent:/*[[accentColor]]*\/;--c-white:#fff;--c-bg-header:rgba(0, 0, 0, .3);--c-scroll:#7c7d7f} EOT;
 }
 @advanced  color  accentColor  "主色调"  #00a1d6
-@advanced  color  titleColor  "亮-主要文本"  #212121
-@advanced  color  textColor  "亮-次要文本"  #666
-@advanced  color  borderColor  "亮-边框"  #ccc
-@advanced  color  backgroundColor  "亮-背景"  #fff
-@advanced  color  hoverColor  "亮-次要背景"  rgba(230,230,230,.3)
-@advanced  color  titleDarkColor  "暗-主要文本"  #e2e2e2
-@advanced  color  textDarkColor  "暗-次要文本"  #bababa
-@advanced  color  borderDarkColor  "暗-边框"  #4e4e4e
-@advanced  color  backgroundDarkColor  "暗-背景"  #25272a
-@advanced  color  hoverDarkColor  "暗-次要背景"  rgba(20,20,20,.3)
+@advanced  color  titleColor  "浅-主要文本"  #212121
+@advanced  color  textColor  "浅-次要文本"  #666
+@advanced  color  borderColor  "浅-边框"  #ccc
+@advanced  color  backgroundColor  "浅-背景"  #fff
+@advanced  color  hoverColor  "浅-次要背景"  rgba(230,230,230,.3)
+@advanced  color  titleDarkColor  "深-主要文本"  #e2e2e2
+@advanced  color  textDarkColor  "深-次要文本"  #bababa
+@advanced  color  borderDarkColor  "深-边框"  #4e4e4e
+@advanced  color  backgroundDarkColor  "深-背景"  #25272a
+@advanced  color  hoverDarkColor  "深-次要背景"  rgba(20,20,20,.3)
 ==/UserStyle== */
 @-moz-document domain("bilibili.com"), domain("biligame.com") {
   /*[[defaultTheme]]*/
@@ -495,7 +495,8 @@
   .file-list-v2-container .file-add-btn,
   .submit-button-group-v2-container .submit-btn-group-add,
   .share-modal .copy-btn,
-  .coupon-label .container-right .to-use {
+  .coupon-label .container-right .to-use,
+  .bind-info .note-footer .btn-group .common-btn.active-btn {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -602,7 +603,8 @@
   .file-list-v2-container .file-add-btn span,
   .submit-button-group-v2-container .submit-btn-group-add span,
   .share-modal .copy-btn span,
-  .coupon-label .container-right .to-use span {
+  .coupon-label .container-right .to-use span,
+  .bind-info .note-footer .btn-group .common-btn.active-btn span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -704,7 +706,8 @@
   .file-list-v2-container .file-add-btn::after,
   .submit-button-group-v2-container .submit-btn-group-add::after,
   .share-modal .copy-btn::after,
-  .coupon-label .container-right .to-use::after {
+  .coupon-label .container-right .to-use::after,
+  .bind-info .note-footer .btn-group .common-btn.active-btn::after {
     content: '';
     display: block;
     position: absolute;
@@ -815,7 +818,8 @@
   .file-list-v2-container .file-add-btn:hover,
   .submit-button-group-v2-container .submit-btn-group-add:hover,
   .share-modal .copy-btn:hover,
-  .coupon-label .container-right .to-use:hover {
+  .coupon-label .container-right .to-use:hover,
+  .bind-info .note-footer .btn-group .common-btn.active-btn:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -917,7 +921,8 @@
   .file-list-v2-container .file-add-btn:hover span,
   .submit-button-group-v2-container .submit-btn-group-add:hover span,
   .share-modal .copy-btn:hover span,
-  .coupon-label .container-right .to-use:hover span {
+  .coupon-label .container-right .to-use:hover span,
+  .bind-info .note-footer .btn-group .common-btn.active-btn:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -1019,7 +1024,8 @@
   .file-list-v2-container .file-add-btn:hover::after,
   .submit-button-group-v2-container .submit-btn-group-add:hover::after,
   .share-modal .copy-btn:hover::after,
-  .coupon-label .container-right .to-use:hover::after {
+  .coupon-label .container-right .to-use:hover::after,
+  .bind-info .note-footer .btn-group .common-btn.active-btn:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -1045,6 +1051,8 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active,
   .bangumi-pagelistbox .p,
   .be-pager .be-pager-item,
+  .be-pager .be-pager-prev,
+  .be-pager .be-pager-next,
   .more-btn-cntr,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item,
@@ -1102,7 +1110,8 @@
   .hsbtn .cancel,
   .coupon-btn-disable,
   .bl-button--primary:disabled,
-  .game-list-all {
+  .game-list-all,
+  .bind-info .note-footer .btn-group .common-btn {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -1131,6 +1140,8 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active span,
   .bangumi-pagelistbox .p span,
   .be-pager .be-pager-item span,
+  .be-pager .be-pager-prev span,
+  .be-pager .be-pager-next span,
   .more-btn-cntr span,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item span,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item span,
@@ -1188,7 +1199,8 @@
   .hsbtn .cancel span,
   .coupon-btn-disable span,
   .bl-button--primary:disabled span,
-  .game-list-all span {
+  .game-list-all span,
+  .bind-info .note-footer .btn-group .common-btn span {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -1214,6 +1226,8 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active::after,
   .bangumi-pagelistbox .p::after,
   .be-pager .be-pager-item::after,
+  .be-pager .be-pager-prev::after,
+  .be-pager .be-pager-next::after,
   .more-btn-cntr::after,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item::after,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item::after,
@@ -1271,7 +1285,8 @@
   .hsbtn .cancel::after,
   .coupon-btn-disable::after,
   .bl-button--primary:disabled::after,
-  .game-list-all::after {
+  .game-list-all::after,
+  .bind-info .note-footer .btn-group .common-btn::after {
     content: none !important;
   }
   .default:hover,
@@ -1297,6 +1312,8 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active:hover,
   .bangumi-pagelistbox .p:hover,
   .be-pager .be-pager-item:hover,
+  .be-pager .be-pager-prev:hover,
+  .be-pager .be-pager-next:hover,
   .more-btn-cntr:hover,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item:hover,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item:hover,
@@ -1354,7 +1371,8 @@
   .hsbtn .cancel:hover,
   .coupon-btn-disable:hover,
   .bl-button--primary:disabled:hover,
-  .game-list-all:hover {
+  .game-list-all:hover,
+  .bind-info .note-footer .btn-group .common-btn:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
     color: var(--c-text) !important;
@@ -1382,6 +1400,8 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active:hover span,
   .bangumi-pagelistbox .p:hover span,
   .be-pager .be-pager-item:hover span,
+  .be-pager .be-pager-prev:hover span,
+  .be-pager .be-pager-next:hover span,
   .more-btn-cntr:hover span,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item:hover span,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item:hover span,
@@ -1439,7 +1459,8 @@
   .hsbtn .cancel:hover span,
   .coupon-btn-disable:hover span,
   .bl-button--primary:disabled:hover span,
-  .game-list-all:hover span {
+  .game-list-all:hover span,
+  .bind-info .note-footer .btn-group .common-btn:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -4003,7 +4024,8 @@
     color: #23c9ed !important;
   }
   #pin-wrapper #pin-layer,
-  .modal-wrapper {
+  .modal-wrapper,
+  .fans-action-follow {
     background-color: var(--c-background);
   }
   #pin-wrapper .pin-layer-vlist .small-item:hover {
@@ -4022,7 +4044,8 @@
   input[type=text]:focus,
   #page-index .channel .channel-item,
   .article-content,
-  .s-content {
+  .s-content,
+  .fans-action-btn.follow {
     border-color: var(--c-border);
   }
   .be-tab-cursor,
@@ -4286,6 +4309,16 @@
   }
   .to-top::after {
     content: none;
+  }
+  #id-card {
+    border: 1px solid var(--c-border);
+    background-color: var(--c-background);
+  }
+  #id-card .vip-name-check {
+    color: var(--c-accent) !important;
+  }
+  #id-card .idc-content .idc-sign {
+    color: var(--c-text) !important;
   }
   #page-channel-index .channel-option.no-channel,
   #page-fav .fav-main .fav-action-bottom .fav-action-fixtop {
@@ -7740,7 +7773,8 @@
   .b-info .balance-top .balance-row .balance-right .shell-channel .shell-item .channel-name {
     color: var(--c-title) !important;
   }
-  .el-table .el-table__row .cell {
+  .el-table .el-table__row .cell,
+  .b-info .warning-group .warning-title {
     color: var(--c-text) !important;
   }
   .bp-user-box i,
@@ -7749,10 +7783,13 @@
   .qrpay-group .qrpay-content .price span,
   .qrpay-group .qrpay-content .price p,
   .spend-recode .title-group .selected-title,
-  .b-info .balance-footer .part-balance-name .part-balance-price {
+  .b-info .balance-footer .part-balance-name .part-balance-price,
+  .el-form-item.is-required .el-form-item__label:before {
     color: var(--c-accent) !important;
   }
-  .b-info .warning-group {
+  .b-info .warning-group,
+  .bind-info .dividing-line,
+  .bind-info .note-content .bank-form .avatar-uploader .el-upload {
     border-color: var(--c-border) !important;
   }
   .bp-user-box-bb,
@@ -7879,7 +7916,8 @@
   .project-list .project-list-item,
   .ticket-tips-wrapper .ticket-tips,
   .confirmorder-container .discounts .discounts-list p,
-  .total-container {
+  .total-container,
+  .ticket-tips-wrapper .merchant-section {
     background-color: var(--c-hover) !important;
   }
   .nav-header-wrapper .nav-header,
@@ -7889,7 +7927,8 @@
   .whole-detail-info-wrapper,
   .modal-wrapper .modal-container,
   .activity-info,
-  .info-header {
+  .info-header,
+  .ticket-tips-wrapper .merchant-section .baseinfo-wrapper .content-item .title {
     background-color: transparent !important;
   }
   .selector-wrapper .more-city-letter-list .more-city-letter-item .letter-item.active:after {
@@ -7904,14 +7943,16 @@
   .activity-info .activity-info-header div,
   .info-header span,
   .announcement-title,
-  .info-content p strong {
+  .info-content p strong,
+  .ticket-tips-wrapper .merchant-section .merchant-header {
     color: var(--c-title) !important;
   }
   .detail-info-wrapper .vuene-info-content div,
   .detail-info-wrapper .product-info-time-wrapper div,
   .selectable-option,
   .announcement-item.active .announcement-item-time,
-  .order-list-wrapper .order-list .no-order .err-tips {
+  .order-list-wrapper .order-list .no-order .err-tips,
+  .ticket-tips-wrapper .merchant-section .baseinfo-wrapper .content-item .content {
     color: var(--c-text) !important;
   }
   .buyticket .product-buy div {
