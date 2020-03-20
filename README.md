@@ -7,26 +7,17 @@
 ``` sh
 1. 全局安装 stylus
 
-yarn global add stylus
-# or
-npm install -g stylus
-
+yarn global add stylus # or npm install -g stylus
 
 2. 开发自动编译
 
-yarn dev:bl  # 自动编译 bilibili-lite
-# or
-npm run dev:bl
+yarn dev:bl # or npm run dev:bl  自动编译 bilibili-lite
 
 3. 构建
 
-yarn build # 编译所有
-# or
-yarn run build
+yarn build # or npm run build  编译所有
 
-yarn build:bl # 编译 bilibili-lite
-# or
-yarn run build:bl
+yarn build:bl # or npm run build:bl  编译 bilibili-lite
 ```
 
 > stylus 格式参考 .vscode-> settings.json

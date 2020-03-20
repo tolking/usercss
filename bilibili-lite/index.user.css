@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.1.3
+@version        1.1.4
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -13,22 +13,22 @@
 @advanced  dropdown  defaultTheme  "选择默认主题" {
 	auto "跟随系统" <<<EOT
   /*! auto *\/:root{--c-title:/*[[titleColor]]*\/;--c-text:/*[[textColor]]*\/;--c-border:/*[[borderColor]]*\/;--c-background:/*[[backgroundColor]]*\/;--c-hover:/*[[hoverColor]]*\/;--c-accent:/*[[accentColor]]*\/;--c-white:#fff;--c-bg-header:rgba(0, 0, 0, .3);--c-scroll:#7c7d7f}@media(prefers-color-scheme:dark){:root{--c-title:/*[[titleDarkColor]]*\/;--c-text:/*[[textDarkColor]]*\/;--c-border:/*[[borderDarkColor]]*\/;--c-background:/*[[backgroundDarkColor]]*\/;--c-hover:/*[[hoverDarkColor]]*\/}} EOT;
-	light "亮色" <<<EOT
+	light "浅色" <<<EOT
   /*! light *\/:root{--c-title:/*[[titleColor]]*\/;--c-text:/*[[textColor]]*\/;--c-border:/*[[borderColor]]*\/;--c-background:/*[[backgroundColor]]*\/;--c-hover:/*[[hoverColor]]*\/;--c-accent:/*[[accentColor]]*\/;--c-white:#fff;--c-bg-header:rgba(0, 0, 0, .3);--c-scroll:#7c7d7f} EOT;
-	dark "暗色" <<<EOT
+	dark "深色" <<<EOT
   /*! dark *\/:root{--c-title:/*[[titleDarkColor]]*\/;--c-text:/*[[textDarkColor]]*\/;--c-border:/*[[borderDarkColor]]*\/;--c-background:/*[[backgroundDarkColor]]*\/;--c-hover:/*[[hoverDarkColor]]*\/;--c-accent:/*[[accentColor]]*\/;--c-white:#fff;--c-bg-header:rgba(0, 0, 0, .3);--c-scroll:#7c7d7f} EOT;
 }
 @advanced  color  accentColor  "主色调"  #00a1d6
-@advanced  color  titleColor  "亮-主要文本"  #212121
-@advanced  color  textColor  "亮-次要文本"  #666
-@advanced  color  borderColor  "亮-边框"  #ccc
-@advanced  color  backgroundColor  "亮-背景"  #fff
-@advanced  color  hoverColor  "亮-次要背景"  rgba(230,230,230,.3)
-@advanced  color  titleDarkColor  "暗-主要文本"  #e2e2e2
-@advanced  color  textDarkColor  "暗-次要文本"  #bababa
-@advanced  color  borderDarkColor  "暗-边框"  #4e4e4e
-@advanced  color  backgroundDarkColor  "暗-背景"  #25272a
-@advanced  color  hoverDarkColor  "暗-次要背景"  rgba(20,20,20,.3)
+@advanced  color  titleColor  "浅-主要文本"  #212121
+@advanced  color  textColor  "浅-次要文本"  #666
+@advanced  color  borderColor  "浅-边框"  #ccc
+@advanced  color  backgroundColor  "浅-背景"  #fff
+@advanced  color  hoverColor  "浅-次要背景"  rgba(230,230,230,.3)
+@advanced  color  titleDarkColor  "深-主要文本"  #e2e2e2
+@advanced  color  textDarkColor  "深-次要文本"  #bababa
+@advanced  color  borderDarkColor  "深-边框"  #4e4e4e
+@advanced  color  backgroundDarkColor  "深-背景"  #25272a
+@advanced  color  hoverDarkColor  "深-次要背景"  rgba(20,20,20,.3)
 ==/UserStyle== */
 @-moz-document domain("bilibili.com"), domain("biligame.com") {
   /*[[defaultTheme]]*/
@@ -149,7 +149,9 @@
   .s-item.active,
   .s-item:hover,
   .el-select-dropdown__item.hover,
-  .el-select-dropdown__item:hover {
+  .el-select-dropdown__item:hover,
+  .dropbox-component,
+  .dropbox-component .data-list>li:hover {
     background-color: var(--c-hover) !important;
   }
   .el-date-table td.disabled div,
@@ -165,7 +167,8 @@
   .date-picker-v2-container div,
   .s-item.active,
   .s-item:hover,
-  .player-auxiliary-danmaku-date-picker-container .player-auxiliary-danmaku-date-picker-body .player-auxiliary-danmaku-date-picker-week .day-span {
+  .player-auxiliary-danmaku-date-picker-container .player-auxiliary-danmaku-date-picker-body .player-auxiliary-danmaku-date-picker-week .day-span,
+  .dropbox-component .current {
     color: var(--c-title) !important;
   }
   .date-picker-v2-container i,
@@ -176,7 +179,8 @@
   .ui-select .ul-select-list .select-item:hover,
   .date-panel .day.active,
   .player-auxiliary-danmaku-date-picker-container .player-auxiliary-danmaku-date-picker-body .day-span.day-enable.active,
-  .player-auxiliary-danmaku-date-picker-container .player-auxiliary-danmaku-date-picker-body .day-span.day-enable:hover {
+  .player-auxiliary-danmaku-date-picker-container .player-auxiliary-danmaku-date-picker-body .day-span.day-enable:hover,
+  .dropbox-component .data-list>li:hover {
     color: var(--c-accent) !important;
   }
   .time-picker-v2-container .time-picker-head-wrp,
@@ -186,7 +190,8 @@
   .bp-selector::before,
   .player-auxiliary-danmaku-date-picker-container .player-auxiliary-danmaku-date-picker-header,
   .head .dropdown-menu .article-list,
-  .num-content .ticket-count {
+  .num-content .ticket-count,
+  .dropbox-component {
     border-color: var(--c-border) !important;
   }
   .ui-radio.active .ui-radio-icon,
@@ -216,7 +221,8 @@
   .calendar-year,
   .bili-dropdown,
   .bili-dropdown .dropdown-list,
-  .player-auxiliary-danmaku-date-picker-container {
+  .player-auxiliary-danmaku-date-picker-container,
+  .dropbox-component .data-list {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
   }
@@ -484,7 +490,14 @@
   .searchBtn,
   .hsbtn .sure,
   .coupon-btn,
-  .charge-btn-style {
+  .charge-btn-style,
+  .article-chart-wrp .tools .btn-group .ui-btn,
+  .file-list-v2-container .file-add-btn,
+  .submit-button-group-v2-container .submit-btn-group-add,
+  .share-modal .copy-btn,
+  .coupon-label .container-right .to-use,
+  .bind-info .note-footer .btn-group .common-btn.active-btn,
+  .pbp-panel-feedback {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -586,7 +599,14 @@
   .searchBtn span,
   .hsbtn .sure span,
   .coupon-btn span,
-  .charge-btn-style span {
+  .charge-btn-style span,
+  .article-chart-wrp .tools .btn-group .ui-btn span,
+  .file-list-v2-container .file-add-btn span,
+  .submit-button-group-v2-container .submit-btn-group-add span,
+  .share-modal .copy-btn span,
+  .coupon-label .container-right .to-use span,
+  .bind-info .note-footer .btn-group .common-btn.active-btn span,
+  .pbp-panel-feedback span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -683,7 +703,14 @@
   .searchBtn::after,
   .hsbtn .sure::after,
   .coupon-btn::after,
-  .charge-btn-style::after {
+  .charge-btn-style::after,
+  .article-chart-wrp .tools .btn-group .ui-btn::after,
+  .file-list-v2-container .file-add-btn::after,
+  .submit-button-group-v2-container .submit-btn-group-add::after,
+  .share-modal .copy-btn::after,
+  .coupon-label .container-right .to-use::after,
+  .bind-info .note-footer .btn-group .common-btn.active-btn::after,
+  .pbp-panel-feedback::after {
     content: '';
     display: block;
     position: absolute;
@@ -789,7 +816,14 @@
   .searchBtn:hover,
   .hsbtn .sure:hover,
   .coupon-btn:hover,
-  .charge-btn-style:hover {
+  .charge-btn-style:hover,
+  .article-chart-wrp .tools .btn-group .ui-btn:hover,
+  .file-list-v2-container .file-add-btn:hover,
+  .submit-button-group-v2-container .submit-btn-group-add:hover,
+  .share-modal .copy-btn:hover,
+  .coupon-label .container-right .to-use:hover,
+  .bind-info .note-footer .btn-group .common-btn.active-btn:hover,
+  .pbp-panel-feedback:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -886,7 +920,14 @@
   .searchBtn:hover span,
   .hsbtn .sure:hover span,
   .coupon-btn:hover span,
-  .charge-btn-style:hover span {
+  .charge-btn-style:hover span,
+  .article-chart-wrp .tools .btn-group .ui-btn:hover span,
+  .file-list-v2-container .file-add-btn:hover span,
+  .submit-button-group-v2-container .submit-btn-group-add:hover span,
+  .share-modal .copy-btn:hover span,
+  .coupon-label .container-right .to-use:hover span,
+  .bind-info .note-footer .btn-group .common-btn.active-btn:hover span,
+  .pbp-panel-feedback:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -983,7 +1024,14 @@
   .searchBtn:hover::after,
   .hsbtn .sure:hover::after,
   .coupon-btn:hover::after,
-  .charge-btn-style:hover::after {
+  .charge-btn-style:hover::after,
+  .article-chart-wrp .tools .btn-group .ui-btn:hover::after,
+  .file-list-v2-container .file-add-btn:hover::after,
+  .submit-button-group-v2-container .submit-btn-group-add:hover::after,
+  .share-modal .copy-btn:hover::after,
+  .coupon-label .container-right .to-use:hover::after,
+  .bind-info .note-footer .btn-group .common-btn.active-btn:hover::after,
+  .pbp-panel-feedback:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -1009,6 +1057,8 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active,
   .bangumi-pagelistbox .p,
   .be-pager .be-pager-item,
+  .be-pager .be-pager-prev,
+  .be-pager .be-pager-next,
   .more-btn-cntr,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item,
@@ -1066,7 +1116,8 @@
   .hsbtn .cancel,
   .coupon-btn-disable,
   .bl-button--primary:disabled,
-  .game-list-all {
+  .game-list-all,
+  .bind-info .note-footer .btn-group .common-btn {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -1095,6 +1146,8 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active span,
   .bangumi-pagelistbox .p span,
   .be-pager .be-pager-item span,
+  .be-pager .be-pager-prev span,
+  .be-pager .be-pager-next span,
   .more-btn-cntr span,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item span,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item span,
@@ -1152,7 +1205,8 @@
   .hsbtn .cancel span,
   .coupon-btn-disable span,
   .bl-button--primary:disabled span,
-  .game-list-all span {
+  .game-list-all span,
+  .bind-info .note-footer .btn-group .common-btn span {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -1178,6 +1232,8 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active::after,
   .bangumi-pagelistbox .p::after,
   .be-pager .be-pager-item::after,
+  .be-pager .be-pager-prev::after,
+  .be-pager .be-pager-next::after,
   .more-btn-cntr::after,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item::after,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item::after,
@@ -1235,7 +1291,8 @@
   .hsbtn .cancel::after,
   .coupon-btn-disable::after,
   .bl-button--primary:disabled::after,
-  .game-list-all::after {
+  .game-list-all::after,
+  .bind-info .note-footer .btn-group .common-btn::after {
     content: none !important;
   }
   .default:hover,
@@ -1261,6 +1318,8 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active:hover,
   .bangumi-pagelistbox .p:hover,
   .be-pager .be-pager-item:hover,
+  .be-pager .be-pager-prev:hover,
+  .be-pager .be-pager-next:hover,
   .more-btn-cntr:hover,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item:hover,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item:hover,
@@ -1318,7 +1377,8 @@
   .hsbtn .cancel:hover,
   .coupon-btn-disable:hover,
   .bl-button--primary:disabled:hover,
-  .game-list-all:hover {
+  .game-list-all:hover,
+  .bind-info .note-footer .btn-group .common-btn:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
     color: var(--c-text) !important;
@@ -1346,6 +1406,8 @@
   .main-container .media-info .media-right .media-tool-bar .btn-follow.active:hover span,
   .bangumi-pagelistbox .p:hover span,
   .be-pager .be-pager-item:hover span,
+  .be-pager .be-pager-prev:hover span,
+  .be-pager .be-pager-next:hover span,
   .more-btn-cntr:hover span,
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item:hover span,
   #pgc-navigate-wrap .ep-box .ep-sub .ep-item:hover span,
@@ -1403,7 +1465,8 @@
   .hsbtn .cancel:hover span,
   .coupon-btn-disable:hover span,
   .bl-button--primary:disabled:hover span,
-  .game-list-all:hover span {
+  .game-list-all:hover span,
+  .bind-info .note-footer .btn-group .common-btn:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -1420,6 +1483,7 @@
   em:not(.icon),
   .m-header .num,
   .bili-header-m .num,
+  .nav-item .num,
   .badge.pink,
   .badge.is-vip,
   .badge.type_0,
@@ -1487,6 +1551,7 @@
   em:not(.icon):hover,
   .m-header .num:hover,
   .bili-header-m .num:hover,
+  .nav-item .num:hover,
   .badge.pink:hover,
   .badge.is-vip:hover,
   .badge.type_0:hover,
@@ -1649,7 +1714,12 @@
   .share-module .share-list .weixin-share-modal,
   .selector-wrapper .more-type-wrapper,
   .history-dlg,
-  .bangumi-options .opt-list {
+  .bangumi-options .opt-list,
+  .ui-popup .popup-wrap,
+  .user-info-component .unuseable .user-help .unuseable-hinter,
+  .auto-purchase .page-sub-title .question-icon .hover-tab,
+  .question-icon .hover-tab,
+  .purchase-panel-component .purchase-panel {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -1700,7 +1770,8 @@
   .nav-user-center .user-con .item:nth-child(2),
   .nav-wrapper-right .nav-con .nav-item:nth-child(2),
   .nav-wrapper-right .nav-con .nav-item:nth-child(5),
-  .van-popper-avatar .coins .contact .contact-tips::after {
+  .van-popper-avatar .coins .contact .contact-tips::after,
+  .bili-header-m .profile-m .btns-profile .ver .tips:after {
     display: none !important;
   }
   .channel-menu-mini,
@@ -1867,7 +1938,8 @@
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
   }
-  .van-popper-avatar .coins .contact .contact-tips {
+  .van-popper-avatar .coins .contact .contact-tips,
+  .bili-header-m .profile-m .btns-profile .ver .tips {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -3340,7 +3412,7 @@
     content: none !important;
   }
 }
-@-moz-document url-prefix("https://www.bilibili.com/video/"), url-prefix("https://www.bilibili.com/bangumi/") {
+@-moz-document url-prefix("https://www.bilibili.com/video/"), url-prefix("https://www.bilibili.com/bangumi/"), url-prefix("https://player.bilibili.com/") {
   .video-page-special-card {
     display: none;
   }
@@ -3483,6 +3555,8 @@
   .bilibili-player-video-danmaku-setting:hover>span svg,
   .bilibili-player-block-filter-image:hover .bp-svgicon svg,
   .bilibili-player-iconfont:hover .bp-svgicon svg,
+  .bilibili-player-iconfont:hover .bp-svgicon svg g,
+  .bilibili-player-video-btn:hover .bp-svgicon svg,
   .selection-icon:hover .bp-svgicon svg,
   .bilibili-player-video-danmaku-setting:hover .bp-svgicon svg,
   .bilibili-player-video-danmaku-switch:hover .bp-svgicon svg,
@@ -3629,13 +3703,18 @@
   .bangumi-review-item,
   .sort-type-wrp ul li:hover,
   .btn-pay-wrapper.is-vip a,
-  .section-item {
+  .section-item,
+  .media-tab-module-wrp .media-tab-module-content .sl-ep-nav .slider-contro span,
+  .media-tab-module-wrp .media-tab-module-content .sl-ep-nav .slider-contro span.disabled:hover {
     background-color: var(--c-hover) !important;
   }
   .media-info-count .media-info-count-item em,
   .media-tab-wrp,
   .media-tab-nav {
     background-color: transparent !important;
+  }
+  .media-tab-module-wrp .media-tab-module-content .sl-ep-nav .slider-contro span:hover {
+    background-color: var(--c-accent) !important;
   }
   .misl-ep-item .misl-ep-text .misl-ep-index,
   .media-tab-detail-wrp .media-tab-detail-l .media-tab-module-wrp .media-tab-module-title,
@@ -3657,7 +3736,8 @@
   .review-feed-item .feed-right .likes,
   .section-item .section-text .section-title,
   .media-info-card .mic-expand,
-  .misl-ep-item .misl-ep-text .misl-ep-title {
+  .misl-ep-item .misl-ep-text .misl-ep-title,
+  .media-info-card .mic-evaluate-nodata {
     color: var(--c-text) !important;
   }
   .media-info-r span,
@@ -3960,7 +4040,8 @@
     color: #23c9ed !important;
   }
   #pin-wrapper #pin-layer,
-  .modal-wrapper {
+  .modal-wrapper,
+  .fans-action-follow {
     background-color: var(--c-background);
   }
   #pin-wrapper .pin-layer-vlist .small-item:hover {
@@ -3979,7 +4060,8 @@
   input[type=text]:focus,
   #page-index .channel .channel-item,
   .article-content,
-  .s-content {
+  .s-content,
+  .fans-action-btn.follow {
     border-color: var(--c-border);
   }
   .be-tab-cursor,
@@ -4243,6 +4325,16 @@
   }
   .to-top::after {
     content: none;
+  }
+  #id-card {
+    border: 1px solid var(--c-border);
+    background-color: var(--c-background);
+  }
+  #id-card .vip-name-check {
+    color: var(--c-accent) !important;
+  }
+  #id-card .idc-content .idc-sign {
+    color: var(--c-text) !important;
   }
   #page-channel-index .channel-option.no-channel,
   #page-fav .fav-main .fav-action-bottom .fav-action-fixtop {
@@ -5153,15 +5245,20 @@
   .gold-seed-store .content,
   .recharge-store-box .reward-desc,
   .silver-seed-store,
-  .silver-seed-store .content {
+  .silver-seed-store .content,
+  .draw-full-cntr {
     background-color: var(--c-background) !important;
   }
   .attention-btn-ctnr .right-part,
   .guard-store-box .tab-box,
   .fans-medal-item .level,
   .recharge-stores-ctnr .tab-box,
-  .sub-tab-box .item.active {
+  .sub-tab-box .item.active,
+  .draw-full-cntr .function-bar {
     background-color: var(--c-hover) !important;
+  }
+  .draw-full-cntr .function-bar.draw {
+    background-color: var(--c-accent) !important;
   }
   .room-bg::after {
     background-image: linear-gradient(0deg, var(--c-background), transparent 20%) !important;
@@ -5179,12 +5276,14 @@
   .gift-info-expScore,
   .icon-label,
   .chaos-pk-rank .rank .season-name,
-  .chaos-pk-rank .rank .time {
+  .chaos-pk-rank .rank .time,
+  .guard-rank-cntr .rank-cntr .tip {
     color: var(--c-text) !important;
   }
   .hour-rank .hour-rank-content,
   .attention-btn-ctnr .left-part .follow-text,
-  .fans-medal-item .label {
+  .fans-medal-item .label,
+  .draw-full-cntr .function-bar.draw span {
     color: var(--c-white) !important;
   }
   .gift-info .btn-rule,
@@ -5192,7 +5291,8 @@
   .item.club-rank-1 .club-name,
   .chat-history-panel .chat-history-list .chat-item.welcome-msg .username.vip,
   .room-introduction-tags .room-introduction-tag:hover .icon-label,
-  .chaos-pk-rank .link-to-history {
+  .chaos-pk-rank .link-to-history,
+  .guard-rank-cntr .rank-cntr .rank-list-box .online a.live-skin-main-a-text {
     color: var(--c-accent) !important;
   }
   .room-introduction-tags,
@@ -5206,7 +5306,8 @@
     border-color: var(--c-accent) !important;
   }
   .content-wrapper,
-  .user-protocol {
+  .user-protocol,
+  .draw-full-cntr {
     border: 0 !important;
   }
   .common-popup-wrap.arrow-top::before {
@@ -6064,7 +6165,7 @@
   .nav-list a:last-child {
     display: none !important;
   }
-  .manga-navbar,
+  .manga-navbar .manga-navbar,
   .search-bar .search-suggestion,
   .user-panel .drop-list,
   .manga-navbar-history-list .drop-list,
@@ -6093,13 +6194,16 @@
   nav.manga-navbar.p-fixed.p-zero a:hover button span {
     color: var(--c-accent) !important;
   }
+  .manga-navbar .manga-navbar {
+    border-bottom: 1px solid var(--c-border);
+  }
   .right-part .drop-list .size-ruler {
     border: 1px solid var(--c-border);
     border-top-width: 0;
     border-radius: 0 0 10px 10px;
     overflow: hidden;
   }
-  .manga-navbar {
+  nav.manga-navbar {
     box-shadow: none !important;
     background-color: var(--c-bg-header) !important;
     backdrop-filter: blur(5px) !important;
@@ -6258,61 +6362,6 @@
   .recommendation-section .manga-list {
     width: 100% !important;
   }
-  .episode-comment {
-    background-color: var(--c-background) !important;
-  }
-  .read-nav .episode,
-  .episode-comment .header-section div {
-    color: var(--c-title) !important;
-  }
-  .action-bar-container .app-button,
-  .hover-toast .app-button,
-  .floating-button,
-  .episode-comment .header-section .close-button {
-    background-color: transparent !important;
-  }
-  .action-bar-container .app-button::after,
-  .hover-toast .app-button::after,
-  .floating-button::after,
-  .episode-comment .header-section .close-button::after {
-    content: none !important;
-  }
-  .info-layer .floating-button {
-    border: 1px solid var(--c-border) !important;
-    background-color: var(--c-hover) !important;
-  }
-  .arrow {
-    display: none !important;
-  }
-  .sidebar-item {
-    text-align: center;
-  }
-  .sidebar-container {
-    width: 100px !important;
-  }
-  .rank-item-wrapper {
-    background-image: none !important;
-  }
-  .app-layout .main-container {
-    margin-top: 70px !important;
-  }
-  .sidebar-ctnr {
-    margin-top: 100px !important;
-    border: 0 !important;
-  }
-  .sidebar-item.activated,
-  .sidebar-item:hover {
-    border-radius: 10px;
-    background-color: var(--c-hover) !important;
-    transition: background-color 0.3s ease-in-out;
-  }
-  .sidebar-item.activated span,
-  .sidebar-item:hover span {
-    color: var(--c-accent) !important;
-    transition: color 0.3s ease-in-out;
-  }
-}
-@-moz-document url-prefix("https://manga.bilibili.com/detail/") {
   .title-tooltip {
     display: none !important;
   }
@@ -6345,13 +6394,195 @@
     box-shadow: none !important;
     background-color: var(--c-background) !important;
   }
-  .manga-navbar {
-    background-color: transparent !important;
-    backdrop-filter: none !important;
+  .purchase-panel-component .purchase-panel .action-buttons .tooltip {
+    display: none !important;
   }
-  .manga-navbar .manga-navbar {
-    border-bottom: 1px solid var(--c-border);
+  .episode-comment,
+  .theme-dark .manga-reader .more-btn-container {
     background-color: var(--c-background) !important;
+  }
+  .manga-reader .info-hud,
+  .manga-reader .info-layer .floating-button {
+    background-color: var(--c-bg-header) !important;
+  }
+  .read-nav .episode,
+  .episode-comment .header-section div,
+  .theme-dark .right-part .drop-list .size-ruler .data-list div,
+  .purchase-panel-component .purchase-panel .panel-title {
+    color: var(--c-title) !important;
+  }
+  .manga-reader .read-nav a,
+  .manga-reader .read-nav span,
+  .manga-reader .manga-navbar-history-list .action-button,
+  .manga-reader .manga-navbar-favourite-manga .action-button,
+  .manga-reader .info-hud div,
+  .manga-reader .info-hud span {
+    color: var(--c-white) !important;
+  }
+  .action-bar-container .app-button,
+  .hover-toast .app-button,
+  .floating-button,
+  .episode-comment .header-section .close-button {
+    background-color: transparent !important;
+    color: var(--c-title) !important;
+  }
+  .action-bar-container .app-button::after,
+  .hover-toast .app-button::after,
+  .floating-button::after,
+  .episode-comment .header-section .close-button::after {
+    content: none !important;
+  }
+  .arrow {
+    display: none !important;
+  }
+  .sidebar-item {
+    text-align: center;
+  }
+  .sidebar-container {
+    width: 100px !important;
+  }
+  .rank-item-wrapper {
+    background-image: none !important;
+  }
+  .app-layout .main-container {
+    margin-top: 70px !important;
+  }
+  .sidebar-ctnr {
+    margin-top: 100px !important;
+    border: 0 !important;
+  }
+  .sidebar-item.activated,
+  .sidebar-item:hover {
+    border-radius: 10px;
+    background-color: var(--c-hover) !important;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .sidebar-item.activated span,
+  .sidebar-item:hover span {
+    color: var(--c-accent) !important;
+    transition: color 0.3s ease-in-out;
+  }
+  .sidebar .nav-item-indicator,
+  .sidebar .nav-item .nav-item-icon,
+  .sidebar .nav-line {
+    display: none !important;
+  }
+  .app-layout .page-content,
+  .sidebar,
+  .recharge-panel-container .recharge-panel,
+  .recharge-panel-container .recharge-panel .charge-title .tab-name.is-active {
+    background-color: var(--c-background) !important;
+  }
+  .sidebar .nav-item.router-link-active,
+  .sidebar .nav-item:hover,
+  .user-info-component .user-avatar,
+  .coupon-label.whole-coupon,
+  .recharge-panel-container .recharge-panel .charge-title,
+  .recharge-option-container .recharge-hinter,
+  .recharge-option-container .recharge-config-list .is-not-first-charge,
+  .recharge-option-container .recharge-config-list .recharge-list-container .list-item .first-award-hinter,
+  .recharge-option-container .recharge-config-list .recharge-list-container .list-item.selected,
+  .recharge-option-container .recharge-config-list .recharge-list-container .list-item:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .user-info-component .user-info .uid {
+    background-color: transparent !important;
+  }
+  .recharge-option-container .recharge-config-list .is-not-first-charge:hover,
+  .recharge-option-container .recharge-config-list .recharge-list-container .list-item .first-charge-icon {
+    background-color: var(--c-accent) !important;
+  }
+  .coupon-label .container-left .coupon-type,
+  .purchase-history .list-item .text-info .display-text,
+  .purchase-history .list-item .coin-info .recharge-count {
+    color: var(--c-title) !important;
+  }
+  .auto-purchase .page-sub-title,
+  .auto-purchase .page-sub-title .question-icon .hover-tab .tab-text,
+  .recharge-option-container .first-charge-hinter,
+  .recharge-option-container .recharge-config-list .recharge-list-container .list-item .first-award-hinter,
+  .purchase-history .list-item .text-info .recharge-date {
+    color: var(--c-text) !important;
+  }
+  .recharge-option-container .recharge-config-list .recharge-list-container .list-item .first-charge-icon .charge-text {
+    color: var(--c-white) !important;
+  }
+  .sidebar .nav-item.router-link-active .nav-item-label,
+  .user-info-component .coin-info .coin-remain-count,
+  .pivot-component .pivot-headers .pivot-header-item.selected,
+  .pivot-component .pivot-headers .pivot-header-item:active,
+  .coupon-label .container-right .total-amount,
+  .my-favourite-page .page-header .page-pivot .pivot-button.enabled,
+  .my-favourite-page .page-header .page-pivot .pivot-button:hover,
+  .recharge-option-container .panel-hinter .reset-number,
+  .recharge-option-container .recharge-summary .recharge-amount,
+  .recharge-option-container .recharge-config-list .recharge-list-container .list-item .recharge-info .recharge-amount {
+    color: var(--c-accent) !important;
+  }
+  .user-info-component .user-avatar,
+  .pivot-component .pivot-headers {
+    border-color: var(--c-border) !important;
+  }
+  .recharge-option-container .recharge-config-list .recharge-list-container .list-item.selected,
+  .recharge-option-container .recharge-config-list .recharge-list-container .list-item:hover {
+    border-color: var(--c-accent) !important;
+  }
+  .user-info-component .unuseable .user-help .unuseable-hinter:before,
+  .question-icon .hover-tab:before {
+    border-bottom-color: var(--c-border) !important;
+  }
+  .user-info-component .unuseable .user-help .unuseable-hinter,
+  .auto-purchase .page-sub-title .question-icon .hover-tab,
+  .question-icon .hover-tab {
+    border: 1px solid var(--c-border);
+  }
+  .shadow-is-the-light {
+    box-shadow: none !important;
+  }
+  .app-layout .page-content {
+    padding-top: 40px;
+  }
+  .sidebar .nav-item .nav-item-label {
+    min-width: auto !important;
+  }
+  .user-info-component .coin-info .b-coin,
+  .user-info-component .unuseable .text-content {
+    opacity: 1;
+  }
+  .coupon-label.whole-coupon {
+    background-image: none !important;
+  }
+  .app-layout .page-content .app-sidebar {
+    padding: 60px 0 0 35px;
+    width: 180px !important;
+  }
+  .sidebar .nav-item {
+    height: 50px !important;
+    line-height: 50px !important;
+  }
+  .sidebar .nav-item {
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out !important;
+  }
+  .my-favourite-page .page-header .page-pivot .pivot-button,
+  .list-editor-toolbar .edit-button,
+  .recharge-panel-container .close-button,
+  .recharge-option-container .recharge-config-list .is-not-first-charge .p-relative {
+    border: 0 !important;
+    background-color: transparent !important;
+    color: var(--c-title) !important;
+  }
+  .my-favourite-page .page-header .page-pivot .pivot-button::after,
+  .list-editor-toolbar .edit-button::after,
+  .recharge-panel-container .close-button::after,
+  .recharge-option-container .recharge-config-list .is-not-first-charge .p-relative::after {
+    content: none !important;
+  }
+  .my-favourite-page .page-header .page-pivot .pivot-button span,
+  .list-editor-toolbar .edit-button span,
+  .recharge-panel-container .close-button span,
+  .recharge-option-container .recharge-config-list .is-not-first-charge .p-relative span {
+    color: var(--c-title) !important;
   }
 }
 @-moz-document url-prefix("https://www.bilibili.com/blackroom/") {
@@ -6959,7 +7190,11 @@
   #edit-page,
   .edit-article-wrap #edit-article-box,
   #text-contribute .fixed-header,
-  .editor-box .editor-toolbar {
+  .editor-box .editor-toolbar,
+  .cover-v2-container .cover-v2-detail-wrp .cover-v2-selector,
+  .cover-v2-container .cover-v2-detail-wrp .cover-v2-selector .cover-v2-selector-deg,
+  .cc-modal .modal,
+  .share-modal .modal-bottom {
     background-color: var(--c-background) !important;
   }
   .message-notice_wrap .tips-item_wrap,
@@ -6983,14 +7218,30 @@
   .qa-area-ol-wrp,
   #edit-page .edit-notice,
   .cover-upload-box .no-img:hover,
-  .tips-calendar_wrap {
+  .tips-calendar_wrap,
+  .header .right-block .avatar img,
+  .stat-wrp,
+  .article-data-wrp .video-box,
+  .article-net-charts .content-box,
+  .detail-wrp .detail-empty,
+  .normal-v2-container .normal-title-wrp>.template-op,
+  .normal-v2-container .normal-title-wrp>.template-op-disabled,
+  .cover-v2-container .cover-v2-detail-wrp .cover-v2-selector .cover-v2-selector-items .selector-item,
+  .content-tag-v2-container .content-tag-v2-edit-mod-wrp,
+  .content-tag-v2-container .content-tag-v2-other-tag-error-wrp,
+  .article-danmu-wrp .danmu-box .danmu-table .danmu-item:nth-child(odd),
+  .article-danmu-wrp .danmu-box .danmu-table .danmu-item:hover,
+  .article-danmu-wrp .danmu-box .danmu-table .danmu-item .item-act .option-wrp .act-btn,
+  .recent-danmu-wrp .danmu-table .danmu-item .item-act .option-wrp .act-btn {
     background-color: var(--c-hover) !important;
   }
   .dc-progress-bar,
   #charge-wrapper .main-charge .elec-con .progress .progress-bar .bar,
   #charge-wrapper .main-charge .elec-con .progress .progress-bar .bar:after,
   .apply-page-title:after,
-  .lab-item .lab-item-content .divide-line {
+  .lab-item .lab-item-content .divide-line,
+  .line-divid,
+  .normal-v2-container .normal-title-wrp>.template-op>.template-op-divide {
     background-color: var(--c-border) !important;
   }
   .carousel-module .panel .title .tag,
@@ -7003,7 +7254,9 @@
   .ui-input-textarea textarea,
   .float-toolbar .toolbar-list,
   .float-toolbar .back-top,
-  .edui-default .edui-editor {
+  .edui-default .edui-editor,
+  .article-danmu-wrp .danmu-box,
+  .article-danmu-wrp .danmu-filter .left .delete .option-wrp .act-btn {
     background-color: transparent !important;
   }
   .tabs .tabs__header .tabs__header-item.is-active:after,
@@ -7019,8 +7272,9 @@
   .new-calendar-wrap .calendar-body .date-wrap .wrap-content .select-text,
   .notice_wrap .notice_title .notice-txt,
   .data-card .tab .data-tab,
-  .interact-wrap .header .tabs .tabs__header .tabs__header-item.is-active span,
+  .interact-wrap .header .tabs .tabs__header .tabs__header-item span,
   .comment-item .right-block .like-reply div,
+  .danmu-item .right-block .delete-protect div,
   .academy-wrap .header .academy-tag,
   .dc-section-item1_title_custom span,
   #dc-section_summary .source-rank-list-item .rank,
@@ -7029,7 +7283,10 @@
   .apply-page-title>p,
   .lab-item .lab-item-content .content-detail p,
   .setting .setting-title,
-  .setting .section-title {
+  .setting .section-title,
+  .ui-popup .popup-wrap .text-box .text,
+  .share-modal .modal .modal-close,
+  .cc-article-wrp .del-wrp .modal-wrap .del-title {
     color: var(--c-title) !important;
   }
   .notice_wrap .notice_body .hot-item .item-right,
@@ -7045,7 +7302,13 @@
   .protect-apply-entry-wrp .protect-appeal,
   .lab-item .lab-item-content .content-detail .detail-desc,
   .lab-item .lab-item-content .content-detail .feedback,
-  .mobile-award-panel .content-container .install-text {
+  .mobile-award-panel .content-container .install-text,
+  .danmu-item .right-block .danmu-content,
+  .detail-wrp .detail-empty,
+  .ui-popup .popup-wrap .text-box .subtext,
+  .article-danmu-wrp .danmu-filter .left .delete .plain,
+  .article-danmu-wrp .danmu-box .danmu-table .danmu-item .item-content,
+  .cc-article-wrp .del-wrp .modal-wrap .del-tips {
     color: var(--c-text) !important;
   }
   .link-top-container .link-top-item.active .red_point {
@@ -7054,10 +7317,13 @@
   .calendarEntry_box .greetings .greet-num,
   .new-calendar-wrap .calendar-body .date-wrap .wrap-content .today,
   .data-card .tab .data-tab.current,
+  .data-card .tab .data-tab:hover,
   .section-item .text-content span,
   .academy-wrap .content .tabs .tabs__header .tabs__header-item.is-active span,
   .bili-tab.current,
   .bili-tab.current span,
+  .bili-tab:hover,
+  .bili-tab:hover span,
   .select-box .option-footer:hover,
   .select-box .option-footer:hover span,
   .dc-radio-button.is-active span,
@@ -7072,7 +7338,12 @@
   .setting .section-edit:hover span,
   .video-editor-ol-wrp .icon-xic_video_huaban,
   .editor-box .editor-toolbar .child-list li:hover,
-  i.icon-shape:after {
+  i.icon-shape:after,
+  .interact-wrap .header .tabs .tabs__header .tabs__header-item.is-active span,
+  .interact-wrap .header .tabs .tabs__header .tabs__header-item:hover span,
+  .comment-item .right-block .like-reply div:hover,
+  .danmu-item .right-block .delete-protect div:hover,
+  .stat-card .num .text {
     color: var(--c-accent) !important;
   }
   .bili-share-pc,
@@ -7117,22 +7388,56 @@
   .read-list-component .creat-read-list-box .add-btn,
   .footer-content,
   #edit-page .edit-notice,
-  .line-divid,
-  .tips-calendar_wrap {
+  .tips-calendar_wrap,
+  .header .right-block .avatar img,
+  .danmu-item .right-block .origin,
+  .stat-wrp .stat-card,
+  .dividing-line,
+  .normal-v2-container .normal-title-wrp>.template-op,
+  .normal-v2-container .normal-title-wrp>.template-op.template-op-disabled,
+  .cover-v2-container .cover-v2-detail-wrp .cover-v2-selector,
+  .input-box-v2-1-container,
+  .content-tag-v2-container .content-tag-v2-edit-mod-wrp,
+  .content-tag-v2-container .content-tag-v2-other-tag-error-wrp,
+  .text-area-box-v2-container,
+  .share-modal .av-wrp .av-wrp-inner,
+  .share-modal .modal-bottom .share-addr .av-addr-wrp,
+  .article-danmu-wrp .danmu-filter .left .delete .plain,
+  .article-danmu-wrp .danmu-box .danmu-table .danmu-item .item-act .option-wrp .act-btn,
+  .article-danmu-wrp .danmu-filter .left .delete,
+  .article-danmu-wrp .danmu-filter .left .danmu-type,
+  .article-danmu-wrp .danmu-filter .left .protect,
+  .article-danmu-wrp .danmu-filter .left .refresh,
+  .article-danmu-wrp .danmu-filter .left .danmu-type .plain,
+  .article-danmu-wrp .danmu-filter .left .protect .plain,
+  .article-danmu-wrp .danmu-filter .left .refresh .plain,
+  .recent-danmu-wrp .danmu-table .danmu-item .item-act .option-wrp .act-btn {
     border-color: var(--c-border) !important;
+  }
+  .cc-article-wrp .del-wrp .modal-wrap .geetest_holder.geetest_wind .geetest_radar_btn,
+  .cc-article-wrp .del-wrp .modal-wrap .geetest_holder.geetest_wind .geetest_success_btn {
+    border-color: var(--c-accent) !important;
   }
   .recent-danmu-wrp .danmu-filter .left .option-menu .option-arrow-border {
     border-bottom-color: var(--c-background) !important;
   }
   .recent-danmu-wrp .danmu-filter .left .option-menu .option-arrow,
-  .upload-v2-container .upload-agreement .reg-1 .reg-2-tip::after {
+  .upload-v2-container .upload-agreement .reg-1 .reg-2-tip::after,
+  .cover-v2-container .cover-v2-detail-wrp .cover-v2-selector .cover-v2-selector-deg,
+  .article-danmu-wrp .danmu-filter .left .option-menu .option-arrow {
     border-bottom-color: var(--c-border) !important;
+  }
+  .article-danmu-wrp .danmu-filter .left .option-menu .option-arrow-border {
+    border-bottom-color: var(--c-background) !important;
   }
   .section-item .diff-wrp .diff-text:before {
     border-bottom-color: var(--c-accent) !important;
   }
   .upload-v2-container .upload-agreement .reg-1 .reg-2-tip::after {
     border-right-color: var(--c-border) !important;
+  }
+  .cover-v2-container .cover-v2-detail-wrp .cover-v2-selector .cover-v2-selector-deg {
+    border-left-color: var(--c-border) !important;
   }
   .recent-danmu-wrp .danmu-filter .left .option-menu,
   .editor-box,
@@ -7151,12 +7456,26 @@
   .comment-manage-wrap .no-content,
   .magnetic .content,
   #charge-wrapper .main-charge .elec-con,
-  #charge-wrapper .main-charge .shell-con {
+  #charge-wrapper .main-charge .shell-con,
+  .stat-wrp,
+  .article-chart-wrp,
+  #articleChart,
+  .article-net-charts .content-box,
+  .detail-wrp .detail-empty,
+  .article-danmu-wrp .danmu-box,
+  .article-danmu-wrp .danmu-box .danmu-table .danmu-item {
     border: 0 !important;
   }
   .danmu-container,
   .editor-box .editor-toolbar .child-list,
-  .cc-btn {
+  .cc-btn,
+  .article-data-wrp .video-box,
+  .stat-wrp,
+  .article-net-charts .content-box,
+  .detail-wrp .detail-empty,
+  .article-danmu-wrp .danmu-box,
+  .cc-article-wrp .del-wrp .modal-wrap .geetest_holder.geetest_wind .geetest_radar_btn,
+  .cc-article-wrp .del-wrp .modal-wrap .geetest_holder.geetest_wind .geetest_success_btn {
     box-shadow: none !important;
   }
   .ui-dropdown .default {
@@ -7179,6 +7498,15 @@
   .ui-serch .run-serch::after {
     content: none !important;
   }
+}
+@-moz-document url-prefix("https://cm.bilibili.com/") {
+  .up-index .bg01,
+  .up-index .bg02 {
+    display: none !important;
+  }
+  .up-index .fixed-bar {
+    background-color: var(--c-background) !important;
+  }
   .carousel-wrap .panel .pic li {
     background-color: var(--c-hover) !important;
   }
@@ -7187,7 +7515,8 @@
   .list-header .filter-wrp .video-type .line {
     background-color: var(--c-border) !important;
   }
-  .academy-left-name {
+  .academy-left-name,
+  .up-index .fixed-bar .slogan {
     color: var(--c-title) !important;
   }
   .tabs-nav .tab-item.full span {
@@ -7212,6 +7541,10 @@
   }
   .pager .jump-pager {
     vertical-align: middle;
+  }
+  .up-index .fixed-bar {
+    border-top: 1px solid var(--c-border);
+    box-shadow: none;
   }
   .tabs-nav .tab-item.border-bottom {
     background-color: transparent !important;
@@ -7465,7 +7798,8 @@
   .b-info .balance-top .balance-row .balance-right .shell-channel .shell-item .channel-name {
     color: var(--c-title) !important;
   }
-  .el-table .el-table__row .cell {
+  .el-table .el-table__row .cell,
+  .b-info .warning-group .warning-title {
     color: var(--c-text) !important;
   }
   .bp-user-box i,
@@ -7474,10 +7808,13 @@
   .qrpay-group .qrpay-content .price span,
   .qrpay-group .qrpay-content .price p,
   .spend-recode .title-group .selected-title,
-  .b-info .balance-footer .part-balance-name .part-balance-price {
+  .b-info .balance-footer .part-balance-name .part-balance-price,
+  .el-form-item.is-required .el-form-item__label:before {
     color: var(--c-accent) !important;
   }
-  .b-info .warning-group {
+  .b-info .warning-group,
+  .bind-info .dividing-line,
+  .bind-info .note-content .bank-form .avatar-uploader .el-upload {
     border-color: var(--c-border) !important;
   }
   .bp-user-box-bb,
@@ -7604,7 +7941,8 @@
   .project-list .project-list-item,
   .ticket-tips-wrapper .ticket-tips,
   .confirmorder-container .discounts .discounts-list p,
-  .total-container {
+  .total-container,
+  .ticket-tips-wrapper .merchant-section {
     background-color: var(--c-hover) !important;
   }
   .nav-header-wrapper .nav-header,
@@ -7614,7 +7952,8 @@
   .whole-detail-info-wrapper,
   .modal-wrapper .modal-container,
   .activity-info,
-  .info-header {
+  .info-header,
+  .ticket-tips-wrapper .merchant-section .baseinfo-wrapper .content-item .title {
     background-color: transparent !important;
   }
   .selector-wrapper .more-city-letter-list .more-city-letter-item .letter-item.active:after {
@@ -7629,14 +7968,16 @@
   .activity-info .activity-info-header div,
   .info-header span,
   .announcement-title,
-  .info-content p strong {
+  .info-content p strong,
+  .ticket-tips-wrapper .merchant-section .merchant-header {
     color: var(--c-title) !important;
   }
   .detail-info-wrapper .vuene-info-content div,
   .detail-info-wrapper .product-info-time-wrapper div,
   .selectable-option,
   .announcement-item.active .announcement-item-time,
-  .order-list-wrapper .order-list .no-order .err-tips {
+  .order-list-wrapper .order-list .no-order .err-tips,
+  .ticket-tips-wrapper .merchant-section .baseinfo-wrapper .content-item .content {
     color: var(--c-text) !important;
   }
   .buyticket .product-buy div {

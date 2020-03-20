@@ -5,7 +5,7 @@
 .nav-list a:last-child
   display none !important
 
-.manga-navbar
+.manga-navbar .manga-navbar
 .search-bar .search-suggestion
 .user-panel .drop-list
 .manga-navbar-history-list .drop-list
@@ -34,13 +34,16 @@ nav.manga-navbar.p-fixed.p-zero a:hover button
 nav.manga-navbar.p-fixed.p-zero a:hover button span
   color var(--c-accent) !important
 
+.manga-navbar .manga-navbar
+  border-bottom 1px solid var(--c-border)
+
 .right-part .drop-list .size-ruler
   border 1px solid var(--c-border)
   border-top-width 0
   border-radius 0 0 10px 10px
   overflow hidden
 
-.manga-navbar
+nav.manga-navbar
   box-shadow none !important
   background-color var(--c-bg-header) !important
   backdrop-filter blur(5px) !important
