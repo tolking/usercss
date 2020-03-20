@@ -496,7 +496,8 @@
   .submit-button-group-v2-container .submit-btn-group-add,
   .share-modal .copy-btn,
   .coupon-label .container-right .to-use,
-  .bind-info .note-footer .btn-group .common-btn.active-btn {
+  .bind-info .note-footer .btn-group .common-btn.active-btn,
+  .pbp-panel-feedback {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -604,7 +605,8 @@
   .submit-button-group-v2-container .submit-btn-group-add span,
   .share-modal .copy-btn span,
   .coupon-label .container-right .to-use span,
-  .bind-info .note-footer .btn-group .common-btn.active-btn span {
+  .bind-info .note-footer .btn-group .common-btn.active-btn span,
+  .pbp-panel-feedback span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -707,7 +709,8 @@
   .submit-button-group-v2-container .submit-btn-group-add::after,
   .share-modal .copy-btn::after,
   .coupon-label .container-right .to-use::after,
-  .bind-info .note-footer .btn-group .common-btn.active-btn::after {
+  .bind-info .note-footer .btn-group .common-btn.active-btn::after,
+  .pbp-panel-feedback::after {
     content: '';
     display: block;
     position: absolute;
@@ -819,7 +822,8 @@
   .submit-button-group-v2-container .submit-btn-group-add:hover,
   .share-modal .copy-btn:hover,
   .coupon-label .container-right .to-use:hover,
-  .bind-info .note-footer .btn-group .common-btn.active-btn:hover {
+  .bind-info .note-footer .btn-group .common-btn.active-btn:hover,
+  .pbp-panel-feedback:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -922,7 +926,8 @@
   .submit-button-group-v2-container .submit-btn-group-add:hover span,
   .share-modal .copy-btn:hover span,
   .coupon-label .container-right .to-use:hover span,
-  .bind-info .note-footer .btn-group .common-btn.active-btn:hover span {
+  .bind-info .note-footer .btn-group .common-btn.active-btn:hover span,
+  .pbp-panel-feedback:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -1025,7 +1030,8 @@
   .submit-button-group-v2-container .submit-btn-group-add:hover::after,
   .share-modal .copy-btn:hover::after,
   .coupon-label .container-right .to-use:hover::after,
-  .bind-info .note-footer .btn-group .common-btn.active-btn:hover::after {
+  .bind-info .note-footer .btn-group .common-btn.active-btn:hover::after,
+  .pbp-panel-feedback:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -1764,7 +1770,8 @@
   .nav-user-center .user-con .item:nth-child(2),
   .nav-wrapper-right .nav-con .nav-item:nth-child(2),
   .nav-wrapper-right .nav-con .nav-item:nth-child(5),
-  .van-popper-avatar .coins .contact .contact-tips::after {
+  .van-popper-avatar .coins .contact .contact-tips::after,
+  .bili-header-m .profile-m .btns-profile .ver .tips:after {
     display: none !important;
   }
   .channel-menu-mini,
@@ -1931,7 +1938,8 @@
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
   }
-  .van-popper-avatar .coins .contact .contact-tips {
+  .van-popper-avatar .coins .contact .contact-tips,
+  .bili-header-m .profile-m .btns-profile .ver .tips {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -3547,6 +3555,8 @@
   .bilibili-player-video-danmaku-setting:hover>span svg,
   .bilibili-player-block-filter-image:hover .bp-svgicon svg,
   .bilibili-player-iconfont:hover .bp-svgicon svg,
+  .bilibili-player-iconfont:hover .bp-svgicon svg g,
+  .bilibili-player-video-btn:hover .bp-svgicon svg,
   .selection-icon:hover .bp-svgicon svg,
   .bilibili-player-video-danmaku-setting:hover .bp-svgicon svg,
   .bilibili-player-video-danmaku-switch:hover .bp-svgicon svg,
@@ -3693,13 +3703,18 @@
   .bangumi-review-item,
   .sort-type-wrp ul li:hover,
   .btn-pay-wrapper.is-vip a,
-  .section-item {
+  .section-item,
+  .media-tab-module-wrp .media-tab-module-content .sl-ep-nav .slider-contro span,
+  .media-tab-module-wrp .media-tab-module-content .sl-ep-nav .slider-contro span.disabled:hover {
     background-color: var(--c-hover) !important;
   }
   .media-info-count .media-info-count-item em,
   .media-tab-wrp,
   .media-tab-nav {
     background-color: transparent !important;
+  }
+  .media-tab-module-wrp .media-tab-module-content .sl-ep-nav .slider-contro span:hover {
+    background-color: var(--c-accent) !important;
   }
   .misl-ep-item .misl-ep-text .misl-ep-index,
   .media-tab-detail-wrp .media-tab-detail-l .media-tab-module-wrp .media-tab-module-title,
@@ -3721,7 +3736,8 @@
   .review-feed-item .feed-right .likes,
   .section-item .section-text .section-title,
   .media-info-card .mic-expand,
-  .misl-ep-item .misl-ep-text .misl-ep-title {
+  .misl-ep-item .misl-ep-text .misl-ep-title,
+  .media-info-card .mic-evaluate-nodata {
     color: var(--c-text) !important;
   }
   .media-info-r span,
@@ -5229,15 +5245,20 @@
   .gold-seed-store .content,
   .recharge-store-box .reward-desc,
   .silver-seed-store,
-  .silver-seed-store .content {
+  .silver-seed-store .content,
+  .draw-full-cntr {
     background-color: var(--c-background) !important;
   }
   .attention-btn-ctnr .right-part,
   .guard-store-box .tab-box,
   .fans-medal-item .level,
   .recharge-stores-ctnr .tab-box,
-  .sub-tab-box .item.active {
+  .sub-tab-box .item.active,
+  .draw-full-cntr .function-bar {
     background-color: var(--c-hover) !important;
+  }
+  .draw-full-cntr .function-bar.draw {
+    background-color: var(--c-accent) !important;
   }
   .room-bg::after {
     background-image: linear-gradient(0deg, var(--c-background), transparent 20%) !important;
@@ -5255,12 +5276,14 @@
   .gift-info-expScore,
   .icon-label,
   .chaos-pk-rank .rank .season-name,
-  .chaos-pk-rank .rank .time {
+  .chaos-pk-rank .rank .time,
+  .guard-rank-cntr .rank-cntr .tip {
     color: var(--c-text) !important;
   }
   .hour-rank .hour-rank-content,
   .attention-btn-ctnr .left-part .follow-text,
-  .fans-medal-item .label {
+  .fans-medal-item .label,
+  .draw-full-cntr .function-bar.draw span {
     color: var(--c-white) !important;
   }
   .gift-info .btn-rule,
@@ -5268,7 +5291,8 @@
   .item.club-rank-1 .club-name,
   .chat-history-panel .chat-history-list .chat-item.welcome-msg .username.vip,
   .room-introduction-tags .room-introduction-tag:hover .icon-label,
-  .chaos-pk-rank .link-to-history {
+  .chaos-pk-rank .link-to-history,
+  .guard-rank-cntr .rank-cntr .rank-list-box .online a.live-skin-main-a-text {
     color: var(--c-accent) !important;
   }
   .room-introduction-tags,
@@ -5282,7 +5306,8 @@
     border-color: var(--c-accent) !important;
   }
   .content-wrapper,
-  .user-protocol {
+  .user-protocol,
+  .draw-full-cntr {
     border: 0 !important;
   }
   .common-popup-wrap.arrow-top::before {
