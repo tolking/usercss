@@ -159,7 +159,8 @@
   }
   .el-date-table td.disabled div,
   .el-year-table td.disabled .cell,
-  .el-month-table td.disabled .cell {
+  .el-month-table td.disabled .cell,
+  .checkbox {
     background-color: transparent !important;
   }
   .radio-icon.checked::before,
@@ -199,7 +200,8 @@
   .head .dropdown-menu .article-list,
   .num-content .ticket-count,
   .dropbox-component,
-  .el-radio-button .el-radio-button__inner {
+  .el-radio-button .el-radio-button__inner,
+  .checkbox {
     border-color: var(--c-border) !important;
   }
   .ui-radio.active .ui-radio-icon,
@@ -1569,7 +1571,8 @@
   .my-link-btn .hint-count,
   .gift-item-wrap .expiration,
   .hot-label,
-  .mic-wrapper.media-info-card .mic-content .mic-pic label {
+  .mic-wrapper.media-info-card .mic-content .mic-pic label,
+  .h5share-container .text-area .text-content .tag {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
@@ -1637,7 +1640,8 @@
   .my-link-btn .hint-count:hover,
   .gift-item-wrap .expiration:hover,
   .hot-label:hover,
-  .mic-wrapper.media-info-card .mic-content .mic-pic label:hover {
+  .mic-wrapper.media-info-card .mic-content .mic-pic label:hover,
+  .h5share-container .text-area .text-content .tag:hover {
     color: var(--c-white) !important;
   }
   .gg-icon,
@@ -1752,7 +1756,10 @@
   .security_content .container,
   .bili-dialog .con,
   .video-toolbar-module .share-box .share-popup,
-  .video-toolbar-module .app-box .qr-code-box {
+  .video-toolbar-module .app-box .qr-code-box,
+  .backdrop .title-box,
+  .new-link-top-wrap .content-wrap,
+  .bcc-popover {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -2289,7 +2296,8 @@
   .bb-comment .stick.true-love .medal-level,
   .comment-bilibili-fold .stick.true-love .medal-level,
   .list-comment,
-  .panel-area .bb-comment .bottom-page.center {
+  .panel-area .bb-comment .bottom-page.center,
+  .reply-item {
     border-color: var(--c-border) !important;
   }
   .comment .comment-selecotr,
@@ -2362,14 +2370,17 @@
   }
   .feed-tag .publish-panel-container,
   .feed-tag .publish-panel,
-  .feed-tag .card {
+  .feed-tag .card,
+  .backdrop iframe,
+  .result.is-web {
     background-color: var(--c-background) !important;
   }
   .imagesbox .boost-control {
     background-color: var(--c-hover) !important;
   }
   .video-container .text-area .title,
-  .feed-tag .separater-line {
+  .feed-tag .separater-line,
+  .title-text {
     color: var(--c-title) !important;
   }
   .video-container .text-area .view-danmaku span,
@@ -2384,10 +2395,17 @@
   .shop-desc .desc-box .price-desc,
   .userinfo-wrapper .info .user .vip,
   .imagesbox .boost-control li:hover span,
-  .imagesbox .boost-control li:hover i {
+  .imagesbox .boost-control li:hover i,
+  .clock-time {
     color: var(--c-accent) !important;
   }
-  .article-container:hover .text-area {
+  .clock-time::after,
+  .result-list .row::after,
+  .prize-item .prize-img,
+  .backdrop .title-box {
+    border-color: var(--c-border) !important;
+  }
+  .text-area {
     box-shadow: none !important;
   }
   .feed-card .card .main-content,
@@ -3419,6 +3437,7 @@
 }
 @-moz-document url-prefix("https://www.bilibili.com/blackboard/") {
   .banner,
+  .international-footer,
   .active-title .b-active-i,
   .topic-title .b-topic-i {
     display: none !important;
@@ -3427,7 +3446,9 @@
   #webShare .bili-share-pc,
   .bili-share-pc .weixin-hover .qr-before,
   .help-list,
-  .help-box {
+  .help-box,
+  .bili-share-pc .share-weixin-qr,
+  body[style] {
     background-color: var(--c-background) !important;
   }
   .help-content img,
@@ -3458,7 +3479,8 @@
   }
   .active-title,
   .nav-tab,
-  .bili-share-pc {
+  .bili-share-pc,
+  .bili-share-pc .vertical-line {
     border-color: var(--c-border) !important;
   }
   .help-list,
@@ -7240,7 +7262,10 @@
   .cover-v2-container .cover-v2-detail-wrp .cover-v2-selector,
   .cover-v2-container .cover-v2-detail-wrp .cover-v2-selector .cover-v2-selector-deg,
   .cc-modal .modal,
-  .share-modal .modal-bottom {
+  .share-modal .modal-bottom,
+  #bili-data-center,
+  .dc-page,
+  .new-link-top-wrap .new-link-top-container {
     background-color: var(--c-background) !important;
   }
   .message-notice_wrap .tips-item_wrap,
@@ -7278,8 +7303,14 @@
   .article-danmu-wrp .danmu-box .danmu-table .danmu-item:nth-child(odd),
   .article-danmu-wrp .danmu-box .danmu-table .danmu-item:hover,
   .article-danmu-wrp .danmu-box .danmu-table .danmu-item .item-act .option-wrp .act-btn,
-  .recent-danmu-wrp .danmu-table .danmu-item .item-act .option-wrp .act-btn {
+  .recent-danmu-wrp .danmu-table .danmu-item .item-act .option-wrp .act-btn,
+  .dc-radio-button.is-active,
+  .dc-radio-button:hover,
+  .section-item.actived {
     background-color: var(--c-hover) !important;
+  }
+  #dc-section_preference .list_wrap .list-item {
+    background-color: var(--c-hover);
   }
   .dc-progress-bar,
   #charge-wrapper .main-charge .elec-con .progress .progress-bar .bar,
@@ -7287,8 +7318,12 @@
   .apply-page-title:after,
   .lab-item .lab-item-content .divide-line,
   .line-divid,
-  .normal-v2-container .normal-title-wrp>.template-op>.template-op-divide {
+  .normal-v2-container .normal-title-wrp>.template-op>.template-op-divide,
+  .dc-radio-button:hover:before {
     background-color: var(--c-border) !important;
+  }
+  .echarts {
+    background-color: var(--c-white);
   }
   .carousel-module .panel .title .tag,
   .comment-list-item .ci-action a:hover,
@@ -7332,7 +7367,8 @@
   .setting .section-title,
   .ui-popup .popup-wrap .text-box .text,
   .share-modal .modal .modal-close,
-  .cc-article-wrp .del-wrp .modal-wrap .del-title {
+  .cc-article-wrp .del-wrp .modal-wrap .del-title,
+  .dc-section-item1_title_custom .sectionTitle {
     color: var(--c-title) !important;
   }
   .notice_wrap .notice_body .hot-item .item-right,
@@ -7354,7 +7390,9 @@
   .ui-popup .popup-wrap .text-box .subtext,
   .article-danmu-wrp .danmu-filter .left .delete .plain,
   .article-danmu-wrp .danmu-box .danmu-table .danmu-item .item-content,
-  .cc-article-wrp .del-wrp .modal-wrap .del-tips {
+  .cc-article-wrp .del-wrp .modal-wrap .del-tips,
+  #dc-section_essential .echarts div,
+  .section-item .tips_wrap {
     color: var(--c-text) !important;
   }
   .link-top-container .link-top-item.active .red_point {
@@ -7457,11 +7495,16 @@
   .article-danmu-wrp .danmu-filter .left .danmu-type .plain,
   .article-danmu-wrp .danmu-filter .left .protect .plain,
   .article-danmu-wrp .danmu-filter .left .refresh .plain,
-  .recent-danmu-wrp .danmu-table .danmu-item .item-act .option-wrp .act-btn {
+  .recent-danmu-wrp .danmu-table .danmu-item .item-act .option-wrp .act-btn,
+  .dc-radio-button,
+  .dc-radio-button:hover,
+  #dc-section_essential .item-in-row,
+  .watch_wrap {
     border-color: var(--c-border) !important;
   }
   .cc-article-wrp .del-wrp .modal-wrap .geetest_holder.geetest_wind .geetest_radar_btn,
-  .cc-article-wrp .del-wrp .modal-wrap .geetest_holder.geetest_wind .geetest_success_btn {
+  .cc-article-wrp .del-wrp .modal-wrap .geetest_holder.geetest_wind .geetest_success_btn,
+  .section-item.actived {
     border-color: var(--c-accent) !important;
   }
   .recent-danmu-wrp .danmu-filter .left .option-menu .option-arrow-border {
@@ -7470,10 +7513,14 @@
   .recent-danmu-wrp .danmu-filter .left .option-menu .option-arrow,
   .upload-v2-container .upload-agreement .reg-1 .reg-2-tip::after,
   .cover-v2-container .cover-v2-detail-wrp .cover-v2-selector .cover-v2-selector-deg,
-  .article-danmu-wrp .danmu-filter .left .option-menu .option-arrow {
+  .article-danmu-wrp .danmu-filter .left .option-menu .option-arrow,
+  .new-link-top-wrap .arrow-tip,
+  .bcc-popover[x-placement^=bottom] .popper__arrow {
     border-bottom-color: var(--c-border) !important;
   }
-  .article-danmu-wrp .danmu-filter .left .option-menu .option-arrow-border {
+  .article-danmu-wrp .danmu-filter .left .option-menu .option-arrow-border,
+  .new-link-top-wrap .arrow-tip:after,
+  .bcc-popover[x-placement^=bottom] .popper__arrow:after {
     border-bottom-color: var(--c-background) !important;
   }
   .section-item .diff-wrp .diff-text:before {
@@ -7509,7 +7556,9 @@
   .article-net-charts .content-box,
   .detail-wrp .detail-empty,
   .article-danmu-wrp .danmu-box,
-  .article-danmu-wrp .danmu-box .danmu-table .danmu-item {
+  .article-danmu-wrp .danmu-box .danmu-table .danmu-item,
+  .dc-top-link_wrap .tabs .tabs__header,
+  .new-link-top-wrap .new-link-top-container {
     border: 0 !important;
   }
   .danmu-container,
@@ -7665,9 +7714,12 @@
   .home-page .home-container .home-content .right-panel,
   .user-panel .content .user-pic,
   #app .page-container .right-container,
-  .tab-wrap .tab-item.active:after {
+  .tab-wrap .tab-item.active:after,
+  .live-panel,
+  .most-viewed-panel {
     display: none !important;
   }
+  #app,
   .tab-bar,
   .center-panel .section-block,
   .publish-panel,
@@ -7677,7 +7729,10 @@
   .pagination,
   .schedule-bar,
   .feed-topic .publish-panel-container,
-  .video-topic .video-list {
+  .video-topic .video-list,
+  .row,
+  .vote-result-comment,
+  #bp-app {
     background-color: var(--c-background) !important;
   }
   .core-style,
@@ -7687,7 +7742,8 @@
   .emoji-cover:hover,
   .bp-input .content-box,
   .imagesbox .boost-img,
-  .img-content {
+  .img-content,
+  .option-li:hover {
     background-color: var(--c-hover) !important;
   }
   .bp-input .content-box input,
@@ -7695,15 +7751,30 @@
   .tab-wrap .tab-item.active {
     background-color: transparent !important;
   }
-  #app {
-    background: none !important;
+  #app,
+  .fixed-bg {
+    background-image: none !important;
   }
   .bp-popup-panel .title-ctnr .popup-title,
   .title-content,
-  .top-header .tag-title-content .tag-title {
+  .top-header .tag-title-content .tag-title,
+  .vote-title,
+  .vote-user-name,
+  .desc-title {
     color: var(--c-title) !important;
   }
-  .core-style {
+  .core-style,
+  .backdrop .title-box .close-button,
+  .filter-tip,
+  .clock-text,
+  .lottery-config .config-row,
+  .prize-item .prize-desc,
+  .vote-user-text,
+  .vote-left-time,
+  .joined-text,
+  .choice-count-text,
+  .share-to-dynamic,
+  .anonymous {
     color: var(--c-text) !important;
   }
   .sticky-bar .bar-content .title,
@@ -7713,16 +7784,21 @@
   .tab-bar .tab .tab-text.selected,
   .tab-bar .tab .tab-text:hover,
   .tab-wrap .tab-item.active,
-  .tab-wrap .tab-item:hover {
+  .tab-wrap .tab-item:hover,
+  .new-notice-bar:hover .message,
+  .joined-number {
     color: var(--c-accent) !important;
   }
   .upload-image .upload-btn,
   .bp-input .content-box::before,
-  .button-bar::before {
+  .button-bar::before,
+  .vote-number,
+  .option-li {
     border-color: var(--c-border) !important;
   }
   .tab-wrap .tab-item.active,
-  .imagesbox .boost-slider-wrap .boost-slider-border {
+  .imagesbox .boost-slider-wrap .boost-slider-border,
+  .option-li:hover {
     border-color: var(--c-accent) !important;
   }
   .home-page .home-container .home-content .center-panel .section-block,
