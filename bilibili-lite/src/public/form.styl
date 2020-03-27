@@ -1,3 +1,6 @@
+.el-radio-button .el-radio-button__inner
+  background-color var(--c-background) !important
+
 .ui-dropdown .ul-dropdown-list .dropdown-item:hover
 .head .dropdown-menu li.ellipsis:hover
 .ui-select .ul-select-list .select-item:hover
@@ -9,16 +12,31 @@
 .el-select-dropdown__item:hover
 .dropbox-component
 .dropbox-component .data-list>li:hover
+.bcc-option:hover
+.ui-calendar .flatpickr-day.inRange
+.ui-calendar .flatpickr-day.nextMonthDay.inRange
+.ui-calendar .flatpickr-day.nextMonthDay.today.inRange
+.ui-calendar .flatpickr-day.nextMonthDay:focus
+.ui-calendar .flatpickr-day.nextMonthDay:hover
+.ui-calendar .flatpickr-day.prevMonthDay.inRange
+.ui-calendar .flatpickr-day.prevMonthDay.today.inRange
+.ui-calendar .flatpickr-day.prevMonthDay:focus
+.ui-calendar .flatpickr-day.prevMonthDay:hover
+.ui-calendar .flatpickr-day.today.inRange
+.ui-calendar .flatpickr-day:focus
+.ui-calendar .flatpickr-day:hover
   background-color var(--c-hover) !important
 
 .el-date-table td.disabled div
 .el-year-table td.disabled .cell
 .el-month-table td.disabled .cell
+.checkbox
   background-color transparent !important
 
 .radio-icon.checked::before
 .ui-radio input[type=radio]:checked+.ui-radio-icon:after
 .ui-checkbox input[type=checkbox]:checked+.ui-checkbox-icon
+.el-radio-button.is-active .el-radio-button__inner
   background-color var(--c-accent) !important
 
 .date-picker-v2-container div
@@ -32,12 +50,18 @@
 select
   color var(--c-text) !important
 
+.el-radio-button.is-active .el-radio-button__inner
+  color var(--c-white) !important
+
 .ui-select .ul-select-list .select-item.active
 .ui-select .ul-select-list .select-item:hover
 .date-panel .day.active
 .player-auxiliary-danmaku-date-picker-container .player-auxiliary-danmaku-date-picker-body .day-span.day-enable.active
 .player-auxiliary-danmaku-date-picker-container .player-auxiliary-danmaku-date-picker-body .day-span.day-enable:hover
 .dropbox-component .data-list>li:hover
+.bcc-option.selected span
+.bcc-option:hover span
+.bcc-option.selected .bcc-iconfont
   color var(--c-accent) !important
 
 .time-picker-v2-container .time-picker-head-wrp
@@ -49,11 +73,27 @@ select
 .head .dropdown-menu .article-list
 .num-content .ticket-count
 .dropbox-component
+.el-radio-button .el-radio-button__inner
+.checkbox
+.bcc-select-input-wrap
+.ui-calendar .flatpickr-day.inRange
+.ui-calendar .flatpickr-day.nextMonthDay.inRange
+.ui-calendar .flatpickr-day.nextMonthDay.today.inRange
+.ui-calendar .flatpickr-day.nextMonthDay:focus
+.ui-calendar .flatpickr-day.nextMonthDay:hover
+.ui-calendar .flatpickr-day.prevMonthDay.inRange
+.ui-calendar .flatpickr-day.prevMonthDay.today.inRange
+.ui-calendar .flatpickr-day.prevMonthDay:focus
+.ui-calendar .flatpickr-day.prevMonthDay:hover
+.ui-calendar .flatpickr-day.today.inRange
+.ui-calendar .flatpickr-day:focus
+.ui-calendar .flatpickr-day:hover
   border-color var(--c-border) !important
 
 .ui-radio.active .ui-radio-icon
 .ui-checkbox input[type=checkbox]:checked+.ui-checkbox-icon
 .date-panel .day.active
+.el-radio-button.is-active .el-radio-button__inner
   border-color var(--c-accent) !important
 
 .player-auxiliary-danmaku-date-picker-container .player-auxiliary-danmaku-date-picker-body .day-span
@@ -81,8 +121,10 @@ select
 .bili-dropdown .dropdown-list
 .player-auxiliary-danmaku-date-picker-container
 .dropbox-component .data-list
+.bcc-select-list-wrap
   border 1px solid var(--c-border) !important
   background-color var(--c-background) !important
+  box-shadow none !important
 
 /* 表格 */
 table
