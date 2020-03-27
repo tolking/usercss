@@ -12,7 +12,14 @@ domain("biligame.com") {
   @import 'feed'
   @import 'error'
 }
-@-moz-document url-prefix("https://www.bilibili.com/account/history"),
+@-moz-document url-prefix("https://www.bilibili.com/v/"),
+url-prefix("https://www.bilibili.com/anime/"),
+url-prefix("https://www.bilibili.com/guochuang/"),
+url-prefix("https://www.bilibili.com/cinema/"),
+url-prefix("https://www.bilibili.com/documentary/"),
+url-prefix("https://www.bilibili.com/movie/"),
+url-prefix("https://www.bilibili.com/tv/"),
+url-prefix("https://www.bilibili.com/account/history"),
 url-prefix("https://www.bilibili.com/watchlater") {
   /* 与主页相同的 banner */
   @import 'bannerHeader'
