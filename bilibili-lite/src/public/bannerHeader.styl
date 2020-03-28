@@ -1,52 +1,106 @@
 /* 单独适配与主页相同样式的banner界面 */
+.van-popper-channel .popper__arrow
+	display none !important
+
+/* 头部 */
+.mini-header
+	background-color var(--c-bg-header)
+	backdrop-filter blur(5px)
+
 .nav-link-item .link
-.mini-upload
-.nav-user-center .user-con .item .name
-  color var(--c-white) !important
+.mini-header .nav-user-center .nav-item a
+.mini-header input
+.mini-header .mini-upload
+.mini-header .nav-user-center .user-con .item .name
+	color var(--c-white) !important
 
-.nav-link-item .link:hover
-.mini-upload:hover
-.nav-user-center .user-con .item .name:hover
-  color var(--c-accent) !important
+.mini-header .nav-user-center .nav-item a:hover
+.bili-header-m .nav-search .nav-search-btn:hover
+.international-header .nav-search .nav-search-btn:hover
+.nav-link .nav-link-ul .nav-link-item .link:hover
+.mini-header .mini-upload:hover
+.mini-header .nav-user-center .user-con .item .name:hover
+	color var(--c-accent) !important
 
-/* 导航搜索 */
 .bili-header-m .nav-search-box
 .international-header .nav-search-box
-  position absolute
-  top 100px
-  left 50%
-  transform translateX(-50%)
+	position absolute
+	top 100px
+	left 50%
+	transform translateX(-50%)
 
 .bili-header-m .nav-search
 .international-header .nav-search
-  margin 0 auto
-  width 520px
+	margin 0 auto
+	width 520px
 
 .bili-header-m .nav-search #nav_searchform
 .international-header .nav-search #nav_searchform
-  padding 0 60px 0 20px
-  border 0
-  border-radius 25px
-  background-color rgba(0, 0, 0, 0.4) !important
-  overflow hidden
+	padding 0 60px 0 20px
+	border 0
+	border-radius 25px
+	background-color rgba(0, 0, 0, 0.4) !important
+	overflow hidden
 
 .bili-header-m .nav-search .nav-search-keyword
 .international-header .nav-search .nav-search-keyword
-  height 50px
-  font-size 16px
-  color var(--c-white)
+	height 50px
+	font-size 16px
+	color var(--c-white)
 
 .bili-header-m .nav-search .nav-search-submit
 .international-header .nav-search .nav-search-submit
-  top 0
-  right 20px
-  font-size 24px
-  color var(--c-white) !important
-  line-height 50px
+	top 0
+	right 20px
+	font-size 24px
+	color var(--c-white) !important
+	line-height 50px
 
 .bili-header-m .nav-search .nav-search-btn
 .international-header .nav-search .nav-search-btn
-  width 60px
-  height 50px
-  border-radius 0 25px 25px 0
-  background-color rgba(0, 0, 0, 0.6) !important
+	width 60px
+	height 50px
+	border-radius 0 25px 25px 0
+	background-color rgba(0, 0, 0, 0.6) !important
+
+/* 页眉图片 */
+.bili-banner
+	max-height 220px
+	background-color var(--c-background) !important
+
+.bili-banner .head-title
+	background-color var(--c-hover) !important
+	color var(--c-white) !important
+
+.bili-banner .taper-line
+	background-color none !important
+
+.bili-banner
+	height 14vw !important
+
+/* 页眉导航 */
+.channel-menu-itnl
+	flex-direction row
+	flex-wrap nowrap
+	height auto
+
+.channel-menu-itnl span
+	flex 1
+
+.van-popper-channel .sub-item
+	max-height none
+
+.channel-menu-itnl .item
+	height auto
+
+.channel-menu-itnl .item .name
+	margin 0 auto
+	font-size 16px
+
+.channel-menu-itnl .item .name em
+	display block
+	margin 2px auto 0
+	background-color var(--c-accent)
+
+.channel-menu-itnl span:last-child .item .name
+	margin-top 2px
