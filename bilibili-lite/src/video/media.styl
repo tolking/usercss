@@ -2,6 +2,7 @@
 .bili-footer
 .bili-header-m .nav-menu .nav-mask
 .btn-pay-wrapper .pic-wrapper
+.media-tab-module-wrp .media-tab-module-content .sl-ep-nav .sl-ep-nav-list .sl-ep-nav-item.on::after
   display none !important
 
 .media-tab-content
@@ -30,7 +31,7 @@
   background-color transparent !important
 
 .media-tab-module-wrp .media-tab-module-content .sl-ep-nav .slider-contro span:hover
-  background-color: var(--c-accent) !important
+  background-color var(--c-accent) !important
 
 .misl-ep-item .misl-ep-text .misl-ep-index
 .media-tab-detail-wrp .media-tab-detail-l .media-tab-module-wrp .media-tab-module-title
@@ -59,6 +60,9 @@
 .media-info-r span
 .media-tab-nav ul li
 .to-review-btn
+.mini-type .nav-user-center .user-con .item .name
+.mini-type .nav-link .nav-link-ul .nav-link-item .link
+.mini-type .nav-user-center .mini-upload
   color var(--c-white) !important
 
 .media-info-score .media-info-score-content
@@ -93,6 +97,7 @@
 .bangumi-media .bangumi-media-header .btn-more-review:hover
 .media-tab-detail-wrp .media-tab-detail-l .media-tab-module-wrp .media-tab-module-more:hover
 .media-tab-detail-wrp .media-tab-detail .media-tab-module-wrp .media-tab-module-more:hover
+.media-tab-module-wrp .media-tab-module-content .sl-ep-nav .sl-ep-nav-list .sl-ep-nav-item.on
   border-color var(--c-accent) !important
 
 .media-info-wrp .media-info-content .media-info-inner .media-preview
@@ -119,6 +124,7 @@
   padding 0 10px
   border-color var(--c-border) !important
   background-color transparent
+  transition all 0.3s ease-in-out
 
   &::before
   &::after
@@ -141,14 +147,14 @@
   &::after
     content none !important
 
-/* 导航 */
-.bili-header-m
-  background-color var(--c-bg-header) !important
-  backdrop-filter blur(5px)
+// /* 导航 */
+// .bili-header-m
+//   background-color var(--c-bg-header) !important
+//   backdrop-filter blur(5px)
 
-.bili-header-m .nav-menu .up-load
-  margin 0
-  padding 0
+// .bili-header-m .nav-menu .up-load
+//   margin 0
+//   padding 0
 
-  .u-link
-    line-height 42px
+//   .u-link
+//     line-height 42px
