@@ -37,6 +37,7 @@
 .game-groom-m .title
 .game-groom-m .num
 .charge-container
+.popup-card .info
 	background-color var(--c-background) !important
 
 .primary-menu .nav-menu .sub-nav li:hover
@@ -47,6 +48,11 @@
 .random-change:hover
 .charge-header .user-link
 .battery-item .battery-bg
+.hot-recom-wrapper .hot-trailer .player-list
+.hot-recom-wrapper .hot-trailer .player-list .list-item-wrap .list-item.selected
+.hot-recom-wrapper .hot-trailer .player-list .list-item-wrap .list-item:hover
+.popup-card .preview
+.rank-wrap .head-section .more span:hover
 	background-color var(--c-hover) !important
 
 .split-line
@@ -61,6 +67,8 @@
 .coming-soon-wrapper .block-title
 .battery-pay-info
 .subtitle-new
+.hot-recom-wrapper .hot-trailer .player-list .list-count
+.hot-recom-wrapper .hot-title
 	color var(--c-title) !important
 
 .bangumi-home-crumb .fcname ul.n_num li a
@@ -69,37 +77,60 @@
 .coming-soon-wrapper .card-wrapper .card-item .time-line-wrapper .date
 .coming-soon-wrapper .card-wrapper .card-item .time-line-wrapper .time
 .charge-info
+.hot-recom-wrapper .hot-trailer .player-list .list-item-wrap .list-item .list-desc
+.popup-card .info .style
+.popup-card .info .up-time
+.popup-card .info .desc
 	color var(--c-text) !important
-
-.bangumi-home-crumb .fcname ul.n_num li.on a
-.battery-item.active .battery-text
-.battery-pay-info span
-	color var(--c-accent) !important
-
-.sub-nav-m ul li.on a
-	color var(--c-accent) !important
 
 .carousel-module .panel .title a
 .groom-module .card-mark .title
 .groom-module .card-mark .author
 .groom-module .card-mark .play
+.banner-wrapper .side-list .side-item a span
 	color var(--c-white) !important
+
+.bangumi-home-crumb .fcname ul.n_num li.on a
+.battery-item.active .battery-text
+.battery-pay-info span
+.sub-nav-m ul li.on a
+.hot-recom-wrapper .hot-trailer .player-list .list-count .num
+.filter-block .filter-item-wrapper .filter-item:hover
+	color var(--c-accent) !important
 
 .primary-menu.border-b
 .cinema-home-crumb ul li
 .charge-header .user-link
 .battery-item .battery-bg
 .copyright-detail
+.hot-recom-wrapper .hot-trailer .player-list .list-item-wrap .list-item .list-cover
+.rank-wrap .head-section .more span
 	border-color var(--c-border) !important
 
 .battery-item.active .battery-bg
+.hot-recom-wrapper .hot-trailer .player-list .list-item-wrap .list-item.selected .list-cover
 	border-color var(--c-accent) !important
+
+.hot-recom-wrapper .hot-trailer .player-list .list-item-wrap .list-item.selected .list-cover:after
+	border-right-color var(--c-accent) !important
+
+.sort-item i.up
+	border-bottom-color var(--c-border)
+
+.sort-item i.down
+	border-top-color var(--c-border)
+
+.sort-item.on i.active
+	border-color var(--c-accent) rgba(0, 0, 0, 0)
 
 .international-header .primary-menu-itnl
 	border 0
 
 .charge-header-bg
 	background-image none !important
+
+.groom-module:hover .card-mark
+	backdrop-filter blur(5px)
 
 .primary-menu .nav-menu>li .num-wrap span
 	background-color var(--c-accent) !important
@@ -220,3 +251,12 @@
 .card-video-wrapper .card-video-content .huge-recom+.card-video-list
 .video-list-recom .video-list-video
 	margin-left 0
+
+.bilibili-player button
+	background-color transparent !important
+
+	span
+		color var(--c-title) !important
+
+	&::after
+		content none !important

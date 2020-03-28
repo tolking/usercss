@@ -2,6 +2,14 @@
 
 - [bilibili-lite](bilibili-lite/README.md) 一个简化的bilibili页面样式，自适应黑暗模式
 
+## 其它说明
+
+如果使用遇到问题，你可以优先 [查看帮助](./help.md)
+
+你也可以加入交流QQ群 1061288553
+
+![1061288553](https://i.loli.net/2020/03/28/agCTnyh2ZRDsQm3.jpg)
+
 ## 开发
 
 ``` sh
