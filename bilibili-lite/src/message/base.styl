@@ -11,8 +11,6 @@
 .system-item .title
 	display inline-block !important
 
-.space-left
-.space-right
 .bp-popup-panel
 .is-black
 .is-limit
@@ -21,11 +19,17 @@
 .emotion-box::after
 .emoji-box
 .emoji-box::after
+.action-menu .menu-list:before
 	background-color var(--c-background) !important
 
 .side-bar .item:hover
 .list-item:hover
 	background-color var(--c-hover) !important
+
+.space-left
+.space-right
+.loading .link-progress-tv
+	background-color transparent !important
 
 .side-bar .list
 	margin-top 100px !important
@@ -41,7 +45,7 @@
 	color var(--c-accent) !important
 
 .card
-.action-menu .menu-list
+	margin-bottom 0 !important
 	box-shadow none !important
 	background-color var(--c-background) !important
 
@@ -51,6 +55,10 @@
 .list-title
 .title
 	border-color var(--c-border) !important
+
+.action-menu .menu-list:before
+	border-top-color: var(--c-border) !important
+	border-right-color: var(--c-border) !important
 
 .text-box
 	width auto !important
@@ -111,3 +119,11 @@
 
 .side-bar .item a
 	padding 0 !important
+
+.action-menu .btn
+	border 0
+	background-color transparent !important
+	color var(--c-title) !important
+
+	&::after
+		content none !important

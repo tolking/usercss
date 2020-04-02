@@ -136,15 +136,17 @@ table
       border-color var(--c-border) !important
       background-color transparent !important
 
-      &:nth-child(odd) td
-        background-color var(--c-hover) !important
-
       th
       td
         border-color var(--c-border) !important
         box-shadow none !important
         background-color var(--c-background) !important
         color var(--c-text) !important
+
+  tbody
+    tr
+      &:nth-child(odd) td
+        background-color var(--c-hover) !important
 
 /* 下拉框 */
 .selector

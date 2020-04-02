@@ -1,10 +1,5 @@
 /* 弹幕列表 */
-.player-auxiliary-area
-.bui-collapse .bui-collapse-header
-.player-auxiliary-area .player-auxiliary-filter
-.danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap
-.danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap .player-auxiliary-danmaku-load-status
-.danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-btn-footer
+.v-wrap .danmaku-wrap
 .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap .bscroll-vertical-scrollbar.mousedown
 .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap:hover .bscroll-vertical-scrollbar
 	background-color var(--c-background) !important
@@ -16,8 +11,19 @@
 .player-auxiliary-area .player-auxiliary-bscrollbar .bscroll-indicator
 	background-color var(--c-scroll) !important
 
+.player-auxiliary-area
+.bui-collapse .bui-collapse-header
+.player-auxiliary-area .player-auxiliary-filter
+.danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap
+.danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap .player-auxiliary-danmaku-load-status
+.danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-btn-footer
+	background-color transparent !important
+
 .player-auxiliary-area .player-auxiliary-filter-title
 	color var(--c-title) !important
+
+.player-auxiliary-area .player-auxiliary-filter-menu:hover
+	color var(--c-accent) !important
 
 .bui-collapse .bui-collapse-wrap
 	border 1px solid var(--c-border)

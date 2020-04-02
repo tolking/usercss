@@ -8,23 +8,11 @@ header figure
 #app-news #list
 .news-detail-content
 .tab-selector-wrap
-.app-body .section-block
-.no-data
 .user-hd
-.favourite-card
-.history-card
-.section-filter
-.title-library-wrap .title-item
-.achievement-user
 .loading-error-ctnr
-.daily-task .task-item
-.achievement-card
 .invite
-.income-info .item
 .mce-panel
 .mce-btn
-.live-haruna .tab-body .item
-.sailors-ctnr
   background-color var(--c-background) !important
 
 .progress-bar-ctnr .bar-body
@@ -36,6 +24,20 @@ div.mce-edit-area
 .mce-menu-item:focus
 .range.active
   background-color var(--c-hover) !important
+
+.no-data
+.app-body .section-block
+.section-filter
+.favourite-card
+.history-card
+.title-library-wrap .title-item
+.daily-task .task-item
+.achievement-user
+.achievement-card
+.income-info .item
+.live-haruna .tab-body .item
+.sailors-ctnr
+  background-color transparent !important
 
 .item .title-wrap .notice
 .item .title-wrap .regulation
@@ -108,6 +110,12 @@ div.mce-edit-area
 .side-bar .nav-item-ctnr.expanded .sub-pages-item-ctnr
   height auto !important
 
+.section-block
+  min-height auto !important
+
+#live-center-app
+  min-height 100vh
+
 .rhythm-storm .dp-i-block button
 .fans-medal .inline button
   vertical-align middle
@@ -149,7 +157,7 @@ div.mce-edit-area
   display flex
   justify-content center
   border 0
-  background-color var(--c-background)
+  background-color transparent
 
   .tabnav-item
     margin 0
@@ -175,6 +183,11 @@ div.mce-edit-area
 .tab-selector-wrap .tab-wrap ul
   display flex
   justify-content center
+
+.app-body .main-ctnr
+  padding 20px
+  border-radius 4px
+  background-color var(--c-background) !important
 
 .user-box .btn
 .mce-tinymce .mce-btn button
