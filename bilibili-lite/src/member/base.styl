@@ -6,20 +6,11 @@
 .footer-content .social-menu
   display none !important
 
-.cc-body
-.lab-wrap
-.setting
 .share-wrap
-.data-card
-.interact-wrap
-.academy-wrap
 .article-card
-.medal
-.danmu-container
 .new-calendar-wrap .calendar-body .date-desc_wrap
 .new-calendar-wrap .calendar-body .date-desc_wrap .item-desc_card
 .select-box .option-footer
-.dc-section1-body
 .comment-manage-wrap .content
 .comment-manage-wrap .content .action-bar
 #charge-wrapper .main-charge .elec-con .compute-wrap
@@ -28,27 +19,24 @@
 .create-protect-wrp
 .protect-apply-entry-wrp .protect-entry .error-tips
 .upload-v2-container .upload-agreement .reg-1 .reg-2-tip::after
-#edit-page
 .edit-article-wrap #edit-article-box
-#text-contribute .fixed-header
 .editor-box .editor-toolbar
 .cover-v2-container .cover-v2-detail-wrp .cover-v2-selector
 .cover-v2-container .cover-v2-detail-wrp .cover-v2-selector .cover-v2-selector-deg
 .cc-modal .modal
 .share-modal .modal-bottom
-#bili-data-center
-.dc-page
-.new-link-top-wrap .new-link-top-container
 .pie-empty
 .source-rank-open-button
-.cc-content-body.home-wrap.not-home
-body
 .chief-recommend-module .carousel-box
+.lab-manage .lab-item
+.setting div:nth-child(n + 2)
+#text-contribute.limit-height
+.original-editor-wrap
+.protect-items .protect-item
   background-color var(--c-background) !important
 
 .message-notice_wrap .tips-item_wrap
 .new-calendar-wrap .calendar-body .date-wrap .wrap-content .select-icon
-.notice_wrap
 .section-item
 .cc-article-wrp .article-card .meta-view .option
 .select-box .select-item:hover
@@ -107,11 +95,29 @@ body
 .rank-fans-medal-item .item-list li+li .item-wrap:after
 .rank-vedio-target-item .item-list li+li .item-wrap:after
 .rank-vedio-view-item .item-list li+li .item-wrap:after
+.comment_wrap .operate_wrap .operate_right .operate-txt:not(:last-child):after
   background-color var(--c-border) !important
 
 .echarts
   background-color rgba(255, 255, 255, 0.2)
 
+body
+  background-color var(--c-bg-mask) !important
+
+.cc-body
+#bili-data-center
+#audience-page
+.dc-section1-body
+.new-link-top-wrap .new-link-top-container
+.medal
+.danmu-container
+.lab-wrap
+.setting
+.cc-body .cc-content-body.home-wrap
+.cc-body .cc-content-body.not-home
+#text-contribute .fixed-header
+#edit-page
+.new-calendar-wrap .calendar-body .date-desc_wrap .date-desc__content .nothing-wrap
 .carousel-module .panel .title .tag
 .comment-list-item .ci-action a:hover
 .recent-danmu-wrp .danmu-filter .left .delete .option-wrp .act-btn
@@ -182,6 +188,8 @@ body
 .cc-article-wrp .del-wrp .modal-wrap .del-tips
 .section-item .tips_wrap
 #dc-section_retention .legend_wrap .legend-item .legend-label
+.upload-v2-step1-container .upload-agreement .reg-2
+.danmu-wrp .section .title-tip
   color var(--c-text) !important
 
 .link-top-container .link-top-item.active .red_point
@@ -218,6 +226,7 @@ i.icon-shape:after
 .comment-item .right-block .like-reply div:hover
 .danmu-item .right-block .delete-protect div:hover
 .stat-card .num .text
+.comment_wrap .operate_wrap .operate_right .operate-txt.active
   color var(--c-accent) !important
 
 .bili-share-pc
@@ -291,11 +300,14 @@ i.icon-shape:after
 #dc-section_essential .item-in-row
 .watch_wrap
 .source-rank-open-button
+.danmu-wrp .section
+.info-item
   border-color var(--c-border) !important
 
 .cc-article-wrp .del-wrp .modal-wrap .geetest_holder.geetest_wind .geetest_radar_btn
 .cc-article-wrp .del-wrp .modal-wrap .geetest_holder.geetest_wind .geetest_success_btn
 .section-item.actived
+.new-link-top-wrap .link-top-item.active
   border-color var(--c-accent) !important
 
 .recent-danmu-wrp .danmu-filter .left .option-menu .option-arrow-border
@@ -317,6 +329,8 @@ i.icon-shape:after
   border-bottom-color var(--c-background) !important
 
 .section-item .diff-wrp .diff-text:before
+.link-top-container .link-top-item.active
+.bili-tab.current
   border-bottom-color var(--c-accent) !important
 
 .upload-v2-container .upload-agreement .reg-1 .reg-2-tip::after
@@ -352,6 +366,7 @@ i.icon-shape:after
 .article-danmu-wrp .danmu-box .danmu-table .danmu-item
 .dc-top-link_wrap .tabs .tabs__header
 .new-link-top-wrap .new-link-top-container
+#edit-page .block-hr
   border 0 !important
 
 .danmu-container
@@ -376,6 +391,12 @@ i.icon-shape:after
 .pager .jump-pager
   vertical-align -webkit-baseline-middle
 
+.lab-guide
+  margin-bottom 40px
+
+#text-contribute
+  padding-top 33px
+
 .editor-box .editor-toolbar
 .editor-box #editor-box .edui-editor
 .edui-default .edui-editor-iframeholder
@@ -383,6 +404,61 @@ i.icon-shape:after
 
 .contet-wrap
   width 940px
+
+.reward-plan-wrap .reward-plan-box
+.pick-up-wrap .pick-up-box
+  height calc(100vh - 60px)
+
+.iframe-comp-container>div iframe
+.audios-wrap #audios-box
+  height calc(100vh - 110px)
+
+.edit-article-wrap #edit-article-box
+  height calc(100vh - 163px)
+
+.recent-danmu-wrp .danmu-filter
+  margin 20px 0
+  padding 10px 20px
+
+.danmu-wrp
+  margin-top 40px
+  padding 0 20px
+
+#charge-wrapper .main-charge
+  padding 20px
+  width 980px
+
+.growup-participate
+.canary-container
+  margin-top 40px !important
+  padding 0 20px 20px !important
+
+.cc-album-create .info-wrp
+  margin-top 40px
+  padding-bottom 20px
+
+.notice_wrap
+.data-card
+.interact-wrap
+.academy-wrap
+.dc-page
+.cc-content-body.not-home.home-wrap
+.growup-participate
+#charge-wrapper .main-charge
+.cc-body .cc-content-body
+.canary-container
+.cc-album-create .info-wrp
+.recent-danmu-wrp .danmu-filter
+.danmu-wrp
+.videoCharts
+.netAnalysis
+  border-radius 4px
+  background-color var(--c-background) !important
+
+.link-top-container
+  margin-left 200px
+  padding-left 0
+  width calc(100% - 200px)
 
 .ui-serch .run-serch
 .rank-active-target-item.default
