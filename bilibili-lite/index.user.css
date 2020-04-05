@@ -3355,7 +3355,9 @@
   .mod-1 .r,
   .mod-2 li,
   .mod-2 li .l-item,
-  .zr_recomd ul li {
+  .zr_recomd ul li,
+  .primary-menu .nav-menu .side-nav .square-wrap .square-field,
+  .primary-menu .nav-menu .side-nav .square-wrap .live-field {
     border-color: var(--c-border);
   }
   .zr_recomd .b-head,
@@ -3803,8 +3805,7 @@
   .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar,
   .members-info__header,
   .bilibili-player .bilibili-player-area .bilibili-player-video-panel,
-  .coin-dialog-mask .coin-operated,
-  #comment {
+  .coin-dialog-mask .coin-operated {
     background-color: var(--c-background) !important;
   }
   .multi-page .cur-list .list-box li.on,
@@ -3858,7 +3859,8 @@
   .up-info .btn-panel .following span,
   .main-container .season-list .series-title,
   .bilibili-player-feedback-title .bilibili-player-feedback-title-content,
-  .main-container .season-list .ss-list-wrapper .ss-item .ss-info .ss-title {
+  .main-container .season-list .ss-list-wrapper .ss-item .ss-info .ss-title,
+  .main-container .recom-wrapper .recom-title {
     color: var(--c-title) !important;
   }
   .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a span,
@@ -3920,8 +3922,24 @@
   .bilibili-player {
     box-shadow: none;
   }
+  #comment_module {
+    margin-top: 20px;
+  }
   .v-wrap {
     margin-bottom: 0 !important;
+  }
+  #comment,
+  #comment_module,
+  .main-container .media-info,
+  .main-container .review-module,
+  .l-con .video-desc,
+  .r-con .recommend-list .rec-list,
+  .main-container .recom-wrapper .recom-list,
+  .main-container .season-list .ss-list-wrapper {
+    padding: 10px;
+  }
+  .video-page-card .card-box .info .count.up {
+    width: auto;
   }
   .bilibili-player-ending-panel {
     backdrop-filter: blur(5px);
@@ -3949,9 +3967,22 @@
   .bilibili-player-video-btn-fullscreen:hover .bp-svgicon svg .st0 {
     fill: var(--c-accent) !important;
   }
-  .comment-m {
-    padding: 20px;
+  #comment,
+  #comment_module,
+  .main-container .media-info,
+  .r-con .recommend-list .rec-list,
+  .main-container .recom-wrapper .recom-list,
+  .main-container .review-module,
+  .l-con .video-desc,
+  .main-container .season-list .ss-list-wrapper {
     border-radius: 4px;
+    background-color: var(--c-background) !important;
+  }
+  .r-con .recommend-list .rec-list,
+  .main-container .recom-wrapper .recom-list,
+  .main-container .season-list .ss-list-wrapper {
+    width: auto;
+    border: 1px solid var(--c-border);
   }
   .bilibili-player-video-bottom-area .bilibili-player-video-sendbar,
   .tag-info-pane,
@@ -3998,13 +4029,14 @@
   .members-info {
     margin-bottom: 20px;
     border: 1px solid var(--c-border);
+    background-color: var(--c-background);
   }
   .members-info .up-card {
     padding: 0 10px;
   }
   .main-container .media-info .media-right .media-tool-bar .btn-rating {
     border: 0;
-    background-color: var(--c-background);
+    background-color: transparent;
     color: var(--c-text);
   }
   .open-dialog-masker .open-dialog-content .open-body ul li i.icon-complete {
@@ -4050,6 +4082,7 @@
     transition: all 0.3s ease-in-out;
   }
   .v-wrap .danmaku-wrap,
+  .main-container .plp-r .danmaku-box .danmaku-wrap,
   .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap .bscroll-vertical-scrollbar.mousedown,
   .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap:hover .bscroll-vertical-scrollbar {
     background-color: var(--c-background) !important;
@@ -4087,7 +4120,6 @@
   .media-tab-module-wrp .media-tab-module-content .sl-ep-nav .sl-ep-nav-list .sl-ep-nav-item.on::after {
     display: none !important;
   }
-  .media-tab-content,
   .media-tab-detail-wrp .media-tab-detail,
   .media-tab-detail-wrp .media-tab-detail-l,
   .media-info-card,
@@ -4157,7 +4189,10 @@
   .bangumi-review-item .item-header .author-name.is-vip,
   .bangumi-review-item .item-header .media-name.is-vip,
   .section-item:hover .section-text div,
-  .media-info-card .mic-expand:hover {
+  .media-info-card .mic-expand:hover,
+  .review-feed-item .feed-left .review-about .author-info.is-vip,
+  .review-feed-item .feed-left .review-about .media-title.is-vip,
+  .review-list-wrp li .review-author-info div.review-author-name.is-vip {
     color: var(--c-accent) !important;
   }
   .misl-ep-item,
@@ -8306,7 +8341,8 @@
   .video-topic .video-list,
   .row,
   .vote-result-comment,
-  #bp-app {
+  #bp-app,
+  .detail-content .detail-card .card {
     background-color: var(--c-background) !important;
   }
   .core-style,
@@ -8369,14 +8405,16 @@
   .tab-wrap .tab-item:hover,
   .new-notice-bar:hover .message,
   .joined-number,
-  .expand-btn {
+  .expand-btn,
+  .card .button-area .more-button:hover {
     color: var(--c-accent) !important;
   }
   .upload-image .upload-btn,
   .bp-input .content-box::before,
   .button-bar::before,
   .vote-number,
-  .option-li {
+  .option-li,
+  .detail-content .detail-card .card {
     border-color: var(--c-border) !important;
   }
   .tab-wrap .tab-item.active,
@@ -8404,7 +8442,8 @@
   .home-page .home-container .home-content .center-panel .section-block {
     margin-top: 40px;
   }
-  .home-page .home-container .home-content .center-panel {
+  .home-page .home-container .home-content .center-panel,
+  .detail-content .detail-card {
     width: 900px !important;
   }
   #app .page-container .center-container {

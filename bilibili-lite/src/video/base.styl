@@ -15,7 +15,6 @@
 .members-info__header
 .bilibili-player .bilibili-player-area .bilibili-player-video-panel
 .coin-dialog-mask .coin-operated
-#comment
 	background-color var(--c-background) !important
 
 .multi-page .cur-list .list-box li.on
@@ -70,6 +69,7 @@
 .main-container .season-list .series-title
 .bilibili-player-feedback-title .bilibili-player-feedback-title-content
 .main-container .season-list .ss-list-wrapper .ss-item .ss-info .ss-title
+.main-container .recom-wrapper .recom-title
 	color var(--c-title) !important
 
 .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a span
@@ -131,8 +131,24 @@ ul.star-wrapper li i.icon-star-full
 .bilibili-player
 	box-shadow none
 
+#comment_module
+	margin-top 20px
+
 .v-wrap
 	margin-bottom 0 !important
+
+#comment
+#comment_module
+.main-container .media-info
+.main-container .review-module
+.l-con .video-desc
+.r-con .recommend-list .rec-list
+.main-container .recom-wrapper .recom-list
+.main-container .season-list .ss-list-wrapper
+	padding 10px
+
+.video-page-card .card-box .info .count.up
+	width auto
 
 .bilibili-player-ending-panel
 	backdrop-filter blur(5px)
@@ -160,9 +176,22 @@ ul.star-wrapper li i.icon-star-full
 .bilibili-player-video-btn-fullscreen:hover .bp-svgicon svg .st0
 	fill var(--c-accent) !important
 
-.comment-m
-	padding 20px
+#comment
+#comment_module
+.main-container .media-info
+.r-con .recommend-list .rec-list
+.main-container .recom-wrapper .recom-list
+.main-container .review-module
+.l-con .video-desc
+.main-container .season-list .ss-list-wrapper
 	border-radius 4px
+	background-color var(--c-background) !important
+
+.r-con .recommend-list .rec-list
+.main-container .recom-wrapper .recom-list
+.main-container .season-list .ss-list-wrapper
+	width auto
+	border 1px solid var(--c-border)
 
 .bilibili-player-video-bottom-area .bilibili-player-video-sendbar
 .tag-info-pane
@@ -209,13 +238,14 @@ ul.star-wrapper li i.icon-star-full
 .members-info
 	margin-bottom 20px
 	border 1px solid var(--c-border)
+	background-color var(--c-background)
 
 .members-info .up-card
 	padding 0 10px
 
 .main-container .media-info .media-right .media-tool-bar .btn-rating
 	border 0
-	background-color var(--c-background)
+	background-color transparent
 	color var(--c-text)
 
 .open-dialog-masker .open-dialog-content .open-body ul li i.icon-complete
