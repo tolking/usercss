@@ -32,7 +32,6 @@
 .bili-tab .bili-tab-item.on:before
 	display none !important
 
-.spread-module .num
 .audio-list .song-list .song-li .content .text
 .game-groom-m .title
 .game-groom-m .num
@@ -57,6 +56,9 @@
 
 .split-line
 	background-color var(--c-border) !important
+
+.spread-module .num
+	background-color transparent !important
 
 .primary-menu .nav-menu .channel.on:after
 .timeline-box .timeline-item.new p.num a
@@ -96,6 +98,7 @@
 .sub-nav-m ul li.on a
 .hot-recom-wrapper .hot-trailer .player-list .list-count .num
 .filter-block .filter-item-wrapper .filter-item:hover
+.sub-nav-m ul li a:hover
 	color var(--c-accent) !important
 
 .primary-menu.border-b
@@ -125,6 +128,9 @@
 
 .international-header .primary-menu-itnl
 	border 0
+
+.block-area:last-child
+	margin 0
 
 .charge-header-bg
 	background-image none !important
@@ -185,6 +191,8 @@
 	width 100%
 	height auto !important
 	max-height 630px !important
+	border-radius 4px
+	background-color var(--c-background) !important
 
 .energy-m .storey-box .spread-module
 .video-floor-m .storey-box .spread-module
@@ -223,8 +231,11 @@
 	height auto !important
 
 .block-timeline .timeline-box
+	padding-top 12px
 	height 350px
+	border-radius 4px
 	overflow hidden scroll
+	background-color var(--c-background)
 
 .timeline-box ul
 	height auto !important
@@ -252,7 +263,15 @@
 .video-list-recom .video-list-video
 	margin-left 0
 
+.spread-module .t
+	white-space nowrap
+	overflow hidden
+	text-overflow ellipsis
+
 .bilibili-player button
+.pager .pages .page-item.prev
+.pager .pages .page-item.next
+	border 0 !important
 	background-color transparent !important
 
 	span

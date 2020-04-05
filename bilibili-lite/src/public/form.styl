@@ -25,6 +25,7 @@
 .ui-calendar .flatpickr-day.today.inRange
 .ui-calendar .flatpickr-day:focus
 .ui-calendar .flatpickr-day:hover
+.bili-radio+span:before
   background-color var(--c-hover) !important
 
 .el-date-table td.disabled div
@@ -37,6 +38,9 @@
 .ui-radio input[type=radio]:checked+.ui-radio-icon:after
 .ui-checkbox input[type=checkbox]:checked+.ui-checkbox-icon
 .el-radio-button.is-active .el-radio-button__inner
+.user-setting-warp .el-radio-button__orig-radio:checked+.el-radio-button__inner
+.bcc-checkbox-checked .bcc-checkbox-checkbox
+.bili-radio:checked+span:after
   background-color var(--c-accent) !important
 
 .date-picker-v2-container div
@@ -62,6 +66,7 @@ select
 .bcc-option.selected span
 .bcc-option:hover span
 .bcc-option.selected .bcc-iconfont
+.rookie_content .timer .countdown i
   color var(--c-accent) !important
 
 .time-picker-v2-container .time-picker-head-wrp
@@ -88,12 +93,17 @@ select
 .ui-calendar .flatpickr-day.today.inRange
 .ui-calendar .flatpickr-day:focus
 .ui-calendar .flatpickr-day:hover
+.bcc-checkbox .bcc-checkbox-checkbox
+.bili-radio+span:before
   border-color var(--c-border) !important
 
 .ui-radio.active .ui-radio-icon
 .ui-checkbox input[type=checkbox]:checked+.ui-checkbox-icon
 .date-panel .day.active
 .el-radio-button.is-active .el-radio-button__inner
+.user-setting-warp .el-radio-button__orig-radio:checked+.el-radio-button__inner
+.bcc-checkbox-checked .bcc-checkbox-checkbox
+.rookie_content .timer .countdown i
   border-color var(--c-accent) !important
 
 .player-auxiliary-danmaku-date-picker-container .player-auxiliary-danmaku-date-picker-body .day-span
@@ -136,15 +146,17 @@ table
       border-color var(--c-border) !important
       background-color transparent !important
 
-      &:nth-child(odd) td
-        background-color var(--c-hover) !important
-
       th
       td
         border-color var(--c-border) !important
         box-shadow none !important
         background-color var(--c-background) !important
         color var(--c-text) !important
+
+  tbody
+    tr
+      &:nth-child(odd) td
+        background-color var(--c-hover) !important
 
 /* 下拉框 */
 .selector

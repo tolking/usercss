@@ -10,7 +10,6 @@
   display none !important
 
 .des-content
-.el-table
 .el-table__expanded-cell
   background-color var(--c-background) !important
 
@@ -19,8 +18,14 @@
 .el-table:before
   background-color var(--c-border) !important
 
+#bp_user_box
+.bb-intro-top
+.el-table
 .loading
   background-color transparent !important
+
+.spend-recode .title-group .selected-title:after
+  background-color var(--c-accent) !important
 
 .bp-user-box .bp-user-box-bb
 .bp-user-box .bp-user-box-bk
@@ -36,6 +41,7 @@
 
 .el-table .el-table__row .cell
 .b-info .warning-group .warning-title
+.qrpay-group .qrpay-content .more-pay .more-text
   color var(--c-text) !important
 
 .bp-user-box i
@@ -46,6 +52,8 @@
 .spend-recode .title-group .selected-title
 .b-info .balance-footer .part-balance-name .part-balance-price
 .el-form-item.is-required .el-form-item__label:before
+.spend-recode .title-group .recode-title:hover
+.trade-wrapper.is-selected:not(.trade-customn)>div>div
   color var(--c-accent) !important
 
 .b-info .warning-group
@@ -55,6 +63,13 @@
 
 .bp-user-box-bb
 .bp-user-box-top
+#bp_user_box
+.bb-intro-top
+.b-info
+.trade-list
+.spend-recode
+.shell-intro-top
+.bind-info
   border 0
 
 .bp-center-box
@@ -65,7 +80,7 @@
 .trade-list
 .spend-recode
 .bind-info
-  margin-top 30px
+  margin-top 20px
 
 .b-info .bb-icon-yellow
   margin-right 30px
@@ -76,22 +91,26 @@
 .spend-recode .title-group .selected-title
   background-image none !important
 
-#bp_user_box
-.bb-intro-top
 .b-info
 .trade-list
 .spend-recode
 .shell-intro-top
 .bind-info
-  border 0
+  padding 20px
+  border-radius 4px
   background-color var(--c-background) !important
 
+// .spend-recode
+// .shell-intro-top
+// .bind-info
+// border 0
+// background-color var(--c-background) !important
 .bb_box
 .bp_box
   margin 0
   height auto
   border 0
-  background-color var(--c-background) !important
+  background-color transparent !important
 
 .bp-user-box-top
   span

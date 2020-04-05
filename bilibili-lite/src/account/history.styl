@@ -5,9 +5,6 @@
 .history-list .cover-contain .progress-c
   background-color var(--c-hover) !important
 
-.history-list .r-info
-  background-color transparent !important
-
 .history-list .cover-contain .progress
   background-color var(--c-accent) !important
 
@@ -16,6 +13,7 @@
 
 .history-list .l-info
 .history-list .r-info .r-txt
+.history-list .r-info .w-info .username
   border-color var(--c-border) !important
 
 .history-list .l-info .lastplay-time .history-red-round
@@ -27,6 +25,16 @@
 
 .go-top-m .go-top
   background-position -714px -72px !important
+
+.history-list .r-info
+  display flex
+  justify-content space-between
+  padding 20px
+  border-radius 4px
+  background-color var(--c-background) !important
+
+  .history-delete
+    right 15px
 
 /* 侧边时间轴 */
 .history-wrap .time-label
