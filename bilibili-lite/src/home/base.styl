@@ -1,9 +1,9 @@
 /* 内容主体 */
 .gg-window
 .live-tabs
-.pgc-rank
-.rank-list
-.manga-rank
+.pgc-rank .pgc-rank-wrap
+.rank-list .rank-wrap
+.manga-rank .manga-rank-wrap
 .video-card-common .title .live i
 	display none !important
 
@@ -45,6 +45,7 @@
 	margin-top 40px
 
 .space-between
+	position relative
 	justify-content center
 
 .video-card-reco:hover .info-box:before
@@ -241,6 +242,73 @@
 .elevator .bg23
 	backdrop-filter blur(5px)
 	background-color var(--c-hover)
+
+/* 排行榜图标 */
+.pgc-rank
+.rank-list
+.manga-rank
+	position absolute
+	top 0
+	right 70px
+	width auto
+
+	.rank-header
+		.name
+		.tab-switch
+			display none
+
+		.more
+			display flex
+			align-items center
+			padding 0
+			width 26px
+			height 26px
+			border 0
+			font-size 0
+
+			&:hover
+				background-color transparent
+
+				&::before
+					height 6px
+
+				&::after
+					height 24px
+
+				.bilifont::before
+					height 12px
+
+				.bilifont::after
+					height 18px
+
+			&::before
+			&::after
+			.bilifont::before
+			.bilifont::after
+				content ''
+				display inline-block
+				margin-right 5px
+				width 2px
+				border-radius 2px
+				background-color var(--c-accent)
+				transition height 0.3s ease-in-out !important
+
+			&::before
+				height 10px
+
+			&::after
+				margin-right 0
+				height 4px
+
+			.bilifont
+				display flex
+				align-items center
+
+				&::before
+					height 24px
+
+				&::after
+					height 14px
 
 /* 页脚 */
 .international-footer

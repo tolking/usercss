@@ -21,7 +21,15 @@ url-prefix("https://www.bilibili.com/documentary/"),
 url-prefix("https://www.bilibili.com/movie/"),
 url-prefix("https://www.bilibili.com/tv/"),
 url-prefix("https://www.bilibili.com/account/history"),
-url-prefix("https://www.bilibili.com/watchlater") {
+url-prefix("https://www.bilibili.com/watchlater"),
+url-prefix("https://www.bilibili.com/ranking/") {
   /* 与主页相同的 banner */
   @import 'bannerHeader'
 }
+@-moz-document regexp("^.*/pages/nav/index.*")
+  /* 去除导航嵌套的 iframe 背景图 */
+  html
+    background-image none
+
+  body
+    background-color transparent
