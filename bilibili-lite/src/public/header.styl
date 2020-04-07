@@ -187,10 +187,12 @@
 /* 消息弹窗 */
 .i-frame iframe
 .i-frame::before
-	background-color var(--c-background) !important
-
 .im-list-box
-	background-color var(--c-background)
+.bili-header-m .nav-menu .nav-con .nav-item .i-frame
+.dynamic-m .dyn_list_wrapper
+.dynamic-m .dyn_list_wrapper .dyn_list
+.bili-header-m .nav-menu .up-load .up-nav li
+	background-color transparent !important
 
 .im-list:hover
 	background-color var(--c-hover) !important
@@ -242,6 +244,7 @@
 .van-popper-favorite .video-panel .play-all .bilifont
 .van-popper-favorite .tab-item--normal:hover span
 .van-popper-favorite .tab-item--active span
+.van-popper-history .tab-item:hover
 	color var(--c-accent) !important
 
 .duration-tag
@@ -274,9 +277,6 @@
 .bili-header-m
 .bili-header-m .nav-menu .nav-mask
 .channel-menu
-.bili-header-m .nav-menu .up-load .up-nav li
-.dynamic-m .dyn_list_wrapper
-.dynamic-m .dyn_list_wrapper .dyn_list
 	background-color var(--c-background)
 
 .bili-header-m .profile-m .btns-profile .num
@@ -396,7 +396,7 @@
 
 .dynamic-m
 	border 0
-	background-color var(--c-background)
+	background-color transparent
 
 .dynamic-m .dyn_menu .line
 	background-color var(--c-accent)

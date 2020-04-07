@@ -1,9 +1,10 @@
 /* 内容主体 */
 .gg-window
+.bypb-window
 .live-tabs
-.pgc-rank
-.rank-list
-.manga-rank
+.pgc-rank .pgc-rank-wrap
+.rank-list .rank-wrap
+.manga-rank .manga-rank-wrap
 .video-card-common .title .live i
 	display none !important
 
@@ -44,7 +45,12 @@
 .first-screen
 	margin-top 40px
 
+#bili_anime .time-line .zone-list-box
+#bili_guochuang .time-line .zone-list-box
+	padding 10px
+
 .space-between
+	position relative
 	justify-content center
 
 .video-card-reco:hover .info-box:before
@@ -55,6 +61,9 @@
 .extension
 .manga-panel
 	width 100%
+
+.focus-carousel
+	margin-right 10px
 
 .extension .ext-box
 	border-radius 4px
@@ -88,6 +97,19 @@
 #bili_report_spe_rec .zone-list-box
 	height auto !important
 
+@media screen and (max-width: 1870px)
+	#bili_report_spe_rec .zone-list-box .video-card-common:nth-child(n+6)
+		display none
+
+	.video-card-common
+	.live-card
+	.manga-panel .manga-list-box .manga-card
+		flex 18% !important
+
+	.b-footer-wrap .extension
+	.b-wrap .extension
+		width 100%
+
 @media screen and (max-width: 1654px)
 	.b-footer-wrap .zone-list-box
 	.b-wrap .zone-list-box
@@ -104,6 +126,10 @@
 	.b-footer-wrap .extension .video-card-common:nth-child(n+5)
 	.b-wrap .extension .video-card-common:nth-child(n+5)
 		display block
+
+	.b-footer-wrap .extension .video-card-common:nth-child(n+6)
+	.b-wrap .extension .video-card-common:nth-child(n+6)
+		display none
 
 	.video-card-common .card-pic
 		height 124px !important
@@ -170,7 +196,7 @@
 .video-card-common
 .live-card
 .manga-panel .manga-list-box .manga-card
-	flex 18%
+	flex 14%
 	margin 1%
 
 .video-card-common .card-pic
@@ -241,6 +267,73 @@
 .elevator .bg23
 	backdrop-filter blur(5px)
 	background-color var(--c-hover)
+
+/* 排行榜图标 */
+.pgc-rank
+.rank-list
+.b-wrap .manga-rank
+	position absolute
+	top 0
+	right 70px
+	width auto !important
+
+	.rank-header
+		.name
+		.tab-switch
+			display none
+
+		.more
+			display flex
+			align-items center
+			padding 0
+			width 26px
+			height 26px
+			border 0
+			font-size 0
+
+			&:hover
+				background-color transparent
+
+				&::before
+					height 6px
+
+				&::after
+					height 24px
+
+				.bilifont::before
+					height 12px
+
+				.bilifont::after
+					height 18px
+
+			&::before
+			&::after
+			.bilifont::before
+			.bilifont::after
+				content ''
+				display inline-block
+				margin-right 5px
+				width 2px
+				border-radius 2px
+				background-color var(--c-accent)
+				transition height 0.3s ease-in-out !important
+
+			&::before
+				height 10px
+
+			&::after
+				margin-right 0
+				height 4px
+
+			.bilifont
+				display flex
+				align-items center
+
+				&::before
+					height 24px
+
+				&::after
+					height 14px
 
 /* 页脚 */
 .international-footer
