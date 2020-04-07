@@ -2737,6 +2737,7 @@
 }
 @-moz-document regexp("^.*www.bilibili.com/?((index\\.html)|(\\?.*))?") {
   .gg-window,
+  .bypb-window,
   .live-tabs,
   .pgc-rank .pgc-rank-wrap,
   .rank-list .rank-wrap,
@@ -2781,6 +2782,10 @@
   .first-screen {
     margin-top: 40px;
   }
+  #bili_anime .time-line .zone-list-box,
+  #bili_guochuang .time-line .zone-list-box {
+    padding: 10px;
+  }
   .space-between {
     position: relative;
     justify-content: center;
@@ -2793,6 +2798,9 @@
   .extension,
   .manga-panel {
     width: 100%;
+  }
+  .focus-carousel {
+    margin-right: 10px;
   }
   .extension .ext-box {
     border-radius: 4px;
@@ -2826,6 +2834,20 @@
   #bili_report_spe_rec .zone-list-box {
     height: auto !important;
   }
+@media screen and (max-width: 1870px) {
+    #bili_report_spe_rec .zone-list-box .video-card-common:nth-child(n+6) {
+      display: none;
+    }
+    .video-card-common,
+    .live-card,
+    .manga-panel .manga-list-box .manga-card {
+      flex: 18% !important;
+    }
+    .b-footer-wrap .extension,
+    .b-wrap .extension {
+      width: 100%;
+    }
+}
 @media screen and (max-width: 1654px) {
     .b-footer-wrap .zone-list-box,
     .b-wrap .zone-list-box,
@@ -2842,6 +2864,10 @@
     .b-footer-wrap .extension .video-card-common:nth-child(n+5),
     .b-wrap .extension .video-card-common:nth-child(n+5) {
       display: block;
+    }
+    .b-footer-wrap .extension .video-card-common:nth-child(n+6),
+    .b-wrap .extension .video-card-common:nth-child(n+6) {
+      display: none;
     }
     .video-card-common .card-pic {
       height: 124px !important;
@@ -2910,7 +2936,7 @@
   .video-card-common,
   .live-card,
   .manga-panel .manga-list-box .manga-card {
-    flex: 18%;
+    flex: 14%;
     margin: 1%;
   }
   .video-card-common .card-pic,
@@ -2984,23 +3010,23 @@
   }
   .pgc-rank,
   .rank-list,
-  .manga-rank {
+  .b-wrap .manga-rank {
     position: absolute;
     top: 0;
     right: 70px;
-    width: auto;
+    width: auto !important;
   }
   .pgc-rank .rank-header .name,
   .rank-list .rank-header .name,
-  .manga-rank .rank-header .name,
+  .b-wrap .manga-rank .rank-header .name,
   .pgc-rank .rank-header .tab-switch,
   .rank-list .rank-header .tab-switch,
-  .manga-rank .rank-header .tab-switch {
+  .b-wrap .manga-rank .rank-header .tab-switch {
     display: none;
   }
   .pgc-rank .rank-header .more,
   .rank-list .rank-header .more,
-  .manga-rank .rank-header .more {
+  .b-wrap .manga-rank .rank-header .more {
     display: flex;
     align-items: center;
     padding: 0;
@@ -3011,41 +3037,41 @@
   }
   .pgc-rank .rank-header .more:hover,
   .rank-list .rank-header .more:hover,
-  .manga-rank .rank-header .more:hover {
+  .b-wrap .manga-rank .rank-header .more:hover {
     background-color: transparent;
   }
   .pgc-rank .rank-header .more:hover::before,
   .rank-list .rank-header .more:hover::before,
-  .manga-rank .rank-header .more:hover::before {
+  .b-wrap .manga-rank .rank-header .more:hover::before {
     height: 6px;
   }
   .pgc-rank .rank-header .more:hover::after,
   .rank-list .rank-header .more:hover::after,
-  .manga-rank .rank-header .more:hover::after {
+  .b-wrap .manga-rank .rank-header .more:hover::after {
     height: 24px;
   }
   .pgc-rank .rank-header .more:hover .bilifont::before,
   .rank-list .rank-header .more:hover .bilifont::before,
-  .manga-rank .rank-header .more:hover .bilifont::before {
+  .b-wrap .manga-rank .rank-header .more:hover .bilifont::before {
     height: 12px;
   }
   .pgc-rank .rank-header .more:hover .bilifont::after,
   .rank-list .rank-header .more:hover .bilifont::after,
-  .manga-rank .rank-header .more:hover .bilifont::after {
+  .b-wrap .manga-rank .rank-header .more:hover .bilifont::after {
     height: 18px;
   }
   .pgc-rank .rank-header .more::before,
   .rank-list .rank-header .more::before,
-  .manga-rank .rank-header .more::before,
+  .b-wrap .manga-rank .rank-header .more::before,
   .pgc-rank .rank-header .more::after,
   .rank-list .rank-header .more::after,
-  .manga-rank .rank-header .more::after,
+  .b-wrap .manga-rank .rank-header .more::after,
   .pgc-rank .rank-header .more .bilifont::before,
   .rank-list .rank-header .more .bilifont::before,
-  .manga-rank .rank-header .more .bilifont::before,
+  .b-wrap .manga-rank .rank-header .more .bilifont::before,
   .pgc-rank .rank-header .more .bilifont::after,
   .rank-list .rank-header .more .bilifont::after,
-  .manga-rank .rank-header .more .bilifont::after {
+  .b-wrap .manga-rank .rank-header .more .bilifont::after {
     content: '';
     display: inline-block;
     margin-right: 5px;
@@ -3056,29 +3082,29 @@
   }
   .pgc-rank .rank-header .more::before,
   .rank-list .rank-header .more::before,
-  .manga-rank .rank-header .more::before {
+  .b-wrap .manga-rank .rank-header .more::before {
     height: 10px;
   }
   .pgc-rank .rank-header .more::after,
   .rank-list .rank-header .more::after,
-  .manga-rank .rank-header .more::after {
+  .b-wrap .manga-rank .rank-header .more::after {
     margin-right: 0;
     height: 4px;
   }
   .pgc-rank .rank-header .more .bilifont,
   .rank-list .rank-header .more .bilifont,
-  .manga-rank .rank-header .more .bilifont {
+  .b-wrap .manga-rank .rank-header .more .bilifont {
     display: flex;
     align-items: center;
   }
   .pgc-rank .rank-header .more .bilifont::before,
   .rank-list .rank-header .more .bilifont::before,
-  .manga-rank .rank-header .more .bilifont::before {
+  .b-wrap .manga-rank .rank-header .more .bilifont::before {
     height: 24px;
   }
   .pgc-rank .rank-header .more .bilifont::after,
   .rank-list .rank-header .more .bilifont::after,
-  .manga-rank .rank-header .more .bilifont::after {
+  .b-wrap .manga-rank .rank-header .more .bilifont::after {
     height: 14px;
   }
   .international-footer {
@@ -3918,7 +3944,6 @@
   .main-container .media-info .media-right .media-tool-bar .btn-rating:hover,
   .short-review-masker .short-review-content,
   .main-container .pay-bar .vip .btn-pay,
-  .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar,
   .members-info__header,
   .bilibili-player .bilibili-player-area .bilibili-player-video-panel,
   .coin-dialog-mask .coin-operated {
@@ -3940,12 +3965,15 @@
   }
   .main-container .media-info .media-right .pub-wrapper .up-info-wrapper .split-line,
   .bui-switch .bui-body,
-  .bui-slider .bui-track.bui-track-video-progress .bui-bar-wrap .bui-bar-buffer {
+  .bui-slider .bui-track.bui-track-video-progress .bui-bar-wrap .bui-bar-buffer,
+  .bilibili-player-video-bottom-area:before {
     background-color: var(--c-border) !important;
   }
   .bilibili-player em,
   .bilibili-player.mode-webfullscreen .bilibili-player-video-control-wrap .bilibili-player-video-control-bottom-center .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-danmaku-input,
-  .comment-m .comment {
+  .comment-m .comment,
+  .player-module #bofqi.stardust-player,
+  .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar {
     background-color: transparent !important;
   }
   .bui-slider .bui-track .bui-bar-wrap .bui-bar,
