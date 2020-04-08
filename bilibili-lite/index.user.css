@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.1
+@version        1.2.2
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -128,7 +128,6 @@
   .friendship-link,
   .tab-line-itnl,
   .operate-card,
-  .guochuang .r-con,
   .special-recommend,
   .exchange-btn .more,
   .manga-panel .app-download-link,
@@ -567,7 +566,8 @@
   .login-btn,
   .vote-btn-box .vote-btn,
   .bcc-pagination-item.selected,
-  .qa-area-ol-wrp .qa-area-ol-btn {
+  .qa-area-ol-wrp .qa-area-ol-btn,
+  .btn-default {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -683,7 +683,8 @@
   .login-btn span,
   .vote-btn-box .vote-btn span,
   .bcc-pagination-item.selected span,
-  .qa-area-ol-wrp .qa-area-ol-btn span {
+  .qa-area-ol-wrp .qa-area-ol-btn span,
+  .btn-default span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -793,7 +794,8 @@
   .login-btn::after,
   .vote-btn-box .vote-btn::after,
   .bcc-pagination-item.selected::after,
-  .qa-area-ol-wrp .qa-area-ol-btn::after {
+  .qa-area-ol-wrp .qa-area-ol-btn::after,
+  .btn-default::after {
     content: '';
     display: block;
     position: absolute;
@@ -912,7 +914,8 @@
   .login-btn:hover,
   .vote-btn-box .vote-btn:hover,
   .bcc-pagination-item.selected:hover,
-  .qa-area-ol-wrp .qa-area-ol-btn:hover {
+  .qa-area-ol-wrp .qa-area-ol-btn:hover,
+  .btn-default:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -1022,7 +1025,8 @@
   .login-btn:hover span,
   .vote-btn-box .vote-btn:hover span,
   .bcc-pagination-item.selected:hover span,
-  .qa-area-ol-wrp .qa-area-ol-btn:hover span {
+  .qa-area-ol-wrp .qa-area-ol-btn:hover span,
+  .btn-default:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -1132,7 +1136,8 @@
   .login-btn:hover::after,
   .vote-btn-box .vote-btn:hover::after,
   .bcc-pagination-item.selected:hover::after,
-  .qa-area-ol-wrp .qa-area-ol-btn:hover::after {
+  .qa-area-ol-wrp .qa-area-ol-btn:hover::after,
+  .btn-default:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -2727,11 +2732,16 @@
     border: 0;
   }
 }
-@-moz-document regexp("^.*/pages/nav/index.*") {
+@-moz-document regexp("^.*/pages/nav/index.*"), regexp("^.*/pay/charge.*") {
   html {
     background-image: none;
   }
   body {
+    background-color: transparent;
+  }
+}
+@-moz-document regexp("^.*/pay/charge.*") {
+  html {
     background-color: transparent;
   }
 }
@@ -2799,7 +2809,11 @@
   .manga-panel {
     width: 100%;
   }
-  .focus-carousel {
+  .guochuang .r-con {
+    width: auto;
+  }
+  .focus-carousel,
+  .article-card .pic {
     margin-right: 10px;
   }
   .extension .ext-box {
@@ -2810,26 +2824,26 @@
   .manga-panel .manga-list-box {
     justify-content: center;
     width: 100% !important;
-    height: 480px !important;
+    height: 495px !important;
     border-radius: 4px;
     background-color: var(--c-background);
   }
   #bili_anime .time-line .zone-list-box,
   #bili_guochuang .time-line .zone-list-box {
-    max-height: 180px;
+    max-height: 200px;
   }
   #bili_anime .card-list .zone-list-box,
   #bili_guochuang .card-list .zone-list-box {
-    height: 465px !important;
+    height: 460px !important;
   }
   #bili_live .zone-list-box {
-    height: 485px !important;
+    height: 495px !important;
   }
   #bili_read .zone-list-box {
-    height: 238px !important;
+    height: 245px !important;
   }
   #bili_manga .manga-panel .manga-list-box {
-    height: 843px !important;
+    height: 812px !important;
   }
   #bili_report_spe_rec .zone-list-box {
     height: auto !important;
@@ -2846,6 +2860,27 @@
     .b-footer-wrap .extension,
     .b-wrap .extension {
       width: 100%;
+    }
+    .zone-list-box,
+    .manga-panel .manga-list-box {
+      height: 480px !important;
+    }
+    #bili_anime .time-line .zone-list-box,
+    #bili_guochuang .time-line .zone-list-box {
+      max-height: 180px;
+    }
+    #bili_anime .card-list .zone-list-box,
+    #bili_guochuang .card-list .zone-list-box {
+      height: 465px !important;
+    }
+    #bili_live .zone-list-box {
+      height: 485px !important;
+    }
+    #bili_read .zone-list-box {
+      height: 238px !important;
+    }
+    #bili_manga .manga-panel .manga-list-box {
+      height: 843px !important;
     }
 }
 @media screen and (max-width: 1654px) {
@@ -2989,6 +3024,10 @@
   .article-card {
     flex: 20%;
     margin: 1%;
+  }
+  .article-card .r-con .count span {
+    margin-right: 20px;
+    width: auto;
   }
   .elevator .list-box {
     border-color: var(--c-border);
@@ -3230,13 +3269,15 @@
   .hot-recom-wrapper .hot-trailer .player-list .list-item-wrap .list-item.selected,
   .hot-recom-wrapper .hot-trailer .player-list .list-item-wrap .list-item:hover,
   .popup-card .preview,
-  .rank-wrap .head-section .more span:hover {
+  .rank-wrap .head-section .more span:hover,
+  .charge-success-content>.charge-success-message {
     background-color: var(--c-hover) !important;
   }
   .split-line {
     background-color: var(--c-border) !important;
   }
-  .spread-module .num {
+  .spread-module .num,
+  .charge-success-content>.charge-success-message textarea {
     background-color: transparent !important;
   }
   .primary-menu .nav-menu .channel.on:after,
@@ -3278,7 +3319,9 @@
   .hot-recom-wrapper .hot-trailer .player-list .list-count .num,
   .filter-block .filter-item-wrapper .filter-item:hover,
   .sub-nav-m ul li a:hover,
-  .cinema-home-crumb ul li.on a {
+  .cinema-home-crumb ul li.on a,
+  .charge-success-content>p span,
+  .charge-success-content>p i {
     color: var(--c-accent) !important;
   }
   .primary-menu.border-b,
@@ -3288,7 +3331,8 @@
   .copyright-detail,
   .hot-recom-wrapper .hot-trailer .player-list .list-item-wrap .list-item .list-cover,
   .rank-wrap .head-section .more span,
-  .chief-thumb-item {
+  .chief-thumb-item,
+  .charge-success-content>.charge-success-message {
     border-color: var(--c-border) !important;
   }
   .battery-item.active .battery-bg,
@@ -3984,7 +4028,6 @@
     background-color: var(--c-accent) !important;
   }
   .bilibili-player-video-wrap a,
-  .bilibili-player-video-wrap div,
   .bilibili-player-video-wrap li,
   .bilibili-player-video-wrap span,
   .bilibili-player-video-wrap span:hover,
@@ -5823,7 +5866,8 @@
   .silver-seed-store,
   .silver-seed-store .content,
   .draw-full-cntr,
-  #webShare .bili-share-pc {
+  #webShare .bili-share-pc,
+  .bili-share-pc .share-weixin-qr {
     background-color: var(--c-background) !important;
   }
   .attention-btn-ctnr .right-part,
@@ -5833,6 +5877,9 @@
   .sub-tab-box .item.active,
   .draw-full-cntr .function-bar {
     background-color: var(--c-hover) !important;
+  }
+  .bili-share-pc .weixin-hover .qr-before {
+    background-color: transparent !important;
   }
   .draw-full-cntr .function-bar.draw,
   .tab-candidate>span:after,
@@ -5907,7 +5954,8 @@
   .common-popup-wrap.arrow-bottom::after {
     left: 50%;
   }
-  .link-navbar-ctnr {
+  .link-navbar-ctnr,
+  .bili-share-pc .weixin-hover .qr-before {
     box-shadow: none;
   }
   .link-navbar .main-ctnr .nav-logo {
@@ -6000,6 +6048,10 @@
     border-color: var(--c-accent) !important;
     background-color: var(--c-background) !important;
     color: var(--c-accent) !important;
+  }
+  .box-body {
+    border-radius: 4px !important;
+    background-color: var(--c-background) !important;
   }
 @media (prefers-color-scheme: dark) {
     .live-player-ctnr.minimal {

@@ -62,7 +62,11 @@
 .manga-panel
 	width 100%
 
+.guochuang .r-con
+	width auto
+
 .focus-carousel
+.article-card .pic
 	margin-right 10px
 
 .extension .ext-box
@@ -73,26 +77,26 @@
 .manga-panel .manga-list-box
 	justify-content center
 	width 100% !important
-	height 480px !important
+	height 495px !important
 	border-radius 4px
 	background-color var(--c-background)
 
 #bili_anime .time-line .zone-list-box
 #bili_guochuang .time-line .zone-list-box
-	max-height 180px
+	max-height 200px
 
 #bili_anime .card-list .zone-list-box
 #bili_guochuang .card-list .zone-list-box
-	height 465px !important
+	height 460px !important
 
 #bili_live .zone-list-box
-	height 485px !important
+	height 495px !important
 
 #bili_read .zone-list-box
-	height 238px !important
+	height 245px !important
 
 #bili_manga .manga-panel .manga-list-box
-	height 843px !important
+	height 812px !important
 
 #bili_report_spe_rec .zone-list-box
 	height auto !important
@@ -109,6 +113,27 @@
 	.b-footer-wrap .extension
 	.b-wrap .extension
 		width 100%
+
+	.zone-list-box
+	.manga-panel .manga-list-box
+		height 480px !important
+
+	#bili_anime .time-line .zone-list-box
+	#bili_guochuang .time-line .zone-list-box
+		max-height 180px
+
+	#bili_anime .card-list .zone-list-box
+	#bili_guochuang .card-list .zone-list-box
+		height 465px !important
+
+	#bili_live .zone-list-box
+		height 485px !important
+
+	#bili_read .zone-list-box
+		height 238px !important
+
+	#bili_manga .manga-panel .manga-list-box
+		height 843px !important
 
 @media screen and (max-width: 1654px)
 	.b-footer-wrap .zone-list-box
@@ -248,6 +273,10 @@
 .article-card
 	flex 20%
 	margin 1%
+
+.article-card .r-con .count span
+	margin-right 20px
+	width auto
 
 /* 侧边导航 */
 .elevator .list-box
