@@ -1944,7 +1944,6 @@
   .international-header .mini-type,
   .van-popover .mini-type {
     border-bottom: 1px solid var(--c-border);
-    background-color: var(--c-background);
   }
   .nav-link,
   .nav-wrapper-left {
@@ -2031,7 +2030,8 @@
   .news-notice-panel,
   .publish-panel,
   .popover-channe,
-  .user-panel-ctnr .user-panel .lens-ctnr {
+  .user-panel-ctnr .user-panel .lens-ctnr,
+  .nav-item.message .i-frame {
     border: 1px solid var(--c-border) !important;
     border-top-width: 0 !important;
   }
@@ -2112,6 +2112,7 @@
     left: -241px !important;
     border: 1px solid var(--c-border);
   }
+  .i-frame,
   .i-frame iframe,
   .i-frame::before,
   .im-list-box,
@@ -3281,7 +3282,8 @@
     background-color: transparent !important;
   }
   .primary-menu .nav-menu .channel.on:after,
-  .timeline-box .timeline-item.new p.num a {
+  .timeline-box .timeline-item.new p.num a,
+  .bangumi-item .cover-wrapper .corner-tag.badge_2 {
     background-color: var(--c-accent) !important;
   }
   .video-item-biref .biref-info .biref-title,
@@ -3290,7 +3292,8 @@
   .battery-pay-info,
   .subtitle-new,
   .hot-recom-wrapper .hot-trailer .player-list .list-count,
-  .hot-recom-wrapper .hot-title {
+  .hot-recom-wrapper .hot-title,
+  .filter-wrapper .filter-title {
     color: var(--c-title) !important;
   }
   .bangumi-home-crumb .fcname ul.n_num li a,
@@ -3302,7 +3305,8 @@
   .hot-recom-wrapper .hot-trailer .player-list .list-item-wrap .list-item .list-desc,
   .popup-card .info .style,
   .popup-card .info .up-time,
-  .popup-card .info .desc {
+  .popup-card .info .desc,
+  .bangumi-index-crumb ul li a {
     color: var(--c-text) !important;
   }
   .carousel-module .panel .title a,
@@ -3321,7 +3325,11 @@
   .sub-nav-m ul li a:hover,
   .cinema-home-crumb ul li.on a,
   .charge-success-content>p span,
-  .charge-success-content>p i {
+  .charge-success-content>p i,
+  .bangumi-index-crumb ul li.on a,
+  .bangumi-index-crumb ul li:hover a,
+  .sort-item.on span,
+  .filter-block .filter-item-wrapper .filter-item.on {
     color: var(--c-accent) !important;
   }
   .primary-menu.border-b,
@@ -3357,6 +3365,9 @@
   }
   .block-area:last-child {
     margin: 0;
+  }
+  .filter-body .pagelistbox {
+    margin: 20px 0;
   }
   .charge-header-bg {
     background-image: none !important;
@@ -3489,6 +3500,14 @@
   .video-list-recom .video-list-video {
     margin-left: 0;
   }
+  .bangumi-index-wrapper .bangumi-index-body .filter-body .bangumi-list {
+    padding: 10px 0;
+    border-radius: 4px;
+    background-color: var(--c-background);
+  }
+  .bangumi-index-wrapper .bangumi-index-body .filter-body .bangumi-list .bangumi-item {
+    margin: 0 10px;
+  }
   .spread-module .t {
     white-space: nowrap;
     overflow: hidden;
@@ -3552,7 +3571,7 @@
     line-height: initial;
   }
   .container-body .zr_recomd ul {
-    padding: 20px 20px;
+    padding: 10px;
     border-radius: 4px;
     background-color: var(--c-background) !important;
   }
@@ -3576,7 +3595,7 @@
     color: var(--c-accent);
   }
   .vd-list-cnt {
-    padding: 0 20px;
+    padding: 0 10px;
     border-radius: 4px;
     background-color: var(--c-background) !important;
   }
@@ -3972,7 +3991,69 @@
     content: none !important;
   }
 }
-@-moz-document url-prefix("https://www.bilibili.com/video/"), url-prefix("https://www.bilibili.com/bangumi/"), url-prefix("https://player.bilibili.com/"), url-prefix("https://www.bilibili.com/watchlater") {
+@-moz-document url-prefix("https://www.bilibili.com/anime/timeline/"), url-prefix("https://www.bilibili.com/guochuang/timeline/") {
+  .timeline-header .tl-weeks:after {
+    display: none;
+  }
+  .season-timer .current-timer:before {
+    background-color: var(--c-background);
+  }
+  .tl-head .tl-day .indicator,
+  .season-timeline .season-group .group-time:before,
+  .season-timeline .season-group.is-published .group-time:before {
+    background-color: var(--c-border);
+  }
+  #app,
+  .timeline-header,
+  .timeline-wrapper,
+  .tl-head .tl-day {
+    background-color: transparent;
+  }
+  .tl-head .tl-day.today .indicator,
+  .season-timeline .season-group.today.is-published .group-time:before {
+    background-color: var(--c-accent) !important;
+  }
+  .season-timeline .season-group .group-time {
+    color: var(--c-text) !important;
+  }
+  .bread-crumb ul li.on a,
+  .bread-crumb ul li:hover a,
+  .season-timer .current-timer,
+  .season-timer .season-label {
+    color: var(--c-accent) !important;
+  }
+  .season-timeline .season-group,
+  .season-timeline .season-group .group-time:before,
+  .season-timeline .season-group.is-published,
+  .season-timeline .season-group.is-published .group-time:before {
+    border-color: var(--c-border);
+  }
+  .season-timeline .season-group.today,
+  .season-timeline .season-group.today.is-published .group-time:before,
+  .season-timeline .season-group.today .group-time:before {
+    border-color: var(--c-accent) !important;
+  }
+  .timeline-header,
+  .timeline-wrapper,
+  .timeline-header .tl-weeks {
+    box-shadow: none;
+  }
+  .timeline-header {
+    left: 20px;
+  }
+  #app .timeline-container {
+    margin-top: 20px;
+    padding: 70px 20px 0;
+    border-radius: 4px;
+    background-color: var(--c-background);
+  }
+  .timeline-header.fixed {
+    position: absolute;
+    background-color: var(--c-bg-header);
+    backdrop-filter: blur(5px);
+  }
+}
+@-moz-document url-prefix("https://www.bilibili.com/video/"), url-prefix("https://www.bilibili.com/bangumi/"), url-prefix("https://player.bilibili.com/"), url-prefix("https://www.bilibili.com/watchlater"), url-prefix("https://www.bilibili.com/blackboard/newplayer.html") {
   .video-page-special-card,
   .user-card-m iframe,
   .bili-msg iframe {
@@ -4128,6 +4209,9 @@
   .video-page-card .card-box .info .count.up,
   .video-page-operator-card .info .count.up {
     width: auto;
+  }
+  #bofqi {
+    height: 100vh;
   }
   .bilibili-player-ending-panel {
     backdrop-filter: blur(5px);
@@ -5523,7 +5607,9 @@
   .nav-ctnr .link-navbar .nav-item:hover span,
   .shortcuts-ctnr .shortcut-item:hover .list-item span,
   .nav-ctnr .link-navbar .shortcuts-ctnr .shortcut-item:hover .list-item span,
-  .live-room-app .link-navbar .shortcuts-ctnr .shortcut-item:hover .list-item span {
+  .live-room-app .link-navbar .shortcuts-ctnr .shortcut-item:hover .list-item span,
+  .user-item:hover .username,
+  .activity-item-ctnr:hover .username {
     color: var(--c-accent) !important;
   }
   .info-item-ctnr {
@@ -6344,7 +6430,6 @@
   .home-wrap .home-suggest .title .title-icon {
     display: none;
   }
-  .page-wrap .pager,
   .search-wrap .search-block .input-wrap,
   .error-wrap,
   .home-wrap .home-input .type,
@@ -6358,6 +6443,9 @@
   .home-wrap .home-input .type:hover,
   .suggest-wrap .horizontal .hz-text:hover {
     background-color: var(--c-hover);
+  }
+  .page-wrap .pager {
+    background-color: transparent;
   }
   #navigator .v-switcher-header-anchor,
   .home-wrap .home-suggest .hot-search .item .num.special {
@@ -6417,6 +6505,12 @@
   .home-wrap .home-suggest .title {
     margin: 0;
   }
+  .contain .body-contain {
+    padding: 10px;
+  }
+  .contain {
+    width: 1000px;
+  }
   .home-wrap .home-suggest,
   .home-wrap .home-input .type.selected,
   .home-wrap .home-input .type:hover,
@@ -6431,6 +6525,12 @@
   .live-user-item {
     border: 1px solid var(--c-border);
     box-shadow: none;
+  }
+  .home-wrap .home-suggest .hot-search,
+  .home-wrap .home-suggest .history,
+  .contain .body-contain {
+    border-radius: 4px;
+    background-color: var(--c-background);
   }
   .home-wrap .home-input .type .default,
   .pager .pages .page-item.last,
@@ -8623,7 +8723,6 @@
     border-color: var(--c-accent) !important;
   }
   .home-page .home-container .home-content .center-panel .section-block,
-  .nav-item.message .i-frame,
   .bp-popup-panel,
   .feed-topic .publish-panel-container {
     border: 1px solid var(--c-border) !important;
