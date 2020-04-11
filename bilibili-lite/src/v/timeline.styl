@@ -1,0 +1,60 @@
+/* 番剧时间表 */
+.timeline-header .tl-weeks:after
+  display none
+
+.season-timer .current-timer:before
+  background-color var(--c-background)
+
+.tl-head .tl-day .indicator
+.season-timeline .season-group .group-time:before
+.season-timeline .season-group.is-published .group-time:before
+  background-color var(--c-border)
+
+#app
+.timeline-header
+.timeline-wrapper
+.tl-head .tl-day
+  background-color transparent
+
+.tl-head .tl-day.today .indicator
+.season-timeline .season-group.today.is-published .group-time:before
+  background-color var(--c-accent) !important
+
+.season-timeline .season-group .group-time
+  color var(--c-text) !important
+
+.bread-crumb ul li.on a
+.bread-crumb ul li:hover a
+.season-timer .current-timer
+.season-timer .season-label
+  color var(--c-accent) !important
+
+.season-timeline .season-group
+.season-timeline .season-group .group-time:before
+.season-timeline .season-group.is-published
+.season-timeline .season-group.is-published .group-time:before
+  border-color var(--c-border)
+
+.season-timeline .season-group.today
+.season-timeline .season-group.today.is-published .group-time:before
+.season-timeline .season-group.today .group-time:before
+  border-color var(--c-accent) !important
+
+.timeline-header
+.timeline-wrapper
+.timeline-header .tl-weeks
+  box-shadow none
+
+.timeline-header
+  left 20px
+
+#app .timeline-container
+  margin-top 20px
+  padding 70px 20px 0
+  border-radius 4px
+  background-color var(--c-background)
+
+.timeline-header.fixed
+  position absolute
+  background-color var(--c-bg-header)
+  backdrop-filter blur(5px)

@@ -1,0 +1,14 @@
+/* 处理嵌套 iframe */
+@-moz-document regexp("^.*/pages/nav/index.*"),
+regexp("^.*/pay/charge.*")
+  /* 去除导航嵌套的 iframe 背景图 */
+  html
+    background-image none
+
+  body
+    background-color transparent
+
+@-moz-document regexp("^.*/pay/charge.*")
+  /* 去除充电多余背景 */
+  html
+    background-color transparent
