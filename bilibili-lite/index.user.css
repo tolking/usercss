@@ -567,7 +567,8 @@
   .vote-btn-box .vote-btn,
   .bcc-pagination-item.selected,
   .qa-area-ol-wrp .qa-area-ol-btn,
-  .btn-default {
+  .btn-default,
+  .h .h-follow {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -684,7 +685,8 @@
   .vote-btn-box .vote-btn span,
   .bcc-pagination-item.selected span,
   .qa-area-ol-wrp .qa-area-ol-btn span,
-  .btn-default span {
+  .btn-default span,
+  .h .h-follow span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -795,7 +797,8 @@
   .vote-btn-box .vote-btn::after,
   .bcc-pagination-item.selected::after,
   .qa-area-ol-wrp .qa-area-ol-btn::after,
-  .btn-default::after {
+  .btn-default::after,
+  .h .h-follow::after {
     content: '';
     display: block;
     position: absolute;
@@ -915,7 +918,8 @@
   .vote-btn-box .vote-btn:hover,
   .bcc-pagination-item.selected:hover,
   .qa-area-ol-wrp .qa-area-ol-btn:hover,
-  .btn-default:hover {
+  .btn-default:hover,
+  .h .h-follow:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -1026,7 +1030,8 @@
   .vote-btn-box .vote-btn:hover span,
   .bcc-pagination-item.selected:hover span,
   .qa-area-ol-wrp .qa-area-ol-btn:hover span,
-  .btn-default:hover span {
+  .btn-default:hover span,
+  .h .h-follow:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -1137,7 +1142,8 @@
   .vote-btn-box .vote-btn:hover::after,
   .bcc-pagination-item.selected:hover::after,
   .qa-area-ol-wrp .qa-area-ol-btn:hover::after,
-  .btn-default:hover::after {
+  .btn-default:hover::after,
+  .h .h-follow:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -1226,7 +1232,8 @@
   .bind-info .note-footer .btn-group .common-btn,
   .watch-later-list header .d-btn,
   .cinema-movie-wrapper .slider-contro span,
-  .bcc-pagination-item {
+  .bcc-pagination-item,
+  .h .h-message {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -1319,7 +1326,8 @@
   .bind-info .note-footer .btn-group .common-btn span,
   .watch-later-list header .d-btn span,
   .cinema-movie-wrapper .slider-contro span span,
-  .bcc-pagination-item span {
+  .bcc-pagination-item span,
+  .h .h-message span {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -1408,7 +1416,8 @@
   .bind-info .note-footer .btn-group .common-btn::after,
   .watch-later-list header .d-btn::after,
   .cinema-movie-wrapper .slider-contro span::after,
-  .bcc-pagination-item::after {
+  .bcc-pagination-item::after,
+  .h .h-message::after {
     content: none !important;
   }
   .default:hover,
@@ -1497,7 +1506,8 @@
   .bind-info .note-footer .btn-group .common-btn:hover,
   .watch-later-list header .d-btn:hover,
   .cinema-movie-wrapper .slider-contro span:hover,
-  .bcc-pagination-item:hover {
+  .bcc-pagination-item:hover,
+  .h .h-message:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
     color: var(--c-text) !important;
@@ -1588,7 +1598,8 @@
   .bind-info .note-footer .btn-group .common-btn:hover span,
   .watch-later-list header .d-btn:hover span,
   .cinema-movie-wrapper .slider-contro span:hover span,
-  .bcc-pagination-item:hover span {
+  .bcc-pagination-item:hover span,
+  .h .h-message:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -4152,6 +4163,9 @@
   .main-container .media-info .media-right .media-count {
     color: var(--c-text) !important;
   }
+  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active {
+    color: var(--c-white) !important;
+  }
   .coin-operated-m .coin-title span,
   .coin-operated-m .mc-box.on .c-num,
   .main-container .review-module .review-list .review-item .review-header .review-star li i.icon-star-full,
@@ -4160,6 +4174,7 @@
   .video-info .video-data .argue i,
   .video-info .video-data .copyright i,
   .up-info .u-info .name .username.is-vip:hover,
+  .members-info .up-card .info .info-name.is-vip:hover,
   .ep-list-wrapper .ep-item i,
   .section-ep-wrapper .ep-item i,
   .main-container .tool-bar .coin-info.active i,
@@ -4698,7 +4713,8 @@
   #page-dynamic .col-2,
   #page-fav .fav-main .filter-item.search,
   .be-tab-cursor:after,
-  #page-index .col-2 .section .auth-detail {
+  #page-index .col-2 .section .auth-detail,
+  .follow-dialog-wrap .follow-dialog-window .layout {
     display: none;
   }
   #pin-wrapper .pin-layer-header .pin-layer-header-text,
@@ -4707,7 +4723,9 @@
   }
   .n .n-data .n-data-k,
   .n .n-data .n-data-v,
-  #page-index .col-1 .section.empty:after {
+  #page-index .col-1 .section.empty:after,
+  .follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .add-btn,
+  .follow-dialog-wrap .follow-dialog-window .content .group-list .empty-tip {
     color: var(--c-text) !important;
   }
   .be-tab-item.is-active span {
@@ -4746,7 +4764,8 @@
   }
   #pin-wrapper #pin-layer,
   .modal-wrapper,
-  .fans-action-follow {
+  .fans-action-follow,
+  .follow-dialog-wrap .follow-dialog-window {
     background-color: var(--c-background);
   }
   #pin-wrapper .pin-layer-vlist .small-item:hover {
@@ -4766,7 +4785,10 @@
   #page-index .channel .channel-item,
   .article-content,
   .s-content,
-  .fans-action-btn.follow {
+  .fans-action-btn.follow,
+  .follow-dialog-wrap .follow-dialog-window .title,
+  .follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .add-btn,
+  .follow-dialog-wrap .follow-dialog-window .bottom {
     border-color: var(--c-border);
   }
   .be-tab-cursor,
@@ -4788,8 +4810,8 @@
   .be-tags-container .tag.new-tag,
   .be-tags-container .tag.coop-tag,
   .be-tags-container .tag.inter-tag {
-    background-color: var(--c-accent);
-    color: var(--c-white);
+    background-color: var(--c-accent) !important;
+    color: var(--c-white) !important;
   }
   .h .h-fans-icon .fans-hover-tip,
   .h .h-fans-icon .fans-hover-tip:after {
@@ -5580,7 +5602,8 @@
   .user-panel-ctnr .user-panel .content-ctnr .logout-btn:hover,
   .link-panel-ctnr .load-more:hover,
   .calendar-checkin .checkin-btn:hover,
-  .area-list-panel .list-item:hover {
+  .area-list-panel .list-item:hover,
+  .user-level-detail .detail-link:hover {
     background-color: var(--c-hover) !important;
   }
   .link-navbar-ctnr,
@@ -5609,7 +5632,7 @@
   .nav-ctnr .link-navbar .shortcuts-ctnr .shortcut-item:hover .list-item span,
   .live-room-app .link-navbar .shortcuts-ctnr .shortcut-item:hover .list-item span,
   .user-item:hover .username,
-  .activity-item-ctnr:hover .username {
+  .activity-item-ctnr:hover .info-ctnr .first-line .username {
     color: var(--c-accent) !important;
   }
   .info-item-ctnr {
