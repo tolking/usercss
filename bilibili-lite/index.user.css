@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.2
+@version        1.2.3
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -568,7 +568,8 @@
   .bcc-pagination-item.selected,
   .qa-area-ol-wrp .qa-area-ol-btn,
   .btn-default,
-  .h .h-follow {
+  .h .h-follow,
+  .pendant-list li .pendant-btn {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -686,7 +687,8 @@
   .bcc-pagination-item.selected span,
   .qa-area-ol-wrp .qa-area-ol-btn span,
   .btn-default span,
-  .h .h-follow span {
+  .h .h-follow span,
+  .pendant-list li .pendant-btn span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -798,7 +800,8 @@
   .bcc-pagination-item.selected::after,
   .qa-area-ol-wrp .qa-area-ol-btn::after,
   .btn-default::after,
-  .h .h-follow::after {
+  .h .h-follow::after,
+  .pendant-list li .pendant-btn::after {
     content: '';
     display: block;
     position: absolute;
@@ -919,7 +922,8 @@
   .bcc-pagination-item.selected:hover,
   .qa-area-ol-wrp .qa-area-ol-btn:hover,
   .btn-default:hover,
-  .h .h-follow:hover {
+  .h .h-follow:hover,
+  .pendant-list li .pendant-btn:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -1031,7 +1035,8 @@
   .bcc-pagination-item.selected:hover span,
   .qa-area-ol-wrp .qa-area-ol-btn:hover span,
   .btn-default:hover span,
-  .h .h-follow:hover span {
+  .h .h-follow:hover span,
+  .pendant-list li .pendant-btn:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -1143,7 +1148,8 @@
   .bcc-pagination-item.selected:hover::after,
   .qa-area-ol-wrp .qa-area-ol-btn:hover::after,
   .btn-default:hover::after,
-  .h .h-follow:hover::after {
+  .h .h-follow:hover::after,
+  .pendant-list li .pendant-btn:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -2535,7 +2541,8 @@
   .imagesbox .boost-control li:hover span,
   .imagesbox .boost-control li:hover i,
   .clock-time,
-  .user-name.big-vip a {
+  .user-name.big-vip a,
+  .expand-btn {
     color: var(--c-accent) !important;
   }
   .clock-time::after,
@@ -4728,7 +4735,8 @@
   .follow-dialog-wrap .follow-dialog-window .content .group-list .empty-tip {
     color: var(--c-text) !important;
   }
-  .be-tab-item.is-active span {
+  .be-tab-item.is-active span,
+  .list-create:hover .text {
     color: var(--c-accent) !important;
   }
   .h #h-name,
@@ -4792,7 +4800,8 @@
     border-color: var(--c-border);
   }
   .be-tab-cursor,
-  .sub-tabs a.active {
+  .sub-tabs a.active,
+  .list-create:hover {
     border-color: var(--c-accent);
   }
   .h .h-gradient {
@@ -5198,7 +5207,8 @@
   .identmagBot,
   .img-clip-wrap .first-change-lb,
   .coupon-content,
-  .finish-status .finish-box .box-content {
+  .finish-status .finish-box .box-content,
+  .pendant-vip-box .pendant-list li:hover>div {
     background-color: var(--c-hover) !important;
   }
   .border-line {
@@ -5212,7 +5222,9 @@
   .organ-right-line,
   .security_content,
   .coin-inner,
-  .indentify-page {
+  .indentify-page,
+  .pendant-vip-box .pendant-list li,
+  .pendant-vip-box .pendant-list li:hover {
     background-color: transparent !important;
   }
   .home-top-level-upgo,
@@ -5321,21 +5333,29 @@
   }
   .active .tabs-normal-txt,
   .tabs-nav .active,
-  .title-right-link:hover {
+  .title-right-link:hover,
+  .face-nav>.active {
     border-color: var(--c-accent) !important;
   }
   .h-list-item,
   .h-list-icon,
   .big-more-tool-btn,
   .indentify-page,
-  .identify-component .identify-head {
+  .identify-component .identify-head,
+  .pendant-list li>div {
     border: 0 !important;
+  }
+  .pendant-list li:hover>div {
+    box-shadow: none !important;
   }
   .coupon-wrapper {
     background-image: none;
   }
   .security-nav-name {
     margin: 0 !important;
+  }
+  .security_content {
+    margin-bottom: 0;
   }
   .finish-status {
     width: auto;
