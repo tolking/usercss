@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.2
+@version        1.2.3
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -568,7 +568,8 @@
   .bcc-pagination-item.selected,
   .qa-area-ol-wrp .qa-area-ol-btn,
   .btn-default,
-  .h .h-follow {
+  .h .h-follow,
+  .pendant-list li .pendant-btn {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -686,7 +687,8 @@
   .bcc-pagination-item.selected span,
   .qa-area-ol-wrp .qa-area-ol-btn span,
   .btn-default span,
-  .h .h-follow span {
+  .h .h-follow span,
+  .pendant-list li .pendant-btn span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -798,7 +800,8 @@
   .bcc-pagination-item.selected::after,
   .qa-area-ol-wrp .qa-area-ol-btn::after,
   .btn-default::after,
-  .h .h-follow::after {
+  .h .h-follow::after,
+  .pendant-list li .pendant-btn::after {
     content: '';
     display: block;
     position: absolute;
@@ -919,7 +922,8 @@
   .bcc-pagination-item.selected:hover,
   .qa-area-ol-wrp .qa-area-ol-btn:hover,
   .btn-default:hover,
-  .h .h-follow:hover {
+  .h .h-follow:hover,
+  .pendant-list li .pendant-btn:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -1031,7 +1035,8 @@
   .bcc-pagination-item.selected:hover span,
   .qa-area-ol-wrp .qa-area-ol-btn:hover span,
   .btn-default:hover span,
-  .h .h-follow:hover span {
+  .h .h-follow:hover span,
+  .pendant-list li .pendant-btn:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -1143,7 +1148,8 @@
   .bcc-pagination-item.selected:hover::after,
   .qa-area-ol-wrp .qa-area-ol-btn:hover::after,
   .btn-default:hover::after,
-  .h .h-follow:hover::after {
+  .h .h-follow:hover::after,
+  .pendant-list li .pendant-btn:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -1680,7 +1686,8 @@
   .bangumi-item .cover-wrapper .corner-tag.badge_0,
   .live-container .status,
   .video-card-common .title .live,
-  .info-item .notice-icon {
+  .info-item .notice-icon,
+  .live-record-card-cntr .cover .corner.new {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
@@ -1754,7 +1761,8 @@
   .bangumi-item .cover-wrapper .corner-tag.badge_0:hover,
   .live-container .status:hover,
   .video-card-common .title .live:hover,
-  .info-item .notice-icon:hover {
+  .info-item .notice-icon:hover,
+  .live-record-card-cntr .cover .corner.new:hover {
     color: var(--c-white) !important;
   }
   .gg-icon,
@@ -2535,7 +2543,8 @@
   .imagesbox .boost-control li:hover span,
   .imagesbox .boost-control li:hover i,
   .clock-time,
-  .user-name.big-vip a {
+  .user-name.big-vip a,
+  .expand-btn {
     color: var(--c-accent) !important;
   }
   .clock-time::after,
@@ -2744,7 +2753,7 @@
     border: 0;
   }
 }
-@-moz-document regexp("^.*/pages/nav/index.*"), regexp("^.*/pay/charge.*") {
+@-moz-document regexp("^.*/pages/nav/index.*"), regexp("^.*/pay/charge.*"), regexp("^.*/html/live-room-treasurebox/index.*"), regexp("^.*/html/live-lottery/anchor-join.*"), regexp("^.*/html/live-web-weekstar.*") {
   html {
     background-image: none;
   }
@@ -2752,7 +2761,7 @@
     background-color: transparent;
   }
 }
-@-moz-document regexp("^.*/pay/charge.*") {
+@-moz-document regexp("^.*/pay/charge.*"), regexp("^.*/html/live-room-treasurebox/index.*"), regexp("^.*/html/live-lottery/anchor-join.*") {
   html {
     background-color: transparent;
   }
@@ -3886,14 +3895,14 @@
     margin-top: 100px;
   }
 }
-@-moz-document url-prefix("https://www.bilibili.com/blackboard/") {
+@-moz-document url-prefix("https://www.bilibili.com/blackboard/"), url-prefix("https://www.bilibili.com/html/join-list.html") {
   .activity-main .banner,
   .international-footer,
   .active-title .b-active-i,
   .topic-title .b-topic-i,
   .activity.topic-preview-wrapper .page_prev,
   .activity.topic-preview-wrapper .page_next,
-  #socialRecruit .side_main .shadow,
+  .side_main .shadow,
   .fixed-service-bg {
     display: none !important;
   }
@@ -3907,9 +3916,10 @@
   .help-content img,
   .collapse-item--active,
   .collapse-item:hover,
-  #socialRecruit .catalog_bg,
-  #socialRecruit .side_main,
-  #socialRecruit .side_main .select .block.active {
+  .catalog_bg,
+  .side_main,
+  .side_main .select .block.active,
+  .list_block:hover {
     background-color: var(--c-hover) !important;
   }
   .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
@@ -3921,17 +3931,20 @@
   .activity-playlist .activity-playlist-item,
   .help-body p,
   .mCSB_scrollTools .mCSB_draggerRail,
-  #socialRecruit .master_list {
+  .master_list {
     background-color: transparent !important;
   }
   .helper-icon-dots,
-  #socialRecruit .jobs-icon-blue-dots {
+  .jobs-icon-blue-dots {
     background-color: var(--c-accent) !important;
   }
   .active-title .b-active-t,
   .pagelist .flip-left .ellipsis,
-  #socialRecruit .master_title .big_title,
-  #socialRecruit .jobs_list_title div {
+  .master_title .big_title,
+  .jobs_list_title div,
+  .Jname,
+  .jobs_numb,
+  .select .block {
     color: var(--c-title) !important;
   }
   .act-list ul li .event_status,
@@ -3940,21 +3953,25 @@
   }
   .nav-tab .on,
   .collapse-item--active .collapse-title,
-  #socialRecruit .side_main .select .block.active,
-  .nav-tab li:hover {
+  .side_main .select .block.active,
+  .nav-tab li:hover,
+  .list_block:hover .jobs_name,
+  .list_block:hover .jobs_classification,
+  .list_block:hover .jobs_location,
+  .select .block:hover {
     color: var(--c-accent) !important;
   }
   .bili-share-pc,
   .bili-share-pc .vertical-line,
-  #socialRecruit .jobs_numb,
-  #socialRecruit .list_block:hover,
+  .jobs_numb,
+  .list_block:hover,
   #uplist .up-card {
     border-color: var(--c-border) !important;
   }
-  #socialRecruit .side_main .select .block.active {
+  .side_main .select .block.active {
     border-color: var(--c-accent) !important;
   }
-  #socialRecruit .list_block {
+  .list_block {
     border-top-color: var(--c-border) !important;
   }
   .help-list,
@@ -4728,7 +4745,8 @@
   .follow-dialog-wrap .follow-dialog-window .content .group-list .empty-tip {
     color: var(--c-text) !important;
   }
-  .be-tab-item.is-active span {
+  .be-tab-item.is-active span,
+  .list-create:hover .text {
     color: var(--c-accent) !important;
   }
   .h #h-name,
@@ -4792,7 +4810,8 @@
     border-color: var(--c-border);
   }
   .be-tab-cursor,
-  .sub-tabs a.active {
+  .sub-tabs a.active,
+  .list-create:hover {
     border-color: var(--c-accent);
   }
   .h .h-gradient {
@@ -4894,8 +4913,9 @@
   .small-item .cover,
   .small-item img,
   #page-index .fav-covers,
-  #page-index .fav-covers img {
-    width: 100%;
+  #page-index .fav-covers img,
+  #page-index .channel .content {
+    width: 100% !important;
     height: auto;
   }
   .mini-item {
@@ -5073,7 +5093,8 @@
   #page-fav .fav-sidenav .fav-item.cur,
   #page-fav .fav-sidenav .fav-item:hover,
   #page-fav .fav-main .filter-item .filter-type .be-dropdown-item:hover,
-  #page-follows .follow-main .follow-action-bottom .follow-action-fixtop {
+  #page-follows .follow-main .follow-action-bottom .follow-action-fixtop,
+  .album-content .my-album .tab-list {
     background-color: var(--c-hover);
   }
   #page-channel-index .no-channel-container em {
@@ -5093,7 +5114,8 @@
   }
   #page-video #submit-video-type-filter a.active,
   .sub-tabs a.active,
-  #page-channel-index .no-channel-container em {
+  #page-channel-index .no-channel-container em,
+  .my-album .tab-list .tab.active .name {
     color: var(--c-accent) !important;
   }
   .be-pager-item-active a {
@@ -5198,7 +5220,8 @@
   .identmagBot,
   .img-clip-wrap .first-change-lb,
   .coupon-content,
-  .finish-status .finish-box .box-content {
+  .finish-status .finish-box .box-content,
+  .pendant-vip-box .pendant-list li:hover>div {
     background-color: var(--c-hover) !important;
   }
   .border-line {
@@ -5212,7 +5235,9 @@
   .organ-right-line,
   .security_content,
   .coin-inner,
-  .indentify-page {
+  .indentify-page,
+  .pendant-vip-box .pendant-list li,
+  .pendant-vip-box .pendant-list li:hover {
     background-color: transparent !important;
   }
   .home-top-level-upgo,
@@ -5321,21 +5346,29 @@
   }
   .active .tabs-normal-txt,
   .tabs-nav .active,
-  .title-right-link:hover {
+  .title-right-link:hover,
+  .face-nav>.active {
     border-color: var(--c-accent) !important;
   }
   .h-list-item,
   .h-list-icon,
   .big-more-tool-btn,
   .indentify-page,
-  .identify-component .identify-head {
+  .identify-component .identify-head,
+  .pendant-list li>div {
     border: 0 !important;
+  }
+  .pendant-list li:hover>div {
+    box-shadow: none !important;
   }
   .coupon-wrapper {
     background-image: none;
   }
   .security-nav-name {
     margin: 0 !important;
+  }
+  .security_content {
+    margin-bottom: 0;
   }
   .finish-status {
     width: auto;
@@ -5976,7 +6009,9 @@
   .silver-seed-store .content,
   .draw-full-cntr,
   #webShare .bili-share-pc,
-  .bili-share-pc .share-weixin-qr {
+  .bili-share-pc .share-weixin-qr,
+  .help-cntr,
+  .live-record-list-cntr {
     background-color: var(--c-background) !important;
   }
   .attention-btn-ctnr .right-part,
@@ -5984,15 +6019,20 @@
   .fans-medal-item .level,
   .recharge-stores-ctnr .tab-box,
   .sub-tab-box .item.active,
-  .draw-full-cntr .function-bar {
+  .draw-full-cntr .function-bar,
+  .pay-note-panel {
     background-color: var(--c-hover) !important;
   }
-  .bili-share-pc .weixin-hover .qr-before {
+  .bili-share-pc .weixin-hover .qr-before,
+  .live-record-card-cntr,
+  .week-rank-iframe {
     background-color: transparent !important;
   }
   .draw-full-cntr .function-bar.draw,
   .tab-candidate>span:after,
-  .tabs .item>span:after {
+  .tabs .item>span:after,
+  .shortcuts-ctnr .shortcut-item .hinter,
+  .shortcuts-ctnr .shortcut-item .num-hinter {
     background-color: var(--c-accent) !important;
   }
   .room-bg::after {
@@ -6027,7 +6067,10 @@
   .chat-history-panel .chat-history-list .chat-item.welcome-msg .username.vip,
   .room-introduction-tags .room-introduction-tag:hover .icon-label,
   .chaos-pk-rank .link-to-history,
-  .guard-rank-cntr .rank-cntr .rank-list-box .online a.live-skin-main-a-text {
+  .guard-rank-cntr .rank-cntr .rank-list-box .online a.live-skin-main-a-text,
+  .mailbox-cntr header,
+  .tabs .item.active span,
+  .tabs .item:hover span {
     color: var(--c-accent) !important;
   }
   .room-introduction-tags,
@@ -6038,12 +6081,14 @@
   .bili-share-pc {
     border-color: var(--c-border) !important;
   }
-  .recharge-store-box ul.select-list .item.active {
+  .recharge-store-box ul.select-list .item.active,
+  .award-list-cntr .award-list-cntr .award-list .award-item img {
     border-color: var(--c-accent) !important;
   }
   .content-wrapper,
   .user-protocol,
-  .draw-full-cntr {
+  .draw-full-cntr,
+  .live-record-list-cntr {
     border: 0 !important;
   }
   .common-popup-wrap.arrow-top::before {
@@ -6075,7 +6120,7 @@
     margin: 0;
   }
   .live-room-app .app-content .app-body .section-block {
-    margin-bottom: 100px;
+    margin-bottom: 140px;
   }
   .user-panel-ctnr .user-panel .content-ctnr .ctrl-btn:nth-child(2n) {
     padding-left: 40px !important;
@@ -9247,7 +9292,7 @@
   .footer-public,
   .bui-sns-info,
   .g-title .btn .ic-gift {
-    display: none;
+    display: none !important;
   }
   .banner,
   .listing-ul li,
@@ -9320,6 +9365,11 @@
   .listing-ul li,
   .pop-nav {
     box-shadow: none;
+  }
+  #page .game .game-box {
+    border-radius: 4px;
+    background-color: var(--c-background);
+    overflow: hidden;
   }
   .banner .slides-pagination {
     bottom: -1px;
