@@ -1686,7 +1686,8 @@
   .bangumi-item .cover-wrapper .corner-tag.badge_0,
   .live-container .status,
   .video-card-common .title .live,
-  .info-item .notice-icon {
+  .info-item .notice-icon,
+  .live-record-card-cntr .cover .corner.new {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
@@ -1760,7 +1761,8 @@
   .bangumi-item .cover-wrapper .corner-tag.badge_0:hover,
   .live-container .status:hover,
   .video-card-common .title .live:hover,
-  .info-item .notice-icon:hover {
+  .info-item .notice-icon:hover,
+  .live-record-card-cntr .cover .corner.new:hover {
     color: var(--c-white) !important;
   }
   .gg-icon,
@@ -2751,7 +2753,7 @@
     border: 0;
   }
 }
-@-moz-document regexp("^.*/pages/nav/index.*"), regexp("^.*/pay/charge.*") {
+@-moz-document regexp("^.*/pages/nav/index.*"), regexp("^.*/pay/charge.*"), regexp("^.*/html/live-room-treasurebox/index.*"), regexp("^.*/html/live-lottery/anchor-join.*"), regexp("^.*/html/live-web-weekstar.*") {
   html {
     background-image: none;
   }
@@ -2759,7 +2761,7 @@
     background-color: transparent;
   }
 }
-@-moz-document regexp("^.*/pay/charge.*") {
+@-moz-document regexp("^.*/pay/charge.*"), regexp("^.*/html/live-room-treasurebox/index.*"), regexp("^.*/html/live-lottery/anchor-join.*") {
   html {
     background-color: transparent;
   }
@@ -5091,7 +5093,8 @@
   #page-fav .fav-sidenav .fav-item.cur,
   #page-fav .fav-sidenav .fav-item:hover,
   #page-fav .fav-main .filter-item .filter-type .be-dropdown-item:hover,
-  #page-follows .follow-main .follow-action-bottom .follow-action-fixtop {
+  #page-follows .follow-main .follow-action-bottom .follow-action-fixtop,
+  .album-content .my-album .tab-list {
     background-color: var(--c-hover);
   }
   #page-channel-index .no-channel-container em {
@@ -5111,7 +5114,8 @@
   }
   #page-video #submit-video-type-filter a.active,
   .sub-tabs a.active,
-  #page-channel-index .no-channel-container em {
+  #page-channel-index .no-channel-container em,
+  .my-album .tab-list .tab.active .name {
     color: var(--c-accent) !important;
   }
   .be-pager-item-active a {
@@ -6005,7 +6009,9 @@
   .silver-seed-store .content,
   .draw-full-cntr,
   #webShare .bili-share-pc,
-  .bili-share-pc .share-weixin-qr {
+  .bili-share-pc .share-weixin-qr,
+  .help-cntr,
+  .live-record-list-cntr {
     background-color: var(--c-background) !important;
   }
   .attention-btn-ctnr .right-part,
@@ -6017,7 +6023,9 @@
   .pay-note-panel {
     background-color: var(--c-hover) !important;
   }
-  .bili-share-pc .weixin-hover .qr-before {
+  .bili-share-pc .weixin-hover .qr-before,
+  .live-record-card-cntr,
+  .week-rank-iframe {
     background-color: transparent !important;
   }
   .draw-full-cntr .function-bar.draw,
@@ -6059,7 +6067,10 @@
   .chat-history-panel .chat-history-list .chat-item.welcome-msg .username.vip,
   .room-introduction-tags .room-introduction-tag:hover .icon-label,
   .chaos-pk-rank .link-to-history,
-  .guard-rank-cntr .rank-cntr .rank-list-box .online a.live-skin-main-a-text {
+  .guard-rank-cntr .rank-cntr .rank-list-box .online a.live-skin-main-a-text,
+  .mailbox-cntr header,
+  .tabs .item.active span,
+  .tabs .item:hover span {
     color: var(--c-accent) !important;
   }
   .room-introduction-tags,
@@ -6070,12 +6081,14 @@
   .bili-share-pc {
     border-color: var(--c-border) !important;
   }
-  .recharge-store-box ul.select-list .item.active {
+  .recharge-store-box ul.select-list .item.active,
+  .award-list-cntr .award-list-cntr .award-list .award-item img {
     border-color: var(--c-accent) !important;
   }
   .content-wrapper,
   .user-protocol,
-  .draw-full-cntr {
+  .draw-full-cntr,
+  .live-record-list-cntr {
     border: 0 !important;
   }
   .common-popup-wrap.arrow-top::before {
@@ -6107,7 +6120,7 @@
     margin: 0;
   }
   .live-room-app .app-content .app-body .section-block {
-    margin-bottom: 100px;
+    margin-bottom: 140px;
   }
   .user-panel-ctnr .user-panel .content-ctnr .ctrl-btn:nth-child(2n) {
     padding-left: 40px !important;

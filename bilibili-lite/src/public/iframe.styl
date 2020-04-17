@@ -1,6 +1,9 @@
 /* 处理嵌套 iframe */
 @-moz-document regexp("^.*/pages/nav/index.*"),
-regexp("^.*/pay/charge.*")
+regexp("^.*/pay/charge.*"),
+regexp("^.*/html/live-room-treasurebox/index.*"),
+regexp("^.*/html/live-lottery/anchor-join.*"),
+regexp("^.*/html/live-web-weekstar.*")
   /* 去除导航嵌套的 iframe 背景图 */
   html
     background-image none
@@ -8,7 +11,9 @@ regexp("^.*/pay/charge.*")
   body
     background-color transparent
 
-@-moz-document regexp("^.*/pay/charge.*")
-  /* 去除充电多余背景 */
+@-moz-document regexp("^.*/pay/charge.*"),
+regexp("^.*/html/live-room-treasurebox/index.*"),
+regexp("^.*/html/live-lottery/anchor-join.*")
+  /* 去除多余背景 */
   html
     background-color transparent
