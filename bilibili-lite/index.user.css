@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.3
+@version        1.2.4
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -569,7 +569,10 @@
   .qa-area-ol-wrp .qa-area-ol-btn,
   .btn-default,
   .h .h-follow,
-  .pendant-list li .pendant-btn {
+  .pendant-list li .pendant-btn,
+  .btn-dufault,
+  .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn,
+  .song-playbtn {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -688,7 +691,10 @@
   .qa-area-ol-wrp .qa-area-ol-btn span,
   .btn-default span,
   .h .h-follow span,
-  .pendant-list li .pendant-btn span {
+  .pendant-list li .pendant-btn span,
+  .btn-dufault span,
+  .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn span,
+  .song-playbtn span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -801,7 +807,10 @@
   .qa-area-ol-wrp .qa-area-ol-btn::after,
   .btn-default::after,
   .h .h-follow::after,
-  .pendant-list li .pendant-btn::after {
+  .pendant-list li .pendant-btn::after,
+  .btn-dufault::after,
+  .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn::after,
+  .song-playbtn::after {
     content: '';
     display: block;
     position: absolute;
@@ -923,7 +932,10 @@
   .qa-area-ol-wrp .qa-area-ol-btn:hover,
   .btn-default:hover,
   .h .h-follow:hover,
-  .pendant-list li .pendant-btn:hover {
+  .pendant-list li .pendant-btn:hover,
+  .btn-dufault:hover,
+  .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn:hover,
+  .song-playbtn:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -1036,7 +1048,10 @@
   .qa-area-ol-wrp .qa-area-ol-btn:hover span,
   .btn-default:hover span,
   .h .h-follow:hover span,
-  .pendant-list li .pendant-btn:hover span {
+  .pendant-list li .pendant-btn:hover span,
+  .btn-dufault:hover span,
+  .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn:hover span,
+  .song-playbtn:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -1149,7 +1164,10 @@
   .qa-area-ol-wrp .qa-area-ol-btn:hover::after,
   .btn-default:hover::after,
   .h .h-follow:hover::after,
-  .pendant-list li .pendant-btn:hover::after {
+  .pendant-list li .pendant-btn:hover::after,
+  .btn-dufault:hover::after,
+  .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn:hover::after,
+  .song-playbtn:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -1239,7 +1257,9 @@
   .watch-later-list header .d-btn,
   .cinema-movie-wrapper .slider-contro span,
   .bcc-pagination-item,
-  .h .h-message {
+  .h .h-message,
+  .container .musician-recommend .recommend-item .recommend-info .listen-btn,
+  .follow-container .follow-right .unfollow-btn {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -1333,7 +1353,9 @@
   .watch-later-list header .d-btn span,
   .cinema-movie-wrapper .slider-contro span span,
   .bcc-pagination-item span,
-  .h .h-message span {
+  .h .h-message span,
+  .container .musician-recommend .recommend-item .recommend-info .listen-btn span,
+  .follow-container .follow-right .unfollow-btn span {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -1423,7 +1445,9 @@
   .watch-later-list header .d-btn::after,
   .cinema-movie-wrapper .slider-contro span::after,
   .bcc-pagination-item::after,
-  .h .h-message::after {
+  .h .h-message::after,
+  .container .musician-recommend .recommend-item .recommend-info .listen-btn::after,
+  .follow-container .follow-right .unfollow-btn::after {
     content: none !important;
   }
   .default:hover,
@@ -1513,7 +1537,9 @@
   .watch-later-list header .d-btn:hover,
   .cinema-movie-wrapper .slider-contro span:hover,
   .bcc-pagination-item:hover,
-  .h .h-message:hover {
+  .h .h-message:hover,
+  .container .musician-recommend .recommend-item .recommend-info .listen-btn:hover,
+  .follow-container .follow-right .unfollow-btn:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
     color: var(--c-text) !important;
@@ -1605,7 +1631,9 @@
   .watch-later-list header .d-btn:hover span,
   .cinema-movie-wrapper .slider-contro span:hover span,
   .bcc-pagination-item:hover span,
-  .h .h-message:hover span {
+  .h .h-message:hover span,
+  .container .musician-recommend .recommend-item .recommend-info .listen-btn:hover span,
+  .follow-container .follow-right .unfollow-btn:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -1883,7 +1911,8 @@
   .content-wrap,
   .bili-header-m .i_menu_login,
   .el-dropdown-menu,
-  .action-menu .menu-list {
+  .action-menu .menu-list,
+  .sub-nav-m .tips {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -2642,7 +2671,7 @@
     background-color: var(--c-background);
   }
 }
-@-moz-document regexp("^.*www.bilibili.com/?((index\\.html)|(\\?.*))?"), url-prefix("https://www.bilibili.com/v/"), url-prefix("https://www.bilibili.com/anime/"), url-prefix("https://www.bilibili.com/guochuang/"), url-prefix("https://www.bilibili.com/cinema/"), url-prefix("https://www.bilibili.com/documentary/"), url-prefix("https://www.bilibili.com/movie/"), url-prefix("https://www.bilibili.com/tv/"), url-prefix("https://www.bilibili.com/account/history"), url-prefix("https://www.bilibili.com/watchlater"), url-prefix("https://www.bilibili.com/ranking/") {
+@-moz-document regexp("^.*www.bilibili.com/?((index\\.html)|(\\?.*))?"), url-prefix("https://www.bilibili.com/v/"), url-prefix("https://www.bilibili.com/anime/"), url-prefix("https://www.bilibili.com/guochuang/"), url-prefix("https://www.bilibili.com/cinema/"), url-prefix("https://www.bilibili.com/documentary/"), url-prefix("https://www.bilibili.com/movie/"), url-prefix("https://www.bilibili.com/tv/"), url-prefix("https://www.bilibili.com/audio/home"), url-prefix("https://www.bilibili.com/account/history"), url-prefix("https://www.bilibili.com/watchlater"), url-prefix("https://www.bilibili.com/ranking/"), url-prefix("https://www.bilibili.com/list/recommend/") {
   .van-popper-channel .popper__arrow {
     display: none !important;
   }
@@ -2681,6 +2710,7 @@
   .international-header .nav-search #nav_searchform {
     padding: 0 60px 0 20px;
     border: 0;
+    height: auto;
     border-radius: 25px;
     background-color: rgba(0,0,0,0.4) !important;
     overflow: hidden;
@@ -2750,7 +2780,7 @@
     margin-top: 2px;
   }
   .primary-menu-itnl {
-    border: 0;
+    border: 0 !important;
   }
 }
 @-moz-document regexp("^.*/pages/nav/index.*"), regexp("^.*/pay/charge.*"), regexp("^.*/html/live-room-treasurebox/index.*"), regexp("^.*/html/live-lottery/anchor-join.*"), regexp("^.*/html/live-web-weekstar.*") {
@@ -2804,10 +2834,13 @@
     color: var(--c-white) !important;
   }
   .time-line .tab-switch .tab-switch-item.on,
-  .time-line .tab-switch .tab-switch-item:hover {
+  .time-line .tab-switch .tab-switch-item:hover,
+  .manga-panel .tab-switch .tab-switch-item.on,
+  .manga-panel .tab-switch .tab-switch-item:hover {
     color: var(--c-accent) !important;
   }
-  .time-line .tab-switch .tab-switch-item.on {
+  .time-line .tab-switch .tab-switch-item.on,
+  .manga-panel .tab-switch .tab-switch-item.on {
     border-color: var(--c-accent) !important;
   }
   .first-screen {
@@ -3349,7 +3382,8 @@
   .bangumi-index-crumb ul li.on a,
   .bangumi-index-crumb ul li:hover a,
   .sort-item.on span,
-  .filter-block .filter-item-wrapper .filter-item.on {
+  .filter-block .filter-item-wrapper .filter-item.on,
+  .bili-tab .bili-tab-item:hover {
     color: var(--c-accent) !important;
   }
   .primary-menu.border-b,
@@ -3388,6 +3422,15 @@
   }
   .filter-body .pagelistbox {
     margin: 20px 0;
+  }
+  .home-article,
+  .music-article .pager {
+    margin: 30px 0 0;
+  }
+  .bili-wrapper,
+  .cinema-home-wrapper,
+  .music-article {
+    padding-bottom: 40px !important;
   }
   .charge-header-bg {
     background-image: none !important;
@@ -3590,6 +3633,12 @@
   .zr_recomd .zr_user .uin .r_info em {
     line-height: initial;
   }
+  .vd-list-cnt .pagination {
+    margin: 20px 0;
+  }
+  .video-list {
+    padding: 0;
+  }
   .container-body .zr_recomd ul {
     padding: 10px;
     border-radius: 4px;
@@ -3659,7 +3708,8 @@
 }
 @-moz-document url-prefix("https://www.bilibili.com/v/musicplus") {
   .international-footer,
-  .home-ad {
+  .home-ad,
+  .international-header .nav-search-box {
     display: none !important;
   }
   .main-menu .search-bar {
@@ -3995,7 +4045,7 @@
   }
   .active-main,
   .topic-main {
-    margin-bottom: 60px !important;
+    padding-bottom: 60px !important;
   }
   .back-top {
     position: fixed !important;
@@ -4020,7 +4070,8 @@
   }
 }
 @-moz-document url-prefix("https://www.bilibili.com/anime/timeline/"), url-prefix("https://www.bilibili.com/guochuang/timeline/") {
-  .timeline-header .tl-weeks:after {
+  .timeline-header .tl-weeks:after,
+  li.season-item .season-body .season-title span.follow {
     display: none;
   }
   .season-timer .current-timer:before {
@@ -5209,7 +5260,9 @@
   .line-circle,
   .img-clip-wrap .container-bg,
   .security-right,
-  .finish-status {
+  .finish-status,
+  .medal-get-box,
+  .medal-message-box {
     background-color: var(--c-background) !important;
   }
   .security-left .security-list.on,
@@ -5221,10 +5274,12 @@
   .img-clip-wrap .first-change-lb,
   .coupon-content,
   .finish-status .finish-box .box-content,
-  .pendant-vip-box .pendant-list li:hover>div {
+  .pendant-vip-box .pendant-list li:hover>div,
+  .medal-mask {
     background-color: var(--c-hover) !important;
   }
-  .border-line {
+  .border-line,
+  .medal-progress {
     background-color: var(--c-border) !important;
   }
   .re-exp-getexp,
@@ -5242,7 +5297,11 @@
   }
   .home-top-level-upgo,
   .coin-text-p .coin-i,
-  .identify-component .identify-head:before {
+  .identify-component .identify-head:before,
+  .medal-progress>i,
+  .receive-list-page,
+  .receive-list-prev i,
+  .receive-list-next i {
     background-color: var(--c-accent) !important;
   }
   .home-top-msg-name,
@@ -5279,7 +5338,8 @@
     color: var(--c-text) !important;
   }
   .official-home-warapper .card-name,
-  .official-home-warapper .card-info {
+  .official-home-warapper .card-info,
+  .receive-list-page {
     color: var(--c-white) !important;
   }
   .home-top-msg-name-color,
@@ -5295,7 +5355,9 @@
   li.security-list.on span,
   li.security-list:hover span,
   .security-list .child-list li a.bg-blue span,
-  .security-list .child-list li a:hover span {
+  .security-list .child-list li a:hover span,
+  .medal-up-name .link-no-hover,
+  .details-up-name .link-no-hover {
     color: var(--c-accent) !important;
   }
   .index-info,
@@ -5341,13 +5403,16 @@
   .game-package-wrapper,
   .title-right-link,
   .finish-status .finish-box,
-  .finish-status .finish-box .box-title {
+  .finish-status .finish-box .box-title,
+  .medal-receive-title {
     border-color: var(--c-border) !important;
   }
   .active .tabs-normal-txt,
   .tabs-nav .active,
   .title-right-link:hover,
-  .face-nav>.active {
+  .face-nav>.active,
+  .tab-mk2.active,
+  .face-g-list .mp-block .right ul li.base.reach .round {
     border-color: var(--c-accent) !important;
   }
   .h-list-item,
@@ -5355,7 +5420,9 @@
   .big-more-tool-btn,
   .indentify-page,
   .identify-component .identify-head,
-  .pendant-list li>div {
+  .pendant-list li>div,
+  .medal-get-box,
+  .medal-message-box {
     border: 0 !important;
   }
   .pendant-list li:hover>div {
@@ -5651,13 +5718,20 @@
   .divider {
     background-color: var(--c-border) !important;
   }
+  .user-panel-ctnr .msg-hinter,
+  .user-panel-ctnr .user-panel .content-ctnr .msg-count,
+  .shortcuts-ctnr .shortcut-item .hinter,
+  .shortcuts-ctnr .shortcut-item .num-hinter {
+    background-color: var(--c-accent) !important;
+  }
   .shortcuts-ctnr .shortcut-item .list-item span {
     color: var(--c-title) !important;
   }
   .nav-ctnr .link-navbar .shortcuts-ctnr .shortcut-item .list-item span,
   .live-room-app .link-navbar .shortcuts-ctnr .shortcut-item .list-item span,
   .nav-ctnr .link-navbar .nav-item span,
-  .live-room-app .link-navbar .nav-item span {
+  .live-room-app .link-navbar .nav-item span,
+  .user-panel-ctnr .user-panel .content-ctnr .msg-count {
     color: var(--c-white) !important;
   }
   .nav-ctnr .link-navbar .nav-item:hover span,
@@ -6030,9 +6104,7 @@
   }
   .draw-full-cntr .function-bar.draw,
   .tab-candidate>span:after,
-  .tabs .item>span:after,
-  .shortcuts-ctnr .shortcut-item .hinter,
-  .shortcuts-ctnr .shortcut-item .num-hinter {
+  .tabs .item>span:after {
     background-color: var(--c-accent) !important;
   }
   .room-bg::after {
@@ -8641,25 +8713,49 @@
   }
 }
 @-moz-document url-prefix("https://www.bilibili.com/audio/") {
-  .contri-condition .contri-select.active::after {
+  .contri-condition .contri-select.active::after,
+  .sub-nav-m .tips .t-arrow,
+  .container .host-list-layout .hot-list-wrap .bg-wrap .hot-list-mask,
+  .container .hot-list .music-menu-list .menu-type .type-triangle {
     display: none !important;
   }
   .ticket-container,
-  .list-info .list-li.even {
+  .list-info .list-li.even,
+  .container .song-list,
+  .container .host-list-layout .hot-list-wrap,
+  .container .musician-recommend .recommend-item {
     background-color: var(--c-background) !important;
   }
   .list-info .list-li.odd,
-  .song-change {
+  .song-change,
+  .container .song-list .song-li .song-shadow,
+  .container .host-list-layout .hot-list-wrap .bg-wrap,
+  .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .left-img,
+  .audioplayer .ap-controller .ap-controller-center .ap-buffer-bar,
+  .audioplayer .ap-play-button svg {
     background-color: var(--c-hover) !important;
+  }
+  .audioplayer .ap-controller .ap-controller-center .ap-play-bar-wrap,
+  .audioplayer .ap-controller .ap-controller-right .ap-volume-bar-wrap {
+    background-color: var(--c-border) !important;
   }
   #app {
     background-color: transparent !important;
+  }
+  .audioplayer .ap-controller .ap-controller-center .ap-progress-bar,
+  .audioplayer .ap-controller .ap-controller-right .ap-volume-bar,
+  .audioplayer .ap-controller .ap-controller-right .ap-volume-thumb-dot {
+    background-color: var(--c-accent) !important;
   }
   .music-upload-wrapper .upload-music-bar-wrapper .pload-music-bar-btn .pload-music-bar-btn-text,
   .compila-condition .compila-type,
   .list-title,
   .list-theme,
-  .song-change {
+  .song-change,
+  .creation-title,
+  .song-title,
+  .container .middle-tip,
+  .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-title {
     color: var(--c-title) !important;
   }
   .music-upload-wrapper .upload-music-bar-wrapper .pload-music-bar-btn .pload-music-bar-btn-tips,
@@ -8667,17 +8763,32 @@
   .contri-condition .contri-select,
   .contri-condition .contri-sort,
   .list-share .font24,
-  .list-info .list-li .song-title .iconfont {
+  .list-info .list-li .song-title .iconfont,
+  .container .song-list .song-li .content .num {
     color: var(--c-text) !important;
   }
+  .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn .iconfont {
+    color: var(--c-white) !important;
+  }
   .contri-condition .contri-select.active,
-  .list-info .list-li .song-title .song-float:hover {
+  .list-info .list-li .song-title .song-float:hover,
+  .sub-nav-m .sub-nav-item a.nav-active,
+  .sub-nav-m .sub-nav-item a:hover,
+  .container .host-list-layout .hot-list-wrap .show-more-song:hover .iconfont,
+  .container .host-list-layout .hot-list-wrap .show-more-song:hover,
+  .container .host-list-layout .hot-list-wrap .hot-song-list .song-info .song-content:hover .song-title,
+  .container .hot-list .music-menu-list .choose-menu {
     color: var(--c-accent) !important;
   }
-  .share-board .share-btn .share-type.list-border {
+  .share-board .share-btn .share-type.list-border,
+  .container .host-list-layout .hot-list-wrap .hot-song-list,
+  .container .host-list-layout .hot-list-wrap .show-more-song,
+  .container .musician-recommend .recommend-item {
     border-color: var(--c-border) !important;
   }
-  .contri-condition .contri-select.active {
+  .contri-condition .contri-select.active,
+  .container .song-list .song-li .song-shadow,
+  .container .hot-list .music-menu-list .choose-menu {
     border-color: var(--c-accent) !important;
   }
   .list-info {
@@ -8687,8 +8798,79 @@
   .share-board .share-btn {
     border: 1px solid var(--c-border) !important;
   }
+  .audioplayer .ap-button:hover svg path,
+  .audioplayer .ap-button:hover svg polygon,
+  .audioplayer .ap-play-button svg path,
+  .audioplayer .ap-play-button svg polygon {
+    fill: var(--c-accent) !important;
+  }
+  .container .song-list .song-li:nth-child(6n) {
+    margin-right: 0 !important;
+  }
+  .container .song-list .song-li {
+    margin-right: 16px !important;
+  }
   .pager .pages .page-item button {
     padding: 0 10px;
+  }
+  .change-song {
+    border: 0 !important;
+    background-color: transparent !important;
+    font-size: 0 !important;
+  }
+  .container .song-list {
+    padding: 10px;
+    border-radius: 4px;
+  }
+  .list-info,
+  .follow-container .follow-right .follow-intro .follow-fold {
+    background-color: var(--c-background) !important;
+  }
+  .creation-li .creation-left .creation-shadow,
+  .song-li .song-left .song-img,
+  .song-li .song-left .song-shadow {
+    background-color: var(--c-hover) !important;
+  }
+  .song-intro,
+  .album-title,
+  .mycollect-theme,
+  .mycollect-padding .mycollect-title {
+    color: var(--c-title) !important;
+  }
+  .font24,
+  .song-lrc,
+  .hotsong-li .hotsong-upname,
+  .mycollect-padding .mycollect-upname,
+  .mycollect-padding .mycollect-publish {
+    color: var(--c-text) !important;
+  }
+  .share-board .list-share:hover .iconfont,
+  .share-board .song-share:hover .iconfont,
+  .follow-container .follow-right .follow-up,
+  .follow-container .follow-right .follow-intro .follow-fold,
+  .song-title .font18,
+  .hotsong-li .font24:hover {
+    color: var(--c-accent) !important;
+  }
+  .song-comment,
+  .song-title,
+  .mycollect-info {
+    border-color: var(--c-border) !important;
+  }
+  .creation-li .creation-left .creation-shadow,
+  .song-li .song-left .song-shadow {
+    border-color: var(--c-accent) !important;
+  }
+  .list-info {
+    border-radius: 4px;
+  }
+  .bb-comment {
+    padding: 10px;
+  }
+  .bb-comment,
+  .gridview-sidebar {
+    border-radius: 4px;
+    background-color: var(--c-background) !important;
   }
 }
 @-moz-document url-prefix("https://t.bilibili.com/") {
