@@ -6094,12 +6094,15 @@
   .recharge-stores-ctnr .tab-box,
   .sub-tab-box .item.active,
   .draw-full-cntr .function-bar,
-  .pay-note-panel {
+  .pay-note-panel,
+  .gift-item.buy.hover,
+  .gift-item.buy:hover {
     background-color: var(--c-hover) !important;
   }
   .bili-share-pc .weixin-hover .qr-before,
   .live-record-card-cntr,
-  .week-rank-iframe {
+  .week-rank-iframe,
+  .score-box .pk-main {
     background-color: transparent !important;
   }
   .draw-full-cntr .function-bar.draw,
@@ -6142,7 +6145,10 @@
   .guard-rank-cntr .rank-cntr .rank-list-box .online a.live-skin-main-a-text,
   .mailbox-cntr header,
   .tabs .item.active span,
-  .tabs .item:hover span {
+  .tabs .item:hover span,
+  .start-part .count-down,
+  .chaos-pk-result-ctnr .result-panel .result-tab div.active,
+  .common-popup-wrap .box header {
     color: var(--c-accent) !important;
   }
   .room-introduction-tags,
@@ -6150,11 +6156,13 @@
   .rank-list-ctnr,
   .tabs .tab-list .item,
   .edit-button,
-  .bili-share-pc {
+  .bili-share-pc,
+  .result-anchor-box {
     border-color: var(--c-border) !important;
   }
   .recharge-store-box ul.select-list .item.active,
-  .award-list-cntr .award-list-cntr .award-list .award-item img {
+  .award-list-cntr .award-list-cntr .award-list .award-item img,
+  .chaos-pk-result-ctnr .result-panel .result-tab div.active {
     border-color: var(--c-accent) !important;
   }
   .content-wrapper,
@@ -9687,7 +9695,8 @@
   .rank-tab-wrap .rank-tab li:hover,
   .rank-item .content .info .pts div,
   .rank-item .content .info:hover .title,
-  .other strong {
+  .other strong,
+  .rank-main-container a:hover {
     color: var(--c-accent) !important;
   }
   .rank-item,
@@ -9696,6 +9705,9 @@
   }
   .rank-menu li.active {
     border-color: var(--c-accent) !important;
+  }
+  .rank-item:last-child {
+    border: 0;
   }
   .rank-item:hover {
     box-shadow: none;
@@ -9706,5 +9718,9 @@
   .rank-list-wrap .rank-list {
     border-radius: 4px;
     background-color: var(--c-background);
+  }
+  .main-inner .rank-container {
+    margin-bottom: 0;
+    padding-bottom: 40px;
   }
 }
