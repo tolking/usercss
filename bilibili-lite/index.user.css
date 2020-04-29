@@ -572,7 +572,8 @@
   .pendant-list li .pendant-btn,
   .btn-dufault,
   .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn,
-  .song-playbtn {
+  .song-playbtn,
+  .officialAccount-showContent-btn {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -694,7 +695,8 @@
   .pendant-list li .pendant-btn span,
   .btn-dufault span,
   .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn span,
-  .song-playbtn span {
+  .song-playbtn span,
+  .officialAccount-showContent-btn span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -810,7 +812,8 @@
   .pendant-list li .pendant-btn::after,
   .btn-dufault::after,
   .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn::after,
-  .song-playbtn::after {
+  .song-playbtn::after,
+  .officialAccount-showContent-btn::after {
     content: '';
     display: block;
     position: absolute;
@@ -935,7 +938,8 @@
   .pendant-list li .pendant-btn:hover,
   .btn-dufault:hover,
   .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn:hover,
-  .song-playbtn:hover {
+  .song-playbtn:hover,
+  .officialAccount-showContent-btn:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -1051,7 +1055,8 @@
   .pendant-list li .pendant-btn:hover span,
   .btn-dufault:hover span,
   .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn:hover span,
-  .song-playbtn:hover span {
+  .song-playbtn:hover span,
+  .officialAccount-showContent-btn:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -1167,7 +1172,8 @@
   .pendant-list li .pendant-btn:hover::after,
   .btn-dufault:hover::after,
   .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn:hover::after,
-  .song-playbtn:hover::after {
+  .song-playbtn:hover::after,
+  .officialAccount-showContent-btn:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -1715,7 +1721,9 @@
   .live-container .status,
   .video-card-common .title .live,
   .info-item .notice-icon,
-  .live-record-card-cntr .cover .corner.new {
+  .live-record-card-cntr .cover .corner.new,
+  .block-list-item-label,
+  .multi-page .cur-list .list-box li .pay-label {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
@@ -1790,7 +1798,9 @@
   .live-container .status:hover,
   .video-card-common .title .live:hover,
   .info-item .notice-icon:hover,
-  .live-record-card-cntr .cover .corner.new:hover {
+  .live-record-card-cntr .cover .corner.new:hover,
+  .block-list-item-label:hover,
+  .multi-page .cur-list .list-box li .pay-label:hover {
     color: var(--c-white) !important;
   }
   .gg-icon,
@@ -2442,7 +2452,9 @@
   .comment-bilibili-fold .comment-header .tabs-order li.on,
   .paging-box .current,
   .comment .comment-selecotr .all-comments.active,
-  .comment .comment-selecotr .sortByHot.active {
+  .comment .comment-selecotr .sortByHot.active,
+  .bb-comment .comment-header .tabs-order li:hover,
+  .comment-bilibili-fold .comment-header .tabs-order li:hover {
     color: var(--c-accent) !important;
   }
   .bb-comment .comment-header,
@@ -2550,7 +2562,8 @@
   .dynamic-link-hover-bg:hover {
     background-color: var(--c-background) !important;
   }
-  .imagesbox .boost-control {
+  .imagesbox .boost-control,
+  .feed-tag .core-style {
     background-color: var(--c-hover) !important;
   }
   .video-container .text-area .title,
@@ -2573,7 +2586,8 @@
   .imagesbox .boost-control li:hover i,
   .clock-time,
   .user-name.big-vip a,
-  .expand-btn {
+  .expand-btn,
+  .card .button-area .more-button:hover {
     color: var(--c-accent) !important;
   }
   .clock-time::after,
@@ -2584,8 +2598,10 @@
     border-color: var(--c-border) !important;
   }
   .feed-card .card,
+  .feed-tag .card,
   .feed .card,
-  .dynamic-link-hover-bg:hover {
+  .dynamic-link-hover-bg:hover,
+  .feed-tag .core-style {
     border: 0 !important;
   }
   .text-area {
@@ -2783,7 +2799,7 @@
     border: 0 !important;
   }
 }
-@-moz-document regexp("^.*/pages/nav/index.*"), regexp("^.*/pay/charge.*"), regexp("^.*/html/live-room-treasurebox/index.*"), regexp("^.*/html/live-lottery/anchor-join.*"), regexp("^.*/html/live-web-weekstar.*") {
+@-moz-document regexp("^.*/pages/nav/index.*"), regexp("^.*/pay/charge.*"), regexp("^.*/html/live-room-treasurebox/index.*"), regexp("^.*/html/live-lottery/anchor-join.*"), regexp("^.*/html/live-web-weekstar.*"), regexp("^.*/activity-feedtag.*") {
   html {
     background-image: none;
   }
@@ -2791,7 +2807,7 @@
     background-color: transparent;
   }
 }
-@-moz-document regexp("^.*/pay/charge.*"), regexp("^.*/html/live-room-treasurebox/index.*"), regexp("^.*/html/live-lottery/anchor-join.*") {
+@-moz-document regexp("^.*/pay/charge.*"), regexp("^.*/html/live-room-treasurebox/index.*"), regexp("^.*/html/live-lottery/anchor-join.*"), regexp("^.*/activity-feedtag.*") {
   html {
     background-color: transparent;
   }
@@ -3908,43 +3924,6 @@
     content: none !important;
   }
 }
-@-moz-document url-prefix("https://www.bilibili.com/v/cheese/") {
-  .bili-header-m .nav-search-box {
-    display: none;
-  }
-  .tickets .nav {
-    background-color: var(--c-background) !important;
-  }
-  .wrap .left .tabbar .router-link-active,
-  .wrap .left .tabbar .tab_item:hover {
-    background-color: var(--c-hover) !important;
-  }
-  .wrap {
-    background-color: transparent !important;
-  }
-  .tickets .nav .navtab {
-    color: var(--c-title) !important;
-  }
-  .paid .invalid .invalid_word,
-  .exchange .rule .rule_desc {
-    color: var(--c-text) !important;
-  }
-  .wrap .left .tabbar .router-link-active,
-  .tickets .nav .navtab_active,
-  .tickets .nav .navtab:hover {
-    color: var(--c-accent) !important;
-  }
-  .wrap,
-  .wrap .right {
-    border: 0 !important;
-  }
-  .wrap .left .tabbar .tab_item {
-    border-radius: 10px;
-  }
-  .wrap .left .tabbar {
-    margin-top: 100px;
-  }
-}
 @-moz-document url-prefix("https://www.bilibili.com/blackboard/"), url-prefix("https://www.bilibili.com/html/join-list.html") {
   .activity-main .banner,
   .international-footer,
@@ -4132,10 +4111,11 @@
     backdrop-filter: blur(5px);
   }
 }
-@-moz-document url-prefix("https://www.bilibili.com/video/"), url-prefix("https://www.bilibili.com/bangumi/"), url-prefix("https://player.bilibili.com/"), url-prefix("https://www.bilibili.com/watchlater"), url-prefix("https://www.bilibili.com/blackboard/newplayer.html") {
+@-moz-document url-prefix("https://www.bilibili.com/video/"), url-prefix("https://www.bilibili.com/bangumi/"), url-prefix("https://player.bilibili.com/"), url-prefix("https://www.bilibili.com/watchlater"), url-prefix("https://www.bilibili.com/blackboard/newplayer.html"), url-prefix("https://www.bilibili.com/cheese/play/") {
   .video-page-special-card,
   .user-card-m iframe,
-  .bili-msg iframe {
+  .bili-msg iframe,
+  .collection-m .layout {
     display: none;
   }
   .bili-header-m .nav-menu .up-load .u-link {
@@ -4279,7 +4259,7 @@
   .v-wrap {
     margin-bottom: 0 !important;
   }
-  #comment,
+  #comment .comment,
   #comment_module,
   .main-container .media-info,
   .main-container .review-module,
@@ -4322,7 +4302,7 @@
   .bilibili-player-video-btn-fullscreen:hover .bp-svgicon svg .st0 {
     fill: var(--c-accent) !important;
   }
-  #comment,
+  #comment .comment,
   #comment_module,
   .main-container .media-info,
   .r-con .recommend-list .rec-list,
@@ -8496,7 +8476,8 @@
   .article-danmu-wrp .danmu-box .danmu-table .danmu-item,
   .dc-top-link_wrap .tabs .tabs__header,
   .new-link-top-wrap .new-link-top-container,
-  #edit-page .block-hr {
+  #edit-page .block-hr,
+  .link-top-container {
     border: 0 !important;
   }
   .danmu-container,
@@ -9722,5 +9703,133 @@
   .main-inner .rank-container {
     margin-bottom: 0;
     padding-bottom: 40px;
+  }
+}
+@-moz-document url-prefix("https://www.bilibili.com/cheese") {
+  .time-line-wrapper .line .point-wrapper,
+  .backTop-item,
+  .backTop-slide,
+  .buyListBar-showContent,
+  .officialAccount-showContent {
+    background-color: var(--c-background) !important;
+  }
+  .nav-wrapper {
+    background-color: var(--c-hover) !important;
+  }
+  .time-line-wrapper .line,
+  .time-line-wrapper .line .point {
+    background-color: var(--c-border) !important;
+  }
+  .backTop-item:hover {
+    background-color: var(--c-accent) !important;
+  }
+  .block-title {
+    color: var(--c-title) !important;
+  }
+  .block-page-progress,
+  .block-list-item-desc,
+  .block-list-item-price.origin,
+  .time-line-wrapper .time {
+    color: var(--c-text) !important;
+  }
+  .backTop-item:hover .buyListBar-desc--txt,
+  .backTop-item:hover .officialAccount-desc--txt {
+    color: var(--c-white) !important;
+  }
+  .block-list-item-price .price-pre,
+  .myClassroom:hover,
+  .nav .item:hover p {
+    color: var(--c-accent) !important;
+  }
+  .backTop-item {
+    border-color: var(--c-border) !important;
+  }
+  .backTop-item:hover {
+    border-color: var(--c-accent) !important;
+  }
+  .buyListBar,
+  .officialAccount {
+    border: 1px solid var(--c-border);
+  }
+  .slider-wrapper .slider-content {
+    margin: -10px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: var(--c-background) !important;
+  }
+  .block-list .slider-contro .slider-next,
+  .block-list .slider-contro .slider-prev {
+    border-radius: 50%;
+    background-color: var(--c-hover) !important;
+  }
+  .backTop-item .go-top {
+    border: 0;
+    background-color: transparent !important;
+    color: var(--c-title) !important;
+  }
+  .backTop-item .go-top::after {
+    content: none !important;
+  }
+  .v-wrap .r-con .notice {
+    background-color: var(--c-background) !important;
+  }
+  .v-wrap .r-con .notice .right.canReceive,
+  .season-tabs .tabs a.on {
+    color: var(--c-accent) !important;
+  }
+  .season-info,
+  .season-tabs .tabs,
+  .season-detail .content-img,
+  .season-detail .faq.faq,
+  .season-detail .note.faq {
+    border-color: var(--c-border) !important;
+  }
+  .season-tabs .tabs a.on {
+    border-color: var(--c-accent) !important;
+  }
+  .v-wrap .r-con .notice {
+    border: 1px solid var(--c-border);
+  }
+  .bb-comment {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: var(--c-background) !important;
+  }
+}
+@-moz-document url-prefix("https://www.bilibili.com/v/cheese/") {
+  .bili-header-m .nav-search-box {
+    display: none;
+  }
+  .tickets .nav {
+    background-color: var(--c-background) !important;
+  }
+  .wrap .left .tabbar .router-link-active,
+  .wrap .left .tabbar .tab_item:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .wrap {
+    background-color: transparent !important;
+  }
+  .tickets .nav .navtab {
+    color: var(--c-title) !important;
+  }
+  .paid .invalid .invalid_word,
+  .exchange .rule .rule_desc {
+    color: var(--c-text) !important;
+  }
+  .wrap .left .tabbar .router-link-active,
+  .tickets .nav .navtab_active,
+  .tickets .nav .navtab:hover {
+    color: var(--c-accent) !important;
+  }
+  .wrap,
+  .wrap .right {
+    border: 0 !important;
+  }
+  .wrap .left .tabbar .tab_item {
+    border-radius: 10px;
+  }
+  .wrap .left .tabbar {
+    margin-top: 100px;
   }
 }
