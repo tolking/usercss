@@ -45,12 +45,27 @@
 - 游戏中心
 - 稍后再看
 - 排行榜
+- 课堂
 
 ### 未来
 
 - 更多界面
 - 界面、样式优化
 - 增加合适的动画
+
+## 预览图
+
+> 默认浅色模式
+![默认浅色模式](https://i.loli.net/2020/04/30/8cD3kFpALYnhwS1.jpg)
+
+> 默认深色模式
+![默认深色模式](https://i.loli.net/2020/04/30/Jl7dyAVrzkZbX6Y.jpg)
+
+> 自定义背景
+![自定义背景](https://i.loli.net/2020/04/30/tGwUXrxZmLj5zl2.jpg)
+
+> 自定义背景遮罩
+![自定义背景遮罩](https://i.loli.net/2020/04/30/u47g6adA1w9PBJR.jpg)
 
 ## 其它说明
 
