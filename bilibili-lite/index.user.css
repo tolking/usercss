@@ -5719,7 +5719,8 @@
   .nav-ctnr .link-navbar .shortcuts-ctnr .shortcut-item:hover .list-item span,
   .live-room-app .link-navbar .shortcuts-ctnr .shortcut-item:hover .list-item span,
   .user-item:hover .username,
-  .activity-item-ctnr:hover .info-ctnr .first-line .username {
+  .activity-item-ctnr:hover .info-ctnr .first-line .username,
+  .calendar-checkin .checkin-btn:hover {
     color: var(--c-accent) !important;
   }
   .info-item-ctnr {
@@ -5854,7 +5855,8 @@
   }
   .bilibili-live-player[data-player-type='player-home'] .bilibili-live-player-enter-tips:hover,
   .blp-red-tip:after,
-  .living-icon-col {
+  .living-icon-col,
+  .notice-item .notice-main .notice-title:before {
     background-color: var(--c-accent) !important;
   }
   .notice-item .notice-main .notice-title,
@@ -5872,12 +5874,14 @@
   .notice-item .notice-main .notice-time span {
     color: var(--c-text) !important;
   }
-  .activated {
+  .activated,
+  .bilibili-live-player[data-player-type='player-home'] .bilibili-live-player-enter-tips {
     color: var(--c-accent) !important;
   }
   .cover-ctnr .area-name,
   .aside-item .aside-item-tips,
-  .ysly-room-ctnr .item .info span {
+  .ysly-room-ctnr .item .info span,
+  .bilibili-live-player[data-player-type='player-home'] .bilibili-live-player-enter-tips:hover {
     color: var(--c-white) !important;
   }
   .bilibili-live-player[data-player-type='player-home'] .bilibili-live-player-enter-tips,
@@ -5889,6 +5893,12 @@
   }
   .highlight-area-item {
     box-shadow: none !important;
+  }
+  .room-ctnr {
+    margin: 16px -10px 0 !important;
+    padding: 20px 10px 0;
+    border-radius: 4px;
+    background-color: var(--c-background);
   }
   .bilibili-live-player button,
   .live-player-ctnr button,
@@ -5932,17 +5942,18 @@
   .wrapper .content .state-null>.txt>p:before {
     display: none !important;
   }
-  #app-ctnr .content,
-  .child-nav,
   .top3 li div.content-detail,
   .rank-detail .top50,
   .rank-detail .my-info,
-  .progress-tv {
+  .progress-tv,
+  #comment {
     background-color: var(--c-background) !important;
   }
   .rank-detail .top50 li:nth-child(2n) {
     background-color: var(--c-hover) !important;
   }
+  #app-ctnr .content,
+  .child-nav,
   .rank-detail dd .score {
     background-color: transparent !important;
   }
@@ -5957,7 +5968,9 @@
     color: var(--c-white) !important;
   }
   .list-filter-bar .item-text.active span,
-  .list-filter-bar .item-text:hover span {
+  .list-filter-bar .item-text:hover span,
+  .child-nav li.active,
+  .child-nav li:hover {
     color: var(--c-accent) !important;
   }
   .wrap .state-null>.txt,
@@ -5971,11 +5984,28 @@
   .wrapper .content .state-null>.txt {
     display: inline-block;
   }
+  .content-panel .card-items li {
+    margin: 0 13.7px 24px !important;
+  }
+  .recommend-list .wrapper {
+    margin: 20px 0;
+  }
+  #comment {
+    margin: 100px auto 0 !important;
+  }
   .main-content .main-container {
     padding-top: 60px;
   }
   .main-ctnr .content-ctn .header {
     padding-top: 80px;
+  }
+  .content-panel .card-items,
+  .recommend-list .list,
+  .wrap .list {
+    margin: 16px -10px 0 !important;
+    padding: 20px 10px 0 !important;
+    border-radius: 4px;
+    background-color: var(--c-background);
   }
   .main-container>h1.title>span {
     border-radius: 10px;
@@ -5985,12 +6015,14 @@
   .main-container>h1.title>span::before {
     display: none !important;
   }
-  .content-panel>h1.title>span {
+  .content-panel>h1.title>span,
+  .recommend-list .recommend-header .refresh {
     border: 0 !important;
     font-size: 0 !important;
   }
-  .content-panel>h1.title>span .icon-font {
-    font-size: 20px;
+  .content-panel>h1.title>span .icon-font,
+  .recommend-list .recommend-header .refresh .icon-font {
+    font-size: 20px !important;
     color: var(--c-accent);
   }
   .list-filter-bar .sort-box .item.active,
