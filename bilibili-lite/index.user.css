@@ -5914,6 +5914,7 @@
   .search-bar-ctnr .search-bar .search-btn,
   .link-panel-ctnr .load-more .load-more-btn,
   .attention-live .switch-btn {
+    overflow: visible !important;
     background-color: transparent !important;
     color: var(--c-text) !important;
   }
@@ -6122,6 +6123,11 @@
   .gift-item.buy:hover {
     background-color: var(--c-hover) !important;
   }
+  .blpui-slider-container.vertical-slider .blpui-slider-span:before,
+  .blpui-slider-container.horizontal-slider,
+  .blpui-slider-container.horizontal-slider .slider-value {
+    background-color: var(--c-white) !important;
+  }
   .bili-share-pc .weixin-hover .qr-before,
   .live-record-card-cntr,
   .week-rank-iframe,
@@ -6130,7 +6136,10 @@
   }
   .draw-full-cntr .function-bar.draw,
   .tab-candidate>span:after,
-  .tabs .item>span:after {
+  .tabs .item>span:after,
+  .blpui-slider-container.vertical-slider .blpui-slider-span.slider-span-active:after,
+  .blpui-slider-container.horizontal-slider .slider-process,
+  .blpui-slider-container.horizontal-slider .slider-handle {
     background-color: var(--c-accent) !important;
   }
   .room-bg::after {
@@ -6156,7 +6165,10 @@
   .hour-rank .hour-rank-content,
   .attention-btn-ctnr .left-part .follow-text,
   .fans-medal-item .label,
-  .draw-full-cntr .function-bar.draw span {
+  .draw-full-cntr .function-bar.draw span,
+  .bilibili-live-player .blpui-btn.text-btn > span,
+  .bilibili-live-player .blpui-btn.icon-btn > i,
+  .bilibili-live-player-video-controller-hide-danmaku-container .hide-danmaku-title {
     color: var(--c-white) !important;
   }
   .gift-info .btn-rule,
@@ -6171,7 +6183,10 @@
   .tabs .item:hover span,
   .start-part .count-down,
   .chaos-pk-result-ctnr .result-panel .result-tab div.active,
-  .common-popup-wrap .box header {
+  .common-popup-wrap .box header,
+  .bilibili-live-player .blpui-btn.icon-btn:hover > i,
+  .bilibili-live-player .blpui-btn.text-btn:hover > span,
+  .bilibili-live-player .blpui-btn.text-btn.active > span {
     color: var(--c-accent) !important;
   }
   .room-introduction-tags,
@@ -6212,7 +6227,8 @@
     left: 50%;
   }
   .link-navbar-ctnr,
-  .bili-share-pc .weixin-hover .qr-before {
+  .bili-share-pc .weixin-hover .qr-before,
+  .blpui-slider-container.horizontal-slider .slider-handle {
     box-shadow: none;
   }
   .link-navbar .main-ctnr .nav-logo {
