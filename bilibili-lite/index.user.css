@@ -4219,7 +4219,8 @@
   .main-container .media-info .media-right .media-count {
     color: var(--c-text) !important;
   }
-  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active {
+  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active,
+  .bilibili-player .bilibili-player-area .bilibili-player-video-control .bilibili-player-video-btn .bilibili-player-video-quality-menu .bilibili-player-bigvip {
     color: var(--c-white) !important;
   }
   .coin-operated-m .coin-title span,
@@ -4247,7 +4248,9 @@
   .coin-dialog-mask .coin-operated .coin-title span,
   .main-container .review-module .review-list .review-item .review-header .review-author.is-vip,
   .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-management>:hover,
-  .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-management>:hover i {
+  .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-management>:hover i,
+  .bui-select.bui-select-quality-menu .bui-select-item.bui-select-item-active span,
+  .bilibili-player-video-danmaku-setting-left-block-content .bilibili-player-block-filter-type:hover .bilibili-player-block-filter-label {
     color: var(--c-accent) !important;
   }
   .bilibili-player-feedback,
@@ -4306,7 +4309,7 @@
   .bilibili-player-iconfont:hover .bp-svgicon svg g,
   .bilibili-player-video-btn:hover .bp-svgicon svg,
   .selection-icon:hover .bp-svgicon svg,
-  .bilibili-player-video-danmaku-setting:hover .bp-svgicon svg,
+  .bilibili-player-video-danmaku-setting-left-block-content .bilibili-player-block-filter-type:hover .bilibili-player-block-filter-image .bp-svgicon svg,
   .bilibili-player-video-danmaku-switch:hover .bp-svgicon svg,
   .bilibili-player-video-btn-fullscreen:hover .bp-svgicon svg .st0 {
     fill: var(--c-accent) !important;
@@ -6139,7 +6142,9 @@
   .tabs .item>span:after,
   .blpui-slider-container.vertical-slider .blpui-slider-span.slider-span-active:after,
   .blpui-slider-container.horizontal-slider .slider-process,
-  .blpui-slider-container.horizontal-slider .slider-handle {
+  .blpui-slider-container.horizontal-slider .slider-handle,
+  .blpui-slider-container.vertical-slider .blpui-slider-span > span,
+  .draw-full-cntr .count {
     background-color: var(--c-accent) !important;
   }
   .room-bg::after {
@@ -6168,7 +6173,8 @@
   .draw-full-cntr .function-bar.draw span,
   .bilibili-live-player .blpui-btn.text-btn > span,
   .bilibili-live-player .blpui-btn.icon-btn > i,
-  .bilibili-live-player-video-controller-hide-danmaku-container .hide-danmaku-title {
+  .bilibili-live-player-video-controller-hide-danmaku-container .hide-danmaku-title,
+  .draw-full-cntr .count {
     color: var(--c-white) !important;
   }
   .gift-info .btn-rule,
@@ -6186,7 +6192,8 @@
   .common-popup-wrap .box header,
   .bilibili-live-player .blpui-btn.icon-btn:hover > i,
   .bilibili-live-player .blpui-btn.text-btn:hover > span,
-  .bilibili-live-player .blpui-btn.text-btn.active > span {
+  .bilibili-live-player .blpui-btn.text-btn.active > span,
+  .draw-full-cntr .gift-sender-info span {
     color: var(--c-accent) !important;
   }
   .room-introduction-tags,
@@ -7243,10 +7250,13 @@
   .rank-list {
     display: none !important;
   }
-  .vertical-block-card,
   .newbie-awarder .award-dialog .award-dialog-container,
-  .hot-category {
+  .hot-category,
+  .section-navigator {
     background-color: var(--c-background) !important;
+  }
+  .vertical-block-card {
+    background-color: transparent !important;
   }
   .section-title,
   .item-title,
@@ -7326,32 +7336,58 @@
   .title-tooltip {
     display: none !important;
   }
+  .purchase-panel {
+    background-color: var(--c-background) !important;
+  }
   .list-data .list-item.last-read,
-  .list-data .list-item:hover {
+  .list-data .list-item:hover,
+  .discount-hinter,
+  .purchase-panel .action-buttons button.action-button.selected {
     background-color: var(--c-hover) !important;
   }
   .header-info .manga-info .season-introduction .size-ruler {
     background-color: transparent !important;
   }
-  .list-item .short-title {
+  .list-item .short-title,
+  .purchase-panel .panel-title {
     color: var(--c-title) !important;
+  }
+  .purchase-panel .summary .price .orig,
+  .purchase-panel .summary .price .final .rmb-price {
+    color: var(--c-text) !important;
   }
   .list-data .list-item.last-read div,
   .list-data .list-item:hover div,
-  .episode-list-component .episode-list .list-header .header-item.selected {
+  .manga-detail .episode-list-component .episode-list .list-header button.header-item.selected,
+  .manga-detail .episode-list-component .episode-list .list-header button.header-item:hover,
+  .purchase-panel .summary .price .final div {
     color: var(--c-accent) !important;
+  }
+  .discount-hinter,
+  .purchase-panel {
+    border-color: var(--c-border) !important;
   }
   .list-data .list-item.last-read,
   .list-data .list-item:hover {
     border-color: var(--c-accent) !important;
   }
+  .purchase-panel .action-buttons .action-button .tag.discount {
+    border-radius: 0 0 6px 0;
+    background-image: none !important;
+    background-color: var(--c-accent) !important;
+    color: var(--c-white) !important;
+  }
   .list-item,
-  .episode-list-component .episode-list .list-header .header-item {
+  .episode-list-component .episode-list .list-header .header-item,
+  .purchase-panel .action-buttons .action-button,
+  .purchase-panel .close-button {
     border-color: var(--c-border) !important;
     background-color: transparent !important;
   }
   .list-item::after,
-  .episode-list-component .episode-list .list-header .header-item::after {
+  .episode-list-component .episode-list .list-header .header-item::after,
+  .purchase-panel .action-buttons .action-button::after,
+  .purchase-panel .close-button::after {
     content: none !important;
   }
   .app-layout .size-ruler.p-relative {
