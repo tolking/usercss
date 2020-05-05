@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.4
+@version        1.2.5
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -1265,7 +1265,8 @@
   .bcc-pagination-item,
   .h .h-message,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn,
-  .follow-container .follow-right .unfollow-btn {
+  .follow-container .follow-right .unfollow-btn,
+  .wide-members .avatar-list i {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -1361,7 +1362,8 @@
   .bcc-pagination-item span,
   .h .h-message span,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn span,
-  .follow-container .follow-right .unfollow-btn span {
+  .follow-container .follow-right .unfollow-btn span,
+  .wide-members .avatar-list i span {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -1453,7 +1455,8 @@
   .bcc-pagination-item::after,
   .h .h-message::after,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn::after,
-  .follow-container .follow-right .unfollow-btn::after {
+  .follow-container .follow-right .unfollow-btn::after,
+  .wide-members .avatar-list i::after {
     content: none !important;
   }
   .default:hover,
@@ -1545,7 +1548,8 @@
   .bcc-pagination-item:hover,
   .h .h-message:hover,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn:hover,
-  .follow-container .follow-right .unfollow-btn:hover {
+  .follow-container .follow-right .unfollow-btn:hover,
+  .wide-members .avatar-list i:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
     color: var(--c-text) !important;
@@ -1639,7 +1643,8 @@
   .bcc-pagination-item:hover span,
   .h .h-message:hover span,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn:hover span,
-  .follow-container .follow-right .unfollow-btn:hover span {
+  .follow-container .follow-right .unfollow-btn:hover span,
+  .wide-members .avatar-list i:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -3352,7 +3357,8 @@
   }
   .primary-menu .nav-menu .channel.on:after,
   .timeline-box .timeline-item.new p.num a,
-  .bangumi-item .cover-wrapper .corner-tag.badge_2 {
+  .bangumi-item .cover-wrapper .corner-tag.badge_2,
+  .coming-soon-wrapper .card-wrapper .card-item .time-line-wrapper.is-today .line .point-wrapper .point {
     background-color: var(--c-accent) !important;
   }
   .video-item-biref .biref-info .biref-title,
@@ -3399,7 +3405,9 @@
   .bangumi-index-crumb ul li:hover a,
   .sort-item.on span,
   .filter-block .filter-item-wrapper .filter-item.on,
-  .bili-tab .bili-tab-item:hover {
+  .bili-tab .bili-tab-item:hover,
+  .coming-soon-wrapper .card-wrapper .card-item .time-line-wrapper.is-today .date,
+  .coming-soon-wrapper .card-wrapper .card-item .time-line-wrapper.is-today .time {
     color: var(--c-accent) !important;
   }
   .primary-menu.border-b,
@@ -4211,7 +4219,8 @@
   .main-container .media-info .media-right .media-count {
     color: var(--c-text) !important;
   }
-  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active {
+  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active,
+  .bilibili-player .bilibili-player-area .bilibili-player-video-control .bilibili-player-video-btn .bilibili-player-video-quality-menu .bilibili-player-bigvip {
     color: var(--c-white) !important;
   }
   .coin-operated-m .coin-title span,
@@ -4239,7 +4248,9 @@
   .coin-dialog-mask .coin-operated .coin-title span,
   .main-container .review-module .review-list .review-item .review-header .review-author.is-vip,
   .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-management>:hover,
-  .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-management>:hover i {
+  .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-management>:hover i,
+  .bui-select.bui-select-quality-menu .bui-select-item.bui-select-item-active span,
+  .bilibili-player-video-danmaku-setting-left-block-content .bilibili-player-block-filter-type:hover .bilibili-player-block-filter-label {
     color: var(--c-accent) !important;
   }
   .bilibili-player-feedback,
@@ -4256,7 +4267,8 @@
   #comment_module {
     margin-top: 20px;
   }
-  .v-wrap {
+  .v-wrap,
+  .wide-members {
     margin-bottom: 0 !important;
   }
   #comment .comment,
@@ -4297,7 +4309,7 @@
   .bilibili-player-iconfont:hover .bp-svgicon svg g,
   .bilibili-player-video-btn:hover .bp-svgicon svg,
   .selection-icon:hover .bp-svgicon svg,
-  .bilibili-player-video-danmaku-setting:hover .bp-svgicon svg,
+  .bilibili-player-video-danmaku-setting-left-block-content .bilibili-player-block-filter-type:hover .bilibili-player-block-filter-image .bp-svgicon svg,
   .bilibili-player-video-danmaku-switch:hover .bp-svgicon svg,
   .bilibili-player-video-btn-fullscreen:hover .bp-svgicon svg .st0 {
     fill: var(--c-accent) !important;
@@ -5905,6 +5917,7 @@
   .search-bar-ctnr .search-bar .search-btn,
   .link-panel-ctnr .load-more .load-more-btn,
   .attention-live .switch-btn {
+    overflow: visible !important;
     background-color: transparent !important;
     color: var(--c-text) !important;
   }
@@ -5993,7 +6006,8 @@
   #comment {
     margin: 100px auto 0 !important;
   }
-  .main-content .main-container {
+  .main-content .main-container,
+  .wrapper .wrapper .content {
     padding-top: 60px;
   }
   .main-ctnr .content-ctn .header {
@@ -6001,7 +6015,8 @@
   }
   .content-panel .card-items,
   .recommend-list .list,
-  .wrap .list {
+  .wrap .list,
+  .wrapper .wrapper .content .list {
     margin: 16px -10px 0 !important;
     padding: 20px 10px 0 !important;
     border-radius: 4px;
@@ -6111,6 +6126,11 @@
   .gift-item.buy:hover {
     background-color: var(--c-hover) !important;
   }
+  .blpui-slider-container.vertical-slider .blpui-slider-span:before,
+  .blpui-slider-container.horizontal-slider,
+  .blpui-slider-container.horizontal-slider .slider-value {
+    background-color: var(--c-white) !important;
+  }
   .bili-share-pc .weixin-hover .qr-before,
   .live-record-card-cntr,
   .week-rank-iframe,
@@ -6119,7 +6139,12 @@
   }
   .draw-full-cntr .function-bar.draw,
   .tab-candidate>span:after,
-  .tabs .item>span:after {
+  .tabs .item>span:after,
+  .blpui-slider-container.vertical-slider .blpui-slider-span.slider-span-active:after,
+  .blpui-slider-container.horizontal-slider .slider-process,
+  .blpui-slider-container.horizontal-slider .slider-handle,
+  .blpui-slider-container.vertical-slider .blpui-slider-span > span,
+  .draw-full-cntr .count {
     background-color: var(--c-accent) !important;
   }
   .room-bg::after {
@@ -6145,7 +6170,11 @@
   .hour-rank .hour-rank-content,
   .attention-btn-ctnr .left-part .follow-text,
   .fans-medal-item .label,
-  .draw-full-cntr .function-bar.draw span {
+  .draw-full-cntr .function-bar.draw span,
+  .bilibili-live-player .blpui-btn.text-btn > span,
+  .bilibili-live-player .blpui-btn.icon-btn > i,
+  .bilibili-live-player-video-controller-hide-danmaku-container .hide-danmaku-title,
+  .draw-full-cntr .count {
     color: var(--c-white) !important;
   }
   .gift-info .btn-rule,
@@ -6160,7 +6189,11 @@
   .tabs .item:hover span,
   .start-part .count-down,
   .chaos-pk-result-ctnr .result-panel .result-tab div.active,
-  .common-popup-wrap .box header {
+  .common-popup-wrap .box header,
+  .bilibili-live-player .blpui-btn.icon-btn:hover > i,
+  .bilibili-live-player .blpui-btn.text-btn:hover > span,
+  .bilibili-live-player .blpui-btn.text-btn.active > span,
+  .draw-full-cntr .gift-sender-info span {
     color: var(--c-accent) !important;
   }
   .room-introduction-tags,
@@ -6201,7 +6234,8 @@
     left: 50%;
   }
   .link-navbar-ctnr,
-  .bili-share-pc .weixin-hover .qr-before {
+  .bili-share-pc .weixin-hover .qr-before,
+  .blpui-slider-container.horizontal-slider .slider-handle {
     box-shadow: none;
   }
   .link-navbar .main-ctnr .nav-logo {
@@ -7216,10 +7250,13 @@
   .rank-list {
     display: none !important;
   }
-  .vertical-block-card,
   .newbie-awarder .award-dialog .award-dialog-container,
-  .hot-category {
+  .hot-category,
+  .section-navigator {
     background-color: var(--c-background) !important;
+  }
+  .vertical-block-card {
+    background-color: transparent !important;
   }
   .section-title,
   .item-title,
@@ -7299,32 +7336,58 @@
   .title-tooltip {
     display: none !important;
   }
+  .purchase-panel {
+    background-color: var(--c-background) !important;
+  }
   .list-data .list-item.last-read,
-  .list-data .list-item:hover {
+  .list-data .list-item:hover,
+  .discount-hinter,
+  .purchase-panel .action-buttons button.action-button.selected {
     background-color: var(--c-hover) !important;
   }
   .header-info .manga-info .season-introduction .size-ruler {
     background-color: transparent !important;
   }
-  .list-item .short-title {
+  .list-item .short-title,
+  .purchase-panel .panel-title {
     color: var(--c-title) !important;
+  }
+  .purchase-panel .summary .price .orig,
+  .purchase-panel .summary .price .final .rmb-price {
+    color: var(--c-text) !important;
   }
   .list-data .list-item.last-read div,
   .list-data .list-item:hover div,
-  .episode-list-component .episode-list .list-header .header-item.selected {
+  .manga-detail .episode-list-component .episode-list .list-header button.header-item.selected,
+  .manga-detail .episode-list-component .episode-list .list-header button.header-item:hover,
+  .purchase-panel .summary .price .final div {
     color: var(--c-accent) !important;
+  }
+  .discount-hinter,
+  .purchase-panel {
+    border-color: var(--c-border) !important;
   }
   .list-data .list-item.last-read,
   .list-data .list-item:hover {
     border-color: var(--c-accent) !important;
   }
+  .purchase-panel .action-buttons .action-button .tag.discount {
+    border-radius: 0 0 6px 0;
+    background-image: none !important;
+    background-color: var(--c-accent) !important;
+    color: var(--c-white) !important;
+  }
   .list-item,
-  .episode-list-component .episode-list .list-header .header-item {
+  .episode-list-component .episode-list .list-header .header-item,
+  .purchase-panel .action-buttons .action-button,
+  .purchase-panel .close-button {
     border-color: var(--c-border) !important;
     background-color: transparent !important;
   }
   .list-item::after,
-  .episode-list-component .episode-list .list-header .header-item::after {
+  .episode-list-component .episode-list .list-header .header-item::after,
+  .purchase-panel .action-buttons .action-button::after,
+  .purchase-panel .close-button::after {
     content: none !important;
   }
   .app-layout .size-ruler.p-relative {
@@ -8218,7 +8281,8 @@
   .rank-active-target,
   .rank-fans-medal,
   .rank-vedio-target,
-  .rank-vedio-view {
+  .rank-vedio-view,
+  .notify-tips {
     background-color: var(--c-hover) !important;
   }
   #dc-section_preference .list_wrap .list-item {
@@ -8368,7 +8432,8 @@
   .danmu-item .right-block .delete-protect div:hover,
   .stat-card .num .text,
   .comment_wrap .operate_wrap .operate_right .operate-txt.active,
-  .qa-area-ol-wrp .qa-icon {
+  .qa-area-ol-wrp .qa-icon,
+  .notify-tips .icon_wrap i {
     color: var(--c-accent) !important;
   }
   .bili-share-pc,
@@ -9607,6 +9672,137 @@
   button::after,
   .btn::after {
     content: none !important;
+  }
+}
+@-moz-document url-prefix("https://wiki.biligame.com/") {
+  .ref-tooltip-arrow:before {
+    display: none !important;
+  }
+  .game-bg,
+  .wiki-header .wiki-nav-celling,
+  .wiki-header .wiki-nav .ul-menu-1 .li-menu-1 .ul-menu-2,
+  .wiki-header .wiki-nav .ul-menu-1 .li-menu-1 .ul-menu-2 .li-menu-2 .ul-menu-3,
+  .vectorMenu .menu,
+  .ref-tooltip-text,
+  .wiki-header .wiki-nav.wiki-nav-celling {
+    background-color: var(--c-background) !important;
+  }
+  .wiki-header .wiki-nav .ul-menu-1 .li-menu-1:hover,
+  #simpleSearch1 #mw-searchButton,
+  #searchform,
+  .game-aggregation-wrap .game-card-list .game-card-list-item .game-card-button-lt,
+  .game-card-button-rt,
+  #siteNotice #localNotice,
+  #siteNotice .globalNotice,
+  .page-MediaWiki_Sitenotice .mw-content-ltr,
+  div.thumbinner,
+  .toc,
+  .mw-warning,
+  .toccolours,
+  code,
+  li.gallerybox div.thumb,
+  .loadbox-navbox,
+  .catlinks,
+  .mw-ui-checkbox:not(#noop) [type='checkbox'] + label:before,
+  .vectorMenu li a:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .wiki-header,
+  .wiki-header .wiki-nav .nav-search-box,
+  #simpleSearch1,
+  #simpleSearch1 #searchDelete,
+  #simpleSearch1 #searchInput,
+  #simpleSearch1 #searchButton,
+  .sidebar-card,
+  #content .loadbox-navbox > p,
+  .fp-section,
+  .wiki-header .wiki-nav,
+  .home-box-bbc {
+    background-color: transparent !important;
+  }
+  .carousel.big-carousel .carousel-indicators li.active,
+  .mw-ui-checkbox:not(#noop) [type='checkbox']:enabled:checked + label:before {
+    background-color: var(--c-accent) !important;
+  }
+  h2 span,
+  code,
+  .title-1,
+  .update-log a {
+    color: var(--c-title) !important;
+  }
+  .game-aggregation-wrap .other-game-list-item .game-name,
+  .box-zt {
+    color: var(--c-text) !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  table,
+  code,
+  .wiki-header .wiki-nav .ul-menu-1 .li-menu-1,
+  .carousel.big-carousel .carousel-indicators li,
+  .carousel.big-carousel .carousel-indicators li.active,
+  #siteNotice #localNotice,
+  #siteNotice .globalNotice,
+  .page-MediaWiki_Sitenotice .mw-content-ltr,
+  div.thumbinner,
+  li.gallerybox div.thumb,
+  .loadbox-navbox,
+  .toc,
+  .mw-warning,
+  .toccolours,
+  .catlinks,
+  .ref-tooltip-text,
+  .mw-ui-checkbox:not(#noop) [type='checkbox'] + label:before,
+  .fp-section {
+    border-color: var(--c-border) !important;
+  }
+  .carousel.big-carousel .carousel-indicators li.active,
+  .mw-ui-checkbox:not(#noop) [type='checkbox']:enabled:checked + label:before {
+    border-color: var(--c-accent) !important;
+  }
+  .caret,
+  .ref-tooltip-arrow,
+  .ref-tooltip-arrow:before,
+  .ref-tooltip-arrow:after {
+    border-top-color: var(--c-border) !important;
+  }
+  .ref-tooltip-arrow:after {
+    border-top-color: var(--c-background) !important;
+  }
+  .home-box-n,
+  .home-box-bbc,
+  .wiki-header .wiki-nav .ul-menu-1 .li-menu-1 .ul-menu-2 .li-menu-2 .ul-menu-3 {
+    border: 0 !important;
+  }
+  .wiki-header .wiki-nav .ul-menu-1 .li-menu-1,
+  .wiki-header .wiki-nav .nav-search-box {
+    border-bottom-width: 0 !important;
+  }
+  .wiki-header .wiki-nav,
+  .wiki-header .wiki-nav .ul-menu-1 .li-menu-1 .ul-menu-2,
+  .wiki-header .wiki-nav .ul-menu-1 .li-menu-1 .ul-menu-2 .li-menu-2 .ul-menu-3,
+  .vectorMenu .menu {
+    border: 1px solid var(--c-border);
+  }
+  .wiki-header .wiki-nav .form-box {
+    border-left: 1px solid var(--c-border);
+  }
+  .wiki-header .wiki-nav .ul-menu-1 .li-menu-1 .ul-menu-2,
+  .wiki-header .wiki-nav .ul-menu-1 .li-menu-1 .ul-menu-2 .li-menu-2 .ul-menu-3 {
+    border-top-width: 0;
+  }
+  .mw-ui-input {
+    box-shadow: none;
+  }
+  .title-1 {
+    background-image: none;
+  }
+  .game-bg {
+    margin-bottom: 0;
   }
 }
 @-moz-document url-prefix("https://www.bilibili.com/watchlater") {
