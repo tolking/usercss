@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.5
+@version        1.2.6
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -2824,6 +2824,7 @@
   .pgc-rank .pgc-rank-wrap,
   .rank-list .rank-wrap,
   .manga-rank .manga-rank-wrap,
+  .ifmt,
   .video-card-common .title .live i {
     display: none !important;
   }
@@ -3322,7 +3323,9 @@
   .card-video-wrapper .card-video-content .huge-recom,
   .video-list-recom .cinema-recom,
   .video-list-video .video-item-biref:nth-child(n+6),
-  .bili-tab .bili-tab-item.on:before {
+  .bili-tab .bili-tab-item.on:before,
+  .video-floor-infomation-m .zone-title .headline .link-more,
+  .video-floor-infomation-m .storey-box .storey-content .spread-module:nth-child(n+16) {
     display: none !important;
   }
   .audio-list .song-list .song-li .content .text,
@@ -3456,6 +3459,9 @@
   .music-article {
     padding-bottom: 40px !important;
   }
+  .video-floor-infomation-m .storey-box {
+    height: auto !important;
+  }
   .charge-header-bg {
     background-image: none !important;
   }
@@ -3498,7 +3504,8 @@
   .audio-list .song-list,
   .promote-m .storey-box,
   .hot-recom-module .block-body,
-  .new-stat-module .storey-box,
+  .new-stat-module,
+  .video-floor-infomation-m .storey-box .storey-content,
   .special-recom-module .block-body ul,
   .area-module .video-list-video,
   .area-module .video-list-movie,
@@ -3524,6 +3531,7 @@
   .promote-m .storey-box .spread-module,
   .video-item-biref,
   .new-stat-module .storey-box .spread-module,
+  .video-floor-infomation-m .storey-box .storey-content .spread-module,
   .video-item-biref.cinema-large {
     float: none;
     flex: 18%;
