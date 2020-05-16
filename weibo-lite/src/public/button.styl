@@ -1,0 +1,64 @@
+// button
+.W_gotop
+.W_layer .send_weibo .W_btn_a
+.W_btn_a
+.WB_face .opt .W_btn_b
+.W_btn_a
+.W_btn_c
+  position relative
+  border-color var(--c-accent) !important
+  background-color var(--c-accent) !important
+  background-image none !important
+  color var(--c-white) !important
+  overflow hidden !important
+  vertical-align top
+  cursor pointer
+
+  span
+  em
+    color var(--c-white) !important
+
+  &::after
+    content ''
+    display block
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    background-image linear-gradient(70deg, transparent 20%, rgba(255, 255, 255, 0.3), transparent 80%)
+    transform translateX(-100%)
+    transition transform 0.3s ease-in-out !important
+
+  &:hover
+    color var(--c-white) !important
+
+    span
+    em
+      color var(--c-white) !important
+
+    &::after
+      transform translateX(100%)
+
+.W_layer .send_weibo .W_btn_a_disable
+.W_btn_a_disable
+.W_btn_b
+  border 1px solid var(--c-border) !important
+  background-color var(--c-background) !important
+  color var(--c-title) !important
+  cursor pointer
+  transition all 0.3s ease-in-out
+
+  span
+    color var(--c-text) !important
+
+  &::after
+    content none !important
+
+  &:hover
+    border-color var(--c-accent) !important
+    background-color var(--c-hover) !important
+    color var(--c-text) !important
+
+    span
+      color var(--c-text) !important

@@ -13,11 +13,14 @@
     "usercss",
     "styles",
     "css",
-    "bilibili"
+    "bilibili",
+    "weibo"
   ],
   "scripts": {
-    "build": "npm run build:bl",
+    "build": "npm run build:bl && npm run build:wl",
     "dev:bl": "stylus -w ./bilibili-lite/src/index.styl -o ./bilibili-lite/index.user.css",
-    "build:bl": "stylus ./bilibili-lite/src/index.styl -o ./bilibili-lite/index.user.css"
+    "build:bl": "stylus ./bilibili-lite/src/index.styl -o ./bilibili-lite/index.user.css",
+    "dev:wb": "stylus -w ./weibo-lite/src/index.styl -o ./weibo-lite/index.user.css",
+    "build:wl": "stylus ./weibo-lite/src/index.styl -o ./weibo-lite/index.user.css"
   }
 }

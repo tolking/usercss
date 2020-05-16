@@ -1,0 +1,75 @@
+/* 全局样式 */
+html
+	height auto
+	min-height 100vh
+	background-color var(--c-background)
+	background-image var(--bg-image, none)
+	background-attachment fixed
+	background-position center
+	background-size cover
+	background-repeat no-repeat
+
+body
+	height auto
+	min-height 100vh
+	overflow-x hidden
+	background-color var(--c-bg-mask) !important
+	background-image none !important
+
+a
+a div
+a p
+a span
+h1
+h2
+h3
+h4
+h5
+h6
+input
+textarea
+em
+	color var(--c-title) !important
+
+body
+p
+span
+li
+label
+div
+	color var(--c-text) !important
+
+a:hover
+a:hover div
+a:hover p
+a:hover span
+	color var(--c-accent) !important
+
+hr
+	border-color var(--c-border) !important
+	background-color var(--c-border) !important
+
+:focus
+	outline-color var(--c-accent)
+
+/* 输入框提示文本 */
+::-webkit-input-placeholder
+	color #d2d2d2
+
+:-moz-placeholder
+	color #d2d2d2
+
+::-moz-placeholder
+	color #d2d2d2
+
+:-ms-input-placeholder
+	color #d2d2d2
+
+/* 滚动条 */
+::-webkit-scrollbar
+	max-width 6px
+	max-height 12px
+
+::-webkit-scrollbar-thumb
+	border-radius 6px
+	background-color var(--c-scroll)
