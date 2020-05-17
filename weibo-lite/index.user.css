@@ -1,0 +1,1168 @@
+/* ==UserStyle==
+@name           weibo-lite
+@namespace      tolking-usercss
+@version        1.0.0
+@description    一个简化的新浪微博页面样式，自适应黑暗模式
+@author         tolking <qw13131wang@gmail.com> (https://ououe.com)
+@homepageURL		https://github.com/tolking/usercss/tree/master/weibo-lite
+@supportURL			https://github.com/tolking/usercss/issues
+@updateURL			https://tolking.github.io/usercss/weibo-lite/index.user.css
+@license				MIT
+@preprocessor		uso
+
+@advanced  dropdown  defaultTheme  "选择默认主题" {
+	auto "跟随系统" <<<EOT
+  /*! auto *\/:root{--c-title:/*[[titleColor]]*\/;--c-text:/*[[textColor]]*\/;--c-border:/*[[borderColor]]*\/;--c-background:/*[[backgroundColor]]*\/;--c-hover:/*[[hoverColor]]*\/;--c-accent:/*[[accentColor]]*\/;--c-white:#fff;--c-bg-header:rgba(0, 0, 0, .3);--c-scroll:#7c7d7f;--c-bg-mask:/*[[backgroundMaskColor]]*\/;--bg-image:/*[[backgroundImage]]*\/;}@media(prefers-color-scheme:dark){:root{--c-title:/*[[titleDarkColor]]*\/;--c-text:/*[[textDarkColor]]*\/;--c-border:/*[[borderDarkColor]]*\/;--c-background:/*[[backgroundDarkColor]]*\/;--c-hover:/*[[hoverDarkColor]]*\/}} EOT;
+	light "浅色" <<<EOT
+  /*! light *\/:root{--c-title:/*[[titleColor]]*\/;--c-text:/*[[textColor]]*\/;--c-border:/*[[borderColor]]*\/;--c-background:/*[[backgroundColor]]*\/;--c-hover:/*[[hoverColor]]*\/;--c-accent:/*[[accentColor]]*\/;--c-white:#fff;--c-bg-header:rgba(0, 0, 0, .3);--c-scroll:#7c7d7f;--c-bg-mask:/*[[backgroundMaskColor]]*\/;--bg-image:/*[[backgroundImage]]*\/;} EOT;
+	dark "深色" <<<EOT
+  /*! dark *\/:root{--c-title:/*[[titleDarkColor]]*\/;--c-text:/*[[textDarkColor]]*\/;--c-border:/*[[borderDarkColor]]*\/;--c-background:/*[[backgroundDarkColor]]*\/;--c-hover:/*[[hoverDarkColor]]*\/;--c-accent:/*[[accentColor]]*\/;--c-white:#fff;--c-bg-header:rgba(0, 0, 0, .3);--c-scroll:#7c7d7f;--c-bg-mask:/*[[backgroundMaskColor]]*\/;--bg-image:/*[[backgroundImage]]*\/;} EOT;
+}
+@advanced  color  accentColor  "主色调"  #00a1d6
+@advanced  text   backgroundImage  "背景图" "url()"
+@advanced  color  backgroundMaskColor  "背景遮罩"  rgba(255,255,255,0)
+@advanced  color  titleColor  "浅-主要文本"  #212121
+@advanced  color  textColor  "浅-次要文本"  #666
+@advanced  color  borderColor  "浅-边框"  #ccc
+@advanced  color  backgroundColor  "浅-背景"  #fff
+@advanced  color  hoverColor  "浅-次要背景"  rgba(230,230,230,.3)
+@advanced  color  titleDarkColor  "深-主要文本"  #e2e2e2
+@advanced  color  textDarkColor  "深-次要文本"  #bababa
+@advanced  color  borderDarkColor  "深-边框"  #4e4e4e
+@advanced  color  backgroundDarkColor  "深-背景"  #25272a
+@advanced  color  hoverDarkColor  "深-次要背景"  rgba(20,20,20,.3)
+==/UserStyle== */
+@-moz-document domain("weibo.com") {
+  /*[[defaultTheme]]*/
+  html {
+    height: auto;
+    min-height: 100vh;
+    background-color: var(--c-background);
+    background-image: var(--bg-image, none);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  body {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--c-bg-mask) !important;
+    background-image: none !important;
+  }
+  a,
+  a div,
+  a p,
+  a span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  input,
+  textarea,
+  em {
+    color: var(--c-title) !important;
+  }
+  body,
+  p,
+  span,
+  li,
+  label,
+  div {
+    color: var(--c-text) !important;
+  }
+  a:hover,
+  a:hover div,
+  a:hover p,
+  a:hover span {
+    color: var(--c-accent) !important;
+  }
+  hr {
+    border-color: var(--c-border) !important;
+    background-color: var(--c-border) !important;
+  }
+  select {
+    border-color: var(--c-border);
+    border-radius: 4px;
+    background-color: var(--c-hover);
+    color: var(--c-title) !important;
+  }
+  :focus {
+    outline-color: var(--c-accent);
+  }
+  ::-webkit-input-placeholder {
+    color: #d2d2d2;
+  }
+  :-moz-placeholder {
+    color: #d2d2d2;
+  }
+  ::-moz-placeholder {
+    color: #d2d2d2;
+  }
+  :-ms-input-placeholder {
+    color: #d2d2d2;
+  }
+  ::-webkit-scrollbar {
+    max-width: 6px;
+    max-height: 12px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: var(--c-scroll);
+  }
+  .WB_global_nav .gn_nav_list li:nth-child(2),
+  .WB_global_nav .gn_nav_list li:nth-child(4),
+  .WB_global_nav .gn_header::after {
+    display: none !important;
+  }
+  .WB_global_nav .gn_topmenulist ul li:hover,
+  .WB_global_nav .gn_topmenulist ul li.cur a,
+  .WB_global_nav .gn_topmenulist ul li a:hover,
+  .WB_global_nav .gn_topmenulist ul li.gn_func a,
+  .W_layer .W_input,
+  .W_layer .send_weibo .input {
+    background-color: var(--c-hover);
+  }
+  .icon_num_gray {
+    background-color: var(--c-border);
+  }
+  .WB_global_nav .ficon_send,
+  .WB_global_nav .ficon_send:hover {
+    background-color: transparent;
+  }
+  .W_new {
+    background-color: var(--c-accent);
+  }
+  .WB_global_nav .ficon_send,
+  .WB_global_nav .ficon_send:hover {
+    background-image: none;
+  }
+  .WB_global_nav .ficon_send {
+    color: var(--c-title) !important;
+  }
+  .FRAME_main .WB_global_nav .gn_nav_list li .home em {
+    color: var(--c-accent) !important;
+  }
+  .gn_topmenulist_search .gn_topmenulist .selectbox,
+  .W_layer .W_layer_title,
+  .W_layer .S_line3,
+  .W_layer .W_input,
+  .W_layer .send_weibo .input,
+  .W_layer .W_btn_b:hover {
+    border-color: var(--c-border);
+  }
+  .WB_global_nav .gn_set,
+  .WB_global_nav .S_line1,
+  .WB_global_nav .S_line2,
+  .W_layer .content[node-type],
+  .layer_menu_list ul li.line {
+    border: 0 !important;
+  }
+  .WB_global_nav .gn_nav_list li a .S_txt1 {
+    font-size: 0;
+  }
+  .WB_global_nav .W_ficon {
+    font-size: 24px;
+  }
+  .WB_global_nav .ficon_search {
+    font-size: 16px;
+  }
+  .WB_global_nav .gn_nav {
+    margin-right: 0;
+  }
+  .WB_global_nav_v2 .gn_nav_list li,
+  .WB_global_nav .gn_set_list {
+    margin-left: 16px;
+  }
+  .WB_global_nav .gn_topmenulist ul li a {
+    transition: all 0.3s ease-in-out;
+  }
+  .WB_global_nav {
+    border: 0;
+    border-bottom: 1px solid var(--c-border);
+    background-color: var(--c-background) !important;
+    transition: background-color 0.3s ease-in-out !important;
+  }
+  .WB_global_nav .gn_header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .WB_global_nav .gn_logo {
+    width: 65px;
+    overflow: hidden;
+  }
+  .WB_global_nav .gn_search_v2 {
+    border-color: var(--c-border);
+    border-radius: 4px;
+    background-color: var(--c-hover);
+  }
+  .W_gotop,
+  .W_btn_a,
+  .W_btn_b,
+  .W_btn_c,
+  .W_btn_d,
+  .W_btn_e,
+  .W_btn_big {
+    position: relative;
+    border-color: var(--c-accent) !important;
+    background-color: var(--c-accent) !important;
+    background-image: none !important;
+    color: var(--c-white) !important;
+    overflow: hidden !important;
+    vertical-align: top;
+    cursor: pointer;
+  }
+  .W_gotop span,
+  .W_btn_a span,
+  .W_btn_b span,
+  .W_btn_c span,
+  .W_btn_d span,
+  .W_btn_e span,
+  .W_btn_big span,
+  .W_gotop em,
+  .W_btn_a em,
+  .W_btn_b em,
+  .W_btn_c em,
+  .W_btn_d em,
+  .W_btn_e em,
+  .W_btn_big em {
+    color: var(--c-white) !important;
+  }
+  .W_gotop::after,
+  .W_btn_a::after,
+  .W_btn_b::after,
+  .W_btn_c::after,
+  .W_btn_d::after,
+  .W_btn_e::after,
+  .W_btn_big::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(70deg, transparent 20%, rgba(255,255,255,0.3), transparent 80%);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out !important;
+  }
+  .W_gotop:hover,
+  .W_btn_a:hover,
+  .W_btn_b:hover,
+  .W_btn_c:hover,
+  .W_btn_d:hover,
+  .W_btn_e:hover,
+  .W_btn_big:hover {
+    color: var(--c-white) !important;
+  }
+  .W_gotop:hover span,
+  .W_btn_a:hover span,
+  .W_btn_b:hover span,
+  .W_btn_c:hover span,
+  .W_btn_d:hover span,
+  .W_btn_e:hover span,
+  .W_btn_big:hover span,
+  .W_gotop:hover em,
+  .W_btn_a:hover em,
+  .W_btn_b:hover em,
+  .W_btn_c:hover em,
+  .W_btn_d:hover em,
+  .W_btn_e:hover em,
+  .W_btn_big:hover em {
+    color: var(--c-white) !important;
+  }
+  .W_gotop:hover::after,
+  .W_btn_a:hover::after,
+  .W_btn_b:hover::after,
+  .W_btn_c:hover::after,
+  .W_btn_d:hover::after,
+  .W_btn_e:hover::after,
+  .W_btn_big:hover::after {
+    transform: translateX(100%);
+  }
+  .W_layer .send_weibo .W_btn_a_disable,
+  .W_btn_a_disable,
+  .W_btn_b,
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b {
+    border: 1px solid var(--c-border) !important;
+    background-color: var(--c-background) !important;
+    color: var(--c-title) !important;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  .W_layer .send_weibo .W_btn_a_disable span,
+  .W_btn_a_disable span,
+  .W_btn_b span,
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b span {
+    color: var(--c-text) !important;
+  }
+  .W_layer .send_weibo .W_btn_a_disable::after,
+  .W_btn_a_disable::after,
+  .W_btn_b::after,
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b::after {
+    content: none !important;
+  }
+  .W_layer .send_weibo .W_btn_a_disable:hover,
+  .W_btn_a_disable:hover,
+  .W_btn_b:hover,
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b:hover {
+    border-color: var(--c-accent) !important;
+    background-color: var(--c-hover) !important;
+    color: var(--c-text) !important;
+  }
+  .W_layer .send_weibo .W_btn_a_disable:hover span,
+  .W_btn_a_disable:hover span,
+  .W_btn_b:hover span,
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b:hover span {
+    color: var(--c-text) !important;
+  }
+  .layer_menu_list,
+  .WB_global_nav .gn_topmenulist,
+  .W_layer .content,
+  .pc_caldr,
+  .unlogin_left_nav .lev_layer,
+  .layer_menu_list_b,
+  .Bv6_layer .content {
+    border-color: var(--c-border) !important;
+    border-radius: 4px;
+    background-color: var(--c-background) !important;
+    color: var(--c-text) !important;
+  }
+  .layer_menu_list ul li.cur a,
+  .layer_menu_list ul li a:hover,
+  .layer_menu_list_b ul li.cur a,
+  .layer_menu_list_b ul li a:hover {
+    background-color: var(--c-hover) !important;
+  }
+  .WB_global_nav .S_bg2_br,
+  .W_layer .S_bg2_br {
+    border-bottom-color: var(--c-background) !important;
+  }
+  .WB_global_nav .S_line3,
+  .W_layer .W_arrow_bor_t .S_line3 {
+    border-bottom-color: var(--c-border) !important;
+  }
+  .W_arrow_bor_l .S_bg2_br {
+    border-right-color: var(--c-background) !important;
+  }
+  .W_arrow_bor_l .S_line3 {
+    border-right-color: var(--c-border) !important;
+  }
+  .gn_topmenulist_search .W_icon_sc_hot,
+  .gn_topmenulist_search .W_icon_sc_new,
+  .gn_topmenulist_search .W_icon_sc_boil,
+  .WB_left_nav .lev .W_new_count,
+  .WB_feed_v3 .WB_media_a .W_icon_tag_v2,
+  .S_spetxt_bg,
+  .W_new_count {
+    background-color: var(--c-accent) !important;
+    color: var(--c-white) !important;
+  }
+  .WB_starcover,
+  .W_tips.tips_warn,
+  .WB_vipcover a,
+  .WB_starcover a,
+  .WB_feed .WB_cardwrap[feedtype='ad'],
+  .WB_feed .WB_cardwrap[action-type='fl_loadmore_middle'],
+  .WB_feed_v3 .WB_cardtitle_b,
+  .WB_func .WB_handle .W_arrow_bor {
+    display: none;
+  }
+  #v6_pl_content_publishertop,
+  .WB_feed .WB_cardwrap,
+  .W_layer .scroller .info_box,
+  .WB_feed_repeat {
+    background-color: var(--c-background) !important;
+  }
+  .WB_feed_v3 .WB_expand.S_bg1,
+  .SW_fun_bg:hover,
+  .SW_fun_bg_active,
+  .S_bg1,
+  .W_btn_alpha {
+    background-color: var(--c-hover);
+  }
+  .S_bg3,
+  .WB_feed_v3 .WB_feed_repeat .repeat_list .list_box_in .between_line {
+    background-color: transparent;
+  }
+  .tab_feed_a .tab .W_ficon {
+    color: var(--c-title) !important;
+  }
+  .W_btn_b .ficon_add,
+  .artwork_box .tag_showpicL .inner .txt,
+  .layer_view_morepic .box_li .W_autocut {
+    color: var(--c-white) !important;
+  }
+  .WB_text a[render='ext'],
+  .WB_text .WB_text_opt,
+  .S_spetxt,
+  a.S_ficon:hover,
+  a:hover .S_ficon,
+  a.current .S_ficon,
+  a:hover em,
+  .tab_feed_a li .curr,
+  .WB_text a[title] {
+    color: var(--c-accent) !important;
+  }
+  .S_line1 {
+    border-color: var(--c-border);
+  }
+  .S_bg1_br {
+    border-color: var(--c-hover);
+  }
+  .WB_card_vote .vote_con1 .item:hover,
+  .WB_media_view .pic_choose_box li a:hover,
+  .WB_media_view .pic_choose_box li a.current,
+  .layer_multipic_preview .pic_choose_box li a:hover,
+  .layer_multipic_preview .pic_choose_box li.current a {
+    border-color: var(--c-accent);
+  }
+  .WB_feed_handle .WB_row_line,
+  .WB_row_line .line,
+  .WB_func .WB_handle li .line,
+  .layer_add_collect .tip-box,
+  .W_layer .content {
+    border: 0;
+  }
+  .WB_feed .WB_cardwrap,
+  .WB_feed_v3 .WB_expand {
+    border-radius: 4px;
+  }
+  .WB_cardwrap {
+    box-shadow: none;
+  }
+  .WB_feed_v3 .WB_expand .WB_func .WB_from,
+  .WB_feed_v3 .WB_from {
+    font-size: 0;
+  }
+  .S_txt2[date] {
+    font-size: 12px;
+  }
+  .WB_feed_like .WB_feed_detail {
+    background-image: none !important;
+  }
+  .WB_feed_v3 .WB_expand,
+  .WB_feed_v3 .WB_expand_media_box {
+    margin: 0;
+  }
+  .WB_feed_v3 .WB_expand {
+    margin-top: 8px;
+  }
+  .WB_feed_v3 .WB_expand {
+    padding: 8px 12px;
+  }
+  .WB_feed_v3 .WB_face .opt {
+    right: -780px;
+  }
+  a em {
+    transition: color 0.3s ease-in-out !important;
+  }
+  .WB_notes {
+    margin: 0 0 10px;
+    padding: 0;
+    background-color: var(--c-hover);
+  }
+  .WB_media_wrap .media_box {
+    float: none;
+    margin: 10px 0;
+    width: 70%;
+  }
+  .WB_media_wrap .media_box .WB_media_a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 0 10px;
+    width: 100%;
+  }
+  .WB_media_wrap .media_box .WB_media_a li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2% 0 0;
+    width: 32%;
+    height: 160px;
+  }
+  .WB_media_wrap .media_box .WB_media_a li:nth-child(3n) {
+    margin-right: 0;
+  }
+  .WB_media_wrap .media_box .WB_media_a li:nth-child(n + 4) {
+    margin-top: 10px;
+  }
+  .WB_media_wrap .media_box .WB_media_a li img {
+    position: initial !important;
+    width: 100% !important;
+    height: auto !important;
+    transform: none !important;
+  }
+  .WB_feed_v3 .WB_media_a_m1 .li_n_mix_w,
+  .WB_feed_v3 .WB_media_a_m1 .li_n_mix_h,
+  .WB_feed_v3 .WB_media_a_m1 .WB_pic {
+    max-width: 300px;
+  }
+  .WB_feed_v3 .WB_media_a_m1 .WB_video,
+  .WB_feed_v3 .WB_media_a_m1 .WB_video_a {
+    display: block !important;
+    height: 282px !important;
+  }
+}
+@-moz-document domain("weibo.com") {
+  .WB_footer .WB_footer,
+  #v6_pl_content_biztips,
+  #v6_pl_content_setskin,
+  #v6_pl_rightmod_companyverifiedtips,
+  #v6_pl_rightmod_hongbao,
+  #v6_pl_rightmod_rank,
+  #v6_pl_rightmod_recominfo,
+  #v6_pl_rightmod_ads36,
+  #v6_pl_rightmod_attfeed,
+  #v6_trustPagelet_recom_member,
+  #v6_pl_rightmod_noticeboard,
+  #v6_pl_ad_bigday,
+  #v6_pl_ad_forfqy,
+  #plc_bot .WB_footer,
+  #plc_bot .W_fold,
+  #WB_webchat,
+  .send_weibo .title_area,
+  fieldset,
+  .WB_left_nav .lev .ico_block,
+  .W_pages_minibtn em,
+  .WB_tab_a .tab .b {
+    display: none !important;
+  }
+  .WB_left_nav .lev a:hover,
+  .WB_left_nav .lev_curr,
+  .WB_left_nav .lev_curr:hover,
+  .WB_left_nav .levmore .more,
+  .send_weibo .input,
+  .W_layer .S_bg2,
+  .layer_faces .faces_list li:hover,
+  .layer_menu_topic .topic_list li a:hover,
+  .layer_menu_topic .topic_list li a.curr,
+  .send_weibo .input_set_timer .set_timer,
+  .send_weibo .set_timer .set_data_mod,
+  .pc_caldr .weeks,
+  .pc_caldr .selector .month,
+  .pc_caldr .selector .year,
+  .send_weibo .set_timer .sel_time,
+  .layer_music_upload .tab_bar li.cur a,
+  .laMed_mulist_v2 .li_inner:hover,
+  .W_btn_l:hover,
+  .W_input {
+    background-color: var(--c-hover);
+  }
+  .WB_frame,
+  #v6_pl_rightmod_myinfo .S_bg2,
+  .W_person_info .cover .headpic,
+  #v6_pl_content_publishertop .send_weibo,
+  .W_layer .S_bg1,
+  .W_layer blockquote,
+  .W_layer .SW_fun_bg:hover,
+  .W_layer .SW_fun_bg_active,
+  .layer_faces .faces_list_hot li,
+  .send_weibo .set_timer .set_data_mod .ipt,
+  .layer_send_music .W_pages_minibtn .S_txt1,
+  .W_btn_l,
+  .S_bg2 {
+    background-color: transparent;
+  }
+  .WB_minitab .cur_block,
+  .pc_caldr .days li a.day {
+    background-color: var(--c-accent);
+  }
+  .WB_miniblog,
+  .W_person_info .cover {
+    background-image: none !important;
+  }
+  .W_layer .S_ficon {
+    color: var(--c-title) !important;
+  }
+  .W_layer .W_btn_b_disable .S_ficon,
+  .pc_caldr .selector .month,
+  .pc_caldr .selector .year,
+  .send_weibo .set_timer .sel_time {
+    color: var(--c-text) !important;
+  }
+  .pc_caldr .days li a strong {
+    color: var(--c-white) !important;
+  }
+  .laMed_mulist_v2 .li_inner:hover span,
+  .layer_send_music .W_pages_minibtn .S_txt1,
+  .WB_tab_a .tab li.curr a .S_bg2 {
+    color: var(--c-accent) !important;
+  }
+  .send_weibo .input,
+  .send_weibo .input.clicked,
+  .W_layer .S_line1,
+  .W_layer .W_btn_prev,
+  .W_layer .W_btn_next,
+  .W_layer .W_btn_b,
+  .W_layer .W_btn_b_disable,
+  .W_layer .W_btn_b_disable:hover,
+  .W_layer .W_btn_tag_cur,
+  .W_layer .W_btn_tag_cur:hover,
+  .layer_faces .faces_list li,
+  .send_weibo .set_timer .set_data_mod,
+  .pc_caldr .selector .month,
+  .pc_caldr .selector .year,
+  .send_weibo .set_timer .sel_time,
+  .layer_music_upload .tab_bar,
+  .layer_music_upload .tab_bar li,
+  .W_input,
+  .laMed_mulist_v2,
+  .S_line2 {
+    border-color: var(--c-border) !important;
+  }
+  .layer_faces .faces_list li:hover,
+  .W_input:focus,
+  .W_input_focus {
+    border-color: var(--c-accent) !important;
+  }
+  .unlogin_left_nav .lev_layer {
+    border: 1px solid var(--c-border);
+  }
+  .user_atten li,
+  .WB_left_nav .lev_Box,
+  .send_weibo .input_set_timer .set_timer {
+    border: 0 !important;
+  }
+  .WB_left_nav .lev a,
+  .W_input,
+  .unlogin_left_nav .lev {
+    border-radius: 4px;
+  }
+  .WB_tab_a,
+  .WB_tab_a .tab li.S_bg2,
+  .WB_tab_a .tab li.curr .b .b1 em i,
+  .WB_tab_a .tab_box .fr_box {
+    box-shadow: none;
+  }
+  .WB_left_nav .lev .W_new_count {
+    margin-right: 0;
+  }
+  #plc_main .WB_main_c {
+    margin-left: 16px;
+    margin-right: 0;
+  }
+  .B_discover .WB_frame_c,
+  .WB_main_c,
+  .UI_scrollView .UI_scrollContent {
+    width: auto;
+  }
+  .WB_frame {
+    width: 1160px !important;
+  }
+  .WB_main_l {
+    width: 240px;
+  }
+  .WB_frame #plc_main {
+    width: 900px;
+  }
+  .W_person_info .nameBox .name {
+    font-size: 20px;
+  }
+  .W_checkbox,
+  .W_radio {
+    vertical-align: baseline;
+  }
+  .S_ficon_dis,
+  a.S_ficon_dis:hover,
+  a:hover .S_ficon_dis {
+    opacity: 1;
+    cursor: pointer;
+  }
+  .W_gotop {
+    left: 57%;
+    opacity: 1;
+  }
+  #v6_pl_rightmod_myinfo {
+    position: fixed;
+    z-index: 11;
+    top: 100px;
+    width: 240px;
+    transform: translateX(-100%);
+  }
+  .W_person_info .cover {
+    height: auto;
+  }
+  .W_person_info .cover .headpic {
+    position: initial;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+  }
+  .W_person_info .cover .headpic .W_face_radius {
+    width: 100%;
+    height: 100%;
+  }
+  .WB_innerwrap .user_atten {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .W_person_info .nameBox {
+    height: 20px;
+    line-height: 20px;
+  }
+  .WB_left_nav {
+    margin: 0 auto;
+    padding-top: 300px;
+    width: 100px;
+  }
+  .WB_left_nav .lev a {
+    text-align: center;
+  }
+  .lev_line.lev_line_v2 {
+    margin-top: 10px;
+  }
+  .WB_left_nav .lev a {
+    padding: 0 !important;
+  }
+  .WB_left_nav .lev a[nm='status'],
+  .WB_left_nav .lev_curr a {
+    background-color: var(--c-hover);
+  }
+  .WB_left_nav .lev a[nm='status'] .levtxt,
+  .WB_left_nav .lev_curr a .levtxt {
+    color: var(--c-accent) !important;
+  }
+  .unlogin_left_nav .lev_Box {
+    position: fixed !important;
+    top: 100px !important;
+    width: 100px !important;
+  }
+  #v6_pl_content_publishertop .send_weibo {
+    padding: 10px;
+    border: 1px solid var(--c-border);
+    border-radius: 4px;
+  }
+  #Pl_Core_RecommendFeed__18,
+  #Pl_Core_RecommendFeed__19,
+  #Pl_Core_RecommendFeed__74,
+  .WB_frame #plc_main .WB_frame_c + .WB_frame_b,
+  .W_layer .W_layer_title {
+    display: none;
+  }
+  .PCD_photo_album_v2 {
+    background-color: var(--c-background);
+  }
+  .send_weibo_simple_fold .input_simple {
+    background-color: var(--c-hover);
+  }
+  .PCD_person_info .bars_box .bar_box {
+    background-color: var(--c-border);
+  }
+  .PCD_pictext_f .pic_list_B .pt_ul .info_box {
+    background-color: transparent;
+  }
+  .WB_timeline .current em,
+  .WB_timeline .S_dot,
+  .W_gotop,
+  .PCD_tab .tb_tab .tab_link .ani_border,
+  .WB_tab_a .tab_box_c .tab_li .ani_border,
+  .PCD_person_info .bars_box .bar_box .bar {
+    background-color: var(--c-accent);
+  }
+  .PCD_person_info .bars_box .bar_box .bar {
+    background-image: none;
+  }
+  .W_btn_d,
+  .PCD_header .username,
+  .PCD_header .pf_username .tlink,
+  .PCD_header .pf_intro,
+  .WB_timeline .current em,
+  .PCD_header_b .pf_opt .W_btn_c em {
+    color: var(--c-white) !important;
+  }
+  .PCD_tab .tb_tab .current .tab_link .t_link,
+  .WB_tab_a .tab_box_c .tab_li:hover .ani_border,
+  .WB_tab_a .tab_box_c .curr a,
+  .WB_tab_b .inner .tab_ul .tab_cur .S_txt1 {
+    color: var(--c-accent) !important;
+  }
+  .PCD_photo_album_v2 .mid_line {
+    border-color: var(--c-border);
+  }
+  .WB_tab_b .inner .tab_ul .tab_cur .ani_border {
+    border-color: var(--c-accent);
+  }
+  .WB_tab_a .tab_box_c .tab .curr a,
+  .WB_tab_b .inner {
+    border: 0;
+  }
+  .PCD_photo_album_v2 {
+    border-radius: 4px;
+  }
+  .PCD_tab,
+  .WB_tab_a .tab_box_c,
+  .WB_tab_b {
+    box-shadow: none;
+  }
+  .WB_frame_a {
+    margin: 0;
+  }
+  .WB_frame_a,
+  .WB_frame_a_fix,
+  .B_page .WB_frame #plc_main {
+    width: 100%;
+  }
+  #Pl_Official_ProfileFeedNav__19 > div {
+    width: 900px !important;
+  }
+  .send_weibo_simple .input_simple_wrap .inputfunc_simple_wrap {
+    width: 800px;
+  }
+  .WB_frame #plc_main .WB_frame_b {
+    margin-right: 0;
+    width: 240px;
+  }
+  .WB_frame #plc_main .WB_frame_c {
+    width: 900px;
+  }
+  .WB_frame #plc_main > .WB_frame_c {
+    display: block;
+    margin: 0 auto;
+  }
+  .WB_frame #plc_main .WB_frame_b + .WB_frame_c {
+    display: inline-block;
+    margin-left: 16px;
+    margin-right: 0px;
+  }
+  .WB_timeline {
+    left: 58%;
+  }
+  .WB_timeline .S {
+    border-left-color: var(--c-accent);
+  }
+}
+@-moz-document url-prefix("https://weibo.com/at/"), url-prefix("https://weibo.com/comment/"), url-prefix("https://weibo.com/like/"), url-prefix("https://weibo.com/message/") {
+  #v6_pl_content_submessageList,
+  .webim_contacts_mod .webim_contacts_bd {
+    background-color: var(--c-background);
+  }
+  .bubble_l .bubble_cont,
+  .private_list_box .private_body .private_list:hover,
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .S_bg2,
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b {
+    background-color: var(--c-hover);
+  }
+  .private_list_box .private_body .private_list,
+  .WB_webim_page .webim_contacts_mod .webim_contacts_list .contacts {
+    background-color: transparent;
+  }
+  .private_dialogue_box .private_dialogue_body .cont .W_btn_c:hover em {
+    color: var(--c-accent);
+  }
+  .bubble_l .bubble_cont,
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b,
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .S_line1 {
+    border-color: var(--c-border);
+  }
+  .bubble_l .bubble_cont .bubble_arrow .W_arrow_bor i {
+    border-top-color: var(--c-border);
+  }
+  .bubble_l .bubble_cont .bubble_arrow .W_arrow_bor em {
+    border-top-color: var(--c-background);
+    border-right-color: var(--c-background);
+  }
+  .private_dialogue_box .private_dialogue_head {
+    border: 0;
+  }
+  #v6_pl_content_submessageList {
+    border-radius: 4px;
+  }
+  .WB_webim_page .webim_contacts_mod,
+  .WB_webim_page .webchat_enter {
+    box-shadow: none;
+  }
+  .WB_cardwrap {
+    margin-top: 20px;
+  }
+  .WB_main_r {
+    margin-right: 0;
+  }
+  #v6_pl_rightmod_helpat,
+  #v6_pl_rightmod_feedback,
+  #v6_pl_rightmod_helpcomment,
+  #v6_pl_rightmod_helplike,
+  #v6_pl_content_messagecontacts {
+    margin-left: 16px;
+  }
+  #v6_pl_content_atmeweibo,
+  #v6_pl_content_commentlist,
+  #v6_pl_content_likelist,
+  #v6_pl_content_submessageList {
+    width: 635px;
+  }
+  .private_dialogue_box .private_dialogue_body .cont .W_btn_c {
+    border: 0;
+    background-color: transparent !important;
+    color: var(--c-title) !important;
+  }
+  .private_dialogue_box .private_dialogue_body .cont .W_btn_c::after {
+    content: none !important;
+  }
+}
+@-moz-document url-prefix("https://account.weibo.com/set/") {
+  #WB_footer_public,
+  .WB_left_nav .lev .W_ico20,
+  .group_read .W_fr {
+    display: none;
+  }
+  .WB_left_nav a.lev_curr,
+  .WB_left_nav a.lev_curr:hover,
+  .p_bar,
+  .S_bg5,
+  .W_btn_arrow span {
+    background-color: var(--c-hover);
+  }
+  .S_bg4,
+  a.W_gotop:hover,
+  .SW_fun_bg:hover,
+  .SW_fun_bg_0_4:hover,
+  .SW_fun_bg_0_4:active,
+  .account_fold,
+  .W_layer .title,
+  .B_person_info .profile_tag .tag_edit input,
+  .B_weibo404 .W_main .W_error_bg {
+    background-color: transparent;
+  }
+  .p_bar_inner {
+    background-color: var(--c-accent) !important;
+  }
+  .W_miniblog,
+  .S_profile .W_miniblog,
+  .W_miniblog_fb,
+  .W_main,
+  .W_btn_a:hover,
+  .W_btn_b:hover,
+  .W_btn_d:hover,
+  .W_btn_a:hover span,
+  .W_btn_b:hover span,
+  .W_btn_d:hover span,
+  .W_btn_arrow {
+    background-image: none !important;
+  }
+  .group_read .title {
+    color: var(--c-title) !important;
+  }
+  .WB_left_nav a.lev_curr {
+    color: var(--c-accent) !important;
+  }
+  .group_read .sort,
+  .group_read .title,
+  .p_bar,
+  .W_btn_arrow span,
+  .border_line,
+  .account_unfold .unfold_left,
+  .account_unfold .unfold_right {
+    border-color: var(--c-border);
+  }
+  .account_fold,
+  .W_btn_a:hover span,
+  .W_btn_d:hover span,
+  .W_btn_b:hover span,
+  .W_btn_b span,
+  .W_btn_a span,
+  .W_btn_a_disable span,
+  .W_btn_b_disable span,
+  .W_btn_c span,
+  .W_btn_c_disable span,
+  .W_btn_d span,
+  .W_btn_d_disable span,
+  .W_btn_v span,
+  .W_btn_v_disable span {
+    border: 0;
+  }
+  .W_btn_arrow span {
+    border-left: 1px solid var(--c-border);
+  }
+  .W_input,
+  .W_inputStp,
+  .W_input_focus,
+  .W_input:focus,
+  .W_inputStp:focus {
+    box-shadow: none;
+  }
+  .acc_form .btn_item .W_btn_a,
+  .acc_form .btn_item .W_btn_b {
+    vertical-align: middle;
+  }
+  .W_btn_b:hover {
+    vertical-align: baseline;
+  }
+  .WB_left_nav .level_1_Box .lev a {
+    margin-bottom: 6px;
+  }
+  .WB_left_nav {
+    padding-top: 60px;
+  }
+  .WB_left_nav .W_main_l {
+    width: auto;
+  }
+  .W_main {
+    width: 1160px;
+  }
+  .W_main_l {
+    width: 240px;
+  }
+  .W_main_a {
+    margin: 0 0 0 16px;
+    width: 900px;
+  }
+  .W_follow_bg {
+    padding: 20px;
+    border-radius: 4px;
+    background-color: var(--c-background);
+  }
+}
+@-moz-document url("https://weibo.com/"), url-prefix("https://weibo.com/login") {
+  .WB_main_l,
+  .WB_frame #plc_main .WB_frame_c,
+  #pl_unlogin_home_hots,
+  #pl_unlogin_home_hotpersoncategory,
+  #pl_unlogin_home_dmca,
+  .WB_footer,
+  .W_gotop,
+  .Bv6_layer .W_layer_title {
+    display: none;
+  }
+  .UG_box {
+    background-color: var(--c-background);
+  }
+  .W_unlogin_v4 .W_login_form .input_wrap,
+  .W_unlogin_v4 .W_login_form .input_wrap .W_input,
+  .form_login_register .input_wrap {
+    background-color: var(--c-hover);
+  }
+  .Bv6_layer .W_input,
+  .Bv6_layer .send_weibo .input {
+    background-color: transparent;
+  }
+  .W_unlogin_v4 .info_header .tab a.cur {
+    color: var(--c-accent) !important;
+  }
+  .W_unlogin_v4 .info_header .tab,
+  .W_unlogin_v4 .login_content,
+  .W_unlogin_v4 .W_login_form .input_wrap,
+  .layer_login_register_v2 .tab_bar,
+  .layer_login_register_v2 .tab_bar a,
+  .layer_login_register_v2 .qrcode_con,
+  .form_login_register .input_wrap {
+    border-color: var(--c-border);
+  }
+  .W_unlogin_v4 .info_header .tab a.cur,
+  .layer_login_register_v2 .tab_bar a.cur,
+  .Bv6_layer .W_input:focus,
+  .Bv6_layer .W_input_focus {
+    border-color: var(--c-accent) !important;
+  }
+  .Bv6_layer :focus,
+  .Bv6_layer_menu_list :focus {
+    outline-color: var(--c-accent);
+  }
+  .Bv6_layer .content {
+    border: 0;
+  }
+  .layer_login_register_v2 .tab_bar a {
+    border-width: 1px;
+  }
+  .W_unlogin_v4 .login_content,
+  .W_unlogin_v4 .login_box {
+    box-shadow: none;
+  }
+  .UG_box {
+    padding: 0 0 10px;
+  }
+  .WB_frame #plc_main,
+  .WB_main_r,
+  .W_unlogin_v4 {
+    width: 100%;
+  }
+  #pl_unlogin_home_login {
+    margin: 0 auto;
+    padding-top: 200px;
+    width: 340px;
+  }
+  .W_unlogin_v4 .login_box {
+    border-radius: 4px;
+    background-color: transparent;
+  }
+}
+@-moz-document url-prefix("https://weibo.com/signup/"), url-prefix("https://e.weibo.com/register/") {
+  .W_header_line,
+  .W_logo_wave,
+  .W_logo_wave2,
+  .nologin_footer,
+  .W_nologin_main .main_tab_line .vline {
+    display: none;
+  }
+  .W_nologin .main_radius_bg,
+  .W_nologin .main_e_radius_bg,
+  #pl_account_regmail {
+    background-color: var(--c-background);
+  }
+  .W_reg_form .foreign_tel,
+  .W_reg_form .flag_tel .tel_country:hover {
+    background-color: var(--c-hover);
+  }
+  .W_btn_big span,
+  .W_nologin .main_radius_ebg {
+    background-color: transparent !important;
+  }
+  .B_reg_tel .W_nologin .W_reg_info,
+  .B_reg_email .W_nologin .W_reg_info,
+  .B_user .W_reg_info,
+  .B_register .W_nologin .W_reg_info,
+  .mobile_ico,
+  .mail_ico,
+  .W_btn_e:hover,
+  .W_btn_e:hover span,
+  .W_btn_big:hover span,
+  .W_reg_sidebar .reg_help ul i {
+    background-image: none !important;
+  }
+  .W_nologin_main .main_tab_line .cur,
+  .W_reg_form .tit i {
+    color: var(--c-accent) !important;
+  }
+  .W_reg_form .flag_tel .tel_country,
+  .W_reg_sidebar .line,
+  .invite_slogan {
+    border-color: var(--c-border);
+  }
+  .W_nologin_main .main_tab_line .cur {
+    border-color: var(--c-accent);
+  }
+  .W_btn_e,
+  .W_btn_big,
+  .W_btn_e span,
+  .W_btn_big span {
+    border: 0 !important;
+  }
+  .W_input,
+  .W_inputStp,
+  .W_nologin .main_radius_bg,
+  .W_nologin_main {
+    box-shadow: none;
+  }
+  .W_nologin_main .main_tab_line a {
+    margin: 0 10px;
+  }
+  .W_nologin .main_radius_ebg {
+    margin-top: -120px;
+  }
+  .W_nologin {
+    padding-top: 120px;
+  }
+  #pl_account_regmail {
+    border-radius: 0 0 4px 4px;
+  }
+  .W_nologin_main .main_tab_line {
+    padding: 20px 0;
+    text-align: center;
+  }
+}
