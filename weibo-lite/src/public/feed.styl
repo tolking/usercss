@@ -23,6 +23,7 @@
   background-color var(--c-hover)
 
 .S_bg3
+.WB_feed_v3 .WB_feed_repeat .repeat_list .list_box_in .between_line
   background-color transparent
 
 .tab_feed_a .tab .W_ficon
@@ -41,6 +42,7 @@ a:hover .S_ficon
 a.current .S_ficon
 a:hover em
 .tab_feed_a li .curr
+.WB_text a[title]
   color var(--c-accent) !important
 
 .S_line1
@@ -50,6 +52,10 @@ a:hover em
   border-color var(--c-hover)
 
 .WB_card_vote .vote_con1 .item:hover
+.WB_media_view .pic_choose_box li a:hover
+.WB_media_view .pic_choose_box li a.current
+.layer_multipic_preview .pic_choose_box li a:hover
+.layer_multipic_preview .pic_choose_box li.current a
   border-color var(--c-accent)
 
 .WB_feed_handle .WB_row_line
@@ -81,10 +87,13 @@ a:hover em
   margin 0
 
 .WB_feed_v3 .WB_expand
+  margin-top 8px
+
+.WB_feed_v3 .WB_expand
   padding 8px 12px
 
 .WB_feed_v3 .WB_face .opt
-  right -720px
+  right -780px
 
 a em
   transition color 0.3s ease-in-out !important
@@ -110,11 +119,11 @@ a em
     width 100%
 
     li
-      flex 1 1 32%
       display flex
       justify-content center
       align-items center
       margin 0 2% 0 0
+      width 32%
       height 160px
 
       &:nth-child(3n)

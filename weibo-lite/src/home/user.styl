@@ -1,42 +1,79 @@
 // 个人微博
 #Pl_Core_RecommendFeed__18
+#Pl_Core_RecommendFeed__19
+#Pl_Core_RecommendFeed__74
+.WB_frame #plc_main .WB_frame_c + .WB_frame_b
+.W_layer .W_layer_title
   display none
 
-.WB_frame_a
-.WB_frame_a_fix
-  width 100%
+.PCD_photo_album_v2
+  background-color var(--c-background)
+
+.send_weibo_simple_fold .input_simple
+  background-color var(--c-hover)
+
+.PCD_person_info .bars_box .bar_box
+  background-color var(--c-border)
+
+.PCD_pictext_f .pic_list_B .pt_ul .info_box
+  background-color transparent
 
 .WB_timeline .current em
 .WB_timeline .S_dot
 .W_gotop
 .PCD_tab .tb_tab .tab_link .ani_border
 .WB_tab_a .tab_box_c .tab_li .ani_border
+.PCD_person_info .bars_box .bar_box .bar
   background-color var(--c-accent)
+
+.PCD_person_info .bars_box .bar_box .bar
+  background-image none
 
 .W_btn_d
 .PCD_header .username
 .PCD_header .pf_username .tlink
 .PCD_header .pf_intro
 .WB_timeline .current em
+.PCD_header_b .pf_opt .W_btn_c em
   color var(--c-white) !important
 
 .PCD_tab .tb_tab .current .tab_link .t_link
 .WB_tab_a .tab_box_c .tab_li:hover .ani_border
 .WB_tab_a .tab_box_c .curr a
+.WB_tab_b .inner .tab_ul .tab_cur .S_txt1
   color var(--c-accent) !important
 
+.PCD_photo_album_v2 .mid_line
+  border-color var(--c-border)
+
+.WB_tab_b .inner .tab_ul .tab_cur .ani_border
+  border-color var(--c-accent)
+
 .WB_tab_a .tab_box_c .tab .curr a
+.WB_tab_b .inner
   border 0
+
+.PCD_photo_album_v2
+  border-radius 4px
 
 .PCD_tab
 .WB_tab_a .tab_box_c
+.WB_tab_b
   box-shadow none
 
 .WB_frame_a
   margin 0
 
+.WB_frame_a
+.WB_frame_a_fix
+.B_page .WB_frame #plc_main
+  width 100%
+
 #Pl_Official_ProfileFeedNav__19 > div
   width 900px !important
+
+.send_weibo_simple .input_simple_wrap .inputfunc_simple_wrap
+  width 800px
 
 .WB_frame #plc_main
   .WB_frame_b
@@ -44,8 +81,16 @@
     width 240px
 
   .WB_frame_c
-    margin-left 16px
     width 900px
+
+.WB_frame #plc_main > .WB_frame_c
+  display block
+  margin 0 auto
+
+.WB_frame #plc_main .WB_frame_b + .WB_frame_c
+  display inline-block
+  margin-left 16px
+  margin-right 0px
 
 // 时间线
 .WB_timeline
