@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           weibo-lite
 @namespace      tolking-usercss
-@version        1.0.0
+@version        1.0.1
 @description    一个简化的新浪微博页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/weibo-lite
@@ -85,9 +85,9 @@
     background-color: var(--c-border) !important;
   }
   select {
-    border-color: var(--c-border);
+    border-color: var(--c-border) !important;
     border-radius: 4px;
-    background-color: var(--c-hover);
+    background-color: var(--c-hover) !important;
     color: var(--c-title) !important;
   }
   :focus {
@@ -142,6 +142,10 @@
   }
   .WB_global_nav .ficon_send {
     color: var(--c-title) !important;
+  }
+  .WB_global_nav .gn_set_list .W_new_count,
+  .WB_global_nav .gn_topmenulist ul li .W_new_count {
+    color: var(--c-white) !important;
   }
   .FRAME_main .WB_global_nav .gn_nav_list li .home em {
     color: var(--c-accent) !important;
@@ -205,14 +209,18 @@
   .W_btn_c,
   .W_btn_d,
   .W_btn_e,
-  .W_btn_big {
+  .W_btn_big,
+  .s-btn-a,
+  .s-btn-b,
+  .s-btn-c,
+  .m-gotop {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
     background-image: none !important;
     color: var(--c-white) !important;
     overflow: hidden !important;
-    vertical-align: top;
+    vertical-align: middle;
     cursor: pointer;
   }
   .W_gotop span,
@@ -222,13 +230,32 @@
   .W_btn_d span,
   .W_btn_e span,
   .W_btn_big span,
+  .s-btn-a span,
+  .s-btn-b span,
+  .s-btn-c span,
+  .m-gotop span,
   .W_gotop em,
   .W_btn_a em,
   .W_btn_b em,
   .W_btn_c em,
   .W_btn_d em,
   .W_btn_e em,
-  .W_btn_big em {
+  .W_btn_big em,
+  .s-btn-a em,
+  .s-btn-b em,
+  .s-btn-c em,
+  .m-gotop em,
+  .W_gotop i,
+  .W_btn_a i,
+  .W_btn_b i,
+  .W_btn_c i,
+  .W_btn_d i,
+  .W_btn_e i,
+  .W_btn_big i,
+  .s-btn-a i,
+  .s-btn-b i,
+  .s-btn-c i,
+  .m-gotop i {
     color: var(--c-white) !important;
   }
   .W_gotop::after,
@@ -237,7 +264,11 @@
   .W_btn_c::after,
   .W_btn_d::after,
   .W_btn_e::after,
-  .W_btn_big::after {
+  .W_btn_big::after,
+  .s-btn-a::after,
+  .s-btn-b::after,
+  .s-btn-c::after,
+  .m-gotop::after {
     content: '';
     display: block;
     position: absolute;
@@ -255,7 +286,11 @@
   .W_btn_c:hover,
   .W_btn_d:hover,
   .W_btn_e:hover,
-  .W_btn_big:hover {
+  .W_btn_big:hover,
+  .s-btn-a:hover,
+  .s-btn-b:hover,
+  .s-btn-c:hover,
+  .m-gotop:hover {
     color: var(--c-white) !important;
   }
   .W_gotop:hover span,
@@ -265,13 +300,32 @@
   .W_btn_d:hover span,
   .W_btn_e:hover span,
   .W_btn_big:hover span,
+  .s-btn-a:hover span,
+  .s-btn-b:hover span,
+  .s-btn-c:hover span,
+  .m-gotop:hover span,
   .W_gotop:hover em,
   .W_btn_a:hover em,
   .W_btn_b:hover em,
   .W_btn_c:hover em,
   .W_btn_d:hover em,
   .W_btn_e:hover em,
-  .W_btn_big:hover em {
+  .W_btn_big:hover em,
+  .s-btn-a:hover em,
+  .s-btn-b:hover em,
+  .s-btn-c:hover em,
+  .m-gotop:hover em,
+  .W_gotop:hover i,
+  .W_btn_a:hover i,
+  .W_btn_b:hover i,
+  .W_btn_c:hover i,
+  .W_btn_d:hover i,
+  .W_btn_e:hover i,
+  .W_btn_big:hover i,
+  .s-btn-a:hover i,
+  .s-btn-b:hover i,
+  .s-btn-c:hover i,
+  .m-gotop:hover i {
     color: var(--c-white) !important;
   }
   .W_gotop:hover::after,
@@ -280,7 +334,11 @@
   .W_btn_c:hover::after,
   .W_btn_d:hover::after,
   .W_btn_e:hover::after,
-  .W_btn_big:hover::after {
+  .W_btn_big:hover::after,
+  .s-btn-a:hover::after,
+  .s-btn-b:hover::after,
+  .s-btn-c:hover::after,
+  .m-gotop:hover::after {
     transform: translateX(100%);
   }
   .W_layer .send_weibo .W_btn_a_disable,
@@ -325,31 +383,53 @@
   .pc_caldr,
   .unlogin_left_nav .lev_layer,
   .layer_menu_list_b,
-  .Bv6_layer .content {
+  .Bv6_layer .content,
+  .searchbox .search-input .m-sug-list,
+  .m-layer,
+  .m-caldr,
+  .card-feed .info .menu ul,
+  .m-page .list ul,
+  .m-filtertab .filter-list > li > span > ul,
+  .m-region {
     border-color: var(--c-border) !important;
     border-radius: 4px;
+    box-shadow: none !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
   }
   .layer_menu_list ul li.cur a,
   .layer_menu_list ul li a:hover,
   .layer_menu_list_b ul li.cur a,
-  .layer_menu_list_b ul li a:hover {
+  .layer_menu_list_b ul li a:hover,
+  .searchbox .search-input .m-sug-list li:hover,
+  .m-caldr .weeks,
+  .card-feed .info .menu ul li a:hover,
+  .m-page .list ul li.cur a,
+  .m-page .list ul li a:hover,
+  .m-filtertab .filter-list > li > span > ul > li > a:hover {
     background-color: var(--c-hover) !important;
   }
   .WB_global_nav .S_bg2_br,
   .W_layer .S_bg2_br {
-    border-bottom-color: var(--c-background) !important;
+    border-color: transparent transparent var(--c-background) transparent !important;
   }
   .WB_global_nav .S_line3,
   .W_layer .W_arrow_bor_t .S_line3 {
-    border-bottom-color: var(--c-border) !important;
+    border-color: transparent transparent var(--c-border) transparent !important;
   }
   .W_arrow_bor_l .S_bg2_br {
-    border-right-color: var(--c-background) !important;
+    border-color: transparent var(--c-background) transparent transparent !important;
   }
   .W_arrow_bor_l .S_line3 {
-    border-right-color: var(--c-border) !important;
+    border-color: transparent var(--c-border) transparent transparent !important;
+  }
+  .W_layer .W_arrow_bor_b .S_bg2_br,
+  .Bv6_layer .W_arrow_bor_b .S_bg2_br {
+    border-color: var(--c-background) transparent transparent transparent !important;
+  }
+  .W_layer .W_arrow_bor_b .S_line3,
+  .Bv6_layer .W_arrow_bor_b .S_line3 {
+    border-color: var(--c-border) transparent transparent transparent !important;
   }
   .gn_topmenulist_search .W_icon_sc_hot,
   .gn_topmenulist_search .W_icon_sc_new,
@@ -358,6 +438,7 @@
   .WB_feed_v3 .WB_media_a .W_icon_tag_v2,
   .S_spetxt_bg,
   .W_new_count {
+    border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
   }
@@ -368,20 +449,27 @@
   .WB_feed .WB_cardwrap[feedtype='ad'],
   .WB_feed .WB_cardwrap[action-type='fl_loadmore_middle'],
   .WB_feed_v3 .WB_cardtitle_b,
-  .WB_func .WB_handle .W_arrow_bor {
+  .WB_func .WB_handle .W_arrow_bor,
+  .card-wrap .card-top,
+  .card-together .header {
     display: none;
   }
   #v6_pl_content_publishertop,
   .WB_feed .WB_cardwrap,
   .W_layer .scroller .info_box,
-  .WB_feed_repeat {
+  .WB_feed_repeat,
+  .card-wrap,
+  .card-together {
     background-color: var(--c-background) !important;
   }
   .WB_feed_v3 .WB_expand.S_bg1,
   .SW_fun_bg:hover,
   .SW_fun_bg_active,
   .S_bg1,
-  .W_btn_alpha {
+  .W_btn_alpha,
+  .media-item-a,
+  .card-comment .con,
+  .media-info {
     background-color: var(--c-hover);
   }
   .S_bg3,
@@ -407,7 +495,8 @@
   .WB_text a[title] {
     color: var(--c-accent) !important;
   }
-  .S_line1 {
+  .S_line1,
+  .card-review {
     border-color: var(--c-border);
   }
   .S_bg1_br {
@@ -420,15 +509,24 @@
   .layer_multipic_preview .pic_choose_box li.current a {
     border-color: var(--c-accent);
   }
+  .s-arrow-t {
+    border-bottom-color: var(--c-hover);
+  }
   .WB_feed_handle .WB_row_line,
   .WB_row_line .line,
   .WB_func .WB_handle li .line,
   .layer_add_collect .tip-box,
-  .W_layer .content {
+  .W_layer .content,
+  .card-wrap,
+  .card-wrap .card-act,
+  .card-wrap .card-act li a,
+  .card-comment .act li,
+  .card-together {
     border: 0;
   }
   .WB_feed .WB_cardwrap,
-  .WB_feed_v3 .WB_expand {
+  .WB_feed_v3 .WB_expand,
+  .card-wrap {
     border-radius: 4px;
   }
   .WB_cardwrap {
@@ -1019,7 +1117,7 @@
     background-color: var(--c-background);
   }
 }
-@-moz-document url("https://weibo.com/"), url-prefix("https://weibo.com/login") {
+@-moz-document regexp("^.*weibo.com/?(\\?.*)?"), url-prefix("https://weibo.com/login") {
   .WB_main_l,
   .WB_frame #plc_main .WB_frame_c,
   #pl_unlogin_home_hots,
@@ -1164,5 +1262,101 @@
   .W_nologin_main .main_tab_line {
     padding: 20px 0;
     text-align: center;
+  }
+}
+@-moz-document url-prefix("https://s.weibo.com/") {
+  .m-footer,
+  .m-search .logo,
+  .m-con-r {
+    display: none;
+  }
+  .wbs-pic .m-wrap {
+    background-color: var(--c-background);
+  }
+  .m-search .searchbox input,
+  .m-adv-search dd [type=text],
+  .m-note,
+  .m-sub-nav,
+  .m-filtertab,
+  .m-region li a:hover,
+  .wbs-pic .pic {
+    background-color: var(--c-hover);
+  }
+  .s-hr {
+    background-color: var(--c-border);
+  }
+  .m-main-nav,
+  .m-page,
+  .m-error {
+    background-color: transparent;
+  }
+  .m-region .top dd i {
+    background-color: var(--c-accent);
+  }
+  .m-sub-nav li a.cur {
+    background-image: none;
+  }
+  .m-gotop a:hover {
+    color: var(--c-white) !important;
+  }
+  .m-main-nav a.cur,
+  .m-sub-nav li a.cur {
+    color: var(--c-accent) !important;
+  }
+  .m-search .searchbox input,
+  .m-adv-search dd [type=text],
+  .m-layer .header,
+  .m-page .prev,
+  .m-page .next,
+  .m-region .top {
+    border-color: var(--c-border);
+  }
+  .m-main-nav a.cur,
+  .m-main-nav a:hover,
+  .wbs-pic .pic:hover {
+    border-color: var(--c-accent);
+  }
+  .m-layer,
+  .s-brt1,
+  .card-user-b .info p span,
+  .m-page,
+  .m-error,
+  .m-filtertab,
+  .m-filtertab .filter-list > li,
+  .wbs-pic .pic {
+    border: 0;
+  }
+  .card-user-b,
+  .card-wrap,
+  .wbs-pic .m-wrap {
+    border-radius: 4px;
+  }
+  .card-feed .from,
+  .card-feed .from a {
+    font-size: 0;
+  }
+  .card-feed .from a:nth-child(1) {
+    font-size: 12px;
+  }
+  .m-main-nav li {
+    margin: 0 4.9%;
+  }
+  .wbs-pic .m-wrap {
+    padding: 14px;
+  }
+  .m-con-l {
+    width: 100%;
+  }
+  .m-main {
+    width: 900px;
+  }
+  .m-gotop {
+    opacity: 1;
+  }
+  .m-filtertab .filter-list > li > span > ul {
+    z-index: 1;
+  }
+  .m-main-nav li a {
+    transition: all 0.3s ease-in-out !important;
   }
 }
