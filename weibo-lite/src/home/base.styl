@@ -10,6 +10,11 @@
 #v6_pl_rightmod_attfeed
 #v6_trustPagelet_recom_member
 #v6_pl_rightmod_noticeboard
+#v6_pl_rightmod_favyoudao
+#v6_pl_rightmod_helpfav
+#v6_pl_rightmod_feedback
+#v6_pl_rightmod_likeprofile
+#v6_pl_rightmod_feedback
 #v6_pl_ad_bigday
 #v6_pl_ad_forfqy
 #plc_bot .WB_footer
@@ -109,6 +114,9 @@ fieldset
 .layer_faces .faces_list li:hover
 .W_input:focus
 .W_input_focus
+.feed_pop_tag .tab_cur
+.feed_pop_tag .WB_tab_b .inner .tab_ul .tab_cur .ani_border
+.feed_pop_tag .WB_tab_b .inner .tab_ul .tab_item .ani_border
 	border-color var(--c-accent) !important
 
 .unlogin_left_nav .lev_layer
@@ -140,7 +148,7 @@ fieldset
 .B_discover .WB_frame_c
 .WB_main_c
 .UI_scrollView .UI_scrollContent
-	width auto
+	width 100%
 
 .WB_frame
 	width 1160px !important
@@ -154,8 +162,9 @@ fieldset
 .W_person_info .nameBox .name
 	font-size 20px
 
-.W_checkbox, .W_radio
-	vertical-align: baseline
+.W_checkbox
+.W_radio
+	vertical-align baseline
 
 .S_ficon_dis
 a.S_ficon_dis:hover
@@ -212,7 +221,7 @@ a:hover .S_ficon_dis
 .WB_left_nav .lev a
 	padding 0 !important
 
-.WB_left_nav .lev a[nm='status']
+.WB_left_nav .lev a.lev_curr
 .WB_left_nav .lev_curr a
 	background-color var(--c-hover)
 

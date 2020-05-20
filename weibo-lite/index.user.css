@@ -205,7 +205,6 @@
   }
   .W_gotop,
   .W_btn_a,
-  .W_btn_b,
   .W_btn_c,
   .W_btn_d,
   .W_btn_e,
@@ -225,7 +224,6 @@
   }
   .W_gotop span,
   .W_btn_a span,
-  .W_btn_b span,
   .W_btn_c span,
   .W_btn_d span,
   .W_btn_e span,
@@ -236,7 +234,6 @@
   .m-gotop span,
   .W_gotop em,
   .W_btn_a em,
-  .W_btn_b em,
   .W_btn_c em,
   .W_btn_d em,
   .W_btn_e em,
@@ -247,7 +244,6 @@
   .m-gotop em,
   .W_gotop i,
   .W_btn_a i,
-  .W_btn_b i,
   .W_btn_c i,
   .W_btn_d i,
   .W_btn_e i,
@@ -260,7 +256,6 @@
   }
   .W_gotop::after,
   .W_btn_a::after,
-  .W_btn_b::after,
   .W_btn_c::after,
   .W_btn_d::after,
   .W_btn_e::after,
@@ -282,7 +277,6 @@
   }
   .W_gotop:hover,
   .W_btn_a:hover,
-  .W_btn_b:hover,
   .W_btn_c:hover,
   .W_btn_d:hover,
   .W_btn_e:hover,
@@ -295,7 +289,6 @@
   }
   .W_gotop:hover span,
   .W_btn_a:hover span,
-  .W_btn_b:hover span,
   .W_btn_c:hover span,
   .W_btn_d:hover span,
   .W_btn_e:hover span,
@@ -306,7 +299,6 @@
   .m-gotop:hover span,
   .W_gotop:hover em,
   .W_btn_a:hover em,
-  .W_btn_b:hover em,
   .W_btn_c:hover em,
   .W_btn_d:hover em,
   .W_btn_e:hover em,
@@ -317,7 +309,6 @@
   .m-gotop:hover em,
   .W_gotop:hover i,
   .W_btn_a:hover i,
-  .W_btn_b:hover i,
   .W_btn_c:hover i,
   .W_btn_d:hover i,
   .W_btn_e:hover i,
@@ -330,7 +321,6 @@
   }
   .W_gotop:hover::after,
   .W_btn_a:hover::after,
-  .W_btn_b:hover::after,
   .W_btn_c:hover::after,
   .W_btn_d:hover::after,
   .W_btn_e:hover::after,
@@ -344,7 +334,8 @@
   .W_layer .send_weibo .W_btn_a_disable,
   .W_btn_a_disable,
   .W_btn_b,
-  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b {
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b,
+  .artical_add_box .btn_line a {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -354,19 +345,22 @@
   .W_layer .send_weibo .W_btn_a_disable span,
   .W_btn_a_disable span,
   .W_btn_b span,
-  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b span {
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b span,
+  .artical_add_box .btn_line a span {
     color: var(--c-text) !important;
   }
   .W_layer .send_weibo .W_btn_a_disable::after,
   .W_btn_a_disable::after,
   .W_btn_b::after,
-  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b::after {
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b::after,
+  .artical_add_box .btn_line a::after {
     content: none !important;
   }
   .W_layer .send_weibo .W_btn_a_disable:hover,
   .W_btn_a_disable:hover,
   .W_btn_b:hover,
-  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b:hover {
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b:hover,
+  .artical_add_box .btn_line a:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
     color: var(--c-text) !important;
@@ -374,7 +368,8 @@
   .W_layer .send_weibo .W_btn_a_disable:hover span,
   .W_btn_a_disable:hover span,
   .W_btn_b:hover span,
-  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b:hover span {
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b:hover span,
+  .artical_add_box .btn_line a:hover span {
     color: var(--c-text) !important;
   }
   .layer_menu_list,
@@ -437,7 +432,8 @@
   .WB_left_nav .lev .W_new_count,
   .WB_feed_v3 .WB_media_a .W_icon_tag_v2,
   .S_spetxt_bg,
-  .W_new_count {
+  .W_new_count,
+  .W_icon_original {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
@@ -469,7 +465,8 @@
   .W_btn_alpha,
   .media-item-a,
   .card-comment .con,
-  .media-info {
+  .media-info,
+  .W_tips.tips_rederror {
     background-color: var(--c-hover);
   }
   .S_bg3,
@@ -521,7 +518,8 @@
   .card-wrap .card-act,
   .card-wrap .card-act li a,
   .card-comment .act li,
-  .card-together {
+  .card-together,
+  .W_tips.tips_rederror {
     border: 0;
   }
   .WB_feed .WB_cardwrap,
@@ -619,6 +617,10 @@
   #v6_pl_rightmod_attfeed,
   #v6_trustPagelet_recom_member,
   #v6_pl_rightmod_noticeboard,
+  #v6_pl_rightmod_favyoudao,
+  #v6_pl_rightmod_helpfav,
+  #v6_pl_rightmod_feedback,
+  #v6_pl_rightmod_likeprofile,
   #v6_pl_ad_bigday,
   #v6_pl_ad_forfqy,
   #plc_bot .WB_footer,
@@ -716,7 +718,10 @@
   }
   .layer_faces .faces_list li:hover,
   .W_input:focus,
-  .W_input_focus {
+  .W_input_focus,
+  .feed_pop_tag .tab_cur,
+  .feed_pop_tag .WB_tab_b .inner .tab_ul .tab_cur .ani_border,
+  .feed_pop_tag .WB_tab_b .inner .tab_ul .tab_item .ani_border {
     border-color: var(--c-accent) !important;
   }
   .unlogin_left_nav .lev_layer {
@@ -748,7 +753,7 @@
   .B_discover .WB_frame_c,
   .WB_main_c,
   .UI_scrollView .UI_scrollContent {
-    width: auto;
+    width: 100%;
   }
   .WB_frame {
     width: 1160px !important;
@@ -819,11 +824,11 @@
   .WB_left_nav .lev a {
     padding: 0 !important;
   }
-  .WB_left_nav .lev a[nm='status'],
+  .WB_left_nav .lev a.lev_curr,
   .WB_left_nav .lev_curr a {
     background-color: var(--c-hover);
   }
-  .WB_left_nav .lev a[nm='status'] .levtxt,
+  .WB_left_nav .lev a.lev_curr .levtxt,
   .WB_left_nav .lev_curr a .levtxt {
     color: var(--c-accent) !important;
   }
@@ -934,6 +939,53 @@
   }
   .WB_timeline .S {
     border-left-color: var(--c-accent);
+  }
+}
+@-moz-document url-prefix("https://weibo.com/ttarticle/") {
+  .B_artical .W_gotop_v2 {
+    display: none;
+  }
+  .WB_artical .main_editor .title {
+    color: var(--c-title) !important;
+  }
+  .btn_bed .W_btn_b .ficon_add {
+    color: var(--c-text) !important;
+  }
+  .WB_artical .PCD_pictext_i .pt_ul .pt_li {
+    border-color: var(--c-border);
+  }
+  .WB_artical .otherlist {
+    border: 0;
+  }
+  .artical_add_box .btn_line::before {
+    background-image: linear-gradient(to bottom, transparent 0%, var(--c-background) 70%);
+  }
+  .WB_artical {
+    padding: 0;
+  }
+  .WB_artical .main_toppic,
+  .WB_artical .WB_editor_iframe,
+  .WB_artical .WB_editor_iframe_new,
+  .WB_artical .WB_editor_iframe_word,
+  .WB_artical .WB_editor_iframe_v3 {
+    width: auto;
+  }
+  .B_artical .WB_frame,
+  .B_artical .WB_frame #plc_main,
+  .B_artical .WB_frame_a,
+  .WB_artical {
+    width: 900px;
+  }
+  .WB_editor_iframe_new,
+  .WB_artical .PCD_counter_b,
+  .WB_artical .PCD_pictext_i {
+    padding: 20px;
+    border-radius: 4px;
+    background-color: var(--c-background);
+  }
+  .B_artical .WB_frame #plc_main {
+    display: block;
+    margin: 0 auto;
   }
 }
 @-moz-document url-prefix("https://weibo.com/at/"), url-prefix("https://weibo.com/comment/"), url-prefix("https://weibo.com/like/"), url-prefix("https://weibo.com/message/") {
@@ -1117,7 +1169,7 @@
     background-color: var(--c-background);
   }
 }
-@-moz-document regexp("^.*weibo.com/?(\\?.*)?"), url-prefix("https://weibo.com/login") {
+@-moz-document regexp("^.*//weibo.com/((index\\.html)|(\\?.*)|(#.*))?"), url-prefix("https://weibo.com/login") {
   .WB_main_l,
   .WB_frame #plc_main .WB_frame_c,
   #pl_unlogin_home_hots,
