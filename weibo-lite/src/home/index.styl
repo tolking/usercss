@@ -3,6 +3,15 @@
 	@import 'base'
 	@import 'user'
 }
+@-moz-document url-prefix("https://dss.sc.weibo.com/"),
+url-prefix("//e.weibo.com/v1/public/"),
+url-prefix("https://shop.sc.weibo.com/"),
+url-prefix("https://event.sc.weibo.com/"),
+url-prefix("https://pay.sc.weibo.com/"),
+url-pixfix("https://wyq.sina.com/") {
+	// 管理中心样式
+	@import 'manage'
+}
 @-moz-document url-prefix("https://weibo.com/ttarticle/") {
 	// 文章样式
 	@import 'article'
