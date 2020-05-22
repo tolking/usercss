@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           weibo-lite
 @namespace      tolking-usercss
-@version        1.0.0
+@version        1.0.1
 @description    一个简化的新浪微博页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/weibo-lite
@@ -85,9 +85,9 @@
     background-color: var(--c-border) !important;
   }
   select {
-    border-color: var(--c-border);
+    border-color: var(--c-border) !important;
     border-radius: 4px;
-    background-color: var(--c-hover);
+    background-color: var(--c-hover) !important;
     color: var(--c-title) !important;
   }
   :focus {
@@ -142,6 +142,10 @@
   }
   .WB_global_nav .ficon_send {
     color: var(--c-title) !important;
+  }
+  .WB_global_nav .gn_set_list .W_new_count,
+  .WB_global_nav .gn_topmenulist ul li .W_new_count {
+    color: var(--c-white) !important;
   }
   .FRAME_main .WB_global_nav .gn_nav_list li .home em {
     color: var(--c-accent) !important;
@@ -201,43 +205,85 @@
   }
   .W_gotop,
   .W_btn_a,
-  .W_btn_b,
   .W_btn_c,
   .W_btn_d,
   .W_btn_e,
-  .W_btn_big {
+  .W_btn_big,
+  .s-btn-a,
+  .s-btn-b,
+  .s-btn-c,
+  .m-gotop,
+  .card.authority .btn,
+  .pay-charts-tip .hd .btn,
+  .chart-group .chart.pay-chart .pay-chart-btn span,
+  .micro-analysis .search-wrapper span {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
     background-image: none !important;
     color: var(--c-white) !important;
     overflow: hidden !important;
-    vertical-align: top;
+    vertical-align: middle;
     cursor: pointer;
   }
   .W_gotop span,
   .W_btn_a span,
-  .W_btn_b span,
   .W_btn_c span,
   .W_btn_d span,
   .W_btn_e span,
   .W_btn_big span,
+  .s-btn-a span,
+  .s-btn-b span,
+  .s-btn-c span,
+  .m-gotop span,
+  .card.authority .btn span,
+  .pay-charts-tip .hd .btn span,
+  .chart-group .chart.pay-chart .pay-chart-btn span span,
+  .micro-analysis .search-wrapper span span,
   .W_gotop em,
   .W_btn_a em,
-  .W_btn_b em,
   .W_btn_c em,
   .W_btn_d em,
   .W_btn_e em,
-  .W_btn_big em {
+  .W_btn_big em,
+  .s-btn-a em,
+  .s-btn-b em,
+  .s-btn-c em,
+  .m-gotop em,
+  .card.authority .btn em,
+  .pay-charts-tip .hd .btn em,
+  .chart-group .chart.pay-chart .pay-chart-btn span em,
+  .micro-analysis .search-wrapper span em,
+  .W_gotop i,
+  .W_btn_a i,
+  .W_btn_c i,
+  .W_btn_d i,
+  .W_btn_e i,
+  .W_btn_big i,
+  .s-btn-a i,
+  .s-btn-b i,
+  .s-btn-c i,
+  .m-gotop i,
+  .card.authority .btn i,
+  .pay-charts-tip .hd .btn i,
+  .chart-group .chart.pay-chart .pay-chart-btn span i,
+  .micro-analysis .search-wrapper span i {
     color: var(--c-white) !important;
   }
   .W_gotop::after,
   .W_btn_a::after,
-  .W_btn_b::after,
   .W_btn_c::after,
   .W_btn_d::after,
   .W_btn_e::after,
-  .W_btn_big::after {
+  .W_btn_big::after,
+  .s-btn-a::after,
+  .s-btn-b::after,
+  .s-btn-c::after,
+  .m-gotop::after,
+  .card.authority .btn::after,
+  .pay-charts-tip .hd .btn::after,
+  .chart-group .chart.pay-chart .pay-chart-btn span::after,
+  .micro-analysis .search-wrapper span::after {
     content: '';
     display: block;
     position: absolute;
@@ -251,42 +297,89 @@
   }
   .W_gotop:hover,
   .W_btn_a:hover,
-  .W_btn_b:hover,
   .W_btn_c:hover,
   .W_btn_d:hover,
   .W_btn_e:hover,
-  .W_btn_big:hover {
+  .W_btn_big:hover,
+  .s-btn-a:hover,
+  .s-btn-b:hover,
+  .s-btn-c:hover,
+  .m-gotop:hover,
+  .card.authority .btn:hover,
+  .pay-charts-tip .hd .btn:hover,
+  .chart-group .chart.pay-chart .pay-chart-btn span:hover,
+  .micro-analysis .search-wrapper span:hover {
     color: var(--c-white) !important;
   }
   .W_gotop:hover span,
   .W_btn_a:hover span,
-  .W_btn_b:hover span,
   .W_btn_c:hover span,
   .W_btn_d:hover span,
   .W_btn_e:hover span,
   .W_btn_big:hover span,
+  .s-btn-a:hover span,
+  .s-btn-b:hover span,
+  .s-btn-c:hover span,
+  .m-gotop:hover span,
+  .card.authority .btn:hover span,
+  .pay-charts-tip .hd .btn:hover span,
+  .chart-group .chart.pay-chart .pay-chart-btn span:hover span,
+  .micro-analysis .search-wrapper span:hover span,
   .W_gotop:hover em,
   .W_btn_a:hover em,
-  .W_btn_b:hover em,
   .W_btn_c:hover em,
   .W_btn_d:hover em,
   .W_btn_e:hover em,
-  .W_btn_big:hover em {
+  .W_btn_big:hover em,
+  .s-btn-a:hover em,
+  .s-btn-b:hover em,
+  .s-btn-c:hover em,
+  .m-gotop:hover em,
+  .card.authority .btn:hover em,
+  .pay-charts-tip .hd .btn:hover em,
+  .chart-group .chart.pay-chart .pay-chart-btn span:hover em,
+  .micro-analysis .search-wrapper span:hover em,
+  .W_gotop:hover i,
+  .W_btn_a:hover i,
+  .W_btn_c:hover i,
+  .W_btn_d:hover i,
+  .W_btn_e:hover i,
+  .W_btn_big:hover i,
+  .s-btn-a:hover i,
+  .s-btn-b:hover i,
+  .s-btn-c:hover i,
+  .m-gotop:hover i,
+  .card.authority .btn:hover i,
+  .pay-charts-tip .hd .btn:hover i,
+  .chart-group .chart.pay-chart .pay-chart-btn span:hover i,
+  .micro-analysis .search-wrapper span:hover i {
     color: var(--c-white) !important;
   }
   .W_gotop:hover::after,
   .W_btn_a:hover::after,
-  .W_btn_b:hover::after,
   .W_btn_c:hover::after,
   .W_btn_d:hover::after,
   .W_btn_e:hover::after,
-  .W_btn_big:hover::after {
+  .W_btn_big:hover::after,
+  .s-btn-a:hover::after,
+  .s-btn-b:hover::after,
+  .s-btn-c:hover::after,
+  .m-gotop:hover::after,
+  .card.authority .btn:hover::after,
+  .pay-charts-tip .hd .btn:hover::after,
+  .chart-group .chart.pay-chart .pay-chart-btn span:hover::after,
+  .micro-analysis .search-wrapper span:hover::after {
     transform: translateX(100%);
   }
   .W_layer .send_weibo .W_btn_a_disable,
   .W_btn_a_disable,
   .W_btn_b,
-  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b {
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b,
+  .artical_add_box .btn_line a,
+  .chart-group .chart .c-hd .c-jump,
+  .download .export span,
+  .pay-charts-tip .hd .btn.preview,
+  .v-home-root .data-card .filter-wrapper .form-item .form-data .search {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -296,19 +389,34 @@
   .W_layer .send_weibo .W_btn_a_disable span,
   .W_btn_a_disable span,
   .W_btn_b span,
-  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b span {
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b span,
+  .artical_add_box .btn_line a span,
+  .chart-group .chart .c-hd .c-jump span,
+  .download .export span span,
+  .pay-charts-tip .hd .btn.preview span,
+  .v-home-root .data-card .filter-wrapper .form-item .form-data .search span {
     color: var(--c-text) !important;
   }
   .W_layer .send_weibo .W_btn_a_disable::after,
   .W_btn_a_disable::after,
   .W_btn_b::after,
-  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b::after {
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b::after,
+  .artical_add_box .btn_line a::after,
+  .chart-group .chart .c-hd .c-jump::after,
+  .download .export span::after,
+  .pay-charts-tip .hd .btn.preview::after,
+  .v-home-root .data-card .filter-wrapper .form-item .form-data .search::after {
     content: none !important;
   }
   .W_layer .send_weibo .W_btn_a_disable:hover,
   .W_btn_a_disable:hover,
   .W_btn_b:hover,
-  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b:hover {
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b:hover,
+  .artical_add_box .btn_line a:hover,
+  .chart-group .chart .c-hd .c-jump:hover,
+  .download .export span:hover,
+  .pay-charts-tip .hd .btn.preview:hover,
+  .v-home-root .data-card .filter-wrapper .form-item .form-data .search:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
     color: var(--c-text) !important;
@@ -316,7 +424,12 @@
   .W_layer .send_weibo .W_btn_a_disable:hover span,
   .W_btn_a_disable:hover span,
   .W_btn_b:hover span,
-  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b:hover span {
+  .private_dialogue_box .private_dialogue_body .msg_bubble_list .W_btn_b:hover span,
+  .artical_add_box .btn_line a:hover span,
+  .chart-group .chart .c-hd .c-jump:hover span,
+  .download .export span:hover span,
+  .pay-charts-tip .hd .btn.preview:hover span,
+  .v-home-root .data-card .filter-wrapper .form-item .form-data .search:hover span {
     color: var(--c-text) !important;
   }
   .layer_menu_list,
@@ -325,31 +438,53 @@
   .pc_caldr,
   .unlogin_left_nav .lev_layer,
   .layer_menu_list_b,
-  .Bv6_layer .content {
+  .Bv6_layer .content,
+  .searchbox .search-input .m-sug-list,
+  .m-layer,
+  .m-caldr,
+  .card-feed .info .menu ul,
+  .m-page .list ul,
+  .m-filtertab .filter-list > li > span > ul,
+  .m-region {
     border-color: var(--c-border) !important;
     border-radius: 4px;
+    box-shadow: none !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
   }
   .layer_menu_list ul li.cur a,
   .layer_menu_list ul li a:hover,
   .layer_menu_list_b ul li.cur a,
-  .layer_menu_list_b ul li a:hover {
+  .layer_menu_list_b ul li a:hover,
+  .searchbox .search-input .m-sug-list li:hover,
+  .m-caldr .weeks,
+  .card-feed .info .menu ul li a:hover,
+  .m-page .list ul li.cur a,
+  .m-page .list ul li a:hover,
+  .m-filtertab .filter-list > li > span > ul > li > a:hover {
     background-color: var(--c-hover) !important;
   }
   .WB_global_nav .S_bg2_br,
   .W_layer .S_bg2_br {
-    border-bottom-color: var(--c-background) !important;
+    border-color: transparent transparent var(--c-background) transparent !important;
   }
   .WB_global_nav .S_line3,
   .W_layer .W_arrow_bor_t .S_line3 {
-    border-bottom-color: var(--c-border) !important;
+    border-color: transparent transparent var(--c-border) transparent !important;
   }
   .W_arrow_bor_l .S_bg2_br {
-    border-right-color: var(--c-background) !important;
+    border-color: transparent var(--c-background) transparent transparent !important;
   }
   .W_arrow_bor_l .S_line3 {
-    border-right-color: var(--c-border) !important;
+    border-color: transparent var(--c-border) transparent transparent !important;
+  }
+  .W_layer .W_arrow_bor_b .S_bg2_br,
+  .Bv6_layer .W_arrow_bor_b .S_bg2_br {
+    border-color: var(--c-background) transparent transparent transparent !important;
+  }
+  .W_layer .W_arrow_bor_b .S_line3,
+  .Bv6_layer .W_arrow_bor_b .S_line3 {
+    border-color: var(--c-border) transparent transparent transparent !important;
   }
   .gn_topmenulist_search .W_icon_sc_hot,
   .gn_topmenulist_search .W_icon_sc_new,
@@ -357,7 +492,9 @@
   .WB_left_nav .lev .W_new_count,
   .WB_feed_v3 .WB_media_a .W_icon_tag_v2,
   .S_spetxt_bg,
-  .W_new_count {
+  .W_new_count,
+  .W_icon_original {
+    border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
   }
@@ -368,32 +505,55 @@
   .WB_feed .WB_cardwrap[feedtype='ad'],
   .WB_feed .WB_cardwrap[action-type='fl_loadmore_middle'],
   .WB_feed_v3 .WB_cardtitle_b,
-  .WB_func .WB_handle .W_arrow_bor {
+  .WB_func .WB_handle .W_arrow_bor,
+  .card-wrap .card-top,
+  .card-together .header {
     display: none;
   }
   #v6_pl_content_publishertop,
   .WB_feed .WB_cardwrap,
   .W_layer .scroller .info_box,
-  .WB_feed_repeat {
+  .WB_feed_repeat,
+  .card-wrap,
+  .card-together {
     background-color: var(--c-background) !important;
   }
   .WB_feed_v3 .WB_expand.S_bg1,
   .SW_fun_bg:hover,
   .SW_fun_bg_active,
   .S_bg1,
-  .W_btn_alpha {
+  .W_btn_alpha,
+  .media-item-a,
+  .card-comment .con,
+  .media-info,
+  .W_tips.tips_rederror {
     background-color: var(--c-hover);
   }
+  .WB_h5video_v2 .wbv-load-progress,
+  .WB_h5video_v2 .wbv-volume-bar {
+    background-color: var(--c-border);
+  }
   .S_bg3,
-  .WB_feed_v3 .WB_feed_repeat .repeat_list .list_box_in .between_line {
+  .WB_feed_v3 .WB_feed_repeat .repeat_list .list_box_in .between_line,
+  .WB_h5video_v2 .wbv-progress-holder:before {
     background-color: transparent;
+  }
+  .WB_h5video_v2 .wbv-play-progress,
+  .WB_h5video_v2 .wbv-speed-button:hover:before,
+  .WB_h5video_v2 .wbv-quality-button:hover:before,
+  .WB_h5video_v2 .wbv-volume-handle {
+    background-color: var(--c-accent);
   }
   .tab_feed_a .tab .W_ficon {
     color: var(--c-title) !important;
   }
   .W_btn_b .ficon_add,
   .artwork_box .tag_showpicL .inner .txt,
-  .layer_view_morepic .box_li .W_autocut {
+  .layer_view_morepic .box_li .W_autocut,
+  .WB_h5video_v2 .wbv-time-control div,
+  .WB_h5video_v2 .wbv-pop-layer h4 span,
+  .WB_h5video_v2 .wbv-control.wbv-speed-button:hover:before,
+  .WB_h5video_v2 .wbv-control.wbv-quality-button:hover:before {
     color: var(--c-white) !important;
   }
   .WB_text a[render='ext'],
@@ -404,10 +564,13 @@
   a.current .S_ficon,
   a:hover em,
   .tab_feed_a li .curr,
-  .WB_text a[title] {
+  .WB_text a[title],
+  .WB_h5video_v2 .wbv-big-play-button:hover,
+  .WB_h5video_v2 .wbv-control:hover:before {
     color: var(--c-accent) !important;
   }
-  .S_line1 {
+  .S_line1,
+  .card-review {
     border-color: var(--c-border);
   }
   .S_bg1_br {
@@ -420,15 +583,25 @@
   .layer_multipic_preview .pic_choose_box li.current a {
     border-color: var(--c-accent);
   }
+  .s-arrow-t {
+    border-bottom-color: var(--c-hover);
+  }
   .WB_feed_handle .WB_row_line,
   .WB_row_line .line,
   .WB_func .WB_handle li .line,
   .layer_add_collect .tip-box,
-  .W_layer .content {
+  .W_layer .content,
+  .card-wrap,
+  .card-wrap .card-act,
+  .card-wrap .card-act li a,
+  .card-comment .act li,
+  .card-together,
+  .W_tips.tips_rederror {
     border: 0;
   }
   .WB_feed .WB_cardwrap,
-  .WB_feed_v3 .WB_expand {
+  .WB_feed_v3 .WB_expand,
+  .card-wrap {
     border-radius: 4px;
   }
   .WB_cardwrap {
@@ -503,6 +676,10 @@
   .WB_feed_v3 .WB_media_a_m1 .WB_pic {
     max-width: 300px;
   }
+  .WB_feed_v3 .WB_media_a_m1 li.WB_video,
+  .WB_feed_v3 .WB_media_a_m1 li.WB_video_a {
+    width: 500px;
+  }
   .WB_feed_v3 .WB_media_a_m1 .WB_video,
   .WB_feed_v3 .WB_media_a_m1 .WB_video_a {
     display: block !important;
@@ -517,10 +694,16 @@
   #v6_pl_rightmod_hongbao,
   #v6_pl_rightmod_rank,
   #v6_pl_rightmod_recominfo,
+  #v6_pl_rightmod_ads35,
   #v6_pl_rightmod_ads36,
   #v6_pl_rightmod_attfeed,
   #v6_trustPagelet_recom_member,
   #v6_pl_rightmod_noticeboard,
+  #v6_pl_rightmod_favyoudao,
+  #v6_pl_rightmod_helpfav,
+  #v6_pl_rightmod_feedback,
+  #v6_pl_rightmod_likeprofile,
+  #v6_pl_rightmod_helpcomment,
   #v6_pl_ad_bigday,
   #v6_pl_ad_forfqy,
   #plc_bot .WB_footer,
@@ -532,6 +715,9 @@
   .W_pages_minibtn em,
   .WB_tab_a .tab .b {
     display: none !important;
+  }
+  .feed_pop_search.S_bg2 {
+    background-color: var(--c-background);
   }
   .WB_left_nav .lev a:hover,
   .WB_left_nav .lev_curr,
@@ -577,7 +763,8 @@
   .W_person_info .cover {
     background-image: none !important;
   }
-  .W_layer .S_ficon {
+  .W_layer .S_ficon,
+  .pc_caldr .days li a strong {
     color: var(--c-title) !important;
   }
   .W_layer .W_btn_b_disable .S_ficon,
@@ -585,9 +772,6 @@
   .pc_caldr .selector .year,
   .send_weibo .set_timer .sel_time {
     color: var(--c-text) !important;
-  }
-  .pc_caldr .days li a strong {
-    color: var(--c-white) !important;
   }
   .laMed_mulist_v2 .li_inner:hover span,
   .layer_send_music .W_pages_minibtn .S_txt1,
@@ -618,8 +802,17 @@
   }
   .layer_faces .faces_list li:hover,
   .W_input:focus,
-  .W_input_focus {
+  .W_input_focus,
+  .feed_pop_tag .tab_cur,
+  .feed_pop_tag .WB_tab_b .inner .tab_ul .tab_cur .ani_border,
+  .feed_pop_tag .WB_tab_b .inner .tab_ul .tab_item .ani_border {
     border-color: var(--c-accent) !important;
+  }
+  .W_btn_tag:hover .W_arrow_bor_l em {
+    border-color: transparent var(--c-hover) transparent transparent !important;
+  }
+  .W_btn_tag:hover .W_arrow_bor .S_line3 {
+    border-color: transparent var(--c-accent) transparent transparent !important;
   }
   .unlogin_left_nav .lev_layer {
     border: 1px solid var(--c-border);
@@ -631,13 +824,15 @@
   }
   .WB_left_nav .lev a,
   .W_input,
-  .unlogin_left_nav .lev {
+  .unlogin_left_nav .lev,
+  .feed_pop_search {
     border-radius: 4px;
   }
   .WB_tab_a,
   .WB_tab_a .tab li.S_bg2,
   .WB_tab_a .tab li.curr .b .b1 em i,
-  .WB_tab_a .tab_box .fr_box {
+  .WB_tab_a .tab_box .fr_box,
+  .W_input {
     box-shadow: none;
   }
   .WB_left_nav .lev .W_new_count {
@@ -650,7 +845,7 @@
   .B_discover .WB_frame_c,
   .WB_main_c,
   .UI_scrollView .UI_scrollContent {
-    width: auto;
+    width: 100%;
   }
   .WB_frame {
     width: 1160px !important;
@@ -721,11 +916,11 @@
   .WB_left_nav .lev a {
     padding: 0 !important;
   }
-  .WB_left_nav .lev a[nm='status'],
+  .WB_left_nav .lev a.lev_curr,
   .WB_left_nav .lev_curr a {
     background-color: var(--c-hover);
   }
-  .WB_left_nav .lev a[nm='status'] .levtxt,
+  .WB_left_nav .lev a.lev_curr .levtxt,
   .WB_left_nav .lev_curr a .levtxt {
     color: var(--c-accent) !important;
   }
@@ -749,13 +944,16 @@
   .PCD_photo_album_v2 {
     background-color: var(--c-background);
   }
-  .send_weibo_simple_fold .input_simple {
+  .send_weibo_simple_fold .input_simple,
+  .PCD_admin_leftnav .current .ln_title,
+  .PCD_admin_leftnav .item_li .ln_title:hover {
     background-color: var(--c-hover);
   }
   .PCD_person_info .bars_box .bar_box {
     background-color: var(--c-border);
   }
-  .PCD_pictext_f .pic_list_B .pt_ul .info_box {
+  .PCD_pictext_f .pic_list_B .pt_ul .info_box,
+  .PCD_admin_leftnav {
     background-color: transparent;
   }
   .WB_timeline .current em,
@@ -780,37 +978,62 @@
   .PCD_tab .tb_tab .current .tab_link .t_link,
   .WB_tab_a .tab_box_c .tab_li:hover .ani_border,
   .WB_tab_a .tab_box_c .curr a,
-  .WB_tab_b .inner .tab_ul .tab_cur .S_txt1 {
+  .WB_tab_b .inner .tab_ul .tab_cur .S_txt1,
+  .PCD_admin_leftnav .current .ln_title .nav_title {
     color: var(--c-accent) !important;
   }
-  .PCD_photo_album_v2 .mid_line {
+  .PCD_photo_album_v2 .mid_line,
+  .S_line3,
+  .W_input,
+  .send_weibo .input,
+  .W_btn_b:hover {
     border-color: var(--c-border);
   }
-  .WB_tab_b .inner .tab_ul .tab_cur .ani_border {
+  .WB_tab_b .inner .tab_ul .tab_cur .ani_border,
+  .W_btn_prev:hover,
+  .W_btn_next:hover {
     border-color: var(--c-accent);
   }
   .WB_tab_a .tab_box_c .tab .curr a,
   .WB_tab_b .inner {
     border: 0;
   }
-  .PCD_photo_album_v2 {
+  .PCD_photo_album_v2,
+  .PCD_admin_leftnav .item_li .ln_title:hover {
     border-radius: 4px;
   }
   .PCD_tab,
   .WB_tab_a .tab_box_c,
-  .WB_tab_b {
+  .WB_tab_b,
+  .PCD_admin_leftnav {
     box-shadow: none;
   }
-  .WB_frame_a {
+  .W_btn_b_disable,
+  .W_btn_b_disable .S_ficon {
+    opacity: 0.5;
+  }
+  .WB_frame #plc_main .PCD_admin_leftnav {
+    text-align: center;
+  }
+  .WB_frame_a,
+  .PCD_admin_content {
     margin: 0;
+  }
+  .PCD_admin_content {
+    padding: 0;
   }
   .WB_frame_a,
   .WB_frame_a_fix,
-  .B_page .WB_frame #plc_main {
+  .B_page .WB_frame #plc_main,
+  .PCD_photolist .WB_innerwrap ul,
+  .PCD_photolist .WB_innerwrap .p1 {
     width: 100%;
   }
   #Pl_Official_ProfileFeedNav__19 > div {
     width: 900px !important;
+  }
+  .PCD_admin_content {
+    width: 1000px;
   }
   .send_weibo_simple .input_simple_wrap .inputfunc_simple_wrap {
     width: 800px;
@@ -836,6 +1059,134 @@
   }
   .WB_timeline .S {
     border-left-color: var(--c-accent);
+  }
+}
+@-moz-document url-prefix("https://dss.sc.weibo.com/"), url-prefix("//e.weibo.com/v1/public/"), url-prefix("https://shop.sc.weibo.com/"), url-prefix("https://event.sc.weibo.com/"), url-prefix("https://pay.sc.weibo.com/"), url-pixfix("https://wyq.sina.com/") {
+  body,
+  .card,
+  .chart-group .chart .c-hd,
+  .card.authority,
+  .calendar .opts ul,
+  .dropdown-list .dropdown-hd,
+  .c-footer-root,
+  .c-navigation-root {
+    background-color: transparent !important;
+  }
+  .calendar .opts ul li.on,
+  .micro-analysis .search-wrapper input,
+  .v-home-root .data-card .filter-wrapper .form-item .form-data .number,
+  .c-table-root th {
+    background-color: var(--c-hover);
+  }
+  .card.nav .main-nav li span.on:after,
+  .calendar .opts ul li.on:after {
+    background-color: var(--c-accent);
+  }
+  html {
+    background-image: none !important;
+  }
+  .card.nav li span.on,
+  .card.nav li span:hover,
+  .calendar .opts ul li.on,
+  .c-navigator-root .nav.active {
+    color: var(--c-accent) !important;
+  }
+  .lastday ul li,
+  .chart .c-bd.overview-group .sub-overview-chart:nth-child(2n):before,
+  .chart .c-bd.overview-group .sub-overview-chart:nth-child(2n):after,
+  .calendar .opts ul,
+  .calendar .opts ul li,
+  .chart-group .chart .c-bd .legend-chart .chart-legend,
+  .pay-charts-tip .hd,
+  .video-list .load-more,
+  .video-list .load-more span:first-child,
+  .micro-analysis .search-wrapper input,
+  .c-navigation-root .userinfo-wrapper,
+  .v-home-root .data-card .filter-wrapper .form-item .form-data .date-picker,
+  .v-home-root .data-card .filter-wrapper .form-item .form-data .number,
+  .v-home-root .data-card .page-wrapper {
+    border-color: var(--c-border);
+  }
+  .c-navigator-root .nav.active {
+    border-color: var(--c-accent);
+  }
+  .chart-group .chart .c-bd .ft span:hover:after {
+    border-bottom-color: var(--c-accent);
+    border-right-color: var(--c-accent);
+  }
+  .chart-group .chart .c-bd,
+  .chart-group .chart .c-bd .ft,
+  .lastday ul.row-2 li:last-child,
+  .card ul.sub-nav,
+  .c-footer-root {
+    border: 0;
+  }
+  .c-footer-root {
+    box-shadow: none;
+  }
+  tspan {
+    fill: var(--c-text) !important;
+  }
+  .card.authority .btn,
+  .pay-charts-tip .hd .btn,
+  .micro-analysis .search-wrapper span {
+    position: absolute;
+  }
+  #root {
+    max-width: none;
+  }
+  .chart-group .chart,
+  .v-home-root .data-card {
+    border-radius: 4px;
+    box-shadow: none;
+    background-color: var(--c-background);
+  }
+}
+@-moz-document url-prefix("https://weibo.com/ttarticle/") {
+  .B_artical .W_gotop_v2 {
+    display: none;
+  }
+  .WB_artical .main_editor .title {
+    color: var(--c-title) !important;
+  }
+  .btn_bed .W_btn_b .ficon_add {
+    color: var(--c-text) !important;
+  }
+  .WB_artical .PCD_pictext_i .pt_ul .pt_li {
+    border-color: var(--c-border);
+  }
+  .WB_artical .otherlist {
+    border: 0;
+  }
+  .artical_add_box .btn_line::before {
+    background-image: linear-gradient(to bottom, transparent 0%, var(--c-background) 70%);
+  }
+  .WB_artical {
+    padding: 0;
+  }
+  .WB_artical .main_toppic,
+  .WB_artical .WB_editor_iframe,
+  .WB_artical .WB_editor_iframe_new,
+  .WB_artical .WB_editor_iframe_word,
+  .WB_artical .WB_editor_iframe_v3 {
+    width: auto;
+  }
+  .B_artical .WB_frame,
+  .B_artical .WB_frame #plc_main,
+  .B_artical .WB_frame_a,
+  .WB_artical {
+    width: 900px;
+  }
+  .WB_editor_iframe_new,
+  .WB_artical .PCD_counter_b,
+  .WB_artical .PCD_pictext_i {
+    padding: 20px;
+    border-radius: 4px;
+    background-color: var(--c-background);
+  }
+  .B_artical .WB_frame #plc_main {
+    display: block;
+    margin: 0 auto;
   }
 }
 @-moz-document url-prefix("https://weibo.com/at/"), url-prefix("https://weibo.com/comment/"), url-prefix("https://weibo.com/like/"), url-prefix("https://weibo.com/message/") {
@@ -895,7 +1246,7 @@
   #v6_pl_content_commentlist,
   #v6_pl_content_likelist,
   #v6_pl_content_submessageList {
-    width: 635px;
+    width: auto;
   }
   .private_dialogue_box .private_dialogue_body .cont .W_btn_c {
     border: 0;
@@ -943,7 +1294,9 @@
   .W_btn_a:hover span,
   .W_btn_b:hover span,
   .W_btn_d:hover span,
-  .W_btn_arrow {
+  .W_btn_arrow,
+  .WB_left_nav a.lev_curr,
+  .WB_left_nav a.lev_curr:hover {
     background-image: none !important;
   }
   .group_read .title {
@@ -1019,7 +1372,7 @@
     background-color: var(--c-background);
   }
 }
-@-moz-document url("https://weibo.com/"), url-prefix("https://weibo.com/login") {
+@-moz-document regexp("^.*//weibo.com/((index\\.html)|(\\?.*)|(#.*))?"), url-prefix("https://weibo.com/login") {
   .WB_main_l,
   .WB_frame #plc_main .WB_frame_c,
   #pl_unlogin_home_hots,
@@ -1164,5 +1517,101 @@
   .W_nologin_main .main_tab_line {
     padding: 20px 0;
     text-align: center;
+  }
+}
+@-moz-document url-prefix("https://s.weibo.com/") {
+  .m-footer,
+  .m-search .logo,
+  .m-con-r {
+    display: none;
+  }
+  .wbs-pic .m-wrap {
+    background-color: var(--c-background);
+  }
+  .m-search .searchbox input,
+  .m-adv-search dd [type=text],
+  .m-note,
+  .m-sub-nav,
+  .m-filtertab,
+  .m-region li a:hover,
+  .wbs-pic .pic {
+    background-color: var(--c-hover);
+  }
+  .s-hr {
+    background-color: var(--c-border);
+  }
+  .m-main-nav,
+  .m-page,
+  .m-error {
+    background-color: transparent;
+  }
+  .m-region .top dd i {
+    background-color: var(--c-accent);
+  }
+  .m-sub-nav li a.cur {
+    background-image: none;
+  }
+  .m-gotop a:hover {
+    color: var(--c-white) !important;
+  }
+  .m-main-nav a.cur,
+  .m-sub-nav li a.cur {
+    color: var(--c-accent) !important;
+  }
+  .m-search .searchbox input,
+  .m-adv-search dd [type=text],
+  .m-layer .header,
+  .m-page .prev,
+  .m-page .next,
+  .m-region .top {
+    border-color: var(--c-border);
+  }
+  .m-main-nav a.cur,
+  .m-main-nav a:hover,
+  .wbs-pic .pic:hover {
+    border-color: var(--c-accent);
+  }
+  .m-layer,
+  .s-brt1,
+  .card-user-b .info p span,
+  .m-page,
+  .m-error,
+  .m-filtertab,
+  .m-filtertab .filter-list > li,
+  .wbs-pic .pic {
+    border: 0;
+  }
+  .card-user-b,
+  .card-wrap,
+  .wbs-pic .m-wrap {
+    border-radius: 4px;
+  }
+  .card-feed .from,
+  .card-feed .from a {
+    font-size: 0;
+  }
+  .card-feed .from a:nth-child(1) {
+    font-size: 12px;
+  }
+  .m-main-nav li {
+    margin: 0 4.9%;
+  }
+  .wbs-pic .m-wrap {
+    padding: 14px;
+  }
+  .m-con-l {
+    width: 100%;
+  }
+  .m-main {
+    width: 900px;
+  }
+  .m-gotop {
+    opacity: 1;
+  }
+  .m-filtertab .filter-list > li > span > ul {
+    z-index: 1;
+  }
+  .m-main-nav li a {
+    transition: all 0.3s ease-in-out !important;
   }
 }

@@ -6,10 +6,17 @@
 #v6_pl_rightmod_hongbao
 #v6_pl_rightmod_rank
 #v6_pl_rightmod_recominfo
+#v6_pl_rightmod_ads35
 #v6_pl_rightmod_ads36
 #v6_pl_rightmod_attfeed
 #v6_trustPagelet_recom_member
 #v6_pl_rightmod_noticeboard
+#v6_pl_rightmod_favyoudao
+#v6_pl_rightmod_helpfav
+#v6_pl_rightmod_feedback
+#v6_pl_rightmod_likeprofile
+#v6_pl_rightmod_feedback
+#v6_pl_rightmod_helpcomment
 #v6_pl_ad_bigday
 #v6_pl_ad_forfqy
 #plc_bot .WB_footer
@@ -21,6 +28,9 @@ fieldset
 .W_pages_minibtn em
 .WB_tab_a .tab .b
 	display none !important
+
+.feed_pop_search.S_bg2
+	background-color var(--c-background)
 
 .WB_left_nav .lev a:hover
 .WB_left_nav .lev_curr
@@ -67,6 +77,7 @@ fieldset
 	background-image none !important
 
 .W_layer .S_ficon
+.pc_caldr .days li a strong
 	color var(--c-title) !important
 
 .W_layer .W_btn_b_disable .S_ficon
@@ -74,9 +85,6 @@ fieldset
 .pc_caldr .selector .year
 .send_weibo .set_timer .sel_time
 	color var(--c-text) !important
-
-.pc_caldr .days li a strong
-	color var(--c-white) !important
 
 .laMed_mulist_v2 .li_inner:hover span
 .layer_send_music .W_pages_minibtn .S_txt1
@@ -109,7 +117,16 @@ fieldset
 .layer_faces .faces_list li:hover
 .W_input:focus
 .W_input_focus
+.feed_pop_tag .tab_cur
+.feed_pop_tag .WB_tab_b .inner .tab_ul .tab_cur .ani_border
+.feed_pop_tag .WB_tab_b .inner .tab_ul .tab_item .ani_border
 	border-color var(--c-accent) !important
+
+.W_btn_tag:hover .W_arrow_bor_l em
+	border-color transparent var(--c-hover) transparent transparent !important
+
+.W_btn_tag:hover .W_arrow_bor .S_line3
+	border-color transparent var(--c-accent) transparent transparent !important
 
 .unlogin_left_nav .lev_layer
 	border 1px solid var(--c-border)
@@ -122,12 +139,14 @@ fieldset
 .WB_left_nav .lev a
 .W_input
 .unlogin_left_nav .lev
+.feed_pop_search
 	border-radius 4px
 
 .WB_tab_a
 .WB_tab_a .tab li.S_bg2
 .WB_tab_a .tab li.curr .b .b1 em i
 .WB_tab_a .tab_box .fr_box
+.W_input
 	box-shadow none
 
 .WB_left_nav .lev .W_new_count
@@ -140,7 +159,7 @@ fieldset
 .B_discover .WB_frame_c
 .WB_main_c
 .UI_scrollView .UI_scrollContent
-	width auto
+	width 100%
 
 .WB_frame
 	width 1160px !important
@@ -154,8 +173,9 @@ fieldset
 .W_person_info .nameBox .name
 	font-size 20px
 
-.W_checkbox, .W_radio
-	vertical-align: baseline
+.W_checkbox
+.W_radio
+	vertical-align baseline
 
 .S_ficon_dis
 a.S_ficon_dis:hover
@@ -212,7 +232,7 @@ a:hover .S_ficon_dis
 .WB_left_nav .lev a
 	padding 0 !important
 
-.WB_left_nav .lev a[nm='status']
+.WB_left_nav .lev a.lev_curr
 .WB_left_nav .lev_curr a
 	background-color var(--c-hover)
 

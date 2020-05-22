@@ -6,8 +6,16 @@
 .unlogin_left_nav .lev_layer
 .layer_menu_list_b
 .Bv6_layer .content
+.searchbox .search-input .m-sug-list
+.m-layer
+.m-caldr
+.card-feed .info .menu ul
+.m-page .list ul
+.m-filtertab .filter-list > li > span > ul
+.m-region
   border-color var(--c-border) !important
   border-radius 4px
+  box-shadow none !important
   background-color var(--c-background) !important
   color var(--c-text) !important
 
@@ -15,23 +23,38 @@
 .layer_menu_list ul li a:hover
 .layer_menu_list_b ul li.cur a
 .layer_menu_list_b ul li a:hover
+.searchbox .search-input .m-sug-list li:hover
+.m-caldr .weeks
+.card-feed .info .menu ul li a:hover
+.m-page .list ul li.cur a
+.m-page .list ul li a:hover
+.m-filtertab .filter-list > li > span > ul > li > a:hover
   background-color var(--c-hover) !important
 
 // 箭头 top
 .WB_global_nav .S_bg2_br
 .W_layer .S_bg2_br
-  border-bottom-color var(--c-background) !important
+  border-color transparent transparent var(--c-background) transparent !important
 
 .WB_global_nav .S_line3
 .W_layer .W_arrow_bor_t .S_line3
-  border-bottom-color var(--c-border) !important
+  border-color transparent transparent var(--c-border) transparent !important
 
 // left
 .W_arrow_bor_l .S_bg2_br
-  border-right-color var(--c-background) !important
+  border-color transparent var(--c-background) transparent transparent !important
 
 .W_arrow_bor_l .S_line3
-  border-right-color var(--c-border) !important
+  border-color transparent var(--c-border) transparent transparent !important
+
+// bottom
+.W_layer .W_arrow_bor_b .S_bg2_br
+.Bv6_layer .W_arrow_bor_b .S_bg2_br
+  border-color var(--c-background) transparent transparent transparent !important
+
+.W_layer .W_arrow_bor_b .S_line3
+.Bv6_layer .W_arrow_bor_b .S_line3
+  border-color var(--c-border) transparent transparent transparent !important
 
 // tag
 .gn_topmenulist_search .W_icon_sc_hot
@@ -41,5 +64,7 @@
 .WB_feed_v3 .WB_media_a .W_icon_tag_v2
 .S_spetxt_bg
 .W_new_count
+.W_icon_original
+  border 0 !important
   background-color var(--c-accent) !important
   color var(--c-white) !important
