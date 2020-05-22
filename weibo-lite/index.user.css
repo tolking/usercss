@@ -694,6 +694,7 @@
   #v6_pl_rightmod_hongbao,
   #v6_pl_rightmod_rank,
   #v6_pl_rightmod_recominfo,
+  #v6_pl_rightmod_ads35,
   #v6_pl_rightmod_ads36,
   #v6_pl_rightmod_attfeed,
   #v6_trustPagelet_recom_member,
@@ -702,6 +703,7 @@
   #v6_pl_rightmod_helpfav,
   #v6_pl_rightmod_feedback,
   #v6_pl_rightmod_likeprofile,
+  #v6_pl_rightmod_helpcomment,
   #v6_pl_ad_bigday,
   #v6_pl_ad_forfqy,
   #plc_bot .WB_footer,
@@ -805,6 +807,12 @@
   .feed_pop_tag .WB_tab_b .inner .tab_ul .tab_cur .ani_border,
   .feed_pop_tag .WB_tab_b .inner .tab_ul .tab_item .ani_border {
     border-color: var(--c-accent) !important;
+  }
+  .W_btn_tag:hover .W_arrow_bor_l em {
+    border-color: transparent var(--c-hover) transparent transparent !important;
+  }
+  .W_btn_tag:hover .W_arrow_bor .S_line3 {
+    border-color: transparent var(--c-accent) transparent transparent !important;
   }
   .unlogin_left_nav .lev_layer {
     border: 1px solid var(--c-border);
@@ -1238,7 +1246,7 @@
   #v6_pl_content_commentlist,
   #v6_pl_content_likelist,
   #v6_pl_content_submessageList {
-    width: 635px;
+    width: auto;
   }
   .private_dialogue_box .private_dialogue_body .cont .W_btn_c {
     border: 0;
@@ -1286,7 +1294,9 @@
   .W_btn_a:hover span,
   .W_btn_b:hover span,
   .W_btn_d:hover span,
-  .W_btn_arrow {
+  .W_btn_arrow,
+  .WB_left_nav a.lev_curr,
+  .WB_left_nav a.lev_curr:hover {
     background-image: none !important;
   }
   .group_read .title {
