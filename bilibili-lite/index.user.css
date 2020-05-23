@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.6
+@version        1.2.7
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -1266,7 +1266,8 @@
   .h .h-message,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn,
   .follow-container .follow-right .unfollow-btn,
-  .wide-members .avatar-list i {
+  .wide-members .avatar-list i,
+  .is-web .submit-button.disabled {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -1363,7 +1364,8 @@
   .h .h-message span,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn span,
   .follow-container .follow-right .unfollow-btn span,
-  .wide-members .avatar-list i span {
+  .wide-members .avatar-list i span,
+  .is-web .submit-button.disabled span {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -1456,7 +1458,8 @@
   .h .h-message::after,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn::after,
   .follow-container .follow-right .unfollow-btn::after,
-  .wide-members .avatar-list i::after {
+  .wide-members .avatar-list i::after,
+  .is-web .submit-button.disabled::after {
     content: none !important;
   }
   .default:hover,
@@ -1549,7 +1552,8 @@
   .h .h-message:hover,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn:hover,
   .follow-container .follow-right .unfollow-btn:hover,
-  .wide-members .avatar-list i:hover {
+  .wide-members .avatar-list i:hover,
+  .is-web .submit-button.disabled:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
     color: var(--c-text) !important;
@@ -1644,7 +1648,8 @@
   .h .h-message:hover span,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn:hover span,
   .follow-container .follow-right .unfollow-btn:hover span,
-  .wide-members .avatar-list i:hover span {
+  .wide-members .avatar-list i:hover span,
+  .is-web .submit-button.disabled:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -1927,7 +1932,8 @@
   .bili-header-m .i_menu_login,
   .el-dropdown-menu,
   .action-menu .menu-list,
-  .sub-nav-m .tips {
+  .sub-nav-m .tips,
+  .comment-bilibili-con {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -2419,7 +2425,8 @@
   .emoji-box .emoji-tabs .tab-link.on,
   .emoji-box .emoji-tabs .tab-link:hover,
   .bb-comment .comment-list .list-item .con .vote-container .image-area .share-img,
-  .comment-bilibili-fold .comment-list .list-item .con .vote-container .image-area .share-img {
+  .comment-bilibili-fold .comment-list .list-item .con .vote-container .image-area .share-img,
+  .bb-comment .comment-list .list-item .con .vote-container {
     background-color: var(--c-hover);
   }
   #comment,
@@ -2441,13 +2448,18 @@
   .comment-bilibili-fold .nameplate .nameplate-card .nameplate-text .n-name,
   .btn-box .liked span,
   .btn-box .liked:hover span,
-  .comment .comment-hot-item-user-name {
+  .comment .comment-hot-item-user-name,
+  .bb-comment .comment-list .list-item .con .vote-container .text-area .text-content,
+  .comment-bilibili-fold .comment-list .list-item .con .vote-container .text-area .text-content,
+  .comment-bilibili-con .t {
     color: var(--c-title) !important;
   }
   .bb-comment .comment-header .tabs-order li,
   .bb-comment .comment-list .list-item .reply-box .view-more,
   .comment-bilibili-fold .comment-list .list-item .reply-box .view-more,
-  .replies-comment-input-wrapper .replies-upload .comment-input-img {
+  .replies-comment-input-wrapper .replies-upload .comment-input-img,
+  .bb-comment .comment-list .list-item .con .vote-container .text-area .text-desc,
+  .comment-bilibili-fold .comment-list .list-item .con .vote-container .text-area .text-desc {
     color: var(--c-text) !important;
   }
   .bb-comment .stick.true-love .medal-level,
@@ -2482,7 +2494,8 @@
   .comment-bilibili-fold .stick.true-love .medal-level,
   .list-comment,
   .panel-area .bb-comment .bottom-page.center,
-  .reply-item {
+  .reply-item,
+  .comment-bilibili-con .t {
     border-color: var(--c-border) !important;
   }
   .bb-comment .no-login .baffle,
@@ -2544,14 +2557,23 @@
   }
   .bb-comment .comment-list .list-item .info .btn-hover:hover,
   .comment-bilibili-fold .comment-list .list-item .info .btn-hover:hover,
-  .dynamic-list-item-wrap .info .btn {
+  .dynamic-list-item-wrap .info .btn,
+  .comment-bilibili-con .t .btn-close {
     background-color: transparent !important;
     color: var(--c-accent) !important;
   }
   .bb-comment .comment-list .list-item .info .btn-hover:hover::after,
   .comment-bilibili-fold .comment-list .list-item .info .btn-hover:hover::after,
-  .dynamic-list-item-wrap .info .btn::after {
+  .dynamic-list-item-wrap .info .btn::after,
+  .comment-bilibili-con .t .btn-close::after {
     content: none;
+  }
+  .comment-bilibili-con .t .btn-close::before {
+    content: 'X';
+    top: auto;
+    height: 27px;
+    background: transparent;
+    transform: rotate(0deg);
   }
   .feed-card .content .bottom img,
   .card-decorator {
@@ -2570,6 +2592,9 @@
   .imagesbox .boost-control,
   .feed-tag .core-style {
     background-color: var(--c-hover) !important;
+  }
+  .like-users-panel::before {
+    background-color: var(--c-border) !important;
   }
   .video-container .text-area .title,
   .feed-tag .separater-line,
@@ -3504,7 +3529,7 @@
   .audio-list .song-list,
   .promote-m .storey-box,
   .hot-recom-module .block-body,
-  .new-stat-module,
+  .new-stat-module .storey-box,
   .video-floor-infomation-m .storey-box .storey-content,
   .special-recom-module .block-body ul,
   .area-module .video-list-video,
@@ -4190,7 +4215,8 @@
   .player-tooltips div,
   .bilibili-player-context-menu-container.black ul>li a,
   .bilibili-player-context-menu-container.black ul>li a span,
-  .bilibili-player-video-control-bottom-center .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-danmaku-input {
+  .bilibili-player-video-control-bottom-center .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-danmaku-input,
+  .bilibili-player-video-wrap div:not(.bilibili-danmaku) {
     color: var(--c-white) !important;
   }
   .video-info .video-title .tit,
@@ -4264,6 +4290,9 @@
   .bilibili-player-feedback,
   .bilibili-player-feedback-title {
     border-color: var(--c-border) !important;
+  }
+  .bilibili-player .bilibili-player-video-control .bilibili-player-video-btn-menu-list.bilibili-player-active:before {
+    border-color: transparent transparent transparent var(--c-accent);
   }
   #bofqi.mini-player .drag-bar,
   #bofqi.mini-player:before {
@@ -4796,6 +4825,9 @@
   .follow-dialog-wrap .follow-dialog-window .content .group-list .empty-tip {
     color: var(--c-text) !important;
   }
+  #page-index .fav-count {
+    color: var(--c-white) !important;
+  }
   .be-tab-item.is-active span,
   .list-create:hover .text {
     color: var(--c-accent) !important;
@@ -4837,7 +4869,8 @@
   .follow-dialog-wrap .follow-dialog-window {
     background-color: var(--c-background);
   }
-  #pin-wrapper .pin-layer-vlist .small-item:hover {
+  #pin-wrapper .pin-layer-vlist .small-item:hover,
+  #page-index .fav-count {
     background-color: var(--c-hover);
   }
   .n .n-cursor {
@@ -4909,6 +4942,9 @@
   }
   .g-search {
     width: 300px;
+  }
+  #page-index .bangumi .large-item {
+    width: 400px;
   }
   .g-search input {
     width: 300px;
@@ -6801,7 +6837,9 @@
   .love-item:not(:last-child)::after,
   .list,
   .list-title,
-  .title {
+  .title,
+  .divider,
+  .orginal-reply {
     border-color: var(--c-border) !important;
   }
   .action-menu .menu-list:before {

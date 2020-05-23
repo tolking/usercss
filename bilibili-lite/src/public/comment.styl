@@ -18,6 +18,7 @@
 .emoji-box .emoji-tabs .tab-link:hover
 .bb-comment .comment-list .list-item .con .vote-container .image-area .share-img
 .comment-bilibili-fold .comment-list .list-item .con .vote-container .image-area .share-img
+.bb-comment .comment-list .list-item .con .vote-container
 	background-color var(--c-hover)
 
 #comment
@@ -40,12 +41,17 @@
 .btn-box .liked span
 .btn-box .liked:hover span
 .comment .comment-hot-item-user-name
+.bb-comment .comment-list .list-item .con .vote-container .text-area .text-content
+.comment-bilibili-fold .comment-list .list-item .con .vote-container .text-area .text-content
+.comment-bilibili-con .t
 	color var(--c-title) !important
 
 .bb-comment .comment-header .tabs-order li
 .bb-comment .comment-list .list-item .reply-box .view-more
 .comment-bilibili-fold .comment-list .list-item .reply-box .view-more
 .replies-comment-input-wrapper .replies-upload .comment-input-img
+.bb-comment .comment-list .list-item .con .vote-container .text-area .text-desc
+.comment-bilibili-fold .comment-list .list-item .con .vote-container .text-area .text-desc
 	color var(--c-text) !important
 
 .bb-comment .stick.true-love .medal-level
@@ -81,6 +87,7 @@
 .list-comment
 .panel-area .bb-comment .bottom-page.center
 .reply-item
+.comment-bilibili-con .t
 	border-color var(--c-border) !important
 
 .bb-comment .no-login .baffle
@@ -143,8 +150,16 @@
 .bb-comment .comment-list .list-item .info .btn-hover:hover
 .comment-bilibili-fold .comment-list .list-item .info .btn-hover:hover
 .dynamic-list-item-wrap .info .btn
+.comment-bilibili-con .t .btn-close
 	background-color transparent !important
 	color var(--c-accent) !important
 
 	&::after
 		content none
+
+.comment-bilibili-con .t .btn-close::before
+	content 'X'
+	top auto
+	height 27px
+	background transparent
+	transform rotate(0deg)
