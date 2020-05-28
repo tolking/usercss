@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.7
+@version        1.2.8
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -573,7 +573,8 @@
   .btn-dufault,
   .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn,
   .song-playbtn,
-  .officialAccount-showContent-btn {
+  .officialAccount-showContent-btn,
+  .tag-channel-pane .channel-btns .no-subs {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -696,7 +697,8 @@
   .btn-dufault span,
   .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn span,
   .song-playbtn span,
-  .officialAccount-showContent-btn span {
+  .officialAccount-showContent-btn span,
+  .tag-channel-pane .channel-btns .no-subs span {
     color: var(--c-white) !important;
   }
   button::after,
@@ -813,7 +815,8 @@
   .btn-dufault::after,
   .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn::after,
   .song-playbtn::after,
-  .officialAccount-showContent-btn::after {
+  .officialAccount-showContent-btn::after,
+  .tag-channel-pane .channel-btns .no-subs::after {
     content: '';
     display: block;
     position: absolute;
@@ -939,7 +942,8 @@
   .btn-dufault:hover,
   .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn:hover,
   .song-playbtn:hover,
-  .officialAccount-showContent-btn:hover {
+  .officialAccount-showContent-btn:hover,
+  .tag-channel-pane .channel-btns .no-subs:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -1056,7 +1060,8 @@
   .btn-dufault:hover span,
   .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn:hover span,
   .song-playbtn:hover span,
-  .officialAccount-showContent-btn:hover span {
+  .officialAccount-showContent-btn:hover span,
+  .tag-channel-pane .channel-btns .no-subs:hover span {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -1173,7 +1178,8 @@
   .btn-dufault:hover::after,
   .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn:hover::after,
   .song-playbtn:hover::after,
-  .officialAccount-showContent-btn:hover::after {
+  .officialAccount-showContent-btn:hover::after,
+  .tag-channel-pane .channel-btns .no-subs:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -1267,7 +1273,8 @@
   .container .musician-recommend .recommend-item .recommend-info .listen-btn,
   .follow-container .follow-right .unfollow-btn,
   .wide-members .avatar-list i,
-  .is-web .submit-button.disabled {
+  .is-web .submit-button.disabled,
+  .tag-channel-pane .channel-btns__link {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -1365,7 +1372,8 @@
   .container .musician-recommend .recommend-item .recommend-info .listen-btn span,
   .follow-container .follow-right .unfollow-btn span,
   .wide-members .avatar-list i span,
-  .is-web .submit-button.disabled span {
+  .is-web .submit-button.disabled span,
+  .tag-channel-pane .channel-btns__link span {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -1459,7 +1467,8 @@
   .container .musician-recommend .recommend-item .recommend-info .listen-btn::after,
   .follow-container .follow-right .unfollow-btn::after,
   .wide-members .avatar-list i::after,
-  .is-web .submit-button.disabled::after {
+  .is-web .submit-button.disabled::after,
+  .tag-channel-pane .channel-btns__link::after {
     content: none !important;
   }
   .default:hover,
@@ -1553,7 +1562,8 @@
   .container .musician-recommend .recommend-item .recommend-info .listen-btn:hover,
   .follow-container .follow-right .unfollow-btn:hover,
   .wide-members .avatar-list i:hover,
-  .is-web .submit-button.disabled:hover {
+  .is-web .submit-button.disabled:hover,
+  .tag-channel-pane .channel-btns__link:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
     color: var(--c-text) !important;
@@ -1649,7 +1659,8 @@
   .container .musician-recommend .recommend-item .recommend-info .listen-btn:hover span,
   .follow-container .follow-right .unfollow-btn:hover span,
   .wide-members .avatar-list i:hover span,
-  .is-web .submit-button.disabled:hover span {
+  .is-web .submit-button.disabled:hover span,
+  .tag-channel-pane .channel-btns__link:hover span {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -4205,7 +4216,8 @@
   .bui-slider .bui-track .bui-thumb .bui-thumb-dot,
   .bui-radio.bui-dark .bui-radio-button .bui-radio-input:checked+.bui-radio-label,
   .bui-switch .bui-checkbox:checked+.bui-body,
-  .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row .row-selection .selection-span.active[data-type='fontsize'] {
+  .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row .row-selection .selection-span.active[data-type='fontsize'],
+  .s_tag .btn-add:hover span {
     background-color: var(--c-accent) !important;
   }
   .bilibili-player-video-wrap a,
@@ -4229,7 +4241,8 @@
   .main-container .season-list .series-title,
   .bilibili-player-feedback-title .bilibili-player-feedback-title-content,
   .main-container .season-list .ss-list-wrapper .ss-item .ss-info .ss-title,
-  .main-container .recom-wrapper .recom-title {
+  .main-container .recom-wrapper .recom-title,
+  .tag-channel-pane .channel-title {
     color: var(--c-title) !important;
   }
   .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a span,
@@ -4254,7 +4267,8 @@
     color: var(--c-text) !important;
   }
   .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active,
-  .bilibili-player .bilibili-player-area .bilibili-player-video-control .bilibili-player-video-btn .bilibili-player-video-quality-menu .bilibili-player-bigvip {
+  .bilibili-player .bilibili-player-area .bilibili-player-video-control .bilibili-player-video-btn .bilibili-player-video-quality-menu .bilibili-player-bigvip,
+  .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row .row-selection .selection-span.active[data-type='fontsize'] .selection-name {
     color: var(--c-white) !important;
   }
   .coin-operated-m .coin-title span,
@@ -4284,11 +4298,13 @@
   .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-management>:hover,
   .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-management>:hover i,
   .bui-select.bui-select-quality-menu .bui-select-item.bui-select-item-active span,
-  .bilibili-player-video-danmaku-setting-left-block-content .bilibili-player-block-filter-type:hover .bilibili-player-block-filter-label {
+  .bilibili-player-video-danmaku-setting-left-block-content .bilibili-player-block-filter-type:hover .bilibili-player-block-filter-label,
+  .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row.mode .selection-span.active .selection-name {
     color: var(--c-accent) !important;
   }
   .bilibili-player-feedback,
-  .bilibili-player-feedback-title {
+  .bilibili-player-feedback-title,
+  .tag-channel-pane .channel-cover {
     border-color: var(--c-border) !important;
   }
   .bilibili-player .bilibili-player-video-control .bilibili-player-video-btn-menu-list.bilibili-player-active:before {
@@ -4344,7 +4360,8 @@
   .bilibili-player-block-filter-image:hover .bp-svgicon svg,
   .bilibili-player-iconfont:hover .bp-svgicon svg,
   .bilibili-player-iconfont:hover .bp-svgicon svg g,
-  .bilibili-player-video-btn:hover .bp-svgicon svg,
+  .bilibili-player-video-btn:hover .bilibili-player-iconfont-danmakutype .bp-svgicon svg,
+  .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row.mode .selection-span.active .bp-svgicon svg,
   .selection-icon:hover .bp-svgicon svg,
   .bilibili-player-video-danmaku-setting-left-block-content .bilibili-player-block-filter-type:hover .bilibili-player-block-filter-image .bp-svgicon svg,
   .bilibili-player-video-danmaku-switch:hover .bp-svgicon svg,
@@ -4375,7 +4392,8 @@
   .multi-page,
   .main-container .media-info .media-right .media-tool-bar .bangumi-options .opt-list,
   .main-container .ep-list-wrapper,
-  .ep-section-module {
+  .ep-section-module,
+  .tag-channel-pane {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
   }
