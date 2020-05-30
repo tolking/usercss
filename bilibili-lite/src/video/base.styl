@@ -3,6 +3,7 @@
 .user-card-m iframe
 .bili-msg iframe
 .collection-m .layout
+.follow-dialog-wrap .follow-dialog-window .layout
 	display none
 
 .bili-header-m .nav-menu .up-load .u-link
@@ -32,6 +33,8 @@
 #bofqi.mini-player .drag-bar
 .video-page-card .card-box .pic-box
 .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-management
+.follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .input-group
+.follow-dialog-wrap .follow-dialog-window .content .group-list ul .follow-group-mask
 	background-color var(--c-hover) !important
 
 .main-container .media-info .media-right .pub-wrapper .up-info-wrapper .split-line
@@ -45,6 +48,7 @@
 .comment-m .comment
 .player-module #bofqi.stardust-player
 .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar
+.follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .input-group input
 	background-color transparent !important
 
 .bui-slider .bui-track .bui-bar-wrap .bui-bar
@@ -52,6 +56,7 @@
 .bui-radio.bui-dark .bui-radio-button .bui-radio-input:checked+.bui-radio-label
 .bui-switch .bui-checkbox:checked+.bui-body
 .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row .row-selection .selection-span.active[data-type='fontsize']
+.s_tag .btn-add:hover span
 	background-color var(--c-accent) !important
 
 .bilibili-player-video-wrap a
@@ -76,6 +81,7 @@
 .bilibili-player-feedback-title .bilibili-player-feedback-title-content
 .main-container .season-list .ss-list-wrapper .ss-item .ss-info .ss-title
 .main-container .recom-wrapper .recom-title
+.tag-channel-pane .channel-title
 	color var(--c-title) !important
 
 .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a span
@@ -97,10 +103,12 @@ ul.star-wrapper li i
 .multi-page .head-con .range-box i
 .coin-dialog-mask .coin-operated .coin-title
 .main-container .media-info .media-right .media-count
+.follow-dialog-wrap .follow-dialog-window .content .info
 	color var(--c-text) !important
 
 .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active
 .bilibili-player .bilibili-player-area .bilibili-player-video-control .bilibili-player-video-btn .bilibili-player-video-quality-menu .bilibili-player-bigvip
+.bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row .row-selection .selection-span.active[data-type='fontsize'] .selection-name
 	color var(--c-white) !important
 
 .coin-operated-m .coin-title span
@@ -131,11 +139,19 @@ ul.star-wrapper li i.icon-star-full
 .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-management>:hover i
 .bui-select.bui-select-quality-menu .bui-select-item.bui-select-item-active span
 .bilibili-player-video-danmaku-setting-left-block-content .bilibili-player-block-filter-type:hover .bilibili-player-block-filter-label
+.bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row.mode .selection-span.active .selection-name
 	color var(--c-accent) !important
 
 .bilibili-player-feedback
 .bilibili-player-feedback-title
+.tag-channel-pane .channel-cover
+.follow-dialog-wrap .follow-dialog-window .title
+.follow-dialog-wrap .follow-dialog-window .bottom
+.follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .add-btn
 	border-color var(--c-border) !important
+
+.follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .input-group
+	border-color var(--c-accent) !important
 
 .bilibili-player .bilibili-player-video-control .bilibili-player-video-btn-menu-list.bilibili-player-active:before
 	border-color transparent transparent transparent var(--c-accent)
@@ -190,7 +206,8 @@ ul.star-wrapper li i.icon-star-full
 .bilibili-player-block-filter-image:hover .bp-svgicon svg
 .bilibili-player-iconfont:hover .bp-svgicon svg
 .bilibili-player-iconfont:hover .bp-svgicon svg g
-.bilibili-player-video-btn:hover .bp-svgicon svg
+.bilibili-player-video-btn:hover .bilibili-player-iconfont-danmakutype .bp-svgicon svg
+.bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row.mode .selection-span.active .bp-svgicon svg
 .selection-icon:hover .bp-svgicon svg
 .bilibili-player-video-danmaku-setting-left-block-content .bilibili-player-block-filter-type:hover .bilibili-player-block-filter-image .bp-svgicon svg
 .bilibili-player-video-danmaku-switch:hover .bp-svgicon svg
@@ -222,6 +239,7 @@ ul.star-wrapper li i.icon-star-full
 .main-container .media-info .media-right .media-tool-bar .bangumi-options .opt-list
 .main-container .ep-list-wrapper
 .ep-section-module
+.tag-channel-pane
 	border 1px solid var(--c-border) !important
 	background-color var(--c-background) !important
 
