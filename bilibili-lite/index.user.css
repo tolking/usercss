@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.8
+@version        1.2.9
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -575,7 +575,10 @@
   .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn,
   .song-playbtn,
   .officialAccount-showContent-btn,
-  .tag-channel-pane .channel-btns .no-subs {
+  .tag-channel-pane .channel-btns .no-subs,
+  .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pack,
+  .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay,
+  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -700,6 +703,9 @@
   .song-playbtn span,
   .officialAccount-showContent-btn span,
   .tag-channel-pane .channel-btns .no-subs span,
+  .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pack span,
+  .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay span,
+  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary span,
   button i.bcc-iconfont,
   .button i.bcc-iconfont,
   .btn i.bcc-iconfont,
@@ -815,7 +821,10 @@
   .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn i.bcc-iconfont,
   .song-playbtn i.bcc-iconfont,
   .officialAccount-showContent-btn i.bcc-iconfont,
-  .tag-channel-pane .channel-btns .no-subs i.bcc-iconfont {
+  .tag-channel-pane .channel-btns .no-subs i.bcc-iconfont,
+  .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pack i.bcc-iconfont,
+  .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay i.bcc-iconfont,
+  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary i.bcc-iconfont {
     color: var(--c-white) !important;
   }
   button::after,
@@ -933,7 +942,10 @@
   .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn::after,
   .song-playbtn::after,
   .officialAccount-showContent-btn::after,
-  .tag-channel-pane .channel-btns .no-subs::after {
+  .tag-channel-pane .channel-btns .no-subs::after,
+  .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pack::after,
+  .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay::after,
+  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary::after {
     content: '';
     display: block;
     position: absolute;
@@ -1060,7 +1072,10 @@
   .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn:hover,
   .song-playbtn:hover,
   .officialAccount-showContent-btn:hover,
-  .tag-channel-pane .channel-btns .no-subs:hover {
+  .tag-channel-pane .channel-btns .no-subs:hover,
+  .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pack:hover,
+  .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay:hover,
+  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -1179,6 +1194,9 @@
   .song-playbtn:hover span,
   .officialAccount-showContent-btn:hover span,
   .tag-channel-pane .channel-btns .no-subs:hover span,
+  .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pack:hover span,
+  .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay:hover span,
+  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary:hover span,
   button:hover i.bcc-iconfont,
   .button:hover i.bcc-iconfont,
   .btn:hover i.bcc-iconfont,
@@ -1294,7 +1312,10 @@
   .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn:hover i.bcc-iconfont,
   .song-playbtn:hover i.bcc-iconfont,
   .officialAccount-showContent-btn:hover i.bcc-iconfont,
-  .tag-channel-pane .channel-btns .no-subs:hover i.bcc-iconfont {
+  .tag-channel-pane .channel-btns .no-subs:hover i.bcc-iconfont,
+  .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pack:hover i.bcc-iconfont,
+  .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay:hover i.bcc-iconfont,
+  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary:hover i.bcc-iconfont {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -1412,7 +1433,10 @@
   .container .host-list-layout .hot-list-wrap .bg-wrap .top-info-content .right-info .right-btn:hover::after,
   .song-playbtn:hover::after,
   .officialAccount-showContent-btn:hover::after,
-  .tag-channel-pane .channel-btns .no-subs:hover::after {
+  .tag-channel-pane .channel-btns .no-subs:hover::after,
+  .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pack:hover::after,
+  .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay:hover::after,
+  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -2364,7 +2388,9 @@
   .action-menu .menu-list,
   .sub-nav-m .tips,
   .comment-bilibili-con,
-  .follow-dialog-wrap .follow-dialog-window {
+  .follow-dialog-wrap .follow-dialog-window,
+  .twp-mask .twp-wrapper,
+  .pwp-modal-mask .pwp-modal-wrapper {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -2487,6 +2513,10 @@
   .nav-link .nav-link-ul .nav-link-item:nth-child(7),
   .nav-wrapper-left .nav-con-ul .nav-item:nth-child(7) {
     transition-delay: 0.3s;
+  }
+  .nav-link .nav-link-ul .nav-link-item:nth-child(8),
+  .nav-wrapper-left .nav-con-ul .nav-item:nth-child(8) {
+    transition-delay: 0.35s;
   }
   .nav-link .nav-link-ul:hover,
   .nav-wrapper-left .nav-con-ul:hover {
@@ -4644,17 +4674,6 @@
   .s_tag .btn-add:hover span {
     background-color: var(--c-accent) !important;
   }
-  .bilibili-player-video-wrap a,
-  .bilibili-player-video-wrap li,
-  .bilibili-player-video-wrap span,
-  .bilibili-player-video-wrap span:hover,
-  .player-tooltips div,
-  .bilibili-player-context-menu-container.black ul>li a,
-  .bilibili-player-context-menu-container.black ul>li a span,
-  .bilibili-player-video-control-bottom-center .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-danmaku-input,
-  .bilibili-player-video-wrap div:not(.bilibili-danmaku) {
-    color: var(--c-white) !important;
-  }
   .video-info .video-title .tit,
   .collection-m .title,
   .coin-operated-m .coin-title,
@@ -4666,7 +4685,8 @@
   .bilibili-player-feedback-title .bilibili-player-feedback-title-content,
   .main-container .season-list .ss-list-wrapper .ss-item .ss-info .ss-title,
   .main-container .recom-wrapper .recom-title,
-  .tag-channel-pane .channel-title {
+  .tag-channel-pane .channel-title,
+  .twp-mask .twp-wrapper .twp-container .twp-text .twp-title {
     color: var(--c-title) !important;
   }
   .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a span,
@@ -4688,9 +4708,23 @@
   .multi-page .head-con .range-box i,
   .coin-dialog-mask .coin-operated .coin-title,
   .main-container .media-info .media-right .media-count,
-  .follow-dialog-wrap .follow-dialog-window .content .info {
+  .follow-dialog-wrap .follow-dialog-window .content .info,
+  .twp-mask .twp-wrapper .twp-container .twp-text .twp-desc,
+  .step-cancel .success-msg,
+  .step-fail .success-msg,
+  .step-status .success-msg,
+  .step-success .success-msg {
     color: var(--c-text) !important;
   }
+  .bilibili-player-video-wrap a,
+  .bilibili-player-video-wrap li,
+  .bilibili-player-video-wrap span,
+  .bilibili-player-video-wrap span:hover,
+  .player-tooltips div,
+  .bilibili-player-context-menu-container.black ul>li a,
+  .bilibili-player-context-menu-container.black ul>li a span,
+  .bilibili-player-video-control-bottom-center .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-danmaku-input,
+  .bilibili-player-video-wrap div:not(.bilibili-danmaku),
   .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active,
   .bilibili-player .bilibili-player-area .bilibili-player-video-control .bilibili-player-video-btn .bilibili-player-video-quality-menu .bilibili-player-bigvip,
   .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row .row-selection .selection-span.active[data-type='fontsize'] .selection-name {
@@ -4724,7 +4758,8 @@
   .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-management>:hover i,
   .bui-select.bui-select-quality-menu .bui-select-item.bui-select-item-active span,
   .bilibili-player-video-danmaku-setting-left-block-content .bilibili-player-block-filter-type:hover .bilibili-player-block-filter-label,
-  .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row.mode .selection-span.active .selection-name {
+  .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row.mode .selection-span.active .selection-name,
+  .step-index .money-n .mark {
     color: var(--c-accent) !important;
   }
   .bilibili-player-feedback,
@@ -4732,7 +4767,8 @@
   .tag-channel-pane .channel-cover,
   .follow-dialog-wrap .follow-dialog-window .title,
   .follow-dialog-wrap .follow-dialog-window .bottom,
-  .follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .add-btn {
+  .follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .add-btn,
+  .pwp-modal-header {
     border-color: var(--c-border) !important;
   }
   .follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .input-group {
@@ -4903,6 +4939,9 @@
   .bilibili-player-video-btn::after,
   .bilibili-player button::after {
     content: none !important;
+  }
+  .step-index .pwp-btn {
+    position: absolute !important;
   }
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item.cursor {
     overflow: visible !important;
