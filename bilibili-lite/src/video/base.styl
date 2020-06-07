@@ -4,6 +4,7 @@
 .bili-msg iframe
 .collection-m .layout
 .follow-dialog-wrap .follow-dialog-window .layout
+.bilibili-player-hover-items .hover-item .arrow .arrow-1
 	display none
 
 .bili-header-m .nav-menu .up-load .u-link
@@ -19,6 +20,8 @@
 .members-info__header
 .bilibili-player .bilibili-player-area .bilibili-player-video-panel
 .coin-dialog-mask .coin-operated
+.bui-swiper-wrap .bui-swiper-item .bui-swiper-text
+.bilibili-player-hover-items .hover-item .bg
 	background-color var(--c-background) !important
 
 .multi-page .cur-list .list-box li.on
@@ -35,6 +38,8 @@
 .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-management
 .follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .input-group
 .follow-dialog-wrap .follow-dialog-window .content .group-list ul .follow-group-mask
+.bui-swiper-wrap .bui-swiper-list.bui-swiper-border .bui-swiper-img
+.bilibili-player-hover-items .hover-item .cover
 	background-color var(--c-hover) !important
 
 .main-container .media-info .media-right .pub-wrapper .up-info-wrapper .split-line
@@ -57,6 +62,7 @@
 .bui-switch .bui-checkbox:checked+.bui-body
 .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row .row-selection .selection-span.active[data-type='fontsize']
 .s_tag .btn-add:hover span
+.bui-swiper-wrap .bui-swiper-item.bui-swiper-item-active .bui-swiper-text
 	background-color var(--c-accent) !important
 
 .video-info .video-title .tit
@@ -72,6 +78,8 @@
 .main-container .recom-wrapper .recom-title
 .tag-channel-pane .channel-title
 .twp-mask .twp-wrapper .twp-container .twp-text .twp-title
+.bui-swiper-wrap .bui-swiper-item .bui-swiper-text
+.bilibili-player-hover-items .hover-item .text
 	color var(--c-title) !important
 
 .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a span
@@ -113,6 +121,7 @@ ul.star-wrapper li i
 .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active
 .bilibili-player .bilibili-player-area .bilibili-player-video-control .bilibili-player-video-btn .bilibili-player-video-quality-menu .bilibili-player-bigvip
 .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row .row-selection .selection-span.active[data-type='fontsize'] .selection-name
+.bui-swiper-wrap .bui-swiper-item.bui-swiper-item-active .bui-swiper-text
 	color var(--c-white) !important
 
 .coin-operated-m .coin-title span
@@ -154,6 +163,8 @@ ul.star-wrapper li i.icon-star-full
 .follow-dialog-wrap .follow-dialog-window .bottom
 .follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .add-btn
 .pwp-modal-header
+.bui-swiper-wrap .bui-swiper-list.bui-swiper-border .bui-swiper-img
+.bilibili-player-hover-items .hover-item .cover
 	border-color var(--c-border) !important
 
 .follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .input-group
@@ -162,11 +173,16 @@ ul.star-wrapper li i.icon-star-full
 .bilibili-player .bilibili-player-video-control .bilibili-player-video-btn-menu-list.bilibili-player-active:before
 	border-color transparent transparent transparent var(--c-accent)
 
+.bilibili-player-hover-items .hover-item .arrow .arrow-2
+	border-top-color var(--c-background) !important
+
 #bofqi.mini-player .drag-bar
 #bofqi.mini-player:before
 	box-shadow 0 0 5px var(--c-border)
 
 .bilibili-player
+.bui-swiper-wrap .bui-swiper-list.bui-swiper-border .bui-swiper-img
+.bui-swiper-wrap .bui-swiper-item .bui-swiper-text
 	box-shadow none
 
 #comment_module
@@ -197,12 +213,14 @@ ul.star-wrapper li i.icon-star-full
 	backdrop-filter blur(5px)
 
 .bilibili-player-video-danmaku-root .bp-svgicon svg
+.bui-swiper-wrap .bui-swiper-pre svg
 	fill var(--c-text)
 
 .bui-switch .bui-dot span svg
 	fill var(--c-border)
 
 .bilibili-player-video-control .bp-svgicon svg
+.bui-swiper-wrap .bui-swiper-next svg
 	fill var(--c-white)
 
 .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active .bp-svgicon
@@ -218,7 +236,23 @@ ul.star-wrapper li i.icon-star-full
 .bilibili-player-video-danmaku-setting-left-block-content .bilibili-player-block-filter-type:hover .bilibili-player-block-filter-image .bp-svgicon svg
 .bilibili-player-video-danmaku-switch:hover .bp-svgicon svg
 .bilibili-player-video-btn-fullscreen:hover .bp-svgicon svg .st0
+.bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div:hover .bp-svgicon svg
+.bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display .grade .bp-svgicon svg g path:last-child
 	fill var(--c-accent) !important
+
+.bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .bilibili-player-grade-spans .grade .bp-svgicon svg path
+	stroke var(--c-border) !important
+
+.bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display .grade .bp-svgicon svg g path
+	stroke var(--c-accent) !important
+
+.bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .bilibili-player-grade-spans .grade .bp-svgicon svg g path
+	fill var(--c-accent) !important
+	stroke var(--c-accent) !important
+
+.bui-swiper-wrap .bui-swiper-item .bui-swiper-text
+.bilibili-player-hover-items .hover-item .cover
+	left 0
 
 #comment .comment
 #comment_module
