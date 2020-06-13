@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           weibo-lite
 @namespace      tolking-usercss
-@version        1.0.1
+@version        1.0.2
 @description    一个简化的新浪微博页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/weibo-lite
@@ -644,9 +644,8 @@
     width: 70%;
   }
   .WB_media_wrap .media_box .WB_media_a {
-    display: flex;
+    display: flex !important;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
     margin: 0 0 0 10px;
     width: 100%;
@@ -680,8 +679,7 @@
   .WB_feed_v3 .WB_media_a_m1 li.WB_video_a {
     width: 500px;
   }
-  .WB_feed_v3 .WB_media_a_m1 .WB_video,
-  .WB_feed_v3 .WB_media_a_m1 .WB_video_a {
+  .WB_feed_v3 .WB_media_a_m1 .WB_video {
     display: block !important;
     height: 282px !important;
   }
@@ -706,6 +704,7 @@
   #v6_pl_rightmod_helpcomment,
   #v6_pl_ad_bigday,
   #v6_pl_ad_forfqy,
+  #Pl_Discover_TextList__4,
   #plc_bot .WB_footer,
   #plc_bot .W_fold,
   #WB_webchat,

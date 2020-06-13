@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.9
+@version        1.2.10
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -183,6 +183,9 @@
   .bili-radio+span:before {
     background-color: var(--c-hover) !important;
   }
+  .bui-switch .bui-switch-body {
+    background-color: var(--c-border) !important;
+  }
   .el-date-table td.disabled div,
   .el-year-table td.disabled .cell,
   .el-month-table td.disabled .cell,
@@ -195,7 +198,8 @@
   .el-radio-button.is-active .el-radio-button__inner,
   .user-setting-warp .el-radio-button__orig-radio:checked+.el-radio-button__inner,
   .bcc-checkbox-checked .bcc-checkbox-checkbox,
-  .bili-radio:checked+span:after {
+  .bili-radio:checked+span:after,
+  .bui-switch .bui-switch-input:checked+.bui-switch-label .bui-switch-body {
     background-color: var(--c-accent) !important;
   }
   .date-picker-v2-container div,
@@ -264,6 +268,12 @@
   }
   .player-auxiliary-danmaku-date-picker-container .player-auxiliary-danmaku-date-picker-body .day-span {
     border: none !important;
+  }
+  .bui-switch .bui-switch-dot {
+    fill: var(--c-border) !important;
+  }
+  .bui-switch .bui-switch-input:checked+.bui-switch-label .bui-switch-body .bui-switch-dot {
+    fill: var(--c-accent) !important;
   }
   .area-selector,
   .area-panel,
@@ -1531,7 +1541,9 @@
   .follow-container .follow-right .unfollow-btn,
   .wide-members .avatar-list i,
   .is-web .submit-button.disabled,
-  .tag-channel-pane .channel-btns__link {
+  .tag-channel-pane .channel-btns__link,
+  .bui-swiper-wrap .bui-swiper-next,
+  .bui-swiper-wrap .bui-swiper-pre {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -1631,6 +1643,8 @@
   .wide-members .avatar-list i span,
   .is-web .submit-button.disabled span,
   .tag-channel-pane .channel-btns__link span,
+  .bui-swiper-wrap .bui-swiper-next span,
+  .bui-swiper-wrap .bui-swiper-pre span,
   .default i.bcc-iconfont,
   .more-btn i.bcc-iconfont,
   .forward i.bcc-iconfont,
@@ -1723,7 +1737,9 @@
   .follow-container .follow-right .unfollow-btn i.bcc-iconfont,
   .wide-members .avatar-list i i.bcc-iconfont,
   .is-web .submit-button.disabled i.bcc-iconfont,
-  .tag-channel-pane .channel-btns__link i.bcc-iconfont {
+  .tag-channel-pane .channel-btns__link i.bcc-iconfont,
+  .bui-swiper-wrap .bui-swiper-next i.bcc-iconfont,
+  .bui-swiper-wrap .bui-swiper-pre i.bcc-iconfont {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -1818,7 +1834,9 @@
   .follow-container .follow-right .unfollow-btn::after,
   .wide-members .avatar-list i::after,
   .is-web .submit-button.disabled::after,
-  .tag-channel-pane .channel-btns__link::after {
+  .tag-channel-pane .channel-btns__link::after,
+  .bui-swiper-wrap .bui-swiper-next::after,
+  .bui-swiper-wrap .bui-swiper-pre::after {
     content: none !important;
   }
   .default:hover,
@@ -1913,7 +1931,9 @@
   .follow-container .follow-right .unfollow-btn:hover,
   .wide-members .avatar-list i:hover,
   .is-web .submit-button.disabled:hover,
-  .tag-channel-pane .channel-btns__link:hover {
+  .tag-channel-pane .channel-btns__link:hover,
+  .bui-swiper-wrap .bui-swiper-next:hover,
+  .bui-swiper-wrap .bui-swiper-pre:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
     color: var(--c-text) !important;
@@ -2011,6 +2031,8 @@
   .wide-members .avatar-list i:hover span,
   .is-web .submit-button.disabled:hover span,
   .tag-channel-pane .channel-btns__link:hover span,
+  .bui-swiper-wrap .bui-swiper-next:hover span,
+  .bui-swiper-wrap .bui-swiper-pre:hover span,
   .default:hover i.bcc-iconfont,
   .more-btn:hover i.bcc-iconfont,
   .forward:hover i.bcc-iconfont,
@@ -2103,7 +2125,9 @@
   .follow-container .follow-right .unfollow-btn:hover i.bcc-iconfont,
   .wide-members .avatar-list i:hover i.bcc-iconfont,
   .is-web .submit-button.disabled:hover i.bcc-iconfont,
-  .tag-channel-pane .channel-btns__link:hover i.bcc-iconfont {
+  .tag-channel-pane .channel-btns__link:hover i.bcc-iconfont,
+  .bui-swiper-wrap .bui-swiper-next:hover i.bcc-iconfont,
+  .bui-swiper-wrap .bui-swiper-pre:hover i.bcc-iconfont {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -2872,7 +2896,9 @@
   .comment-bilibili-fold .nameplate .nameplate-card .nameplate-arrow,
   .bb-comment .nameplate,
   .comment-bilibili-fold .nameplate,
-  .replies-comment-input-wrapper .replies-upload .comment-input-img span {
+  .replies-comment-input-wrapper .replies-upload .comment-input-img span,
+  .bb-comment .sailing,
+  .comment-bilibili-fold .sailing {
     display: none;
   }
   .comment,
@@ -3372,7 +3398,7 @@
     width: 100%;
   }
   .guochuang .r-con {
-    width: auto;
+    width: auto !important;
   }
   .focus-carousel,
   .article-card .pic {
@@ -3394,8 +3420,7 @@
   #bili_guochuang .time-line .zone-list-box {
     max-height: 200px;
   }
-  #bili_anime .card-list .zone-list-box,
-  #bili_guochuang .card-list .zone-list-box {
+  #bili_anime .card-list .zone-list-box {
     height: 460px !important;
   }
   #bili_live .zone-list-box {
@@ -3431,8 +3456,7 @@
     #bili_guochuang .time-line .zone-list-box {
       max-height: 180px;
     }
-    #bili_anime .card-list .zone-list-box,
-    #bili_guochuang .card-list .zone-list-box {
+    #bili_anime .card-list .zone-list-box {
       height: 465px !important;
     }
     #bili_live .zone-list-box {
@@ -3485,8 +3509,7 @@
     #bili_live .zone-list-box {
       height: 477px !important;
     }
-    #bili_anime .card-list .zone-list-box,
-    #bili_guochuang .card-list .zone-list-box {
+    #bili_anime .card-list .zone-list-box {
       max-height: 400px;
     }
     #bili_read .zone-list-box {
@@ -3516,8 +3539,7 @@
     #bili_live .zone-list-box {
       height: 380px !important;
     }
-    #bili_anime .card-list .zone-list-box,
-    #bili_guochuang .card-list .zone-list-box {
+    #bili_anime .card-list .zone-list-box {
       max-height: 350px;
     }
     #bili_manga .manga-panel .manga-list-box {
@@ -4618,7 +4640,8 @@
   .user-card-m iframe,
   .bili-msg iframe,
   .collection-m .layout,
-  .follow-dialog-wrap .follow-dialog-window .layout {
+  .follow-dialog-wrap .follow-dialog-window .layout,
+  .bilibili-player-hover-items .hover-item .arrow .arrow-1 {
     display: none;
   }
   .bili-header-m .nav-menu .up-load .u-link {
@@ -4633,7 +4656,9 @@
   .main-container .pay-bar .vip .btn-pay,
   .members-info__header,
   .bilibili-player .bilibili-player-area .bilibili-player-video-panel,
-  .coin-dialog-mask .coin-operated {
+  .coin-dialog-mask .coin-operated,
+  .bui-swiper-wrap .bui-swiper-item .bui-swiper-text,
+  .bilibili-player-hover-items .hover-item .bg {
     background-color: var(--c-background) !important;
   }
   .multi-page .cur-list .list-box li.on,
@@ -4649,7 +4674,9 @@
   .video-page-card .card-box .pic-box,
   .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-management,
   .follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .input-group,
-  .follow-dialog-wrap .follow-dialog-window .content .group-list ul .follow-group-mask {
+  .follow-dialog-wrap .follow-dialog-window .content .group-list ul .follow-group-mask,
+  .bui-swiper-wrap .bui-swiper-list.bui-swiper-border .bui-swiper-img,
+  .bilibili-player-hover-items .hover-item .cover {
     background-color: var(--c-hover) !important;
   }
   .main-container .media-info .media-right .pub-wrapper .up-info-wrapper .split-line,
@@ -4671,7 +4698,8 @@
   .bui-radio.bui-dark .bui-radio-button .bui-radio-input:checked+.bui-radio-label,
   .bui-switch .bui-checkbox:checked+.bui-body,
   .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row .row-selection .selection-span.active[data-type='fontsize'],
-  .s_tag .btn-add:hover span {
+  .s_tag .btn-add:hover span,
+  .bui-swiper-wrap .bui-swiper-item.bui-swiper-item-active .bui-swiper-text {
     background-color: var(--c-accent) !important;
   }
   .video-info .video-title .tit,
@@ -4686,7 +4714,9 @@
   .main-container .season-list .ss-list-wrapper .ss-item .ss-info .ss-title,
   .main-container .recom-wrapper .recom-title,
   .tag-channel-pane .channel-title,
-  .twp-mask .twp-wrapper .twp-container .twp-text .twp-title {
+  .twp-mask .twp-wrapper .twp-container .twp-text .twp-title,
+  .bui-swiper-wrap .bui-swiper-item .bui-swiper-text,
+  .bilibili-player-hover-items .hover-item .text {
     color: var(--c-title) !important;
   }
   .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a span,
@@ -4727,7 +4757,8 @@
   .bilibili-player-video-wrap div:not(.bilibili-danmaku),
   .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active,
   .bilibili-player .bilibili-player-area .bilibili-player-video-control .bilibili-player-video-btn .bilibili-player-video-quality-menu .bilibili-player-bigvip,
-  .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row .row-selection .selection-span.active[data-type='fontsize'] .selection-name {
+  .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row .row-selection .selection-span.active[data-type='fontsize'] .selection-name,
+  .bui-swiper-wrap .bui-swiper-item.bui-swiper-item-active .bui-swiper-text {
     color: var(--c-white) !important;
   }
   .coin-operated-m .coin-title span,
@@ -4768,7 +4799,9 @@
   .follow-dialog-wrap .follow-dialog-window .title,
   .follow-dialog-wrap .follow-dialog-window .bottom,
   .follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .add-btn,
-  .pwp-modal-header {
+  .pwp-modal-header,
+  .bui-swiper-wrap .bui-swiper-list.bui-swiper-border .bui-swiper-img,
+  .bilibili-player-hover-items .hover-item .cover {
     border-color: var(--c-border) !important;
   }
   .follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .input-group {
@@ -4777,11 +4810,16 @@
   .bilibili-player .bilibili-player-video-control .bilibili-player-video-btn-menu-list.bilibili-player-active:before {
     border-color: transparent transparent transparent var(--c-accent);
   }
+  .bilibili-player-hover-items .hover-item .arrow .arrow-2 {
+    border-top-color: var(--c-background) !important;
+  }
   #bofqi.mini-player .drag-bar,
   #bofqi.mini-player:before {
     box-shadow: 0 0 5px var(--c-border);
   }
-  .bilibili-player {
+  .bilibili-player,
+  .bui-swiper-wrap .bui-swiper-list.bui-swiper-border .bui-swiper-img,
+  .bui-swiper-wrap .bui-swiper-item .bui-swiper-text {
     box-shadow: none;
   }
   #comment_module {
@@ -4811,13 +4849,15 @@
   .bilibili-player-ending-panel {
     backdrop-filter: blur(5px);
   }
-  .bilibili-player-video-danmaku-root .bp-svgicon svg {
+  .bilibili-player-video-danmaku-root .bp-svgicon svg,
+  .bui-swiper-wrap .bui-swiper-pre svg {
     fill: var(--c-text);
   }
   .bui-switch .bui-dot span svg {
     fill: var(--c-border);
   }
-  .bilibili-player-video-control .bp-svgicon svg {
+  .bilibili-player-video-control .bp-svgicon svg,
+  .bui-swiper-wrap .bui-swiper-next svg {
     fill: var(--c-white);
   }
   .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active .bp-svgicon,
@@ -4832,8 +4872,24 @@
   .selection-icon:hover .bp-svgicon svg,
   .bilibili-player-video-danmaku-setting-left-block-content .bilibili-player-block-filter-type:hover .bilibili-player-block-filter-image .bp-svgicon svg,
   .bilibili-player-video-danmaku-switch:hover .bp-svgicon svg,
-  .bilibili-player-video-btn-fullscreen:hover .bp-svgicon svg .st0 {
+  .bilibili-player-video-btn-fullscreen:hover .bp-svgicon svg .st0,
+  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div:hover .bp-svgicon svg,
+  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display .grade .bp-svgicon svg g path:last-child {
     fill: var(--c-accent) !important;
+  }
+  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .bilibili-player-grade-spans .grade .bp-svgicon svg path {
+    stroke: var(--c-border) !important;
+  }
+  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display .grade .bp-svgicon svg g path {
+    stroke: var(--c-accent) !important;
+  }
+  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .bilibili-player-grade-spans .grade .bp-svgicon svg g path {
+    fill: var(--c-accent) !important;
+    stroke: var(--c-accent) !important;
+  }
+  .bui-swiper-wrap .bui-swiper-item .bui-swiper-text,
+  .bilibili-player-hover-items .hover-item .cover {
+    left: 0;
   }
   #comment .comment,
   #comment_module,
