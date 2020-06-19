@@ -55,6 +55,7 @@
 .pay-note-panel
 .gift-item.buy.hover
 .gift-item.buy:hover
+.chat-history-panel .danmaku-buffer-prompt
 	background-color var(--c-hover) !important
 
 .blpui-slider-container.vertical-slider .blpui-slider-span:before
@@ -88,6 +89,9 @@
 .fans-medal-item .level
 .recharge-store-box dl.recharge-form dt
 .chaos-pk-rank .rank .rank-name
+.month-selector .month-info
+.chat-history-panel .danmaku-buffer-prompt .danmaku-buffer-num
+.chat-history-panel .danmaku-buffer-prompt .icon-font
 	color var(--c-title) !important
 
 .gift-info-desc
@@ -96,6 +100,7 @@
 .chaos-pk-rank .rank .season-name
 .chaos-pk-rank .rank .time
 .guard-rank-cntr .rank-cntr .tip
+.select-month
 	color var(--c-text) !important
 
 .hour-rank .hour-rank-content
@@ -106,6 +111,8 @@
 .bilibili-live-player .blpui-btn.icon-btn > i
 .bilibili-live-player-video-controller-hide-danmaku-container .hide-danmaku-title
 .draw-full-cntr .count
+.card-detail .card-item-middle-bottom .input-contain .text
+.card-detail .card-item-middle-bottom .input-trans-contain .text
 	color var(--c-white) !important
 
 .gift-info .btn-rule
@@ -125,6 +132,10 @@
 .bilibili-live-player .blpui-btn.text-btn:hover > span
 .bilibili-live-player .blpui-btn.text-btn.active > span
 .draw-full-cntr .gift-sender-info span
+.month-selector .month-info .month-list .month-item:hover .days
+.month-selector .month-info .month-list .month-item:hover
+.buy-detail .master
+.btn-box .total-price .price
 	color var(--c-accent) !important
 
 .room-introduction-tags
@@ -139,7 +150,11 @@
 .recharge-store-box ul.select-list .item.active
 .award-list-cntr .award-list-cntr .award-list .award-item img
 .chaos-pk-result-ctnr .result-panel .result-tab div.active
+.month-selector .month-info
 	border-color var(--c-accent) !important
+
+.month-selector .month-info .month-list
+	border-width 1px !important
 
 .content-wrapper
 .user-protocol
@@ -190,6 +205,10 @@
 
 .count-choice .send-button
 	vertical-align middle
+
+.month-selector .month-info .triangle:before
+	bottom 8px !important
+	border-top-color var(--c-border) !important
 
 .right-action-ctnr
 .live-skin-highlight-text
@@ -252,6 +271,6 @@
 	border-radius 4px !important
 	background-color var(--c-background) !important
 
-@media (prefers-color-scheme: dark)
+@media (prefers-color-scheme dark)
 	.live-player-ctnr.minimal
 		box-shadow 0 0 30px 1px rgba(84, 94, 101, 0.4)

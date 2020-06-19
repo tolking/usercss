@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.10
+@version        1.2.11
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -2414,7 +2414,8 @@
   .comment-bilibili-con,
   .follow-dialog-wrap .follow-dialog-window,
   .twp-mask .twp-wrapper,
-  .pwp-modal-mask .pwp-modal-wrapper {
+  .pwp-modal-mask .pwp-modal-wrapper,
+  .month-selector .month-info .month-list {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -2734,7 +2735,8 @@
   .van-popper-history .tab-header {
     border-color: var(--c-border) !important;
   }
-  .van-popper-favorite .tab-item--active {
+  .van-popper-favorite .tab-item--active,
+  .header-video-card:hover {
     background-color: var(--c-hover) !important;
   }
   .van-popper-favorite .tab-item--normal:hover,
@@ -6711,7 +6713,8 @@
   .draw-full-cntr .function-bar,
   .pay-note-panel,
   .gift-item.buy.hover,
-  .gift-item.buy:hover {
+  .gift-item.buy:hover,
+  .chat-history-panel .danmaku-buffer-prompt {
     background-color: var(--c-hover) !important;
   }
   .blpui-slider-container.vertical-slider .blpui-slider-span:before,
@@ -6744,7 +6747,10 @@
   .tab-box .item .item-cntr,
   .fans-medal-item .level,
   .recharge-store-box dl.recharge-form dt,
-  .chaos-pk-rank .rank .rank-name {
+  .chaos-pk-rank .rank .rank-name,
+  .month-selector .month-info,
+  .chat-history-panel .danmaku-buffer-prompt .danmaku-buffer-num,
+  .chat-history-panel .danmaku-buffer-prompt .icon-font {
     color: var(--c-title) !important;
   }
   .gift-info-desc,
@@ -6752,7 +6758,8 @@
   .icon-label,
   .chaos-pk-rank .rank .season-name,
   .chaos-pk-rank .rank .time,
-  .guard-rank-cntr .rank-cntr .tip {
+  .guard-rank-cntr .rank-cntr .tip,
+  .select-month {
     color: var(--c-text) !important;
   }
   .hour-rank .hour-rank-content,
@@ -6762,7 +6769,9 @@
   .bilibili-live-player .blpui-btn.text-btn > span,
   .bilibili-live-player .blpui-btn.icon-btn > i,
   .bilibili-live-player-video-controller-hide-danmaku-container .hide-danmaku-title,
-  .draw-full-cntr .count {
+  .draw-full-cntr .count,
+  .card-detail .card-item-middle-bottom .input-contain .text,
+  .card-detail .card-item-middle-bottom .input-trans-contain .text {
     color: var(--c-white) !important;
   }
   .gift-info .btn-rule,
@@ -6781,7 +6790,11 @@
   .bilibili-live-player .blpui-btn.icon-btn:hover > i,
   .bilibili-live-player .blpui-btn.text-btn:hover > span,
   .bilibili-live-player .blpui-btn.text-btn.active > span,
-  .draw-full-cntr .gift-sender-info span {
+  .draw-full-cntr .gift-sender-info span,
+  .month-selector .month-info .month-list .month-item:hover .days,
+  .month-selector .month-info .month-list .month-item:hover,
+  .buy-detail .master,
+  .btn-box .total-price .price {
     color: var(--c-accent) !important;
   }
   .room-introduction-tags,
@@ -6795,8 +6808,12 @@
   }
   .recharge-store-box ul.select-list .item.active,
   .award-list-cntr .award-list-cntr .award-list .award-item img,
-  .chaos-pk-result-ctnr .result-panel .result-tab div.active {
+  .chaos-pk-result-ctnr .result-panel .result-tab div.active,
+  .month-selector .month-info {
     border-color: var(--c-accent) !important;
+  }
+  .month-selector .month-info .month-list {
+    border-width: 1px !important;
   }
   .content-wrapper,
   .user-protocol,
@@ -6847,6 +6864,10 @@
   }
   .count-choice .send-button {
     vertical-align: middle;
+  }
+  .month-selector .month-info .triangle:before {
+    bottom: 8px !important;
+    border-top-color: var(--c-border) !important;
   }
   .right-action-ctnr,
   .live-skin-highlight-text,
