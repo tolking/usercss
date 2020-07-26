@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.11
+@version        1.2.12
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -1536,6 +1536,7 @@
   .watch-later-list header .d-btn,
   .cinema-movie-wrapper .slider-contro span,
   .bcc-pagination-item,
+  .bcc-pagination-ellipsis,
   .h .h-message,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn,
   .follow-container .follow-right .unfollow-btn,
@@ -1637,6 +1638,7 @@
   .watch-later-list header .d-btn span,
   .cinema-movie-wrapper .slider-contro span span,
   .bcc-pagination-item span,
+  .bcc-pagination-ellipsis span,
   .h .h-message span,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn span,
   .follow-container .follow-right .unfollow-btn span,
@@ -1732,6 +1734,7 @@
   .watch-later-list header .d-btn i.bcc-iconfont,
   .cinema-movie-wrapper .slider-contro span i.bcc-iconfont,
   .bcc-pagination-item i.bcc-iconfont,
+  .bcc-pagination-ellipsis i.bcc-iconfont,
   .h .h-message i.bcc-iconfont,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn i.bcc-iconfont,
   .follow-container .follow-right .unfollow-btn i.bcc-iconfont,
@@ -1829,6 +1832,7 @@
   .watch-later-list header .d-btn::after,
   .cinema-movie-wrapper .slider-contro span::after,
   .bcc-pagination-item::after,
+  .bcc-pagination-ellipsis::after,
   .h .h-message::after,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn::after,
   .follow-container .follow-right .unfollow-btn::after,
@@ -1926,6 +1930,7 @@
   .watch-later-list header .d-btn:hover,
   .cinema-movie-wrapper .slider-contro span:hover,
   .bcc-pagination-item:hover,
+  .bcc-pagination-ellipsis:hover,
   .h .h-message:hover,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn:hover,
   .follow-container .follow-right .unfollow-btn:hover,
@@ -2025,6 +2030,7 @@
   .watch-later-list header .d-btn:hover span,
   .cinema-movie-wrapper .slider-contro span:hover span,
   .bcc-pagination-item:hover span,
+  .bcc-pagination-ellipsis:hover span,
   .h .h-message:hover span,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn:hover span,
   .follow-container .follow-right .unfollow-btn:hover span,
@@ -2120,6 +2126,7 @@
   .watch-later-list header .d-btn:hover i.bcc-iconfont,
   .cinema-movie-wrapper .slider-contro span:hover i.bcc-iconfont,
   .bcc-pagination-item:hover i.bcc-iconfont,
+  .bcc-pagination-ellipsis:hover i.bcc-iconfont,
   .h .h-message:hover i.bcc-iconfont,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn:hover i.bcc-iconfont,
   .follow-container .follow-right .unfollow-btn:hover i.bcc-iconfont,
@@ -2915,7 +2922,9 @@
   .emoji-box .emoji-tabs .tab-link:hover,
   .bb-comment .comment-list .list-item .con .vote-container .image-area .share-img,
   .comment-bilibili-fold .comment-list .list-item .con .vote-container .image-area .share-img,
-  .bb-comment .comment-list .list-item .con .vote-container {
+  .bb-comment .comment-list .list-item .con .vote-container,
+  .bb-comment .comment-list .list-item .info .reply-tags span,
+  .comment-bilibili-fold .comment-list .list-item .info .reply-tags span {
     background-color: var(--c-hover);
   }
   #comment,
@@ -7734,7 +7743,8 @@
   .manga-footer,
   .manga-logo,
   .user-info-panel a .tooltip,
-  .nav-list a:last-child {
+  .nav-list a:last-child,
+  .download-app {
     display: none !important;
   }
   .manga-navbar .manga-navbar,
@@ -7863,7 +7873,8 @@
   }
   .newbie-awarder .award-dialog .award-dialog-container,
   .hot-category,
-  .section-navigator {
+  .section-navigator,
+  .overlay .guide-attention .welfare-box {
     background-color: var(--c-background) !important;
   }
   .vertical-block-card {
@@ -7873,14 +7884,16 @@
   .item-title,
   .manga-title,
   .standby-panel .content-container .panel-title,
-  .style-section .tag-block .block-title {
+  .style-section .tag-block .block-title,
+  .overlay .guide-attention .welfare-box .welfare-title {
     color: var(--c-title) !important;
   }
   .manga-card-vertical .text-info-section .supporting-text,
   .schedule-item .text-section .status-text,
   .meta-info p,
   .standby-panel .content-container .support-text,
-  .style-section .tag-block .tag-containers .style-tag {
+  .style-section .tag-block .tag-containers .style-tag,
+  .overlay .guide-attention .welfare-box .welfare-info {
     color: var(--c-text) !important;
   }
   .size-ruler .style-section .tag-block .tag-containers .style-tag.selected,
@@ -8921,6 +8934,7 @@
   body {
     background-color: var(--c-bg-mask) !important;
   }
+  #app,
   #app.home,
   .cc-body,
   #bili-data-center,
