@@ -3,6 +3,8 @@
 .manga-logo
 .user-info-panel a .tooltip
 .nav-list a:last-child
+.download-app
+.manga-navbar .wrapper .spacer .row:nth-child(n + 2)
   display none !important
 
 .manga-navbar .manga-navbar
@@ -16,6 +18,9 @@
 .drop-list .more-btn-container:hover
 .user-panel .drop-list .logout-btn-container .logout-button:hover
   background-color var(--c-hover) !important
+
+.nav-list .nav-item .item-underline
+  background-color var(--c-accent) !important
 
 nav.manga-navbar .right-part .drop-list .size-ruler a button
   color var(--c-title) !important
@@ -57,11 +62,17 @@ nav.manga-navbar
 .search-bar .placeholder-list
   height 32px !important
 
+.manga-navbar .wrapper .spacer
+  height 100% !important
+
 .search-bar .placeholder-list .placeholder-item
   line-height 32px !important
 
 .search-bar .confirm-btn
   padding 8px !important
+
+.manga-navbar .hide-mode
+  transform translateY(0) !important
 
 .search-bar .search-suggestion
   margin-top 8px

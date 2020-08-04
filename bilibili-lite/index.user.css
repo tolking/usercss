@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.11
+@version        1.2.12
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -1536,6 +1536,7 @@
   .watch-later-list header .d-btn,
   .cinema-movie-wrapper .slider-contro span,
   .bcc-pagination-item,
+  .bcc-pagination-ellipsis,
   .h .h-message,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn,
   .follow-container .follow-right .unfollow-btn,
@@ -1637,6 +1638,7 @@
   .watch-later-list header .d-btn span,
   .cinema-movie-wrapper .slider-contro span span,
   .bcc-pagination-item span,
+  .bcc-pagination-ellipsis span,
   .h .h-message span,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn span,
   .follow-container .follow-right .unfollow-btn span,
@@ -1732,6 +1734,7 @@
   .watch-later-list header .d-btn i.bcc-iconfont,
   .cinema-movie-wrapper .slider-contro span i.bcc-iconfont,
   .bcc-pagination-item i.bcc-iconfont,
+  .bcc-pagination-ellipsis i.bcc-iconfont,
   .h .h-message i.bcc-iconfont,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn i.bcc-iconfont,
   .follow-container .follow-right .unfollow-btn i.bcc-iconfont,
@@ -1829,6 +1832,7 @@
   .watch-later-list header .d-btn::after,
   .cinema-movie-wrapper .slider-contro span::after,
   .bcc-pagination-item::after,
+  .bcc-pagination-ellipsis::after,
   .h .h-message::after,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn::after,
   .follow-container .follow-right .unfollow-btn::after,
@@ -1926,6 +1930,7 @@
   .watch-later-list header .d-btn:hover,
   .cinema-movie-wrapper .slider-contro span:hover,
   .bcc-pagination-item:hover,
+  .bcc-pagination-ellipsis:hover,
   .h .h-message:hover,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn:hover,
   .follow-container .follow-right .unfollow-btn:hover,
@@ -2025,6 +2030,7 @@
   .watch-later-list header .d-btn:hover span,
   .cinema-movie-wrapper .slider-contro span:hover span,
   .bcc-pagination-item:hover span,
+  .bcc-pagination-ellipsis:hover span,
   .h .h-message:hover span,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn:hover span,
   .follow-container .follow-right .unfollow-btn:hover span,
@@ -2120,6 +2126,7 @@
   .watch-later-list header .d-btn:hover i.bcc-iconfont,
   .cinema-movie-wrapper .slider-contro span:hover i.bcc-iconfont,
   .bcc-pagination-item:hover i.bcc-iconfont,
+  .bcc-pagination-ellipsis:hover i.bcc-iconfont,
   .h .h-message:hover i.bcc-iconfont,
   .container .musician-recommend .recommend-item .recommend-info .listen-btn:hover i.bcc-iconfont,
   .follow-container .follow-right .unfollow-btn:hover i.bcc-iconfont,
@@ -2211,7 +2218,8 @@
   .info-item .notice-icon,
   .live-record-card-cntr .cover .corner.new,
   .block-list-item-label,
-  .multi-page .cur-list .list-box li .pay-label {
+  .multi-page .cur-list .list-box li .pay-label,
+  .manga-detail .section .section-list .batch-buy {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
@@ -2288,7 +2296,8 @@
   .info-item .notice-icon:hover,
   .live-record-card-cntr .cover .corner.new:hover,
   .block-list-item-label:hover,
-  .multi-page .cur-list .list-box li .pay-label:hover {
+  .multi-page .cur-list .list-box li .pay-label:hover,
+  .manga-detail .section .section-list .batch-buy:hover {
     color: var(--c-white) !important;
   }
   .gg-icon,
@@ -2306,8 +2315,7 @@
   .user-level-icon,
   .history-card .up-info .room-status>span,
   .achievement-card-centent>.header>.state-normal,
-  .tab-selector-wrap .tag-wrap .tag span,
-  .category {
+  .tab-selector-wrap .tag-wrap .tag span {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -2315,8 +2323,7 @@
   .tag:hover,
   .tag-list li.tag-item:hover,
   .tag-area .tag:hover,
-  .link-tag:hover,
-  .category:hover {
+  .link-tag:hover {
     background-color: var(--c-hover) !important;
   }
   .primary-menu .nav-menu .channel.on:after,
@@ -2915,7 +2922,9 @@
   .emoji-box .emoji-tabs .tab-link:hover,
   .bb-comment .comment-list .list-item .con .vote-container .image-area .share-img,
   .comment-bilibili-fold .comment-list .list-item .con .vote-container .image-area .share-img,
-  .bb-comment .comment-list .list-item .con .vote-container {
+  .bb-comment .comment-list .list-item .con .vote-container,
+  .bb-comment .comment-list .list-item .info .reply-tags span,
+  .comment-bilibili-fold .comment-list .list-item .info .reply-tags span {
     background-color: var(--c-hover);
   }
   #comment,
@@ -7383,7 +7392,8 @@
   .side-bar .list {
     margin-top: 100px !important;
   }
-  .side-bar .item a:hover {
+  .side-bar .item a:hover,
+  .list-item .name {
     color: var(--c-title) !important;
   }
   .list-item .last-word,
@@ -7393,7 +7403,8 @@
   .list .item.active a {
     color: var(--c-accent) !important;
   }
-  .card {
+  .card,
+  .bili-im {
     margin-bottom: 0 !important;
     box-shadow: none !important;
     background-color: var(--c-background) !important;
@@ -7404,7 +7415,8 @@
   .list-title,
   .title,
   .divider,
-  .orginal-reply {
+  .orginal-reply,
+  .bili-im .left {
     border-color: var(--c-border) !important;
   }
   .action-menu .menu-list:before {
@@ -7734,7 +7746,9 @@
   .manga-footer,
   .manga-logo,
   .user-info-panel a .tooltip,
-  .nav-list a:last-child {
+  .nav-list a:last-child,
+  .download-app,
+  .manga-navbar .wrapper .spacer .row:nth-child(n + 2) {
     display: none !important;
   }
   .manga-navbar .manga-navbar,
@@ -7748,6 +7762,9 @@
   .drop-list .more-btn-container:hover,
   .user-panel .drop-list .logout-btn-container .logout-button:hover {
     background-color: var(--c-hover) !important;
+  }
+  .nav-list .nav-item .item-underline {
+    background-color: var(--c-accent) !important;
   }
   nav.manga-navbar .right-part .drop-list .size-ruler a button {
     color: var(--c-title) !important;
@@ -7789,11 +7806,17 @@
   .search-bar .placeholder-list {
     height: 32px !important;
   }
+  .manga-navbar .wrapper .spacer {
+    height: 100% !important;
+  }
   .search-bar .placeholder-list .placeholder-item {
     line-height: 32px !important;
   }
   .search-bar .confirm-btn {
     padding: 8px !important;
+  }
+  .manga-navbar .hide-mode {
+    transform: translateY(0) !important;
   }
   .search-bar .search-suggestion {
     margin-top: 8px;
@@ -7858,39 +7881,54 @@
   }
   .multi-line-text::before,
   .multi-line-text::after,
-  .rank-list {
+  .rank-list,
+  .section-navigator .divider {
     display: none !important;
   }
   .newbie-awarder .award-dialog .award-dialog-container,
   .hot-category,
-  .section-navigator {
+  .section-navigator,
+  .overlay .guide-attention .welfare-box {
     background-color: var(--c-background) !important;
   }
-  .vertical-block-card {
+  .vertical-block-card,
+  .tags.recommend {
     background-color: transparent !important;
+  }
+  .header .tab.active:after {
+    background-color: var(--c-accent) !important;
   }
   .section-title,
   .item-title,
   .manga-title,
   .standby-panel .content-container .panel-title,
-  .style-section .tag-block .block-title {
+  .style-section .tag-block .block-title,
+  .overlay .guide-attention .welfare-box .welfare-title,
+  .header .tab {
     color: var(--c-title) !important;
   }
   .manga-card-vertical .text-info-section .supporting-text,
   .schedule-item .text-section .status-text,
   .meta-info p,
   .standby-panel .content-container .support-text,
-  .style-section .tag-block .tag-containers .style-tag {
+  .style-section .tag-block .tag-containers .style-tag,
+  .overlay .guide-attention .welfare-box .welfare-info {
     color: var(--c-text) !important;
   }
+  .title .button div {
+    color: var(--c-white) !important;
+  }
   .size-ruler .style-section .tag-block .tag-containers .style-tag.selected,
-  .size-ruler .style-section .tag-block .tag-containers .style-tag:hover {
+  .size-ruler .style-section .tag-block .tag-containers .style-tag:hover,
+  .header .tab.active,
+  .header .tab:hover {
     color: var(--c-accent) !important;
   }
   .section-navigator {
     border-color: var(--c-border) !important;
   }
-  .recommendation-section {
+  .recommendation-section,
+  .app-layout .size-ruler .fix-scroller {
     margin: 0 !important;
   }
   .section-navigator .section-item {
@@ -7921,7 +7959,8 @@
   .drop-list .more-btn-container .more-button,
   .index-banner .control-button,
   .index-banner .control-button .app-button,
-  .newbie-awarder .floating-button .widget-close-button {
+  .newbie-awarder .floating-button .widget-close-button,
+  .section-navigator .back-to-top {
     border: 0;
     background-color: transparent !important;
     color: var(--c-title) !important;
@@ -7938,16 +7977,21 @@
   .drop-list .more-btn-container .more-button::after,
   .index-banner .control-button::after,
   .index-banner .control-button .app-button::after,
-  .newbie-awarder .floating-button .widget-close-button::after {
+  .newbie-awarder .floating-button .widget-close-button::after,
+  .section-navigator .back-to-top::after {
     content: none !important;
   }
   .recommendation-section .manga-list {
     width: 100% !important;
   }
-  .title-tooltip {
+  .title-tooltip,
+  .manga-detail .section .right-side,
+  .header-info .manga-info .supporting-text .label-icon,
+  .container .pocket-tv {
     display: none !important;
   }
-  .purchase-panel {
+  .purchase-panel,
+  .container .back-to-content {
     background-color: var(--c-background) !important;
   }
   .list-data .list-item.last-read,
@@ -7956,7 +8000,11 @@
   .purchase-panel .action-buttons button.action-button.selected {
     background-color: var(--c-hover) !important;
   }
-  .header-info .manga-info .season-introduction .size-ruler {
+  .container .back-to-content .line {
+    background-color: var(--c-border) !important;
+  }
+  .header-info .manga-info .season-introduction .size-ruler,
+  .manga-detail .layout {
     background-color: transparent !important;
   }
   .list-item .short-title,
@@ -7981,6 +8029,20 @@
   .list-data .list-item.last-read,
   .list-data .list-item:hover {
     border-color: var(--c-accent) !important;
+  }
+  .manga-detail .layout,
+  .manga-detail .section .section-list,
+  .container .back-to-content {
+    box-shadow: none !important;
+  }
+  .episode-list .list-data .list-item:nth-child(4n) {
+    margin-right: 16px;
+  }
+  .episode-list .list-data .list-item:nth-child(5n) {
+    margin-right: 0;
+  }
+  .manga-detail .section .section-list {
+    width: 100% !important;
   }
   .purchase-panel .action-buttons .action-button .tag.discount {
     border-radius: 0 0 6px 0;
@@ -8921,6 +8983,7 @@
   body {
     background-color: var(--c-bg-mask) !important;
   }
+  #app,
   #app.home,
   .cc-body,
   #bili-data-center,
