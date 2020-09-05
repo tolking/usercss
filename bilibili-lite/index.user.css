@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.13
+@version        1.2.14
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -2422,7 +2422,8 @@
   .follow-dialog-wrap .follow-dialog-window,
   .twp-mask .twp-wrapper,
   .pwp-modal-mask .pwp-modal-wrapper,
-  .month-selector .month-info .month-list {
+  .month-selector .month-info .month-list,
+  .danmaku-menu {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -6812,7 +6813,10 @@
   .month-selector .month-info .month-list .month-item:hover .days,
   .month-selector .month-info .month-list .month-item:hover,
   .buy-detail .master,
-  .btn-box .total-price .price {
+  .btn-box .total-price .price,
+  .gift-panel-box .gift-reveal-header .gift-tab.active .name,
+  .end-part .award-title,
+  .end-part .winner-box .winner-list .winner-item span {
     color: var(--c-accent) !important;
   }
   .room-introduction-tags,
@@ -6821,13 +6825,16 @@
   .tabs .tab-list .item,
   .edit-button,
   .bili-share-pc,
-  .result-anchor-box {
+  .result-anchor-box,
+  .gift-panel-box .gift-reveal-header {
     border-color: var(--c-border) !important;
   }
   .recharge-store-box ul.select-list .item.active,
   .award-list-cntr .award-list-cntr .award-list .award-item img,
   .chaos-pk-result-ctnr .result-panel .result-tab div.active,
-  .month-selector .month-info {
+  .month-selector .month-info,
+  .gift-panel-box .gift-reveal-header .gift-tab.active .name,
+  .gift-panel-box .gift-reveal-header .gift-tab:hover .name {
     border-color: var(--c-accent) !important;
   }
   .month-selector .month-info .month-list {
