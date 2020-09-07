@@ -1544,7 +1544,8 @@
   .is-web .submit-button.disabled,
   .tag-channel-pane .channel-btns__link,
   .bui-swiper-wrap .bui-swiper-next,
-  .bui-swiper-wrap .bui-swiper-pre {
+  .bui-swiper-wrap .bui-swiper-pre,
+  .tag-channel-pane .channel-btns .is-subs {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -1647,6 +1648,7 @@
   .tag-channel-pane .channel-btns__link span,
   .bui-swiper-wrap .bui-swiper-next span,
   .bui-swiper-wrap .bui-swiper-pre span,
+  .tag-channel-pane .channel-btns .is-subs span,
   .default i.bcc-iconfont,
   .more-btn i.bcc-iconfont,
   .forward i.bcc-iconfont,
@@ -1742,7 +1744,8 @@
   .is-web .submit-button.disabled i.bcc-iconfont,
   .tag-channel-pane .channel-btns__link i.bcc-iconfont,
   .bui-swiper-wrap .bui-swiper-next i.bcc-iconfont,
-  .bui-swiper-wrap .bui-swiper-pre i.bcc-iconfont {
+  .bui-swiper-wrap .bui-swiper-pre i.bcc-iconfont,
+  .tag-channel-pane .channel-btns .is-subs i.bcc-iconfont {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -1840,7 +1843,8 @@
   .is-web .submit-button.disabled::after,
   .tag-channel-pane .channel-btns__link::after,
   .bui-swiper-wrap .bui-swiper-next::after,
-  .bui-swiper-wrap .bui-swiper-pre::after {
+  .bui-swiper-wrap .bui-swiper-pre::after,
+  .tag-channel-pane .channel-btns .is-subs::after {
     content: none !important;
   }
   .default:hover,
@@ -1938,7 +1942,8 @@
   .is-web .submit-button.disabled:hover,
   .tag-channel-pane .channel-btns__link:hover,
   .bui-swiper-wrap .bui-swiper-next:hover,
-  .bui-swiper-wrap .bui-swiper-pre:hover {
+  .bui-swiper-wrap .bui-swiper-pre:hover,
+  .tag-channel-pane .channel-btns .is-subs:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
     color: var(--c-text) !important;
@@ -2039,6 +2044,7 @@
   .tag-channel-pane .channel-btns__link:hover span,
   .bui-swiper-wrap .bui-swiper-next:hover span,
   .bui-swiper-wrap .bui-swiper-pre:hover span,
+  .tag-channel-pane .channel-btns .is-subs:hover span,
   .default:hover i.bcc-iconfont,
   .more-btn:hover i.bcc-iconfont,
   .forward:hover i.bcc-iconfont,
@@ -2134,7 +2140,8 @@
   .is-web .submit-button.disabled:hover i.bcc-iconfont,
   .tag-channel-pane .channel-btns__link:hover i.bcc-iconfont,
   .bui-swiper-wrap .bui-swiper-next:hover i.bcc-iconfont,
-  .bui-swiper-wrap .bui-swiper-pre:hover i.bcc-iconfont {
+  .bui-swiper-wrap .bui-swiper-pre:hover i.bcc-iconfont,
+  .tag-channel-pane .channel-btns .is-subs:hover i.bcc-iconfont {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
