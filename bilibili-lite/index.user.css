@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.14
+@version        1.2.15
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -2226,7 +2226,8 @@
   .live-record-card-cntr .cover .corner.new,
   .block-list-item-label,
   .multi-page .cur-list .list-box li .pay-label,
-  .manga-detail .section .section-list .batch-buy {
+  .manga-detail .section .section-list .batch-buy,
+  .members-info .avatar .info-tag {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
@@ -2304,7 +2305,8 @@
   .live-record-card-cntr .cover .corner.new:hover,
   .block-list-item-label:hover,
   .multi-page .cur-list .list-box li .pay-label:hover,
-  .manga-detail .section .section-list .batch-buy:hover {
+  .manga-detail .section .section-list .batch-buy:hover,
+  .members-info .avatar .info-tag:hover {
     color: var(--c-white) !important;
   }
   .gg-icon,
@@ -4719,7 +4721,8 @@
   .bui-switch .bui-checkbox:checked+.bui-body,
   .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row .row-selection .selection-span.active[data-type='fontsize'],
   .s_tag .btn-add:hover span,
-  .bui-swiper-wrap .bui-swiper-item.bui-swiper-item-active .bui-swiper-text {
+  .bui-swiper-wrap .bui-swiper-item.bui-swiper-item-active .bui-swiper-text,
+  .members-info .avatar .attention {
     background-color: var(--c-accent) !important;
   }
   .video-info .video-title .tit,
@@ -4786,7 +4789,8 @@
   .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div.active,
   .bilibili-player .bilibili-player-area .bilibili-player-video-control .bilibili-player-video-btn .bilibili-player-video-quality-menu .bilibili-player-bigvip,
   .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row .row-selection .selection-span.active[data-type='fontsize'] .selection-name,
-  .bui-swiper-wrap .bui-swiper-item.bui-swiper-item-active .bui-swiper-text {
+  .bui-swiper-wrap .bui-swiper-item.bui-swiper-item-active .bui-swiper-text,
+  .members-info .avatar .attention i {
     color: var(--c-white) !important;
   }
   .coin-operated-m .coin-title span,
@@ -4850,8 +4854,12 @@
   .bui-swiper-wrap .bui-swiper-item .bui-swiper-text {
     box-shadow: none;
   }
-  #comment_module {
+  #comment_module,
+  .r-con .members-info {
     margin-top: 20px;
+  }
+  .members-info__header {
+    margin-top: 0 !important;
   }
   .v-wrap,
   .wide-members {
@@ -4983,9 +4991,6 @@
     margin-bottom: 20px;
     border: 1px solid var(--c-border);
     background-color: var(--c-background);
-  }
-  .members-info .up-card {
-    padding: 0 10px;
   }
   .main-container .media-info .media-right .media-tool-bar .btn-rating {
     border: 0;
