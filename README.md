@@ -22,6 +22,7 @@ yarn global add stylus # or npm install -g stylus
 
 yarn dev:bl # or npm run dev:bl  自动编译 bilibili-lite
 yarn dev:wb # or npm run dev:wb  自动编译 weibo-lite
+yarn dev:wd # or npm run dev:wd  自动编译 weibo-dark
 
 3. 构建
 
@@ -29,6 +30,7 @@ yarn build # or npm run build  编译所有
 
 yarn build:bl # or npm run build:bl  编译 bilibili-lite
 yarn build:wb # or npm run build:wb  编译 weibo-lite
+yarn build:wd # or npm run build:wd  编译 weibo-dark
 ```
 
 > stylus 格式参考 .vscode-> settings.json
