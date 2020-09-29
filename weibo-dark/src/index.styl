@@ -1,0 +1,26 @@
+/* ==UserStyle==
+@name           weibo-dark
+@namespace      tolking-usercss
+@version        1.0.0
+@description    为新版新浪微博页面增加深色模式
+@author         tolking <qw13131wang@gmail.com> (https://ououe.com)
+@homepageURL		https://github.com/tolking/usercss/tree/master/weibo-dark
+@supportURL			https://github.com/tolking/usercss/issues
+@updateURL			https://tolking.github.io/usercss/weibo-dark/index.user.css
+@license				MIT
+@preprocessor		stylus
+
+@var select theme "选择默认主题" ["auto:跟随系统", "dark:深色"]
+==/UserStyle== */
+@-moz-document domain("weibo.com") {
+  /*!需去掉下面三处注释*/
+  /*!if theme == auto {
+    @media(prefers-color-scheme:dark) {*/
+			@import 'palette'
+      @import 'public'
+		/*!}
+	} else {*/
+    @import 'palette'
+    @import 'public'
+  /*!}*/
+}

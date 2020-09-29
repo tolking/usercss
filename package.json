@@ -21,6 +21,8 @@
     "dev:bl": "stylus -w ./bilibili-lite/src/index.styl -o ./bilibili-lite/index.user.css",
     "build:bl": "stylus ./bilibili-lite/src/index.styl -o ./bilibili-lite/index.user.css",
     "dev:wb": "stylus -w ./weibo-lite/src/index.styl -o ./weibo-lite/index.user.css",
-    "build:wl": "stylus ./weibo-lite/src/index.styl -o ./weibo-lite/index.user.css"
+    "build:wb": "stylus ./weibo-lite/src/index.styl -o ./weibo-lite/index.user.css",
+    "dev:wd": "stylus -w ./weibo-dark/src/index.styl -o ./weibo-dark/index.user.css",
+    "build:wd": "stylus ./weibo-dark/src/index.styl -o ./weibo-dark/index.user.css"
   }
 }
