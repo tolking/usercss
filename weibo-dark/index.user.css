@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           weibo-dark
 @namespace      tolking-usercss
-@version        0.0.1
+@version        1.0.0
 @description    为新版浪微博页页面样式增加自适应黑暗模式，支持设置为深色模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/weibo-dark
@@ -13,7 +13,6 @@
 @var select theme "选择默认主题" ["auto:跟随系统", "dark:深色"]
 ==/UserStyle== */
 @-moz-document domain("weibo.com") {
-  /*需去掉下面三处注释*/
   if theme == auto {
     @media(prefers-color-scheme:dark) {
   :root {
