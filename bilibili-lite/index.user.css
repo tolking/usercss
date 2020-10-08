@@ -2265,7 +2265,8 @@
   .section-ep-wrapper .ep-item .badge.blue,
   .members-info .avatar .tag-sponsor,
   .label-item-v2-container,
-  .label-item-v2-2-container.label-item-v2-2-container-selected {
+  .label-item-v2-2-container.label-item-v2-2-container-selected,
+  .article-card.v2 .meta-title .mission-mark {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
@@ -2351,6 +2352,7 @@
   .members-info .avatar .tag-sponsor:hover,
   .label-item-v2-container:hover,
   .label-item-v2-2-container.label-item-v2-2-container-selected:hover,
+  .article-card.v2 .meta-title .mission-mark:hover,
   .vp-container .vip p,
   span.big-vip-red p,
   em:not(.icon) p,
@@ -2432,6 +2434,7 @@
   .members-info .avatar .tag-sponsor p,
   .label-item-v2-container p,
   .label-item-v2-2-container.label-item-v2-2-container-selected p,
+  .article-card.v2 .meta-title .mission-mark p,
   .vp-container .vip span,
   span.big-vip-red span,
   em:not(.icon) span,
@@ -2512,7 +2515,8 @@
   .section-ep-wrapper .ep-item .badge.blue span,
   .members-info .avatar .tag-sponsor span,
   .label-item-v2-container span,
-  .label-item-v2-2-container.label-item-v2-2-container-selected span {
+  .label-item-v2-2-container.label-item-v2-2-container-selected span,
+  .article-card.v2 .meta-title .mission-mark span {
     color: var(--c-white) !important;
   }
   .gg-icon,
