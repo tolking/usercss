@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.16
+@version        1.2.17
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -199,7 +199,8 @@
   .user-setting-warp .el-radio-button__orig-radio:checked+.el-radio-button__inner,
   .bcc-checkbox-checked .bcc-checkbox-checkbox,
   .bili-radio:checked+span:after,
-  .bui-switch .bui-switch-input:checked+.bui-switch-label .bui-switch-body {
+  .bui-switch .bui-switch-input:checked+.bui-switch-label .bui-switch-body,
+  .check-radio-v2-container .check-radio-v2-box.check-radio-v2-box-checked:after {
     background-color: var(--c-accent) !important;
   }
   .date-picker-v2-container div,
@@ -254,7 +255,8 @@
   .ui-calendar .flatpickr-day:focus,
   .ui-calendar .flatpickr-day:hover,
   .bcc-checkbox .bcc-checkbox-checkbox,
-  .bili-radio+span:before {
+  .bili-radio+span:before,
+  .check-radio-v2-container .check-radio-v2-box {
     border-color: var(--c-border) !important;
   }
   .ui-radio.active .ui-radio-icon,
@@ -588,7 +590,9 @@
   .tag-channel-pane .channel-btns .no-subs,
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pack,
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay,
-  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary {
+  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary,
+  .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child,
+  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -716,6 +720,8 @@
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pack span,
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay span,
   .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary span,
+  .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child span,
+  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow span,
   button i.bcc-iconfont,
   .button i.bcc-iconfont,
   .btn i.bcc-iconfont,
@@ -834,7 +840,9 @@
   .tag-channel-pane .channel-btns .no-subs i.bcc-iconfont,
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pack i.bcc-iconfont,
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay i.bcc-iconfont,
-  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary i.bcc-iconfont {
+  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary i.bcc-iconfont,
+  .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child i.bcc-iconfont,
+  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow i.bcc-iconfont {
     color: var(--c-white) !important;
   }
   button::after,
@@ -955,7 +963,9 @@
   .tag-channel-pane .channel-btns .no-subs::after,
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pack::after,
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay::after,
-  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary::after {
+  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary::after,
+  .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child::after,
+  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow::after {
     content: '';
     display: block;
     position: absolute;
@@ -1085,7 +1095,9 @@
   .tag-channel-pane .channel-btns .no-subs:hover,
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pack:hover,
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay:hover,
-  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary:hover {
+  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary:hover,
+  .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child:hover,
+  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -1207,6 +1219,8 @@
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pack:hover span,
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay:hover span,
   .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary:hover span,
+  .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child:hover span,
+  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow:hover span,
   button:hover i.bcc-iconfont,
   .button:hover i.bcc-iconfont,
   .btn:hover i.bcc-iconfont,
@@ -1325,7 +1339,9 @@
   .tag-channel-pane .channel-btns .no-subs:hover i.bcc-iconfont,
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pack:hover i.bcc-iconfont,
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay:hover i.bcc-iconfont,
-  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary:hover i.bcc-iconfont {
+  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary:hover i.bcc-iconfont,
+  .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child:hover i.bcc-iconfont,
+  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow:hover i.bcc-iconfont {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -1446,7 +1462,9 @@
   .tag-channel-pane .channel-btns .no-subs:hover::after,
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pack:hover::after,
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay:hover::after,
-  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary:hover::after {
+  .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary:hover::after,
+  .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child:hover::after,
+  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -1545,7 +1563,9 @@
   .tag-channel-pane .channel-btns__link,
   .bui-swiper-wrap .bui-swiper-next,
   .bui-swiper-wrap .bui-swiper-pre,
-  .tag-channel-pane .channel-btns .is-subs {
+  .tag-channel-pane .channel-btns .is-subs,
+  .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:nth-child(2),
+  .upload-step-3-container-v2 .upload-3-v2-success-go-url a {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -1649,6 +1669,8 @@
   .bui-swiper-wrap .bui-swiper-next span,
   .bui-swiper-wrap .bui-swiper-pre span,
   .tag-channel-pane .channel-btns .is-subs span,
+  .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:nth-child(2) span,
+  .upload-step-3-container-v2 .upload-3-v2-success-go-url a span,
   .default i.bcc-iconfont,
   .more-btn i.bcc-iconfont,
   .forward i.bcc-iconfont,
@@ -1745,7 +1767,9 @@
   .tag-channel-pane .channel-btns__link i.bcc-iconfont,
   .bui-swiper-wrap .bui-swiper-next i.bcc-iconfont,
   .bui-swiper-wrap .bui-swiper-pre i.bcc-iconfont,
-  .tag-channel-pane .channel-btns .is-subs i.bcc-iconfont {
+  .tag-channel-pane .channel-btns .is-subs i.bcc-iconfont,
+  .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:nth-child(2) i.bcc-iconfont,
+  .upload-step-3-container-v2 .upload-3-v2-success-go-url a i.bcc-iconfont {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -1844,7 +1868,9 @@
   .tag-channel-pane .channel-btns__link::after,
   .bui-swiper-wrap .bui-swiper-next::after,
   .bui-swiper-wrap .bui-swiper-pre::after,
-  .tag-channel-pane .channel-btns .is-subs::after {
+  .tag-channel-pane .channel-btns .is-subs::after,
+  .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:nth-child(2)::after,
+  .upload-step-3-container-v2 .upload-3-v2-success-go-url a::after {
     content: none !important;
   }
   .default:hover,
@@ -1943,7 +1969,9 @@
   .tag-channel-pane .channel-btns__link:hover,
   .bui-swiper-wrap .bui-swiper-next:hover,
   .bui-swiper-wrap .bui-swiper-pre:hover,
-  .tag-channel-pane .channel-btns .is-subs:hover {
+  .tag-channel-pane .channel-btns .is-subs:hover,
+  .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:nth-child(2):hover,
+  .upload-step-3-container-v2 .upload-3-v2-success-go-url a:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
     color: var(--c-text) !important;
@@ -2045,6 +2073,8 @@
   .bui-swiper-wrap .bui-swiper-next:hover span,
   .bui-swiper-wrap .bui-swiper-pre:hover span,
   .tag-channel-pane .channel-btns .is-subs:hover span,
+  .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:nth-child(2):hover span,
+  .upload-step-3-container-v2 .upload-3-v2-success-go-url a:hover span,
   .default:hover i.bcc-iconfont,
   .more-btn:hover i.bcc-iconfont,
   .forward:hover i.bcc-iconfont,
@@ -2141,7 +2171,9 @@
   .tag-channel-pane .channel-btns__link:hover i.bcc-iconfont,
   .bui-swiper-wrap .bui-swiper-next:hover i.bcc-iconfont,
   .bui-swiper-wrap .bui-swiper-pre:hover i.bcc-iconfont,
-  .tag-channel-pane .channel-btns .is-subs:hover i.bcc-iconfont {
+  .tag-channel-pane .channel-btns .is-subs:hover i.bcc-iconfont,
+  .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:nth-child(2):hover i.bcc-iconfont,
+  .upload-step-3-container-v2 .upload-3-v2-success-go-url a:hover i.bcc-iconfont {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -2231,7 +2263,10 @@
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item .badge,
   .ep-list-wrapper .ep-item .badge.blue,
   .section-ep-wrapper .ep-item .badge.blue,
-  .members-info .avatar .tag-sponsor {
+  .members-info .avatar .tag-sponsor,
+  .label-item-v2-container,
+  .label-item-v2-2-container.label-item-v2-2-container-selected,
+  .article-card.v2 .meta-title .mission-mark {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
@@ -2314,7 +2349,174 @@
   .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item .badge:hover,
   .ep-list-wrapper .ep-item .badge.blue:hover,
   .section-ep-wrapper .ep-item .badge.blue:hover,
-  .members-info .avatar .tag-sponsor:hover {
+  .members-info .avatar .tag-sponsor:hover,
+  .label-item-v2-container:hover,
+  .label-item-v2-2-container.label-item-v2-2-container-selected:hover,
+  .article-card.v2 .meta-title .mission-mark:hover,
+  .vp-container .vip p,
+  span.big-vip-red p,
+  em:not(.icon) p,
+  .m-header .num p,
+  .bili-header-m .num p,
+  .nav-item .num p,
+  .badge.pink p,
+  .badge.is-vip p,
+  .badge.type_0 p,
+  .ss-badge p,
+  .primary-menu .nav-menu>li .num-wrap span p,
+  .elevator .list-box .item.on p,
+  .elevator .list-box .item:hover p,
+  .tag-list li.tag-item.on p,
+  .video-info .video-title .activity p,
+  .bilibili-player-bigvip p,
+  .h .h-vipType p,
+  .video-container .types p,
+  .item .live-status.on p,
+  .bangumi-item .right-info .headline .bangumi-label p,
+  .filter-wrap .filter-item.active p,
+  .im-notify p,
+  .video-item.list .type p,
+  .bangumi-item .left-img .bangumi-tag p,
+  .bb-comment .stick p,
+  .comment-bilibili-fold .stick p,
+  .up-info .u-info .name .live-status p,
+  .h .h-fans-icon .h-fans-text p,
+  .home-user-spec p,
+  .big-label p,
+  .member-list-exclusive-icon p,
+  .security_content .pendant-nav li div.active p,
+  .security_content .face-g-tab li.current p,
+  .hour-rank p,
+  .attention-btn-ctnr .left-part p,
+  .gift-item .corner-mark p,
+  .container .name-info .live p,
+  .count-num p,
+  .user-info>.uid p,
+  .user-info>.tag-flag p,
+  .page-title .count p,
+  .history-card .up-info .room-status>span.on-live p,
+  .achievement-card-centent>.header>.state-normal.-success p,
+  #app-news #list .item .title-wrap .activity p,
+  .tab-selector-wrap .tag-wrap .tag span.selected p,
+  .nav-upload-container .nav-upload-item .red_point p,
+  .tips-item_wrap .tips-item_left .label p,
+  .calendarEntry_box .calendarEntry_content .luck_wrap .luck_title p,
+  .carousel-module .panel .title .tag-label.doing p,
+  .comment-list-item .ci-title .relation-label p,
+  .announce li>div span p,
+  .video-jam-state p,
+  .red_point p,
+  .video-editor-ol-wrp .video-editor-ol-new p,
+  .qa-area-ol-new p,
+  .review-list-wrp li .review-title .review-spoiler p,
+  .misl-ep-item .mark-icon.badge-pink p,
+  .project-list .project-list-item .promo-item p,
+  .type-label p,
+  .history-list .cover-contain .label p,
+  .my-link-btn .hint-count p,
+  .gift-item-wrap .expiration p,
+  .hot-label p,
+  .mic-wrapper.media-info-card .mic-content .mic-pic label p,
+  .h5share-container .text-area .text-content .tag p,
+  .groom-module .type-name p,
+  .bangumi-item .cover-wrapper .corner-tag.badge_0 p,
+  .live-container .status p,
+  .video-card-common .title .live p,
+  .info-item .notice-icon p,
+  .live-record-card-cntr .cover .corner.new p,
+  .block-list-item-label p,
+  .multi-page .cur-list .list-box li .pay-label p,
+  .manga-detail .section .section-list .batch-buy p,
+  .members-info .avatar .info-tag p,
+  .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item .badge p,
+  .ep-list-wrapper .ep-item .badge.blue p,
+  .section-ep-wrapper .ep-item .badge.blue p,
+  .members-info .avatar .tag-sponsor p,
+  .label-item-v2-container p,
+  .label-item-v2-2-container.label-item-v2-2-container-selected p,
+  .article-card.v2 .meta-title .mission-mark p,
+  .vp-container .vip span,
+  span.big-vip-red span,
+  em:not(.icon) span,
+  .m-header .num span,
+  .bili-header-m .num span,
+  .nav-item .num span,
+  .badge.pink span,
+  .badge.is-vip span,
+  .badge.type_0 span,
+  .ss-badge span,
+  .primary-menu .nav-menu>li .num-wrap span span,
+  .elevator .list-box .item.on span,
+  .elevator .list-box .item:hover span,
+  .tag-list li.tag-item.on span,
+  .video-info .video-title .activity span,
+  .bilibili-player-bigvip span,
+  .h .h-vipType span,
+  .video-container .types span,
+  .item .live-status.on span,
+  .bangumi-item .right-info .headline .bangumi-label span,
+  .filter-wrap .filter-item.active span,
+  .im-notify span,
+  .video-item.list .type span,
+  .bangumi-item .left-img .bangumi-tag span,
+  .bb-comment .stick span,
+  .comment-bilibili-fold .stick span,
+  .up-info .u-info .name .live-status span,
+  .h .h-fans-icon .h-fans-text span,
+  .home-user-spec span,
+  .big-label span,
+  .member-list-exclusive-icon span,
+  .security_content .pendant-nav li div.active span,
+  .security_content .face-g-tab li.current span,
+  .hour-rank span,
+  .attention-btn-ctnr .left-part span,
+  .gift-item .corner-mark span,
+  .container .name-info .live span,
+  .count-num span,
+  .user-info>.uid span,
+  .user-info>.tag-flag span,
+  .page-title .count span,
+  .history-card .up-info .room-status>span.on-live span,
+  .achievement-card-centent>.header>.state-normal.-success span,
+  #app-news #list .item .title-wrap .activity span,
+  .tab-selector-wrap .tag-wrap .tag span.selected span,
+  .nav-upload-container .nav-upload-item .red_point span,
+  .tips-item_wrap .tips-item_left .label span,
+  .calendarEntry_box .calendarEntry_content .luck_wrap .luck_title span,
+  .carousel-module .panel .title .tag-label.doing span,
+  .comment-list-item .ci-title .relation-label span,
+  .announce li>div span span,
+  .video-jam-state span,
+  .red_point span,
+  .video-editor-ol-wrp .video-editor-ol-new span,
+  .qa-area-ol-new span,
+  .review-list-wrp li .review-title .review-spoiler span,
+  .misl-ep-item .mark-icon.badge-pink span,
+  .project-list .project-list-item .promo-item span,
+  .type-label span,
+  .history-list .cover-contain .label span,
+  .my-link-btn .hint-count span,
+  .gift-item-wrap .expiration span,
+  .hot-label span,
+  .mic-wrapper.media-info-card .mic-content .mic-pic label span,
+  .h5share-container .text-area .text-content .tag span,
+  .groom-module .type-name span,
+  .bangumi-item .cover-wrapper .corner-tag.badge_0 span,
+  .live-container .status span,
+  .video-card-common .title .live span,
+  .info-item .notice-icon span,
+  .live-record-card-cntr .cover .corner.new span,
+  .block-list-item-label span,
+  .multi-page .cur-list .list-box li .pay-label span,
+  .manga-detail .section .section-list .batch-buy span,
+  .members-info .avatar .info-tag span,
+  .main-container .ep-list-wrapper .list-wrapper.simple ul .ep-item .badge span,
+  .ep-list-wrapper .ep-item .badge.blue span,
+  .section-ep-wrapper .ep-item .badge.blue span,
+  .members-info .avatar .tag-sponsor span,
+  .label-item-v2-container span,
+  .label-item-v2-2-container.label-item-v2-2-container-selected span,
+  .article-card.v2 .meta-title .mission-mark span {
     color: var(--c-white) !important;
   }
   .gg-icon,
@@ -2332,7 +2534,10 @@
   .user-level-icon,
   .history-card .up-info .room-status>span,
   .achievement-card-centent>.header>.state-normal,
-  .tab-selector-wrap .tag-wrap .tag span {
+  .tab-selector-wrap .tag-wrap .tag span,
+  .drop-cascader-container,
+  .children-sub-container,
+  .common-modal-container .common-modal-content {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -4832,7 +5037,8 @@
   .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row.mode .selection-span.active .selection-name,
   .step-index .money-n .mark,
   .up-info .btn-follow-up i,
-  .main-container .ep-list-wrapper .list-title .mode-change i:hover {
+  .main-container .ep-list-wrapper .list-title .mode-change i:hover,
+  .up-info .up-info_right .name .username.is-vip:hover {
     color: var(--c-accent) !important;
   }
   .bilibili-player-feedback,
@@ -8969,6 +9175,7 @@
   .section-item,
   .cc-article-wrp .article-card .meta-view .option,
   .select-box .select-item:hover,
+  .select-box .select-item.is-disabled,
   .select-box .option-footer:hover,
   .helper .icon,
   .pie-empty-wrapper,
@@ -9007,7 +9214,9 @@
   .rank-fans-medal,
   .rank-vedio-target,
   .rank-vedio-view,
-  .notify-tips {
+  .notify-tips,
+  .drop-cascader-container .drop-cascader-pre-wrp .drop-cascader-pre-item:hover,
+  .drop-cascader-container .drop-cascader-list-wrp .drop-cascader-list-item:hover {
     background-color: var(--c-hover) !important;
   }
   #dc-section_preference .list_wrap .list-item {
@@ -9026,7 +9235,11 @@
   .rank-vedio-target-item .item-list li+li .item-wrap:after,
   .rank-vedio-view-item .item-list li+li .item-wrap:after,
   .comment_wrap .operate_wrap .operate_right .operate-txt:not(:last-child):after,
-  .text-split_wrap .operate-txt:not(:last-child):after {
+  .text-split_wrap .operate-txt:not(:last-child):after,
+  .cover-chop-modal-v2-body .cover-chop-modal-v2-body-split,
+  .cover-chop-modal-v2-body .cover-chop-modal-v2-small-mask-top,
+  .cover-chop-modal-v2-body .cover-chop-modal-v2-small-mask-bottom,
+  .upload-step-3-container-v2 .upload-3-v2-success-split {
     background-color: var(--c-border) !important;
   }
   .echarts {
@@ -9064,7 +9277,10 @@
   .edui-default .edui-editor,
   .article-danmu-wrp .danmu-box,
   .article-danmu-wrp .danmu-filter .left .delete .option-wrp .act-btn,
-  .content-wrap .tag {
+  .content-wrap .tag,
+  .new-link-top-wrap .link-top-item .red_point,
+  .upload-step-3-container-v2,
+  .upload-step-3-container-v2 .upload-3-v2-follow {
     background-color: transparent !important;
   }
   .tabs .tabs__header .tabs__header-item.is-active:after,
@@ -9122,7 +9338,8 @@
   .section-item .tips_wrap,
   #dc-section_retention .legend_wrap .legend-item .legend-label,
   .upload-v2-step1-container .upload-agreement .reg-2,
-  .danmu-wrp .section .title-tip {
+  .danmu-wrp .section .title-tip,
+  .cover-chop-modal-v2-body .cover-chop-modal-v2-body-right-text {
     color: var(--c-text) !important;
   }
   .link-top-container .link-top-item.active .red_point,
@@ -9162,7 +9379,8 @@
   .stat-card .num .text,
   .comment_wrap .operate_wrap .operate_right .operate-txt.active,
   .qa-area-ol-wrp .qa-icon,
-  .notify-tips .icon_wrap i {
+  .notify-tips .icon_wrap i,
+  .article-card.v2 .meta-view .more-btn:hover:not(.disabled) i {
     color: var(--c-accent) !important;
   }
   .bili-share-pc,
@@ -9237,13 +9455,20 @@
   .watch_wrap,
   .source-rank-open-button,
   .danmu-wrp .section,
-  .info-item {
+  .info-item,
+  .cover-v2-container .cover-v2-detail-wrp .cover-v2-selector .cover-v2-selector-items .selector-item,
+  .select-box-v2-container .select-box-v2-controller,
+  .drop-cascader-container .drop-cascader-list-wrp,
+  .label-item-v2-2-container,
+  .common-modal-container .common-modal-content .common-modal-head,
+  .article-card.v2 .meta-status .pubdate {
     border-color: var(--c-border) !important;
   }
   .cc-article-wrp .del-wrp .modal-wrap .geetest_holder.geetest_wind .geetest_radar_btn,
   .cc-article-wrp .del-wrp .modal-wrap .geetest_holder.geetest_wind .geetest_success_btn,
   .section-item.actived,
-  .new-link-top-wrap .link-top-item.active {
+  .new-link-top-wrap .link-top-item.active,
+  .cover-v2-container .cover-v2-detail-wrp .cover-v2-selector .cover-v2-selector-items .selector-item-selected {
     border-color: var(--c-accent) !important;
   }
   .recent-danmu-wrp .danmu-filter .left .option-menu .option-arrow-border {
