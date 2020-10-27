@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.17
+@version        1.2.18
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -592,7 +592,8 @@
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay,
   .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child,
-  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow {
+  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow,
+  .back-top-btn {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -722,6 +723,7 @@
   .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary span,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child span,
   .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow span,
+  .back-top-btn span,
   button i.bcc-iconfont,
   .button i.bcc-iconfont,
   .btn i.bcc-iconfont,
@@ -842,7 +844,8 @@
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay i.bcc-iconfont,
   .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary i.bcc-iconfont,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child i.bcc-iconfont,
-  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow i.bcc-iconfont {
+  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow i.bcc-iconfont,
+  .back-top-btn i.bcc-iconfont {
     color: var(--c-white) !important;
   }
   button::after,
@@ -965,7 +968,8 @@
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay::after,
   .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary::after,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child::after,
-  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow::after {
+  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow::after,
+  .back-top-btn::after {
     content: '';
     display: block;
     position: absolute;
@@ -1097,7 +1101,8 @@
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay:hover,
   .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary:hover,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child:hover,
-  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow:hover {
+  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow:hover,
+  .back-top-btn:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -1221,6 +1226,7 @@
   .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary:hover span,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child:hover span,
   .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow:hover span,
+  .back-top-btn:hover span,
   button:hover i.bcc-iconfont,
   .button:hover i.bcc-iconfont,
   .btn:hover i.bcc-iconfont,
@@ -1341,7 +1347,8 @@
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay:hover i.bcc-iconfont,
   .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary:hover i.bcc-iconfont,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child:hover i.bcc-iconfont,
-  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow:hover i.bcc-iconfont {
+  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow:hover i.bcc-iconfont,
+  .back-top-btn:hover i.bcc-iconfont {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -1464,7 +1471,8 @@
   .twp-mask .twp-wrapper .twp-container .twp-btns .twp-btn.pay:hover::after,
   .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary:hover::after,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child:hover::after,
-  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow:hover::after {
+  .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow:hover::after,
+  .back-top-btn:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -2266,7 +2274,9 @@
   .members-info .avatar .tag-sponsor,
   .label-item-v2-container,
   .label-item-v2-2-container.label-item-v2-2-container-selected,
-  .article-card.v2 .meta-title .mission-mark {
+  .article-card.v2 .meta-title .mission-mark,
+  .video-card .strong-tag,
+  .video-card .weak-tag {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
@@ -2353,6 +2363,8 @@
   .label-item-v2-container:hover,
   .label-item-v2-2-container.label-item-v2-2-container-selected:hover,
   .article-card.v2 .meta-title .mission-mark:hover,
+  .video-card .strong-tag:hover,
+  .video-card .weak-tag:hover,
   .vp-container .vip p,
   span.big-vip-red p,
   em:not(.icon) p,
@@ -2435,6 +2447,8 @@
   .label-item-v2-container p,
   .label-item-v2-2-container.label-item-v2-2-container-selected p,
   .article-card.v2 .meta-title .mission-mark p,
+  .video-card .strong-tag p,
+  .video-card .weak-tag p,
   .vp-container .vip span,
   span.big-vip-red span,
   em:not(.icon) span,
@@ -2516,7 +2530,9 @@
   .members-info .avatar .tag-sponsor span,
   .label-item-v2-container span,
   .label-item-v2-2-container.label-item-v2-2-container-selected span,
-  .article-card.v2 .meta-title .mission-mark span {
+  .article-card.v2 .meta-title .mission-mark span,
+  .video-card .strong-tag span,
+  .video-card .weak-tag span {
     color: var(--c-white) !important;
   }
   .gg-icon,
@@ -10836,21 +10852,31 @@
     background-color: transparent;
   }
 }
-@-moz-document url-prefix("https://www.bilibili.com/ranking/") {
-  .more-data i {
+@-moz-document url-prefix("https://www.bilibili.com/ranking/"), url-prefix("https://www.bilibili.com/v/popular/") {
+  .more-data i,
+  .cm-module {
     display: none !important;
   }
-  .rank-tab-wrap {
+  .video-card .weekly-hint,
+  .video-card .history-hint {
     background-color: var(--c-hover) !important;
   }
+  .rank-tab-wrap,
   .rank-list-head .rank_tips {
     background-color: transparent !important;
   }
-  .rank-item .num {
+  .rank-tab-wrap .rank-tab--active {
+    background-color: var(--c-accent) !important;
+  }
+  .rank-item .num,
+  .video-card .video-name {
     color: var(--c-title) !important;
   }
   .rank-item .content .info .pts {
     color: var(--c-text) !important;
+  }
+  .rank-tab-wrap .rank-tab--active {
+    color: var(--c-white) !important;
   }
   .rank-menu li.active .text,
   .rank-menu li:hover .text,
@@ -10859,20 +10885,25 @@
   .rank-item .content .info .pts div,
   .rank-item .content .info:hover .title,
   .other strong,
-  .rank-main-container a:hover {
+  .rank-main-container a:hover,
+  .rank-list .rank-item .content .info:hover .title {
     color: var(--c-accent) !important;
   }
   .rank-item,
-  .other {
+  .other,
+  .nav-tabs,
+  .nav-tabs__item {
     border-color: var(--c-border) !important;
   }
-  .rank-menu li.active {
+  .rank-menu li.active,
+  .nav-tabs__item--active {
     border-color: var(--c-accent) !important;
   }
   .rank-item:last-child {
     border: 0;
   }
-  .rank-item:hover {
+  .rank-item:hover,
+  .rank-list .rank-item:hover {
     box-shadow: none;
   }
   .go-top-m .go-top {
@@ -10885,6 +10916,9 @@
   .main-inner .rank-container {
     margin-bottom: 0;
     padding-bottom: 40px;
+  }
+  #app {
+    margin: 0 auto !important;
   }
 }
 @-moz-document url-prefix("https://www.bilibili.com/cheese") {
