@@ -1,18 +1,28 @@
 /* 排行榜 */
 .more-data i
+.cm-module
   display none !important
 
-.rank-tab-wrap
+.video-card .weekly-hint
+.video-card .history-hint
   background-color var(--c-hover) !important
 
+.rank-tab-wrap
 .rank-list-head .rank_tips
   background-color transparent !important
 
+.rank-tab-wrap .rank-tab--active
+  background-color var(--c-accent) !important
+
 .rank-item .num
+.video-card .video-name
   color var(--c-title) !important
 
 .rank-item .content .info .pts
   color var(--c-text) !important
+
+.rank-tab-wrap .rank-tab--active
+  color var(--c-white) !important
 
 .rank-menu li.active .text
 .rank-menu li:hover .text
@@ -22,19 +32,24 @@
 .rank-item .content .info:hover .title
 .other strong
 .rank-main-container a:hover
+.rank-list .rank-item .content .info:hover .title
   color var(--c-accent) !important
 
 .rank-item
 .other
+.nav-tabs
+.nav-tabs__item
   border-color var(--c-border) !important
 
 .rank-menu li.active
+.nav-tabs__item--active
   border-color var(--c-accent) !important
 
 .rank-item:last-child
   border 0
 
 .rank-item:hover
+.rank-list .rank-item:hover
   box-shadow none
 
 .go-top-m .go-top
@@ -47,3 +62,6 @@
 .main-inner .rank-container
   margin-bottom 0
   padding-bottom 40px
+
+#app
+  margin 0 auto !important
