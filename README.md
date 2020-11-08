@@ -2,7 +2,7 @@
 
 - [bilibili-lite](bilibili-lite/README.md) 一个简化的bilibili页面样式，自适应黑暗模式
 - [weibo-lite](weibo-lite/README.md) 一个简化的新浪微博页面样式，自适应黑暗模式
-- [weibo-dark](weibo-lite/README.md) 为新版新浪微博页面增加深色模式
+- [weibo-dark](weibo-dark/README.md) 为新版新浪微博页面增加深色模式
 
 ## 其它说明
 

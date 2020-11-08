@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           weibo-dark
 @namespace      tolking-usercss
-@version        1.0.1
+@version        1.0.2
 @description    为新版新浪微博页面增加深色模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/weibo-dark
@@ -57,7 +57,8 @@
   .woo-button-main.white {
     color: var(--w-main);
   }
-  .Feed_retweet_JqZJb {
+  .Feed_retweet_JqZJb,
+  .card-link_wrap_1ktKS {
     background-color: var(--vote-skin-bg-o);
   }
   .Index_right_box_1-rX8 {
@@ -68,6 +69,9 @@
   }
   .Index_title_3W-Ol {
     color: var(--c-main);
+  }
+  .Ctrls_icon_2mxB4 {
+    color: var(--weibo-top-nav-logo-color);
   }
   .Bar_main_R1N5v,
   .LeftNav_inner_tEFee,
@@ -119,7 +123,8 @@
   .woo-button-main.white {
     color: var(--w-main);
   }
-  .Feed_retweet_JqZJb {
+  .Feed_retweet_JqZJb,
+  .card-link_wrap_1ktKS {
     background-color: var(--vote-skin-bg-o);
   }
   .Index_right_box_1-rX8 {
@@ -130,6 +135,9 @@
   }
   .Index_title_3W-Ol {
     color: var(--c-main);
+  }
+  .Ctrls_icon_2mxB4 {
+    color: var(--weibo-top-nav-logo-color);
   }
   .Bar_main_R1N5v,
   .LeftNav_inner_tEFee,
