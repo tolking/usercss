@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.18
+@version        1.2.19
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -593,7 +593,8 @@
   .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child,
   .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow,
-  .back-top-btn {
+  .back-top-btn,
+  .video-toolbar .note-btn {
     position: relative;
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
@@ -724,6 +725,7 @@
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child span,
   .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow span,
   .back-top-btn span,
+  .video-toolbar .note-btn span,
   button i.bcc-iconfont,
   .button i.bcc-iconfont,
   .btn i.bcc-iconfont,
@@ -845,7 +847,8 @@
   .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary i.bcc-iconfont,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child i.bcc-iconfont,
   .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow i.bcc-iconfont,
-  .back-top-btn i.bcc-iconfont {
+  .back-top-btn i.bcc-iconfont,
+  .video-toolbar .note-btn i.bcc-iconfont {
     color: var(--c-white) !important;
   }
   button::after,
@@ -969,7 +972,8 @@
   .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary::after,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child::after,
   .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow::after,
-  .back-top-btn::after {
+  .back-top-btn::after,
+  .video-toolbar .note-btn::after {
     content: '';
     display: block;
     position: absolute;
@@ -1102,7 +1106,8 @@
   .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary:hover,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child:hover,
   .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow:hover,
-  .back-top-btn:hover {
+  .back-top-btn:hover,
+  .video-toolbar .note-btn:hover {
     color: var(--c-white) !important;
   }
   button:hover span,
@@ -1227,6 +1232,7 @@
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child:hover span,
   .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow:hover span,
   .back-top-btn:hover span,
+  .video-toolbar .note-btn:hover span,
   button:hover i.bcc-iconfont,
   .button:hover i.bcc-iconfont,
   .btn:hover i.bcc-iconfont,
@@ -1348,7 +1354,8 @@
   .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary:hover i.bcc-iconfont,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child:hover i.bcc-iconfont,
   .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow:hover i.bcc-iconfont,
-  .back-top-btn:hover i.bcc-iconfont {
+  .back-top-btn:hover i.bcc-iconfont,
+  .video-toolbar .note-btn:hover i.bcc-iconfont {
     color: var(--c-white) !important;
   }
   button:hover::after,
@@ -1472,7 +1479,8 @@
   .pwp-modal-mask .pwp-modal-wrapper .pwp-btn.primary:hover::after,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:first-child:hover::after,
   .upload-step-3-container-v2 .upload-3-v2-follow-btn.follow:hover::after,
-  .back-top-btn:hover::after {
+  .back-top-btn:hover::after,
+  .video-toolbar .note-btn:hover::after {
     transform: translateX(100%);
   }
   .default,
@@ -2740,7 +2748,8 @@
   .primary-menu .nav-menu>li .nav-name,
   .mini-type .nav-user-center .user-con .item .name,
   .video-info .line-1,
-  .video-info .line-2 {
+  .video-info .line-2,
+  .van-popper-favorite .play-all .bilifont.bili-icon_dingdao_bofang {
     color: var(--c-title) !important;
   }
   .mini-type .nav-user-center .user-con .item .name:hover {
@@ -2980,7 +2989,8 @@
   .van-popper-favorite .video-panel .play-all .bilifont,
   .van-popper-favorite .tab-item--normal:hover span,
   .van-popper-favorite .tab-item--active span,
-  .van-popper-history .tab-item:hover {
+  .van-popper-history .tab-item:hover,
+  .van-popper-favorite .play-all:hover .bilifont.bili-icon_dingdao_bofang {
     color: var(--c-accent) !important;
   }
   .duration-tag {
@@ -4925,7 +4935,8 @@
   .bilibili-player .bilibili-player-area .bilibili-player-video-panel,
   .coin-dialog-mask .coin-operated,
   .bui-swiper-wrap .bui-swiper-item .bui-swiper-text,
-  .bilibili-player-hover-items .hover-item .bg {
+  .bilibili-player-hover-items .hover-item .bg,
+  .mini-header__content.mini-header--login {
     background-color: var(--c-background) !important;
   }
   .multi-page .cur-list .list-box li.on,
@@ -4999,6 +5010,7 @@
   ul.rate-star li i,
   ul.star-wrapper li i,
   .video-toolbar .ops>span i,
+  .main-container .tool-bar .like-info i,
   .main-container .tool-bar .coin-info i,
   .main-container .tool-bar .share-info i,
   .main-container .tool-bar .mobile-info i,
@@ -5049,6 +5061,8 @@
   .members-info .up-card .info .info-name.is-vip:hover,
   .ep-list-wrapper .ep-item i,
   .section-ep-wrapper .ep-item i,
+  .main-container .tool-bar .like-info:hover i,
+  .main-container .tool-bar .like-info.active i,
   .main-container .tool-bar .coin-info.active i,
   .main-container .tool-bar .coin-info:hover i,
   .main-container .tool-bar .share-info:hover>i,
@@ -5070,7 +5084,9 @@
   .step-index .money-n .mark,
   .up-info .btn-follow-up i,
   .main-container .ep-list-wrapper .list-title .mode-change i:hover,
-  .up-info .up-info_right .name .username.is-vip:hover {
+  .up-info .up-info_right .name .username.is-vip:hover,
+  .up-info .up-info_right .name .message:hover,
+  .up-info .up-info_right .name .message:hover i {
     color: var(--c-accent) !important;
   }
   .bilibili-player-feedback,
@@ -5289,6 +5305,48 @@
   .main-container .tool-bar .share-info i,
   .main-container .tool-bar .mobile-info i {
     transition: all 0.3s ease-in-out;
+  }
+  .resizable-component,
+  .resize-box .note-drag-bar,
+  .video-editor,
+  .ql-snow .ql-picker-options {
+    background-color: var(--c-background);
+  }
+  .ql-toolbar,
+  .ql-container.ql-snow,
+  .resize-box .ql-tag,
+  .resize-box .space-btn,
+  .resize-box .question-btn,
+  .resize-box .close-btn,
+  .resize-box .space-btn:hover,
+  .resize-box .question-btn:hover,
+  .resize-box .close-btn:hover,
+  .resize-box .space-btn:after {
+    background-color: transparent;
+  }
+  .resize-box .close-btn {
+    color: var(--c-title) !important;
+  }
+  .ql-snow .ql-toolbar .ql-picker-item:hover,
+  .resize-box .close-btn:hover {
+    color: var(--c-accent) !important;
+  }
+  .ql-container.ql-snow {
+    border: 0;
+  }
+  .resizable-component {
+    border: 1px solid var(--c-border);
+  }
+  .ql-snow.ql-toolbar button {
+    border: 0;
+    background-color: transparent !important;
+    color: var(--c-title) !important;
+  }
+  .ql-snow.ql-toolbar button:hover {
+    color: var(--c-accent) !important;
+  }
+  .ql-snow.ql-toolbar button::after {
+    content: none !important;
   }
   .v-wrap .danmaku-wrap,
   .main-container .plp-r .danmaku-box .danmaku-wrap,
