@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           weibo-lite
 @namespace      tolking-usercss
-@version        1.0.2
+@version        1.0.3
 @description    一个简化的新浪微博页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/weibo-lite
@@ -708,6 +708,7 @@
   #plc_bot .WB_footer,
   #plc_bot .W_fold,
   #WB_webchat,
+  .PCD_text_c,
   .send_weibo .title_area,
   fieldset,
   .WB_left_nav .lev .ico_block,
