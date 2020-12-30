@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           weibo-lite
 @namespace      tolking-usercss
-@version        1.0.3
+@version        1.0.4
 @description    一个简化的新浪微博页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/weibo-lite
@@ -566,7 +566,9 @@
   .tab_feed_a li .curr,
   .WB_text a[title],
   .WB_h5video_v2 .wbv-big-play-button:hover,
-  .WB_h5video_v2 .wbv-control:hover:before {
+  .WB_h5video_v2 .wbv-control:hover:before,
+  .WB_h5video_v2 .wbv-speed-panel ul li.wbv-selected .wbv-menu-item-text,
+  .WB_h5video_v2 .wbv-speed-panel ul li:hover .wbv-menu-item-text {
     color: var(--c-accent) !important;
   }
   .S_line1,
@@ -650,7 +652,7 @@
     margin: 0 0 0 10px;
     width: 100%;
   }
-  .WB_media_wrap .media_box .WB_media_a li {
+  .WB_media_wrap .media_box .WB_media_a li.WB_pic {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -658,13 +660,13 @@
     width: 32%;
     height: 160px;
   }
-  .WB_media_wrap .media_box .WB_media_a li:nth-child(3n) {
+  .WB_media_wrap .media_box .WB_media_a li.WB_pic:nth-child(3n) {
     margin-right: 0;
   }
-  .WB_media_wrap .media_box .WB_media_a li:nth-child(n + 4) {
+  .WB_media_wrap .media_box .WB_media_a li.WB_pic:nth-child(n + 4) {
     margin-top: 10px;
   }
-  .WB_media_wrap .media_box .WB_media_a li img {
+  .WB_media_wrap .media_box .WB_media_a li.WB_pic img {
     position: initial !important;
     width: 100% !important;
     height: auto !important;
