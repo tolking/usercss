@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.20
+@version        1.2.21
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -4995,7 +4995,8 @@
   .tag-channel-pane .channel-title,
   .twp-mask .twp-wrapper .twp-container .twp-text .twp-title,
   .bui-swiper-wrap .bui-swiper-item .bui-swiper-text,
-  .bilibili-player-hover-items .hover-item .text {
+  .bilibili-player-hover-items .hover-item .text,
+  .main-container .recom-wrapper .recom-list .recom-item .info-wrapper .video-title {
     color: var(--c-title) !important;
   }
   .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar .bilibili-player-video-hint a span,
@@ -5023,7 +5024,9 @@
   .step-cancel .success-msg,
   .step-fail .success-msg,
   .step-status .success-msg,
-  .step-success .success-msg {
+  .step-success .success-msg,
+  .main-container .recom-wrapper .recom-list .recom-item .info-wrapper .video-subtitle,
+  .main-container .recom-wrapper .recom-list .recom-item .info-wrapper .video-count {
     color: var(--c-text) !important;
   }
   .bilibili-player-video-wrap a,
@@ -5086,7 +5089,8 @@
   .main-container .ep-list-wrapper .list-title .mode-change i:hover,
   .up-info .up-info_right .name .username.is-vip:hover,
   .up-info .up-info_right .name .message:hover,
-  .up-info .up-info_right .name .message:hover i {
+  .up-info .up-info_right .name .message:hover i,
+  .main-container .recom-wrapper .recom-list .recom-item .info-wrapper .video-title:hover {
     color: var(--c-accent) !important;
   }
   .bilibili-player-feedback,
@@ -5366,7 +5370,8 @@
   .player-auxiliary-area .player-auxiliary-filter,
   .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap,
   .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-wrap .player-auxiliary-danmaku-load-status,
-  .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-btn-footer {
+  .danmaku-wrap .player-auxiliary-area .player-auxiliary-danmaku-btn-footer,
+  .player-auxiliary-area .player-auxiliary-collapse .bui-collapse-body {
     background-color: transparent !important;
   }
   .player-auxiliary-area .player-auxiliary-filter-title {
