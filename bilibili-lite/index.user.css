@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.21
+@version        1.2.22
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -3173,7 +3173,11 @@
   .bb-comment .comment-list .list-item .reply-box .view-more .btn-more:hover,
   .comment-bilibili-fold .comment-list .list-item .reply-box .view-more .btn-more:hover,
   .bb-comment .no-login .baffle,
-  .comment-bilibili-fold .no-login .baffle {
+  .comment-bilibili-fold .no-login .baffle,
+  .bb-comment .comment-send.comment-send-lite,
+  .comment-bilibili-fold .comment-send.comment-send-lite,
+  .bb-comment .comment-send-lite.comment-send-lite,
+  .comment-bilibili-fold .comment-send-lite.comment-send-lite {
     background-color: var(--c-background) !important;
   }
   .emoji-box .emoji-tabs .tab-link.on,
@@ -3251,7 +3255,9 @@
   .list-comment,
   .panel-area .bb-comment .bottom-page.center,
   .reply-item,
-  .comment-bilibili-con .t {
+  .comment-bilibili-con .t,
+  .bb-comment .comment-send-lite .comment-emoji,
+  .comment-bilibili-fold .comment-send-lite .comment-emoji {
     border-color: var(--c-border) !important;
   }
   .bb-comment .no-login .baffle,
@@ -3271,8 +3277,18 @@
   .bb-comment .comment-list .list-item .con .vote-container:hover .text-area,
   .comment-bilibili-fold .comment-list .list-item .con .vote-container:hover .text-area,
   .comment .comment-selecotr,
-  .comment .comment-hot-item-user-content {
+  .comment .comment-hot-item-user-content,
+  .bb-comment .comment-send .comment-emoji,
+  .comment-bilibili-fold .comment-send .comment-emoji,
+  .bb-comment .comment-send-lite .comment-emoji,
+  .comment-bilibili-fold .comment-send-lite .comment-emoji {
     box-shadow: none;
+  }
+  .bb-comment .comment-send.comment-send-lite,
+  .comment-bilibili-fold .comment-send.comment-send-lite,
+  .bb-comment .comment-send-lite.comment-send-lite,
+  .comment-bilibili-fold .comment-send-lite.comment-send-lite {
+    box-shadow: 0 -1px 4px var(--c-hover);
   }
   .bb-comment .comment-header .tabs-order li.on:after,
   .comment-bilibili-fold .comment-header .tabs-order li.on:after {
@@ -3280,6 +3296,11 @@
   }
   .replies-comment-input-wrapper .replies-upload .comment-input-img {
     text-indent: 0 !important;
+  }
+  .bb-comment .comment-send-lite .comment-submit,
+  .comment-bilibili-fold .comment-send-lite .comment-submit {
+    position: relative !important;
+    right: 0 !important;
   }
   .bb-comment .comment-header .tabs-order li.on,
   .comment-bilibili-fold .comment-header .tabs-order li.on,
@@ -4960,7 +4981,8 @@
   .main-container .media-info .media-right .pub-wrapper .up-info-wrapper .split-line,
   .bui-switch .bui-body,
   .bui-slider .bui-track.bui-track-video-progress .bui-bar-wrap .bui-bar-buffer,
-  .bilibili-player-video-bottom-area:before {
+  .bilibili-player-video-bottom-area:before,
+  .recommend-list .split-line {
     background-color: var(--c-border) !important;
   }
   .bilibili-player em,
@@ -5313,8 +5335,12 @@
   .resizable-component,
   .resize-box .note-drag-bar,
   .video-editor,
-  .ql-snow .ql-picker-options {
+  .ql-snow .ql-picker-,
+  .resizable-component .note-drag-bar {
     background-color: var(--c-background);
+  }
+  .resizable-component .close-btn {
+    background-color: var(--c-hover);
   }
   .ql-toolbar,
   .ql-container.ql-snow,
