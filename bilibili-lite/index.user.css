@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.22
+@version        1.2.23
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -353,25 +353,34 @@
   }
   .bili-switcher,
   .bl-switch,
-  .check-radio-v2-2-container {
+  .check-radio-v2-2-container,
+  .next-button .switch-button {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     transition: all 0.3s ease-in-out;
   }
   .bili-switcher::after,
   .bl-switch::after,
-  .check-radio-v2-2-container::after {
+  .check-radio-v2-2-container::after,
+  .next-button .switch-button::after {
     background-color: var(--c-white) !important;
   }
   .bili-switcher.bl-switch-checked,
   .bl-switch.bl-switch-checked,
   .check-radio-v2-2-container.bl-switch-checked,
+  .next-button .switch-button.bl-switch-checked,
   .bili-switcher.checked,
   .bl-switch.checked,
   .check-radio-v2-2-container.checked,
+  .next-button .switch-button.checked,
   .bili-switcher.check-radio-v2-2-container-active,
   .bl-switch.check-radio-v2-2-container-active,
-  .check-radio-v2-2-container.check-radio-v2-2-container-active {
+  .check-radio-v2-2-container.check-radio-v2-2-container-active,
+  .next-button .switch-button.check-radio-v2-2-container-active,
+  .bili-switcher.on,
+  .bl-switch.on,
+  .check-radio-v2-2-container.on,
+  .next-button .switch-button.on {
     border-color: var(--c-accent) !important;
     background-color: var(--c-accent) !important;
   }
@@ -3632,7 +3641,8 @@
     display: none !important;
   }
   .van-popover .sub-item a:hover,
-  .gg-carousel .more {
+  .gg-carousel .more,
+  .rcmd-box-wrap .change-btn:hover {
     background-color: var(--c-hover);
   }
   .gg-carousel .gg-icon,
@@ -3663,6 +3673,9 @@
   .manga-panel .tab-switch .tab-switch-item.on,
   .manga-panel .tab-switch .tab-switch-item:hover {
     color: var(--c-accent) !important;
+  }
+  .rcmd-box-wrap .change-btn {
+    border-color: var(--c-border) !important;
   }
   .time-line .tab-switch .tab-switch-item.on,
   .manga-panel .tab-switch .tab-switch-item.on {
@@ -5391,6 +5404,7 @@
   .player-auxiliary-area .player-auxiliary-bscrollbar .bscroll-indicator {
     background-color: var(--c-scroll) !important;
   }
+  .player-auxiliary,
   .player-auxiliary-area,
   .bui-collapse .bui-collapse-header,
   .player-auxiliary-area .player-auxiliary-filter,
@@ -8342,7 +8356,6 @@
     background-color: var(--c-border);
   }
   .app-layout .size-ruler.p-relative.m-auto {
-    margin-top: 60px;
     padding: 20px;
   }
   .manga-navbar-history-list .action-button,
@@ -8395,7 +8408,8 @@
   .list-data .list-item.last-read,
   .list-data .list-item:hover,
   .discount-hinter,
-  .purchase-panel .action-buttons button.action-button.selected {
+  .purchase-panel .action-buttons button.action-button.selected,
+  .episode-list-component .episode-list .list-header .header-item.selected {
     background-color: var(--c-hover) !important;
   }
   .container .back-to-content .line {
@@ -10413,7 +10427,8 @@
   .tabs-wrapper .tabs .tabs-item.active:before,
   .project-info table .project-content .content-right .ticket-type span,
   .header .right li.order .icons,
-  .header .right li.order:after {
+  .header .right li.order:after,
+  .nav-header-wrapper .nav-header .nav-header-logo-sub {
     display: none !important;
   }
   .nav-header-wrapper,
