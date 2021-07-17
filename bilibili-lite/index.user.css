@@ -10442,7 +10442,9 @@
   .selectable-option,
   .announcement-wrapper,
   .guest-wrapper,
-  .order-list-wrapper {
+  .order-list-wrapper,
+  .mallhome__list__card,
+  .malldetail__qrcode__container {
     background-color: var(--c-background) !important;
   }
   .project-list .project-list-item,
@@ -10457,7 +10459,14 @@
   .whole-detail-info-wrapper,
   .modal-wrapper .modal-container,
   .info-header,
-  .ticket-tips-wrapper .merchant-section .baseinfo-wrapper .content-item .title {
+  .ticket-tips-wrapper .merchant-section .baseinfo-wrapper .content-item .title,
+  .mallhome__switch__container,
+  .mallhome__selector,
+  .mallhome__selector__line__label,
+  .malldetail__bread,
+  .malldetail__info__wrap,
+  .malldetail__info__detail__line--price,
+  .showhome__switch__container {
     background-color: transparent !important;
   }
   .selector-wrapper .more-city-letter-list .more-city-letter-item .letter-item.active:after {
@@ -10504,7 +10513,14 @@
   .tabs-wrapper .tabs .tabs-item.active,
   .tabs-wrapper .tabs .tabs-item:hover,
   .total-container div span,
-  .project-info table .project-content .content-right .ticket-type {
+  .project-info table .project-content .content-right .ticket-type,
+  .mallhome__selector__line__container__text--selected,
+  .mallhome__selector__line__container__text:hover,
+  .mallhome__list__card__price__unit,
+  .mallhome__list__card__price__value,
+  .malldetail__info__detail__line--price .malldetail__info__detail__line__value__unit,
+  .malldetail__info__detail__line--price .malldetail__info__detail__line__value__text,
+  .malldetail__info__detailinfo__tabs__tab--selected {
     color: var(--c-accent) !important;
   }
   .selector-wrapper .city-selector-wrapper,
@@ -10516,10 +10532,12 @@
   .confirmorder-container .discounts .discounts-list p,
   .project-info,
   .confirmorder-container .discounts,
-  .selectable-option {
+  .selectable-option,
+  .mallhome__selector__line {
     border-color: var(--c-border) !important;
   }
-  .selectable-option.active {
+  .selectable-option.active,
+  .malldetail__info__items__item--selected {
     border-color: var(--c-accent) !important;
   }
   .replies-comment-input-wrapper .replies-upload .replies-uploading-container {
@@ -10550,12 +10568,18 @@
   .confirmorder-container,
   .confirmorder-container .confirm-bottom .confirm-paybtn.active,
   .ticket-tips-wrapper .rec-item:hover,
-  .nav-header-wrapper {
+  .nav-header-wrapper,
+  .mallhome__list__card {
     box-shadow: none !important;
   }
   .buyticket .product-buy,
   .product-buy-wrapper .promo-btn,
-  .confirmorder-container .confirm-bottom .confirm-paybtn.active {
+  .confirmorder-container .confirm-bottom .confirm-paybtn.active,
+  .malldetail__info__detailinfo__tabs__tab--selected,
+  .mallhome__switch,
+  .mallhome__switch__button,
+  .showhome__switch,
+  .showhome__switch__button {
     background-image: none !important;
   }
   .project-list .project-list-item .promo-item {
