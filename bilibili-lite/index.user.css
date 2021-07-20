@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-lite
 @namespace      tolking-usercss
-@version        1.2.23
+@version        1.2.24
 @description    一个简化的bilibili页面样式，自适应黑暗模式
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-lite
@@ -1590,7 +1590,11 @@
   .bui-swiper-wrap .bui-swiper-pre,
   .tag-channel-pane .channel-btns .is-subs,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:nth-child(2),
-  .upload-step-3-container-v2 .upload-3-v2-success-go-url a {
+  .upload-step-3-container-v2 .upload-3-v2-success-go-url a,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-block-btn,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-protect-btn,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-recall-btn,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-report-btn {
     border: 1px solid var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-title) !important;
@@ -1696,6 +1700,10 @@
   .tag-channel-pane .channel-btns .is-subs span,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:nth-child(2) span,
   .upload-step-3-container-v2 .upload-3-v2-success-go-url a span,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-block-btn span,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-protect-btn span,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-recall-btn span,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-report-btn span,
   .default i.bcc-iconfont,
   .more-btn i.bcc-iconfont,
   .forward i.bcc-iconfont,
@@ -1794,7 +1802,11 @@
   .bui-swiper-wrap .bui-swiper-pre i.bcc-iconfont,
   .tag-channel-pane .channel-btns .is-subs i.bcc-iconfont,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:nth-child(2) i.bcc-iconfont,
-  .upload-step-3-container-v2 .upload-3-v2-success-go-url a i.bcc-iconfont {
+  .upload-step-3-container-v2 .upload-3-v2-success-go-url a i.bcc-iconfont,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-block-btn i.bcc-iconfont,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-protect-btn i.bcc-iconfont,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-recall-btn i.bcc-iconfont,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-report-btn i.bcc-iconfont {
     color: var(--c-text) !important;
   }
   .default::after,
@@ -1895,7 +1907,11 @@
   .bui-swiper-wrap .bui-swiper-pre::after,
   .tag-channel-pane .channel-btns .is-subs::after,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:nth-child(2)::after,
-  .upload-step-3-container-v2 .upload-3-v2-success-go-url a::after {
+  .upload-step-3-container-v2 .upload-3-v2-success-go-url a::after,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-block-btn::after,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-protect-btn::after,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-recall-btn::after,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-report-btn::after {
     content: none !important;
   }
   .default:hover,
@@ -1996,7 +2012,11 @@
   .bui-swiper-wrap .bui-swiper-pre:hover,
   .tag-channel-pane .channel-btns .is-subs:hover,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:nth-child(2):hover,
-  .upload-step-3-container-v2 .upload-3-v2-success-go-url a:hover {
+  .upload-step-3-container-v2 .upload-3-v2-success-go-url a:hover,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-block-btn:hover,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-protect-btn:hover,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-recall-btn:hover,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-report-btn:hover {
     border-color: var(--c-accent) !important;
     background-color: var(--c-hover) !important;
     color: var(--c-text) !important;
@@ -2100,6 +2120,10 @@
   .tag-channel-pane .channel-btns .is-subs:hover span,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:nth-child(2):hover span,
   .upload-step-3-container-v2 .upload-3-v2-success-go-url a:hover span,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-block-btn:hover span,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-protect-btn:hover span,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-recall-btn:hover span,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-report-btn:hover span,
   .default:hover i.bcc-iconfont,
   .more-btn:hover i.bcc-iconfont,
   .forward:hover i.bcc-iconfont,
@@ -2198,7 +2222,11 @@
   .bui-swiper-wrap .bui-swiper-pre:hover i.bcc-iconfont,
   .tag-channel-pane .channel-btns .is-subs:hover i.bcc-iconfont,
   .common-modal-container .common-modal-content .common-modal-foot .footer-main>div div:nth-child(2):hover i.bcc-iconfont,
-  .upload-step-3-container-v2 .upload-3-v2-success-go-url a:hover i.bcc-iconfont {
+  .upload-step-3-container-v2 .upload-3-v2-success-go-url a:hover i.bcc-iconfont,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-block-btn:hover i.bcc-iconfont,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-protect-btn:hover i.bcc-iconfont,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-recall-btn:hover i.bcc-iconfont,
+  .bpx-player-auxiliary .bpx-player-dm-container .dm-info-row .dm-info-report-btn:hover i.bcc-iconfont {
     color: var(--c-text) !important;
   }
   .paging-box-big .dian,
@@ -2295,7 +2323,8 @@
   .video-card .strong-tag,
   .video-card .weak-tag,
   .bangumi-item .cover-wrapper .corner-tag.badge_1,
-  .up-info .up-info_right .name .live-status {
+  .up-info .up-info_right .name .live-status,
+  .popup-card .info .style-item {
     border: 0 !important;
     background-color: var(--c-accent) !important;
     color: var(--c-white) !important;
@@ -2386,6 +2415,7 @@
   .video-card .weak-tag:hover,
   .bangumi-item .cover-wrapper .corner-tag.badge_1:hover,
   .up-info .up-info_right .name .live-status:hover,
+  .popup-card .info .style-item:hover,
   .vp-container .vip p,
   span.big-vip-red p,
   em:not(.icon) p,
@@ -2472,6 +2502,7 @@
   .video-card .weak-tag p,
   .bangumi-item .cover-wrapper .corner-tag.badge_1 p,
   .up-info .up-info_right .name .live-status p,
+  .popup-card .info .style-item p,
   .vp-container .vip span,
   span.big-vip-red span,
   em:not(.icon) span,
@@ -2557,7 +2588,8 @@
   .video-card .strong-tag span,
   .video-card .weak-tag span,
   .bangumi-item .cover-wrapper .corner-tag.badge_1 span,
-  .up-info .up-info_right .name .live-status span {
+  .up-info .up-info_right .name .live-status span,
+  .popup-card .info .style-item span {
     color: var(--c-white) !important;
   }
   .gg-icon,
@@ -2686,7 +2718,8 @@
   .twp-mask .twp-wrapper,
   .pwp-modal-mask .pwp-modal-wrapper,
   .month-selector .month-info .month-list,
-  .danmaku-menu {
+  .danmaku-menu,
+  .bui-dropdown .bui-dropdown-items {
     border-color: var(--c-border) !important;
     background-color: var(--c-background) !important;
     color: var(--c-text) !important;
@@ -2711,8 +2744,12 @@
   .bangumi-options .opt-list li:hover,
   .bangumi-options .opt-list li.disabled,
   .el-dropdown-menu__item:focus,
-  .el-dropdown-menu__item:not(.is-disabled):hover {
+  .el-dropdown-menu__item:not(.is-disabled):hover,
+  .bui-dropdown .bui-dropdown-items .bui-dropdown-item:hover {
     background-color: var(--c-hover) !important;
+  }
+  .bui-dropdown .bui-dropdown-items .bui-dropdown-item {
+    background-color: transparent !important;
   }
   .van-popper .popper__arrow {
     border-width: 0;
@@ -3196,7 +3233,7 @@
   .bb-comment .comment-list .list-item .con .vote-container,
   .bb-comment .comment-list .list-item .info .reply-tags span,
   .comment-bilibili-fold .comment-list .list-item .info .reply-tags span {
-    background-color: var(--c-hover);
+    background-color: var(--c-hover) !important;
   }
   #comment,
   .page-comment,
@@ -4970,7 +5007,10 @@
   .coin-dialog-mask .coin-operated,
   .bui-swiper-wrap .bui-swiper-item .bui-swiper-text,
   .bilibili-player-hover-items .hover-item .bg,
-  .mini-header__content.mini-header--login {
+  .mini-header__content.mini-header--login,
+  .bpx-player-sending-bar,
+  .bpx-docker-minor,
+  .bpx-player-auxiliary .bpx-player-dm-btn-footer {
     background-color: var(--c-background) !important;
   }
   .multi-page .cur-list .list-box li.on,
@@ -4988,7 +5028,10 @@
   .follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .input-group,
   .follow-dialog-wrap .follow-dialog-window .content .group-list ul .follow-group-mask,
   .bui-swiper-wrap .bui-swiper-list.bui-swiper-border .bui-swiper-img,
-  .bilibili-player-hover-items .hover-item .cover {
+  .bilibili-player-hover-items .hover-item .cover,
+  .bpx-player-auxiliary .bpx-player-dm-function .bpx-player-dm-btn-date,
+  .bpx-player-auxiliary .bpx-player-dm-function .bpx-player-dm-btn-dm,
+  .bpx-player-auxiliary .bpx-player-dm-function .bpx-player-dm-btn-time {
     background-color: var(--c-hover) !important;
   }
   .main-container .media-info .media-right .pub-wrapper .up-info-wrapper .split-line,
@@ -5003,7 +5046,19 @@
   .comment-m .comment,
   .player-module #bofqi.stardust-player,
   .bilibili-player-video-bottom-area .bilibili-player-video-sendbar .bilibili-player-video-inputbar,
-  .follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .input-group input {
+  .follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .input-group input,
+  .bpx-player-auxiliary .bpx-player-collapse .bui-collapse-body,
+  .bpx-player-auxiliary .bpx-player-adv-danmaku,
+  .bpx-player-auxiliary .bpx-player-setting,
+  .bpx-player-auxiliary .bpx-player-dm-management,
+  .bpx-player-auxiliary .bpx-player-dm-function,
+  .bpx-player-auxiliary .bpx-player-dm-wrap,
+  .bpx-player-auxiliary .bpx-player-dm-wrap-child,
+  .bpx-player-auxiliary .bpx-player-dm-btn-history,
+  .bpx-player-auxiliary .bpx-player-filter,
+  .bpx-player-sending-bar .bpx-player-video-inputbar,
+  .bpx-player-container[data-screen=full] .bpx-player-sending-bar,
+  .bpx-player-container[data-screen=web] .bpx-player-sending-bar {
     background-color: transparent !important;
   }
   .bui-slider .bui-track .bui-bar-wrap .bui-bar,
@@ -5013,7 +5068,9 @@
   .bilibili-player-mode-selection-container .bilibili-player-mode-selection-panel .bilibili-player-mode-selection-row .row-selection .selection-span.active[data-type='fontsize'],
   .s_tag .btn-add:hover span,
   .bui-swiper-wrap .bui-swiper-item.bui-swiper-item-active .bui-swiper-text,
-  .members-info .avatar .attention {
+  .members-info .avatar .attention,
+  .squirtle-controller.squirtle-pgc .squirtle-progress-timeline,
+  .bpx-player-mini-warp .bpx-player-mini-progress-tempo {
     background-color: var(--c-accent) !important;
   }
   .video-info .video-title .tit,
@@ -5061,7 +5118,12 @@
   .step-status .success-msg,
   .step-success .success-msg,
   .main-container .recom-wrapper .recom-list .recom-item .info-wrapper .video-subtitle,
-  .main-container .recom-wrapper .recom-list .recom-item .info-wrapper .video-count {
+  .main-container .recom-wrapper .recom-list .recom-item .info-wrapper .video-count,
+  .bui-dropdown .bui-dropdown-items .bui-dropdown-item,
+  .bpx-player-auxiliary .bpx-player-dm-btn-history,
+  .bpx-player-auxiliary .bpx-player-dm-function .bpx-player-dm-btn-date,
+  .bpx-player-auxiliary .bpx-player-dm-function .bpx-player-dm-btn-dm,
+  .bpx-player-auxiliary .bpx-player-dm-function .bpx-player-dm-btn-time {
     color: var(--c-text) !important;
   }
   .bilibili-player-video-wrap a,
@@ -5125,7 +5187,11 @@
   .up-info .up-info_right .name .username.is-vip:hover,
   .up-info .up-info_right .name .message:hover,
   .up-info .up-info_right .name .message:hover i,
-  .main-container .recom-wrapper .recom-list .recom-item .info-wrapper .video-title:hover {
+  .main-container .recom-wrapper .recom-list .recom-item .info-wrapper .video-title:hover,
+  .bui-dropdown .bui-dropdown-items .bui-dropdown-item:hover,
+  .bpx-player-sending-bar .bpx-player-video-inputbar .bpx-player-dm-hint a:hover,
+  .bilibili-player-bangumi-ending-panel.bilibili-player-ending-panel .bilibili-player-ending-panel-box-functions .bilibili-player-pgcinfo-spans .coin.active,
+  .bilibili-player-bangumi-ending-panel.bilibili-player-ending-panel .bilibili-player-ending-panel-box-functions .bilibili-player-pgcinfo-spans .like.active {
     color: var(--c-accent) !important;
   }
   .bilibili-player-feedback,
@@ -5136,7 +5202,8 @@
   .follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .add-btn,
   .pwp-modal-header,
   .bui-swiper-wrap .bui-swiper-list.bui-swiper-border .bui-swiper-img,
-  .bilibili-player-hover-items .hover-item .cover {
+  .bilibili-player-hover-items .hover-item .cover,
+  .bpx-player-sending-bar .bpx-player-video-inputbar-wrap {
     border-color: var(--c-border) !important;
   }
   .follow-dialog-wrap .follow-dialog-window .content .group-list .add-group .input-group {
@@ -5154,7 +5221,8 @@
   }
   .bilibili-player,
   .bui-swiper-wrap .bui-swiper-list.bui-swiper-border .bui-swiper-img,
-  .bui-swiper-wrap .bui-swiper-item .bui-swiper-text {
+  .bui-swiper-wrap .bui-swiper-item .bui-swiper-text,
+  .bpx-player-container {
     box-shadow: none;
   }
   #comment_module,
@@ -5182,6 +5250,9 @@
   .video-page-operator-card .info .count.up {
     width: auto;
   }
+  .bpx-player-sending-bar .bpx-player-video-inputbar {
+    width: 600px;
+  }
   #bofqi {
     height: 100vh;
   }
@@ -5189,7 +5260,9 @@
     backdrop-filter: blur(5px);
   }
   .bilibili-player-video-danmaku-root .bp-svgicon svg,
-  .bui-swiper-wrap .bui-swiper-pre svg {
+  .bui-swiper-wrap .bui-swiper-pre svg,
+  .bpx-player-sending-bar .bpx-player-video-inputbar .bpx-player-dm-hint a,
+  .bpx-player-sending-bar .bpx-player-video-btn-dm {
     fill: var(--c-text);
   }
   .bui-switch .bui-dot span svg {
@@ -5213,7 +5286,12 @@
   .bilibili-player-video-danmaku-switch:hover .bp-svgicon svg,
   .bilibili-player-video-btn-fullscreen:hover .bp-svgicon svg .st0,
   .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display>div:hover .bp-svgicon svg,
-  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display .grade .bp-svgicon svg g path:last-child {
+  .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .display .grade .bp-svgicon svg g path:last-child,
+  .bui-dropdown .bui-dropdown-wrap.bui-dropdown-unfold .bui-dropdown-icon,
+  .bpx-player-sending-bar .bpx-player-video-btn-dm:hover,
+  .bpx-player-sending-bar .bpx-player-video-inputbar .bpx-player-dm-hint a:hover,
+  .bilibili-player-ending-panel-box-functions .bilibili-player-pgcinfo-spans>div.active .bp-svgicon,
+  .bilibili-player-ending-panel-box-functions .bilibili-player-pgcinfo-spans>div.active:hover .bp-svgicon {
     fill: var(--c-accent) !important;
   }
   .bilibili-player-ending-panel-box-functions .bilibili-player-upinfo-spans .bilibili-player-grade-spans .grade .bp-svgicon svg path {
@@ -5425,7 +5503,7 @@
     border-radius: 2px;
   }
 }
-@-moz-document url-prefix("https://www.bilibili.com/bangumi/media/") {
+@-moz-document url-prefix("https://www.bilibili.com/bangumi/media/"), url-prefix("https://www.bilibili.com/movie/") {
   .bili-footer,
   .bili-header-m .nav-menu .nav-mask,
   .btn-pay-wrapper .pic-wrapper,
@@ -5437,7 +5515,8 @@
   .media-info-card,
   .sort-type-wrp ul,
   .spread-module .num,
-  .review-feed-wrapper {
+  .review-feed-wrapper,
+  .popup-card {
     background-color: var(--c-background) !important;
   }
   .share-module,
@@ -5447,7 +5526,8 @@
   .btn-pay-wrapper.is-vip a,
   .section-item,
   .media-tab-module-wrp .media-tab-module-content .sl-ep-nav .slider-contro span,
-  .media-tab-module-wrp .media-tab-module-content .sl-ep-nav .slider-contro span.disabled:hover {
+  .media-tab-module-wrp .media-tab-module-content .sl-ep-nav .slider-contro span.disabled:hover,
+  .rank-wrp .more:hover {
     background-color: var(--c-hover) !important;
   }
   .media-info-count .media-info-count-item em,
@@ -5517,7 +5597,8 @@
   .sort-type-wrp ul,
   .review-list-wrp li,
   .review-feed-item,
-  .media-tab-module-wrp .media-tab-module-content .sl-ep-nav .mode-select {
+  .media-tab-module-wrp .media-tab-module-content .sl-ep-nav .mode-select,
+  .rank-wrp .more {
     border-color: var(--c-border) !important;
   }
   .media-info-wrp .media-info-content .media-info-inner .media-info-r .media-info-title .media-tag {
@@ -5535,7 +5616,8 @@
   .international-header .mini-type {
     border: 0 !important;
   }
-  .media-info-card {
+  .media-info-card,
+  .popup-card {
     box-shadow: none;
   }
   .btn-pay-wrapper.is-vip a {
