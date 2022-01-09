@@ -88,4 +88,12 @@
     clip: rect(0 0 0 0) !important;
     clip-path: inset(100%) !important;
   }
+  ::-webkit-scrollbar {
+    max-width: 6px;
+    max-height: 12px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: var(--text3);
+  }
 }
