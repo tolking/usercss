@@ -1,0 +1,91 @@
+/* ==UserStyle==
+@name           bilibili-dark
+@namespace      tolking-usercss
+@version        1.0.0
+@description    为新版 bilibili 页面增加深色模式
+@author         tolking <qw13131wang@gmail.com>
+@homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-dark
+@supportURL			https://github.com/tolking/usercss/issues
+@updateURL			https://tolking.github.io/usercss/bilibili-dark/index.user.css
+@license				MIT
+@preprocessor		uso
+
+@advanced  dropdown  defaultTheme  "选择默认主题" {
+	auto "跟随系统" <<<EOT
+  /*! auto *\/:root {--brand_pink:/*[[brand_pink]]*\/;--brand_pink_thin:/*[[brand_pink_thin]]*\/;--brand_blue:/*[[brand_blue]]*\/;--brand_blue_thin:/*[[brand_blue_thin]]*\/;--stress_red:/*[[stress_red]]*\/;--stress_red_thin:/*[[stress_red_thin]]*\/;--success_green:/*[[success_green]]*\/;--success_green_thin:/*[[success_green_thin]]*\/;--operate_orange:/*[[operate_orange]]*\/;--operate_orange_thin:/*[[operate_orange_thin]]*\/;--pay_yellow:/*[[pay_yellow]]*\/;--pay_yellow_thin:/*[[pay_yellow_thin]]*\/;--text_link:/*[[text_link]]*\/;--text_notice:/*[[text_notice]]*\/;--bg1:/*[[bg1]]*\/;--bg2:/*[[bg2]]*\/;--bg3:/*[[bg3]]*\/;--bg1_float:/*[[bg1_float]]*\/;--bg2_float:/*[[bg2_float]]*\/;--text_white:/*[[text_white]]*\/;--text1:/*[[text1]]*\/;--text2:/*[[text2]]*\/;--text3:/*[[text3]]*\/;--text4:/*[[text4]]*\/;--line_light:/*[[line_light]]*\/;--line_regular:/*[[line_regular]]*\/;--line_bold:/*[[line_bold]]*\/;--graph_white:/*[[graph_white]]*\/;--graph_bg_thin:/*[[graph_bg_thin]]*\/;--graph_bg_regular:/*[[graph_bg_regular]]*\/;--graph_bg_thick:/*[[graph_bg_thick]]*\/;--graph_weak:/*[[graph_weak]]*\/;--graph_medium:/*[[graph_medium]]*\/;--graph_icon:/*[[graph_icon]]*\/;--shadow:/*[[shadow]]*\/;}@media(prefers-color-scheme:dark){:root {--brand_pink:/*[[brand_pink]]*\/;--brand_pink_thin:/*[[brand_pink_thin]]*\/;--brand_blue:/*[[brand_blue]]*\/;--brand_blue_thin:/*[[brand_blue_thin]]*\/;--stress_red:/*[[stress_red]]*\/;--stress_red_thin:/*[[stress_red_thin]]*\/;--success_green:/*[[success_green]]*\/;--success_green_thin:/*[[success_green_thin]]*\/;--operate_orange:/*[[operate_orange]]*\/;--operate_orange_thin:/*[[operate_orange_thin]]*\/;--pay_yellow:/*[[pay_yellow]]*\/;--pay_yellow_thin:/*[[pay_yellow_thin]]*\/;--text_link:/*[[text_link]]*\/;--text_notice:/*[[text_notice]]*\/;--bg1:/*[[dark_bg1]]*\/;--bg2:/*[[dark_bg2]]*\/;--bg3:/*[[dark_bg3]]*\/;--bg1_float:/*[[dark_bg1_float]]*\/;--bg2_float:/*[[dark_bg2_float]]*\/;--text_white:/*[[text_white]]*\/;--text1:/*[[dark_text1]]*\/;--text2:/*[[dark_text2]]*\/;--text3:/*[[dark_text3]]*\/;--text4:/*[[dark_text4]]*\/;--line_light:/*[[dark_line_light]]*\/;--line_regular:/*[[dark_line_regular]]*\/;--line_bold:/*[[dark_line_bold]]*\/;--graph_white:/*[[dark_graph_white]]*\/;--graph_bg_thin:/*[[dark_graph_bg_thin]]*\/;--graph_bg_regular:/*[[dark_graph_bg_regular]]*\/;--graph_bg_thick:/*[[dark_graph_bg_thick]]*\/;--graph_weak:/*[[dark_graph_weak]]*\/;--graph_medium:/*[[dark_graph_medium]]*\/;--graph_icon:/*[[dark_graph_icon]]*\/;--shadow:/*[[shadow]]*\/;}} EOT;
+	light "浅色" <<<EOT
+  /*! light *\/:root {--brand_pink:/*[[brand_pink]]*\/;--brand_pink_thin:/*[[brand_pink_thin]]*\/;--brand_blue:/*[[brand_blue]]*\/;--brand_blue_thin:/*[[brand_blue_thin]]*\/;--stress_red:/*[[stress_red]]*\/;--stress_red_thin:/*[[stress_red_thin]]*\/;--success_green:/*[[success_green]]*\/;--success_green_thin:/*[[success_green_thin]]*\/;--operate_orange:/*[[operate_orange]]*\/;--operate_orange_thin:/*[[operate_orange_thin]]*\/;--pay_yellow:/*[[pay_yellow]]*\/;--pay_yellow_thin:/*[[pay_yellow_thin]]*\/;--text_link:/*[[text_link]]*\/;--text_notice:/*[[text_notice]]*\/;--bg1:/*[[bg1]]*\/;--bg2:/*[[bg2]]*\/;--bg3:/*[[bg3]]*\/;--bg1_float:/*[[bg1_float]]*\/;--bg2_float:/*[[bg2_float]]*\/;--text_white:/*[[text_white]]*\/;--text1:/*[[text1]]*\/;--text2:/*[[text2]]*\/;--text3:/*[[text3]]*\/;--text4:/*[[text4]]*\/;--line_light:/*[[line_light]]*\/;--line_regular:/*[[line_regular]]*\/;--line_bold:/*[[line_bold]]*\/;--graph_white:/*[[graph_white]]*\/;--graph_bg_thin:/*[[graph_bg_thin]]*\/;--graph_bg_regular:/*[[graph_bg_regular]]*\/;--graph_bg_thick:/*[[graph_bg_thick]]*\/;--graph_weak:/*[[graph_weak]]*\/;--graph_medium:/*[[graph_medium]]*\/;--graph_icon:/*[[graph_icon]]*\/;--shadow:/*[[shadow]]*\/;} EOT;
+	dark "深色" <<<EOT
+  /*! dark *\/:root {--brand_pink:/*[[brand_pink]]*\/;--brand_pink_thin:/*[[brand_pink_thin]]*\/;--brand_blue:/*[[brand_blue]]*\/;--brand_blue_thin:/*[[brand_blue_thin]]*\/;--stress_red:/*[[stress_red]]*\/;--stress_red_thin:/*[[stress_red_thin]]*\/;--success_green:/*[[success_green]]*\/;--success_green_thin:/*[[success_green_thin]]*\/;--operate_orange:/*[[operate_orange]]*\/;--operate_orange_thin:/*[[operate_orange_thin]]*\/;--pay_yellow:/*[[pay_yellow]]*\/;--pay_yellow_thin:/*[[pay_yellow_thin]]*\/;--text_link:/*[[text_link]]*\/;--text_notice:/*[[text_notice]]*\/;--bg1:/*[[dark_bg1]]*\/;--bg2:/*[[dark_bg2]]*\/;--bg3:/*[[dark_bg3]]*\/;--bg1_float:/*[[dark_bg1_float]]*\/;--bg2_float:/*[[dark_bg2_float]]*\/;--text_white:/*[[text_white]]*\/;--text1:/*[[dark_text1]]*\/;--text2:/*[[dark_text2]]*\/;--text3:/*[[dark_text3]]*\/;--text4:/*[[dark_text4]]*\/;--line_light:/*[[dark_line_light]]*\/;--line_regular:/*[[dark_line_regular]]*\/;--line_bold:/*[[dark_line_bold]]*\/;--graph_white:/*[[dark_graph_white]]*\/;--graph_bg_thin:/*[[dark_graph_bg_thin]]*\/;--graph_bg_regular:/*[[dark_graph_bg_regular]]*\/;--graph_bg_thick:/*[[dark_graph_bg_thick]]*\/;--graph_weak:/*[[dark_graph_weak]]*\/;--graph_medium:/*[[dark_graph_medium]]*\/;--graph_icon:/*[[dark_graph_icon]]*\/;--shadow:/*[[shadow]]*\/;} EOT;
+}
+@advanced  color  brand_pink  "粉"  #ff6699
+@advanced  color  brand_pink_thin "淡粉" #ffecf1
+@advanced  color  brand_blue "蓝" #00aeec
+@advanced  color  brand_blue_thin "淡蓝" #dff6fd
+@advanced  color  stress_red "红" #f85a54
+@advanced  color  stress_red_thin "淡红" #feecea
+@advanced  color  success_green "绿" #2ac864
+@advanced  color  success_green_thin "淡绿" #e4f8ea
+@advanced  color  operate_orange "橙" #ff7f24
+@advanced  color  operate_orange_thin "淡橙" #fff0e3
+@advanced  color  pay_yellow "黄" #ffb027
+@advanced  color  pay_yellow_thin "淡黄" #fff6e4
+@advanced  color  text_link "链接" #008ac5
+@advanced  color  text_notice "提示" #e58900
+@advanced  color  text_white "白色字" #ffffff
+@advanced  color  shadow "阴影" #000000
+@advanced  color  bg1 "浅-背景1" #ffffff
+@advanced  color  bg2 "浅-背景2" #f6f7f8
+@advanced  color  bg3 "浅-背景3" #f1f2f3
+@advanced  color  bg1_float "浅-弹窗背景1" #ffffff
+@advanced  color  bg2_float "浅-弹窗背景2" #f1f2f3
+@advanced  color  text1 "浅-文本1" #18191c
+@advanced  color  text2 "浅-文本2" #61666d
+@advanced  color  text3 "浅-文本3" #9499a0
+@advanced  color  text4 "浅-文本4" #c9ccd0
+@advanced  color  line_light "浅-细边框" #f1f2f3
+@advanced  color  line_regular "浅-边框" #e3e5e7
+@advanced  color  line_bold "浅-粗边框" #c9ccd0
+@advanced  color  graph_bg_thin "浅-图形-浅色背景" #f6f7f8
+@advanced  color  graph_bg_regular "浅-图形-背景" #f1f2f3
+@advanced  color  graph_bg_thick "浅-图形-深色背景" #e3e5e7
+@advanced  color  graph_weak "浅-图形-弱" #c9ccd0
+@advanced  color  graph_medium "浅-图形-中等" #9499a0
+@advanced  color  graph_white "浅-图形" #ffffff
+@advanced  color  graph_icon "浅-图标" #61666d
+@advanced  color  dark_bg1 "深-背景1" #25272a
+@advanced  color  dark_bg2 "深-背景2" #3f3f3f
+@advanced  color  dark_bg3 "深-背景3" #414141
+@advanced  color  dark_bg1_float "深-弹窗背景1" #25272a
+@advanced  color  dark_bg2_float "深-弹窗背景2" #414141
+@advanced  color  dark_text1 "深-文本1" #e2e2e2
+@advanced  color  dark_text2 "深-文本2" #cacaca
+@advanced  color  dark_text3 "深-文本3" #bababa
+@advanced  color  dark_text4 "深-文本4" #4e4e4e
+@advanced  color  dark_line_light "深-细边框" #414141
+@advanced  color  dark_line_regular "深-边框" #484848
+@advanced  color  dark_line_bold "深-粗边框" #4e4e4e
+@advanced  color  dark_graph_bg_thin "深-图形-浅色背景" #3f3f3f
+@advanced  color  dark_graph_bg_regular "深-图形-背景" #414141
+@advanced  color  dark_graph_bg_thick "深-图形-深色背景" #484848
+@advanced  color  dark_graph_weak "深-图形-弱" #4e4e4e
+@advanced  color  dark_graph_medium "深-图形-中等" #bababa
+@advanced  color  dark_graph_white "深-图形" #25272a
+@advanced  color  dark_graph_icon "深-图标" #cacaca
+==/UserStyle== */
+@-moz-document domain("bilibili.com") {
+  /*[[defaultTheme]]*/
+  .eva-banner,
+  .eva-extension-area,
+  .ad-report,
+  .slide-ad-exp {
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    clip: rect(0 0 0 0) !important;
+    clip-path: inset(100%) !important;
+  }
+}
