@@ -17,11 +17,11 @@
     "weibo"
   ],
   "scripts": {
-    "build": "npm run build:bl && npm run build:bd && npm run build:wl && npm run build:wd",
+    "build": "npm run build:bl && npm run build:bp && npm run build:wl && npm run build:wd",
     "dev:bl": "stylus -w ./bilibili-lite/src/index.styl -o ./bilibili-lite/index.user.css",
     "build:bl": "stylus ./bilibili-lite/src/index.styl -o ./bilibili-lite/index.user.css",
-    "dev:bd": "stylus -w ./bilibili-dark/src/index.styl -o ./bilibili-dark/index.user.css",
-    "build:bd": "stylus ./bilibili-dark/src/index.styl -o ./bilibili-dark/index.user.css",
+    "dev:bp": "stylus -w ./bilibili-palette/src/index.styl -o ./bilibili-palette/index.user.css",
+    "build:bp": "stylus ./bilibili-palette/src/index.styl -o ./bilibili-palette/index.user.css",
     "dev:wb": "stylus -w ./weibo-lite/src/index.styl -o ./weibo-lite/index.user.css",
     "build:wb": "stylus ./weibo-lite/src/index.styl -o ./weibo-lite/index.user.css",
     "dev:wd": "stylus -w ./weibo-dark/src/index.styl -o ./weibo-dark/index.user.css",
