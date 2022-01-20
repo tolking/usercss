@@ -2,15 +2,33 @@
   .bili-header
     .bili-header__bar
       .left-entry
-        li:first-child
-          span
-            font-size: 0
-          .mini-header__title
+        width: 0
+        white-space: nowrap
+        li
+          opacity 0
+          transform translateY(-64px)
+          transition all 0.5s ease
+          &:first-child
+            opacity 1
+            transform translateY(0)
+            .entry-title svg
+              width: 26px
+              height: 26px
+            span
+              font-size: 0
+            .mini-header__title
+              display: none
+            .v-popover span
+              font-size: 100%
+          &:nth-child(n + 7)
             display: none
-          .v-popover span
-            font-size: 100%
-        li:nth-child(n + 7)
-          display: none
+          for n in 2 3 4 5 6 7
+            &:nth-child({n})
+              transition-delay 0.05s * (n - 1)
+        &:hover li
+          opacity 1
+          transform translateY(0)
+          transition all 0.5s ease
       .right-entry
         .v-popover-wrap:nth-child(2)
         .right-entry-item--upload
