@@ -2,8 +2,8 @@
   .bili-header
     .bili-header__bar
       .left-entry
-        width: 0
-        white-space: nowrap
+        width 0
+        white-space nowrap
         li
           opacity 0
           transform translateY(-64px)
@@ -12,16 +12,16 @@
             opacity 1
             transform translateY(0)
             .entry-title svg
-              width: 26px
-              height: 26px
+              width 26px
+              height 26px
             span
-              font-size: 0
+              font-size 0
             .mini-header__title
-              display: none
+              display none
             .v-popover span
-              font-size: 100%
+              font-size 100%
           &:nth-child(n + 7)
-            display: none
+            display none
           for n in 2 3 4 5 6 7
             &:nth-child({n})
               transition-delay 0.05s * (n - 1)
@@ -32,7 +32,7 @@
       .right-entry
         .v-popover-wrap:nth-child(2)
         .right-entry-item--upload
-          display: none
+          display none
     .bili-header__channel
       .channel-icons
-        display: none
+        display none

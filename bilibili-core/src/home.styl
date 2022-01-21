@@ -1,105 +1,105 @@
 @-moz-document regexp("^.*www.bilibili.com/?((index\\.html)|(\\?.*))?")
-  @media (max-width: 1099.9px)
+  @media (max-width 1099.9px)
     .bili-grid
-      .video-card-list.is-main,
-      .bangumi-card-list,
-      .movie-card-list,
-      .cheese-card-list,
-      .manga-card-list,
-      .article-card-list,
+      .video-card-list.is-main
+      .bangumi-card-list
+      .movie-card-list
+      .cheese-card-list
+      .manga-card-list
+      .article-card-list
       .live-card-list
         grid-column span 4
-      .video-card-list.is-main .video-card-body,
-      .bangumi-card-list .bangumi-card-shim,
-      .bangumi-card-data .bangumi-card-body.is-loading,
-      .movie-card-list .movie-card-body,
-      .cheese-card-list .cheese-card-body,
+      .video-card-list.is-main .video-card-body
+      .bangumi-card-list .bangumi-card-shim
+      .bangumi-card-data .bangumi-card-body.is-loading
+      .movie-card-list .movie-card-body
+      .cheese-card-list .cheese-card-body
       .live-card-list .live-card-body
-        grid-column: span 4
-        grid-template-columns: repeat(4, 1fr)
+        grid-column span 4
+        grid-template-columns repeat(4, 1fr)
         >*
-          display: block !important
+          display block !important
 
-  @media (min-width: 1100px) and (max-width: 1700.9px)
+  @media (min-width 1100px) and (max-width 1700.9px)
     .bili-grid
-      .video-card-list.is-main,
-      .bangumi-card-list,
-      .movie-card-list,
-      .cheese-card-list,
-      .manga-card-list,
-      .article-card-list,
+      .video-card-list.is-main
+      .bangumi-card-list
+      .movie-card-list
+      .cheese-card-list
+      .manga-card-list
+      .article-card-list
       .live-card-list
         grid-column span 5
-      .video-card-list.is-main .video-card-body,
-      .bangumi-card-list .bangumi-card-shim,
-      .bangumi-card-data .bangumi-card-body.is-loading,
-      .movie-card-list .movie-card-body,
-      .cheese-card-list .cheese-card-body,
+      .video-card-list.is-main .video-card-body
+      .bangumi-card-list .bangumi-card-shim
+      .bangumi-card-data .bangumi-card-body.is-loading
+      .movie-card-list .movie-card-body
+      .cheese-card-list .cheese-card-body
       .live-card-list .live-card-body
-        grid-column: span 5
-        grid-template-columns: repeat(5, 1fr)
+        grid-column span 5
+        grid-template-columns repeat(5, 1fr)
         >*:nth-of-type(n + 11)
-          display: block !important
+          display block !important
 
-  @media (min-width: 1701px)
+  @media (min-width 1701px)
     .bili-grid
-      .video-card-list.is-main,
-      .bangumi-card-list,
-      .movie-card-list,
-      .cheese-card-list,
-      .manga-card-list,
-      .article-card-list,
+      .video-card-list.is-main
+      .bangumi-card-list
+      .movie-card-list
+      .cheese-card-list
+      .manga-card-list
+      .article-card-list
       .live-card-list
         grid-column span 6
-      .video-card-list.is-main .video-card-body,
-      .bangumi-card-list .bangumi-card-shim,
-      .bangumi-card-data .bangumi-card-body.is-loading,
-      .movie-card-list .movie-card-body,
-      .cheese-card-list .cheese-card-body,
+      .video-card-list.is-main .video-card-body
+      .bangumi-card-list .bangumi-card-shim
+      .bangumi-card-data .bangumi-card-body.is-loading
+      .movie-card-list .movie-card-body
+      .cheese-card-list .cheese-card-body
       .live-card-list .live-card-body
-        grid-column: span 6
-        grid-template-columns: repeat(6, 1fr)
+        grid-column span 6
+        grid-template-columns repeat(6, 1fr)
         >*
-          display: block !important
+          display block !important
 
   .bili-grid
     .area-header
       .right
         .roll-btn
-          margin-right: 46px
+          margin-right 46px
           padding 0
-          border: 0
+          border 0
           background-color transparent
-          font-size: 0
+          font-size 0
           &:hover svg
-            transform: rotate(180deg) !important
+            transform rotate(180deg) !important
           svg
             margin-right 0
             width 26px
             height 26px
         .see-more
         .timeline-btn
-          display: none
-    &.no-margin .bangumi-activity-area .area-header .right .roll-btn,
-    .live-card-list .area-header .right .roll-btn,
-    .variety-area .area-header .right .roll-btn,
-    .information-area .area-header .right .roll-btn,
+          display none
+    &.no-margin .bangumi-activity-area .area-header .right .roll-btn
+    .live-card-list .area-header .right .roll-btn
+    .variety-area .area-header .right .roll-btn
+    .information-area .area-header .right .roll-btn
     .manga-card-list .area-header .right .roll-btn
-      margin-right: 0
+      margin-right 0
     aside
-      position: absolute
-      top: 0
-      right: 0
-      width: 26px
-      height: 34px
-      overflow: hidden
-      &.live-rank-conent,
+      position absolute
+      top 0
+      right 0
+      width 26px
+      height 34px
+      overflow hidden
+      &.live-rank-conent
       &.aside-manga-rank-list
-        display: none
+        display none
       .aside-wrap
         .aside-head .area-header .right
         .aside-body
-          display: none
+          display none
         .aside-head .area-header .left .rank-title
           display flex
           align-items center
