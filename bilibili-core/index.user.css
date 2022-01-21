@@ -1,0 +1,274 @@
+/* ==UserStyle==
+@name           bilibili-core
+@namespace      tolking-usercss
+@version        1.0.0
+@description    简化新版 bilibili 页面样式，仅包括主站相关界面
+@author         tolking <qw13131wang@gmail.com>
+@homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-core
+@supportURL			https://github.com/tolking/usercss/issues
+@updateURL			https://tolking.github.io/usercss/bilibili-core/index.user.css
+@license				MIT
+@preprocessor		uso
+==/UserStyle== */
+@-moz-document url-prefix("https://www.bilibili.com/") {
+  .bili-header .bili-header__bar .left-entry {
+    width: 0;
+    white-space: nowrap;
+  }
+  .bili-header .bili-header__bar .left-entry li {
+    opacity: 0;
+    transform: translateY(-64px);
+    transition: all 0.5s ease;
+  }
+  .bili-header .bili-header__bar .left-entry li:first-child {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .bili-header .bili-header__bar .left-entry li:first-child .entry-title svg {
+    width: 26px;
+    height: 26px;
+  }
+  .bili-header .bili-header__bar .left-entry li:first-child span {
+    font-size: 0;
+  }
+  .bili-header .bili-header__bar .left-entry li:first-child .mini-header__title {
+    display: none;
+  }
+  .bili-header .bili-header__bar .left-entry li:first-child .v-popover span {
+    font-size: 100%;
+  }
+  .bili-header .bili-header__bar .left-entry li:nth-child(n + 7) {
+    display: none;
+  }
+  .bili-header .bili-header__bar .left-entry li:nth-child(2) {
+    transition-delay: 0.05s;
+  }
+  .bili-header .bili-header__bar .left-entry li:nth-child(3) {
+    transition-delay: 0.1s;
+  }
+  .bili-header .bili-header__bar .left-entry li:nth-child(4) {
+    transition-delay: 0.15s;
+  }
+  .bili-header .bili-header__bar .left-entry li:nth-child(5) {
+    transition-delay: 0.2s;
+  }
+  .bili-header .bili-header__bar .left-entry li:nth-child(6) {
+    transition-delay: 0.25s;
+  }
+  .bili-header .bili-header__bar .left-entry li:nth-child(7) {
+    transition-delay: 0.3s;
+  }
+  .bili-header .bili-header__bar .left-entry:hover li {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease;
+  }
+  .bili-header .bili-header__bar .right-entry .v-popover-wrap:nth-child(2),
+  .bili-header .bili-header__bar .right-entry .right-entry-item--upload {
+    display: none;
+  }
+  .bili-header .bili-header__channel .channel-icons {
+    display: none;
+  }
+}
+@-moz-document regexp("^.*www.bilibili.com/?((index\\.html)|(\\?.*))?") {
+@media (max-width: 1099.9px) {
+    .bili-grid .video-card-list.is-main,
+    .bili-grid .bangumi-card-list,
+    .bili-grid .movie-card-list,
+    .bili-grid .cheese-card-list,
+    .bili-grid .manga-card-list,
+    .bili-grid .article-card-list,
+    .bili-grid .live-card-list {
+      grid-column: span 4;
+    }
+    .bili-grid .video-card-list.is-main .video-card-body,
+    .bili-grid .bangumi-card-list .bangumi-card-shim,
+    .bili-grid .bangumi-card-data .bangumi-card-body.is-loading,
+    .bili-grid .movie-card-list .movie-card-body,
+    .bili-grid .cheese-card-list .cheese-card-body,
+    .bili-grid .live-card-list .live-card-body {
+      grid-column: span 4;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .bili-grid .video-card-list.is-main .video-card-body >*,
+    .bili-grid .bangumi-card-list .bangumi-card-shim >*,
+    .bili-grid .bangumi-card-data .bangumi-card-body.is-loading >*,
+    .bili-grid .movie-card-list .movie-card-body >*,
+    .bili-grid .cheese-card-list .cheese-card-body >*,
+    .bili-grid .live-card-list .live-card-body >* {
+      display: block !important;
+    }
+}
+@media (min-width: 1100px) and (max-width: 1700.9px) {
+    .bili-grid .video-card-list.is-main,
+    .bili-grid .bangumi-card-list,
+    .bili-grid .movie-card-list,
+    .bili-grid .cheese-card-list,
+    .bili-grid .manga-card-list,
+    .bili-grid .article-card-list,
+    .bili-grid .live-card-list {
+      grid-column: span 5;
+    }
+    .bili-grid .video-card-list.is-main .video-card-body,
+    .bili-grid .bangumi-card-list .bangumi-card-shim,
+    .bili-grid .bangumi-card-data .bangumi-card-body.is-loading,
+    .bili-grid .movie-card-list .movie-card-body,
+    .bili-grid .cheese-card-list .cheese-card-body,
+    .bili-grid .live-card-list .live-card-body {
+      grid-column: span 5;
+      grid-template-columns: repeat(5, 1fr);
+    }
+    .bili-grid .video-card-list.is-main .video-card-body >*:nth-of-type(n + 11),
+    .bili-grid .bangumi-card-list .bangumi-card-shim >*:nth-of-type(n + 11),
+    .bili-grid .bangumi-card-data .bangumi-card-body.is-loading >*:nth-of-type(n + 11),
+    .bili-grid .movie-card-list .movie-card-body >*:nth-of-type(n + 11),
+    .bili-grid .cheese-card-list .cheese-card-body >*:nth-of-type(n + 11),
+    .bili-grid .live-card-list .live-card-body >*:nth-of-type(n + 11) {
+      display: block !important;
+    }
+}
+@media (min-width: 1701px) {
+    .bili-grid .video-card-list.is-main,
+    .bili-grid .bangumi-card-list,
+    .bili-grid .movie-card-list,
+    .bili-grid .cheese-card-list,
+    .bili-grid .manga-card-list,
+    .bili-grid .article-card-list,
+    .bili-grid .live-card-list {
+      grid-column: span 6;
+    }
+    .bili-grid .video-card-list.is-main .video-card-body,
+    .bili-grid .bangumi-card-list .bangumi-card-shim,
+    .bili-grid .bangumi-card-data .bangumi-card-body.is-loading,
+    .bili-grid .movie-card-list .movie-card-body,
+    .bili-grid .cheese-card-list .cheese-card-body,
+    .bili-grid .live-card-list .live-card-body {
+      grid-column: span 6;
+      grid-template-columns: repeat(6, 1fr);
+    }
+    .bili-grid .video-card-list.is-main .video-card-body >*,
+    .bili-grid .bangumi-card-list .bangumi-card-shim >*,
+    .bili-grid .bangumi-card-data .bangumi-card-body.is-loading >*,
+    .bili-grid .movie-card-list .movie-card-body >*,
+    .bili-grid .cheese-card-list .cheese-card-body >*,
+    .bili-grid .live-card-list .live-card-body >* {
+      display: block !important;
+    }
+}
+  .bili-grid .area-header .right .roll-btn {
+    margin-right: 46px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    font-size: 0;
+  }
+  .bili-grid .area-header .right .roll-btn:hover svg {
+    transform: rotate(180deg) !important;
+  }
+  .bili-grid .area-header .right .roll-btn svg {
+    margin-right: 0;
+    width: 26px;
+    height: 26px;
+  }
+  .bili-grid .area-header .right .see-more,
+  .bili-grid .area-header .right .timeline-btn {
+    display: none;
+  }
+  .bili-grid.no-margin .bangumi-activity-area .area-header .right .roll-btn,
+  .bili-grid .live-card-list .area-header .right .roll-btn,
+  .bili-grid .variety-area .area-header .right .roll-btn,
+  .bili-grid .information-area .area-header .right .roll-btn,
+  .bili-grid .manga-card-list .area-header .right .roll-btn {
+    margin-right: 0;
+  }
+  .bili-grid aside {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 26px;
+    height: 34px;
+    overflow: hidden;
+  }
+  .bili-grid aside.live-rank-conent,
+  .bili-grid aside.aside-manga-rank-list {
+    display: none;
+  }
+  .bili-grid aside .aside-wrap .aside-head .area-header .right,
+  .bili-grid aside .aside-wrap .aside-body {
+    display: none;
+  }
+  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 26px;
+    height: 26px;
+    border: 0;
+    font-size: 0;
+  }
+  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title:hover {
+    background-color: transparent;
+  }
+  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title:hover::before {
+    height: 6px;
+  }
+  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title:hover::after {
+    height: 24px;
+  }
+  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title:hover span::before {
+    height: 12px;
+  }
+  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title:hover span::after {
+    height: 18px;
+  }
+  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title::before,
+  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title::after,
+  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title span::before,
+  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title span::after {
+    content: '';
+    display: inline-block;
+    margin-right: 4px;
+    width: 3px;
+    border-radius: 2px;
+    background-color: var(--text1);
+    transition: height 0.5s ease;
+  }
+  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title::before {
+    height: 10px;
+  }
+  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title::after {
+    margin-right: 0;
+    height: 4px;
+  }
+  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title span {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+  }
+  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title span::before {
+    height: 24px;
+  }
+  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title span::after {
+    height: 14px;
+  }
+}
+@-moz-document url-prefix("https://www.bilibili.com/video/") {
+  .ad-report,
+  .slide-ad-exp,
+  #activity_vote {
+    position: absolute !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    clip: rect(0 0 0 0) !important;
+    clip-path: inset(100%) !important;
+  }
+  .bilibili-player {
+    box-shadow: 0 0 8px var(--line_regular);
+  }
+}

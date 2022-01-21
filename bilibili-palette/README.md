@@ -9,6 +9,12 @@
 - [点击此处开始安装](https://tolking.github.io/usercss/bilibili-palette/index.user.css)
 - 如果你无法访问上面链接 [尝试国内镜像](https://gitee.com/tolking/usercss/raw/master/bilibili-palette/index.user.css) (提示：镜像是通过手动同步的，相对于上面链接会存在较长时间的滞后)
 
+## 使用
+
+可以与下面样式配合使用
+
+- [bilibili-core](../bilibili-core/README.md) 简化新版 bilibili 页面样式，仅包括主站相关界面
+
 ## 特色
 
 - 自适应浅色与深色模式
