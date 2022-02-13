@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-core
 @namespace      tolking-usercss
-@version        1.0.0
+@version        1.0.1
 @description    简化新版 bilibili 页面样式，仅包括主站相关界面
 @author         tolking <qw13131wang@gmail.com>
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-core
@@ -67,8 +67,13 @@
   .bili-header .bili-header__bar .right-entry .right-entry-item--upload {
     display: none;
   }
-  .bili-header .bili-header__channel .channel-icons {
+  .bili-header .bili-header__channel .channel-icons,
+  .bili-header .bili-header__channel .channel-items__right {
     display: none;
+  }
+  .bili-header .bili-header__channel .channel-items__left {
+    padding-right: 0;
+    border-right: 0;
   }
 }
 @-moz-document regexp("^.*www.bilibili.com/?((index\\.html)|(\\?.*))?") {
@@ -157,7 +162,6 @@
     }
 }
   .bili-grid .area-header .right .roll-btn {
-    margin-right: 46px;
     padding: 0;
     border: 0;
     background-color: transparent;
@@ -170,22 +174,19 @@
     margin-right: 0;
     width: 26px;
     height: 26px;
+    transform: rotate(0deg) !important;
   }
   .bili-grid .area-header .right .see-more,
   .bili-grid .area-header .right .timeline-btn {
     display: none;
   }
-  .bili-grid.no-margin .bangumi-activity-area .area-header .right .roll-btn,
-  .bili-grid .live-card-list .area-header .right .roll-btn,
-  .bili-grid .variety-area .area-header .right .roll-btn,
-  .bili-grid .information-area .area-header .right .roll-btn,
-  .bili-grid .manga-card-list .area-header .right .roll-btn {
-    margin-right: 0;
+  .bili-grid .bangumi-card-list + aside {
+    right: 0;
   }
   .bili-grid aside {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 46px;
     width: 26px;
     height: 34px;
     overflow: hidden;

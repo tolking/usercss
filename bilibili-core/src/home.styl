@@ -66,7 +66,6 @@
     .area-header
       .right
         .roll-btn
-          margin-right 46px
           padding 0
           border 0
           background-color transparent
@@ -77,19 +76,16 @@
             margin-right 0
             width 26px
             height 26px
+            transform rotate(0deg) !important
         .see-more
         .timeline-btn
           display none
-    &.no-margin .bangumi-activity-area .area-header .right .roll-btn
-    .live-card-list .area-header .right .roll-btn
-    .variety-area .area-header .right .roll-btn
-    .information-area .area-header .right .roll-btn
-    .manga-card-list .area-header .right .roll-btn
-      margin-right 0
+    .bangumi-card-list + aside
+      right 0
     aside
       position absolute
       top 0
-      right 0
+      right 46px
       width 26px
       height 34px
       overflow hidden
