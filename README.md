@@ -17,27 +17,27 @@
 ## 开发
 
 ``` sh
-1. 全局安装 stylus
+# 1. 初始化
 
-yarn global add stylus # or npm install -g stylus
+npm install
 
-2. 开发自动编译
+# 2. 开发自动编译
 
-yarn dev:bl # or npm run dev:bl  自动编译 bilibili-lite
-yarn dev:bp # or npm run dev:bl  自动编译 bilibili-palette
-yarn dev:bc # or npm run dev:bl  自动编译 bilibili-core
-yarn dev:wb # or npm run dev:wb  自动编译 weibo-lite
-yarn dev:wd # or npm run dev:wd  自动编译 weibo-dark
+npm run dev:bl # 自动编译 bilibili-lite
+npm run dev:bl # 自动编译 bilibili-palette
+npm run dev:bl # 自动编译 bilibili-core
+npm run dev:wb # 自动编译 weibo-lite
+npm run dev:wd # 自动编译 weibo-dark
 
-3. 构建
+# 3. 构建
 
-yarn build # or npm run build  编译所有
+npm run build # 编译所有
 
-yarn build:bl # or npm run build:bl  编译 bilibili-lite
-yarn build:bp # or npm run build:bl  编译 bilibili-palette
-yarn build:bc # or npm run build:bl  编译 bilibili-core
-yarn build:wb # or npm run build:wb  编译 weibo-lite
-yarn build:wd # or npm run build:wd  编译 weibo-dark
+npm run build:bl # 编译 bilibili-lite
+npm run build:bl # 编译 bilibili-palette
+npm run build:bl # 编译 bilibili-core
+npm run build:wb # 编译 weibo-lite
+npm run build:wd # 编译 weibo-dark
 ```
 
 > stylus 格式参考 .vscode-> settings.json
