@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           no-grayscale
 @namespace      tolking-usercss
-@version        1.0.0
+@version        1.0.1
 @description    禁用网页灰度模式，恢复绚丽色彩
 @author         tolking <qw13131wang@gmail.com> (https://ououe.com)
 @homepageURL		https://github.com/tolking/usercss/tree/master/no-grayscale
@@ -11,6 +11,7 @@
 ==/UserStyle== */
 @-moz-document regexp(".*") {
 	html, body {
-		filter: grayscale(0) !important;
+		filter: none !important;
+		-webkit-filter: none !important;
 	}
 }
