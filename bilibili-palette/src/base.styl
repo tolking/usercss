@@ -3,6 +3,7 @@
 .eva-extension-area
 .ad-report
 .slide-ad-exp
+.single-card.floor-card .layer
   position absolute !important
   overflow hidden !important
   white-space nowrap !important
@@ -12,6 +13,18 @@
   width 1px !important
   clip rect(0 0 0 0) !important
   clip-path inset(100%) !important
+
+.single-card.floor-card
+  border-color transparent !important
+
+.floor-single-card .title
+  color var(--text1)
+
+.single-card.floor-card .badge
+  background-color var(--bg2_float) !important
+
+.bili-feed4 .bili-header .slide-down
+  box-shadow none !important
 
 /* 滚动条 */
 ::-webkit-scrollbar
