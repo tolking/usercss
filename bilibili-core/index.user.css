@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           bilibili-core
 @namespace      tolking-usercss
-@version        1.0.1
+@version        1.1.0
 @description    简化新版 bilibili 页面样式，仅包括主站相关界面
 @author         tolking <qw13131wang@gmail.com>
 @homepageURL		https://github.com/tolking/usercss/tree/master/bilibili-core
@@ -63,9 +63,23 @@
     transform: translateY(0);
     transition: all 0.5s ease;
   }
-  .bili-header .bili-header__bar .right-entry .v-popover-wrap:nth-child(2),
-  .bili-header .bili-header__bar .right-entry .right-entry-item--upload {
+  .bili-header .bili-header__bar .right-entry .v-popover-wrap:nth-child(2) {
     display: none;
+  }
+  .bili-header .bili-header__bar .right-entry .right-entry-item--upload .header-upload-entry {
+    flex-direction: column;
+    margin-left: 0;
+    width: auto;
+    height: 39px;
+    background: transparent;
+    font-size: 13px;
+    line-height: 1.25;
+    font-weight: 400;
+  }
+  .bili-header .bili-header__bar .right-entry .right-entry-item--upload .header-upload-entry .header-upload-entry__icon {
+    margin-right: 0;
+    margin-bottom: 4px;
+    transform: scale(1.2);
   }
   .bili-header .bili-header__channel .channel-icons,
   .bili-header .bili-header__channel .channel-items__right {
@@ -77,182 +91,17 @@
   }
 }
 @-moz-document regexp("^.*www.bilibili.com/?((index\\.html)|(\\?.*))?") {
-@media (max-width: 1099.9px) {
-    .bili-grid .video-card-list.is-main,
-    .bili-grid .bangumi-card-list,
-    .bili-grid .movie-card-list,
-    .bili-grid .cheese-card-list,
-    .bili-grid .manga-card-list,
-    .bili-grid .article-card-list,
-    .bili-grid .live-card-list {
-      grid-column: span 4;
-    }
-    .bili-grid .video-card-list.is-main .video-card-body,
-    .bili-grid .bangumi-card-list .bangumi-card-shim,
-    .bili-grid .bangumi-card-data .bangumi-card-body.is-loading,
-    .bili-grid .movie-card-list .movie-card-body,
-    .bili-grid .cheese-card-list .cheese-card-body,
-    .bili-grid .live-card-list .live-card-body {
-      grid-column: span 4;
-      grid-template-columns: repeat(4, 1fr);
-    }
-    .bili-grid .video-card-list.is-main .video-card-body >*,
-    .bili-grid .bangumi-card-list .bangumi-card-shim >*,
-    .bili-grid .bangumi-card-data .bangumi-card-body.is-loading >*,
-    .bili-grid .movie-card-list .movie-card-body >*,
-    .bili-grid .cheese-card-list .cheese-card-body >*,
-    .bili-grid .live-card-list .live-card-body >* {
-      display: block !important;
-    }
-}
-@media (min-width: 1100px) and (max-width: 1700.9px) {
-    .bili-grid .video-card-list.is-main,
-    .bili-grid .bangumi-card-list,
-    .bili-grid .movie-card-list,
-    .bili-grid .cheese-card-list,
-    .bili-grid .manga-card-list,
-    .bili-grid .article-card-list,
-    .bili-grid .live-card-list {
-      grid-column: span 5;
-    }
-    .bili-grid .video-card-list.is-main .video-card-body,
-    .bili-grid .bangumi-card-list .bangumi-card-shim,
-    .bili-grid .bangumi-card-data .bangumi-card-body.is-loading,
-    .bili-grid .movie-card-list .movie-card-body,
-    .bili-grid .cheese-card-list .cheese-card-body,
-    .bili-grid .live-card-list .live-card-body {
-      grid-column: span 5;
-      grid-template-columns: repeat(5, 1fr);
-    }
-    .bili-grid .video-card-list.is-main .video-card-body >*:nth-of-type(n + 11),
-    .bili-grid .bangumi-card-list .bangumi-card-shim >*:nth-of-type(n + 11),
-    .bili-grid .bangumi-card-data .bangumi-card-body.is-loading >*:nth-of-type(n + 11),
-    .bili-grid .movie-card-list .movie-card-body >*:nth-of-type(n + 11),
-    .bili-grid .cheese-card-list .cheese-card-body >*:nth-of-type(n + 11),
-    .bili-grid .live-card-list .live-card-body >*:nth-of-type(n + 11) {
-      display: block !important;
-    }
-}
-@media (min-width: 1701px) {
-    .bili-grid .video-card-list.is-main,
-    .bili-grid .bangumi-card-list,
-    .bili-grid .movie-card-list,
-    .bili-grid .cheese-card-list,
-    .bili-grid .manga-card-list,
-    .bili-grid .article-card-list,
-    .bili-grid .live-card-list {
-      grid-column: span 6;
-    }
-    .bili-grid .video-card-list.is-main .video-card-body,
-    .bili-grid .bangumi-card-list .bangumi-card-shim,
-    .bili-grid .bangumi-card-data .bangumi-card-body.is-loading,
-    .bili-grid .movie-card-list .movie-card-body,
-    .bili-grid .cheese-card-list .cheese-card-body,
-    .bili-grid .live-card-list .live-card-body {
-      grid-column: span 6;
-      grid-template-columns: repeat(6, 1fr);
-    }
-    .bili-grid .video-card-list.is-main .video-card-body >*,
-    .bili-grid .bangumi-card-list .bangumi-card-shim >*,
-    .bili-grid .bangumi-card-data .bangumi-card-body.is-loading >*,
-    .bili-grid .movie-card-list .movie-card-body >*,
-    .bili-grid .cheese-card-list .cheese-card-body >*,
-    .bili-grid .live-card-list .live-card-body >* {
-      display: block !important;
-    }
-}
-  .bili-grid .area-header .right .roll-btn {
-    padding: 0;
-    border: 0;
-    background-color: transparent;
-    font-size: 0;
+  .single-card.floor-card {
+    border-color: transparent !important;
   }
-  .bili-grid .area-header .right .roll-btn:hover svg {
-    transform: rotate(180deg) !important;
+  .floor-single-card .title {
+    color: var(--text1);
   }
-  .bili-grid .area-header .right .roll-btn svg {
-    margin-right: 0;
-    width: 26px;
-    height: 26px;
-    transform: rotate(0deg) !important;
+  .single-card.floor-card .badge {
+    background-color: var(--bg2_float) !important;
   }
-  .bili-grid .area-header .right .see-more,
-  .bili-grid .area-header .right .timeline-btn {
-    display: none;
-  }
-  .bili-grid .bangumi-card-list + aside {
-    right: 0;
-  }
-  .bili-grid aside {
-    position: absolute;
-    top: 0;
-    right: 46px;
-    width: 26px;
-    height: 34px;
-    overflow: hidden;
-  }
-  .bili-grid aside.live-rank-conent,
-  .bili-grid aside.aside-manga-rank-list {
-    display: none;
-  }
-  .bili-grid aside .aside-wrap .aside-head .area-header .right,
-  .bili-grid aside .aside-wrap .aside-body {
-    display: none;
-  }
-  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    width: 26px;
-    height: 26px;
-    border: 0;
-    font-size: 0;
-  }
-  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title:hover {
-    background-color: transparent;
-  }
-  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title:hover::before {
-    height: 6px;
-  }
-  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title:hover::after {
-    height: 24px;
-  }
-  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title:hover span::before {
-    height: 12px;
-  }
-  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title:hover span::after {
-    height: 18px;
-  }
-  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title::before,
-  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title::after,
-  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title span::before,
-  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title span::after {
-    content: '';
-    display: inline-block;
-    margin-right: 4px;
-    width: 3px;
-    border-radius: 2px;
-    background-color: var(--text1);
-    transition: height 0.5s ease;
-  }
-  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title::before {
-    height: 10px;
-  }
-  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title::after {
-    margin-right: 0;
-    height: 4px;
-  }
-  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title span {
-    display: flex;
-    align-items: center;
-    margin-right: 0;
-  }
-  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title span::before {
-    height: 24px;
-  }
-  .bili-grid aside .aside-wrap .aside-head .area-header .left .rank-title span::after {
-    height: 14px;
+  .bili-feed4 .bili-header .slide-down {
+    box-shadow: none !important;
   }
 }
 @-moz-document url-prefix("https://www.bilibili.com/video/") {
