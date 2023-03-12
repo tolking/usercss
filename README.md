@@ -24,8 +24,8 @@ npm install
 # 2. 开发自动编译
 
 npm run dev:bl # 自动编译 bilibili-lite
-npm run dev:bl # 自动编译 bilibili-palette
-npm run dev:bl # 自动编译 bilibili-core
+npm run dev:bp # 自动编译 bilibili-palette
+npm run dev:bc # 自动编译 bilibili-core
 npm run dev:wb # 自动编译 weibo-lite
 npm run dev:wd # 自动编译 weibo-dark
 
@@ -34,8 +34,8 @@ npm run dev:wd # 自动编译 weibo-dark
 npm run build # 编译所有
 
 npm run build:bl # 编译 bilibili-lite
-npm run build:bl # 编译 bilibili-palette
-npm run build:bl # 编译 bilibili-core
+npm run build:bp # 编译 bilibili-palette
+npm run build:bc # 编译 bilibili-core
 npm run build:wb # 编译 weibo-lite
 npm run build:wd # 编译 weibo-dark
 ```
