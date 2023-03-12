@@ -31,8 +31,21 @@
           transition all 0.5s ease
       .right-entry
         .v-popover-wrap:nth-child(2)
-        .right-entry-item--upload
           display none
+        .right-entry-item--upload .header-upload-entry
+          flex-direction column
+          margin-left 0
+          width auto
+          height 39px
+          background transparent
+          font-size 13px
+          line-height 1.25
+          font-weight 400
+          .header-upload-entry__icon
+            margin-right 0
+            margin-bottom 4px
+            transform scale(1.2)
+
     .bili-header__channel
       .channel-icons
       .channel-items__right
