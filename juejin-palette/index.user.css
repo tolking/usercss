@@ -1,0 +1,334 @@
+/* ==UserStyle==
+@name           juejin-palette
+@namespace      tolking-usercss
+@version        1.0.0
+@description    为掘金界面增加颜色配置，并增加深色模式
+@author         tolking <qw13131wang@gmail.com>
+@homepageURL		https://github.com/tolking/usercss/tree/master/juejin-palette
+@supportURL			https://github.com/tolking/usercss/issues
+@updateURL			https://tolking.github.io/usercss/juejin-palette/index.user.css
+@license				MIT
+@preprocessor		uso
+
+@advanced  dropdown  defaultTheme  "选择默认主题" {
+	auto "跟随系统" <<<EOT
+  /*! auto *\/body {--juejin-brand-1-normal:/*[[blue]]*\/;--juejin-brand-2-hover:/*[[blue_hover]]*\/;--juejin-brand-3-click:/*[[blue_click]]*\/;--juejin-brand-4-disable:/*[[blue_disable]]*\/;--juejin-brand-5-light:/*[[blue_light]]*\/;--juejin-background:/*[[background]]*\/;--juejin-font-white:/*[[card]]*\/;--juejin-layer-1:/*[[card]]*\/;--juejin-code:/*[[code]]*\/;--juejin-gray-3:/*[[background_hover]]*\/;--juejin-layer-2-1:/*[[background_hover]]*\/;--juejin-popup:/*[[popup]]*\/;--juejin-layer-4-dropdown:/*[[popup]]*\/;--juejin-navigation:/*[[navigation]]*\/;--juejin-font-1:/*[[text1]]*\/;--juejin-font-2:/*[[text2]]*\/;--juejin-font-3:/*[[text3]]*\/;--juejin-font-4:/*[[text4]]*\/;--juejin-border:/*[[border]]*\/;--juejin-gray-1-1:/*[[border]]*\/;--juejin-gray-1-2:/*[[border]]*\/;--line_bold:/*[[line_bold]]*\/;}@media(prefers-color-scheme:dark){body {--juejin-brand-1-normal:/*[[blue]]*\/;--juejin-brand-2-hover:/*[[blue_hover]]*\/;--juejin-brand-3-click:/*[[blue_click]]*\/;--juejin-brand-4-disable:/*[[blue_disable]]*\/;--juejin-brand-5-light:/*[[blue_light]]*\/;--juejin-background:/*[[dark_background]]*\/;--juejin-font-white:/*[[dark_card]]*\/;--juejin-layer-1:/*[[dark_card]]*\/;--juejin-code:/*[[dark_code]]*\/;--juejin-gray-3:/*[[dark_background_hover]]*\/;--juejin-layer-2-1:/*[[dark_background_hover]]*\/;--juejin-popup:/*[[dark_popup]]*\/;--juejin-layer-4-dropdown:/*[[dark_popup]]*\/;--juejin-navigation:/*[[dark_navigation]]*\/;--juejin-font-1:/*[[dark_text1]]*\/;--juejin-font-2:/*[[dark_text2]]*\/;--juejin-font-3:/*[[dark_text3]]*\/;--juejin-font-4:/*[[dark_text4]]*\/;--juejin-border:/*[[dark_border]]*\/;--juejin-gray-1-1:/*[[dark_border]]*\/;--juejin-gray-1-2:/*[[dark_border]]*\/;}} EOT;
+	light "浅色" <<<EOT
+  /*! light *\/body {--juejin-brand-1-normal:/*[[blue]]*\/;--juejin-brand-2-hover:/*[[blue_hover]]*\/;--juejin-brand-3-click:/*[[blue_click]]*\/;--juejin-brand-4-disable:/*[[blue_disable]]*\/;--juejin-brand-5-light:/*[[blue_light]]*\/;--juejin-background:/*[[background]]*\/;--juejin-font-white:/*[[card]]*\/;--juejin-layer-1:/*[[card]]*\/;--juejin-code:/*[[code]]*\/;--juejin-gray-3:/*[[background_hover]]*\/;--juejin-layer-2-1:/*[[background_hover]]*\/;--juejin-popup:/*[[popup]]*\/;--juejin-layer-4-dropdown:/*[[popup]]*\/;--juejin-navigation:/*[[navigation]]*\/;--juejin-font-1:/*[[text1]]*\/;--juejin-font-2:/*[[text2]]*\/;--juejin-font-3:/*[[text3]]*\/;--juejin-font-4:/*[[text4]]*\/;--juejin-border:/*[[border]]*\/;--juejin-gray-1-1:/*[[border]]*\/;--juejin-gray-1-2:/*[[border]]*\/;} EOT;
+	dark "深色" <<<EOT
+  /*! dark *\/body {--juejin-brand-1-normal:/*[[blue]]*\/;--juejin-brand-2-hover:/*[[blue_hover]]*\/;--juejin-brand-3-click:/*[[blue_click]]*\/;--juejin-brand-4-disable:/*[[blue_disable]]*\/;--juejin-brand-5-light:/*[[blue_light]]*\/;--juejin-background:/*[[dark_background]]*\/;--juejin-font-white:/*[[dark_card]]*\/;--juejin-layer-1:/*[[dark_card]]*\/;--juejin-code:/*[[dark_code]]*\/;--juejin-gray-3:/*[[dark_background_hover]]*\/;--juejin-layer-2-1:/*[[dark_background_hover]]*\/;--juejin-popup:/*[[dark_popup]]*\/;--juejin-layer-4-dropdown:/*[[dark_popup]]*\/;--juejin-navigation:/*[[dark_navigation]]*\/;--juejin-font-1:/*[[dark_text1]]*\/;--juejin-font-2:/*[[dark_text2]]*\/;--juejin-font-3:/*[[dark_text3]]*\/;--juejin-font-4:/*[[dark_text4]]*\/;--juejin-border:/*[[dark_border]]*\/;--juejin-gray-1-1:/*[[dark_border]]*\/;--juejin-gray-1-2:/*[[dark_border]]*\/;} EOT;
+}
+@advanced  color  blue "蓝" #1e80ff
+@advanced  color  blue_hover "蓝(悬停)" #1171ee
+@advanced  color  blue_click "蓝(点击)" #0060dd
+@advanced  color  blue_disable "蓝(禁用)" #abcdff
+@advanced  color  blue_light "淡蓝" #eaf2ff
+
+@advanced  color  background "浅-背景" #f2f3f5
+@advanced  color  card "浅-卡片背景" #ffffff
+@advanced  color  code "浅-代码块背景" #f8f8f8
+@advanced  color  background_hover "浅-背景(悬停)" #f7f8fa
+@advanced  color  navigation "浅-导航" #ffffff
+@advanced  color  popup "浅-弹窗" #ffffff
+@advanced  color  border "浅-边框" #e3e5e7
+@advanced  color  text1 "浅-文本1" #252933
+@advanced  color  text2 "浅-文本2" #515767
+@advanced  color  text3 "浅-文本3" #8a919f
+@advanced  color  text4 "浅-文本4" #c2c8d1
+
+@advanced  color  dark_background "深-背景" #2C2E30
+@advanced  color  dark_card "深-卡片背景" #25272a
+@advanced  color  dark_code "深-代码块背景" #2C2E30
+@advanced  color  dark_background_hover "深-背景(悬停)" #484848
+@advanced  color  dark_navigation "深-导航" #25272a
+@advanced  color  dark_popup "深-弹窗" #25272a
+@advanced  color  dark_border "深-边框" #484848
+@advanced  color  dark_text1 "深-文本1" #e2e2e2
+@advanced  color  dark_text2 "深-文本2" #cacaca
+@advanced  color  dark_text3 "深-文本3" #bababa
+@advanced  color  dark_text4 "深-文本4" #4e4e4e
+==/UserStyle== */
+@-moz-document domain("juejin.cn") {
+  body,
+  .input .byte-input__input,
+  .input .byte-input__textarea {
+    background-color: var(--juejin-background) !important;
+  }
+  .byte-dropdown-menu {
+    background-color: var(--juejin-popup) !important;
+  }
+  .byte-dropdown-item:focus,
+  .byte-dropdown-item:hover {
+    background-color: var(--juejin-gray-3) !important;
+  }
+  html {
+    background-color: transparent !important;
+  }
+  body {
+    color: var(--juejin-font-2) !important;
+  }
+  input[type=password],
+  input[type=text],
+  input[type=url],
+  textarea {
+    border-color: var(--juejin-border) !important;
+  }
+  ::-webkit-scrollbar {
+    max-width: 6px;
+    max-height: 12px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: var(--juejin-font-3);
+  }
+  /*[[defaultTheme]]*/
+  .nav-item .tablead {
+    position: absolute !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    clip: rect(0 0 0 0) !important;
+    clip-path: inset(100%) !important;
+  }
+  .search-form .seach-icon-container.active {
+    background-color: var(--juejin-background) !important;
+  }
+  .sidebar-block,
+  .xitu-skeleton,
+  .suspension-panel .btn {
+    background-color: var(--juejin-font-white) !important;
+  }
+  .view-nav,
+  .view-nav:before {
+    background-color: var(--juejin-navigation) !important;
+  }
+  .add-group .more-list,
+  .typehead,
+  .phone-hide {
+    background-color: var(--juejin-popup) !important;
+  }
+  .add-group .more-list .item:hover,
+  .typehead .list div:hover {
+    background-color: var(--juejin-gray-3) !important;
+  }
+  .meta-container .date:after,
+  .meta-container .date:before,
+  .advertisement .meta-container .dividing {
+    background-color: var(--juejin-border) !important;
+  }
+  .nav-list.left .nav-item.active:before {
+    background-color: var(--juejin-brand-1-normal) !important;
+  }
+  .entry,
+  .entry-list,
+  .search-form,
+  .main-nav-list {
+    background-color: transparent !important;
+  }
+  .advertisement .main .info-box .title,
+  .first-line .title,
+  .sidebar-block.link-block .title {
+    color: var(--juejin-font-1) !important;
+  }
+  .advertisement .meta-container .user-message .userbox,
+  .typehead,
+  .typehead .list,
+  .nav-list.left .nav-item a {
+    color: var(--juejin-font-2) !important;
+  }
+  .advertisement .main .info-box .description,
+  .advertisement .tag,
+  .action-box .item,
+  .content-box .user-box .author-badge-text {
+    color: var(--juejin-font-3) !important;
+  }
+  .typehead .title .clear,
+  .limit-btn,
+  .nav-list.left .nav-item.active a {
+    color: var(--juejin-brand-1-normal) !important;
+  }
+  .hot-item-text:hover {
+    color: var(--juejin-brand-2-hover) !important;
+  }
+  .add-group .add-btn,
+  .add-group .more {
+    color: #fff !important;
+  }
+  .main-header,
+  .search-form,
+  .content-wrapper,
+  .advertisement .main,
+  .suspension-panel .btn,
+  .typehead,
+  .typehead .title,
+  .advertisement .tag,
+  .phone-hide {
+    border-color: var(--juejin-border) !important;
+  }
+  .main-header .logo-img {
+    display: none !important;
+  }
+  .main-header .mobile {
+    display: block !important;
+  }
+}
+@-moz-document url-prefix("https://juejin.cn/post/") {
+  .tag-list-box .tag-list .item.category-item,
+  .tag-list-box .tag-list .item.tag-item {
+    background-color: var(--juejin-background) !important;
+  }
+  .main-area .article,
+  .main-area div,
+  .article-catalog,
+  .panel-btn {
+    background-color: var(--juejin-font-white) !important;
+  }
+  .panel-btn.share-btn .share-popup,
+  .wechat-qrcode {
+    background-color: var(--juejin-popup) !important;
+  }
+  .markdown-body code,
+  .markdown-body pre,
+  .markdown-body pre > code {
+    background-color: var(--juejin-code) !important;
+  }
+  .divider,
+  .main-area.recommended-area .entry-list .entry .content-wrapper:before {
+    background-color: var(--juejin-border) !important;
+  }
+  .article-title,
+  .sidebar-block:not(.pure) .block-title,
+  .entry-title,
+  .main-area.recommended-area .recommended-list-title-wrapper .title .title-content,
+  .catalog-title,
+  .comment-form .header .header-title,
+  .comment-list-wrapper .title,
+  .content-box .user-box .username .name {
+    color: var(--juejin-font-1) !important;
+  }
+  .markdown-body,
+  .author-info-block .author-name .username,
+  .user-item .info-box .username,
+  .stat-item .content,
+  .main-area.recommended-area .entry-list .entry .content-wrapper .title-row a.title,
+  .main-area.recommended-area .entry-list .entry .meta-container .popover-box.user-popover,
+  .main-area.recommended-area .entry-list .entry .meta-container .date,
+  .main-area.recommended-area .entry-list .entry .meta-container .tag,
+  .catalog-list .item.d1,
+  .extension-banner .banner-title,
+  .panel-btn.share-btn .share-popup .share-item .share-item-title,
+  .catalog-list .item,
+  .comment-list-wrapper .sort .item,
+  .content {
+    color: var(--juejin-font-2) !important;
+  }
+  .markdown-body pre > code,
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-subst,
+  .meta-box,
+  .user-item .info-box .position,
+  .entry-meta,
+  .main-area.recommended-area .entry-list .entry .action-list > .item,
+  .tag-list-box .tag-list .item.category-item,
+  .tag-list-box .tag-list .tag-list-title,
+  .extension-banner .banner-content,
+  .wechat-qrcode .wechat-qrcode-title,
+  .content-box .position,
+  .content-box .time {
+    color: var(--juejin-font-3) !important;
+  }
+  .markdown-body a,
+  .comment-list-wrapper .sort .active {
+    color: var(--juejin-brand-1-normal) !important;
+  }
+  .markdown-body h2,
+  .markdown-body a,
+  .book-card-wrap,
+  .catalog-title,
+  .main-area.recommended-area .recommended-list-title-wrapper .title,
+  .main-area.recommended-area .entry-list .entry .content-wrapper,
+  .sidebar-block:not(.pure) .block-title {
+    border-color: var(--juejin-border) !important;
+  }
+  .panel-btn.share-btn .share-popup:after {
+    border-right-color: var(--juejin-popup) !important;
+  }
+}
+@-moz-document url-prefix("https://juejin.cn/creator/") {
+  .data-card,
+  .button-group,
+  .first-line .byte-dropdown .more-icon:hover,
+  .first-line .byte-dropdown .more-icon.menu-show,
+  .creator-event-view .content .select-content .select-button {
+    background-color: var(--juejin-background) !important;
+  }
+  .card,
+  .button-group .group-item.active,
+  .first-tab,
+  .content-zone .content,
+  .follower-container,
+  .creator-event-view,
+  .event .event-inner .banner,
+  .qa {
+    background-color: var(--juejin-font-white) !important;
+  }
+  .link:hover,
+  .qa-content:hover {
+    background-color: var(--juejin-gray-3) !important;
+  }
+  .byte-tabs--horizontal .byte-tab-nav--line:after {
+    background-color: var(--juejin-border) !important;
+  }
+  .byte-tab-bar {
+    background-color: var(--juejin-brand-1-normal) !important;
+  }
+  .card .title-line,
+  .data-card .data,
+  .task-items .item .item-content .rule .rule-text,
+  .content .title.content .title,
+  .event .event-inner {
+    color: var(--juejin-font-1) !important;
+  }
+  .data-card .label,
+  .button-group .group-item,
+  .message .brief,
+  .creator-event-view .content .select-content .select-button,
+  .right-wrap .byte-dropdown-item__text,
+  .qa,
+  .qa-content .question-answer-card .answer-card {
+    color: var(--juejin-font-2) !important;
+  }
+  .more,
+  .data-card .vary-box .text,
+  .task-items .item .item-content .award .award-text,
+  .first-line .more-icon,
+  .infos,
+  .message .date,
+  .creator-event-view .content .select-content,
+  .qa-content .question-answer-card .question-card .icon {
+    color: var(--juejin-font-3) !important;
+  }
+  .button-group .group-item.active {
+    color: var(--juejin-brand-1-normal) !important;
+  }
+  .send-button {
+    color: #fff !important;
+  }
+  .card .title-line,
+  .task-items .item,
+  .essay-list,
+  .infos .split-line,
+  .button-group-default .group-item.active:before,
+  .button-group-default .group-item:hover:before,
+  .filter-wrap .filter-item,
+  .editable,
+  .message,
+  .qa-content:not(:last-child),
+  .qa-content .question-answer-card .question-card .dot-question .dot {
+    border-color: var(--juejin-border) !important;
+  }
+}

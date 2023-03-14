@@ -1,0 +1,56 @@
+/* ==UserStyle==
+@name           juejin-palette
+@namespace      tolking-usercss
+@version        1.0.0
+@description    为掘金界面增加颜色配置，并增加深色模式
+@author         tolking <qw13131wang@gmail.com>
+@homepageURL		https://github.com/tolking/usercss/tree/master/juejin-palette
+@supportURL			https://github.com/tolking/usercss/issues
+@updateURL			https://tolking.github.io/usercss/juejin-palette/index.user.css
+@license				MIT
+@preprocessor		uso
+
+@advanced  dropdown  defaultTheme  "选择默认主题" {
+	auto "跟随系统" <<<EOT
+  /*! auto *\/body {--juejin-brand-1-normal:/*[[blue]]*\/;--juejin-brand-2-hover:/*[[blue_hover]]*\/;--juejin-brand-3-click:/*[[blue_click]]*\/;--juejin-brand-4-disable:/*[[blue_disable]]*\/;--juejin-brand-5-light:/*[[blue_light]]*\/;--juejin-background:/*[[background]]*\/;--juejin-font-white:/*[[card]]*\/;--juejin-layer-1:/*[[card]]*\/;--juejin-code:/*[[code]]*\/;--juejin-gray-3:/*[[background_hover]]*\/;--juejin-layer-2-1:/*[[background_hover]]*\/;--juejin-popup:/*[[popup]]*\/;--juejin-layer-4-dropdown:/*[[popup]]*\/;--juejin-navigation:/*[[navigation]]*\/;--juejin-font-1:/*[[text1]]*\/;--juejin-font-2:/*[[text2]]*\/;--juejin-font-3:/*[[text3]]*\/;--juejin-font-4:/*[[text4]]*\/;--juejin-border:/*[[border]]*\/;--juejin-gray-1-1:/*[[border]]*\/;--juejin-gray-1-2:/*[[border]]*\/;--line_bold:/*[[line_bold]]*\/;}@media(prefers-color-scheme:dark){body {--juejin-brand-1-normal:/*[[blue]]*\/;--juejin-brand-2-hover:/*[[blue_hover]]*\/;--juejin-brand-3-click:/*[[blue_click]]*\/;--juejin-brand-4-disable:/*[[blue_disable]]*\/;--juejin-brand-5-light:/*[[blue_light]]*\/;--juejin-background:/*[[dark_background]]*\/;--juejin-font-white:/*[[dark_card]]*\/;--juejin-layer-1:/*[[dark_card]]*\/;--juejin-code:/*[[dark_code]]*\/;--juejin-gray-3:/*[[dark_background_hover]]*\/;--juejin-layer-2-1:/*[[dark_background_hover]]*\/;--juejin-popup:/*[[dark_popup]]*\/;--juejin-layer-4-dropdown:/*[[dark_popup]]*\/;--juejin-navigation:/*[[dark_navigation]]*\/;--juejin-font-1:/*[[dark_text1]]*\/;--juejin-font-2:/*[[dark_text2]]*\/;--juejin-font-3:/*[[dark_text3]]*\/;--juejin-font-4:/*[[dark_text4]]*\/;--juejin-border:/*[[dark_border]]*\/;--juejin-gray-1-1:/*[[dark_border]]*\/;--juejin-gray-1-2:/*[[dark_border]]*\/;}} EOT;
+	light "浅色" <<<EOT
+  /*! light *\/body {--juejin-brand-1-normal:/*[[blue]]*\/;--juejin-brand-2-hover:/*[[blue_hover]]*\/;--juejin-brand-3-click:/*[[blue_click]]*\/;--juejin-brand-4-disable:/*[[blue_disable]]*\/;--juejin-brand-5-light:/*[[blue_light]]*\/;--juejin-background:/*[[background]]*\/;--juejin-font-white:/*[[card]]*\/;--juejin-layer-1:/*[[card]]*\/;--juejin-code:/*[[code]]*\/;--juejin-gray-3:/*[[background_hover]]*\/;--juejin-layer-2-1:/*[[background_hover]]*\/;--juejin-popup:/*[[popup]]*\/;--juejin-layer-4-dropdown:/*[[popup]]*\/;--juejin-navigation:/*[[navigation]]*\/;--juejin-font-1:/*[[text1]]*\/;--juejin-font-2:/*[[text2]]*\/;--juejin-font-3:/*[[text3]]*\/;--juejin-font-4:/*[[text4]]*\/;--juejin-border:/*[[border]]*\/;--juejin-gray-1-1:/*[[border]]*\/;--juejin-gray-1-2:/*[[border]]*\/;} EOT;
+	dark "深色" <<<EOT
+  /*! dark *\/body {--juejin-brand-1-normal:/*[[blue]]*\/;--juejin-brand-2-hover:/*[[blue_hover]]*\/;--juejin-brand-3-click:/*[[blue_click]]*\/;--juejin-brand-4-disable:/*[[blue_disable]]*\/;--juejin-brand-5-light:/*[[blue_light]]*\/;--juejin-background:/*[[dark_background]]*\/;--juejin-font-white:/*[[dark_card]]*\/;--juejin-layer-1:/*[[dark_card]]*\/;--juejin-code:/*[[dark_code]]*\/;--juejin-gray-3:/*[[dark_background_hover]]*\/;--juejin-layer-2-1:/*[[dark_background_hover]]*\/;--juejin-popup:/*[[dark_popup]]*\/;--juejin-layer-4-dropdown:/*[[dark_popup]]*\/;--juejin-navigation:/*[[dark_navigation]]*\/;--juejin-font-1:/*[[dark_text1]]*\/;--juejin-font-2:/*[[dark_text2]]*\/;--juejin-font-3:/*[[dark_text3]]*\/;--juejin-font-4:/*[[dark_text4]]*\/;--juejin-border:/*[[dark_border]]*\/;--juejin-gray-1-1:/*[[dark_border]]*\/;--juejin-gray-1-2:/*[[dark_border]]*\/;} EOT;
+}
+@advanced  color  blue "蓝" #1e80ff
+@advanced  color  blue_hover "蓝(悬停)" #1171ee
+@advanced  color  blue_click "蓝(点击)" #0060dd
+@advanced  color  blue_disable "蓝(禁用)" #abcdff
+@advanced  color  blue_light "淡蓝" #eaf2ff
+
+@advanced  color  background "浅-背景" #f2f3f5
+@advanced  color  card "浅-卡片背景" #ffffff
+@advanced  color  code "浅-代码块背景" #f8f8f8
+@advanced  color  background_hover "浅-背景(悬停)" #f7f8fa
+@advanced  color  navigation "浅-导航" #ffffff
+@advanced  color  popup "浅-弹窗" #ffffff
+@advanced  color  border "浅-边框" #e3e5e7
+@advanced  color  text1 "浅-文本1" #252933
+@advanced  color  text2 "浅-文本2" #515767
+@advanced  color  text3 "浅-文本3" #8a919f
+@advanced  color  text4 "浅-文本4" #c2c8d1
+
+@advanced  color  dark_background "深-背景" #2C2E30
+@advanced  color  dark_card "深-卡片背景" #25272a
+@advanced  color  dark_code "深-代码块背景" #2C2E30
+@advanced  color  dark_background_hover "深-背景(悬停)" #484848
+@advanced  color  dark_navigation "深-导航" #25272a
+@advanced  color  dark_popup "深-弹窗" #25272a
+@advanced  color  dark_border "深-边框" #484848
+@advanced  color  dark_text1 "深-文本1" #e2e2e2
+@advanced  color  dark_text2 "深-文本2" #cacaca
+@advanced  color  dark_text3 "深-文本3" #bababa
+@advanced  color  dark_text4 "深-文本4" #4e4e4e
+==/UserStyle== */
+@-moz-document domain("juejin.cn") {
+  @import 'base'
+  @import 'home'
+}
+@import 'post'
+@import 'creator'

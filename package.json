@@ -29,7 +29,9 @@
     "dev:wd": "stylus -w ./weibo-dark/src/index.styl -o ./weibo-dark/index.user.css",
     "build:wd": "stylus ./weibo-dark/src/index.styl -o ./weibo-dark/index.user.css",
     "dev:nh": "stylus -w ./no-hidden/src/index.styl -o ./no-hidden/index.user.css",
-    "build:nh": "stylus ./no-hidden/src/index.styl -o ./no-hidden/index.user.css"
+    "build:nh": "stylus ./no-hidden/src/index.styl -o ./no-hidden/index.user.css",
+    "dev:jp": "stylus -w ./juejin-palette/src/index.styl -o ./juejin-palette/index.user.css",
+    "build:jp": "stylus ./juejin-palette/src/index.styl -o ./juejin-palette/index.user.css"
   },
   "devDependencies": {
     "stylus": "^0.57.0"
